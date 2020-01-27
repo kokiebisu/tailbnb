@@ -23,7 +23,7 @@ export default () => {
 					</a>
 				</div>
 
-				<div class=''>
+				<div>
 					<nav class='flex items-center justify-around flex-wrap text-white'>
 						<a href='#' className='flex self-center flex-wrap justify-between text-sm font-semibold px-2'>
 							<svg
@@ -55,6 +55,9 @@ export default () => {
 						</a>
 					</nav>
 				</div>
+			</div>
+			<div class='flex items-center flex-wrap justify-start'>
+				<div class='flex-1'>Navigation Card in here</div>
 			</div>
 		</header>
 	);
