@@ -232,7 +232,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined
   }, "English(CA)")), __jsx("a", {
     href: "#",
-    className: "text-sm font-semibold px-4 tracking-wide",
+    className: "block text-sm font-semibold px-4 tracking-wide",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -279,7 +279,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, "Log in")))), __jsx("div", {
-    class: "lg:w-header pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl",
+    class: "lg:w-100 pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
@@ -319,7 +319,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("label", {
-    className: "block font-bold mt-5 mb-3 text-xs text-gray-700 uppercase tracking-wider",
+    className: "block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase tracking-wider",
     htmlFor: "where",
     __source: {
       fileName: _jsxFileName,
@@ -351,7 +351,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("label", {
-    className: "block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase",
+    className: "block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase",
     htmlFor: "checkin",
     __source: {
       fileName: _jsxFileName,
@@ -376,7 +376,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("label", {
-    className: "block font-bold mt-6 mb-3 text-xs uppercase text-gray-700",
+    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-700",
     htmlFor: "checkout",
     __source: {
       fileName: _jsxFileName,
@@ -401,7 +401,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("label", {
-    class: "block font-bold mt-6 mb-3 text-xs uppercase text-gray-700",
+    class: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-700",
     htmlFor: "guests",
     __source: {
       fileName: _jsxFileName,
@@ -511,7 +511,20 @@ const Home = () => {
       lineNumber: 7
     },
     __self: undefined
-  }));
+  }), __jsx("div", {
+    className: "max-w-layout mx-auto bg-blue-400",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, "Explore Airbnb")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);

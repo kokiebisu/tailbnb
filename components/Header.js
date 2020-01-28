@@ -35,7 +35,7 @@ export default () => {
 							</svg>
 							<p>English(CA)</p>
 						</a>
-						<a href='#' className='text-sm font-semibold px-4 tracking-wide'>
+						<a href='#' className='block text-sm font-semibold px-4 tracking-wide'>
 							$CAD
 						</a>
 						<a href='#' className='text-sm font-semibold px-4 tracking-wide'>
@@ -56,7 +56,7 @@ export default () => {
 					</nav>
 				</div>
 			</div>
-			<div class='lg:w-header pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl'>
+			<div class='lg:w-100 pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl'>
 				<div class='mx-8'>
 					<h3 class='text-3xl font-bold color__header leading-tight'>
 						Book unique places to <br />
@@ -65,7 +65,7 @@ export default () => {
 					<form>
 						<div className=''>
 							<label
-								className='block font-bold mt-5 mb-3 text-xs text-gray-700 uppercase tracking-wider'
+								className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase tracking-wider'
 								htmlFor='where'>
 								Where
 							</label>
@@ -79,7 +79,7 @@ export default () => {
 						<div className='flex flex-wrap items-stretch justify-start'>
 							<div class='w-1/2'>
 								<label
-									className='block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase'
+									className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase'
 									htmlFor='checkin'>
 									Check-In
 								</label>
@@ -92,7 +92,7 @@ export default () => {
 							</div>
 							<div class='w-1/2'>
 								<label
-									className='block font-bold mt-6 mb-3 text-xs uppercase text-gray-700'
+									className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
 									htmlFor='checkout'>
 									Check-Out
 								</label>
@@ -105,7 +105,7 @@ export default () => {
 							</div>
 						</div>
 						<div class=''>
-							<label class='block font-bold mt-6 mb-3 text-xs uppercase text-gray-700' htmlFor='guests'>
+							<label class='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700' htmlFor='guests'>
 								Guests
 							</label>
 							<div class='inline-block relative w-full'>
