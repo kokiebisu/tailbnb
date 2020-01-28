@@ -1,8 +1,17 @@
 @tailwind base;
 
 body {
-    @apply antialiased text-gray-800;
+	@apply antialiased text-gray-800;
 }
 
 @tailwind components;
+
+.appearance-none {
+	-moz-appearance: none;
+	appearance: none;
+}
 @tailwind utilities;
+
+.color-_header {
+	color: '#484848';
+}

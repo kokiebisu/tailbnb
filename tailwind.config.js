@@ -10,11 +10,6 @@ module.exports = {
         '84': '21rem',
         '96': '24rem',
         'header': '27.4rem'
-      },
-      color: {
-        gray: {
-          header: '#2D3748'
-        }
       }
     }
   },

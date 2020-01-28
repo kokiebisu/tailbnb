@@ -293,7 +293,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("h3", {
-    class: "text-3xl font-bold text-gray-700 leading-tight",
+    class: "text-3xl font-bold color__header leading-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 61
@@ -302,20 +302,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   }, "Book unique places to ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: undefined
   }), "stay and things to do."), __jsx("form", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 65
     },
     __self: undefined
   }, __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 66
     },
     __self: undefined
   }, __jsx("label", {
@@ -323,7 +323,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     htmlFor: "where",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 67
     },
     __self: undefined
   }, "Where"), __jsx("input", {
@@ -333,21 +333,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     placeholder: "Anywhere",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 72
     },
     __self: undefined
   })), __jsx("div", {
     className: "flex flex-wrap items-stretch justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 79
     },
     __self: undefined
   }, __jsx("div", {
     class: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 80
     },
     __self: undefined
   }, __jsx("label", {
@@ -355,7 +355,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     htmlFor: "checkin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 81
     },
     __self: undefined
   }, "Check-In"), __jsx("input", {
@@ -365,14 +365,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     placeholder: "dd-mm-yyyy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 86
     },
     __self: undefined
   })), __jsx("div", {
     class: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 93
     },
     __self: undefined
   }, __jsx("label", {
@@ -380,7 +380,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     htmlFor: "checkout",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 94
     },
     __self: undefined
   }, "Check-Out"), __jsx("input", {
@@ -390,14 +390,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     placeholder: "dd-mm-yyyy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 99
     },
     __self: undefined
   }))), __jsx("div", {
     class: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 107
     },
     __self: undefined
   }, __jsx("label", {
@@ -405,62 +405,80 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     htmlFor: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 108
     },
     __self: undefined
   }, "Guests"), __jsx("div", {
+    class: "inline-block relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 111
     },
     __self: undefined
   }, __jsx("select", {
-    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
+    className: "appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     id: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 112
     },
     __self: undefined
   }, __jsx("option", {
     value: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 115
     },
     __self: undefined
   }, "2 Guests"), __jsx("option", {
     value: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 116
     },
     __self: undefined
   }, "3 Guests"), __jsx("option", {
     value: "3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 117
     },
     __self: undefined
-  }, "4 Guests"))), __jsx("div", {
+  }, "4 Guests")), __jsx("div", {
+    class: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 119
     },
     __self: undefined
-  }))), __jsx("div", {
+  }, __jsx("svg", {
+    class: "fill-current h-4 w-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: undefined
+  })))))), __jsx("div", {
     class: "inline flex items-center justify-end flex-wrap mt-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 130
     },
     __self: undefined
   }, __jsx("button", {
     class: "py-3 px-6 rounded bg-red-500 text-white font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 131
     },
     __self: undefined
   }, "Search")))));
