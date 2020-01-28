@@ -515,7 +515,7 @@ const Home = () => {
     },
     __self: undefined
   }), __jsx("div", {
-    className: "max-w-layout mx-auto",
+    className: "max-w-layout mx-auto my-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -536,37 +536,51 @@ const Home = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex flex-wrap items-center justify-start lg:w-1/3 bg-white rounded-xl shadow-2xl border border-gray-200",
+    className: "lg:w-1/3 ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: undefined
-  }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    className: "rounded-xl rounded-r-none",
-    style: {
-      height: 80,
-      width: 'auto'
-    },
-    alt: "",
+  }, __jsx("div", {
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-xl bg-white",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: undefined
+  }, __jsx("img", {
+    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    className: "rounded-xl rounded-r-none",
+    style: {
+      height: 80,
+      width: 'auto'
+    },
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
   }), __jsx("p", {
     class: "pl-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: undefined
-  }, "Stays")), __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-1/3 bg-white rounded-xl ",
+  }, "Stays"))), __jsx("div", {
+    className: "lg:w-1/3 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-xl bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("img", {
@@ -579,44 +593,51 @@ const Home = () => {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: undefined
   }), __jsx("p", {
     class: "pl-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: undefined
-  }, "Stays")), __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-1/3 bg-white rounded-xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    className: "rounded-xl rounded-r-none",
-    style: {
-      height: 80,
-      width: 'auto'
-    },
-    alt: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: undefined
+  }, "Stays"))), ' ', __jsx("div", {
+    className: "lg:w-1/3 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-xl bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    className: "rounded-xl rounded-r-none",
+    style: {
+      height: 80,
+      width: 'auto'
+    },
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
   }), __jsx("p", {
     class: "pl-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 43
     },
     __self: undefined
-  }, "Stays")))));
+  }, "Stays"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);

@@ -1,6 +1,9 @@
 module.exports = {
 	theme: {
 		extend: {
+			backgroundColor: {
+				background: '#fffcfc'
+			},
 			spacing: {
 				'28': '7rem',
 				'36': '9rem',
@@ -17,8 +20,9 @@ module.exports = {
 			borderRadius: {
 				xl: '0.8rem'
 			},
-			shadow: {
-				'5xl': 'rgba(0, 0, 0, 0.15) 0px 2px 8px !important'
+			boxShadow: {
+				focus: '0 0 0 3px rgba(66,153,225,0.5)',
+				'3xl': '0 35px 60px -15px rgba(0, 0, 0, .3)'
 			}
 		}
 	},

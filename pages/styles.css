@@ -1,7 +1,7 @@
 @tailwind base;
 
 body {
-	@apply antialiased text-gray-800;
+	@apply antialiased text-gray-800 bg-background;
 }
 
 @tailwind components;
