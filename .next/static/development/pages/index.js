@@ -497,7 +497,7 @@ var Home = function Home() {
       height: 80,
       width: 'auto'
     },
-    alt: "",
+    alt: "explore1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -531,7 +531,7 @@ var Home = function Home() {
       height: 80,
       width: 'auto'
     },
-    alt: "",
+    alt: "explore2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
@@ -544,7 +544,7 @@ var Home = function Home() {
       lineNumber: 32
     },
     __self: this
-  }, "Stays"))), ' ', __jsx("div", {
+  }, "Stays"))), __jsx("div", {
     className: "lg:w-1/3 ",
     __source: {
       fileName: _jsxFileName,
@@ -565,7 +565,7 @@ var Home = function Home() {
       height: 80,
       width: 'auto'
     },
-    alt: "",
+    alt: "explore3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37

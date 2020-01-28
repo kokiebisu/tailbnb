@@ -16,7 +16,7 @@ const Home = () => {
 								src={img1}
 								className='rounded-xl rounded-r-none'
 								style={{ height: 80, width: 'auto' }}
-								alt=''
+								alt='explore1'
 							/>
 							<p class='pl-4'>Stays</p>
 						</div>
@@ -27,18 +27,18 @@ const Home = () => {
 								src={img1}
 								className='rounded-xl rounded-r-none'
 								style={{ height: 80, width: 'auto' }}
-								alt=''
+								alt='explore2'
 							/>
 							<p class='pl-4'>Stays</p>
 						</div>
-					</div>{' '}
+					</div>
 					<div className='lg:w-1/3 '>
 						<div className='mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-xl bg-white'>
 							<img
 								src={img1}
 								className='rounded-xl rounded-r-none'
 								style={{ height: 80, width: 'auto' }}
-								alt=''
+								alt='explore3'
 							/>
 							<p class='pl-4'>Stays</p>
 						</div>
