@@ -186,21 +186,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, "Log in")))), __jsx("div", {
-    "class": "lg:w-header pt-10 pb-6 mx-32 mt-16 bg-white rounded shadow-2xl",
+    "class": "lg:w-header pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
     },
     __self: this
   }, __jsx("div", {
-    "class": "mx-10",
+    "class": "mx-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
     },
     __self: this
   }, __jsx("h3", {
-    "class": "text-3xl font-bold leading-tight",
+    "class": "text-3xl font-bold text-gray-700 leading-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 61
@@ -226,7 +226,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("label", {
-    className: "block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase tracking-wider",
+    className: "block font-bold mt-5 mb-3 text-xs text-gray-700 uppercase tracking-wider",
     htmlFor: "where",
     __source: {
       fileName: _jsxFileName,

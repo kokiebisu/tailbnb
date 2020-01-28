@@ -56,12 +56,12 @@ export default () => {
 					</nav>
 				</div>
 			</div>
-			<div class='lg:w-header pt-10 pb-6 mx-32 mt-16 bg-white rounded shadow-2xl'>
-				<div class='mx-10'>
-				<h3 class='text-3xl font-bold leading-tight'>Book unique places to <br/>stay and things to do.</h3>
+			<div class='lg:w-header pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl'>
+				<div class='mx-8'>
+				<h3 class='text-3xl font-bold text-gray-700 leading-tight'>Book unique places to <br/>stay and things to do.</h3>
 				<form>
 					<div className=''>
-						<label className='block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase tracking-wider' htmlFor="where">Where</label>
+						<label className='block font-bold mt-5 mb-3 text-xs text-gray-700 uppercase tracking-wider' htmlFor="where">Where</label>
 						<input className='w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide' type="text" id="where" placeholder='Anywhere'/>
 					</div>
 					<div className='flex flex-wrap items-stretch justify-start'>
