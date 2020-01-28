@@ -3,7 +3,7 @@ import background from '../public/airbnb-background.jpg';
 
 export default () => {
 	return (
-		<header style={{ backgroundImage: `url(${background})` }} className='relative bg-cover bg-no-repeat'>
+		<header style={{ backgroundImage: `url(${background})` }} className='relative bg-cover bg-no-repeat h-screen'>
 			<div class='flex flex-wrap items-center justify-between'>
 				<div class='m-6'>
 					<a href='/'>
@@ -56,8 +56,42 @@ export default () => {
 					</nav>
 				</div>
 			</div>
-			<div class='flex items-center flex-wrap justify-start'>
-				<div class='flex-1'>Navigation Card in here</div>
+			<div class='lg:w-header pt-10 pb-6 mx-32 mt-16 bg-white rounded shadow-2xl'>
+				<div class='mx-10'>
+				<h3 class='text-3xl font-bold leading-tight'>Book unique places to <br/>stay and things to do.</h3>
+				<form>
+					<div className=''>
+						<label className='block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase tracking-wider' htmlFor="where">Where</label>
+						<input className='w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide' type="text" id="where" placeholder='Anywhere'/>
+					</div>
+					<div className='flex flex-wrap items-stretch justify-start'>
+						<div class='w-1/2'>
+							<label className='block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase' htmlFor="checkin">Check-In</label>
+							<input className='pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide' type="text" id="checkin" placeholder='dd-mm-yyyy'/>
+						</div>
+						<div class='w-1/2'>
+							<label className='block font-bold mt-6 mb-3 text-xs uppercase text-gray-700' htmlFor="checkout">Check-Out</label>
+							<input className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide' type="text" id="checkout" placeholder='dd-mm-yyyy'/>
+						</div>
+					</div>
+					<div class=''>
+						<label class='block font-bold mt-6 mb-3 text-xs uppercase text-gray-700' htmlFor="guests">Guests</label>
+						<div>
+							<select className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide' id="guests">
+								<option value="1">2 Guests</option>
+								<option value="2">3 Guests</option>
+								<option value="3">4 Guests</option>
+							</select>
+						</div>
+						<div></div>
+					</div>
+				</form>
+				<div class='inline flex items-center justify-end flex-wrap mt-6'>
+					<button class='py-3 px-6 rounded bg-red-500 text-white font-bold'>
+						Search
+					</button>
+				</div>
+				</div>
 			</div>
 		</header>
 	);

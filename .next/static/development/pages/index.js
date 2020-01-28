@@ -23,7 +23,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     style: {
       backgroundImage: "url(".concat(_public_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_1___default.a, ")")
     },
-    className: "relative bg-cover bg-no-repeat",
+    className: "relative bg-cover bg-no-repeat h-screen",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -186,20 +186,191 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, "Log in")))), __jsx("div", {
-    "class": "flex items-center flex-wrap justify-start",
+    "class": "lg:w-header pt-10 pb-6 mx-32 mt-16 bg-white rounded shadow-2xl",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
     },
     __self: this
   }, __jsx("div", {
-    "class": "flex-1",
+    "class": "mx-10",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
     },
     __self: this
-  }, "Navigation Card in here")));
+  }, __jsx("h3", {
+    "class": "text-3xl font-bold leading-tight",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, "Book unique places to ", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }), "stay and things to do."), __jsx("form", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, __jsx("label", {
+    className: "block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase tracking-wider",
+    htmlFor: "where",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, "Where"), __jsx("input", {
+    className: "w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide",
+    type: "text",
+    id: "where",
+    placeholder: "Anywhere",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "flex flex-wrap items-stretch justify-start",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
+  }, __jsx("div", {
+    "class": "w-1/2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: this
+  }, __jsx("label", {
+    className: "block font-bold mt-6 mb-3 text-xs text-gray-700 uppercase",
+    htmlFor: "checkin",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, "Check-In"), __jsx("input", {
+    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide",
+    type: "text",
+    id: "checkin",
+    placeholder: "dd-mm-yyyy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  })), __jsx("div", {
+    "class": "w-1/2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }, __jsx("label", {
+    className: "block font-bold mt-6 mb-3 text-xs uppercase text-gray-700",
+    htmlFor: "checkout",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, "Check-Out"), __jsx("input", {
+    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
+    type: "text",
+    id: "checkout",
+    placeholder: "dd-mm-yyyy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }))), __jsx("div", {
+    "class": "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, __jsx("label", {
+    "class": "block font-bold mt-6 mb-3 text-xs uppercase text-gray-700",
+    htmlFor: "guests",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, "Guests"), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, __jsx("select", {
+    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
+    id: "guests",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, __jsx("option", {
+    value: "1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, "2 Guests"), __jsx("option", {
+    value: "2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }, "3 Guests"), __jsx("option", {
+    value: "3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, "4 Guests"))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }))), __jsx("div", {
+    "class": "inline flex items-center justify-end flex-wrap mt-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }, __jsx("button", {
+    "class": "py-3 px-6 rounded bg-red-500 text-white font-bold",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, "Search")))));
 });
 
 /***/ }),
@@ -277,7 +448,7 @@ var Home = function Home() {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/airbnb-background-25e7ec9f232c21e67b89e9cc0575e133.jpg";
+module.exports = "/_next/static/images/airbnb-background-ff7fd2c8a6a66a3156d61546d7cd4936.jpg";
 
 /***/ }),
 
