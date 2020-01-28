@@ -13,6 +13,12 @@ module.exports = {
 			},
 			maxWidth: {
 				layout: '100rem'
+			},
+			borderRadius: {
+				xl: '0.8rem'
+			},
+			shadow: {
+				'5xl': 'rgba(0, 0, 0, 0.15) 0px 2px 8px !important'
 			}
 		}
 	},
