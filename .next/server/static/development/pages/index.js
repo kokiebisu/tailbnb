@@ -668,43 +668,13 @@ const Home = () => {
       lineNumber: 11
     },
     __self: undefined
-  }), __jsx("div", {
-    class: "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-10 mb-32",
+  }), __jsx(Plus, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: undefined
-  }, __jsx("h3", {
-    className: "text-xl font-medium pb-1 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
-  }, "Airbnb Plus places to stay"), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }, "A selection of places to stay verified for quality and design."), __jsx("div", {
-    className: "w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "w-full h-64 bg-cover bg-no-repeat object-cover rounded",
-    src: _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    alt: "plus1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
-  }))));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
