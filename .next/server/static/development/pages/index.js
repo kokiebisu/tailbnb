@@ -515,14 +515,14 @@ const Home = () => {
     },
     __self: undefined
   }), __jsx("div", {
-    className: "max-w-layout mx-auto my-32",
+    className: "xl:max-x-layout lg:max-w-5.5xl max-w-xl mx-auto mt-14 mb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
   }, __jsx("h3", {
-    className: "text-2xl font-medium py-3 mt-5",
+    className: "text-xl font-medium py-3 mt-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -543,7 +543,7 @@ const Home = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-xl bg-white",
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-lg bg-white",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -577,7 +577,7 @@ const Home = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-xl bg-white",
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-lg bg-white",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -611,7 +611,7 @@ const Home = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-xl bg-white",
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-lg bg-white",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
