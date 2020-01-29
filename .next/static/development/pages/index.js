@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./components/Adventures.js":
-/*!**********************************!*\
-  !*** ./components/Adventures.js ***!
-  \**********************************/
+/***/ "./components/AdventureCard.js":
+/*!*************************************!*\
+  !*** ./components/AdventureCard.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/adventures3.jpg */ "./public/adventures3.jpg");
 /* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Adventures.js";
+var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/AdventureCard.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -25,38 +25,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("div", {
-    className: "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, __jsx("h3", {
-    className: "text-xl font-medium py-1 mt-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, "Introducing Airbnb Adventures"), __jsx("p", {
-    className: "mb-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, "Multi-day trips led by local experts\u2014activities, meals, and stays included"), __jsx("div", {
-    className: "flex items-start justify-start flex-wrap",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx("div", {
     className: "lg:w-1/4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 7
     },
     __self: this
   }, __jsx("img", {
@@ -65,35 +37,92 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 8
     },
     __self: this
   }), __jsx("p", {
     className: "uppercase text-sm my-2 font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 9
     },
     __self: this
   }, "Norway"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 10
     },
     __self: this
   }, "2 Nights PACKAGE All Inclusive"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 11
     },
     __self: this
   }, "FROM $841/person", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 12
     },
     __self: this
-  }, " \xB7 "), "3 days"))));
+  }, " \xB7 "), "3 days"));
+});
+
+/***/ }),
+
+/***/ "./components/Adventures.js":
+/*!**********************************!*\
+  !*** ./components/Adventures.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AdventureCard */ "./components/AdventureCard.js");
+var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Adventures.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// Component
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return __jsx("div", {
+    className: "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("h3", {
+    className: "text-xl font-medium py-1 mt-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Introducing Airbnb Adventures"), __jsx("p", {
+    className: "mb-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Multi-day trips led by local experts\u2014activities, meals, and stays included"), __jsx("div", {
+    className: "flex items-start justify-start flex-wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  })));
 });
 
 /***/ }),
