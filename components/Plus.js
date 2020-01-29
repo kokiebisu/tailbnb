@@ -1,3 +1,5 @@
+import img1 from '../public/plus-1.jpg';
+
 export default () => {
   return (
     <div class='xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20'>

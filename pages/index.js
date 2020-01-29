@@ -1,8 +1,7 @@
 // Component
 import Header from '../components/Header';
 import Explore from '../components/Explore';
-
-import img1 from '../public/plus-1.jpg';
+import Plus from '../components/Plus';
 
 const Home = () => {
   return (
