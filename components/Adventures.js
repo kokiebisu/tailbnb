@@ -1,6 +1,12 @@
 // Component
 import AdventureCard from '../components/AdventureCard';
 
+// Images
+import img1 from '../public/adventures1.jpg';
+import img2 from '../public/adventures2.jpg';
+import img3 from '../public/adventures3.jpg';
+import img4 from '../public/adventures4.jpg';
+
 export default () => {
   return (
     <div className='xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20'>
@@ -12,7 +18,18 @@ export default () => {
         included
       </p>
       <div className='flex items-start justify-start flex-wrap'>
-        <AdventureCard />
+        <div className='w-1/4'>
+          <AdventureCard img={img1} />
+        </div>
+        <div className='w-1/4'>
+          <AdventureCard img={img2} />
+        </div>
+        <div className='w-1/4'>
+          <AdventureCard img={img3} />
+        </div>
+        <div className='w-1/4'>
+          <AdventureCard img={img4} />
+        </div>
       </div>
     </div>
   );

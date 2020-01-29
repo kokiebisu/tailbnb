@@ -1,27 +1,27 @@
 @tailwind base;
 
 body {
-	@apply antialiased text-gray-800 bg-background;
+  @apply antialiased text-gray-800 bg-background;
 }
 
 @tailwind components;
 
 .appearance-none {
-	-moz-appearance: none;
-	appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .border:hover::after {
-	content: '';
-	border-bottom: 3px solid #000;
-	width: 10px;
-	display: inline-block;
-	margin: 0 auto;
-	transition: 0.5 ease;
+  content: '';
+  border-bottom: 3px solid #000;
+  width: 10px;
+  display: inline-block;
+  margin: 0 auto;
+  transition: 0.5 ease;
 }
 
 @tailwind utilities;
 
 .color-_header {
-	color: '#484848';
+  color: '#484848';
 }

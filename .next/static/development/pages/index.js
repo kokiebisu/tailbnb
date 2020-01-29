@@ -11,58 +11,51 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/adventures1.jpg */ "./public/adventures1.jpg");
-/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/adventures2.jpg */ "./public/adventures2.jpg");
-/* harmony import */ var _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/adventures3.jpg */ "./public/adventures3.jpg");
-/* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/AdventureCard.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var img = _ref.img;
   return __jsx("div", {
-    className: "lg:w-1/4",
+    className: "lg:w-11/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 3
     },
     __self: this
   }, __jsx("img", {
     className: "rounded-lg",
-    src: _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    src: img,
     alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 4
     },
     __self: this
   }), __jsx("p", {
     className: "uppercase text-sm my-2 font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 5
     },
     __self: this
   }, "Norway"), __jsx("p", {
+    className: "hello",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 6
     },
     __self: this
   }, "2 Nights PACKAGE All Inclusive"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 7
     },
     __self: this
   }, "FROM $841/person", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 8
     },
     __self: this
   }, " \xB7 "), "3 days"));
@@ -82,47 +75,110 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AdventureCard */ "./components/AdventureCard.js");
+/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/adventures1.jpg */ "./public/adventures1.jpg");
+/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/adventures2.jpg */ "./public/adventures2.jpg");
+/* harmony import */ var _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/adventures3.jpg */ "./public/adventures3.jpg");
+/* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/adventures4.jpg */ "./public/adventures4.jpg");
+/* harmony import */ var _public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Adventures.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // Component
+ // Images
+
+
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("div", {
     className: "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 12
     },
     __self: this
   }, __jsx("h3", {
     className: "text-xl font-medium py-1 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 13
     },
     __self: this
   }, "Introducing Airbnb Adventures"), __jsx("p", {
     className: "mb-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 16
     },
     __self: this
   }, "Multi-day trips led by local experts\u2014activities, meals, and stays included"), __jsx("div", {
     className: "flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-1/4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
     },
     __self: this
   }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    img: _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 22
     },
     __self: this
-  })));
+  })), __jsx("div", {
+    className: "w-1/4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    img: _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "w-1/4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    img: _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "w-1/4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    img: _public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }))));
 });
 
 /***/ }),
@@ -140,48 +196,102 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/experience1.jpg */ "./public/experience1.jpg");
 /* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/experience2.jpg */ "./public/experience2.jpg");
+/* harmony import */ var _public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/experience3.jpg */ "./public/experience3.jpg");
+/* harmony import */ var _public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ExploreCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ExploreCard */ "./components/ExploreCard.js");
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Explore.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("div", {
     className: "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 9
     },
     __self: this
   }, __jsx("h3", {
     className: "text-xl font-medium py-3 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     },
     __self: this
   }, "Explore Airbnb"), __jsx("div", {
     className: "flex flex-wrap items-center justify-start w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 11
     },
     __self: this
-  }, __jsx("div", {
+  }, __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    img: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    title: "Stays",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }), __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    img: _public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    title: "Experiences",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }), __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    img: _public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    title: "Adventures",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  })));
+});
+
+/***/ }),
+
+/***/ "./components/ExploreCard.js":
+/*!***********************************!*\
+  !*** ./components/ExploreCard.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/ExploreCard.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var img = _ref.img,
+      title = _ref.title;
+  return __jsx("div", {
     className: "lg:w-1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 3
     },
     __self: this
   }, __jsx("div", {
     className: "mr-4 flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 4
     },
     __self: this
   }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    src: img,
     className: "rounded-xl rounded-r-none",
     style: {
       height: 80,
@@ -190,85 +300,17 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     alt: "explore1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 5
     },
     __self: this
   }), __jsx("p", {
-    "class": "pl-4",
+    "class": "pl-4 font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 11
     },
     __self: this
-  }, "Stays"))), __jsx("div", {
-    className: "lg:w-1/3 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
-    className: "rounded-xl rounded-r-none",
-    style: {
-      height: 80,
-      width: 'auto'
-    },
-    alt: "explore2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }), __jsx("p", {
-    "class": "pl-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, "Stays"))), __jsx("div", {
-    className: "lg:w-1/3 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
-    className: "rounded-xl rounded-r-none",
-    style: {
-      height: 80,
-      width: 'auto'
-    },
-    alt: "explore3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }), __jsx("p", {
-    "class": "pl-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, "Stays")))));
+  }, title)));
 });
 
 /***/ }),
@@ -679,49 +721,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/plus-1.jpg */ "./public/plus-1.jpg");
 /* harmony import */ var _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _PlusCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PlusCard */ "./components/PlusCard.js");
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Plus.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("div", {
     "class": "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     },
     __self: this
   }, __jsx("h3", {
     className: "text-xl font-medium py-1 mt-5 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 8
     },
     __self: this
   }, "Airbnb Plus places to stay"), __jsx("p", {
     className: "mb-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
-  }, "A selection of places to stay verified for quality and design."), __jsx("div", {
+  }, "A selection of places to stay verified for quality and design."), __jsx(_PlusCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    img: _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }));
+});
+
+/***/ }),
+
+/***/ "./components/PlusCard.js":
+/*!********************************!*\
+  !*** ./components/PlusCard.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/PlusCard.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var img = _ref.img;
+  return __jsx("div", {
     className: "w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 3
     },
     __self: this
   }, __jsx("img", {
     className: "w-full h-64 bg-cover bg-no-repeat object-cover rounded",
-    src: _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    src: img,
     alt: "plus1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 4
     },
     __self: this
-  })));
+  }));
 });
 
 /***/ }),
@@ -849,6 +921,17 @@ module.exports = "/_next/static/images/adventures3-c5ab2d45bffa9243b5883b338b663
 
 /***/ }),
 
+/***/ "./public/adventures4.jpg":
+/*!********************************!*\
+  !*** ./public/adventures4.jpg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/adventures4-44b3b2a74fc7a68f832134a126bb87d8.jpg";
+
+/***/ }),
+
 /***/ "./public/airbnb-background.jpg":
 /*!**************************************!*\
   !*** ./public/airbnb-background.jpg ***!
@@ -868,6 +951,28 @@ module.exports = "/_next/static/images/airbnb-background-ff7fd2c8a6a66a3156d6154
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/experience1-6ce0026a63ceec8c2d4d261cebb49830.jpg";
+
+/***/ }),
+
+/***/ "./public/experience2.jpg":
+/*!********************************!*\
+  !*** ./public/experience2.jpg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/experience2-8a2f3a420060a72787ed29f47b3c8aca.jpg";
+
+/***/ }),
+
+/***/ "./public/experience3.jpg":
+/*!********************************!*\
+  !*** ./public/experience3.jpg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/experience3-4c10e45ca175365d3f15ce8c46dcea59.jpg";
 
 /***/ }),
 
