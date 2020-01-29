@@ -93,6 +93,152 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Explore.js":
+/*!*******************************!*\
+  !*** ./components/Explore.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/experience1.jpg */ "./public/experience1.jpg");
+/* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Explore.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return __jsx("div", {
+    className: "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    className: "text-xl font-medium py-3 mt-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, "Explore Airbnb"), __jsx("div", {
+    className: "flex flex-wrap items-center justify-start w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "lg:w-1/3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    className: "rounded-xl rounded-r-none",
+    style: {
+      height: 80,
+      width: 'auto'
+    },
+    alt: "explore1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }), __jsx("p", {
+    class: "pl-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, "Stays"))), __jsx("div", {
+    className: "lg:w-1/3 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    className: "rounded-xl rounded-r-none",
+    style: {
+      height: 80,
+      width: 'auto'
+    },
+    alt: "explore2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }), __jsx("p", {
+    class: "pl-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }, "Stays"))), __jsx("div", {
+    className: "lg:w-1/3 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mr-4 flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    className: "rounded-xl rounded-r-none",
+    style: {
+      height: 80,
+      width: 'auto'
+    },
+    alt: "explore3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }), __jsx("p", {
+    class: "pl-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, "Stays")))));
+});
+
+/***/ }),
+
 /***/ "./components/Header.js":
 /*!******************************!*\
   !*** ./components/Header.js ***!
@@ -498,8 +644,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/experience1.jpg */ "./public/experience1.jpg");
-/* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Explore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Explore */ "./components/Explore.js");
+/* harmony import */ var _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/plus-1.jpg */ "./public/plus-1.jpg");
+/* harmony import */ var _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -507,137 +654,57 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 const Home = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }), __jsx("div", {
-    className: "xl:max-x-layout lg:max-w-5.5xl max-w-xl mx-auto mt-14 mb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
-  }, __jsx("h3", {
-    className: "text-xl font-medium py-3 mt-5",
+  }), __jsx(_components_Explore__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: undefined
-  }, "Explore Airbnb"), __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full",
+  }), __jsx("div", {
+    class: "xl:max-x-layout lg:max-w-5.5xl mx-auto mt-10 mb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "lg:w-1/3 ",
+  }, __jsx("h3", {
+    className: "text-xl font-medium pb-1 ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-lg bg-white",
+  }, "Airbnb Plus places to stay"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
+    },
+    __self: undefined
+  }, "A selection of places to stay verified for quality and design."), __jsx("div", {
+    className: "w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    className: "rounded-xl rounded-r-none",
-    style: {
-      height: 80,
-      width: 'auto'
-    },
-    alt: "explore1",
+    className: "w-full h-64 bg-cover bg-no-repeat object-cover rounded",
+    src: _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    alt: "plus1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: undefined
-  }), __jsx("p", {
-    class: "pl-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  }, "Stays"))), __jsx("div", {
-    className: "lg:w-1/3 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-lg bg-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    className: "rounded-xl rounded-r-none",
-    style: {
-      height: 80,
-      width: 'auto'
-    },
-    alt: "explore2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
-  }), __jsx("p", {
-    class: "pl-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: undefined
-  }, "Stays"))), __jsx("div", {
-    className: "lg:w-1/3 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "mr-4 flex flex-wrap items-center justify-start shadow-xl rounded-lg bg-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }, __jsx("img", {
-    src: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    className: "rounded-xl rounded-r-none",
-    style: {
-      height: 80,
-      width: 'auto'
-    },
-    alt: "explore3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: undefined
-  }), __jsx("p", {
-    class: "pl-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }, "Stays"))))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -663,6 +730,17 @@ module.exports = "/_next/static/images/airbnb-background-ff7fd2c8a6a66a3156d6154
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/experience1-6ce0026a63ceec8c2d4d261cebb49830.jpg";
+
+/***/ }),
+
+/***/ "./public/plus-1.jpg":
+/*!***************************!*\
+  !*** ./public/plus-1.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/plus-1-71fd9b4fcf869f4b123411c87ec0e43f.jpg";
 
 /***/ }),
 
