@@ -6,6 +6,7 @@ import Adventures from '../components/Adventures';
 import Stay from '../components/Stay';
 import TopRated from '../components/TopRated';
 import Popular from '../components/Popular';
+import Featured from '../components/Featured';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Stay />
       <TopRated />
       <Popular />
+      <Featured />
     </>
   );
 };
