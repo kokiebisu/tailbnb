@@ -1,4 +1,4 @@
-export default ({ img, location, title, price, days }) => {
+export default () => {
   return (
     <div className='lg:w-30/31'>
       <img className='rounded-lg' src={img} alt='adventure1' />

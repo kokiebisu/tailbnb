@@ -115,7 +115,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   days
 }) => {
   return __jsx("div", {
-    className: "lg:w-11/12",
+    className: "lg:w-30/31",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -1296,6 +1296,117 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
+/***/ "./components/TopRated.js":
+/*!********************************!*\
+  !*** ./components/TopRated.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TopRatedCard */ "./components/TopRatedCard.js");
+var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/TopRated.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return __jsx("div", {
+    className: "xl:max-w-layout lg:max-w-5.5xl mx-auto mt-14 mb-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    className: "text-2xl font-semibold py-3 mt-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, "Top-rated experiences"), __jsx("p", {
+    className: "mb-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, "Book activities led by local hosts on your next trip."), __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }));
+});
+
+/***/ }),
+
+/***/ "./components/TopRatedCard.js":
+/*!************************************!*\
+  !*** ./components/TopRatedCard.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/TopRatedCard.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return __jsx("div", {
+    className: "lg:w-30/31",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "rounded-lg",
+    src: img,
+    alt: "adventure1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: undefined
+  }), __jsx("p", {
+    className: "uppercase text-sm my-2 font-bold",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, location), __jsx("p", {
+    className: "my-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, title), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, price, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, " \xB7 "), days, " days"));
+});
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -1312,6 +1423,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Plus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Plus */ "./components/Plus.js");
 /* harmony import */ var _components_Adventures__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Adventures */ "./components/Adventures.js");
 /* harmony import */ var _components_Stay__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Stay */ "./components/Stay.js");
+/* harmony import */ var _components_TopRated__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/TopRated */ "./components/TopRated.js");
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1322,35 +1434,42 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 const Home = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: undefined
-  }), __jsx(_components_Explore__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: undefined
-  }), __jsx(_components_Plus__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_Explore__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: undefined
-  }), __jsx(_components_Adventures__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), __jsx(_components_Plus__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: undefined
-  }), __jsx(_components_Stay__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_components_Adventures__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
+    },
+    __self: undefined
+  }), __jsx(_components_Stay__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }), __jsx(_components_TopRated__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
     },
     __self: undefined
   }));
