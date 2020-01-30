@@ -1,6 +1,5 @@
+// Components
 import TopRatedCard from '../components/TopRatedCard';
-
-import img1 from '../public/adventures1.jpg';
 import ShowAll from './ShowAll';
 
 export default () => {

@@ -1,7 +1,7 @@
 export default () => {
   return (
     <div className='2xl:max-w-layout xl:max-w-4xl mx-auto mt-14 mb-5 '>
-      <div className='flex flex-wrap items-center w-full justify-around pb-6 border-b border-gray-300'>
+      <div className='flex flex-wrap items-start w-full justify-around pb-6 border-b border-gray-300'>
         <div className='lg:w-1/4'>
           <h3 className='font-semibold text-gray-900 text-sm mb-2'>Airbnb</h3>
           <ul className='leading-relaxed'>
@@ -12,22 +12,22 @@ export default () => {
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                News
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Policies
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Diversity & Belonging
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Accessibility
               </a>
             </li>
           </ul>
@@ -37,87 +37,82 @@ export default () => {
           <ul className='leading-relaxed'>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Trust & Safety
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Travel Credit
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Airbnb Citizen
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Business Travel
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Things To Do
+              </a>
+            </li>
+            <li>
+              <a className='text-gray-650 font-semibold text-sm' href=''>
+                Airbnbmag
               </a>
             </li>
           </ul>
         </div>
         <div className='lg:w-1/4'>
-          <h3 className='font-semibold text-gray-905 text-sm mb-2'>Airbnb</h3>
+          <h3 className='font-semibold text-gray-905 text-sm mb-2'>Hosting</h3>
           <ul className='leading-relaxed'>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Why Host
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Hospitality
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Responsible Hosting
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Community Centre
               </a>
             </li>
             <li>
               <a className='text-gray-650 font-semibold text-sm' href=''>
-                Careers
+                Host an Experience
+              </a>
+            </li>
+            <li>
+              <a className='text-gray-650 font-semibold text-sm' href=''>
+                Open Homes
               </a>
             </li>
           </ul>
         </div>
         <div className='lg:w-1/4'>
-          <h3 className='font-semibold text-sm mb-2 text-gray-900'>Airbnb</h3>
+          <h3 className='font-semibold text-sm mb-2 text-gray-900'>Support</h3>
           <ul className='leading-relaxed'>
             <li>
               <a className='font-semibold text-sm text-gray-650' href=''>
-                Careers
+                Help
               </a>
             </li>
             <li>
               <a className='font-semibold text-sm text-gray-650' href=''>
-                Careers
-              </a>
-            </li>
-            <li>
-              <a className='font-semibold text-sm text-gray-650' href=''>
-                Careers
-              </a>
-            </li>
-            <li>
-              <a className='font-semibold text-sm text-gray-650' href=''>
-                Careers
-              </a>
-            </li>
-            <li>
-              <a className='font-semibold text-sm text-gray-650' href=''>
-                Careers
+                Neighbourhood Support
               </a>
             </li>
           </ul>
