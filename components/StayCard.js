@@ -1,11 +1,25 @@
-import img1 from '../public/stay-1.jpg';
+import { useState, useEffect } from 'react';
 
-export default ({ location, title, price }) => {
+export default ({ type, img, location, title, price }) => {
+  const renderhost = () => {
+    if (type === 'normal') {
+      return null;
+    } else if (type === 'superhost') {
+      return <p>{type}</p>;
+    } else if (type === 'plus') {
+      return <p>{type}</p>;
+    }
+    console.log(type);
+  };
+
   return (
     <div className='lg:w-30/31'>
-      <img className='rounded' src={img1} alt='adventure1' />
+      <img className='rounded' src={img} alt='adventure1' />
       <div className='flex flex-wrap items-center justify-between'>
-        <p className='text-sm my-2 font-light text-gray-600'>{location}</p>
+        <div className='flex flex-wrap items-center justify-start'>
+          {renderhost()}
+          <p className='text-sm my-2 font-light text-gray-600'>{location}</p>
+        </div>
         <div className='flex items-center justify-center flex-wrap'>
           <svg
             version='1.1'
@@ -33,7 +47,7 @@ export default ({ location, title, price }) => {
       </div>
       <p className='my-1'>{title}</p>
       <p className='tracking-wide'>
-        <span className='font-bold'>{price}</span>/night
+        <span className='font-bold'>${price} CAD</span>/night
       </p>
     </div>
   );

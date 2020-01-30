@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1881,9 +1881,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_StayCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/StayCard */ "./components/StayCard.js");
 /* harmony import */ var _components_ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ShowAll */ "./components/ShowAll.js");
+/* harmony import */ var _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/stay-1.jpg */ "./public/stay-1.jpg");
+/* harmony import */ var _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/stay-2.jpg */ "./public/stay-2.jpg");
+/* harmony import */ var _public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/stay-3.jpg */ "./public/stay-3.jpg");
+/* harmony import */ var _public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/stay-4.jpg */ "./public/stay-4.jpg");
+/* harmony import */ var _public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../public/stay-5.jpg */ "./public/stay-5.jpg");
+/* harmony import */ var _public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../public/stay-6.jpg */ "./public/stay-6.jpg");
+/* harmony import */ var _public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../public/stay-7.jpg */ "./public/stay-7.jpg");
+/* harmony import */ var _public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../public/stay-8.jpg */ "./public/stay-8.jpg");
+/* harmony import */ var _public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Stay.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// Component
+
+ // Images
+
+
+
+
+
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
@@ -1891,85 +1917,57 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "xl:max-w-5.5xl lg:max-w-5.5xl mx-auto mt-14 mb-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("h3", {
     className: "text-2xl font-semibold py-3 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 18
     },
     __self: undefined
   }, "Places to stay around the world"), __jsx("div", {
     className: "flex flex-wrap items-center justify-start w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 21
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/4 py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 22
     },
     __self: undefined
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    type: "",
+    img: _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     location: "Sol Madrid",
     title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
+    price: "91",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 23
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-1/4 py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    location: "Sol Madrid",
-    title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
+    type: "superhost",
+    img: _public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    location: "Makawao",
+    title: "Adorable Garden Gingerbread...",
+    price: "257",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "w-1/4 py-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
-  }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    location: "Sol Madrid",
-    title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "w-1/4 py-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
-  }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    location: "Sol Madrid",
-    title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 32
     },
     __self: undefined
   })), __jsx("div", {
@@ -1980,9 +1978,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    location: "Sol Madrid",
-    title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
+    type: "superhost",
+    img: _public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    location: "Roma Norte",
+    title: "Radiant Apartment with Terrace in...",
+    price: "104",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
@@ -1992,55 +1992,97 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "w-1/4 py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    location: "Sol Madrid",
-    title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
+    type: "superhost",
+    img: _public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    location: "Portici",
+    title: "Villa San Gennariello",
+    price: "87",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-1/4 py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 58
     },
     __self: undefined
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    location: "Sol Madrid",
-    title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
+    type: "plus",
+    img: _public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    location: "Old Town",
+    title: "Classical Apartment on the Royal...",
+    price: "206",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-1/4 py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 67
     },
     __self: undefined
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    location: "Sol Madrid",
-    title: "Private Studio in Sol, Madrid",
-    price: "$91 CAD",
+    type: "normal",
+    img: _public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
+    location: "Porto",
+    title: "PORTA33 | PORTO PENTHOUSE...",
+    price: "126",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 68
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "w-1/4 py-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: undefined
+  }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    type: "superhost",
+    img: _public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
+    location: "Krakow",
+    title: "Amazing and Extremely Central Flat",
+    price: "31",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "w-1/4 py-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: undefined
+  }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    type: "superhost",
+    img: _public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
+    location: "Tricase",
+    title: "La Salentina, sea, nature & relax",
+    price: "68",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
     },
     __self: undefined
   }))), __jsx(_components_ShowAll__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 95
     },
     __self: undefined
   }));
@@ -2059,52 +2101,83 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/stay-1.jpg */ "./public/stay-1.jpg");
-/* harmony import */ var _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/StayCard.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (({
+  type,
+  img,
   location,
   title,
   price
 }) => {
+  const renderhost = () => {
+    if (type === 'normal') {
+      return null;
+    } else if (type === 'superhost') {
+      return __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        },
+        __self: undefined
+      }, type);
+    } else if (type === 'plus') {
+      return __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: undefined
+      }, type);
+    }
+
+    console.log(type);
+  };
+
   return __jsx("div", {
     className: "lg:w-30/31",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 16
     },
     __self: undefined
   }, __jsx("img", {
     className: "rounded",
-    src: _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    src: img,
     alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 17
     },
     __self: undefined
   }), __jsx("div", {
     className: "flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 18
     },
     __self: undefined
-  }, __jsx("p", {
+  }, __jsx("div", {
+    className: "flex flex-wrap items-center justify-start",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, renderhost(), __jsx("p", {
     className: "text-sm my-2 font-light text-gray-600",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 21
     },
     __self: undefined
-  }, location), __jsx("div", {
+  }, location)), __jsx("div", {
     className: "flex items-center justify-center flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 23
     },
     __self: undefined
   }, __jsx("svg", {
@@ -2121,51 +2194,51 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 35
     },
     __self: undefined
   }))), __jsx("p", {
     className: "pl-1 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 45
     },
     __self: undefined
   }, "4.71"))), __jsx("p", {
     className: "my-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 48
     },
     __self: undefined
   }, title), __jsx("p", {
     className: "tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx("span", {
     className: "font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 50
     },
     __self: undefined
-  }, price), "/night"));
+  }, "$", price, " CAD"), "/night"));
 });
 
 /***/ }),
@@ -2704,11 +2777,88 @@ module.exports = "/_next/static/images/plus-1-71fd9b4fcf869f4b123411c87ec0e43f.j
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/stay-1-e0d49a7b4cdebe66f79997bdb4b1e6e9.jpg";
+module.exports = "/_next/static/images/stay-1-60a882230c977f3f9d428c4e45f8e376.jpg";
 
 /***/ }),
 
-/***/ 3:
+/***/ "./public/stay-2.jpg":
+/*!***************************!*\
+  !*** ./public/stay-2.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/stay-2-19a16f19c74466242bc2a67cba889b49.jpg";
+
+/***/ }),
+
+/***/ "./public/stay-3.jpg":
+/*!***************************!*\
+  !*** ./public/stay-3.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/stay-3-88ee4521817393c9ff0d5fbb5b3fd3f7.jpg";
+
+/***/ }),
+
+/***/ "./public/stay-4.jpg":
+/*!***************************!*\
+  !*** ./public/stay-4.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/stay-4-b627c5048675c7bd0c10cf2cc2ef408b.jpg";
+
+/***/ }),
+
+/***/ "./public/stay-5.jpg":
+/*!***************************!*\
+  !*** ./public/stay-5.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/stay-5-8ac97e67064429c05bbe6c936b2e4ac8.jpg";
+
+/***/ }),
+
+/***/ "./public/stay-6.jpg":
+/*!***************************!*\
+  !*** ./public/stay-6.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/stay-6-915439a7e3fcd9f696535b29718f4114.jpg";
+
+/***/ }),
+
+/***/ "./public/stay-7.jpg":
+/*!***************************!*\
+  !*** ./public/stay-7.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/stay-7-232361ac06079ab7564fe4211cd45967.jpg";
+
+/***/ }),
+
+/***/ "./public/stay-8.jpg":
+/*!***************************!*\
+  !*** ./public/stay-8.jpg ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/stay-8-0f5634d010049832d31c7455c92588b8.jpg";
+
+/***/ }),
+
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
