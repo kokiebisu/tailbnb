@@ -7,6 +7,7 @@ import Stay from '../components/Stay';
 import TopRated from '../components/TopRated';
 import Popular from '../components/Popular';
 import Featured from '../components/Featured';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <TopRated />
       <Popular />
       <Featured />
+      <Footer />
     </>
   );
 };

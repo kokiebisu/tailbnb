@@ -27,6 +27,9 @@ module.exports = {
       boxShadow: {
         focus: '0 0 0 3px rgba(66,153,225,0.5)',
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, .3)'
+      },
+      colors: {
+        'gray-650': '#767676'
       }
     }
   },
