@@ -522,7 +522,7 @@ var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Footer.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("div", {
-    className: "xl:max-w-4xl mx-auto mt-14 mb-5 ",
+    className: "2xl:max-w-layout xl:max-w-4xl mx-auto mt-14 mb-5 ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3

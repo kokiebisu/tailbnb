@@ -30,6 +30,9 @@ module.exports = {
       },
       colors: {
         'gray-650': '#767676'
+      },
+      screens: {
+        '2xl': '1440px'
       }
     }
   },
