@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -317,12 +317,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/experience1.jpg */ "./public/experience1.jpg");
-/* harmony import */ var _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/experience2.jpg */ "./public/experience2.jpg");
-/* harmony import */ var _public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/experience3.jpg */ "./public/experience3.jpg");
-/* harmony import */ var _public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/explore-1.jpg */ "./public/explore-1.jpg");
+/* harmony import */ var _public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/explore-2.jpg */ "./public/explore-2.jpg");
+/* harmony import */ var _public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/explore-3.jpg */ "./public/explore-3.jpg");
+/* harmony import */ var _public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _ExploreCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ExploreCard */ "./components/ExploreCard.js");
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Explore.js";
 
@@ -354,7 +354,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    img: _public_experience1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    img: _public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
     title: "Stays",
     __source: {
       fileName: _jsxFileName,
@@ -362,7 +362,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }), __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    img: _public_experience2_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    img: _public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
     title: "Experiences",
     __source: {
       fileName: _jsxFileName,
@@ -370,7 +370,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }), __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    img: _public_experience3_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     title: "Adventures",
     __source: {
       fileName: _jsxFileName,
@@ -2182,12 +2182,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TopRatedCard */ "./components/TopRatedCard.js");
-/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/adventures1.jpg */ "./public/adventures1.jpg");
-/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ShowAll */ "./components/ShowAll.js");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShowAll */ "./components/ShowAll.js");
+/* harmony import */ var _public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/experience-1.jpg */ "./public/experience-1.jpg");
+/* harmony import */ var _public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/experience-2.jpg */ "./public/experience-2.jpg");
+/* harmony import */ var _public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/experience-3.jpg */ "./public/experience-3.jpg");
+/* harmony import */ var _public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/experience-4.jpg */ "./public/experience-4.jpg");
+/* harmony import */ var _public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/TopRated.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// Components
+
+ // Images
+
+
 
 
 
@@ -2196,103 +2207,107 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "xl:max-w-5.5xl lg:max-w-5.5xl mx-auto mt-14 mb-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 13
     },
     __self: undefined
   }, __jsx("h3", {
     className: "text-2xl font-semibold py-3 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 14
     },
     __self: undefined
   }, "Top-rated experiences"), __jsx("p", {
     className: "mb-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 17
     },
     __self: undefined
   }, "Book activities led by local hosts on your next trip."), __jsx("div", {
-    className: "flex items-start justify-start",
+    className: "flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("div", {
     className: "xl:w-1/4 lg:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 21
     },
     __self: undefined
   }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    img: _public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     location: "Italy",
     title: "Luca & Lorenzo, cooking in Chianti hills",
     price: "172",
+    reviews: "1765",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 22
     },
     __self: undefined
   })), __jsx("div", {
     className: "xl:w-1/4 lg:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    img: _public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
     location: "Italy",
-    title: "Luca & Lorenzo, cooking in Chianti hills",
-    price: "172",
+    title: "Truffle experience Rome",
+    price: "148",
+    reviews: "621",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 31
     },
     __self: undefined
   })), __jsx("div", {
     className: "xl:w-1/4 lg:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    location: "Italy",
-    title: "Luca & Lorenzo, cooking in Chianti hills",
-    price: "172",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "xl:w-1/4 lg:w-1/2",
+    img: _public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    location: "Japan",
+    title: "Feeling Samurai Soul",
+    price: "119",
+    reviews: "1047",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: undefined
-  }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    location: "Italy",
-    title: "Luca & Lorenzo, cooking in Chianti hills",
-    price: "172",
+  })), __jsx("div", {
+    className: "xl:w-1/4 lg:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 48
     },
     __self: undefined
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: "Show all experiences",
+  }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    img: _public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    location: "Italy",
+    title: "Lisbon best flavors",
+    price: "90",
+    reviews: "3733",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
+    },
+    __self: undefined
+  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "Show all experiences",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
     },
     __self: undefined
   }));
@@ -2318,7 +2333,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   img,
   location,
   title,
-  price
+  price,
+  reviews
 }) => {
   return __jsx("div", {
     className: "lg:w-30/31",
@@ -2356,7 +2372,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 7
     },
     __self: undefined
-  }, "From $", price, "/person"));
+  }, "From $", price, "/person"), __jsx("div", {
+    className: "flex items-center justify-start flex-wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    version: "1.1",
+    id: "Capa_1",
+    xmlns: "http://www.w3.org/2000/svg",
+    x: "0px",
+    y: "0px",
+    width: "13",
+    height: "13",
+    viewBox: "0 0 37.286 37.287",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }))), __jsx("p", {
+    className: "pl-1 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, "4.71"), __jsx("p", {
+    className: "text-gray-650 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, "\xA0 (", reviews, ")")));
 });
 
 /***/ }),
@@ -2512,36 +2576,80 @@ module.exports = "/_next/static/images/airbnb-background-ff7fd2c8a6a66a3156d6154
 
 /***/ }),
 
-/***/ "./public/experience1.jpg":
-/*!********************************!*\
-  !*** ./public/experience1.jpg ***!
-  \********************************/
+/***/ "./public/experience-1.jpg":
+/*!*********************************!*\
+  !*** ./public/experience-1.jpg ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/experience1-6ce0026a63ceec8c2d4d261cebb49830.jpg";
+module.exports = "/_next/static/images/experience-1-5c1f0eabf6990f7ee682a4df3e40d454.jpg";
 
 /***/ }),
 
-/***/ "./public/experience2.jpg":
-/*!********************************!*\
-  !*** ./public/experience2.jpg ***!
-  \********************************/
+/***/ "./public/experience-2.jpg":
+/*!*********************************!*\
+  !*** ./public/experience-2.jpg ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/experience2-8a2f3a420060a72787ed29f47b3c8aca.jpg";
+module.exports = "/_next/static/images/experience-2-00a06e302ad9f9e30a06493283c695ff.jpg";
 
 /***/ }),
 
-/***/ "./public/experience3.jpg":
-/*!********************************!*\
-  !*** ./public/experience3.jpg ***!
-  \********************************/
+/***/ "./public/experience-3.jpg":
+/*!*********************************!*\
+  !*** ./public/experience-3.jpg ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/experience3-4c10e45ca175365d3f15ce8c46dcea59.jpg";
+module.exports = "/_next/static/images/experience-3-87dc1817a5abd03354292bf6c3cd344c.jpg";
+
+/***/ }),
+
+/***/ "./public/experience-4.jpg":
+/*!*********************************!*\
+  !*** ./public/experience-4.jpg ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/experience-4-77e96d4ef8fe9a4350d65503482f00b8.jpg";
+
+/***/ }),
+
+/***/ "./public/explore-1.jpg":
+/*!******************************!*\
+  !*** ./public/explore-1.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/explore-1-6ce0026a63ceec8c2d4d261cebb49830.jpg";
+
+/***/ }),
+
+/***/ "./public/explore-2.jpg":
+/*!******************************!*\
+  !*** ./public/explore-2.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/explore-2-8a2f3a420060a72787ed29f47b3c8aca.jpg";
+
+/***/ }),
+
+/***/ "./public/explore-3.jpg":
+/*!******************************!*\
+  !*** ./public/explore-3.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/explore-3-4c10e45ca175365d3f15ce8c46dcea59.jpg";
 
 /***/ }),
 
@@ -2600,7 +2708,7 @@ module.exports = "/_next/static/images/stay-1-e0d49a7b4cdebe66f79997bdb4b1e6e9.j
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
