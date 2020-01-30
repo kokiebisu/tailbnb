@@ -6,7 +6,7 @@ import ExploreCard from './ExploreCard';
 
 export default () => {
   return (
-    <div className='xl:max-x-layout lg:max-w-5.5xl mx-auto mt-14 mb-20'>
+    <div className='xl:max-w-layout lg:max-w-5.5xl mx-auto mt-14 mb-20'>
       <h3 className='text-xl font-medium py-3 mt-5'>Explore Airbnb</h3>
       <div className='flex flex-wrap items-center justify-start w-full'>
         <ExploreCard img={img1} title='Stays' />
