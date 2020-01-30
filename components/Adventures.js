@@ -10,7 +10,7 @@ import img4 from '../public/adventures4.jpg';
 
 export default () => {
   return (
-    <div className='xl:max-w-layout lg:max-w-5xl md:max-w-3xl mx-auto mt-20 mb-20'>
+    <div className='xl:max-w-5.5xl lg:max-w-5xl md:max-w-3xl mx-auto mt-20 mb-20'>
       <h3 className='text-2xl font-semibold py-1 mt-5'>
         Introducing Airbnb Adventures
       </h3>

@@ -2,136 +2,146 @@
 import background from '../public/airbnb-background.jpg';
 
 export default () => {
-	return (
-		<header style={{ backgroundImage: `url(${background})` }} className='relative bg-cover bg-no-repeat h-screen'>
-			<div class='flex flex-wrap items-center justify-between'>
-				<div class='m-6'>
-					<a href='/'>
-						<h1>
-							<span class='sr-only'>Airbnb</span>
-							<svg
-								viewBox='0 0 1000 1000'
-								role='presentation'
-								aria-hidden='true'
-								focusable='false'
-								class='h-8 w-8 block'
-								style={{ fill: '#ffffff' }}>
-								<title>AirBnb</title>
-								<path d='m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z'></path>
-							</svg>
-						</h1>
-					</a>
-				</div>
+  return (
+    <header
+      style={{ backgroundImage: `url(${background})` }}
+      className='relative bg-cover bg-no-repeat h-screen'>
+      <div className='flex flex-wrap items-center justify-between'>
+        <div className='m-6'>
+          <a href='/'>
+            <h1>
+              <span class='sr-only'>Airbnb</span>
+              <svg
+                viewBox='0 0 1000 1000'
+                role='presentation'
+                aria-hidden='true'
+                focusable='false'
+                class='h-8 w-8 block'
+                style={{ fill: '#ffffff' }}>
+                <title>AirBnb</title>
+                <path d='m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z'></path>
+              </svg>
+            </h1>
+          </a>
+        </div>
 
-				<div>
-					<nav class='flex items-center justify-around flex-wrap text-white'>
-						<a href='#' className='flex self-center flex-wrap justify-between text-sm font-semibold px-2'>
-							<svg
-								className='relative self-center h-3 w-3'
-								style={{ fill: '#ffffff', right: 5 }}
-								viewBox='0 0 512 512'
-								xmlns='http://www.w3.org/2000/svg'>
-								<path d='m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0' />
-							</svg>
-							<p>English(CA)</p>
-						</a>
-						<a href='#' className='block text-sm font-semibold px-4 tracking-wide'>
-							$CAD
-						</a>
-						<a href='#' className='text-sm font-semibold px-4 tracking-wide'>
-							Host a home
-						</a>
-						<a href='#' className='text-sm font-semibold px-4 tracking-wide'>
-							Host an experience
-						</a>
-						<a href='#' className='text-sm font-semibold px-4 tracking-wide'>
-							Help
-						</a>
-						<a href='#' className='text-sm font-semibold px-4'>
-							Sign up
-						</a>
-						<a href='#' className='text-sm font-semibold pl-2 pr-4'>
-							Log in
-						</a>
-					</nav>
-				</div>
-			</div>
-			<div class='lg:w-100 pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl'>
-				<div class='mx-8'>
-					<h3 class='text-3xl font-bold color__header leading-tight'>
-						Book unique places to <br />
-						stay and things to do.
-					</h3>
-					<form>
-						<div className=''>
-							<label
-								className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase tracking-wider'
-								htmlFor='where'>
-								Where
-							</label>
-							<input
-								className='w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide'
-								type='text'
-								id='where'
-								placeholder='Anywhere'
-							/>
-						</div>
-						<div className='flex flex-wrap items-stretch justify-start'>
-							<div class='w-1/2'>
-								<label
-									className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase'
-									htmlFor='checkin'>
-									Check-In
-								</label>
-								<input
-									className='pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide'
-									type='text'
-									id='checkin'
-									placeholder='dd-mm-yyyy'
-								/>
-							</div>
-							<div class='w-1/2'>
-								<label
-									className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
-									htmlFor='checkout'>
-									Check-Out
-								</label>
-								<input
-									className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
-									type='text'
-									id='checkout'
-									placeholder='dd-mm-yyyy'
-								/>
-							</div>
-						</div>
-						<div class=''>
-							<label class='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700' htmlFor='guests'>
-								Guests
-							</label>
-							<div class='inline-block relative w-full'>
-								<select
-									className='appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
-									id='guests'>
-									<option value='1'>2 Guests</option>
-									<option value='2'>3 Guests</option>
-									<option value='3'>4 Guests</option>
-								</select>
-								<div class='pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
-									<svg
-										class='fill-current h-4 w-4'
-										xmlns='http://www.w3.org/2000/svg'
-										viewBox='0 0 20 20'>
-										<path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
-									</svg>
-								</div>
-							</div>
-						</div>
-					</form>
-					<div class='inline flex items-center justify-end flex-wrap mt-6'>
-						<button class='py-3 px-6 rounded bg-red-500 text-white font-bold'>Search</button>
-					</div>
-				</div>
-			</div>
-		</header>
-	);
+        <div>
+          <nav class='flex items-center justify-around flex-wrap text-white'>
+            <a
+              href='#'
+              className='flex self-center flex-wrap justify-between text-sm font-semibold px-2'>
+              <svg
+                className='relative self-center h-3 w-3'
+                style={{ fill: '#ffffff', right: 5 }}
+                viewBox='0 0 512 512'
+                xmlns='http://www.w3.org/2000/svg'>
+                <path d='m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0' />
+              </svg>
+              <p>English(CA)</p>
+            </a>
+            <a
+              href='#'
+              className='block text-sm font-semibold px-4 tracking-wide'>
+              $CAD
+            </a>
+            <a href='#' className='text-sm font-semibold px-4 tracking-wide'>
+              Host a home
+            </a>
+            <a href='#' className='text-sm font-semibold px-4 tracking-wide'>
+              Host an experience
+            </a>
+            <a href='#' className='text-sm font-semibold px-4 tracking-wide'>
+              Help
+            </a>
+            <a href='#' className='text-sm font-semibold px-4'>
+              Sign up
+            </a>
+            <a href='#' className='text-sm font-semibold pl-2 pr-4'>
+              Log in
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class='lg:w-100 pt-8 pb-6 lg:ml-41 lg:mt-10 bg-white rounded shadow-2xl'>
+        <div class='mx-8'>
+          <h3 class='text-3xl font-bold color__header leading-tight'>
+            Book unique places to <br />
+            stay and things to do.
+          </h3>
+          <form>
+            <div className=''>
+              <label
+                className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase tracking-wider'
+                htmlFor='where'>
+                Where
+              </label>
+              <input
+                className='w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide'
+                type='text'
+                id='where'
+                placeholder='Anywhere'
+              />
+            </div>
+            <div className='flex flex-wrap items-stretch justify-start'>
+              <div class='w-1/2'>
+                <label
+                  className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase'
+                  htmlFor='checkin'>
+                  Check-In
+                </label>
+                <input
+                  className='pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide'
+                  type='text'
+                  id='checkin'
+                  placeholder='dd-mm-yyyy'
+                />
+              </div>
+              <div class='w-1/2'>
+                <label
+                  className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
+                  htmlFor='checkout'>
+                  Check-Out
+                </label>
+                <input
+                  className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
+                  type='text'
+                  id='checkout'
+                  placeholder='dd-mm-yyyy'
+                />
+              </div>
+            </div>
+            <div class=''>
+              <label
+                class='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
+                htmlFor='guests'>
+                Guests
+              </label>
+              <div class='inline-block relative w-full'>
+                <select
+                  className='appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
+                  id='guests'>
+                  <option value='1'>2 Guests</option>
+                  <option value='2'>3 Guests</option>
+                  <option value='3'>4 Guests</option>
+                </select>
+                <div class='pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
+                  <svg
+                    class='fill-current h-4 w-4'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 20 20'>
+                    <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class='inline flex items-center justify-end flex-wrap mt-6'>
+            <button class='py-3 px-6 rounded bg-red-500 text-white font-bold'>
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 };

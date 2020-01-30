@@ -4,7 +4,7 @@ import PlusCard from './PlusCard';
 
 export default () => {
   return (
-    <div class='xl:max-w-layout lg:max-w-5.5xl mx-auto mt-14 mb-`20`'>
+    <div class='xl:max-w-5.5xl lg:max-w-5.5xl mx-auto mt-14 mb-`20`'>
       <h3 className='text-2xl font-semibold py-1 mt-5 '>
         Airbnb Plus places to stay
       </h3>
