@@ -14,7 +14,7 @@ export default () => {
       <h3 className='text-2xl font-semibold py-3 mt-5'>
         Top-rated experiences
       </h3>
-      <p className='mb-6'>
+      <p className='mb-6 text-gray-750'>
         Book activities led by local hosts on your next trip.
       </p>
       <div className='flex items-start justify-start flex-wrap'>

@@ -11,7 +11,7 @@ export default () => {
       <h3 className='text-2xl font-semibold py-3 mt-5'>
         Featured Airbnb Plus destinations
       </h3>
-      <p className='mb-6 text-gray-650'>
+      <p className='mb-6 text-gray-750'>
         Browse beautiful places to stay with all the comforts of home, plus more
       </p>
       <div className='flex flex-wrap items-start justify-start w-full'>

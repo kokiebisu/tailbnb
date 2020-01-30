@@ -14,7 +14,7 @@ export default () => {
       <h3 className='text-2xl font-semibold py-1 mt-5'>
         Introducing Airbnb Adventures
       </h3>
-      <p className='mb-6'>
+      <p className='mb-6 text-gray-750'>
         Multi-day trips led by local experts—activities, meals, and stays
         included
       </p>

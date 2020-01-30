@@ -8,7 +8,7 @@ export default () => {
       <h3 className='text-2xl font-semibold py-1 mt-5 '>
         Airbnb Plus places to stay
       </h3>
-      <p className='mb-6'>
+      <p className='mb-6 text-gray-750'>
         A selection of places to stay verified for quality and design.
       </p>
       <PlusCard img={img1} />
