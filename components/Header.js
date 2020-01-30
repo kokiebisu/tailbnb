@@ -13,7 +13,7 @@ export default () => {
         <div className='m-6'>
           <a href='/'>
             <h1>
-              <span class='sr-only'>Airbnb</span>
+              <span className='sr-only'>Airbnb</span>
               <svg
                 viewBox='0 0 1000 1000'
                 role='presentation'
