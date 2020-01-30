@@ -4,6 +4,9 @@ module.exports = {
       backgroundColor: {
         background: '#fffcfc'
       },
+      width: {
+        '30/31': '96.774194%'
+      },
       spacing: {
         '28': '7rem',
         '36': '9rem',

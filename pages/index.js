@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Explore from '../components/Explore';
 import Plus from '../components/Plus';
 import Adventures from '../components/Adventures';
+import Stay from '../components/Stay';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Explore />
       <Plus />
       <Adventures />
+      <Stay />
     </>
   );
 };
