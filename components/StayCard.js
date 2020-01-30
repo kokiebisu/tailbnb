@@ -1,13 +1,31 @@
-import { useState, useEffect } from 'react';
-
 export default ({ type, img, location, title, price }) => {
   const renderhost = () => {
     if (type === 'normal') {
-      return null;
+      return (
+        <p className='text-sm my-2 font-light text-gray-600'>{location}</p>
+      );
     } else if (type === 'superhost') {
-      return <p>{type}</p>;
+      return (
+        <>
+          <p className='uppercase border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
+            {type}
+          </p>
+          <p className='ml-2 text-sm my-2 font-light text-gray-600'>
+            {location}
+          </p>
+        </>
+      );
     } else if (type === 'plus') {
-      return <p>{type}</p>;
+      return (
+        <>
+          <p className='px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
+            {type}
+          </p>
+          <p className='ml-2 text-sm my-2 font-light text-gray-600'>
+            {location}
+          </p>
+        </>
+      );
     }
     console.log(type);
   };
@@ -18,7 +36,6 @@ export default ({ type, img, location, title, price }) => {
       <div className='flex flex-wrap items-center justify-between'>
         <div className='flex flex-wrap items-center justify-start'>
           {renderhost()}
-          <p className='text-sm my-2 font-light text-gray-600'>{location}</p>
         </div>
         <div className='flex items-center justify-center flex-wrap'>
           <svg

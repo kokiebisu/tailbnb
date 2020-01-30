@@ -21,7 +21,7 @@ export default () => {
       <div className='flex flex-wrap items-center justify-start w-full'>
         <div className='w-1/4 py-5'>
           <StayCard
-            type=''
+            type='normal'
             img={stay1}
             location='Sol Madrid'
             title='Private Studio in Sol, Madrid'
