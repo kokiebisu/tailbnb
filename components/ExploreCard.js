@@ -8,7 +8,7 @@ export default ({ img, title }) => {
           style={{ height: 80, width: 'auto' }}
           alt='explore1'
         />
-        <p class='pl-4 font-semibold'>{title}</p>
+        <p class='pl-4 text-gray-750 font-semibold'>{title}</p>
       </div>
     </div>
   );

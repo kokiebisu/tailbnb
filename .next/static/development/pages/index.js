@@ -37,7 +37,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }), __jsx("p", {
-    className: "uppercase text-sm my-2 font-bold",
+    className: "uppercase text-xs my-2 font-semibold",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -333,7 +333,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }), __jsx("p", {
-    "class": "pl-4 font-semibold",
+    "class": "pl-4 text-gray-750 font-semibold",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -2341,7 +2341,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }), __jsx("p", {
-    className: "uppercase text-sm my-2 font-bold",
+    className: "uppercase text-xs my-2 font-semibold",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5

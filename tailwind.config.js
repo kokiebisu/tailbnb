@@ -29,7 +29,8 @@ module.exports = {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, .3)'
       },
       colors: {
-        'gray-650': '#767676'
+        'gray-650': '#767676',
+        'gray-750': '#484848'
       },
       screens: {
         '2xl': '1440px'
