@@ -10,14 +10,7 @@ import img4 from '../public/adventures4.jpg';
 
 export default () => {
   return (
-    <div className='xl:max-w-5.5xl lg:max-w-5xl md:max-w-3xl mx-auto mt-20 mb-20'>
-      <h3 className='text-2xl font-semibold py-1 mt-5'>
-        Introducing Airbnb Adventures
-      </h3>
-      <p className='mb-6 text-gray-750'>
-        Multi-day trips led by local experts—activities, meals, and stays
-        included
-      </p>
+    <>
       <div className='flex items-start justify-start'>
         <div className='xl:w-1/4 lg:w-1/2'>
           <AdventureCard
@@ -57,6 +50,6 @@ export default () => {
         </div>
       </div>
       <ShowAll title='Show all adventures' />
-    </div>
+    </>
   );
 };

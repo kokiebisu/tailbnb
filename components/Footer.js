@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div className='2xl:max-w-layout xl:max-w-4xl mx-auto mt-14 mb-5 '>
+    <>
       <div className='flex flex-wrap items-start w-full justify-around pb-6 border-b border-gray-300'>
         <div className='lg:w-1/4'>
           <h3 className='font-semibold text-gray-900 text-sm mb-2'>Airbnb</h3>
@@ -215,6 +215,6 @@ export default () => {
           </svg>
         </div>
       </div>
-    </div>
+    </>
   );
 };
