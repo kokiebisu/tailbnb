@@ -4,11 +4,6 @@ body {
   @apply antialiased;
 }
 
-::-webkit-scrollbar {
-  width: 0px; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
-}
-
 @tailwind components;
 
 .scroller {
@@ -18,6 +13,18 @@ body {
   scrollbar-width: thin;
   padding-bottom: 30px !important;
   margin-bottom: -30px !important;
+}
+
+.scrollable {
+  position: relative;
+  left: 0px;
+}
+
+@media (max-width: 639px) {
+  .scrollable {
+    position: relative;
+    left: 15px;
+  }
 }
 
 .scroller::-webkit-scrollbar {
