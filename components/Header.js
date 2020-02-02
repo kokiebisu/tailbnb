@@ -11,7 +11,7 @@ export default () => {
         backgroundImage: `url(${background})`,
         maxHeight: '60rem'
       }}
-      className='sm:h-header relative bg-cover bg-no-repeat'>
+      className='md:h-header relative bg-cover bg-no-repeat'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>

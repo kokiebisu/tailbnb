@@ -1176,7 +1176,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       backgroundImage: "url(".concat(_public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a, ")"),
       maxHeight: '60rem'
     },
-    className: "sm:h-header relative bg-cover bg-no-repeat",
+    className: "md:h-header relative bg-cover bg-no-repeat",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
