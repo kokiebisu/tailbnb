@@ -43,11 +43,11 @@ const Home = () => {
       <Section title='Popular destinations in the United States'>
         <Popular />
       </Section>
-      <SectionWithPhrase
+      <SectionOverflow
         title='Featured Airbnb Plus destinations'
         phrase='Browse beautiful places to stay with all the comforts of home, plus more'>
         <Featured />
-      </SectionWithPhrase>
+      </SectionOverflow>
       <Footer />
     </>
   );
