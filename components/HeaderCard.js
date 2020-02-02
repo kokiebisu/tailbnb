@@ -1,8 +1,8 @@
 export default () => {
   return (
-    <div class='hidden md:block md:w-100 pt-8 pb-6 mt-10 bg-white rounded shadow-2xl'>
+    <div class='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
       <div class='mx-8'>
-        <h3 class='font-sans text-3xl font-bold text-gray-750 leading-tight'>
+        <h3 class='hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight'>
           Book unique places to <br />
           stay and things to do.
         </h3>
@@ -73,8 +73,8 @@ export default () => {
             </div>
           </div>
         </form>
-        <div class='inline flex items-center justify-end flex-wrap mt-6'>
-          <button class='py-3 px-6 rounded bg-red-500 text-white font-bold'>
+        <div class='w-full bg-blue-500 sm:flex items-center sm:justify-end md:flex-wrap mt-6 rounded-lg'>
+          <button class='w-full sm:inline-block py-3 px-6 bg-red-500 rounded text-white font-bold'>
             Search
           </button>
         </div>

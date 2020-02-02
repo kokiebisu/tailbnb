@@ -8,7 +8,7 @@ export default () => {
   return (
     <header
       style={{ backgroundImage: `url(${background})` }}
-      className='relative bg-cover bg-no-repeat h-screen'>
+      className='relative bg-cover bg-no-repeat md:h-screen'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>
@@ -65,7 +65,10 @@ export default () => {
           </nav>
         </div>
       </div>
-      <div className='ml-20'>
+      <div className='md:ml-20'>
+        <h3 class='md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6'>
+          Book unique places to stay and things to do.
+        </h3>
         <HeaderCard />
       </div>
     </header>

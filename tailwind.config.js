@@ -4,6 +4,9 @@ module.exports = {
       backgroundColor: {
         background: '#fffcfc'
       },
+      height: {
+        '2/3': '66%'
+      },
       width: {
         '30/31': '94.774194%',
         '40/41': '96%'

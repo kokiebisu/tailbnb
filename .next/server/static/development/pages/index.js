@@ -1271,7 +1271,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     style: {
       backgroundImage: `url(${_public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a})`
     },
-    className: "relative bg-cover bg-no-repeat h-screen",
+    className: "relative bg-cover bg-no-repeat md:h-screen",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -1435,16 +1435,23 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, "Log in")))), __jsx("div", {
-    className: "ml-20",
+    className: "md:ml-20",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 68
     },
     __self: undefined
-  }, __jsx(_components_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx("h3", {
+    class: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 69
+    },
+    __self: undefined
+  }, "Book unique places to stay and things to do."), __jsx(_components_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
     },
     __self: undefined
   })));
@@ -1468,7 +1475,7 @@ var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/HeaderCard.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return __jsx("div", {
-    class: "hidden md:block md:w-100 pt-8 pb-6 mt-10 bg-white rounded shadow-2xl",
+    class: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -1482,7 +1489,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("h3", {
-    class: "font-sans text-3xl font-bold text-gray-750 leading-tight",
+    class: "hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -1657,14 +1664,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   })))))), __jsx("div", {
-    class: "inline flex items-center justify-end flex-wrap mt-6",
+    class: "w-full bg-blue-500 sm:flex items-center sm:justify-end md:flex-wrap mt-6 rounded-lg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
     },
     __self: undefined
   }, __jsx("button", {
-    class: "py-3 px-6 rounded bg-red-500 text-white font-bold",
+    class: "w-full sm:inline-block py-3 px-6 bg-red-500 rounded text-white font-bold",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
