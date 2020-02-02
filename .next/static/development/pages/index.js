@@ -239,7 +239,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("div", {
-    className: "flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
+    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -1930,22 +1930,46 @@ var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/SectionOverflow.js"
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var title = _ref.title,
+      phrase = _ref.phrase,
       children = _ref.children;
+
+  function renderPhrase() {
+    if (phrase) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+        className: "scrollable text-gray-850 text-2xl font-semibold py-3 ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        },
+        __self: this
+      }, title), __jsx("p", {
+        className: "text-sm md:text-md mb-5 text-gray-850 pb-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      }, phrase));
+    } else {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+        className: "scrollable text-gray-850 text-2xl font-semibold py-3 ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, title));
+    }
+  }
+
   return __jsx("div", {
-    className: "pl-5 sm:px-5 md:px-10 xl:px-0 xl:px-0 lg:max-w-5.5xl mx-auto py-5 overflow-x-hidden overflow-y-hidden w-full",
+    className: "sm:px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto py-5 overflow-x-hidden overflow-y-hidden w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 23
     },
     __self: this
-  }, __jsx("h3", {
-    className: "text-gray-850 text-2xl font-semibold py-3 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, title), children);
+  }, renderPhrase(), children);
 });
 
 /***/ }),
@@ -1969,7 +1993,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       phrase = _ref.phrase,
       children = _ref.children;
   return __jsx("div", {
-    className: "px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5",
+    className: "px-5 sm:px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -2850,7 +2874,7 @@ var Home = function Home() {
       lineNumber: 44
     },
     __self: this
-  })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_components_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "Featured Airbnb Plus destinations",
     phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
     __source: {
