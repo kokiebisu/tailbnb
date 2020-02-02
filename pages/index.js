@@ -1,3 +1,7 @@
+// Wrapper
+import Section from '../components/Section';
+import SectionWithPhrase from '../components/SectionWithPhrase';
+
 // Component
 import Header from '../components/Header';
 import Explore from '../components/Explore';
@@ -8,9 +12,6 @@ import TopRated from '../components/TopRated';
 import Popular from '../components/Popular';
 import Featured from '../components/Featured';
 import Footer from '../components/Footer';
-
-import Section from '../components/Section';
-import SectionWithPhrase from '../components/SectionWithPhrase';
 
 const Home = () => {
   return (
