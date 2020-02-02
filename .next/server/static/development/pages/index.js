@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -377,7 +377,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    img: _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    img: _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     title: "Adventures",
     __source: {
       fileName: _jsxFileName,
@@ -1270,9 +1270,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   return __jsx("header", {
     style: {
       backgroundImage: `url(${_public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a})`,
-      maxHeight: '60rem'
+      maxHeight: '70rem'
     },
-    className: "md:h-header relative bg-cover bg-no-repeat",
+    className: "md:h-header lg:h-screen relative bg-cover bg-no-repeat",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -1347,7 +1347,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("nav", {
-    class: "flex items-center justify-around flex-wrap text-white",
+    className: "flex items-center justify-around flex-wrap text-white",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
@@ -3074,7 +3074,7 @@ module.exports = "/_next/static/images/explore-2-ea1d6be446ac091888bb2fdc6b7c809
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/explore-3-87cb5fccc990529d536452be50452a20.jpg";
+module.exports = "/_next/static/images/explore-3-c2b4e4cf4460dffa0f23a6a8b64a8775.jpg";
 
 /***/ }),
 
@@ -3210,7 +3210,7 @@ module.exports = "/_next/static/images/stay-8-071e3b9fba4717101516eb47ecbea2f3.j
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

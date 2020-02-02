@@ -9,9 +9,9 @@ export default () => {
     <header
       style={{
         backgroundImage: `url(${background})`,
-        maxHeight: '60rem'
+        maxHeight: '70rem'
       }}
-      className='md:h-header relative bg-cover bg-no-repeat'>
+      className='md:h-header lg:h-screen relative bg-cover bg-no-repeat'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>
@@ -32,7 +32,7 @@ export default () => {
         </div>
 
         <div className='hidden lg:block'>
-          <nav class='flex items-center justify-around flex-wrap text-white'>
+          <nav className='flex items-center justify-around flex-wrap text-white'>
             <a
               href='#'
               className='flex self-center flex-wrap justify-between text-sm font-semibold px-2'>

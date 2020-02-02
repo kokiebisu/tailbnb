@@ -17,7 +17,7 @@ export default () => {
               <ExploreCard img={explore2} title='Experiences' />
             </div>
             <div className='w-32 sm:w-1/3 mr-2'>
-              <ExploreCard img={explore2} title='Adventures' />
+              <ExploreCard img={explore3} title='Adventures' />
             </div>
           </div>
         </div>
