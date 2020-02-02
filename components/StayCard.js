@@ -2,41 +2,43 @@ export default ({ type, img, location, title, price }) => {
   const renderhost = () => {
     if (type === 'normal') {
       return (
-        <p className='text-sm my-2 font-light text-gray-600'>{location}</p>
+        <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
+          <p className='sm:ml-2 mt-3 text-sm sm:my-2 font-light text-gray-600'>
+            {location}
+          </p>
+        </div>
       );
     } else if (type === 'superhost') {
       return (
-        <>
-          <p className='uppercase border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
+        <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
+          <p className='uppercase mt-3 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
             {type}
           </p>
-          <p className='ml-2 text-sm my-2 font-light text-gray-600'>
+          <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
             {location}
           </p>
-        </>
+        </div>
       );
     } else if (type === 'plus') {
       return (
-        <>
-          <p className='px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
+        <div className='sm:flex sm:flex-wrap sm:items-center sm:justify-start'>
+          <p className='inline-block mt-3 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
             {type}
           </p>
-          <p className='ml-2 text-sm my-2 font-light text-gray-600'>
+          <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
             {location}
           </p>
-        </>
+        </div>
       );
     }
     console.log(type);
   };
 
   return (
-    <div className='lg:w-30/31'>
+    <div className='w-30/31 md:w-40/41'>
       <img className='rounded' src={img} alt='adventure1' />
       <div className='flex flex-wrap items-center justify-between'>
-        <div className='flex flex-wrap items-center justify-start'>
-          {renderhost()}
-        </div>
+        {renderhost()}
         <div className='flex items-center justify-center flex-wrap'>
           <svg
             version='1.1'

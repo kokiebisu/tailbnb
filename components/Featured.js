@@ -8,7 +8,7 @@ import featured3 from '../public/img/featured-3.jpg';
 export default () => {
   return (
     <>
-      <div className='flex flex-wrap items-start justify-start w-full'>
+      <div className='flex items-start justify-start w-full flex-wrap'>
         <div className='lg:w-1/3'>
           <FeaturedCard
             img={featured1}

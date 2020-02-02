@@ -5,7 +5,8 @@ module.exports = {
         background: '#fffcfc'
       },
       width: {
-        '30/31': '96.774194%'
+        '30/31': '94.774194%',
+        '40/41': '96%'
       },
       spacing: {
         '28': '7rem',
@@ -30,7 +31,8 @@ module.exports = {
       },
       colors: {
         'gray-650': '#767676',
-        'gray-750': '#484848'
+        'gray-750': '#484848',
+        'gray-850': '#222222'
       },
       screens: {
         '2xl': '1440px'

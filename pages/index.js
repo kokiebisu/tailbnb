@@ -47,9 +47,7 @@ const Home = () => {
         phrase='Browse beautiful places to stay with all the comforts of home, plus more'>
         <Featured />
       </SectionWithPhrase>
-      <Section title=''>
-        <Footer />
-      </Section>
+      <Footer />
     </>
   );
 };

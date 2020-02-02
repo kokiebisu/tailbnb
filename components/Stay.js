@@ -15,8 +15,8 @@ import stay8 from '../public/img/stay-8.jpg';
 export default () => {
   return (
     <>
-      <div className='flex flex-wrap items-center justify-start w-full'>
-        <div className='w-1/4 py-5'>
+      <div className='flex flex-wrap items-start justify-start w-full'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='normal'
             img={stay1}
@@ -25,7 +25,7 @@ export default () => {
             price='91'
           />
         </div>
-        <div className='w-1/4 py-5'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='superhost'
             img={stay2}
@@ -34,7 +34,7 @@ export default () => {
             price='257'
           />
         </div>
-        <div className='w-1/4 py-5'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='superhost'
             img={stay3}
@@ -43,7 +43,7 @@ export default () => {
             price='104'
           />
         </div>
-        <div className='w-1/4 py-5'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='superhost'
             img={stay4}
@@ -52,7 +52,7 @@ export default () => {
             price='87'
           />
         </div>
-        <div className='w-1/4 py-5'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='plus'
             img={stay5}
@@ -61,7 +61,7 @@ export default () => {
             price='206'
           />
         </div>
-        <div className='w-1/4 py-5'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='normal'
             img={stay6}
@@ -70,7 +70,7 @@ export default () => {
             price='126'
           />
         </div>
-        <div className='w-1/4 py-5'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='superhost'
             img={stay7}
@@ -79,7 +79,7 @@ export default () => {
             price='31'
           />
         </div>
-        <div className='w-1/4 py-5'>
+        <div className='w-1/2 lg:w-1/3 xl:w-1/4 py-5'>
           <StayCard
             type='superhost'
             img={stay8}

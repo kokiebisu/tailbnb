@@ -11,8 +11,8 @@ import img4 from '../public/img/adventures4.jpg';
 export default () => {
   return (
     <>
-      <div className='flex items-start justify-start'>
-        <div className='xl:w-1/4 lg:w-1/2'>
+      <div className='flex items-start justify-start flex-wrap w-full'>
+        <div className='lg:w-1/4 md:w-1/3 w-1/2 py-5'>
           <AdventureCard
             img={img1}
             location='Norway'
@@ -21,7 +21,7 @@ export default () => {
             days='3'
           />
         </div>
-        <div className='xl:w-1/4 lg:w-1/2'>
+        <div className='lg:w-1/4 md:w-1/3 w-1/2 py-5'>
           <AdventureCard
             img={img2}
             location='Indonesia'
@@ -30,7 +30,7 @@ export default () => {
             days='2'
           />
         </div>
-        <div className='xl:w-1/4 lg:w-1/2'>
+        <div className='lg:w-1/4 md:w-1/3 w-1/2 py-5'>
           <AdventureCard
             img={img3}
             location='Nepal'
@@ -39,7 +39,7 @@ export default () => {
             days='11'
           />
         </div>
-        <div className='xl:w-1/4 lg:w-1/2'>
+        <div className='lg:w-1/4 md:w-1/3 w-1/2 py-5'>
           <AdventureCard
             img={img4}
             location='Morocco'

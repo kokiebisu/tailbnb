@@ -6,10 +6,16 @@ import ExploreCard from './ExploreCard';
 
 export default () => {
   return (
-    <div className='flex flex-wrap items-center justify-start w-full'>
-      <ExploreCard img={explore1} title='Stays' />
-      <ExploreCard img={explore2} title='Experiences' />
-      <ExploreCard img={explore3} title='Adventures' />
+    <div className='flex items-center justify-start flex-wrap'>
+      <div className='w-1/3'>
+        <ExploreCard img={explore1} title='Stays' />
+      </div>
+      <div className='w-1/3'>
+        <ExploreCard img={explore2} title='Experiences' />
+      </div>
+      <div className='w-1/3'>
+        <ExploreCard img={explore2} title='Adventures' />
+      </div>
     </div>
   );
 };

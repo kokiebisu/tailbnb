@@ -12,4 +12,10 @@ body {
   appearance: none;
 }
 
+@media (min-width: 1280px) {
+  .media {
+    @apply hidden;
+  }
+}
+
 @tailwind utilities;

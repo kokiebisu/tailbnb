@@ -1,6 +1,6 @@
 export default ({ img, location, title, price, reviews }) => {
   return (
-    <div className='lg:w-30/31'>
+    <div className='w-30/31'>
       <img className='rounded-lg' src={img} alt='adventure1' />
       <p className='uppercase text-xs my-2 font-semibold'>{location}</p>
       <p className='my-1'>{title}</p>
