@@ -3005,7 +3005,7 @@ module.exports = "/_next/static/images/explore-2-ea1d6be446ac091888bb2fdc6b7c809
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/explore-3-c2b4e4cf4460dffa0f23a6a8b64a8775.jpg";
+module.exports = "/_next/static/images/explore-3-aeb0d58d63e32f5efd9e3de68789726b.jpg";
 
 /***/ }),
 
