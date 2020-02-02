@@ -1457,7 +1457,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("h3", {
-    class: "text-3xl font-bold color__header leading-tight",
+    class: "text-3xl font-bold text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
