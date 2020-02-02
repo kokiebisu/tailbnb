@@ -6,7 +6,7 @@ module.exports = {
       },
       height: {
         '28': '7rem',
-        header: '30rem'
+        header: '110vh'
       },
       width: {
         '80': '26rem',

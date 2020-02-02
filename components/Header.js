@@ -9,10 +9,9 @@ export default () => {
     <header
       style={{
         backgroundImage: `url(${background})`,
-        height: '110vh',
         maxHeight: '60rem'
       }}
-      className=' relative bg-cover bg-no-repeat'>
+      className='sm:h-header relative bg-cover bg-no-repeat'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>
