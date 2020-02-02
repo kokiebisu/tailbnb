@@ -5,9 +5,11 @@ module.exports = {
         background: '#fffcfc'
       },
       height: {
-        '2/3': '66%'
+        '28': '7rem',
+        header: '30rem'
       },
       width: {
+        '80': '26rem',
         '30/31': '94.774194%',
         '40/41': '96%'
       },

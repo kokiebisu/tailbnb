@@ -7,8 +7,12 @@ import background from '../public/img/airbnb-background.jpg';
 export default () => {
   return (
     <header
-      style={{ backgroundImage: `url(${background})` }}
-      className='relative bg-cover bg-no-repeat md:h-screen'>
+      style={{
+        backgroundImage: `url(${background})`,
+        height: '110vh',
+        maxHeight: '60rem'
+      }}
+      className=' relative bg-cover bg-no-repeat'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>

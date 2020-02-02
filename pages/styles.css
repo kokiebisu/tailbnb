@@ -4,7 +4,25 @@ body {
   @apply antialiased;
 }
 
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
 @tailwind components;
+
+.scroller {
+  overflow-x: scroll !important;
+  overflow-y: auto !important;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  padding-bottom: 30px !important;
+  margin-bottom: -30px !important;
+}
+
+.scroller::-webkit-scrollbar {
+  background-color: transparent;
+}
 
 .appearance-none {
   -moz-appearance: none;

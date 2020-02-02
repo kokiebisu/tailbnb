@@ -1,6 +1,7 @@
 // Wrapper
 import Section from '../components/Section';
 import SectionWithPhrase from '../components/SectionWithPhrase';
+import SectionOverflow from '../components/SectionOverflow';
 
 // Component
 import Header from '../components/Header';
@@ -17,9 +18,9 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Section title='Explore Airbnb'>
+      <SectionOverflow title='Explore Airbnb'>
         <Explore />
-      </Section>
+      </SectionOverflow>
       <SectionWithPhrase
         title='Airbnb Plus places to stay'
         phrase='A selection of places to stay verified for quality and design'>
