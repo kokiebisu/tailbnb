@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1443,7 +1443,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("h3", {
-    class: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
+    className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 72
@@ -1992,23 +1992,46 @@ var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Section.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (({
   title,
+  phrase,
   children
 }) => {
+  const renderContent = () => {
+    if (phrase) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+        className: "text-2xl text-gray-850 font-medium pt-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        },
+        __self: undefined
+      }, title), __jsx("p", {
+        className: "text-sm md:text-md mb-5 text-gray-850 pb-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: undefined
+      }, phrase));
+    } else {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+        className: "text-gray-850 text-2xl font-semibold py-3 ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: undefined
+      }, title));
+    }
+  };
+
   return __jsx("div", {
-    className: "px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto py-5",
+    className: "px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 21
     },
     __self: undefined
-  }, __jsx("h3", {
-    className: "text-gray-850 text-2xl font-semibold py-3 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: undefined
-  }, title), children);
+  }, renderContent(), children);
 });
 
 /***/ }),
@@ -2069,28 +2092,43 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   phrase,
   children
 }) => {
+  const renderContent = () => {
+    if (phrase) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+        className: "text-2xl text-gray-850 font-medium pt-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        },
+        __self: undefined
+      }, title), __jsx("p", {
+        className: "text-sm md:text-md mb-5 text-gray-850 pb-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: undefined
+      }, phrase));
+    } else {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+        className: "text-gray-850 text-2xl font-semibold py-3 ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: undefined
+      }, title));
+    }
+  };
+
   return __jsx("div", {
     className: "px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 21
     },
     __self: undefined
-  }, __jsx("h3", {
-    className: "text-2xl text-gray-850 font-medium pt-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: undefined
-  }, title), __jsx("p", {
-    className: "text-sm md:text-md mb-5 text-gray-850 pb-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
-  }, phrase), children);
+  }, renderContent(), children);
 });
 
 /***/ }),
@@ -2851,7 +2889,7 @@ const Home = () => {
       lineNumber: 22
     },
     __self: undefined
-  })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Airbnb Plus places to stay",
     phrase: "A selection of places to stay verified for quality and design",
     __source: {
@@ -2865,7 +2903,7 @@ const Home = () => {
       lineNumber: 27
     },
     __self: undefined
-  })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Introducing Airbnb Adventures",
     phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
     __source: {
@@ -2892,7 +2930,7 @@ const Home = () => {
       lineNumber: 36
     },
     __self: undefined
-  })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Top-rated experiences",
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
@@ -2919,7 +2957,7 @@ const Home = () => {
       lineNumber: 44
     },
     __self: undefined
-  })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Featured Airbnb Plus destinations",
     phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
     __source: {
@@ -3210,7 +3248,7 @@ module.exports = "/_next/static/images/stay-8-071e3b9fba4717101516eb47ecbea2f3.j
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
