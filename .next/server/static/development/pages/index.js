@@ -2367,7 +2367,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         },
         __self: undefined
       }, __jsx("p", {
-        className: "sm:ml-2 mt-3 text-sm sm:my-2 font-light text-gray-600",
+        className: "mt-3 text-sm sm:my-2 font-light text-gray-600",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 6
@@ -2383,7 +2383,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         },
         __self: undefined
       }, __jsx("p", {
-        className: "uppercase mt-3 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs",
+        className: "uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
@@ -2406,7 +2406,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         },
         __self: undefined
       }, __jsx("p", {
-        className: "inline-block mt-3 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800",
+        className: "inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25

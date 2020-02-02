@@ -3,7 +3,7 @@ export default ({ type, img, location, title, price }) => {
     if (type === 'normal') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
-          <p className='sm:ml-2 mt-3 text-sm sm:my-2 font-light text-gray-600'>
+          <p className='mt-3 text-sm sm:my-2 font-light text-gray-600'>
             {location}
           </p>
         </div>
@@ -11,7 +11,7 @@ export default ({ type, img, location, title, price }) => {
     } else if (type === 'superhost') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
-          <p className='uppercase mt-3 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
+          <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
             {type}
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
@@ -22,7 +22,7 @@ export default ({ type, img, location, title, price }) => {
     } else if (type === 'plus') {
       return (
         <div className='sm:flex sm:flex-wrap sm:items-center sm:justify-start'>
-          <p className='inline-block mt-3 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
+          <p className='inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
             {type}
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
