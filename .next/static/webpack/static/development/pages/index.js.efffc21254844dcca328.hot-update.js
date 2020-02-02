@@ -94,6 +94,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }))))), __jsx("div", {
+    className: "hidden md:block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -207,4 +208,4 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /***/ })
 
 })
-//# sourceMappingURL=index.js.f22970548e310d3744e7.hot-update.js.map
+//# sourceMappingURL=index.js.efffc21254844dcca328.hot-update.js.map

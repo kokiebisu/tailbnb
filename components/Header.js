@@ -28,7 +28,7 @@ export default () => {
           </a>
         </div>
 
-        <div>
+        <div className='hidden lg:block'>
           <nav class='flex items-center justify-around flex-wrap text-white'>
             <a
               href='#'

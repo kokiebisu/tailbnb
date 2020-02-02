@@ -1,8 +1,8 @@
 export default () => {
   return (
-    <div class='lg:w-100 pt-8 pb-6 lg:mt-10 bg-white rounded shadow-2xl'>
+    <div class='hidden md:block md:w-100 pt-8 pb-6 mt-10 bg-white rounded shadow-2xl'>
       <div class='mx-8'>
-        <h3 class='text-3xl font-bold text-gray-750 leading-tight'>
+        <h3 class='font-sans text-3xl font-bold text-gray-750 leading-tight'>
           Book unique places to <br />
           stay and things to do.
         </h3>

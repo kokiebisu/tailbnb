@@ -20,7 +20,9 @@ const Home = () => {
       <Section title='Explore Airbnb'>
         <Explore />
       </Section>
-      <SectionWithPhrase title='what' phrase='hello'>
+      <SectionWithPhrase
+        title='Airbnb Plus places to stay'
+        phrase='A selection of places to stay verified for quality and design'>
         <Plus />
       </SectionWithPhrase>
       <SectionWithPhrase

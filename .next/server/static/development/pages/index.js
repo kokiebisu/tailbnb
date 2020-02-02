@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1315,6 +1315,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }))))), __jsx("div", {
+    className: "hidden lg:block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -1443,7 +1444,7 @@ var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/HeaderCard.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return __jsx("div", {
-    class: "lg:w-100 pt-8 pb-6 lg:mt-10 bg-white rounded shadow-2xl",
+    class: "hidden md:block md:w-100 pt-8 pb-6 mt-10 bg-white rounded shadow-2xl",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -1457,7 +1458,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("h3", {
-    class: "text-3xl font-bold text-gray-750 leading-tight",
+    class: "font-sans text-3xl font-bold text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -2766,8 +2767,8 @@ const Home = () => {
     },
     __self: undefined
   })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "what",
-    phrase: "hello",
+    title: "Airbnb Plus places to stay",
+    phrase: "A selection of places to stay verified for quality and design",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
@@ -2776,7 +2777,7 @@ const Home = () => {
   }, __jsx(_components_Plus__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: undefined
   })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2784,26 +2785,26 @@ const Home = () => {
     phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx(_components_Adventures__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: undefined
   })), __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx(_components_Stay__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: undefined
   })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2811,26 +2812,26 @@ const Home = () => {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx(_components_TopRated__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
     },
     __self: undefined
   })), __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "Popular destinations in the United States",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx(_components_Popular__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 43
     },
     __self: undefined
   })), __jsx(_components_SectionWithPhrase__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -2838,26 +2839,26 @@ const Home = () => {
     phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: undefined
   }, __jsx(_components_Featured__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: undefined
   })), __jsx(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 51
     },
     __self: undefined
   })));
@@ -3131,7 +3132,7 @@ module.exports = "/_next/static/images/stay-8-071e3b9fba4717101516eb47ecbea2f3.j
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
