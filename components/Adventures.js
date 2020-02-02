@@ -3,10 +3,10 @@ import AdventureCard from '../components/AdventureCard';
 import ShowAll from '../components/ShowAll';
 
 // Images
-import img1 from '../public/adventures1.jpg';
-import img2 from '../public/adventures2.jpg';
-import img3 from '../public/adventures3.jpg';
-import img4 from '../public/adventures4.jpg';
+import img1 from '../public/img/adventures1.jpg';
+import img2 from '../public/img/adventures2.jpg';
+import img3 from '../public/img/adventures3.jpg';
+import img4 from '../public/img/adventures4.jpg';
 
 export default () => {
   return (

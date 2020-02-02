@@ -3,10 +3,10 @@ import TopRatedCard from '../components/TopRatedCard';
 import ShowAll from './ShowAll';
 
 // Images
-import experience1 from '../public/experience-1.jpg';
-import experience2 from '../public/experience-2.jpg';
-import experience3 from '../public/experience-3.jpg';
-import experience4 from '../public/experience-4.jpg';
+import experience1 from '../public/img/experience-1.jpg';
+import experience2 from '../public/img/experience-2.jpg';
+import experience3 from '../public/img/experience-3.jpg';
+import experience4 from '../public/img/experience-4.jpg';
 
 export default () => {
   return (

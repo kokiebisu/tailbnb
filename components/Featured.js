@@ -1,9 +1,9 @@
 // Component
 import FeaturedCard from '../components/FeaturedCard';
 
-import featured1 from '../public/featured-1.jpg';
-import featured2 from '../public/featured-2.jpg';
-import featured3 from '../public/featured-3.jpg';
+import featured1 from '../public/img/featured-1.jpg';
+import featured2 from '../public/img/featured-2.jpg';
+import featured3 from '../public/img/featured-3.jpg';
 
 export default () => {
   return (

@@ -80,14 +80,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AdventureCard */ "./components/AdventureCard.js");
 /* harmony import */ var _components_ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ShowAll */ "./components/ShowAll.js");
-/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/adventures1.jpg */ "./public/adventures1.jpg");
-/* harmony import */ var _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/adventures2.jpg */ "./public/adventures2.jpg");
-/* harmony import */ var _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/adventures3.jpg */ "./public/adventures3.jpg");
-/* harmony import */ var _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/adventures4.jpg */ "./public/adventures4.jpg");
-/* harmony import */ var _public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_img_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/img/adventures1.jpg */ "./public/img/adventures1.jpg");
+/* harmony import */ var _public_img_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/img/adventures2.jpg */ "./public/img/adventures2.jpg");
+/* harmony import */ var _public_img_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/img/adventures3.jpg */ "./public/img/adventures3.jpg");
+/* harmony import */ var _public_img_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_img_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/img/adventures4.jpg */ "./public/img/adventures4.jpg");
+/* harmony import */ var _public_img_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Adventures.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -115,7 +115,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _public_img_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     location: "Norway",
     title: "2 Nights PACKAGE All Inclusive",
     price: "From $841 / person",
@@ -133,7 +133,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    img: _public_img_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
     location: "Indonesia",
     title: "Snorkeling and hiking in West Sumatra",
     price: "From $249 / person",
@@ -151,7 +151,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    img: _public_img_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
     location: "Nepal",
     title: "Trek to the lower Everest region",
     price: "From $1,745 / person",
@@ -169,7 +169,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    img: _public_img_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
     location: "Morocco",
     title: "Active Adventure & Stay with Locals",
     price: "From $416 / person",
@@ -202,12 +202,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/explore-1.jpg */ "./public/explore-1.jpg");
-/* harmony import */ var _public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/explore-2.jpg */ "./public/explore-2.jpg");
-/* harmony import */ var _public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/explore-3.jpg */ "./public/explore-3.jpg");
-/* harmony import */ var _public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/img/explore-1.jpg */ "./public/img/explore-1.jpg");
+/* harmony import */ var _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/img/explore-2.jpg */ "./public/img/explore-2.jpg");
+/* harmony import */ var _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/img/explore-3.jpg */ "./public/img/explore-3.jpg");
+/* harmony import */ var _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _ExploreCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ExploreCard */ "./components/ExploreCard.js");
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Explore.js";
 
@@ -225,7 +225,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    img: _public_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    img: _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
     title: "Stays",
     __source: {
       fileName: _jsxFileName,
@@ -233,7 +233,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }), __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    img: _public_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    img: _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
     title: "Experiences",
     __source: {
       fileName: _jsxFileName,
@@ -241,7 +241,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }), __jsx(_ExploreCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    img: _public_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     title: "Adventures",
     __source: {
       fileName: _jsxFileName,
@@ -321,12 +321,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FeaturedCard */ "./components/FeaturedCard.js");
-/* harmony import */ var _public_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/featured-1.jpg */ "./public/featured-1.jpg");
-/* harmony import */ var _public_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/featured-2.jpg */ "./public/featured-2.jpg");
-/* harmony import */ var _public_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/featured-3.jpg */ "./public/featured-3.jpg");
-/* harmony import */ var _public_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/img/featured-1.jpg */ "./public/img/featured-1.jpg");
+/* harmony import */ var _public_img_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_img_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/img/featured-2.jpg */ "./public/img/featured-2.jpg");
+/* harmony import */ var _public_img_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/img/featured-3.jpg */ "./public/img/featured-3.jpg");
+/* harmony import */ var _public_img_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Featured.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -351,7 +351,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    img: _public_img_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
     verified: "940",
     description: "Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels",
     __source: {
@@ -367,7 +367,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _public_img_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     verified: "300",
     description: "Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.",
     __source: {
@@ -383,7 +383,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    img: _public_img_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
     verified: "290",
     description: "Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design",
     __source: {
@@ -1137,8 +1137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_HeaderCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/HeaderCard */ "./components/HeaderCard.js");
-/* harmony import */ var _public_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/airbnb-background.jpg */ "./public/airbnb-background.jpg");
-/* harmony import */ var _public_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/img/airbnb-background.jpg */ "./public/img/airbnb-background.jpg");
+/* harmony import */ var _public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1149,7 +1149,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("header", {
     style: {
-      backgroundImage: "url(".concat(_public_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a, ")")
+      backgroundImage: "url(".concat(_public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a, ")")
     },
     className: "relative bg-cover bg-no-repeat h-screen",
     __source: {
@@ -1196,7 +1196,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     role: "presentation",
     "aria-hidden": "true",
     focusable: "false",
-    "class": "h-8 w-8 block",
+    className: "h-8 w-8 block",
     style: {
       fill: '#ffffff'
     },
@@ -1608,8 +1608,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/plus-1.jpg */ "./public/plus-1.jpg");
-/* harmony import */ var _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/img/plus-1.jpg */ "./public/img/plus-1.jpg");
+/* harmony import */ var _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _PlusCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PlusCard */ "./components/PlusCard.js");
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Plus.js";
 
@@ -1618,7 +1618,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(_PlusCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    img: _public_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    img: _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -2008,22 +2008,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_StayCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/StayCard */ "./components/StayCard.js");
 /* harmony import */ var _components_ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ShowAll */ "./components/ShowAll.js");
-/* harmony import */ var _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/stay-1.jpg */ "./public/stay-1.jpg");
-/* harmony import */ var _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/stay-2.jpg */ "./public/stay-2.jpg");
-/* harmony import */ var _public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/stay-3.jpg */ "./public/stay-3.jpg");
-/* harmony import */ var _public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/stay-4.jpg */ "./public/stay-4.jpg");
-/* harmony import */ var _public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../public/stay-5.jpg */ "./public/stay-5.jpg");
-/* harmony import */ var _public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../public/stay-6.jpg */ "./public/stay-6.jpg");
-/* harmony import */ var _public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../public/stay-7.jpg */ "./public/stay-7.jpg");
-/* harmony import */ var _public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../public/stay-8.jpg */ "./public/stay-8.jpg");
-/* harmony import */ var _public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _public_img_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/img/stay-1.jpg */ "./public/img/stay-1.jpg");
+/* harmony import */ var _public_img_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/img/stay-2.jpg */ "./public/img/stay-2.jpg");
+/* harmony import */ var _public_img_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/img/stay-3.jpg */ "./public/img/stay-3.jpg");
+/* harmony import */ var _public_img_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_img_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/img/stay-4.jpg */ "./public/img/stay-4.jpg");
+/* harmony import */ var _public_img_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_img_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../public/img/stay-5.jpg */ "./public/img/stay-5.jpg");
+/* harmony import */ var _public_img_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _public_img_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../public/img/stay-6.jpg */ "./public/img/stay-6.jpg");
+/* harmony import */ var _public_img_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _public_img_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../public/img/stay-7.jpg */ "./public/img/stay-7.jpg");
+/* harmony import */ var _public_img_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _public_img_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../public/img/stay-8.jpg */ "./public/img/stay-8.jpg");
+/* harmony import */ var _public_img_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_img_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/Stay.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2056,7 +2056,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "normal",
-    img: _public_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _public_img_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     location: "Sol Madrid",
     title: "Private Studio in Sol, Madrid",
     price: "91",
@@ -2074,7 +2074,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "superhost",
-    img: _public_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    img: _public_img_stay_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
     location: "Makawao",
     title: "Adorable Garden Gingerbread...",
     price: "257",
@@ -2092,7 +2092,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "superhost",
-    img: _public_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    img: _public_img_stay_3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
     location: "Roma Norte",
     title: "Radiant Apartment with Terrace in...",
     price: "104",
@@ -2110,7 +2110,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "superhost",
-    img: _public_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    img: _public_img_stay_4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
     location: "Portici",
     title: "Villa San Gennariello",
     price: "87",
@@ -2128,7 +2128,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "plus",
-    img: _public_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    img: _public_img_stay_5_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
     location: "Old Town",
     title: "Classical Apartment on the Royal...",
     price: "206",
@@ -2146,7 +2146,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "normal",
-    img: _public_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
+    img: _public_img_stay_6_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
     location: "Porto",
     title: "PORTA33 | PORTO PENTHOUSE...",
     price: "126",
@@ -2164,7 +2164,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "superhost",
-    img: _public_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
+    img: _public_img_stay_7_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
     location: "Krakow",
     title: "Amazing and Extremely Central Flat",
     price: "31",
@@ -2182,7 +2182,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "superhost",
-    img: _public_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
+    img: _public_img_stay_8_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
     location: "Tricase",
     title: "La Salentina, sea, nature & relax",
     price: "68",
@@ -2384,14 +2384,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TopRatedCard */ "./components/TopRatedCard.js");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShowAll */ "./components/ShowAll.js");
-/* harmony import */ var _public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/experience-1.jpg */ "./public/experience-1.jpg");
-/* harmony import */ var _public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/experience-2.jpg */ "./public/experience-2.jpg");
-/* harmony import */ var _public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/experience-3.jpg */ "./public/experience-3.jpg");
-/* harmony import */ var _public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/experience-4.jpg */ "./public/experience-4.jpg");
-/* harmony import */ var _public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_img_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/img/experience-1.jpg */ "./public/img/experience-1.jpg");
+/* harmony import */ var _public_img_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/img/experience-2.jpg */ "./public/img/experience-2.jpg");
+/* harmony import */ var _public_img_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/img/experience-3.jpg */ "./public/img/experience-3.jpg");
+/* harmony import */ var _public_img_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_img_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/img/experience-4.jpg */ "./public/img/experience-4.jpg");
+/* harmony import */ var _public_img_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/ken/Desktop/airbnb2020/components/TopRated.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2419,7 +2419,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _public_img_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     location: "Italy",
     title: "Luca & Lorenzo, cooking in Chianti hills",
     price: "172",
@@ -2437,7 +2437,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    img: _public_img_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
     location: "Italy",
     title: "Truffle experience Rome",
     price: "148",
@@ -2455,7 +2455,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    img: _public_img_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
     location: "Japan",
     title: "Feeling Samurai Soul",
     price: "119",
@@ -2473,7 +2473,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    img: _public_img_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
     location: "Italy",
     title: "Lisbon best flavors",
     price: "90",
@@ -2799,10 +2799,10 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ "./public/adventures1.jpg":
-/*!********************************!*\
-  !*** ./public/adventures1.jpg ***!
-  \********************************/
+/***/ "./public/img/adventures1.jpg":
+/*!************************************!*\
+  !*** ./public/img/adventures1.jpg ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2810,10 +2810,10 @@ module.exports = "/_next/static/images/adventures1-f8b881cae95db6a9cc8ea0201371e
 
 /***/ }),
 
-/***/ "./public/adventures2.jpg":
-/*!********************************!*\
-  !*** ./public/adventures2.jpg ***!
-  \********************************/
+/***/ "./public/img/adventures2.jpg":
+/*!************************************!*\
+  !*** ./public/img/adventures2.jpg ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2821,10 +2821,10 @@ module.exports = "/_next/static/images/adventures2-ecd4a5c217d4def4dfaaf791cbb2b
 
 /***/ }),
 
-/***/ "./public/adventures3.jpg":
-/*!********************************!*\
-  !*** ./public/adventures3.jpg ***!
-  \********************************/
+/***/ "./public/img/adventures3.jpg":
+/*!************************************!*\
+  !*** ./public/img/adventures3.jpg ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2832,10 +2832,10 @@ module.exports = "/_next/static/images/adventures3-e326d9f75287af3b96412fd401821
 
 /***/ }),
 
-/***/ "./public/adventures4.jpg":
-/*!********************************!*\
-  !*** ./public/adventures4.jpg ***!
-  \********************************/
+/***/ "./public/img/adventures4.jpg":
+/*!************************************!*\
+  !*** ./public/img/adventures4.jpg ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2843,10 +2843,10 @@ module.exports = "/_next/static/images/adventures4-03e1457aef94fda88a3b50320e8c2
 
 /***/ }),
 
-/***/ "./public/airbnb-background.jpg":
-/*!**************************************!*\
-  !*** ./public/airbnb-background.jpg ***!
-  \**************************************/
+/***/ "./public/img/airbnb-background.jpg":
+/*!******************************************!*\
+  !*** ./public/img/airbnb-background.jpg ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2854,10 +2854,10 @@ module.exports = "/_next/static/images/airbnb-background-0ef806e869964604c2041bc
 
 /***/ }),
 
-/***/ "./public/experience-1.jpg":
-/*!*********************************!*\
-  !*** ./public/experience-1.jpg ***!
-  \*********************************/
+/***/ "./public/img/experience-1.jpg":
+/*!*************************************!*\
+  !*** ./public/img/experience-1.jpg ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2865,10 +2865,10 @@ module.exports = "/_next/static/images/experience-1-5c87bedd294d225752199819a2c3
 
 /***/ }),
 
-/***/ "./public/experience-2.jpg":
-/*!*********************************!*\
-  !*** ./public/experience-2.jpg ***!
-  \*********************************/
+/***/ "./public/img/experience-2.jpg":
+/*!*************************************!*\
+  !*** ./public/img/experience-2.jpg ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2876,10 +2876,10 @@ module.exports = "/_next/static/images/experience-2-5a461adf3cb7e26b9d6908324972
 
 /***/ }),
 
-/***/ "./public/experience-3.jpg":
-/*!*********************************!*\
-  !*** ./public/experience-3.jpg ***!
-  \*********************************/
+/***/ "./public/img/experience-3.jpg":
+/*!*************************************!*\
+  !*** ./public/img/experience-3.jpg ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2887,10 +2887,10 @@ module.exports = "/_next/static/images/experience-3-1093d4c35b3421c65a6429ef0b53
 
 /***/ }),
 
-/***/ "./public/experience-4.jpg":
-/*!*********************************!*\
-  !*** ./public/experience-4.jpg ***!
-  \*********************************/
+/***/ "./public/img/experience-4.jpg":
+/*!*************************************!*\
+  !*** ./public/img/experience-4.jpg ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2898,10 +2898,10 @@ module.exports = "/_next/static/images/experience-4-77e96d4ef8fe9a4350d65503482f
 
 /***/ }),
 
-/***/ "./public/explore-1.jpg":
-/*!******************************!*\
-  !*** ./public/explore-1.jpg ***!
-  \******************************/
+/***/ "./public/img/explore-1.jpg":
+/*!**********************************!*\
+  !*** ./public/img/explore-1.jpg ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2909,10 +2909,10 @@ module.exports = "/_next/static/images/explore-1-78555eb8ecfa2b77afa64d6104f73a0
 
 /***/ }),
 
-/***/ "./public/explore-2.jpg":
-/*!******************************!*\
-  !*** ./public/explore-2.jpg ***!
-  \******************************/
+/***/ "./public/img/explore-2.jpg":
+/*!**********************************!*\
+  !*** ./public/img/explore-2.jpg ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2920,10 +2920,10 @@ module.exports = "/_next/static/images/explore-2-ea1d6be446ac091888bb2fdc6b7c809
 
 /***/ }),
 
-/***/ "./public/explore-3.jpg":
-/*!******************************!*\
-  !*** ./public/explore-3.jpg ***!
-  \******************************/
+/***/ "./public/img/explore-3.jpg":
+/*!**********************************!*\
+  !*** ./public/img/explore-3.jpg ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2931,10 +2931,10 @@ module.exports = "/_next/static/images/explore-3-87cb5fccc990529d536452be50452a2
 
 /***/ }),
 
-/***/ "./public/featured-1.jpg":
-/*!*******************************!*\
-  !*** ./public/featured-1.jpg ***!
-  \*******************************/
+/***/ "./public/img/featured-1.jpg":
+/*!***********************************!*\
+  !*** ./public/img/featured-1.jpg ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2942,10 +2942,10 @@ module.exports = "/_next/static/images/featured-1-61cfa1ad94e59dfb8a0aa9025d12ed
 
 /***/ }),
 
-/***/ "./public/featured-2.jpg":
-/*!*******************************!*\
-  !*** ./public/featured-2.jpg ***!
-  \*******************************/
+/***/ "./public/img/featured-2.jpg":
+/*!***********************************!*\
+  !*** ./public/img/featured-2.jpg ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2953,10 +2953,10 @@ module.exports = "/_next/static/images/featured-2-f194738a33c75d7529e437a24fce67
 
 /***/ }),
 
-/***/ "./public/featured-3.jpg":
-/*!*******************************!*\
-  !*** ./public/featured-3.jpg ***!
-  \*******************************/
+/***/ "./public/img/featured-3.jpg":
+/*!***********************************!*\
+  !*** ./public/img/featured-3.jpg ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2964,10 +2964,10 @@ module.exports = "/_next/static/images/featured-3-8b63bad827adf3b1fab9832d1f1dbd
 
 /***/ }),
 
-/***/ "./public/plus-1.jpg":
-/*!***************************!*\
-  !*** ./public/plus-1.jpg ***!
-  \***************************/
+/***/ "./public/img/plus-1.jpg":
+/*!*******************************!*\
+  !*** ./public/img/plus-1.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2975,10 +2975,10 @@ module.exports = "/_next/static/images/plus-1-1cd90d428ed098d36d4099a3514aa633.j
 
 /***/ }),
 
-/***/ "./public/stay-1.jpg":
-/*!***************************!*\
-  !*** ./public/stay-1.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-1.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-1.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2986,10 +2986,10 @@ module.exports = "/_next/static/images/stay-1-ff81a1e6cf4d444654e3667b35d2dae2.j
 
 /***/ }),
 
-/***/ "./public/stay-2.jpg":
-/*!***************************!*\
-  !*** ./public/stay-2.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-2.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-2.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2997,10 +2997,10 @@ module.exports = "/_next/static/images/stay-2-ab13e772fb306307d9bc81b6a234e868.j
 
 /***/ }),
 
-/***/ "./public/stay-3.jpg":
-/*!***************************!*\
-  !*** ./public/stay-3.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-3.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-3.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3008,10 +3008,10 @@ module.exports = "/_next/static/images/stay-3-667c26624bc587e2a0ed097fe47af9e9.j
 
 /***/ }),
 
-/***/ "./public/stay-4.jpg":
-/*!***************************!*\
-  !*** ./public/stay-4.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-4.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-4.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3019,10 +3019,10 @@ module.exports = "/_next/static/images/stay-4-dd713327130917e664b8d79985614f91.j
 
 /***/ }),
 
-/***/ "./public/stay-5.jpg":
-/*!***************************!*\
-  !*** ./public/stay-5.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-5.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-5.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3030,10 +3030,10 @@ module.exports = "/_next/static/images/stay-5-06efd6e4d14fcb7b96272f09696e7372.j
 
 /***/ }),
 
-/***/ "./public/stay-6.jpg":
-/*!***************************!*\
-  !*** ./public/stay-6.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-6.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-6.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3041,10 +3041,10 @@ module.exports = "/_next/static/images/stay-6-152121985c5e6262890ef7e05fccc38c.j
 
 /***/ }),
 
-/***/ "./public/stay-7.jpg":
-/*!***************************!*\
-  !*** ./public/stay-7.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-7.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-7.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3052,10 +3052,10 @@ module.exports = "/_next/static/images/stay-7-fe37762d5a217a0949c9c6987974c271.j
 
 /***/ }),
 
-/***/ "./public/stay-8.jpg":
-/*!***************************!*\
-  !*** ./public/stay-8.jpg ***!
-  \***************************/
+/***/ "./public/img/stay-8.jpg":
+/*!*******************************!*\
+  !*** ./public/img/stay-8.jpg ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3063,7 +3063,7 @@ module.exports = "/_next/static/images/stay-8-071e3b9fba4717101516eb47ecbea2f3.j
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fairbnb2020%2Fpages%2Findex.js ***!
   \*************************************************************************************************************************/
@@ -3086,5 +3086,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

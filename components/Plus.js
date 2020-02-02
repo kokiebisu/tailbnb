@@ -1,4 +1,4 @@
-import img1 from '../public/plus-1.jpg';
+import img1 from '../public/img/plus-1.jpg';
 
 import PlusCard from './PlusCard';
 
