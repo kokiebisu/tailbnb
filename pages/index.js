@@ -21,33 +21,33 @@ const Home = () => {
       <SectionOverflow title='Explore Airbnb'>
         <Explore />
       </SectionOverflow>
-      <SectionWithPhrase
+      <Section
         title='Airbnb Plus places to stay'
         phrase='A selection of places to stay verified for quality and design'>
         <Plus />
-      </SectionWithPhrase>
-      <SectionWithPhrase
+      </Section>
+      <Section
         title='Introducing Airbnb Adventures'
         phrase='Multi-day trips led by local experts—activities, meals, and stays
         included'>
         <Adventures />
-      </SectionWithPhrase>
+      </Section>
       <Section title='Places to stay around the world'>
         <Stay />
       </Section>
-      <SectionWithPhrase
+      <Section
         title='Top-rated experiences'
         phrase='Book activities led by local hosts on your next trip.'>
         <TopRated />
-      </SectionWithPhrase>
+      </Section>
       <Section title='Popular destinations in the United States'>
         <Popular />
       </Section>
-      <SectionWithPhrase
+      <Section
         title='Featured Airbnb Plus destinations'
         phrase='Browse beautiful places to stay with all the comforts of home, plus more'>
         <Featured />
-      </SectionWithPhrase>
+      </Section>
       <Footer />
     </>
   );

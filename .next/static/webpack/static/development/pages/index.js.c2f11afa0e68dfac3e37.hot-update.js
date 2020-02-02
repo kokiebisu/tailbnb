@@ -198,7 +198,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("h3", {
-    "class": "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
+    className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 72
@@ -216,4 +216,4 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /***/ })
 
 })
-//# sourceMappingURL=index.js.794c3c24799fb36ed86a.hot-update.js.map
+//# sourceMappingURL=index.js.c2f11afa0e68dfac3e37.hot-update.js.map
