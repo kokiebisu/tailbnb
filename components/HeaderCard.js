@@ -73,8 +73,8 @@ export default () => {
             </div>
           </div>
         </form>
-        <div class='w-full bg-blue-500 sm:flex items-center sm:justify-end md:flex-wrap mt-6 rounded-lg'>
-          <button class='w-full sm:inline-block py-3 px-6 bg-red-500 rounded text-white font-bold'>
+        <div class='w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg'>
+          <button class='w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold'>
             Search
           </button>
         </div>

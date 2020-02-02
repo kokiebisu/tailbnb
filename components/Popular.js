@@ -3,7 +3,7 @@ import Location from '../components/Location';
 export default () => {
   return (
     <>
-      <div className='flex flex-wrap items-center justify-start w-full my-5'>
+      <div className='flex flex-wrap items-center justify-start w-full'>
         <div className='text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5'>
           <Location location='San Francisco' price='216' />
         </div>

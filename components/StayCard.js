@@ -35,7 +35,7 @@ export default ({ type, img, location, title, price }) => {
   };
 
   return (
-    <div className='w-30/31 md:w-40/41'>
+    <div className='w-30/31'>
       <img className='rounded' src={img} alt='adventure1' />
       <div className='flex flex-wrap items-center justify-between'>
         {renderhost()}

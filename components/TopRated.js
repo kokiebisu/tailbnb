@@ -12,7 +12,7 @@ export default () => {
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>
-        <div className='xl:w-1/4 lg:w-1/3 w-1/2 py-5'>
+        <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
           <TopRatedCard
             img={experience1}
             location='Italy'
@@ -21,7 +21,7 @@ export default () => {
             reviews='1765'
           />
         </div>
-        <div className='xl:w-1/4 lg:w-1/3 w-1/2 py-5'>
+        <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
           <TopRatedCard
             img={experience2}
             location='Italy'
@@ -30,7 +30,7 @@ export default () => {
             reviews='621'
           />
         </div>
-        <div className='xl:w-1/4 lg:w-1/3 w-1/2 py-5'>
+        <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
           <TopRatedCard
             img={experience3}
             location='Japan'
@@ -39,7 +39,7 @@ export default () => {
             reviews='1047'
           />
         </div>
-        <div className='xl:w-1/4 lg:w-1/3 w-1/2 py-5'>
+        <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
           <TopRatedCard
             img={experience4}
             location='Italy'

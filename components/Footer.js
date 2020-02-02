@@ -141,14 +141,11 @@ export default () => {
               © 2020 Airbnb, Inc. All rights reserved.
             </p>
             <div className='hidden md:flex md:flex-wrap md:justify-between md:items-center'>
+              <p className='text-sm text-gray-650 font-semibold'>
+                　❄️ Cloned by
+              </p>
               <a className='text-sm text-gray-650 font-semibold' href=''>
-                &nbsp;Terms<span> · </span>
-              </a>
-              <a className='text-sm text-gray-650 font-semibold' href=''>
-                &nbsp;Privacy<span> ·</span>
-              </a>
-              <a className='text-sm text-gray-650 font-semibold' href=''>
-                &nbsp;Site Map
+                &nbsp;Ken
               </a>
             </div>
           </div>

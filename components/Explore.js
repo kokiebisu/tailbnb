@@ -7,13 +7,13 @@ import ExploreCard from './ExploreCard';
 export default () => {
   return (
     <div className='flex items-center justify-start flex-wrap'>
-      <div className='w-1/3'>
+      <div className='w-1/3 pb-5'>
         <ExploreCard img={explore1} title='Stays' />
       </div>
-      <div className='w-1/3'>
+      <div className='w-1/3 pb-5'>
         <ExploreCard img={explore2} title='Experiences' />
       </div>
-      <div className='w-1/3'>
+      <div className='w-1/3 pb-5'>
         <ExploreCard img={explore2} title='Adventures' />
       </div>
     </div>

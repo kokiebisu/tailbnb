@@ -1,7 +1,7 @@
 export default ({ title }) => {
   return (
     <div className='mt-4 flex flex-wrap items-center justify-start'>
-      <a href='#' className='font-semibold border-b border-gray-800 '>
+      <a href='#' className='font-semibold border-b border-gray-800'>
         {title}
       </a>
       <div className='pl-3'>

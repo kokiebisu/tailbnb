@@ -108,7 +108,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 py-5",
+    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -126,7 +126,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 py-5",
+    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
@@ -144,7 +144,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 py-5",
+    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
@@ -162,7 +162,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 py-5",
+    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
@@ -225,7 +225,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("div", {
-    className: "w-1/3",
+    className: "w-1/3 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -240,7 +240,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/3",
+    className: "w-1/3 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -255,7 +255,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/3",
+    className: "w-1/3 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
@@ -361,7 +361,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("div", {
-    className: "lg:w-1/3",
+    className: "lg:w-1/3 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -377,7 +377,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "lg:w-1/3",
+    className: "lg:w-1/3 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -393,7 +393,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "lg:w-1/3",
+    className: "lg:w-1/3 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
@@ -432,7 +432,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       verified = _ref.verified,
       description = _ref.description;
   return __jsx("div", {
-    className: "lg:w-30/31 py-5",
+    className: "lg:w-30/31",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
@@ -907,21 +907,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 143
     },
     __self: this
-  }, __jsx("a", {
+  }, __jsx("p", {
     className: "text-sm text-gray-650 font-semibold",
-    href: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 144
     },
     __self: this
-  }, "\xA0Terms", __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: this
-  }, " \xB7 ")), __jsx("a", {
+  }, "\u3000\u2744\uFE0F Cloned by"), __jsx("a", {
     className: "text-sm text-gray-650 font-semibold",
     href: "",
     __source: {
@@ -929,25 +922,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 147
     },
     __self: this
-  }, "\xA0Privacy", __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: this
-  }, " \xB7")), __jsx("a", {
-    className: "text-sm text-gray-650 font-semibold",
-    href: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 150
-    },
-    __self: this
-  }, "\xA0Site Map"))), __jsx("div", {
+  }, "\xA0Ken"))), __jsx("div", {
     className: "hidden lg:flex lg:items-center lg:justify-start lg:flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 152
     },
     __self: this
   }, __jsx("svg", {
@@ -960,91 +939,91 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 153
     },
     __self: this
   }, __jsx("path", {
     d: "m297.277344 508.667969c-2.132813.347656-4.273438.667969-6.421875.960937 2.148437-.292968 4.289062-.613281 6.421875-.960937zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 159
     },
     __self: this
   }), __jsx("path", {
     d: "m302.398438 507.792969c-1.019532.1875-2.039063.359375-3.058594.535156 1.019531-.175781 2.039062-.347656 3.058594-.535156zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 160
     },
     __self: this
   }), __jsx("path", {
     d: "m285.136719 510.339844c-2.496094.28125-5.007813.53125-7.527344.742187 2.519531-.210937 5.03125-.460937 7.527344-.742187zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 161
     },
     __self: this
   }), __jsx("path", {
     d: "m290.054688 509.738281c-1.199219.160157-2.40625.308594-3.609376.449219 1.203126-.140625 2.410157-.289062 3.609376-.449219zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 162
     },
     __self: this
   }), __jsx("path", {
     d: "m309.367188 506.410156c-.898438.191406-1.800782.382813-2.703126.566406.902344-.183593 1.804688-.375 2.703126-.566406zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 163
     },
     __self: this
   }), __jsx("path", {
     d: "m326.664062 502.113281c-.726562.207031-1.453124.402344-2.179687.605469.726563-.203125 1.453125-.398438 2.179687-.605469zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 164
     },
     __self: this
   }), __jsx("path", {
     d: "m321.433594 503.542969c-.789063.207031-1.582032.417969-2.375.617187.792968-.199218 1.585937-.40625 2.375-.617187zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 165
     },
     __self: this
   }), __jsx("path", {
     d: "m314.589844 505.253906c-.835938.195313-1.679688.378906-2.523438.566406.84375-.1875 1.6875-.371093 2.523438-.566406zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 166
     },
     __self: this
   }), __jsx("path", {
     d: "m277.527344 511.089844c-1.347656.113281-2.695313.214844-4.046875.304687 1.351562-.089843 2.699219-.191406 4.046875-.304687zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 167
     },
     __self: this
   }), __jsx("path", {
     d: "m512 256c0-141.363281-114.636719-256-256-256s-256 114.636719-256 256 114.636719 256 256 256c1.503906 0 3-.03125 4.5-.058594v-199.285156h-55v-64.097656h55v-47.167969c0-54.703125 33.394531-84.476563 82.191406-84.476563 23.367188 0 43.453125 1.742188 49.308594 2.519532v57.171875h-33.648438c-26.546874 0-31.6875 12.617187-31.6875 31.128906v40.824219h63.476563l-8.273437 64.097656h-55.203126v189.453125c107.003907-30.675781 185.335938-129.257813 185.335938-246.109375zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 168
     },
     __self: this
   }), __jsx("path", {
     d: "m272.914062 511.429688c-2.664062.171874-5.339843.308593-8.023437.398437 2.683594-.089844 5.359375-.226563 8.023437-.398437zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 169
     },
     __self: this
   }), __jsx("path", {
     d: "m264.753906 511.835938c-1.414062.046874-2.832031.082031-4.25.105468 1.417969-.023437 2.835938-.058594 4.25-.105468zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 170
     },
     __self: this
   })), __jsx("svg", {
@@ -1057,20 +1036,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 173
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 178
     },
     __self: this
   }, __jsx("path", {
     d: "M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016 c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992 c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056 c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152 c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792 c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44 C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568 C480.224,136.96,497.728,118.496,512,97.248z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 179
     },
     __self: this
   }))), __jsx("svg", {
@@ -1082,57 +1061,57 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 192
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 197
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 198
     },
     __self: this
   }, __jsx("path", {
     d: "M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160 C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48 h192c61.76,0,112,50.24,112,112V352z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 199
     },
     __self: this
   }))), __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 206
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 207
     },
     __self: this
   }, __jsx("path", {
     d: "M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336 c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 208
     },
     __self: this
   }))), __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 214
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 215
     },
     __self: this
   }, __jsx("circle", {
@@ -1141,7 +1120,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     r: "17.056",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
+      lineNumber: 216
     },
     __self: this
   }))))))));
@@ -1568,14 +1547,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })))))), __jsx("div", {
-    "class": "w-full bg-blue-500 sm:flex items-center sm:justify-end md:flex-wrap mt-6 rounded-lg",
+    "class": "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
     },
     __self: this
   }, __jsx("button", {
-    "class": "w-full sm:inline-block py-3 px-6 bg-red-500 rounded text-white font-bold",
+    "class": "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
@@ -1716,7 +1695,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full my-5",
+    className: "flex flex-wrap items-center justify-start w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -1895,14 +1874,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   var title = _ref.title,
       children = _ref.children;
   return __jsx("div", {
-    className: "px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto pt-10 pb-10",
+    className: "px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto py-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
     },
     __self: this
   }, __jsx("h3", {
-    className: "text-gray-850 text-2xl font-medium py-3 mt-5",
+    className: "text-gray-850 text-2xl font-semibold py-3 ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -1932,21 +1911,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       phrase = _ref.phrase,
       children = _ref.children;
   return __jsx("div", {
-    className: "px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto pt-14 pb-20",
+    className: "px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
     },
     __self: this
   }, __jsx("h3", {
-    className: "text-2xl text-gray-850 font-medium py-3 mt-5",
+    className: "text-2xl text-gray-850 font-medium pt-3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
     },
     __self: this
   }, title), __jsx("p", {
-    className: "mb-6 text-gray-750",
+    className: "text-sm md:text-md mb-5 text-gray-850 pb-3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -1982,7 +1961,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: this
   }, __jsx("a", {
     href: "#",
-    className: "font-semibold border-b border-gray-800 ",
+    className: "font-semibold border-b border-gray-800",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -2080,7 +2059,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -2098,7 +2077,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -2116,7 +2095,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
@@ -2134,7 +2113,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
@@ -2152,7 +2131,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
@@ -2170,7 +2149,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
@@ -2188,7 +2167,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73
@@ -2206,7 +2185,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 lg:w-1/3 xl:w-1/4 py-5",
+    className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 82
@@ -2325,7 +2304,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   };
 
   return __jsx("div", {
-    className: "w-30/31 md:w-40/41",
+    className: "w-30/31",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -2458,7 +2437,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx("div", {
-    className: "xl:w-1/4 lg:w-1/3 w-1/2 py-5",
+    className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -2476,7 +2455,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "xl:w-1/4 lg:w-1/3 w-1/2 py-5",
+    className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
@@ -2494,7 +2473,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "xl:w-1/4 lg:w-1/3 w-1/2 py-5",
+    className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
@@ -2512,7 +2491,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })), __jsx("div", {
-    className: "xl:w-1/4 lg:w-1/3 w-1/2 py-5",
+    className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
