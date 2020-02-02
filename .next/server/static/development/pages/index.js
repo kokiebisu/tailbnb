@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -470,17 +470,38 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
-    className: "flex items-start justify-start w-full flex-wrap",
+    className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: undefined
   }, __jsx("div", {
-    className: "lg:w-1/3 pb-5",
+    className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-full scroller",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "scrollable sm:inset-x-0 flex items-start justify-startpy-2 rounded-xl w-featured md:w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-80 lg:w-1/3 pb-5 mr-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -489,14 +510,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     description: "Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: undefined
   })), __jsx("div", {
-    className: "lg:w-1/3 pb-5",
+    className: "w-80 lg:w-1/3 pb-5 mr-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 22
     },
     __self: undefined
   }, __jsx(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -505,14 +526,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     description: "Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: undefined
   })), __jsx("div", {
-    className: "lg:w-1/3 pb-5",
+    className: "w-80 lg:w-1/3 pb-5 pr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -521,10 +542,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     description: "Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 30
     },
     __self: undefined
-  }))));
+  })))))));
 });
 
 /***/ }),
@@ -549,10 +570,17 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   description
 }) => {
   return __jsx("div", {
-    className: "lg:w-30/31",
+    className: "w-30/31",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 3
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-full w-64 sm:w-full bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
     },
     __self: undefined
   }, __jsx("img", {
@@ -561,31 +589,31 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: undefined
   }), __jsx("div", {
-    className: "flex flex-wrap items-center justify-between",
+    className: "flex flex-wrap items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: undefined
   }, __jsx("p", {
     className: "uppercase text-xs my-2 font-bold text-pink-700",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: undefined
   }, verified, "+ Verified Stays")), __jsx("p", {
-    className: "my-1 text-sm tracking-wide",
+    className: "whitespace-normal my-1 text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: undefined
-  }, description));
+  }, description)));
 });
 
 /***/ }),
@@ -2042,7 +2070,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         },
         __self: this
       }, title), __jsx("p", {
-        className: "text-sm md:text-md mb-5 text-gray-850 pb-3",
+        className: "scrollable text-sm md:text-md mb-5 text-gray-850 pb-3",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9
@@ -2054,7 +2082,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         className: "scrollable text-gray-850 text-2xl font-semibold py-3 ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 17
         },
         __self: this
       }, title));
@@ -2065,7 +2093,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "sm:px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto py-5 overflow-x-hidden overflow-y-hidden w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: undefined
   }, renderPhrase(), children);
@@ -3233,7 +3261,7 @@ module.exports = "/_next/static/images/stay-8-071e3b9fba4717101516eb47ecbea2f3.j
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

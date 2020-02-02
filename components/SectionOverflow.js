@@ -6,7 +6,9 @@ export default ({ title, phrase, children }) => {
           <h3 className='scrollable text-gray-850 text-2xl font-semibold py-3 '>
             {title}
           </h3>
-          <p className='text-sm md:text-md mb-5 text-gray-850 pb-3'>{phrase}</p>
+          <p className='scrollable text-sm md:text-md mb-5 text-gray-850 pb-3'>
+            {phrase}
+          </p>
         </>
       );
     } else {
