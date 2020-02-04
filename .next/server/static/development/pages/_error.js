@@ -120,10 +120,12 @@ module.exports = _interopRequireDefault;
 "use strict";
 
 
-var __importStar = this && this.__importStar || function (mod) {
+var __importStar = void 0 && (void 0).__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
-  if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
   result["default"] = mod;
   return result;
 };
@@ -132,7 +134,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-const React = __importStar(__webpack_require__(/*! react */ "react"));
+var React = __importStar(__webpack_require__(/*! react */ "react"));
 
 exports.AmpStateContext = React.createContext({});
 
@@ -148,7 +150,7 @@ exports.AmpStateContext = React.createContext({});
 "use strict";
 
 
-var __importDefault = this && this.__importDefault || function (mod) {
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
   };
@@ -158,15 +160,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
 
-const amp_context_1 = __webpack_require__(/*! ./amp-context */ "./node_modules/next/dist/next-server/lib/amp-context.js");
+var amp_context_1 = __webpack_require__(/*! ./amp-context */ "./node_modules/next/dist/next-server/lib/amp-context.js");
 
-function isInAmpMode({
-  ampFirst = false,
-  hybrid = false,
-  hasQuery = false
-} = {}) {
+function isInAmpMode() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref$ampFirst = _ref.ampFirst,
+      ampFirst = _ref$ampFirst === void 0 ? false : _ref$ampFirst,
+      _ref$hybrid = _ref.hybrid,
+      hybrid = _ref$hybrid === void 0 ? false : _ref$hybrid,
+      _ref$hasQuery = _ref.hasQuery,
+      hasQuery = _ref$hasQuery === void 0 ? false : _ref$hasQuery;
+
   return ampFirst || hybrid && hasQuery;
 }
 
@@ -174,7 +180,7 @@ exports.isInAmpMode = isInAmpMode;
 
 function useAmp() {
   // Don't assign the context value to a variable to save bytes
-  return isInAmpMode(react_1.default.useContext(amp_context_1.AmpStateContext));
+  return isInAmpMode(react_1["default"].useContext(amp_context_1.AmpStateContext));
 }
 
 exports.useAmp = useAmp;
@@ -191,10 +197,12 @@ exports.useAmp = useAmp;
 "use strict";
 
 
-var __importStar = this && this.__importStar || function (mod) {
+var __importStar = void 0 && (void 0).__importStar || function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
-  if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
   result["default"] = mod;
   return result;
 };
@@ -203,7 +211,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-const React = __importStar(__webpack_require__(/*! react */ "react"));
+var React = __importStar(__webpack_require__(/*! react */ "react"));
 
 exports.HeadManagerContext = React.createContext(null);
 
@@ -219,7 +227,7 @@ exports.HeadManagerContext = React.createContext(null);
 "use strict";
 
 
-var __importDefault = this && this.__importDefault || function (mod) {
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
   };
@@ -229,23 +237,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
 
-const side_effect_1 = __importDefault(__webpack_require__(/*! ./side-effect */ "./node_modules/next/dist/next-server/lib/side-effect.js"));
+var side_effect_1 = __importDefault(__webpack_require__(/*! ./side-effect */ "./node_modules/next/dist/next-server/lib/side-effect.js"));
 
-const amp_context_1 = __webpack_require__(/*! ./amp-context */ "./node_modules/next/dist/next-server/lib/amp-context.js");
+var amp_context_1 = __webpack_require__(/*! ./amp-context */ "./node_modules/next/dist/next-server/lib/amp-context.js");
 
-const head_manager_context_1 = __webpack_require__(/*! ./head-manager-context */ "./node_modules/next/dist/next-server/lib/head-manager-context.js");
+var head_manager_context_1 = __webpack_require__(/*! ./head-manager-context */ "./node_modules/next/dist/next-server/lib/head-manager-context.js");
 
-const amp_1 = __webpack_require__(/*! ./amp */ "./node_modules/next/dist/next-server/lib/amp.js");
+var amp_1 = __webpack_require__(/*! ./amp */ "./node_modules/next/dist/next-server/lib/amp.js");
 
-function defaultHead(inAmpMode = false) {
-  const head = [react_1.default.createElement("meta", {
+function defaultHead() {
+  var inAmpMode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  var head = [react_1["default"].createElement("meta", {
     charSet: "utf-8"
   })];
 
   if (!inAmpMode) {
-    head.push(react_1.default.createElement("meta", {
+    head.push(react_1["default"].createElement("meta", {
       name: "viewport",
       content: "width=device-width,minimum-scale=1,initial-scale=1"
     }));
@@ -263,8 +272,8 @@ function onlyReactElement(list, child) {
   } // Adds support for React.Fragment
 
 
-  if (child.type === react_1.default.Fragment) {
-    return list.concat(react_1.default.Children.toArray(child.props.children).reduce((fragmentList, fragmentChild) => {
+  if (child.type === react_1["default"].Fragment) {
+    return list.concat(react_1["default"].Children.toArray(child.props.children).reduce(function (fragmentList, fragmentChild) {
       if (typeof fragmentChild === 'string' || typeof fragmentChild === 'number') {
         return fragmentList;
       }
@@ -276,7 +285,7 @@ function onlyReactElement(list, child) {
   return list.concat(child);
 }
 
-const METATYPES = ['name', 'httpEquiv', 'charSet', 'itemProp'];
+var METATYPES = ['name', 'httpEquiv', 'charSet', 'itemProp'];
 /*
  returns a function for filtering head child elements
  which shouldn't be duplicated, like <title/>
@@ -284,15 +293,15 @@ const METATYPES = ['name', 'httpEquiv', 'charSet', 'itemProp'];
 */
 
 function unique() {
-  const keys = new Set();
-  const tags = new Set();
-  const metaTypes = new Set();
-  const metaCategories = {};
-  return h => {
-    let unique = true;
+  var keys = new Set();
+  var tags = new Set();
+  var metaTypes = new Set();
+  var metaCategories = {};
+  return function (h) {
+    var unique = true;
 
     if (h.key && typeof h.key !== 'number' && h.key.indexOf('$') > 0) {
-      const key = h.key.slice(h.key.indexOf('$') + 1);
+      var key = h.key.slice(h.key.indexOf('$') + 1);
 
       if (keys.has(key)) {
         unique = false;
@@ -314,8 +323,8 @@ function unique() {
         break;
 
       case 'meta':
-        for (let i = 0, len = METATYPES.length; i < len; i++) {
-          const metatype = METATYPES[i];
+        for (var i = 0, len = METATYPES.length; i < len; i++) {
+          var metatype = METATYPES[i];
           if (!h.props.hasOwnProperty(metatype)) continue;
 
           if (metatype === 'charSet') {
@@ -325,8 +334,8 @@ function unique() {
               metaTypes.add(metatype);
             }
           } else {
-            const category = h.props[metatype];
-            const categories = metaCategories[metatype] || new Set();
+            var category = h.props[metatype];
+            var categories = metaCategories[metatype] || new Set();
 
             if (categories.has(category)) {
               unique = false;
@@ -350,35 +359,38 @@ function unique() {
 
 
 function reduceComponents(headElements, props) {
-  return headElements.reduce((list, headElement) => {
-    const headElementChildren = react_1.default.Children.toArray(headElement.props.children);
+  return headElements.reduce(function (list, headElement) {
+    var headElementChildren = react_1["default"].Children.toArray(headElement.props.children);
     return list.concat(headElementChildren);
-  }, []).reduce(onlyReactElement, []).reverse().concat(defaultHead(props.inAmpMode)).filter(unique()).reverse().map((c, i) => {
-    const key = c.key || i;
-    return react_1.default.cloneElement(c, {
-      key
+  }, []).reduce(onlyReactElement, []).reverse().concat(defaultHead(props.inAmpMode)).filter(unique()).reverse().map(function (c, i) {
+    var key = c.key || i;
+    return react_1["default"].cloneElement(c, {
+      key: key
     });
   });
 }
 
-const Effect = side_effect_1.default();
+var Effect = side_effect_1["default"]();
 /**
  * This component injects elements to `<head>` of your page.
  * To avoid duplicated `tags` in `<head>` you can use the `key` property, which will make sure every tag is only rendered once.
  */
 
-function Head({
-  children
-}) {
-  return react_1.default.createElement(amp_context_1.AmpStateContext.Consumer, null, ampState => react_1.default.createElement(head_manager_context_1.HeadManagerContext.Consumer, null, updateHead => react_1.default.createElement(Effect, {
-    reduceComponentsToState: reduceComponents,
-    handleStateChange: updateHead,
-    inAmpMode: amp_1.isInAmpMode(ampState)
-  }, children)));
+function Head(_ref) {
+  var children = _ref.children;
+  return react_1["default"].createElement(amp_context_1.AmpStateContext.Consumer, null, function (ampState) {
+    return react_1["default"].createElement(head_manager_context_1.HeadManagerContext.Consumer, null, function (updateHead) {
+      return react_1["default"].createElement(Effect, {
+        reduceComponentsToState: reduceComponents,
+        handleStateChange: updateHead,
+        inAmpMode: amp_1.isInAmpMode(ampState)
+      }, children);
+    });
+  });
 }
 
 Head.rewind = Effect.rewind;
-exports.default = Head;
+exports["default"] = Head;
 
 /***/ }),
 
@@ -392,63 +404,110 @@ exports.default = Head;
 "use strict";
 
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-const react_1 = __webpack_require__(/*! react */ "react");
+var react_1 = __webpack_require__(/*! react */ "react");
 
-const isServer = true;
+var isServer = true;
 
-exports.default = () => {
-  const mountedInstances = new Set();
-  let state;
+exports["default"] = function () {
+  var mountedInstances = new Set();
+  var state;
 
   function emitChange(component) {
-    state = component.props.reduceComponentsToState([...mountedInstances], component.props);
+    state = component.props.reduceComponentsToState(_toConsumableArray(mountedInstances), component.props);
 
     if (component.props.handleStateChange) {
       component.props.handleStateChange(state);
     }
   }
 
-  return class extends react_1.Component {
-    // Used when server rendering
-    static rewind() {
-      const recordedState = state;
-      state = undefined;
-      mountedInstances.clear();
-      return recordedState;
-    }
+  return (
+    /*#__PURE__*/
+    function (_react_1$Component) {
+      _inherits(_class, _react_1$Component);
 
-    constructor(props) {
-      super(props);
+      _createClass(_class, null, [{
+        key: "rewind",
+        // Used when server rendering
+        value: function rewind() {
+          var recordedState = state;
+          state = undefined;
+          mountedInstances.clear();
+          return recordedState;
+        }
+      }]);
 
-      if (isServer) {
-        mountedInstances.add(this);
-        emitChange(this);
+      function _class(props) {
+        var _this;
+
+        _classCallCheck(this, _class);
+
+        _this = _possibleConstructorReturn(this, _getPrototypeOf(_class).call(this, props));
+
+        if (isServer) {
+          mountedInstances.add(_assertThisInitialized(_this));
+          emitChange(_assertThisInitialized(_this));
+        }
+
+        return _this;
       }
-    }
 
-    componentDidMount() {
-      mountedInstances.add(this);
-      emitChange(this);
-    }
+      _createClass(_class, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+          mountedInstances.add(this);
+          emitChange(this);
+        }
+      }, {
+        key: "componentDidUpdate",
+        value: function componentDidUpdate() {
+          emitChange(this);
+        }
+      }, {
+        key: "componentWillUnmount",
+        value: function componentWillUnmount() {
+          mountedInstances["delete"](this);
+          emitChange(this);
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          return null;
+        }
+      }]);
 
-    componentDidUpdate() {
-      emitChange(this);
-    }
-
-    componentWillUnmount() {
-      mountedInstances.delete(this);
-      emitChange(this);
-    }
-
-    render() {
-      return null;
-    }
-
-  };
+      return _class;
+    }(react_1.Component)
+  );
 };
 
 /***/ }),
@@ -463,10 +522,28 @@ exports.default = () => {
 "use strict";
 
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 
@@ -482,41 +559,52 @@ var statusCodes = {
 * `Error` component used for handling errors.
 */
 
-class Error extends _react.default.Component {
-  static getInitialProps(_ref) {
-    var {
-      res,
-      err
-    } = _ref;
-    var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
-    return {
-      statusCode
-    };
+var Error =
+/*#__PURE__*/
+function (_react$default$Compon) {
+  _inherits(Error, _react$default$Compon);
+
+  function Error() {
+    _classCallCheck(this, Error);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Error).apply(this, arguments));
   }
 
-  render() {
-    var {
-      statusCode
-    } = this.props;
-    var title = this.props.title || statusCodes[statusCode] || 'An unexpected error has occurred';
-    return _react.default.createElement("div", {
-      style: styles.error
-    }, _react.default.createElement(_head.default, null, _react.default.createElement("title", null, statusCode, ": ", title)), _react.default.createElement("div", null, _react.default.createElement("style", {
-      dangerouslySetInnerHTML: {
-        __html: 'body { margin: 0 }'
-      }
-    }), statusCode ? _react.default.createElement("h1", {
-      style: styles.h1
-    }, statusCode) : null, _react.default.createElement("div", {
-      style: styles.desc
-    }, _react.default.createElement("h2", {
-      style: styles.h2
-    }, title, "."))));
-  }
+  _createClass(Error, [{
+    key: "render",
+    value: function render() {
+      var statusCode = this.props.statusCode;
+      var title = this.props.title || statusCodes[statusCode] || 'An unexpected error has occurred';
+      return _react["default"].createElement("div", {
+        style: styles.error
+      }, _react["default"].createElement(_head["default"], null, _react["default"].createElement("title", null, statusCode, ": ", title)), _react["default"].createElement("div", null, _react["default"].createElement("style", {
+        dangerouslySetInnerHTML: {
+          __html: 'body { margin: 0 }'
+        }
+      }), statusCode ? _react["default"].createElement("h1", {
+        style: styles.h1
+      }, statusCode) : null, _react["default"].createElement("div", {
+        style: styles.desc
+      }, _react["default"].createElement("h2", {
+        style: styles.h2
+      }, title, "."))));
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function getInitialProps(_ref) {
+      var res = _ref.res,
+          err = _ref.err;
+      var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
+      return {
+        statusCode: statusCode
+      };
+    }
+  }]);
 
-}
+  return Error;
+}(_react["default"].Component);
 
-exports.default = Error;
+exports["default"] = Error;
 Error.displayName = 'ErrorPage';
 var styles = {
   error: {
