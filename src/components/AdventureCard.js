@@ -13,7 +13,6 @@ export default ({ img, location, title, price, days }) => {
       setLoaded(true);
     });
   };
-
   setLoad();
   return (
     <div className='w-30/31'>

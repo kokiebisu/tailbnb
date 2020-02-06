@@ -19,8 +19,6 @@ export default () => {
       setLoaded(true);
     });
   };
-
   setLoad();
-
   return <>{loaded ? <PlusCard img={img1} /> : <Skeleton height={226} />}</>;
 };
