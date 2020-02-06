@@ -9,7 +9,7 @@ export default ({ img, title }) => {
           className='h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none'
           alt='explore1'
         />
-        <p class='text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold'>
+        <p className='text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold'>
           {title}
         </p>
       </div>
