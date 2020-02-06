@@ -10,5 +10,13 @@ export default () => {
   const changeDisplay = () => {
     setDisplay(!display);
   };
-  return <>{display ? <FooterContent /> : <FooterInducer />}</>;
+  return (
+    <>
+      {display ? (
+        <FooterContent swap={changeDisplay} />
+      ) : (
+        <FooterInducer swap={changeDisplay} />
+      )}
+    </>
+  );
 };
