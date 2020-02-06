@@ -1644,6 +1644,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-loading-skeleton */ "react-loading-skeleton");
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__);
+
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   img,
@@ -1652,12 +1655,27 @@ __webpack_require__.r(__webpack_exports__);
   price,
   reviews
 }) => {
+  const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const sleep = milliseconds => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
+  };
+
+  const setLoad = () => {
+    sleep(4000).then(() => {
+      setLoaded(true);
+    });
+  };
+
+  setLoad();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-30/31"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, loaded ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "rounded-lg",
     src: img,
     alt: "adventure1"
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    height: 385
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "uppercase text-xs my-2 font-semibold"
   }, location), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
