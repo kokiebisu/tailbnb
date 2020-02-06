@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 
 export default () => {
-  const [pressed, setPressed] = useState(false);
+  const [display, setDisplay] = useState(false);
+
+  const changeDisplay = () => {
+    setDisplay(!display);
+    console.log(display);
+  };
   return (
     <>
-      {pressed ? (
-        <div>
-          <div className='lg:px-20 px-5 xl:px-0 xl:max-w-5.5xl mx-auto border-t border-gray-200 py-6 sm:py-12'>
+      {display ? (
+        <div className='hidden md:block fixed bottom-0 bg-white w-full border-t border-gray-300'>
+          <div className='lg:px-20 px-5 xl:px-0 xl:max-w-5.5xl mx-auto py-6 sm:py-12'>
             <div className='hidden md:flex md:flex-wrap md:items-start md:w-full md:justify-between md:pb-6 md:border-b md:border-gray-300'>
               <div className='lg:w-1/4'>
                 <h3 className='font-semibold text-gray-900 text-sm mb-2'>
@@ -227,9 +232,34 @@ export default () => {
               </div>
             </div>
           </div>
+          <button
+            onClick={changeDisplay}
+            className='flex items-center justify-start hover:bg-gray-100 bg-white z-10 shadow-xl fixed bottom-0 right-0 mr-4 mb-3 rounded-lg py-2 px-4 font-semibold text-sm'>
+            <div>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 512 512'
+                style={{ marginBottom: 1 }}
+                className='h-3 w-3 mt-1'>
+                <g>
+                  <g>
+                    <path
+                      d='M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892
+			L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999
+			c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998
+			c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z'
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <p className='ml-3'>Close</p>
+          </button>
         </div>
       ) : (
-        <button className='hover:bg-gray-100 flex items-center justify-start fixed bottom-0 right-0 mr-3 mb-3 z-10 bg-white text-sm font-semibold py-2 px-3 rounded-lg shadow-xl'>
+        <button
+          onClick={changeDisplay}
+          className='hidden md:block hover:bg-gray-100 md:flex md:items-center justify-start fixed bottom-0 md:ml-3 md:mb-3 lg:right-0  lg:mr-3 z-10 bg-white text-sm font-semibold py-2 px-4 rounded-lg shadow-xl'>
           <div>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -263,7 +293,7 @@ export default () => {
               </g>
             </svg>
           </div>
-          <p className='ml-2'>Terms, privacy, & more</p>
+          <p className='ml-3'>Terms, privacy, & more</p>
         </button>
       )}
     </>
