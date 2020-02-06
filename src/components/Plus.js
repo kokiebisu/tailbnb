@@ -7,23 +7,20 @@ import PlusCard from './PlusCard';
 // Images
 import img1 from '../../public/img/plus-1.jpg';
 
-const sleep = (milliseconds) => {
-  return new Promise((resolve) => setTimeout(resolve, milliseconds));
-};
-
 export default () => {
   const [loaded, setLoaded] = useState(false);
 
+  const sleep = (milliseconds) => {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+  };
+
   const setLoad = () => {
-    sleep(2000).then(() => {
+    sleep(4000).then(() => {
       setLoaded(true);
     });
   };
 
   setLoad();
 
-  if (loaded == false) {
-    return <Skeleton height={226} />;
-  }
-  return <PlusCard img={img1} />;
+  return <>{loaded ? <PlusCard img={img1} /> : <Skeleton height={226} />}</>;
 };
