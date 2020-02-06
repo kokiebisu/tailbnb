@@ -2,9 +2,9 @@ import React from 'react';
 
 export default () => {
   return (
-    <div class='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
-      <div class='mx-8'>
-        <h3 class='hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight'>
+    <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
+      <div className='mx-8'>
+        <h3 className='hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight'>
           Book unique places to <br />
           stay and things to do.
         </h3>
@@ -23,7 +23,7 @@ export default () => {
             />
           </div>
           <div className='flex flex-wrap items-stretch justify-start'>
-            <div class='w-1/2'>
+            <div className='w-1/2'>
               <label
                 className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase'
                 htmlFor='checkin'>
@@ -36,7 +36,7 @@ export default () => {
                 placeholder='dd-mm-yyyy'
               />
             </div>
-            <div class='w-1/2'>
+            <div className='w-1/2'>
               <label
                 className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
                 htmlFor='checkout'>
@@ -50,13 +50,13 @@ export default () => {
               />
             </div>
           </div>
-          <div class=''>
+          <div>
             <label
-              class='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
+              className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
               htmlFor='guests'>
               Guests
             </label>
-            <div class='inline-block relative w-full'>
+            <div className='inline-block relative w-full'>
               <select
                 className='appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
                 id='guests'>
@@ -64,9 +64,9 @@ export default () => {
                 <option value='2'>3 Guests</option>
                 <option value='3'>4 Guests</option>
               </select>
-              <div class='pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
+              <div className='pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
                 <svg
-                  class='fill-current h-4 w-4'
+                  className='fill-current h-4 w-4'
                   xmlns='http://www.w3.org/2000/svg'
                   viewBox='0 0 20 20'>
                   <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
@@ -75,8 +75,8 @@ export default () => {
             </div>
           </div>
         </form>
-        <div class='w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg'>
-          <button class='w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold'>
+        <div className='w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg'>
+          <button className='w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold'>
             Search
           </button>
         </div>
