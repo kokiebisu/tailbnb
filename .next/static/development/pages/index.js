@@ -3059,7 +3059,7 @@ __webpack_require__.r(__webpack_exports__);
     r: "17.056"
   }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: changeDisplay,
-    className: "flex items-center justify-start hover:bg-gray-100 bg-white z-10 shadow-xl fixed bottom-0 right-0 mr-4 mb-3 rounded-lg py-2 px-4 font-semibold text-sm"
+    className: "flex items-center justify-start hover:bg-gray-100 bg-white z-10 shadow-xl fixed bottom-0 lg:right-0 ml-4 lg:mr-4 mb-3 rounded-lg py-2 px-4 font-semibold text-sm"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 512 512",
