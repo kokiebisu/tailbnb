@@ -1,2 +1,3 @@
-# nextjs_start_kit
-# airbnb2020
+## mybnb
+
+Self project cloning the current airbnb design

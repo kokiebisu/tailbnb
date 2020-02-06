@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
 
 export default ({ type, img, location, title, price }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  const sleep = (milliseconds) => {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+  };
+
+  const setLoad = () => {
+    sleep(4000).then(() => {
+      setLoaded(true);
+    });
+  };
+  setLoad();
   const renderhost = () => {
     if (type === 'normal') {
       return (
@@ -38,7 +51,11 @@ export default ({ type, img, location, title, price }) => {
 
   return (
     <div className='w-30/31'>
-      <img className='rounded' src={img} alt='adventure1' />
+      {loaded ? (
+        <img className='rounded' src={img} alt='adventure1' />
+      ) : (
+        <Skeleton height={165} />
+      )}
       <div className='flex flex-wrap items-center justify-between'>
         {renderhost()}
         <div className='flex items-center justify-center flex-wrap'>
