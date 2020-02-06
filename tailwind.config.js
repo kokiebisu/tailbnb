@@ -4,8 +4,12 @@ module.exports = {
       backgroundColor: {
         background: '#fffcfc'
       },
+      minHeight: {
+        '100': '45rem'
+      },
       height: {
         '28': '7rem',
+        '100': '46rem',
         header: '110vh'
       },
       width: {

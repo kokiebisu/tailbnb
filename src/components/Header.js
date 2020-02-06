@@ -11,9 +11,9 @@ export default () => {
     <header
       style={{
         backgroundImage: `url(${background})`,
-        maxHeight: '70rem'
+        maxHeight: '80rem'
       }}
-      className='md:h-header lg:h-screen relative bg-cover bg-no-repeat'>
+      className='md:h-header lg:min-h-100 relative bg-cover bg-no-repeat'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>
@@ -76,6 +76,7 @@ export default () => {
         </h3>
         <HeaderCard />
       </div>
+      <div></div>
     </header>
   );
 };

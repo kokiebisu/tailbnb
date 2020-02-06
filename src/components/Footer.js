@@ -11,7 +11,7 @@ export default () => {
     <>
       {display ? (
         <div className='hidden md:block fixed bottom-0 bg-white w-full border-t border-gray-300'>
-          <div className='lg:px-20 px-5 xl:px-0 xl:max-w-5.5xl mx-auto py-6 sm:py-12'>
+          <div className='lg:px-20 px-5 xl:px-0 lg:max-w-6xl xl:max-w-5.5xl mx-auto py-6 sm:py-12'>
             <div className='hidden md:flex md:flex-wrap md:items-start md:w-full md:justify-between md:pb-6 md:border-b md:border-gray-300'>
               <div className='lg:w-1/4'>
                 <h3 className='font-semibold text-gray-900 text-sm mb-2'>
