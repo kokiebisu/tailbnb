@@ -1036,17 +1036,41 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PlusCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PlusCard */ "./src/components/PlusCard.js");
-/* harmony import */ var _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/plus-1.jpg */ "./public/img/plus-1.jpg");
-/* harmony import */ var _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-loading-skeleton */ "react-loading-skeleton");
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _PlusCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PlusCard */ "./src/components/PlusCard.js");
+/* harmony import */ var _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/plus-1.jpg */ "./public/img/plus-1.jpg");
+/* harmony import */ var _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+
  // Components
 
  // Images
 
 
+
+const sleep = milliseconds => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds));
+};
+
 /* harmony default export */ __webpack_exports__["default"] = (() => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PlusCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
+  const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const setLoad = () => {
+    sleep(2000).then(() => {
+      setLoaded(true);
+    });
+  };
+
+  setLoad();
+
+  if (loaded == false) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      height: 226
+    });
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PlusCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    img: _public_img_plus_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a
   });
 });
 
@@ -1072,11 +1096,11 @@ __webpack_require__.r(__webpack_exports__);
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full"
-  }, img ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "w-full h-64 bg-cover bg-no-repeat object-cover rounded",
     src: img,
     alt: "plus1"
-  }) : console.log('not yet'));
+  }));
 });
 
 /***/ }),

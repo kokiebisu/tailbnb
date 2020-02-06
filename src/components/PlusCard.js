@@ -4,15 +4,11 @@ import Skeleton from 'react-loading-skeleton';
 export default ({ img }) => {
   return (
     <div className='w-full'>
-      {img ? (
-        <img
-          className='w-full h-64 bg-cover bg-no-repeat object-cover rounded'
-          src={img}
-          alt='plus1'
-        />
-      ) : (
-        console.log('not yet')
-      )}
+      <img
+        className='w-full h-64 bg-cover bg-no-repeat object-cover rounded'
+        src={img}
+        alt='plus1'
+      />
     </div>
   );
 };
