@@ -2880,9 +2880,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
-  const [pressed, setPressed] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, pressed ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:px-20 px-5 xl:px-0 xl:max-w-5.5xl mx-auto border-t border-gray-200 py-6 sm:py-12"
+  const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const changeDisplay = () => {
+    setDisplay(!display);
+    console.log(display);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, display ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hidden md:block fixed bottom-0 bg-white w-full border-t border-gray-300"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "lg:px-20 px-5 xl:px-0 xl:max-w-5.5xl mx-auto py-6 sm:py-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden md:flex md:flex-wrap md:items-start md:w-full md:justify-between md:pb-6 md:border-b md:border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3049,8 +3057,23 @@ __webpack_require__.r(__webpack_exports__);
     cx: "393.6",
     cy: "118.4",
     r: "17.056"
-  })))))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "hover:bg-gray-100 flex items-center justify-start fixed bottom-0 right-0 mr-3 mb-3 z-10 bg-white text-sm font-semibold py-2 px-3 rounded-lg shadow-xl"
+  }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: changeDisplay,
+    className: "flex items-center justify-start hover:bg-gray-100 bg-white z-10 shadow-xl fixed bottom-0 lg:right-0 ml-4 lg:mr-4 mb-3 rounded-lg py-2 px-4 font-semibold text-sm"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    style: {
+      marginBottom: 1
+    },
+    className: "h-3 w-3 mt-1"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "ml-3"
+  }, "Close"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: changeDisplay,
+    className: "hidden md:block hover:bg-gray-100 md:flex md:items-center justify-start fixed bottom-0 md:ml-3 md:mb-3 lg:right-0  lg:mr-3 z-10 bg-white text-sm font-semibold py-2 px-4 rounded-lg shadow-xl"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 512 512",
@@ -3065,7 +3088,7 @@ __webpack_require__.r(__webpack_exports__);
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M256,124.122c-18.821,0-34.133,15.312-34.133,34.133s15.312,34.133,34.133,34.133s34.133-15.312,34.133-34.133 S274.821,124.122,256,124.122z"
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "ml-2"
+    className: "ml-3"
   }, "Terms, privacy, & more")));
 });
 
