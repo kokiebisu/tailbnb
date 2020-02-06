@@ -723,7 +723,7 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, display ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden md:block fixed bottom-0 bg-white w-full border-t border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:px-20 px-5 xl:px-0 xl:max-w-5.5xl mx-auto py-6 sm:py-12"
+    className: "lg:px-20 px-5 xl:px-0 lg:max-w-6xl xl:max-w-5.5xl mx-auto py-6 sm:py-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden md:flex md:flex-wrap md:items-start md:w-full md:justify-between md:pb-6 md:border-b md:border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -950,9 +950,9 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     style: {
       backgroundImage: `url(${_public_img_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a})`,
-      maxHeight: '70rem'
+      maxHeight: '80rem'
     },
-    className: "md:h-header lg:h-screen relative bg-cover bg-no-repeat"
+    className: "md:h-screen md:min-h-80 relative bg-cover bg-no-repeat"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-center justify-between"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1011,7 +1011,11 @@ __webpack_require__.r(__webpack_exports__);
     className: "md:ml-20"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6"
-  }, "Book unique places to stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+  }, "Book unique places to stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 font-semibold text-right"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-sm text-white"
+  }, "Over 300 unique places ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "to stay in Japan")));
 });
 
 /***/ }),

@@ -11,9 +11,9 @@ export default () => {
     <header
       style={{
         backgroundImage: `url(${background})`,
-        maxHeight: '70rem'
+        maxHeight: '80rem'
       }}
-      className='md:h-header lg:h-screen relative bg-cover bg-no-repeat'>
+      className='md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>
@@ -75,6 +75,12 @@ export default () => {
           Book unique places to stay and things to do.
         </h3>
         <HeaderCard />
+      </div>
+      <div className='hidden md:block absolute bottom-0 right-0 mr-8 mb-8 font-semibold text-right'>
+        <p className='text-sm text-white'>
+          Over 300 unique places <br />
+          to stay in Japan
+        </p>
       </div>
     </header>
   );

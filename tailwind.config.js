@@ -1,12 +1,14 @@
 module.exports = {
   theme: {
+    minHeight: {
+      '80': '43rem'
+    },
     extend: {
       backgroundColor: {
         background: '#fffcfc'
       },
       height: {
-        '28': '7rem',
-        header: '110vh'
+        '28': '7rem'
       },
       width: {
         '80': '26rem',
