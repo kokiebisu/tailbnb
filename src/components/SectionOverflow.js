@@ -5,10 +5,14 @@ export default ({ title, phrase, children }) => {
     if (phrase) {
       return (
         <>
-          <h3 className='scrollable text-gray-850 text-2xl font-semibold py-3 '>
+          <h3
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='scrollable text-gray-850 text-2xl pt-3 '>
             {title}
           </h3>
-          <p className='scrollable text-sm md:text-md mb-5 text-gray-850 pb-3'>
+          <p
+            style={{ fontFamily: 'airbnb-book' }}
+            className='scrollable text-md mb-5 text-gray-850 pb-3'>
             {phrase}
           </p>
         </>

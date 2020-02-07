@@ -243,7 +243,9 @@ export default ({ swap }) => {
             </g>
           </svg>
         </div>
-        <p className='ml-3'>Close</p>
+        <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-850 ml-3'>
+          Close
+        </p>
       </button>
     </div>
   );

@@ -4,14 +4,16 @@ export default () => {
   return (
     <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
       <div className='mx-8'>
-        <h3 className='hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight'>
+        <h3
+          style={{ fontFamily: 'airbnb-bold' }}
+          className='hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight'>
           Book unique places to <br />
           stay and things to do.
         </h3>
         <form>
           <div className=''>
             <label
-              className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase tracking-wider'
+              className='block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider'
               htmlFor='where'>
               Where
             </label>
@@ -25,7 +27,7 @@ export default () => {
           <div className='flex flex-wrap items-stretch justify-start'>
             <div className='w-1/2'>
               <label
-                className='block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase'
+                className='block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase'
                 htmlFor='checkin'>
                 Check-In
               </label>
@@ -38,7 +40,7 @@ export default () => {
             </div>
             <div className='w-1/2'>
               <label
-                className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
+                className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-750'
                 htmlFor='checkout'>
                 Check-Out
               </label>
@@ -52,7 +54,7 @@ export default () => {
           </div>
           <div>
             <label
-              className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-700'
+              className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-750'
               htmlFor='guests'>
               Guests
             </label>

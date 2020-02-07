@@ -5,14 +5,24 @@ export default ({ title, phrase, children }) => {
     if (phrase) {
       return (
         <>
-          <h3 className='text-2xl text-gray-850 font-medium pt-3'>{title}</h3>
-          <p className='text-sm md:text-md mb-5 text-gray-850 pb-3'>{phrase}</p>
+          <h3
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='text-2xl text-gray-850 pt-3'>
+            {title}
+          </h3>
+          <p
+            style={{ fontFamily: 'airbnb-book' }}
+            className='text-md mb-5 text-gray-850 pb-3'>
+            {phrase}
+          </p>
         </>
       );
     } else {
       return (
         <>
-          <h3 className='text-gray-850 text-2xl font-semibold py-3 '>
+          <h3
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='text-gray-850 text-2xl py-3 '>
             {title}
           </h3>
         </>

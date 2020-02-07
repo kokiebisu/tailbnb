@@ -2011,10 +2011,10 @@ var weakMemoize = function weakMemoize(func) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fmybnb%2Fsrc%2Fpages%2Findex.js!./":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fmybnb%2Fsrc%2Fpages%2Findex.js ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js!./":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3098,7 +3098,10 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "ml-3"
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-850 ml-3"
   }, "Close")));
 });
 
@@ -3136,7 +3139,10 @@ __webpack_require__.r(__webpack_exports__);
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M256,124.122c-18.821,0-34.133,15.312-34.133,34.133s15.312,34.133,34.133,34.133s34.133-15.312,34.133-34.133 S274.821,124.122,256,124.122z"
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "ml-3"
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-850 ml-3"
   }, "Terms, privacy, & more"));
 });
 
@@ -3185,7 +3191,7 @@ __webpack_require__.r(__webpack_exports__);
     style: {
       fill: '#ffffff'
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "AirBnb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden lg:block"
@@ -3267,11 +3273,14 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-8"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
     className: "hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight"
   }, "Book unique places to ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase tracking-wider",
+    className: "block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider",
     htmlFor: "where"
   }, "Where"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide",
@@ -3283,7 +3292,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs text-gray-700 uppercase",
+    className: "block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase",
     htmlFor: "checkin"
   }, "Check-In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide",
@@ -3293,7 +3302,7 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-700",
+    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-750",
     htmlFor: "checkout"
   }, "Check-Out"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
@@ -3301,7 +3310,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "checkout",
     placeholder: "dd-mm-yyyy"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-700",
+    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-750",
     htmlFor: "guests"
   }, "Guests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "inline-block relative w-full"
@@ -3540,13 +3549,22 @@ __webpack_require__.r(__webpack_exports__);
   const renderContent = () => {
     if (phrase) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "text-2xl text-gray-850 font-medium pt-3"
+        style: {
+          fontFamily: 'airbnb-medium'
+        },
+        className: "text-2xl text-gray-850 pt-3"
       }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "text-sm md:text-md mb-5 text-gray-850 pb-3"
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "text-md mb-5 text-gray-850 pb-3"
       }, phrase));
     } else {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "text-gray-850 text-2xl font-semibold py-3 "
+        style: {
+          fontFamily: 'airbnb-medium'
+        },
+        className: "text-gray-850 text-2xl py-3 "
       }, title));
     }
   };
@@ -3578,9 +3596,15 @@ __webpack_require__.r(__webpack_exports__);
   function renderPhrase() {
     if (phrase) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "scrollable text-gray-850 text-2xl font-semibold py-3 "
+        style: {
+          fontFamily: 'airbnb-medium'
+        },
+        className: "scrollable text-gray-850 text-2xl pt-3 "
       }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "scrollable text-sm md:text-md mb-5 text-gray-850 pb-3"
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "scrollable text-md mb-5 text-gray-850 pb-3"
       }, phrase));
     } else {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -4058,13 +4082,13 @@ const Home = () => {
 /***/ }),
 
 /***/ 1:
-/*!**************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fmybnb%2Fsrc%2Fpages%2Findex.js ***!
-  \**************************************************************************************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fmybnb%2Fsrc%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fmybnb%2Fsrc%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js!./");
 
 
 /***/ }),

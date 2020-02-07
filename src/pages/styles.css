@@ -1,5 +1,36 @@
 @tailwind base;
 
+@font-face {
+  font-family: 'airbnb-black';
+  src: url('/fonts/AirbnbCerealBlack.woff');
+  font-weight: black;
+}
+
+@font-face {
+  font-family: 'airbnb-bold';
+  src: url('/fonts/AirbnbCerealBold.woff');
+}
+
+@font-face {
+  font-family: 'airbnb-book';
+  src: url('/fonts/AirbnbCerealBook.woff');
+}
+
+@font-face {
+  font-family: 'airbnb-extrabold';
+  src: url('/fonts/AirbnbCerealExtraBold.woff');
+}
+
+@font-face {
+  font-family: 'airbnb-light';
+  src: url('/fonts/AirbnbCerealLight.woff');
+}
+
+@font-face {
+  font-family: 'airbnb-medium';
+  src: url('/fonts/AirbnbCerealMedium.woff');
+}
+
 body {
   @apply antialiased;
 }
