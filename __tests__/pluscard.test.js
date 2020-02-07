@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
+// Component
 import PlusCard from '../src/components/PlusCard';
 
 describe('PlusCard', () => {
