@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-// Plus
-import Plus from '../src/components/Plus';
+// Component
+import ExploreCard from '../src/components/ExploreCard';
 
-describe('Plus', () => {
+describe('ExploreCard', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<Plus />);
+    const component = shallow(<ExploreCard />);
     expect(component).toMatchSnapshot();
   });
 });
