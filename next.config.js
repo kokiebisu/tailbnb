@@ -1,3 +1,8 @@
 const withImages = require('next-images');
-const withFonts = require('next-fonts');
-module.exports = withFonts(withImages());
+const withPlugins = require('next-compose-plugins');
+const disableIndicator = {
+  devIndicators: {
+    autoPrerender: false
+  }
+};
+module.exports = withPlugins([[withImages(), {}], [disableIndicator]]);
