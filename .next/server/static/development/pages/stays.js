@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -261,19 +261,6 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
-<<<<<<< HEAD
-  }, "Filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
-  }, "Filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
-  }, "Filters"))));
-=======
   }, "Filters"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-5 py-5 border-b border-gray-400"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -282,12 +269,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     className: "text-gray-650 text-sm"
   }, "Enter dates and number of guests to see the total price per night. Tourism taxes may be added")));
->>>>>>> frontend-dev
 });
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./src/pages/stays.js ***!
   \**********************************/

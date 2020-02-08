@@ -202,19 +202,6 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
-<<<<<<< HEAD
-  }, "Filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
-  }, "Filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
-  }, "Filters"))));
-=======
   }, "Filters"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-5 py-5 border-b border-gray-400"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -223,12 +210,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     className: "text-gray-650 text-sm"
   }, "Enter dates and number of guests to see the total price per night. Tourism taxes may be added")));
->>>>>>> frontend-dev
 });
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Fstays.js ***!
   \*********************************************************************************************************************************/
@@ -251,5 +237,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=stays.js.map
