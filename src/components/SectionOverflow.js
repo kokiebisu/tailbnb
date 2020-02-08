@@ -7,7 +7,7 @@ export default ({ title, phrase, children }) => {
         <>
           <h3
             style={{ fontFamily: 'airbnb-medium' }}
-            className='scrollable text-gray-850 text-2xl pt-3 '>
+            className='scrollable text-gray-850 text-2xl pt-3 w-5/6'>
             {title}
           </h3>
           <p
@@ -20,7 +20,7 @@ export default ({ title, phrase, children }) => {
     } else {
       return (
         <>
-          <h3 className='scrollable text-gray-850 text-2xl font-semibold py-3 '>
+          <h3 className='scrollable text-gray-850 text-2xl font-semibold py-3 w-5/6'>
             {title}
           </h3>
         </>

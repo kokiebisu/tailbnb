@@ -5,7 +5,9 @@ import Section from '../components/Section';
 import SectionOverflow from '../components/SectionOverflow';
 
 // Component
-import EnterInput from '../components/EnterInput';
+import Travel from '../components/Travel';
+import TopRated from '../components/TopRated';
+import THundredPlus from '../components/THundredPlus';
 
 export default () => {
   return (
@@ -55,6 +57,17 @@ export default () => {
           Tourism taxes may be added
         </p>
       </div>
+      <SectionOverflow title='Travel the world with Airbnb'>
+        <Travel />
+      </SectionOverflow>
+      <Section
+        title='Top-rated places to stay'
+        phrase='Explore some of the best-reviewed stays in the world'>
+        <TopRated />
+      </Section>
+      <Section title='300+ places to stay'>
+        <THundredPlus />
+      </Section>
     </>
   );
 };
