@@ -46,7 +46,6 @@ export default ({ type, img, location, title, price }) => {
         </div>
       );
     }
-    console.log(type);
   };
 
   return (
