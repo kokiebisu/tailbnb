@@ -2275,7 +2275,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "uppercase text-xs my-2 font-semibold"
   }, location), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "my-1 w-5/6"
-  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, price, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), days, " days"));
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "From $", price, " / person", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), days, " days"));
 });
 
 /***/ }),
@@ -2314,41 +2314,50 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const adventures = [{
+    img: _public_img_adventures1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    location: 'Norway',
+    title: '2 Nights PACKAGE ALL Inclusive',
+    price: 841,
+    days: 3
+  }, {
+    img: _public_img_adventures2_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    location: 'Indonesia',
+    title: 'Snorkeling and hiking in West Sumatra',
+    price: 249,
+    days: 2
+  }, {
+    img: _public_img_adventures3_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    location: 'Nepal',
+    title: 'Trek to the lower Everest region',
+    price: 1745,
+    days: 11
+  }, {
+    img: _public_img_adventures4_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    location: 'Morocco',
+    title: 'Active Adventure & Stay with Locals',
+    price: 416,
+    days: 4
+  }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    img: _public_img_adventures1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    location: "Norway",
-    title: "2 Nights PACKAGE All Inclusive",
-    price: "From $841 / person",
-    days: "3"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    img: _public_img_adventures2_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    location: "Indonesia",
-    title: "Snorkeling and hiking in West Sumatra",
-    price: "From $249 / person",
-    days: "2"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    img: _public_img_adventures3_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    location: "Nepal",
-    title: "Trek to the lower Everest region",
-    price: "From $1,745 / person",
-    days: "11"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    img: _public_img_adventures4_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    location: "Morocco",
-    title: "Active Adventure & Stay with Locals",
-    price: "From $416 / person",
-    days: "4"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ShowAll__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, adventures.map(({
+    img,
+    location,
+    title,
+    price,
+    days
+  }) => {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      img: img,
+      location: location,
+      title: title,
+      price: price,
+      days: days
+    }));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ShowAll__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "Show all adventures"
   }));
 });
