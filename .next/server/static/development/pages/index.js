@@ -2390,6 +2390,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const explores = [{
+    img: _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    title: 'Stays'
+  }, {
+    img: _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    title: 'Experiences'
+  }, {
+    img: _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    title: 'Adventures'
+  }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "overflow-y-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2398,22 +2408,17 @@ __webpack_require__.r(__webpack_exports__);
     className: "h-full scroller"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-32 sm:w-1/3 mr-2 cursor-pointer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    title: "Stays"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-32 sm:w-1/3 mr-2 cursor-pointer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    title: "Experiences"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-32 sm:w-1/3 mr-2 cursor-pointer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    title: "Adventures"
-  }))))));
+  }, explores.map(({
+    img,
+    title
+  }) => {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "w-32 sm:w-1/3 mr-2 cursor-pointer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      img: img,
+      title: title
+    }));
+  })))));
 });
 
 /***/ }),
