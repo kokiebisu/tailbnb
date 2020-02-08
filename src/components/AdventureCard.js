@@ -24,7 +24,7 @@ export default ({ img, location, title, price, days }) => {
       <p className='uppercase text-xs my-2 font-semibold'>{location}</p>
       <p className='my-1 w-5/6'>{title}</p>
       <p>
-        {price}
+        From ${price} / person
         <span> · </span>
         {days} days
       </p>
