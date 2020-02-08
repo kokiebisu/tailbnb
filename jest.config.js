@@ -5,7 +5,11 @@ module.exports = {
   },
   testMatch: ['**/*.(test|spec).(js|ts|tsx)'],
   coveragePathIgnorePatterns: ['/node_modules/', 'enzyme.js'],
-  setupTestFrameworkScriptFile: '<rootDir>/enzyme.js',
+  setupFilesAfterEnv: ['<rootDir>/enzyme.js'],
   coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
+  moduleNameMapper: {
+    '\\.(css|less|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+    '\\.(jpg|png|gif|ttf|eot|svg)$': '<rootDir>/__mocks__/fileMock.js'
+  },
   setupFiles: ['./jest.setup.js']
 };
