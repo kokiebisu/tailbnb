@@ -3308,7 +3308,7 @@ __webpack_require__.r(__webpack_exports__);
         style: {
           fontFamily: 'airbnb-medium'
         },
-        className: "scrollable text-gray-850 text-2xl pt-3 "
+        className: "scrollable text-gray-850 text-2xl pt-3 w-5/6"
       }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         style: {
           fontFamily: 'airbnb-book'
@@ -3317,7 +3317,7 @@ __webpack_require__.r(__webpack_exports__);
       }, phrase));
     } else {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "scrollable text-gray-850 text-2xl font-semibold py-3 "
+        className: "scrollable text-gray-850 text-2xl font-semibold py-3 w-5/6"
       }, title));
     }
   }
