@@ -181,6 +181,16 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
+  }, "Filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
+  }, "Filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
   }, "Filters"))));
 });
 
