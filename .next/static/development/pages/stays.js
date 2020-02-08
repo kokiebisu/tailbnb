@@ -9582,27 +9582,54 @@ __webpack_require__.r(__webpack_exports__);
   const places = [{
     type: 'normal',
     img: _public_img_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    size: 'Entire apartment',
     location: 'Sol Madrid',
-    title: 'Private Studio in Sol, Madrid',
-    price: '91'
+    title: 'Waterfront with extraordinary view',
+    price: '86',
+    ratings: '4.81',
+    reviews: '156'
+  }, {
+    type: 'normal',
+    img: _public_img_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    size: 'Entire apartment',
+    location: 'Sol Madrid',
+    title: 'Waterfront with extraordinary view',
+    price: '86',
+    ratings: '4.81',
+    reviews: '156'
+  }, {
+    type: 'normal',
+    img: _public_img_stay_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    size: 'Entire apartment',
+    location: 'Sol Madrid',
+    title: 'Waterfront with extraordinary view',
+    price: '86',
+    ratings: '4.81',
+    reviews: '156'
   }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
   }, places.map(({
     type,
     img,
+    size,
     location,
     title,
-    price
+    price,
+    ratings,
+    reviews
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "lg:w-1/3 xl:w-1/4 pb-5"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_THundredPlusCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       type: type,
       img: img,
+      size: size,
       location: location,
       title: title,
-      price: price
+      price: price,
+      ratings: ratings,
+      reviews: reviews
     }));
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ShowAll__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Show(2000+)"
@@ -9628,10 +9655,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   type,
+  size,
   img,
   location,
   title,
-  price
+  price,
+  ratings,
+  reviews
 }) => {
   const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
 
@@ -9656,7 +9686,7 @@ __webpack_require__.r(__webpack_exports__);
           fontFamily: 'airbnb-book'
         },
         className: "mt-3 text-sm sm:my-2 font-light text-gray-650"
-      }, location));
+      }, size, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), location));
     } else if (type === 'superhost') {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start"
@@ -9731,12 +9761,12 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "pl-1 text-sm"
-  }, "4.71"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, ratings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-650"
-  }, "\xA0 (276)")));
+  }, "\xA0 (", reviews, ")")));
 });
 
 /***/ }),

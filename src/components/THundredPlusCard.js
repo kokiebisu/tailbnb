@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 
-export default ({ type, img, location, title, price }) => {
+export default ({
+  type,
+  size,
+  img,
+  location,
+  title,
+  price,
+  ratings,
+  reviews
+}) => {
   const [loaded, setLoaded] = useState(false);
 
   const sleep = (milliseconds) => {
@@ -21,6 +30,8 @@ export default ({ type, img, location, title, price }) => {
           <p
             style={{ fontFamily: 'airbnb-book' }}
             className='mt-3 text-sm sm:my-2 font-light text-gray-650'>
+            {size}
+            <span> · </span>
             {location}
           </p>
         </div>
@@ -101,12 +112,12 @@ export default ({ type, img, location, title, price }) => {
           </g>
         </svg>
         <p style={{ fontFamily: 'airbnb-book' }} className='pl-1 text-sm'>
-          4.71
+          {ratings}
         </p>
         <p
           style={{ fontFamily: 'airbnb-book' }}
           className='text-sm text-gray-650'>
-          &nbsp; (276)
+          &nbsp; ({reviews})
         </p>
       </div>
     </div>

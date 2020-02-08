@@ -19,28 +19,56 @@ export default () => {
     {
       type: 'normal',
       img: stay1,
+      size: 'Entire apartment',
       location: 'Sol Madrid',
-      title: 'Private Studio in Sol, Madrid',
-      price: '91'
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
     }
   ];
 
   return (
     <>
       <div className='flex flex-wrap items-start justify-start w-full'>
-        {places.map(({ type, img, location, title, price }) => {
-          return (
-            <div className='lg:w-1/3 xl:w-1/4 pb-5'>
-              <THundredPlusCard
-                type={type}
-                img={img}
-                location={location}
-                title={title}
-                price={price}
-              />
-            </div>
-          );
-        })}
+        {places.map(
+          ({ type, img, size, location, title, price, ratings, reviews }) => {
+            return (
+              <div className='lg:w-1/3 xl:w-1/4 pb-5'>
+                <THundredPlusCard
+                  type={type}
+                  img={img}
+                  size={size}
+                  location={location}
+                  title={title}
+                  price={price}
+                  ratings={ratings}
+                  reviews={reviews}
+                />
+              </div>
+            );
+          }
+        )}
       </div>
       <ShowAll title='Show(2000+)' />
     </>
