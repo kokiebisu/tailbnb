@@ -42,16 +42,6 @@ export default () => {
             className='mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
             Filters
           </div>
-          <div
-            style={{ fontFamily: 'airbnb-book' }}
-            className='hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
-            Filters
-          </div>
-          <div
-            style={{ fontFamily: 'airbnb-book' }}
-            className='hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
-            Filters
-          </div>
         </div>
       </div>
     </>
