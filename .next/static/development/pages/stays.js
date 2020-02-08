@@ -9998,7 +9998,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SectionOverflow */ "./src/components/SectionOverflow.js");
 /* harmony import */ var _components_Travel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Travel */ "./src/components/Travel.js");
 /* harmony import */ var _components_TopRated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/TopRated */ "./src/components/TopRated.js");
-/* harmony import */ var _components_THundredPlus__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/THundredPlus */ "./src/components/THundredPlus.js");
+/* harmony import */ var _components_THundredPlus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/THundredPlus */ "./src/components/THundredPlus.js");
  // Wrapper
 
 
@@ -10060,7 +10060,7 @@ __webpack_require__.r(__webpack_exports__);
     phrase: "Explore some of the best-reviewed stays in the world"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TopRated__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: "300+ places to stay"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_THundredPlus__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_THundredPlus__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
 });
 
 /***/ }),
