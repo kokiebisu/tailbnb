@@ -4,6 +4,9 @@ import React from 'react';
 import Section from '../components/Section';
 import SectionOverflow from '../components/SectionOverflow';
 
+// Component
+import EnterInput from '../components/EnterInput';
+
 export default () => {
   return (
     <>
@@ -42,17 +45,15 @@ export default () => {
             className='mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
             Filters
           </div>
-          <div
-            style={{ fontFamily: 'airbnb-book' }}
-            className='hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
-            Filters
-          </div>
-          <div
-            style={{ fontFamily: 'airbnb-book' }}
-            className='hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
-            Filters
-          </div>
         </div>
+      </div>
+      <div className='mx-5 py-5 border-b border-gray-400'>
+        <p
+          style={{ fontFamily: 'airbnb-book' }}
+          className='text-gray-650 text-sm'>
+          Enter dates and number of guests to see the total price per night.
+          Tourism taxes may be added
+        </p>
       </div>
     </>
   );

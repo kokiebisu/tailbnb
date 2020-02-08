@@ -93,6 +93,24 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/components/EnterInput.js":
+/*!**************************************!*\
+  !*** ./src/components/EnterInput.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Enter input");
+});
+
+/***/ }),
+
 /***/ "./src/components/Section.js":
 /*!***********************************!*\
   !*** ./src/components/Section.js ***!
@@ -197,8 +215,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Section */ "./src/components/Section.js");
 /* harmony import */ var _components_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SectionOverflow */ "./src/components/SectionOverflow.js");
+/* harmony import */ var _components_EnterInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/EnterInput */ "./src/components/EnterInput.js");
  // Wrapper
 
+
+ // Component
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
@@ -240,6 +261,7 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
+<<<<<<< HEAD
   }, "Filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       fontFamily: 'airbnb-book'
@@ -251,6 +273,16 @@ __webpack_require__.r(__webpack_exports__);
     },
     className: "hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
   }, "Filters"))));
+=======
+  }, "Filters"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mx-5 py-5 border-b border-gray-400"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-650 text-sm"
+  }, "Enter dates and number of guests to see the total price per night. Tourism taxes may be added")));
+>>>>>>> frontend-dev
 });
 
 /***/ }),
