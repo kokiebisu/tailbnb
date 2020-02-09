@@ -9,9 +9,9 @@ import explore1 from '../../public/img/high/explore1.jpg';
 import explore2 from '../../public/img/high/explore2.jpg';
 import explore3 from '../../public/img/high/explore3.jpg';
 // Low Resolution
-import explore1low from '../../public/img/low/explore1low.jpg';
-import explore2low from '../../public/img/low/explore2low.jpg';
-import explore3low from '../../public/img/low/explore3low.jpg';
+import explore1low from '../../public/img/low/explore1-low.jpg';
+import explore2low from '../../public/img/low/explore2-low.jpg';
+import explore3low from '../../public/img/low/explore3-low.jpg';
 
 export default () => {
   const explores = [

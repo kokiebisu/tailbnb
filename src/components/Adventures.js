@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Skeleton from 'react-loading-skeleton';
 
 // Component
 import AdventureCard from '../components/AdventureCard';

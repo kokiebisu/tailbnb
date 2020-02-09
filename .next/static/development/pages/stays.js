@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/stays.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
 /*!*******************************************************************************!*\
@@ -4715,21 +4715,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js!./":
-/*!************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js ***!
-  \************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Fstays.js!./":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Fstays.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/stays", function() {
+      var mod = __webpack_require__(/*! ./src/pages/stays.js */ "./src/pages/stays.js")
       if(true) {
-        module.hot.accept(/*! ./src/pages/index.js */ "./src/pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")
-          next.router.update("/", updatedPage)
+        module.hot.accept(/*! ./src/pages/stays.js */ "./src/pages/stays.js", function() {
+          if(!next.router.components["/stays"]) return
+          var updatedPage = __webpack_require__(/*! ./src/pages/stays.js */ "./src/pages/stays.js")
+          next.router.update("/stays", updatedPage)
         })
       }
       return mod
@@ -9866,61 +9866,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./public/img/high/adventures1.jpg":
-/*!*****************************************!*\
-  !*** ./public/img/high/adventures1.jpg ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/adventures1-f8b881cae95db6a9cc8ea0201371ec1e.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/adventures2.jpg":
-/*!*****************************************!*\
-  !*** ./public/img/high/adventures2.jpg ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/adventures2-ecd4a5c217d4def4dfaaf791cbb2bf6f.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/adventures3.jpg":
-/*!*****************************************!*\
-  !*** ./public/img/high/adventures3.jpg ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/adventures3-e326d9f75287af3b96412fd401821b0b.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/adventures4.jpg":
-/*!*****************************************!*\
-  !*** ./public/img/high/adventures4.jpg ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/adventures4-03e1457aef94fda88a3b50320e8c2ce7.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/airbnb-background.jpg":
-/*!***********************************************!*\
-  !*** ./public/img/high/airbnb-background.jpg ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/airbnb-background-b8b3c94eb622e8a6083c338facb6c4fd.jpg";
-
-/***/ }),
-
 /***/ "./public/img/high/experience-1.jpg":
 /*!******************************************!*\
   !*** ./public/img/high/experience-1.jpg ***!
@@ -9995,50 +9940,6 @@ module.exports = "/_next/static/images/explore2-ea1d6be446ac091888bb2fdc6b7c809b
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/explore3-aeb0d58d63e32f5efd9e3de68789726b.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured1.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured1.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured1-61cfa1ad94e59dfb8a0aa9025d12eda4.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured2.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured2.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured2-f194738a33c75d7529e437a24fce67e0.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured3.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured3.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured3-8b63bad827adf3b1fab9832d1f1dbd41.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/plus-1.jpg":
-/*!************************************!*\
-  !*** ./public/img/high/plus-1.jpg ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/plus-1-1cd90d428ed098d36d4099a3514aa633.jpg";
 
 /***/ }),
 
@@ -10130,50 +10031,6 @@ module.exports = "/_next/static/images/stay8-071e3b9fba4717101516eb47ecbea2f3.jp
 
 /***/ }),
 
-/***/ "./public/img/low/adventures1-low.jpg":
-/*!********************************************!*\
-  !*** ./public/img/low/adventures1-low.jpg ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-
-/***/ "./public/img/low/adventures2-low.jpg":
-/*!********************************************!*\
-  !*** ./public/img/low/adventures2-low.jpg ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-
-/***/ "./public/img/low/adventures3-low.jpg":
-/*!********************************************!*\
-  !*** ./public/img/low/adventures3-low.jpg ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-
-/***/ "./public/img/low/adventures4-low.jpg":
-/*!********************************************!*\
-  !*** ./public/img/low/adventures4-low.jpg ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-
 /***/ "./public/img/low/explore1-low.jpg":
 /*!*****************************************!*\
   !*** ./public/img/low/explore1-low.jpg ***!
@@ -10204,50 +10061,6 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAEBAQE
 /***/ (function(module, exports) {
 
 module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-
-/***/ "./public/img/low/featured1-low.jpg":
-/*!******************************************!*\
-  !*** ./public/img/low/featured1-low.jpg ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAATAB0DASIAAhEBAxEB/8QAGwAAAQQDAAAAAAAAAAAAAAAAAAQHCAoBBgn/xAAoEAABBAEDBAIBBQAAAAAAAAABAgMEBQYHESEACBITFEFhIjJDU/H/xAAXAQEBAQEAAAAAAAAAAAAAAAAFBgME/8QAJhEAAgICAAUEAwEAAAAAAAAAAQMCBAURABITIkEGITFRYpGx8P/aAAwDAQACEQMRAD8AucVhbKktAj2BAd8Pv1k+Hn+QFcHng+P46zc6gYBixeRk+c4VjXxG/OSMky3HaD4yPUHiuSbizhJjoDJDxW8UIDRDpIbIV1zl7rNQtfL+t07h9queYthDZtZ1rqbmmT0OUzreuxmK5VIrajEsVZw+/lX1ndOqtXJ7DFX82NFr40dMyqbtHJghD3eDTTWLUXUWLeaudxGLVt1WOY3OosY7Ps31Cx9tuZh8HF7W0psknad2tfOsraNHYkuz0CzRVT2Uwoa/RHfbeByGZuonar0cVbuWKs6o74uhWfGylzeZLayLjiFSVFbJzrxV1JmK5zmtkY22J9L4VlbDZLOeqsdQpZdeV3XxwjkMxi54y5TqQjlKVluNqoF+L3WaUF5B9idesWuShViqxthxyXFkRm340hiQxJYYksPR3m32X40hAeYksOsqW29HfaKXWH21KZfbIcaWtBCi2N8tBsnSD/Gz9H+tPUGcL7xtPqTR+NYVUTNVQMKh4vh783ItONQMPyqypMMqsbqBIjY9muIUUaxnPVjkjZyOquqGHDKlMF9UN2KvacW7p8BzhqZcWOR0uKtPGDJrIWQW1bXWLldOr48lv2sS26ppbkJ5T9dIkRi+l6ZEkqKIzYYS4tXuhxTEretjgSFuQ5UgQJHU+ouJX2wMhziIOwASZRBmLGOapM3iaWVos6Yat6WcxBgARFc2AgmetRMiOWRIAG+F8RILiBsNlNr3AGwP7R9bfXH+dOSI7MiPu82lwpjMBPkOEgtJUQkDYJBUSdkgDcnjo6OtVDc/f6PB0j2n/eRwgfhxkwZDaWUhC1gLSPIBQ8UjY7HkbcdMXkFLUOzVF2sgukFQBdjNObfpbHHmlW2+w8iOVHlW556OjpFQHP8AA7Y7j7fBIiCR9EgkHXg6455EgSAJGxHz+W/6B+uP/9k="
-
-/***/ }),
-
-/***/ "./public/img/low/featured2-low.jpg":
-/*!******************************************!*\
-  !*** ./public/img/low/featured2-low.jpg ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-
-/***/ "./public/img/low/featured3-low.jpg":
-/*!******************************************!*\
-  !*** ./public/img/low/featured3-low.jpg ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/jpeg;base64,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"
-
-/***/ }),
-
-/***/ "./public/img/low/plus-1-low.jpg":
-/*!***************************************!*\
-  !*** ./public/img/low/plus-1-low.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/plus-1-low-a499e2d28f52b0dde07a4665e69e3865.jpg";
 
 /***/ }),
 
@@ -10336,1022 +10149,6 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVR
 /***/ (function(module, exports) {
 
 module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODUK/9sAQwAFAwQEBAMFBAQEBQUFBgcMCAcHBwcPCwsJDBEPEhIRDxERExYcFxMUGhURERghGBodHR8fHxMXIiQiHiQcHh8e/9sAQwEFBQUHBgcOCAgOHhQRFB4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4e/8AAEQgADQAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A838G+JvEF79ljstTuZVkt8TRgk+S6EYbjkBhnp6d69UXx7450i0hMcchCwiUeXN5qqMgbCuDg4PT2r5/+HUl/q2v+RBfNYTCIkzxRguwA6H16V2Wi6Xr09tqAi8VXUBV97MsIy2O3WueVCmpXtZ+V1+RgkopnsZ/aIwqhtDd32/PiJxg+mMmivn61sb65hFx/a0yGQkkBe+SOxHpRVezl/M/w/yMedn/2Q=="
-
-/***/ }),
-
-/***/ "./src/components/AdventureCard.js":
-/*!*****************************************!*\
-  !*** ./src/components/AdventureCard.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  img,
-  imglow,
-  location,
-  title,
-  price,
-  days
-}) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: img,
-    placeholder: imglow
-  }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "w-full rounded-lg",
-    src: src
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "uppercase text-xs my-2 font-semibold"
-  }, location), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "my-1 w-5/6"
-  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "From $", price, " / person", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), days, " days"));
-});
-
-/***/ }),
-
-/***/ "./src/components/Adventures.js":
-/*!**************************************!*\
-  !*** ./src/components/Adventures.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AdventureCard */ "./src/components/AdventureCard.js");
-/* harmony import */ var _components_ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ShowAll */ "./src/components/ShowAll.js");
-/* harmony import */ var _public_img_high_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/high/adventures1.jpg */ "./public/img/high/adventures1.jpg");
-/* harmony import */ var _public_img_high_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_img_high_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/img/high/adventures2.jpg */ "./public/img/high/adventures2.jpg");
-/* harmony import */ var _public_img_high_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_img_high_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/img/high/adventures3.jpg */ "./public/img/high/adventures3.jpg");
-/* harmony import */ var _public_img_high_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_img_high_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../public/img/high/adventures4.jpg */ "./public/img/high/adventures4.jpg");
-/* harmony import */ var _public_img_high_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _public_img_low_adventures1_low_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../public/img/low/adventures1-low.jpg */ "./public/img/low/adventures1-low.jpg");
-/* harmony import */ var _public_img_low_adventures1_low_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_adventures1_low_jpg__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _public_img_low_adventures2_low_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../public/img/low/adventures2-low.jpg */ "./public/img/low/adventures2-low.jpg");
-/* harmony import */ var _public_img_low_adventures2_low_jpg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_adventures2_low_jpg__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _public_img_low_adventures3_low_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../public/img/low/adventures3-low.jpg */ "./public/img/low/adventures3-low.jpg");
-/* harmony import */ var _public_img_low_adventures3_low_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_adventures3_low_jpg__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _public_img_low_adventures4_low_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../public/img/low/adventures4-low.jpg */ "./public/img/low/adventures4-low.jpg");
-/* harmony import */ var _public_img_low_adventures4_low_jpg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_adventures4_low_jpg__WEBPACK_IMPORTED_MODULE_10__);
- // Component
-
-
- // Images
-// High Resolution
-
-
-
-
- // Low Resolution
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  const adventures = [{
-    img: _public_img_high_adventures1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    imglow: _public_img_low_adventures1_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    location: 'Norway',
-    title: '2 Nights PACKAGE ALL Inclusive',
-    price: 841,
-    days: 3
-  }, {
-    img: _public_img_high_adventures2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    imglow: _public_img_low_adventures2_low_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
-    location: 'Indonesia',
-    title: 'Snorkeling and hiking in West Sumatra',
-    price: 249,
-    days: 2
-  }, {
-    img: _public_img_high_adventures3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    imglow: _public_img_low_adventures3_low_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
-    location: 'Nepal',
-    title: 'Trek to the lower Everest region',
-    price: 1745,
-    days: 11
-  }, {
-    img: _public_img_high_adventures4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    imglow: _public_img_low_adventures4_low_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
-    location: 'Morocco',
-    title: 'Active Adventure & Stay with Locals',
-    price: 416,
-    days: 4
-  }];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-start justify-start flex-wrap w-full"
-  }, adventures.map(({
-    id,
-    img,
-    imglow,
-    location,
-    title,
-    price,
-    days
-  }) => {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AdventureCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      key: id,
-      img: img,
-      imglow: imglow,
-      location: location,
-      title: title,
-      price: price,
-      days: days
-    }));
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ShowAll__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Show all adventures"
-  }));
-});
-
-/***/ }),
-
-/***/ "./src/components/Explore.js":
-/*!***********************************!*\
-  !*** ./src/components/Explore.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ExploreCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExploreCard */ "./src/components/ExploreCard.js");
-/* harmony import */ var _public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/high/explore1.jpg */ "./public/img/high/explore1.jpg");
-/* harmony import */ var _public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/high/explore2.jpg */ "./public/img/high/explore2.jpg");
-/* harmony import */ var _public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg");
-/* harmony import */ var _public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/img/low/explore1-low.jpg */ "./public/img/low/explore1-low.jpg");
-/* harmony import */ var _public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../public/img/low/explore2-low.jpg */ "./public/img/low/explore2-low.jpg");
-/* harmony import */ var _public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../public/img/low/explore3-low.jpg */ "./public/img/low/explore3-low.jpg");
-/* harmony import */ var _public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7__);
- // Components
-
- // Images
-// High Resolution
-
-
-
- // Low Resolution
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  const explores = [{
-    img: _public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    imglow: _public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    title: 'Stays'
-  }, {
-    img: _public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    imglow: _public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    title: 'Experiences'
-  }, {
-    img: _public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    imglow: _public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    title: 'Adventures'
-  }];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "overflow-y-hidden"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full h-full overflow-y-hidden"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "h-full scroller"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full"
-  }, explores.map(({
-    id,
-    img,
-    imglow,
-    title
-  }) => {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "w-32 sm:w-1/3 mr-2 cursor-pointer"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      key: id,
-      img: img,
-      imglow: imglow,
-      title: title
-    }));
-  })))));
-});
-
-/***/ }),
-
-/***/ "./src/components/ExploreCard.js":
-/*!***************************************!*\
-  !*** ./src/components/ExploreCard.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  img,
-  imglow,
-  title
-}) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: `/${title.toLowerCase()}`
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    src: img,
-    placeholder: imglow
-  }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: src,
-    className: "h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold"
-  }, title))));
-});
-
-/***/ }),
-
-/***/ "./src/components/Featured.js":
-/*!************************************!*\
-  !*** ./src/components/Featured.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FeaturedCard */ "./src/components/FeaturedCard.js");
-/* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
-/* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
-/* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/img/high/featured3.jpg */ "./public/img/high/featured3.jpg");
-/* harmony import */ var _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/img/low/featured1-low.jpg */ "./public/img/low/featured1-low.jpg");
-/* harmony import */ var _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../public/img/low/featured2-low.jpg */ "./public/img/low/featured2-low.jpg");
-/* harmony import */ var _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../public/img/low/featured3-low.jpg */ "./public/img/low/featured3-low.jpg");
-/* harmony import */ var _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7__);
- // Components
-
- // Images
-// High Resolution
-
-
-
- // Low Resolution
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  const featureds = [{
-    img: _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    imglow: _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    verified: 940,
-    description: 'Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels'
-  }, {
-    img: _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    imglow: _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    verified: 300,
-    description: 'Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.'
-  }, {
-    img: _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    imglow: _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    verified: 290,
-    description: 'Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design'
-  }];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "overflow-y-hidden"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full h-full overflow-y-hidden"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "h-full scroller"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "scrollable sm:inset-x-0 flex items-start justify-startpy-2 rounded-xl w-featured md:w-full"
-  }, featureds.map(({
-    id,
-    img,
-    imglow,
-    verified,
-    description
-  }) => {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "w-80 lg:w-1/3 pb-5 mr-2"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      key: id,
-      img: img,
-      imglow: imglow,
-      verified: verified,
-      description: description
-    }));
-  }))))));
-});
-
-/***/ }),
-
-/***/ "./src/components/FeaturedCard.js":
-/*!****************************************!*\
-  !*** ./src/components/FeaturedCard.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  img,
-  imglow,
-  verified,
-  description
-}) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "h-full w-64 sm:w-full bg-white"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: img,
-    placeholder: imglow
-  }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "w-full rounded-xl",
-    src: src,
-    alt: "adventure1"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex flex-wrap items-center justify-start"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "uppercase text-xs my-2 font-bold text-pink-700"
-  }, verified, "+ Verified Stays")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "whitespace-normal my-1 text-sm tracking-wide"
-  }, description)));
-});
-
-/***/ }),
-
-/***/ "./src/components/Footer.js":
-/*!**********************************!*\
-  !*** ./src/components/Footer.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _FooterContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterContent */ "./src/components/FooterContent.js");
-/* harmony import */ var _FooterInducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FooterInducer */ "./src/components/FooterInducer.js");
- // Component
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-
-  const changeDisplay = () => {
-    setDisplay(!display);
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, display ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FooterContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    swap: changeDisplay
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FooterInducer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    swap: changeDisplay
-  }));
-});
-
-/***/ }),
-
-/***/ "./src/components/FooterContent.js":
-/*!*****************************************!*\
-  !*** ./src/components/FooterContent.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  swap
-}) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hidden md:block fixed bottom-0 bg-white w-full border-t border-gray-300"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:px-20 px-5 xl:px-0 lg:max-w-6xl xl:max-w-5.5xl mx-auto py-6 sm:py-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hidden md:flex md:flex-wrap md:items-start md:w-full md:justify-between md:pb-6 md:border-b md:border-gray-300"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-semibold text-gray-900 text-sm mb-2"
-  }, "Airbnb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "leading-relaxed"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Careers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "News")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Policies")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Diversity & Belonging")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Accessibility")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-semibold text-gray-900 text-sm mb-2"
-  }, "Discover"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "leading-relaxed"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Trust & Safety")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Travel Credit")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Airbnb Citizen")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Business Travel")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Things To Do")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Airbnbmag")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-semibold text-gray-905 text-sm mb-2"
-  }, "Hosting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "leading-relaxed"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Why Host")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Hospitality")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Responsible Hosting")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Community Centre")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Host an Experience")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-650 font-semibold text-sm",
-    href: ""
-  }, "Open Homes")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "lg:w-1/4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-semibold text-sm mb-2 text-gray-900"
-  }, "Support"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "leading-relaxed"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "font-semibold text-sm text-gray-650",
-    href: ""
-  }, "Help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "font-semibold text-sm text-gray-650",
-    href: ""
-  }, "Neighbourhood Support"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex flex-wrap items-center justify-between sm:pt-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex flex-wrap items-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    viewBox: "0 0 1000 1000",
-    role: "presentation",
-    "aria-hidden": "true",
-    focusable: "false",
-    className: "h-5 w-5 block",
-    style: {
-      fill: '#767676'
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "AirBnb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "pl-2 text-sm  text-gray-650 font-semibold"
-  }, "\xA9 2020 Airbnb, Inc. All rights reserved."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hidden md:flex md:flex-wrap md:justify-between md:items-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-sm text-gray-650 font-semibold"
-  }, "\u3000\u2744\uFE0F Cloned by"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-sm text-gray-650 font-semibold",
-    href: ""
-  }, "\xA0Ken"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hidden lg:flex lg:items-center lg:justify-start lg:flex-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "h-5 w-5",
-    viewBox: "0 0 512 512",
-    width: "512pt",
-    style: {
-      fill: '#767676'
-    },
-    xmlns: "http://www.w3.org/2000/svg"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m297.277344 508.667969c-2.132813.347656-4.273438.667969-6.421875.960937 2.148437-.292968 4.289062-.613281 6.421875-.960937zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m302.398438 507.792969c-1.019532.1875-2.039063.359375-3.058594.535156 1.019531-.175781 2.039062-.347656 3.058594-.535156zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m285.136719 510.339844c-2.496094.28125-5.007813.53125-7.527344.742187 2.519531-.210937 5.03125-.460937 7.527344-.742187zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m290.054688 509.738281c-1.199219.160157-2.40625.308594-3.609376.449219 1.203126-.140625 2.410157-.289062 3.609376-.449219zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m309.367188 506.410156c-.898438.191406-1.800782.382813-2.703126.566406.902344-.183593 1.804688-.375 2.703126-.566406zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m326.664062 502.113281c-.726562.207031-1.453124.402344-2.179687.605469.726563-.203125 1.453125-.398438 2.179687-.605469zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m321.433594 503.542969c-.789063.207031-1.582032.417969-2.375.617187.792968-.199218 1.585937-.40625 2.375-.617187zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m314.589844 505.253906c-.835938.195313-1.679688.378906-2.523438.566406.84375-.1875 1.6875-.371093 2.523438-.566406zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m277.527344 511.089844c-1.347656.113281-2.695313.214844-4.046875.304687 1.351562-.089843 2.699219-.191406 4.046875-.304687zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m512 256c0-141.363281-114.636719-256-256-256s-256 114.636719-256 256 114.636719 256 256 256c1.503906 0 3-.03125 4.5-.058594v-199.285156h-55v-64.097656h55v-47.167969c0-54.703125 33.394531-84.476563 82.191406-84.476563 23.367188 0 43.453125 1.742188 49.308594 2.519532v57.171875h-33.648438c-26.546874 0-31.6875 12.617187-31.6875 31.128906v40.824219h63.476563l-8.273437 64.097656h-55.203126v189.453125c107.003907-30.675781 185.335938-129.257813 185.335938-246.109375zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m272.914062 511.429688c-2.664062.171874-5.339843.308593-8.023437.398437 2.683594-.089844 5.359375-.226563 8.023437-.398437zm0 0"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m264.753906 511.835938c-1.414062.046874-2.832031.082031-4.25.105468 1.417969-.023437 2.835938-.058594 4.25-.105468zm0 0"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "h-5 w-5 ml-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512 512",
-    style: {
-      fill: '#767676',
-      marginRight: 1
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016 c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992 c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056 c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152 c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792 c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44 C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568 C480.224,136.96,497.728,118.496,512,97.248z"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "w-5 h-5 ml-3",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512 512",
-    style: {
-      fill: '#767676'
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160 C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48 h192c61.76,0,112,50.24,112,112V352z"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336 c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", {
-    cx: "393.6",
-    cy: "118.4",
-    r: "17.056"
-  }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: swap,
-    className: "flex items-center justify-start hover:bg-gray-100 bg-white z-10 shadow-xl fixed bottom-0 lg:right-0 ml-4 lg:mr-4 mb-3 rounded-lg py-2 px-4 font-semibold text-sm"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512 512",
-    style: {
-      marginBottom: 1
-    },
-    className: "h-3 w-3 mt-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"
-  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-850 ml-3"
-  }, "Close")));
-});
-
-/***/ }),
-
-/***/ "./src/components/FooterInducer.js":
-/*!*****************************************!*\
-  !*** ./src/components/FooterInducer.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  swap
-}) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: swap,
-    className: "hidden md:block hover:bg-gray-100 md:flex md:items-center justify-start fixed bottom-0 md:ml-3 md:mb-3 lg:right-0  lg:mr-3 z-10 bg-white text-sm font-semibold py-2 px-4 rounded-lg shadow-xl"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512 512",
-    style: {
-      marginBottom: 1
-    },
-    className: "h-4 w-4 mt-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M256,0C114.51,0,0,114.497,0,256c0,141.49,114.497,256,256,256c141.49,0,256-114.497,256-256C512,114.51,397.503,0,256,0z M256,477.867c-122.337,0-221.867-99.529-221.867-221.867S133.663,34.133,256,34.133S477.867,133.663,477.867,256 S378.337,477.867,256,477.867z"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M255.997,209.777c-9.425,0-17.067,7.641-17.067,17.067v143.969c0,9.425,7.641,17.067,17.067,17.067 s17.067-7.641,17.067-17.067V226.843C273.063,217.417,265.422,209.777,255.997,209.777z"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M256,124.122c-18.821,0-34.133,15.312-34.133,34.133s15.312,34.133,34.133,34.133s34.133-15.312,34.133-34.133 S274.821,124.122,256,124.122z"
-  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-850 ml-3"
-  }, "Terms, privacy, & more"));
-});
-
-/***/ }),
-
-/***/ "./src/components/Header.js":
-/*!**********************************!*\
-  !*** ./src/components/Header.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_HeaderCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/HeaderCard */ "./src/components/HeaderCard.js");
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__);
- // Component
-
- // Images
-
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    style: {
-      backgroundImage: `url(${_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a})`,
-      maxHeight: '80rem'
-    },
-    className: "md:h-screen md:min-h-80 relative bg-cover bg-no-repeat"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex flex-wrap items-center justify-between"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "m-6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Airbnb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    viewBox: "0 0 1000 1000",
-    role: "presentation",
-    "aria-hidden": "true",
-    focusable: "false",
-    className: "h-8 w-8 block",
-    style: {
-      fill: '#ffffff'
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
-  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hidden lg:block"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "flex items-center justify-around flex-wrap text-white"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "flex items-center justify-start text-sm font-semibold mx-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "relative self-center h-3 w-3",
-    style: {
-      fill: '#ffffff',
-      right: 5
-    },
-    viewBox: "0 0 512 512",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "English(CA)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-sm font-semibold tracking-wide"
-  }, "$CAD")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-sm font-semibold tracking-wide"
-  }, "Host a home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-sm font-semibold tracking-wide"
-  }, "Host an experience")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-sm font-semibold tracking-wide"
-  }, "Help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-sm font-semibold tracking-wide"
-  }, "Sign up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-sm font-semibold tracking-wide"
-  }, "Log in"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "md:ml-20"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6"
-  }, "Book unique places to stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 font-semibold text-right"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-sm text-white"
-  }, "Over 300 unique places ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "to stay in Japan")));
-});
-
-/***/ }),
-
-/***/ "./src/components/HeaderCard.js":
-/*!**************************************!*\
-  !*** ./src/components/HeaderCard.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mx-8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight"
-  }, "Book unique places to ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider",
-    htmlFor: "where"
-  }, "Where"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "where",
-    placeholder: "Anywhere"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex flex-wrap items-stretch justify-start"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase",
-    htmlFor: "checkin"
-  }, "Check-In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "checkin",
-    placeholder: "dd-mm-yyyy"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-750",
-    htmlFor: "checkout"
-  }, "Check-Out"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "checkout",
-    placeholder: "dd-mm-yyyy"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-750",
-    htmlFor: "guests"
-  }, "Guests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "inline-block relative w-full"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    className: "appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
-    id: "guests"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "1"
-  }, "2 Guests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "2"
-  }, "3 Guests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-    value: "3"
-  }, "4 Guests")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "fill-current h-4 w-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold"
-  }, "Search"))));
-});
-
-/***/ }),
-
-/***/ "./src/components/Location.js":
-/*!************************************!*\
-  !*** ./src/components/Location.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  location,
-  price
-}) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31 py-3 my-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-semibold"
-  }, location), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-xs font-normal text-gray-650 text-sm"
-  }, "$", price, "/night average"));
-});
-
-/***/ }),
-
-/***/ "./src/components/Plus.js":
-/*!********************************!*\
-  !*** ./src/components/Plus.js ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PlusCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PlusCard */ "./src/components/PlusCard.js");
-/* harmony import */ var _public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/high/plus-1.jpg */ "./public/img/high/plus-1.jpg");
-/* harmony import */ var _public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/low/plus-1-low.jpg */ "./public/img/low/plus-1-low.jpg");
-/* harmony import */ var _public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3__);
- // Components
-
- // Images
-// High Resolution
-
- // Low Resolution
-
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PlusCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    imglow: _public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3___default.a
-  }));
-});
-
-/***/ }),
-
-/***/ "./src/components/PlusCard.js":
-/*!************************************!*\
-  !*** ./src/components/PlusCard.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/* harmony default export */ __webpack_exports__["default"] = (({
-  img,
-  imglow
-}) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: img,
-    placeholder: imglow
-  }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "w-full h-64 bg-cover bg-no-repeat object-cover rounded",
-    src: src
-  })));
-});
-
-/***/ }),
-
-/***/ "./src/components/Popular.js":
-/*!***********************************!*\
-  !*** ./src/components/Popular.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Location__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Location */ "./src/components/Location.js");
- // Components
-
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  const locations = [{
-    location: 'San Francisco',
-    price: 216
-  }, {
-    location: 'Los Angeles',
-    price: 213
-  }, {
-    location: 'New York',
-    price: 159
-  }, {
-    location: 'Seattle',
-    price: 134
-  }, {
-    location: 'Denver',
-    price: 128
-  }, {
-    location: 'Washington DC',
-    price: 166
-  }, {
-    location: 'Phoenix',
-    price: 232
-  }, {
-    location: 'Austin',
-    price: 242
-  }, {
-    location: 'Houston',
-    price: 351
-  }, {
-    location: 'New Orleans',
-    price: 210
-  }];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex flex-wrap items-center justify-start w-full"
-  }, locations.map(({
-    location,
-    price
-  }) => {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Location__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      location: location,
-      price: price
-    }));
-  })));
-});
 
 /***/ }),
 
@@ -11484,10 +10281,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/Stay.js":
-/*!********************************!*\
-  !*** ./src/components/Stay.js ***!
-  \********************************/
+/***/ "./src/components/THundredPlus.js":
+/*!****************************************!*\
+  !*** ./src/components/THundredPlus.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11495,7 +10292,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_StayCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/StayCard */ "./src/components/StayCard.js");
+/* harmony import */ var _components_THundredPlusCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/THundredPlusCard */ "./src/components/THundredPlusCard.js");
 /* harmony import */ var _components_ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ShowAll */ "./src/components/ShowAll.js");
 /* harmony import */ var _public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/high/stay1.jpg */ "./public/img/high/stay1.jpg");
 /* harmony import */ var _public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_3__);
@@ -11553,84 +10350,64 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
-  const stays = [{
+  const places = [{
     type: 'normal',
     img: _public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
     imglow: _public_img_low_stay1_low_jpg__WEBPACK_IMPORTED_MODULE_11___default.a,
+    size: 'Entire apartment',
     location: 'Sol Madrid',
-    title: 'Private Studio in Sol, Madrid',
-    price: 91
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    imglow: _public_img_low_stay2_low_jpg__WEBPACK_IMPORTED_MODULE_12___default.a,
-    location: 'Makawao',
-    title: 'Adorable Garden Gingerbread',
-    price: 257
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    imglow: _public_img_low_stay3_low_jpg__WEBPACK_IMPORTED_MODULE_13___default.a,
-    location: 'Roma Norte',
-    title: 'Radiant Apartment with Terrace in...',
-    price: '104'
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    imglow: _public_img_low_stay4_low_jpg__WEBPACK_IMPORTED_MODULE_14___default.a,
-    location: 'Portici',
-    title: 'Villa San Gennariello',
-    price: 87
-  }, {
-    type: 'plus',
-    img: _public_img_high_stay5_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    imglow: _public_img_low_stay5_low_jpg__WEBPACK_IMPORTED_MODULE_15___default.a,
-    location: 'Old Town',
-    title: 'Classical Apartment on the Royal...',
-    price: 206
+    title: 'Waterfront with extraordinary view',
+    price: '86',
+    ratings: '4.81',
+    reviews: '156'
   }, {
     type: 'normal',
-    img: _public_img_high_stay6_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
-    imglow: _public_img_low_stay6_low_jpg__WEBPACK_IMPORTED_MODULE_16___default.a,
-    location: 'Porto',
-    title: 'PORTA33 | PORTO PENTHOUSE',
-    price: 126
+    img: _public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    imglow: _public_img_low_stay1_low_jpg__WEBPACK_IMPORTED_MODULE_11___default.a,
+    size: 'Entire apartment',
+    location: 'Sol Madrid',
+    title: 'Waterfront with extraordinary view',
+    price: '86',
+    ratings: '4.81',
+    reviews: '156'
   }, {
-    type: 'superhost',
-    img: _public_img_high_stay7_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
-    imglow: _public_img_low_stay7_low_jpg__WEBPACK_IMPORTED_MODULE_17___default.a,
-    location: 'Krakow',
-    title: 'Amazing and Extremely Central Flat',
-    price: 31
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay8_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
-    imglow: _public_img_low_stay8_low_jpg__WEBPACK_IMPORTED_MODULE_18___default.a,
-    location: 'Tricase',
-    title: 'La Salentina, sea, nature & relax',
-    price: 68
+    type: 'normal',
+    img: _public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    imglow: _public_img_low_stay1_low_jpg__WEBPACK_IMPORTED_MODULE_11___default.a,
+    size: 'Entire apartment',
+    location: 'Sol Madrid',
+    title: 'Waterfront with extraordinary view',
+    price: '86',
+    ratings: '4.81',
+    reviews: '156'
   }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
-  }, stays.map(({
+  }, places.map(({
     id,
     type,
     img,
     imglow,
+    size,
     location,
     title,
-    price
+    price,
+    ratings,
+    reviews
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_StayCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      className: "lg:w-1/3 xl:w-1/4 pb-5"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_THundredPlusCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: id,
       type: type,
       img: img,
       imglow: imglow,
+      size: size,
       location: location,
       title: title,
-      price: price
+      price: price,
+      ratings: ratings,
+      reviews: reviews
     }));
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ShowAll__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Show(2000+)"
@@ -11639,10 +10416,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/StayCard.js":
-/*!************************************!*\
-  !*** ./src/components/StayCard.js ***!
-  \************************************/
+/***/ "./src/components/THundredPlusCard.js":
+/*!********************************************!*\
+  !*** ./src/components/THundredPlusCard.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11655,27 +10432,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
+  id,
   type,
+  size,
   img,
   imglow,
   location,
   title,
-  price
+  price,
+  ratings,
+  reviews
 }) => {
   const renderhost = () => {
     if (type === 'normal') {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "mt-3 text-sm sm:my-2 font-light text-gray-600"
-      }, location));
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "mt-3 text-sm sm:my-2 font-light text-gray-650"
+      }, size, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), location));
     } else if (type === 'superhost') {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs"
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600"
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-650"
       }, location));
     } else if (type === 'plus') {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11683,26 +10470,47 @@ __webpack_require__.r(__webpack_exports__);
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800"
       }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600"
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-650"
       }, location));
     }
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-30/31"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "relative"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      height: 30,
+      width: 30
+    },
+    className: "flex items-center justify-center absolute z-10 right-0 mr-2 mt-2 mr-1 bg-gray-300 shadow-lg rounded-full"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "h-4 w-4",
+    viewBox: "0 -50 512 512",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
     placeholder: imglow
   }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "w-full rounded",
     src: src
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-center justify-between"
-  }, renderhost(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-center justify-center flex-wrap"
+  }, renderhost()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "my-1"
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "tracking-wide"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "font-bold"
+  }, "$", price, " CAD"), "/night"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex items-center justify-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    version: "1.1",
-    id: "Capa_1",
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
     y: "0px",
@@ -11715,14 +10523,16 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
     className: "pl-1 text-sm"
-  }, "4.71"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "my-1"
-  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "tracking-wide"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "font-bold"
-  }, "$", price, " CAD"), "/night"));
+  }, ratings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm text-gray-650"
+  }, "\xA0 (", reviews, ")")));
 });
 
 /***/ }),
@@ -11877,9 +10687,140 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/pages/index.js":
+/***/ "./src/components/Travel.js":
+/*!**********************************!*\
+  !*** ./src/components/Travel.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _TravelCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TravelCard */ "./src/components/TravelCard.js");
+/* harmony import */ var _public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/high/explore1.jpg */ "./public/img/high/explore1.jpg");
+/* harmony import */ var _public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/high/explore2.jpg */ "./public/img/high/explore2.jpg");
+/* harmony import */ var _public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg");
+/* harmony import */ var _public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/img/low/explore1-low.jpg */ "./public/img/low/explore1-low.jpg");
+/* harmony import */ var _public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../public/img/low/explore2-low.jpg */ "./public/img/low/explore2-low.jpg");
+/* harmony import */ var _public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../public/img/low/explore3-low.jpg */ "./public/img/low/explore3-low.jpg");
+/* harmony import */ var _public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7__);
+
+ // Image
+// High Resolution
+
+
+
+ // Low Resolution
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  const countries = [{
+    img: _public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    imglow: _public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    location: 'Sydney'
+  }, {
+    img: _public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    imglow: _public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    location: 'Cape Town'
+  }, {
+    img: _public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    imglow: _public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    location: 'Buenos Aires'
+  }, {
+    img: _public_img_high_explore1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    imglow: _public_img_low_explore1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    location: 'Seoul'
+  }, {
+    img: _public_img_high_explore2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    imglow: _public_img_low_explore2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    location: 'Barcelona'
+  }, {
+    img: _public_img_high_explore3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    imglow: _public_img_low_explore3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    location: 'Los Angeles'
+  }];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "overflow-y-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full h-full overflow-y-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "h-full scroller"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-90 md:w-full"
+  }, countries.map(({
+    id,
+    img,
+    imglow,
+    location
+  }) => {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "w-32 sm:w-1/3 mr-3"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TravelCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: id,
+      img: img,
+      imglow: imglow,
+      location: location
+    }));
+  })))));
+});
+
+/***/ }),
+
+/***/ "./src/components/TravelCard.js":
+/*!**************************************!*\
+  !*** ./src/components/TravelCard.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
+/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (({
+  id,
+  img,
+  imglow,
+  location
+}) => {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-30/31"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: `/${location.toLowerCase()}`
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: img,
+    placeholder: imglow
+  }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: src,
+    className: "h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold"
+  }, location))));
+});
+
+/***/ }),
+
+/***/ "./src/pages/stays.js":
 /*!****************************!*\
-  !*** ./src/pages/index.js ***!
+  !*** ./src/pages/stays.js ***!
   \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11890,15 +10831,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Section */ "./src/components/Section.js");
 /* harmony import */ var _components_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SectionOverflow */ "./src/components/SectionOverflow.js");
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Header */ "./src/components/Header.js");
-/* harmony import */ var _components_Explore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Explore */ "./src/components/Explore.js");
-/* harmony import */ var _components_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Plus */ "./src/components/Plus.js");
-/* harmony import */ var _components_Adventures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Adventures */ "./src/components/Adventures.js");
-/* harmony import */ var _components_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Stay */ "./src/components/Stay.js");
-/* harmony import */ var _components_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/TopRated */ "./src/components/TopRated.js");
-/* harmony import */ var _components_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Popular */ "./src/components/Popular.js");
-/* harmony import */ var _components_Featured__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Featured */ "./src/components/Featured.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer.js");
+/* harmony import */ var _components_Travel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Travel */ "./src/components/Travel.js");
+/* harmony import */ var _components_TopRated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/TopRated */ "./src/components/TopRated.js");
+/* harmony import */ var _components_THundredPlus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/THundredPlus */ "./src/components/THundredPlus.js");
  // Wrapper
 
 
@@ -11907,47 +10842,87 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-const Home = () => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Explore Airbnb"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Explore__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Airbnb Plus places to stay",
-    phrase: "A selection of places to stay verified for quality and design"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Plus__WEBPACK_IMPORTED_MODULE_5__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Introducing Airbnb Adventures",
-    phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Adventures__WEBPACK_IMPORTED_MODULE_6__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Places to stay around the world"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Stay__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Top-rated experiences",
-    phrase: "Book activities led by local hosts on your next trip."
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TopRated__WEBPACK_IMPORTED_MODULE_8__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "Popular destinations in the United States"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Popular__WEBPACK_IMPORTED_MODULE_9__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Featured Airbnb Plus destinations",
-    phrase: "Browse beautiful places to stay with all the comforts of home, plus more"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Featured__WEBPACK_IMPORTED_MODULE_10__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], null));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+    className: "z-10 sticky bg-white top-0 flex items-center justify-between relative border-b-2 shadow pb-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "m-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "sr-only"
+  }, "Airbnb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    viewBox: "0 0 1000 1000",
+    role: "presentation",
+    "aria-hidden": "true",
+    focusable: "false",
+    className: "h-8 w-8 block",
+    style: {
+      fill: '#FF6368'
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex items-center justify-start mr-7 py-3 px-4 shadow-md rounded"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    viewBox: "0 0 16 16",
+    style: {
+      height: 18,
+      width: 18
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "m2.5 7c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5m13.1 6.9-2.8-2.9c.7-1.1 1.2-2.5 1.2-4 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.5 0 2.9-.5 4-1.2l2.9 2.8c.2.3.5.4.9.4.3 0 .6-.1.8-.4.5-.5.5-1.2 0-1.7"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 px-4"
+  }, "Anywhere ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), " Stays"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "lg:max-w-5.5xl xl:px-0 px-5 mx-auto py-2 border-b border-gray-200"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: " flex flex-wrap items-center justify-start"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
+  }, "Dates"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
+  }, "Guests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
+  }, "Filters"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mx-5 py-5 border-b border-gray-400"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-650 text-sm"
+  }, "Enter dates and number of guests to see the total price per night. Tourism taxes may be added")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "Travel the world with Airbnb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Travel__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Top-rated places to stay",
+    phrase: "Explore some of the best-reviewed stays in the world"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TopRated__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "300+ places to stay"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_THundredPlus__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
+});
 
 /***/ }),
 
-/***/ 2:
-/*!****************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js ***!
-  \****************************************************************************************************************************/
+/***/ 3:
+/*!*********************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Fstays.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Fstays.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Fstays.js!./");
 
 
 /***/ }),
@@ -11963,5 +10938,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[3,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=stays.js.map

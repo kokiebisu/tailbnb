@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import LazyImage from 'react-lazy-progressive-image';
 
-// Dependency
-import Skeleton from 'react-loading-skeleton';
-
 export default ({ img, imglow, title }) => {
   return (
     <div className='w-30/31'>
