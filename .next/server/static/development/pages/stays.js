@@ -2666,7 +2666,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
-  const countries = ['Sydney', 'Cape Town', 'Buenos Aires', 'Seoul', 'Barcelona', 'Los Angeles'];
+  const countries = [{
+    img: _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    location: 'Sydney'
+  }, {
+    img: _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    location: 'Cape Town'
+  }, {
+    img: _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    location: 'Buenos Aires'
+  }, {
+    img: _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    location: 'Seoul'
+  }, {
+    img: _public_img_explore_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    location: 'Barcelona'
+  }, {
+    img: _public_img_explore_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    location: 'Los Angeles'
+  }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "overflow-y-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2675,12 +2693,15 @@ __webpack_require__.r(__webpack_exports__);
     className: "h-full scroller"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-90 md:w-full"
-  }, countries.map(country => {
+  }, countries.map(({
+    img,
+    location
+  }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "w-32 sm:w-1/3 mr-3"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TravelCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      img: _public_img_explore_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-      title: `${country}`
+      img: img,
+      location: location
     }));
   })))));
 });
@@ -2708,7 +2729,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   img,
-  title
+  location
 }) => {
   const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
 
@@ -2726,7 +2747,7 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-30/31"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: `/${title.toLowerCase()}`
+    href: `/${location.toLowerCase()}`
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white"
   }, loaded ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -2738,7 +2759,7 @@ __webpack_require__.r(__webpack_exports__);
     width: 130
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold"
-  }, title))));
+  }, location))));
 });
 
 /***/ }),
