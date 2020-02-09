@@ -3,6 +3,8 @@ import React from 'react';
 // Wrapper
 import Section from '../components/Section';
 import SectionOverflow from '../components/SectionOverflow';
+import StaySection from '../components/StaySection';
+import StaySectionOverflow from '../components/StaySectionOverflow';
 
 // Component
 import Travel from '../components/Travel';
@@ -40,8 +42,8 @@ export default () => {
           </div>
         </div>
       </header>
-      <div className='lg:max-w-5.5xl xl:px-0 px-5 mx-auto py-2 border-b border-gray-200'>
-        <div className=' flex flex-wrap items-center justify-start'>
+      <div className='px-5 md:px-0 mx-auto py-2 border-b border-gray-200'>
+        <div className='mx-auto md:max-w-90% flex flex-wrap items-center justify-start'>
           <div
             style={{ fontFamily: 'airbnb-book' }}
             className='mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
@@ -59,7 +61,7 @@ export default () => {
           </div>
         </div>
       </div>
-      <div className='mx-5 py-5 border-b border-gray-400'>
+      <div className='max-w-90% md:px-0 mx-auto py-5 border-b border-gray-400'>
         <p
           style={{ fontFamily: 'airbnb-book' }}
           className='text-gray-650 text-sm'>
@@ -67,17 +69,17 @@ export default () => {
           Tourism taxes may be added
         </p>
       </div>
-      <SectionOverflow title='Travel the world with Airbnb'>
+      <StaySectionOverflow title='Travel the world with Airbnb'>
         <Travel />
-      </SectionOverflow>
-      <Section
+      </StaySectionOverflow>
+      <StaySection
         title='Top-rated places to stay'
         phrase='Explore some of the best-reviewed stays in the world'>
         <TopRated />
-      </Section>
-      <Section title='300+ places to stay'>
+      </StaySection>
+      <StaySection title='300+ places to stay'>
         <THundredPlus />
-      </Section>
+      </StaySection>
     </>
   );
 };

@@ -31,7 +31,8 @@ module.exports = {
       },
       maxWidth: {
         layout: '100rem',
-        '5.5xl': '68rem'
+        '5.5xl': '68rem',
+        '90%': '90vw'
       },
       borderRadius: {
         xl: '0.8rem'
