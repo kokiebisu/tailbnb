@@ -33,7 +33,8 @@ const adventuredata = gql`
 
 export default () => {
   const { loading, error, data } = useQuery(adventuredata);
-
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>

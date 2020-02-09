@@ -11,6 +11,12 @@ const resolvers = {
     },
     getAdventure(root, args, context) {
       return context.prisma.adventure({ title: args.title });
+    },
+    getExperiences(root, args, context) {
+      return context.prisma.experiences();
+    },
+    getExperience(root, args, context) {
+      return context.prisma.experience({ title: args.title });
     }
   },
   Mutation: {
@@ -37,6 +43,20 @@ const resolvers = {
     },
     deleteAdventure(root, args, context) {
       return context.prisma.deleteAdventure({
+        title: args.title
+      });
+    },
+    createExperience(root, args, context) {
+      return context.prisma.createExperience({
+        title: args.title,
+        cost: args.cost,
+        ratings: args.ratings,
+        reviews: args.reviews,
+        country: args.country
+      });
+    },
+    deleteExperience(root, args, context) {
+      return context.prisma.deleteExperience({
         title: args.title
       });
     }

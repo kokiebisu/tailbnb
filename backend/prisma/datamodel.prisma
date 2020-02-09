@@ -1,6 +1,6 @@
 type Stay {
   id: ID! @id
-  title: String! @unique
+  title: String @unique
   cost: Int!
   hostType: String
   country: String
@@ -10,8 +10,17 @@ type Stay {
 
 type Adventure {
   id: ID! @id
-  title: String
+  title: String @unique
   period: Int!
   cost: Int!
+  country: String!
+}
+
+type Experience {
+  id: ID! @id
+  title: String @unique
+  cost: Int!
+  ratings: Float @default(value: 0.0)
+  reviews: Int @default(value: 0)
   country: String!
 }

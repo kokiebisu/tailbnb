@@ -149,9 +149,14 @@ input AdventureWhereInput {
 
 input AdventureWhereUniqueInput {
   id: ID
+  title: String
 }
 
 type AggregateAdventure {
+  count: Int!
+}
+
+type AggregateExperience {
   count: Int!
 }
 
@@ -163,6 +168,170 @@ type BatchPayload {
   count: Long!
 }
 
+type Experience {
+  id: ID!
+  title: String
+  cost: Int!
+  ratings: Float
+  reviews: Int
+  country: String!
+}
+
+type ExperienceConnection {
+  pageInfo: PageInfo!
+  edges: [ExperienceEdge]!
+  aggregate: AggregateExperience!
+}
+
+input ExperienceCreateInput {
+  id: ID
+  title: String
+  cost: Int!
+  ratings: Float
+  reviews: Int
+  country: String!
+}
+
+type ExperienceEdge {
+  node: Experience!
+  cursor: String!
+}
+
+enum ExperienceOrderByInput {
+  id_ASC
+  id_DESC
+  title_ASC
+  title_DESC
+  cost_ASC
+  cost_DESC
+  ratings_ASC
+  ratings_DESC
+  reviews_ASC
+  reviews_DESC
+  country_ASC
+  country_DESC
+}
+
+type ExperiencePreviousValues {
+  id: ID!
+  title: String
+  cost: Int!
+  ratings: Float
+  reviews: Int
+  country: String!
+}
+
+type ExperienceSubscriptionPayload {
+  mutation: MutationType!
+  node: Experience
+  updatedFields: [String!]
+  previousValues: ExperiencePreviousValues
+}
+
+input ExperienceSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: ExperienceWhereInput
+  AND: [ExperienceSubscriptionWhereInput!]
+  OR: [ExperienceSubscriptionWhereInput!]
+  NOT: [ExperienceSubscriptionWhereInput!]
+}
+
+input ExperienceUpdateInput {
+  title: String
+  cost: Int
+  ratings: Float
+  reviews: Int
+  country: String
+}
+
+input ExperienceUpdateManyMutationInput {
+  title: String
+  cost: Int
+  ratings: Float
+  reviews: Int
+  country: String
+}
+
+input ExperienceWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  title: String
+  title_not: String
+  title_in: [String!]
+  title_not_in: [String!]
+  title_lt: String
+  title_lte: String
+  title_gt: String
+  title_gte: String
+  title_contains: String
+  title_not_contains: String
+  title_starts_with: String
+  title_not_starts_with: String
+  title_ends_with: String
+  title_not_ends_with: String
+  cost: Int
+  cost_not: Int
+  cost_in: [Int!]
+  cost_not_in: [Int!]
+  cost_lt: Int
+  cost_lte: Int
+  cost_gt: Int
+  cost_gte: Int
+  ratings: Float
+  ratings_not: Float
+  ratings_in: [Float!]
+  ratings_not_in: [Float!]
+  ratings_lt: Float
+  ratings_lte: Float
+  ratings_gt: Float
+  ratings_gte: Float
+  reviews: Int
+  reviews_not: Int
+  reviews_in: [Int!]
+  reviews_not_in: [Int!]
+  reviews_lt: Int
+  reviews_lte: Int
+  reviews_gt: Int
+  reviews_gte: Int
+  country: String
+  country_not: String
+  country_in: [String!]
+  country_not_in: [String!]
+  country_lt: String
+  country_lte: String
+  country_gt: String
+  country_gte: String
+  country_contains: String
+  country_not_contains: String
+  country_starts_with: String
+  country_not_starts_with: String
+  country_ends_with: String
+  country_not_ends_with: String
+  AND: [ExperienceWhereInput!]
+  OR: [ExperienceWhereInput!]
+  NOT: [ExperienceWhereInput!]
+}
+
+input ExperienceWhereUniqueInput {
+  id: ID
+  title: String
+}
+
 scalar Long
 
 type Mutation {
@@ -172,6 +341,12 @@ type Mutation {
   upsertAdventure(where: AdventureWhereUniqueInput!, create: AdventureCreateInput!, update: AdventureUpdateInput!): Adventure!
   deleteAdventure(where: AdventureWhereUniqueInput!): Adventure
   deleteManyAdventures(where: AdventureWhereInput): BatchPayload!
+  createExperience(data: ExperienceCreateInput!): Experience!
+  updateExperience(data: ExperienceUpdateInput!, where: ExperienceWhereUniqueInput!): Experience
+  updateManyExperiences(data: ExperienceUpdateManyMutationInput!, where: ExperienceWhereInput): BatchPayload!
+  upsertExperience(where: ExperienceWhereUniqueInput!, create: ExperienceCreateInput!, update: ExperienceUpdateInput!): Experience!
+  deleteExperience(where: ExperienceWhereUniqueInput!): Experience
+  deleteManyExperiences(where: ExperienceWhereInput): BatchPayload!
   createStay(data: StayCreateInput!): Stay!
   updateStay(data: StayUpdateInput!, where: StayWhereUniqueInput!): Stay
   updateManyStays(data: StayUpdateManyMutationInput!, where: StayWhereInput): BatchPayload!
@@ -201,6 +376,9 @@ type Query {
   adventure(where: AdventureWhereUniqueInput!): Adventure
   adventures(where: AdventureWhereInput, orderBy: AdventureOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Adventure]!
   adventuresConnection(where: AdventureWhereInput, orderBy: AdventureOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): AdventureConnection!
+  experience(where: ExperienceWhereUniqueInput!): Experience
+  experiences(where: ExperienceWhereInput, orderBy: ExperienceOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Experience]!
+  experiencesConnection(where: ExperienceWhereInput, orderBy: ExperienceOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ExperienceConnection!
   stay(where: StayWhereUniqueInput!): Stay
   stays(where: StayWhereInput, orderBy: StayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Stay]!
   staysConnection(where: StayWhereInput, orderBy: StayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): StayConnection!
@@ -209,7 +387,7 @@ type Query {
 
 type Stay {
   id: ID!
-  title: String!
+  title: String
   cost: Int!
   hostType: String
   country: String
@@ -225,7 +403,7 @@ type StayConnection {
 
 input StayCreateInput {
   id: ID
-  title: String!
+  title: String
   cost: Int!
   hostType: String
   country: String
@@ -257,7 +435,7 @@ enum StayOrderByInput {
 
 type StayPreviousValues {
   id: ID!
-  title: String!
+  title: String
   cost: Int!
   hostType: String
   country: String
@@ -400,6 +578,7 @@ input StayWhereUniqueInput {
 
 type Subscription {
   adventure(where: AdventureSubscriptionWhereInput): AdventureSubscriptionPayload
+  experience(where: ExperienceSubscriptionWhereInput): ExperienceSubscriptionPayload
   stay(where: StaySubscriptionWhereInput): StaySubscriptionPayload
 }
 `
