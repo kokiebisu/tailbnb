@@ -33,6 +33,7 @@ module.exports = {
         '32': '8rem'
       },
       maxWidth: {
+        '100': '27.4rem',
         layout: '100rem',
         '5.5xl': '68rem',
         '90%': '90vw'

@@ -38,7 +38,7 @@ export default ({ swap }) => {
           </g>
         </svg>
       </div>
-      <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-850 ml-3'>
+      <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750 ml-3'>
         Terms, privacy, & more
       </p>
     </button>
