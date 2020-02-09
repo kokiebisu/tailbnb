@@ -3,7 +3,159 @@ module.exports = {
   // Please don't change this file manually but run `prisma generate` to update it.
   // For more information, please read the docs: https://www.prisma.io/docs/prisma-client/
 
-/* GraphQL */ `type AggregateStay {
+/* GraphQL */ `type Adventure {
+  id: ID!
+  title: String
+  period: Int!
+  cost: Int!
+  country: String!
+}
+
+type AdventureConnection {
+  pageInfo: PageInfo!
+  edges: [AdventureEdge]!
+  aggregate: AggregateAdventure!
+}
+
+input AdventureCreateInput {
+  id: ID
+  title: String
+  period: Int!
+  cost: Int!
+  country: String!
+}
+
+type AdventureEdge {
+  node: Adventure!
+  cursor: String!
+}
+
+enum AdventureOrderByInput {
+  id_ASC
+  id_DESC
+  title_ASC
+  title_DESC
+  period_ASC
+  period_DESC
+  cost_ASC
+  cost_DESC
+  country_ASC
+  country_DESC
+}
+
+type AdventurePreviousValues {
+  id: ID!
+  title: String
+  period: Int!
+  cost: Int!
+  country: String!
+}
+
+type AdventureSubscriptionPayload {
+  mutation: MutationType!
+  node: Adventure
+  updatedFields: [String!]
+  previousValues: AdventurePreviousValues
+}
+
+input AdventureSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: AdventureWhereInput
+  AND: [AdventureSubscriptionWhereInput!]
+  OR: [AdventureSubscriptionWhereInput!]
+  NOT: [AdventureSubscriptionWhereInput!]
+}
+
+input AdventureUpdateInput {
+  title: String
+  period: Int
+  cost: Int
+  country: String
+}
+
+input AdventureUpdateManyMutationInput {
+  title: String
+  period: Int
+  cost: Int
+  country: String
+}
+
+input AdventureWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  title: String
+  title_not: String
+  title_in: [String!]
+  title_not_in: [String!]
+  title_lt: String
+  title_lte: String
+  title_gt: String
+  title_gte: String
+  title_contains: String
+  title_not_contains: String
+  title_starts_with: String
+  title_not_starts_with: String
+  title_ends_with: String
+  title_not_ends_with: String
+  period: Int
+  period_not: Int
+  period_in: [Int!]
+  period_not_in: [Int!]
+  period_lt: Int
+  period_lte: Int
+  period_gt: Int
+  period_gte: Int
+  cost: Int
+  cost_not: Int
+  cost_in: [Int!]
+  cost_not_in: [Int!]
+  cost_lt: Int
+  cost_lte: Int
+  cost_gt: Int
+  cost_gte: Int
+  country: String
+  country_not: String
+  country_in: [String!]
+  country_not_in: [String!]
+  country_lt: String
+  country_lte: String
+  country_gt: String
+  country_gte: String
+  country_contains: String
+  country_not_contains: String
+  country_starts_with: String
+  country_not_starts_with: String
+  country_ends_with: String
+  country_not_ends_with: String
+  AND: [AdventureWhereInput!]
+  OR: [AdventureWhereInput!]
+  NOT: [AdventureWhereInput!]
+}
+
+input AdventureWhereUniqueInput {
+  id: ID
+}
+
+type AggregateAdventure {
+  count: Int!
+}
+
+type AggregateStay {
   count: Int!
 }
 
@@ -14,6 +166,12 @@ type BatchPayload {
 scalar Long
 
 type Mutation {
+  createAdventure(data: AdventureCreateInput!): Adventure!
+  updateAdventure(data: AdventureUpdateInput!, where: AdventureWhereUniqueInput!): Adventure
+  updateManyAdventures(data: AdventureUpdateManyMutationInput!, where: AdventureWhereInput): BatchPayload!
+  upsertAdventure(where: AdventureWhereUniqueInput!, create: AdventureCreateInput!, update: AdventureUpdateInput!): Adventure!
+  deleteAdventure(where: AdventureWhereUniqueInput!): Adventure
+  deleteManyAdventures(where: AdventureWhereInput): BatchPayload!
   createStay(data: StayCreateInput!): Stay!
   updateStay(data: StayUpdateInput!, where: StayWhereUniqueInput!): Stay
   updateManyStays(data: StayUpdateManyMutationInput!, where: StayWhereInput): BatchPayload!
@@ -40,6 +198,9 @@ type PageInfo {
 }
 
 type Query {
+  adventure(where: AdventureWhereUniqueInput!): Adventure
+  adventures(where: AdventureWhereInput, orderBy: AdventureOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Adventure]!
+  adventuresConnection(where: AdventureWhereInput, orderBy: AdventureOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): AdventureConnection!
   stay(where: StayWhereUniqueInput!): Stay
   stays(where: StayWhereInput, orderBy: StayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Stay]!
   staysConnection(where: StayWhereInput, orderBy: StayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): StayConnection!
@@ -238,6 +399,7 @@ input StayWhereUniqueInput {
 }
 
 type Subscription {
+  adventure(where: AdventureSubscriptionWhereInput): AdventureSubscriptionPayload
   stay(where: StaySubscriptionWhereInput): StaySubscriptionPayload
 }
 `

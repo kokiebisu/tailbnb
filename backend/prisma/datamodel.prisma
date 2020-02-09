@@ -7,3 +7,11 @@ type Stay {
   location: String
   ratings: Float @default(value: 0.0)
 }
+
+type Adventure {
+  id: ID! @id
+  title: String
+  period: Int!
+  cost: Int!
+  country: String!
+}
