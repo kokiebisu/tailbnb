@@ -6,7 +6,10 @@ export default ({ img, imglow, title, cost, ratings, reviews, country }) => {
     <div className='w-30/31'>
       <LazyImage src={img} placeholder={imglow}>
         {(src, loading, isVisible) => (
-          <img className='w-full rounded-lg' src={src} />
+          <img
+            className='w-full rounded-lg'
+            src={'https://nextbnb.sfo2.digitaloceanspaces.com/stay2-low.jpg'}
+          />
         )}
       </LazyImage>
 

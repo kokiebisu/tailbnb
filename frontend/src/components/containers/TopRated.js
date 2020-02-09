@@ -35,41 +35,6 @@ export default () => {
   const { loading, error, data } = useQuery(experiencedata);
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
-
-  // const toprateds = [
-  //   {
-  //     img: experience1,
-  //     imglow: experience1low,
-  //     location: 'Italy',
-  //     title: 'Luca & Lorenzo, cooking in Chianti hills',
-  //     price: 172,
-  //     reviews: 1765
-  //   },
-  //   {
-  //     img: experience2,
-  //     imglow: experience2low,
-  //     location: 'Italy',
-  //     title: 'Truffle experience Rome',
-  //     price: 148,
-  //     reviews: 621
-  //   },
-  //   {
-  //     img: experience3,
-  //     imglow: experience3low,
-  //     location: 'Japan',
-  //     title: 'Feeling Samurai Soul',
-  //     price: 119,
-  //     reviews: 1047
-  //   },
-  //   {
-  //     img: experience4,
-  //     imglow: experience4low,
-  //     location: 'Italy',
-  //     title: 'Lisbon best flavors',
-  //     price: 90,
-  //     reviews: 3733
-  //   }
-  // ];
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full grid'>

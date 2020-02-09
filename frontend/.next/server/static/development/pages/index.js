@@ -2905,7 +2905,7 @@ __webpack_require__.r(__webpack_exports__);
     placeholder: imglow
   }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "w-full rounded-lg",
-    src: src
+    src: 'https://nextbnb.sfo2.digitaloceanspaces.com/stay2-low.jpg'
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "uppercase text-xs my-2 font-semibold"
   }, country), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -3540,41 +3540,7 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(experiencedata);
   if (loading) return 'Loading...';
-  if (error) return `Error! ${error.message}`; // const toprateds = [
-  //   {
-  //     img: experience1,
-  //     imglow: experience1low,
-  //     location: 'Italy',
-  //     title: 'Luca & Lorenzo, cooking in Chianti hills',
-  //     price: 172,
-  //     reviews: 1765
-  //   },
-  //   {
-  //     img: experience2,
-  //     imglow: experience2low,
-  //     location: 'Italy',
-  //     title: 'Truffle experience Rome',
-  //     price: 148,
-  //     reviews: 621
-  //   },
-  //   {
-  //     img: experience3,
-  //     imglow: experience3low,
-  //     location: 'Japan',
-  //     title: 'Feeling Samurai Soul',
-  //     price: 119,
-  //     reviews: 1047
-  //   },
-  //   {
-  //     img: experience4,
-  //     imglow: experience4low,
-  //     location: 'Italy',
-  //     title: 'Lisbon best flavors',
-  //     price: 90,
-  //     reviews: 3733
-  //   }
-  // ];
-
+  if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full grid"
   }, data.experiences.map(({
