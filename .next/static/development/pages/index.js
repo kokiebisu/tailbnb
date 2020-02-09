@@ -9784,6 +9784,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const featureds = [{
+    img: _public_img_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+    verified: 940,
+    description: 'Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels'
+  }, {
+    img: _public_img_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    verified: 300,
+    description: 'Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.'
+  }, {
+    img: _public_img_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    verified: 290,
+    description: 'Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design'
+  }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "overflow-y-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -9792,25 +9805,21 @@ __webpack_require__.r(__webpack_exports__);
     className: "h-full scroller"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "scrollable sm:inset-x-0 flex items-start justify-startpy-2 rounded-xl w-featured md:w-full"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-80 lg:w-1/3 pb-5 mr-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_featured_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    verified: "940",
-    description: "Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-80 lg:w-1/3 pb-5 mr-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_featured_2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    verified: "300",
-    description: "Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture."
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-80 lg:w-1/3 pb-5 pr-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    img: _public_img_featured_3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    verified: "290",
-    description: "Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design"
-  })))))));
+  }, featureds.map(({
+    id,
+    img,
+    verified,
+    description
+  }) => {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "w-80 lg:w-1/3 pb-5 mr-2"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: id,
+      img: img,
+      verified: verified,
+      description: description
+    }));
+  }))))));
 });
 
 /***/ }),
@@ -11081,7 +11090,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Fsrc%2Fpages%2Findex.js ***!
   \****************************************************************************************************************************/
@@ -11104,5 +11113,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
