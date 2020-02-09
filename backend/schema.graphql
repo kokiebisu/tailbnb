@@ -3,6 +3,8 @@ type Query {
   getStay(title: String!): Stay
   getAdventures: [Adventure!]!
   getAdventure(title: String!): Adventure
+  getExperiences: [Experience!]!
+  getExperience(title: String!): Experience
 }
 
 type Mutation {
@@ -17,6 +19,8 @@ type Mutation {
   deleteStay(title: String!): Stay
   createAdventure(title: String!, period: Int!, cost: Int!, country: String!): Adventure
   deleteAdventure(title: String!)
+  createExperience(title: String!, cost: Int!, ratings: Float, reviews: Int, country: String!)
+  deleteExperience(title: String!)
 }
 
 type Stay {
@@ -33,5 +37,14 @@ type Adventure {
   title: String
   period: Int!
   cost: Int!
+  country: String!
+}
+
+type Experience {
+  id: ID!
+  title: String
+  cost: Int!
+  ratings: Float
+  reviews: Int
   country: String!
 }

@@ -17,6 +17,7 @@ export type Maybe<T> = T | undefined | null;
 
 export interface Exists {
   adventure: (where?: AdventureWhereInput) => Promise<boolean>;
+  experience: (where?: ExperienceWhereInput) => Promise<boolean>;
   stay: (where?: StayWhereInput) => Promise<boolean>;
 }
 
@@ -58,6 +59,25 @@ export interface Prisma {
     first?: Int;
     last?: Int;
   }) => AdventureConnectionPromise;
+  experience: (where: ExperienceWhereUniqueInput) => ExperienceNullablePromise;
+  experiences: (args?: {
+    where?: ExperienceWhereInput;
+    orderBy?: ExperienceOrderByInput;
+    skip?: Int;
+    after?: String;
+    before?: String;
+    first?: Int;
+    last?: Int;
+  }) => FragmentableArray<Experience>;
+  experiencesConnection: (args?: {
+    where?: ExperienceWhereInput;
+    orderBy?: ExperienceOrderByInput;
+    skip?: Int;
+    after?: String;
+    before?: String;
+    first?: Int;
+    last?: Int;
+  }) => ExperienceConnectionPromise;
   stay: (where: StayWhereUniqueInput) => StayNullablePromise;
   stays: (args?: {
     where?: StayWhereInput;
@@ -99,6 +119,22 @@ export interface Prisma {
   }) => AdventurePromise;
   deleteAdventure: (where: AdventureWhereUniqueInput) => AdventurePromise;
   deleteManyAdventures: (where?: AdventureWhereInput) => BatchPayloadPromise;
+  createExperience: (data: ExperienceCreateInput) => ExperiencePromise;
+  updateExperience: (args: {
+    data: ExperienceUpdateInput;
+    where: ExperienceWhereUniqueInput;
+  }) => ExperiencePromise;
+  updateManyExperiences: (args: {
+    data: ExperienceUpdateManyMutationInput;
+    where?: ExperienceWhereInput;
+  }) => BatchPayloadPromise;
+  upsertExperience: (args: {
+    where: ExperienceWhereUniqueInput;
+    create: ExperienceCreateInput;
+    update: ExperienceUpdateInput;
+  }) => ExperiencePromise;
+  deleteExperience: (where: ExperienceWhereUniqueInput) => ExperiencePromise;
+  deleteManyExperiences: (where?: ExperienceWhereInput) => BatchPayloadPromise;
   createStay: (data: StayCreateInput) => StayPromise;
   updateStay: (args: {
     data: StayUpdateInput;
@@ -127,6 +163,9 @@ export interface Subscription {
   adventure: (
     where?: AdventureSubscriptionWhereInput
   ) => AdventureSubscriptionPayloadSubscription;
+  experience: (
+    where?: ExperienceSubscriptionWhereInput
+  ) => ExperienceSubscriptionPayloadSubscription;
   stay: (
     where?: StaySubscriptionWhereInput
   ) => StaySubscriptionPayloadSubscription;
@@ -152,6 +191,20 @@ export type AdventureOrderByInput =
   | "country_ASC"
   | "country_DESC";
 
+export type ExperienceOrderByInput =
+  | "id_ASC"
+  | "id_DESC"
+  | "title_ASC"
+  | "title_DESC"
+  | "cost_ASC"
+  | "cost_DESC"
+  | "ratings_ASC"
+  | "ratings_DESC"
+  | "reviews_ASC"
+  | "reviews_DESC"
+  | "country_ASC"
+  | "country_DESC";
+
 export type StayOrderByInput =
   | "id_ASC"
   | "id_DESC"
@@ -172,6 +225,7 @@ export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
 export type AdventureWhereUniqueInput = AtLeastOne<{
   id: Maybe<ID_Input>;
+  title?: Maybe<String>;
 }>;
 
 export interface AdventureWhereInput {
@@ -236,6 +290,83 @@ export interface AdventureWhereInput {
   AND?: Maybe<AdventureWhereInput[] | AdventureWhereInput>;
   OR?: Maybe<AdventureWhereInput[] | AdventureWhereInput>;
   NOT?: Maybe<AdventureWhereInput[] | AdventureWhereInput>;
+}
+
+export type ExperienceWhereUniqueInput = AtLeastOne<{
+  id: Maybe<ID_Input>;
+  title?: Maybe<String>;
+}>;
+
+export interface ExperienceWhereInput {
+  id?: Maybe<ID_Input>;
+  id_not?: Maybe<ID_Input>;
+  id_in?: Maybe<ID_Input[] | ID_Input>;
+  id_not_in?: Maybe<ID_Input[] | ID_Input>;
+  id_lt?: Maybe<ID_Input>;
+  id_lte?: Maybe<ID_Input>;
+  id_gt?: Maybe<ID_Input>;
+  id_gte?: Maybe<ID_Input>;
+  id_contains?: Maybe<ID_Input>;
+  id_not_contains?: Maybe<ID_Input>;
+  id_starts_with?: Maybe<ID_Input>;
+  id_not_starts_with?: Maybe<ID_Input>;
+  id_ends_with?: Maybe<ID_Input>;
+  id_not_ends_with?: Maybe<ID_Input>;
+  title?: Maybe<String>;
+  title_not?: Maybe<String>;
+  title_in?: Maybe<String[] | String>;
+  title_not_in?: Maybe<String[] | String>;
+  title_lt?: Maybe<String>;
+  title_lte?: Maybe<String>;
+  title_gt?: Maybe<String>;
+  title_gte?: Maybe<String>;
+  title_contains?: Maybe<String>;
+  title_not_contains?: Maybe<String>;
+  title_starts_with?: Maybe<String>;
+  title_not_starts_with?: Maybe<String>;
+  title_ends_with?: Maybe<String>;
+  title_not_ends_with?: Maybe<String>;
+  cost?: Maybe<Int>;
+  cost_not?: Maybe<Int>;
+  cost_in?: Maybe<Int[] | Int>;
+  cost_not_in?: Maybe<Int[] | Int>;
+  cost_lt?: Maybe<Int>;
+  cost_lte?: Maybe<Int>;
+  cost_gt?: Maybe<Int>;
+  cost_gte?: Maybe<Int>;
+  ratings?: Maybe<Float>;
+  ratings_not?: Maybe<Float>;
+  ratings_in?: Maybe<Float[] | Float>;
+  ratings_not_in?: Maybe<Float[] | Float>;
+  ratings_lt?: Maybe<Float>;
+  ratings_lte?: Maybe<Float>;
+  ratings_gt?: Maybe<Float>;
+  ratings_gte?: Maybe<Float>;
+  reviews?: Maybe<Int>;
+  reviews_not?: Maybe<Int>;
+  reviews_in?: Maybe<Int[] | Int>;
+  reviews_not_in?: Maybe<Int[] | Int>;
+  reviews_lt?: Maybe<Int>;
+  reviews_lte?: Maybe<Int>;
+  reviews_gt?: Maybe<Int>;
+  reviews_gte?: Maybe<Int>;
+  country?: Maybe<String>;
+  country_not?: Maybe<String>;
+  country_in?: Maybe<String[] | String>;
+  country_not_in?: Maybe<String[] | String>;
+  country_lt?: Maybe<String>;
+  country_lte?: Maybe<String>;
+  country_gt?: Maybe<String>;
+  country_gte?: Maybe<String>;
+  country_contains?: Maybe<String>;
+  country_not_contains?: Maybe<String>;
+  country_starts_with?: Maybe<String>;
+  country_not_starts_with?: Maybe<String>;
+  country_ends_with?: Maybe<String>;
+  country_not_ends_with?: Maybe<String>;
+  AND?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
+  OR?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
+  NOT?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
 }
 
 export type StayWhereUniqueInput = AtLeastOne<{
@@ -357,9 +488,34 @@ export interface AdventureUpdateManyMutationInput {
   country?: Maybe<String>;
 }
 
+export interface ExperienceCreateInput {
+  id?: Maybe<ID_Input>;
+  title?: Maybe<String>;
+  cost: Int;
+  ratings?: Maybe<Float>;
+  reviews?: Maybe<Int>;
+  country: String;
+}
+
+export interface ExperienceUpdateInput {
+  title?: Maybe<String>;
+  cost?: Maybe<Int>;
+  ratings?: Maybe<Float>;
+  reviews?: Maybe<Int>;
+  country?: Maybe<String>;
+}
+
+export interface ExperienceUpdateManyMutationInput {
+  title?: Maybe<String>;
+  cost?: Maybe<Int>;
+  ratings?: Maybe<Float>;
+  reviews?: Maybe<Int>;
+  country?: Maybe<String>;
+}
+
 export interface StayCreateInput {
   id?: Maybe<ID_Input>;
-  title: String;
+  title?: Maybe<String>;
   cost: Int;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
@@ -399,6 +555,23 @@ export interface AdventureSubscriptionWhereInput {
   >;
   NOT?: Maybe<
     AdventureSubscriptionWhereInput[] | AdventureSubscriptionWhereInput
+  >;
+}
+
+export interface ExperienceSubscriptionWhereInput {
+  mutation_in?: Maybe<MutationType[] | MutationType>;
+  updatedFields_contains?: Maybe<String>;
+  updatedFields_contains_every?: Maybe<String[] | String>;
+  updatedFields_contains_some?: Maybe<String[] | String>;
+  node?: Maybe<ExperienceWhereInput>;
+  AND?: Maybe<
+    ExperienceSubscriptionWhereInput[] | ExperienceSubscriptionWhereInput
+  >;
+  OR?: Maybe<
+    ExperienceSubscriptionWhereInput[] | ExperienceSubscriptionWhereInput
+  >;
+  NOT?: Maybe<
+    ExperienceSubscriptionWhereInput[] | ExperienceSubscriptionWhereInput
   >;
 }
 
@@ -532,9 +705,105 @@ export interface AggregateAdventureSubscription
   count: () => Promise<AsyncIterator<Int>>;
 }
 
+export interface Experience {
+  id: ID_Output;
+  title?: String;
+  cost: Int;
+  ratings?: Float;
+  reviews?: Int;
+  country: String;
+}
+
+export interface ExperiencePromise extends Promise<Experience>, Fragmentable {
+  id: () => Promise<ID_Output>;
+  title: () => Promise<String>;
+  cost: () => Promise<Int>;
+  ratings: () => Promise<Float>;
+  reviews: () => Promise<Int>;
+  country: () => Promise<String>;
+}
+
+export interface ExperienceSubscription
+  extends Promise<AsyncIterator<Experience>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  title: () => Promise<AsyncIterator<String>>;
+  cost: () => Promise<AsyncIterator<Int>>;
+  ratings: () => Promise<AsyncIterator<Float>>;
+  reviews: () => Promise<AsyncIterator<Int>>;
+  country: () => Promise<AsyncIterator<String>>;
+}
+
+export interface ExperienceNullablePromise
+  extends Promise<Experience | null>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  title: () => Promise<String>;
+  cost: () => Promise<Int>;
+  ratings: () => Promise<Float>;
+  reviews: () => Promise<Int>;
+  country: () => Promise<String>;
+}
+
+export interface ExperienceConnection {
+  pageInfo: PageInfo;
+  edges: ExperienceEdge[];
+}
+
+export interface ExperienceConnectionPromise
+  extends Promise<ExperienceConnection>,
+    Fragmentable {
+  pageInfo: <T = PageInfoPromise>() => T;
+  edges: <T = FragmentableArray<ExperienceEdge>>() => T;
+  aggregate: <T = AggregateExperiencePromise>() => T;
+}
+
+export interface ExperienceConnectionSubscription
+  extends Promise<AsyncIterator<ExperienceConnection>>,
+    Fragmentable {
+  pageInfo: <T = PageInfoSubscription>() => T;
+  edges: <T = Promise<AsyncIterator<ExperienceEdgeSubscription>>>() => T;
+  aggregate: <T = AggregateExperienceSubscription>() => T;
+}
+
+export interface ExperienceEdge {
+  node: Experience;
+  cursor: String;
+}
+
+export interface ExperienceEdgePromise
+  extends Promise<ExperienceEdge>,
+    Fragmentable {
+  node: <T = ExperiencePromise>() => T;
+  cursor: () => Promise<String>;
+}
+
+export interface ExperienceEdgeSubscription
+  extends Promise<AsyncIterator<ExperienceEdge>>,
+    Fragmentable {
+  node: <T = ExperienceSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface AggregateExperience {
+  count: Int;
+}
+
+export interface AggregateExperiencePromise
+  extends Promise<AggregateExperience>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateExperienceSubscription
+  extends Promise<AsyncIterator<AggregateExperience>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
 export interface Stay {
   id: ID_Output;
-  title: String;
+  title?: String;
   cost: Int;
   hostType?: String;
   country?: String;
@@ -699,6 +968,62 @@ export interface AdventurePreviousValuesSubscription
   country: () => Promise<AsyncIterator<String>>;
 }
 
+export interface ExperienceSubscriptionPayload {
+  mutation: MutationType;
+  node: Experience;
+  updatedFields: String[];
+  previousValues: ExperiencePreviousValues;
+}
+
+export interface ExperienceSubscriptionPayloadPromise
+  extends Promise<ExperienceSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = ExperiencePromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = ExperiencePreviousValuesPromise>() => T;
+}
+
+export interface ExperienceSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<ExperienceSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = ExperienceSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = ExperiencePreviousValuesSubscription>() => T;
+}
+
+export interface ExperiencePreviousValues {
+  id: ID_Output;
+  title?: String;
+  cost: Int;
+  ratings?: Float;
+  reviews?: Int;
+  country: String;
+}
+
+export interface ExperiencePreviousValuesPromise
+  extends Promise<ExperiencePreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  title: () => Promise<String>;
+  cost: () => Promise<Int>;
+  ratings: () => Promise<Float>;
+  reviews: () => Promise<Int>;
+  country: () => Promise<String>;
+}
+
+export interface ExperiencePreviousValuesSubscription
+  extends Promise<AsyncIterator<ExperiencePreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  title: () => Promise<AsyncIterator<String>>;
+  cost: () => Promise<AsyncIterator<Int>>;
+  ratings: () => Promise<AsyncIterator<Float>>;
+  reviews: () => Promise<AsyncIterator<Int>>;
+  country: () => Promise<AsyncIterator<String>>;
+}
+
 export interface StaySubscriptionPayload {
   mutation: MutationType;
   node: Stay;
@@ -726,7 +1051,7 @@ export interface StaySubscriptionPayloadSubscription
 
 export interface StayPreviousValues {
   id: ID_Output;
-  title: String;
+  title?: String;
   cost: Int;
   hostType?: String;
   country?: String;
@@ -797,6 +1122,10 @@ export const models: Model[] = [
   },
   {
     name: "Adventure",
+    embedded: false
+  },
+  {
+    name: "Experience",
     embedded: false
   }
 ];

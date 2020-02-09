@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 
-export default ({ id, img, imglow, location, title, price, reviews }) => {
+export default ({ img, imglow, title, cost, ratings, reviews, country }) => {
   return (
     <div className='w-30/31'>
       <LazyImage src={img} placeholder={imglow}>
@@ -10,13 +10,11 @@ export default ({ id, img, imglow, location, title, price, reviews }) => {
         )}
       </LazyImage>
 
-      <p className='uppercase text-xs my-2 font-semibold'>{location}</p>
+      <p className='uppercase text-xs my-2 font-semibold'>{country}</p>
       <p className='my-1'>{title}</p>
-      <p>From ${price}/person</p>
+      <p>From ${cost}/person</p>
       <div className='flex items-center justify-start flex-wrap'>
         <svg
-          version='1.1'
-          id='Capa_1'
           xmlns='http://www.w3.org/2000/svg'
           x='0px'
           y='0px'
@@ -34,7 +32,7 @@ export default ({ id, img, imglow, location, title, price, reviews }) => {
             />
           </g>
         </svg>
-        <p className='pl-1 text-sm'>4.71</p>
+        <p className='pl-1 text-sm'>{ratings}</p>
         <p className='text-gray-650 text-sm'>&nbsp; ({reviews})</p>
       </div>
     </div>
