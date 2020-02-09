@@ -1,26 +1,15 @@
 import React, { useState } from 'react';
-import Skeleton from 'react-loading-skeleton';
+import LazyImage from 'react-lazy-progressive-image';
 
-export default ({ img, location, title, price, days }) => {
-  const [loaded, setLoaded] = useState(false);
-
-  const sleep = (milliseconds) => {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-  };
-
-  const setLoad = () => {
-    sleep(4000).then(() => {
-      setLoaded(true);
-    });
-  };
-  setLoad();
+export default ({ img, imglow, location, title, price, days }) => {
   return (
     <div className='w-30/31'>
-      {loaded ? (
-        <img className='rounded-lg' src={img} alt='' />
-      ) : (
-        <Skeleton height={385} width={255} />
-      )}
+      <LazyImage src={img} placeholder={imglow}>
+        {(src, loading, isVisible) => (
+          <img className='w-full rounded-lg' src={src} />
+        )}
+      </LazyImage>
+
       <p className='uppercase text-xs my-2 font-semibold'>{location}</p>
       <p className='my-1 w-5/6'>{title}</p>
       <p>
