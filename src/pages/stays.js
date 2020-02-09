@@ -27,15 +27,17 @@ export default () => {
             </svg>
           </a>
         </div>
-        <div className='flex items-center justify-start mr-7 py-3 px-4 shadow-md rounded'>
-          <svg viewBox='0 0 16 16' style={{ height: 18, width: 18 }}>
-            <path d='m2.5 7c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5m13.1 6.9-2.8-2.9c.7-1.1 1.2-2.5 1.2-4 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.5 0 2.9-.5 4-1.2l2.9 2.8c.2.3.5.4.9.4.3 0 .6-.1.8-.4.5-.5.5-1.2 0-1.7'></path>
-          </svg>
-          <p
-            style={{ fontFamily: 'airbnb-bold' }}
-            className='text-gray-750 px-4'>
-            Anywhere <span> · </span> Stays
-          </p>
+        <div className='w-full flex items-center justify-start'>
+          <div className='flex w-full md:w-120 items-center justify-start mr-7 py-3 px-4 shadow-md rounded'>
+            <svg viewBox='0 0 16 16' style={{ height: 18, width: 18 }}>
+              <path d='m2.5 7c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5m13.1 6.9-2.8-2.9c.7-1.1 1.2-2.5 1.2-4 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.5 0 2.9-.5 4-1.2l2.9 2.8c.2.3.5.4.9.4.3 0 .6-.1.8-.4.5-.5.5-1.2 0-1.7'></path>
+            </svg>
+            <p
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-gray-750 px-4'>
+              Anywhere <span> · </span> Stays
+            </p>
+          </div>
         </div>
       </header>
       <div className='lg:max-w-5.5xl xl:px-0 px-5 mx-auto py-2 border-b border-gray-200'>
