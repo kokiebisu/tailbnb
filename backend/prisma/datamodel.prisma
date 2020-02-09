@@ -3,5 +3,7 @@ type Stay {
   title: String! @unique
   cost: Int!
   hostType: String
-  country: String!
+  country: String
+  location: String
+  ratings: Float @default(value: 0.0)
 }

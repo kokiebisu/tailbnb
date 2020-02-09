@@ -51,7 +51,9 @@ type Stay {
   title: String!
   cost: Int!
   hostType: String
-  country: String!
+  country: String
+  location: String
+  ratings: Float
 }
 
 type StayConnection {
@@ -65,7 +67,9 @@ input StayCreateInput {
   title: String!
   cost: Int!
   hostType: String
-  country: String!
+  country: String
+  location: String
+  ratings: Float
 }
 
 type StayEdge {
@@ -84,6 +88,10 @@ enum StayOrderByInput {
   hostType_DESC
   country_ASC
   country_DESC
+  location_ASC
+  location_DESC
+  ratings_ASC
+  ratings_DESC
 }
 
 type StayPreviousValues {
@@ -91,7 +99,9 @@ type StayPreviousValues {
   title: String!
   cost: Int!
   hostType: String
-  country: String!
+  country: String
+  location: String
+  ratings: Float
 }
 
 type StaySubscriptionPayload {
@@ -117,6 +127,8 @@ input StayUpdateInput {
   cost: Int
   hostType: String
   country: String
+  location: String
+  ratings: Float
 }
 
 input StayUpdateManyMutationInput {
@@ -124,6 +136,8 @@ input StayUpdateManyMutationInput {
   cost: Int
   hostType: String
   country: String
+  location: String
+  ratings: Float
 }
 
 input StayWhereInput {
@@ -191,6 +205,28 @@ input StayWhereInput {
   country_not_starts_with: String
   country_ends_with: String
   country_not_ends_with: String
+  location: String
+  location_not: String
+  location_in: [String!]
+  location_not_in: [String!]
+  location_lt: String
+  location_lte: String
+  location_gt: String
+  location_gte: String
+  location_contains: String
+  location_not_contains: String
+  location_starts_with: String
+  location_not_starts_with: String
+  location_ends_with: String
+  location_not_ends_with: String
+  ratings: Float
+  ratings_not: Float
+  ratings_in: [Float!]
+  ratings_not_in: [Float!]
+  ratings_lt: Float
+  ratings_lte: Float
+  ratings_gt: Float
+  ratings_gte: Float
   AND: [StayWhereInput!]
   OR: [StayWhereInput!]
   NOT: [StayWhereInput!]

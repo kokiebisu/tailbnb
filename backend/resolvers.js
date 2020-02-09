@@ -13,8 +13,13 @@ const resolvers = {
         title: args.title,
         cost: args.cost,
         hostType: args.hostType,
-        country: args.country
+        country: args.country,
+        location: args.location,
+        ratings: args.ratings
       });
+    },
+    deleteStay(root, args, context) {
+      return context.prisma.deleteStay({ title: args.title });
     }
   }
 };

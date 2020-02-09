@@ -7,9 +7,12 @@ type Mutation {
   createStay(
     title: String!
     cost: Int!
-    hostType: String
-    country: String!
-  ): Stay
+    hostType: String!
+    country: String
+    location: String
+    ratings: Float
+  ): Stay!
+  deleteStay(title: String!): Stay
 }
 
 type Stay {
@@ -18,4 +21,5 @@ type Stay {
   cost: Int!
   hostType: String
   country: String!
+  ratings: Float
 }

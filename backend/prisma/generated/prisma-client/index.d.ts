@@ -111,7 +111,11 @@ export type StayOrderByInput =
   | "hostType_ASC"
   | "hostType_DESC"
   | "country_ASC"
-  | "country_DESC";
+  | "country_DESC"
+  | "location_ASC"
+  | "location_DESC"
+  | "ratings_ASC"
+  | "ratings_DESC";
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
@@ -185,6 +189,28 @@ export interface StayWhereInput {
   country_not_starts_with?: Maybe<String>;
   country_ends_with?: Maybe<String>;
   country_not_ends_with?: Maybe<String>;
+  location?: Maybe<String>;
+  location_not?: Maybe<String>;
+  location_in?: Maybe<String[] | String>;
+  location_not_in?: Maybe<String[] | String>;
+  location_lt?: Maybe<String>;
+  location_lte?: Maybe<String>;
+  location_gt?: Maybe<String>;
+  location_gte?: Maybe<String>;
+  location_contains?: Maybe<String>;
+  location_not_contains?: Maybe<String>;
+  location_starts_with?: Maybe<String>;
+  location_not_starts_with?: Maybe<String>;
+  location_ends_with?: Maybe<String>;
+  location_not_ends_with?: Maybe<String>;
+  ratings?: Maybe<Float>;
+  ratings_not?: Maybe<Float>;
+  ratings_in?: Maybe<Float[] | Float>;
+  ratings_not_in?: Maybe<Float[] | Float>;
+  ratings_lt?: Maybe<Float>;
+  ratings_lte?: Maybe<Float>;
+  ratings_gt?: Maybe<Float>;
+  ratings_gte?: Maybe<Float>;
   AND?: Maybe<StayWhereInput[] | StayWhereInput>;
   OR?: Maybe<StayWhereInput[] | StayWhereInput>;
   NOT?: Maybe<StayWhereInput[] | StayWhereInput>;
@@ -195,7 +221,9 @@ export interface StayCreateInput {
   title: String;
   cost: Int;
   hostType?: Maybe<String>;
-  country: String;
+  country?: Maybe<String>;
+  location?: Maybe<String>;
+  ratings?: Maybe<Float>;
 }
 
 export interface StayUpdateInput {
@@ -203,6 +231,8 @@ export interface StayUpdateInput {
   cost?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
+  location?: Maybe<String>;
+  ratings?: Maybe<Float>;
 }
 
 export interface StayUpdateManyMutationInput {
@@ -210,6 +240,8 @@ export interface StayUpdateManyMutationInput {
   cost?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
+  location?: Maybe<String>;
+  ratings?: Maybe<Float>;
 }
 
 export interface StaySubscriptionWhereInput {
@@ -232,7 +264,9 @@ export interface Stay {
   title: String;
   cost: Int;
   hostType?: String;
-  country: String;
+  country?: String;
+  location?: String;
+  ratings?: Float;
 }
 
 export interface StayPromise extends Promise<Stay>, Fragmentable {
@@ -241,6 +275,8 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   cost: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
+  location: () => Promise<String>;
+  ratings: () => Promise<Float>;
 }
 
 export interface StaySubscription
@@ -251,6 +287,8 @@ export interface StaySubscription
   cost: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
+  location: () => Promise<AsyncIterator<String>>;
+  ratings: () => Promise<AsyncIterator<Float>>;
 }
 
 export interface StayNullablePromise
@@ -261,6 +299,8 @@ export interface StayNullablePromise
   cost: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
+  location: () => Promise<String>;
+  ratings: () => Promise<Float>;
 }
 
 export interface StayConnection {
@@ -386,7 +426,9 @@ export interface StayPreviousValues {
   title: String;
   cost: Int;
   hostType?: String;
-  country: String;
+  country?: String;
+  location?: String;
+  ratings?: Float;
 }
 
 export interface StayPreviousValuesPromise
@@ -397,6 +439,8 @@ export interface StayPreviousValuesPromise
   cost: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
+  location: () => Promise<String>;
+  ratings: () => Promise<Float>;
 }
 
 export interface StayPreviousValuesSubscription
@@ -407,6 +451,8 @@ export interface StayPreviousValuesSubscription
   cost: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
+  location: () => Promise<AsyncIterator<String>>;
+  ratings: () => Promise<AsyncIterator<Float>>;
 }
 
 /*
@@ -424,6 +470,11 @@ export type String = string;
 The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
 */
 export type Int = number;
+
+/*
+The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
+*/
+export type Float = number;
 
 /*
 The `Boolean` scalar type represents `true` or `false`.

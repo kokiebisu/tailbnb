@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
 
 // Component
 import StayCard from '../cards/StayCard';
@@ -25,7 +27,17 @@ import stay6low from '../../../public/img/low/stay6-low.jpg';
 import stay7low from '../../../public/img/low/stay7-low.jpg';
 import stay8low from '../../../public/img/low/stay8-low.jpg';
 
+const staydata = gql`
+  query {
+    stays {
+      title
+    }
+  }
+`;
+
 export default () => {
+  const { loading, error, data } = useQuery(staydata);
+  console.log(data);
   const stays = [
     {
       type: 'normal',
