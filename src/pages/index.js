@@ -1,19 +1,19 @@
 import React from 'react';
 
 // Wrapper
-import Section from '../components/Section';
-import SectionOverflow from '../components/SectionOverflow';
+import Section from '../components/wrapper/Section';
+import SectionOverflow from '../components/wrapper/SectionOverflow';
 
 // Component
-import Header from '../components/Header';
-import Explore from '../components/Explore';
-import Plus from '../components/Plus';
-import Adventures from '../components/Adventures';
-import Stay from '../components/Stay';
-import TopRated from '../components/TopRated';
-import Popular from '../components/Popular';
-import Featured from '../components/Featured';
-import Footer from '../components/Footer';
+import Header from '../components/layout/Header';
+import Explore from '../components/containers/Explore';
+import Plus from '../components/containers/Plus';
+import Adventures from '../components/containers/Adventures';
+import Stay from '../components/containers/Stay';
+import TopRated from '../components/containers/TopRated';
+import Popular from '../components/containers/Popular';
+import Featured from '../components/containers/Featured';
+import Footer from '../components/layout/Footer';
 
 const Home = () => {
   return (

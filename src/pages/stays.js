@@ -1,17 +1,17 @@
 import React from 'react';
 
 // Wrapper
-import Section from '../components/Section';
-import SectionOverflow from '../components/SectionOverflow';
-import StaySection from '../components/ExploreSection';
-import StaySectionOverflow from '../components/ExploreSectionOverflow';
-import Footer from '../components/Footer';
-import ExploreHeader from '../components/ExploreHeader';
+import Section from '../components/wrapper/Section';
+import SectionOverflow from '../components/wrapper/SectionOverflow';
+import StaySection from '../components/wrapper/ExploreSection';
+import StaySectionOverflow from '../components/wrapper/ExploreSectionOverflow';
+import Footer from '../components/layout/Footer';
+import ExploreHeader from '../components/layout/ExploreHeader';
 
 // Component
-import Travel from '../components/Travel';
-import TopRated from '../components/TopRated';
-import THundredPlus from '../components/THundredPlus';
+import Travel from '../components/containers/Travel';
+import TopRated from '../components/containers/TopRated';
+import THundredPlus from '../components/containers/THundredPlus';
 
 export default () => {
   return (
