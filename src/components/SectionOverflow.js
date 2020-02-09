@@ -28,7 +28,7 @@ export default ({ title, phrase, children }) => {
     }
   }
   return (
-    <div className='sm:px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto py-5 overflow-x-hidden overflow-y-hidden w-full'>
+    <div className='px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto py-5 overflow-x-hidden overflow-y-hidden'>
       {renderPhrase()}
       {children}
     </div>
