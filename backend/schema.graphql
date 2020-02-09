@@ -30,6 +30,8 @@ type Stay {
   hostType: String
   country: String!
   ratings: Float
+  img: String
+  imglow: String
 }
 
 type Adventure {

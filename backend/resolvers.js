@@ -27,7 +27,9 @@ const resolvers = {
         hostType: args.hostType,
         country: args.country,
         location: args.location,
-        ratings: args.ratings
+        ratings: args.ratings,
+        img: args.img,
+        imglow: args.imglow
       });
     },
     deleteStay(root, args, context) {

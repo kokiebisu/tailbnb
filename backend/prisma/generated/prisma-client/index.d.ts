@@ -219,7 +219,11 @@ export type StayOrderByInput =
   | "location_ASC"
   | "location_DESC"
   | "ratings_ASC"
-  | "ratings_DESC";
+  | "ratings_DESC"
+  | "img_ASC"
+  | "img_DESC"
+  | "imglow_ASC"
+  | "imglow_DESC";
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
@@ -461,6 +465,34 @@ export interface StayWhereInput {
   ratings_lte?: Maybe<Float>;
   ratings_gt?: Maybe<Float>;
   ratings_gte?: Maybe<Float>;
+  img?: Maybe<String>;
+  img_not?: Maybe<String>;
+  img_in?: Maybe<String[] | String>;
+  img_not_in?: Maybe<String[] | String>;
+  img_lt?: Maybe<String>;
+  img_lte?: Maybe<String>;
+  img_gt?: Maybe<String>;
+  img_gte?: Maybe<String>;
+  img_contains?: Maybe<String>;
+  img_not_contains?: Maybe<String>;
+  img_starts_with?: Maybe<String>;
+  img_not_starts_with?: Maybe<String>;
+  img_ends_with?: Maybe<String>;
+  img_not_ends_with?: Maybe<String>;
+  imglow?: Maybe<String>;
+  imglow_not?: Maybe<String>;
+  imglow_in?: Maybe<String[] | String>;
+  imglow_not_in?: Maybe<String[] | String>;
+  imglow_lt?: Maybe<String>;
+  imglow_lte?: Maybe<String>;
+  imglow_gt?: Maybe<String>;
+  imglow_gte?: Maybe<String>;
+  imglow_contains?: Maybe<String>;
+  imglow_not_contains?: Maybe<String>;
+  imglow_starts_with?: Maybe<String>;
+  imglow_not_starts_with?: Maybe<String>;
+  imglow_ends_with?: Maybe<String>;
+  imglow_not_ends_with?: Maybe<String>;
   AND?: Maybe<StayWhereInput[] | StayWhereInput>;
   OR?: Maybe<StayWhereInput[] | StayWhereInput>;
   NOT?: Maybe<StayWhereInput[] | StayWhereInput>;
@@ -521,6 +553,8 @@ export interface StayCreateInput {
   country?: Maybe<String>;
   location?: Maybe<String>;
   ratings?: Maybe<Float>;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface StayUpdateInput {
@@ -530,6 +564,8 @@ export interface StayUpdateInput {
   country?: Maybe<String>;
   location?: Maybe<String>;
   ratings?: Maybe<Float>;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface StayUpdateManyMutationInput {
@@ -539,6 +575,8 @@ export interface StayUpdateManyMutationInput {
   country?: Maybe<String>;
   location?: Maybe<String>;
   ratings?: Maybe<Float>;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface AdventureSubscriptionWhereInput {
@@ -809,6 +847,8 @@ export interface Stay {
   country?: String;
   location?: String;
   ratings?: Float;
+  img?: String;
+  imglow?: String;
 }
 
 export interface StayPromise extends Promise<Stay>, Fragmentable {
@@ -819,6 +859,8 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   country: () => Promise<String>;
   location: () => Promise<String>;
   ratings: () => Promise<Float>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface StaySubscription
@@ -831,6 +873,8 @@ export interface StaySubscription
   country: () => Promise<AsyncIterator<String>>;
   location: () => Promise<AsyncIterator<String>>;
   ratings: () => Promise<AsyncIterator<Float>>;
+  img: () => Promise<AsyncIterator<String>>;
+  imglow: () => Promise<AsyncIterator<String>>;
 }
 
 export interface StayNullablePromise
@@ -843,6 +887,8 @@ export interface StayNullablePromise
   country: () => Promise<String>;
   location: () => Promise<String>;
   ratings: () => Promise<Float>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface StayConnection {
@@ -1057,6 +1103,8 @@ export interface StayPreviousValues {
   country?: String;
   location?: String;
   ratings?: Float;
+  img?: String;
+  imglow?: String;
 }
 
 export interface StayPreviousValuesPromise
@@ -1069,6 +1117,8 @@ export interface StayPreviousValuesPromise
   country: () => Promise<String>;
   location: () => Promise<String>;
   ratings: () => Promise<Float>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface StayPreviousValuesSubscription
@@ -1081,6 +1131,8 @@ export interface StayPreviousValuesSubscription
   country: () => Promise<AsyncIterator<String>>;
   location: () => Promise<AsyncIterator<String>>;
   ratings: () => Promise<AsyncIterator<Float>>;
+  img: () => Promise<AsyncIterator<String>>;
+  imglow: () => Promise<AsyncIterator<String>>;
 }
 
 /*

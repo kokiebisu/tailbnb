@@ -6,6 +6,8 @@ type Stay {
   country: String
   location: String
   ratings: Float @default(value: 0.0)
+  img: String
+  imglow: String
 }
 
 type Adventure {
