@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
 
 // Component
 import AdventureCard from '../cards/AdventureCard';
@@ -17,56 +19,35 @@ import img2low from '../../../public/img/low/adventures2-low.jpg';
 import img3low from '../../../public/img/low/adventures3-low.jpg';
 import img4low from '../../../public/img/low/adventures4-low.jpg';
 
-export default () => {
-  const adventures = [
-    {
-      img: img1,
-      imglow: img1low,
-      location: 'Norway',
-      title: '2 Nights PACKAGE ALL Inclusive',
-      price: 841,
-      days: 3
-    },
-    {
-      img: img2,
-      imglow: img2low,
-      location: 'Indonesia',
-      title: 'Snorkeling and hiking in West Sumatra',
-      price: 249,
-      days: 2
-    },
-    {
-      img: img3,
-      imglow: img3low,
-      location: 'Nepal',
-      title: 'Trek to the lower Everest region',
-      price: 1745,
-      days: 11
-    },
-    {
-      img: img4,
-      imglow: img4low,
-      location: 'Morocco',
-      title: 'Active Adventure & Stay with Locals',
-      price: 416,
-      days: 4
+const adventuredata = gql`
+  query {
+    adventures {
+      id
+      title
+      period
+      cost
+      country
     }
-  ];
+  }
+`;
+
+export default () => {
+  const { loading, error, data } = useQuery(adventuredata);
 
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>
-        {adventures.map(({ id, img, imglow, location, title, price, days }) => {
+        {data.adventures.map(({ id, country, title, cost, period }) => {
           return (
             <div className='lg:w-1/4 md:w-1/3 w-1/2 pb-5'>
               <AdventureCard
                 key={id}
-                img={img}
-                imglow={imglow}
-                location={location}
+                img={img1}
+                imglow={img1low}
+                country={country}
                 title={title}
-                price={price}
-                days={days}
+                cost={cost}
+                period={period}
               />
             </div>
           );

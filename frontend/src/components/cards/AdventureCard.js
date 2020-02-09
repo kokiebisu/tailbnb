@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 
-export default ({ img, imglow, location, title, price, days }) => {
+export default ({ img, imglow, country, title, cost, period }) => {
   return (
     <div className='w-30/31'>
       <LazyImage src={img} placeholder={imglow}>
@@ -10,12 +10,12 @@ export default ({ img, imglow, location, title, price, days }) => {
         )}
       </LazyImage>
 
-      <p className='uppercase text-xs my-2 font-semibold'>{location}</p>
+      <p className='uppercase text-xs my-2 font-semibold'>{country}</p>
       <p className='my-1 w-5/6'>{title}</p>
       <p>
-        From ${price} / person
+        From ${cost} / person
         <span> · </span>
-        {days} days
+        {period} days
       </p>
     </div>
   );
