@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 
-export default ({ img, location, title, price, reviews }) => {
+export default ({ id, img, imglow, location, title, price, reviews }) => {
   return (
     <div className='w-30/31'>
-      <LazyImage src={img} placeholder={img}>
+      <LazyImage src={img} placeholder={imglow}>
         {(src, loading, isVisible) => (
-          <img className='rounded-lg' src={src} alt='adventure1' />
+          <img className='w-full rounded-lg' src={src} />
         )}
       </LazyImage>
 

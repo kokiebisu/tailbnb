@@ -30,7 +30,7 @@ export default ({ title, phrase, children }) => {
     }
   };
   return (
-    <div className='px-5 md:max-w-90% md:px-0 mx-auto py-5'>
+    <div className='md:px-0 max-w-90% xl:px-0 mx-auto py-5'>
       {renderContent()}
       {children}
     </div>

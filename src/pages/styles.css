@@ -51,13 +51,6 @@ body {
   left: 0px;
 }
 
-@media (max-width: 639px) {
-  .scrollable {
-    position: relative;
-    left: 15px;
-  }
-}
-
 .scroller::-webkit-scrollbar {
   background-color: transparent;
 }

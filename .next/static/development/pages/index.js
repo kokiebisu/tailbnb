@@ -7695,47 +7695,47 @@ module.exports = "/_next/static/images/airbnb-background-b8b3c94eb622e8a6083c338
 
 /***/ }),
 
-/***/ "./public/img/high/experience-1.jpg":
-/*!******************************************!*\
-  !*** ./public/img/high/experience-1.jpg ***!
-  \******************************************/
+/***/ "./public/img/high/experience1.jpg":
+/*!*****************************************!*\
+  !*** ./public/img/high/experience1.jpg ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/experience-1-5c87bedd294d225752199819a2c32457.jpg";
+module.exports = "/_next/static/images/experience1-5c87bedd294d225752199819a2c32457.jpg";
 
 /***/ }),
 
-/***/ "./public/img/high/experience-2.jpg":
-/*!******************************************!*\
-  !*** ./public/img/high/experience-2.jpg ***!
-  \******************************************/
+/***/ "./public/img/high/experience2.jpg":
+/*!*****************************************!*\
+  !*** ./public/img/high/experience2.jpg ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/experience-2-5a461adf3cb7e26b9d690832497294f3.jpg";
+module.exports = "/_next/static/images/experience2-5a461adf3cb7e26b9d690832497294f3.jpg";
 
 /***/ }),
 
-/***/ "./public/img/high/experience-3.jpg":
-/*!******************************************!*\
-  !*** ./public/img/high/experience-3.jpg ***!
-  \******************************************/
+/***/ "./public/img/high/experience3.jpg":
+/*!*****************************************!*\
+  !*** ./public/img/high/experience3.jpg ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/experience-3-1093d4c35b3421c65a6429ef0b53569c.jpg";
+module.exports = "/_next/static/images/experience3-1093d4c35b3421c65a6429ef0b53569c.jpg";
 
 /***/ }),
 
-/***/ "./public/img/high/experience-4.jpg":
-/*!******************************************!*\
-  !*** ./public/img/high/experience-4.jpg ***!
-  \******************************************/
+/***/ "./public/img/high/experience4.jpg":
+/*!*****************************************!*\
+  !*** ./public/img/high/experience4.jpg ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/experience-4-77e96d4ef8fe9a4350d65503482f00b8.jpg";
+module.exports = "/_next/static/images/experience4-77e96d4ef8fe9a4350d65503482f00b8.jpg";
 
 /***/ }),
 
@@ -7945,6 +7945,50 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAEBAQE
 /***/ (function(module, exports) {
 
 module.exports = "data:image/jpeg;base64,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"
+
+/***/ }),
+
+/***/ "./public/img/low/experience1-low.jpg":
+/*!********************************************!*\
+  !*** ./public/img/low/experience1-low.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODUK/9sAQwAFAwQEBAMFBAQEBQUFBgcMCAcHBwcPCwsJDBEPEhIRDxERExYcFxMUGhURERghGBodHR8fHxMXIiQiHiQcHh8e/9sAQwEFBQUHBgcOCAgOHhQRFB4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4e/8AAEQgAHgAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A+hbYgjNTkA1kRXqx27Ss2FRSx57D61F4e8T6TrgcabexTyRIjTRq4LRbs7Q2CcE4PFQ9CUzXZeaKY0ozRQO6PILXXGmtmtrmW+kWRSjo8UuGBHIPXjFWNDvdM0OIx6ZB9gjkPzBAyhiCexHua5DSNeu7NI1uBCdpIIji69e+Rj8qLnx3O0gS2hlAaQK26QDAI6jAzn61xuKavc1TkjvZPFlujbZNXkVvTDUV51N4kvJZC/mzpkDCiTOKK5mp33/r7zZT8j//2Q=="
+
+/***/ }),
+
+/***/ "./public/img/low/experience2-low.jpg":
+/*!********************************************!*\
+  !*** ./public/img/low/experience2-low.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODUK/9sAQwAFAwQEBAMFBAQEBQUFBgcMCAcHBwcPCwsJDBEPEhIRDxERExYcFxMUGhURERghGBodHR8fHxMXIiQiHiQcHh8e/9sAQwEFBQUHBgcOCAgOHhQRFB4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4e/8AAEQgAHgAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8W8I6pc2oukt7p/IuNPljZN2DtO5iO3GT0/x529UvYJbBEa43TQ6d5RQp2VZDwfxGePTnvXHabC8MqST4TzFaPPXIGBk/wDAQD+NW7uOSDRrq5ugWke0jkgOeNp29+4x6V5qqtbM75Uvedy34K8JQ6zoxuwHIErIMZ9Af7p9aK3/AIS69JaeGpoUFqyi7YjzLZXPKIepFFa/WKcdHf7jB0nc1vCdhpUUeTBAY0TzGi2hztXk4zxkZJH49a2NQ8OacumXDLfq9s5UiM2tuRHwFAbKLkA8fL6jj1wPDWpmGIW0Ea+XcAKyOvGwkDqMYrZ8V6bbarZyw3LyrMEZpZIQqblPIU4HOOg9MV40m1PU9dw5ldGLpOnXYswun32jwQqSuz+xUbkcdQwz0HJANFcQ1/qkLtBY38iwRnYokA3cD6HNFdHJLv8A19xxqtFdD//Z"
+
+/***/ }),
+
+/***/ "./public/img/low/experience3-low.jpg":
+/*!********************************************!*\
+  !*** ./public/img/low/experience3-low.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODUK/9sAQwAFAwQEBAMFBAQEBQUFBgcMCAcHBwcPCwsJDBEPEhIRDxERExYcFxMUGhURERghGBodHR8fHxMXIiQiHiQcHh8e/9sAQwEFBQUHBgcOCAgOHhQRFB4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4e/8AAEQgAHgAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A+vbLlBxVsAYrkfh/4y0vxVYNcWUF9aMhw0N5AYnHuOoI+hNdImp2DRs63kDKrmNiHBwwOCD70kxJlvaKKyZvEekxPtNwX46pGzD9BRS549yrM+dND+KOl6dYOL/VVt5QvyhohIc44OApNZH7M3xC8RM2tt4qujby3dyLmAvaxxrK5z5rHCrwfk24yRg44yD4toEltHcostss7kgFpVDZP416XomvzadCiRLgAYG1QMD0rz5VJQVrtnbGlGT2SPqW18WwTQhwJxnsbZ/8OR70V8/Q+ObmONUETYA/vUVH1mZfsIH/2Q=="
+
+/***/ }),
+
+/***/ "./public/img/low/experience4-low.jpg":
+/*!********************************************!*\
+  !*** ./public/img/low/experience4-low.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gODUK/9sAQwAFAwQEBAMFBAQEBQUFBgcMCAcHBwcPCwsJDBEPEhIRDxERExYcFxMUGhURERghGBodHR8fHxMXIiQiHiQcHh8e/9sAQwEFBQUHBgcOCAgOHhQRFB4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4e/8AAEQgAHgAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A6iD4j6mYhIdXMm4ZASbcB9SKq3XxUvYyfM1yRMddrk/4V8u2Wqa5Lp093DqDLBbmNJvOlAA3tgHB5I/lUB8QXKORKwf1GBXoxrU76o8+aklex9EXfxnuEnKrrmpsPVV4/wDQqK+bZtRmlcuEYA+oAoq/b0uxj+8PTfF/wysbbRLOXQ7lJJbrUIYGYRN5Zy2MEEsCBnP4EVyI8MRN48m8IT2b2V6zs8MpmyrpgsDyMjIHTrnjrX0DoN/beI9jrbyiOR38uKWTIQRttHY5JPzZ9SfarF3oXh43322PSbWW7XdGZJYFBPVTyOcV8zCtJK1z6GVKMrHzVfeEtPgu5IZb68eRWIbbAeD6ciivoXWzZaZfG3uInkYrvXAVwAc4A3gkAenT86KPrEusmR9XXb+vvP/Z"
 
 /***/ }),
 
@@ -9514,18 +9558,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TopRatedCard */ "./src/components/TopRatedCard.js");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShowAll */ "./src/components/ShowAll.js");
-/* harmony import */ var _public_img_high_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/high/experience-1.jpg */ "./public/img/high/experience-1.jpg");
-/* harmony import */ var _public_img_high_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_img_high_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/img/high/experience-2.jpg */ "./public/img/high/experience-2.jpg");
-/* harmony import */ var _public_img_high_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_img_high_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/img/high/experience-3.jpg */ "./public/img/high/experience-3.jpg");
-/* harmony import */ var _public_img_high_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_img_high_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../public/img/high/experience-4.jpg */ "./public/img/high/experience-4.jpg");
-/* harmony import */ var _public_img_high_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_img_high_experience1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/high/experience1.jpg */ "./public/img/high/experience1.jpg");
+/* harmony import */ var _public_img_high_experience1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_high_experience2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../public/img/high/experience2.jpg */ "./public/img/high/experience2.jpg");
+/* harmony import */ var _public_img_high_experience2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_high_experience3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../public/img/high/experience3.jpg */ "./public/img/high/experience3.jpg");
+/* harmony import */ var _public_img_high_experience3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience3_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_img_high_experience4_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../public/img/high/experience4.jpg */ "./public/img/high/experience4.jpg");
+/* harmony import */ var _public_img_high_experience4_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_experience4_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_img_low_experience1_low_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../public/img/low/experience1-low.jpg */ "./public/img/low/experience1-low.jpg");
+/* harmony import */ var _public_img_low_experience1_low_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_experience1_low_jpg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _public_img_low_experience2_low_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../public/img/low/experience2-low.jpg */ "./public/img/low/experience2-low.jpg");
+/* harmony import */ var _public_img_low_experience2_low_jpg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_experience2_low_jpg__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _public_img_low_experience3_low_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../public/img/low/experience3-low.jpg */ "./public/img/low/experience3-low.jpg");
+/* harmony import */ var _public_img_low_experience3_low_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_experience3_low_jpg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _public_img_low_experience4_low_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../public/img/low/experience4-low.jpg */ "./public/img/low/experience4-low.jpg");
+/* harmony import */ var _public_img_low_experience4_low_jpg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_experience4_low_jpg__WEBPACK_IMPORTED_MODULE_10__);
  // Components
 
 
  // Images
+// High Resolution
+
+
+
+
+ // Low Resolution
 
 
 
@@ -9533,25 +9591,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   const toprateds = [{
-    img: _public_img_high_experience_1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    img: _public_img_high_experience1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    imglow: _public_img_low_experience1_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
     location: 'Italy',
     title: 'Luca & Lorenzo, cooking in Chianti hills',
     price: 172,
     reviews: 1765
   }, {
-    img: _public_img_high_experience_2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    img: _public_img_high_experience2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    imglow: _public_img_low_experience2_low_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
     location: 'Italy',
     title: 'Truffle experience Rome',
     price: 148,
     reviews: 621
   }, {
-    img: _public_img_high_experience_3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    img: _public_img_high_experience3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    imglow: _public_img_low_experience3_low_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
     location: 'Japan',
     title: 'Feeling Samurai Soul',
     price: 119,
     reviews: 1047
   }, {
-    img: _public_img_high_experience_4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    img: _public_img_high_experience4_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    imglow: _public_img_low_experience4_low_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
     location: 'Italy',
     title: 'Lisbon best flavors',
     price: 90,
@@ -9560,7 +9622,9 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
   }, toprateds.map(({
+    id,
     img,
+    imglow,
     location,
     title,
     price,
@@ -9569,7 +9633,9 @@ __webpack_require__.r(__webpack_exports__);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: id,
       img: img,
+      imglow: imglow,
       location: location,
       title: title,
       price: price,
@@ -9598,7 +9664,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
+  id,
   img,
+  imglow,
   location,
   title,
   price,
@@ -9608,11 +9676,10 @@ __webpack_require__.r(__webpack_exports__);
     className: "w-30/31"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
-    placeholder: img
+    placeholder: imglow
   }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "rounded-lg",
-    src: src,
-    alt: "adventure1"
+    className: "w-full rounded-lg",
+    src: src
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "uppercase text-xs my-2 font-semibold"
   }, location), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {

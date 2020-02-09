@@ -49,10 +49,10 @@ export default () => {
     <div className='overflow-y-hidden'>
       <div className='w-full h-full overflow-y-hidden'>
         <div className='h-full scroller'>
-          <div className='scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-90 md:w-full'>
+          <div className='scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-screen'>
             {countries.map(({ id, img, imglow, location }) => {
               return (
-                <div className='w-32 sm:w-1/3 mr-3'>
+                <div className='min-w-32 w-full mr-3'>
                   <TravelCard
                     key={id}
                     img={img}

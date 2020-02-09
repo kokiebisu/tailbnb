@@ -28,8 +28,9 @@ export default ({ title, phrase, children }) => {
     }
   }
   return (
-    <div className='px-5 md:px-0 lg:max-w-90% mx-auto py-5 overflow-x-hidden overflow-y-hidden w-full'>
+    <div className='md:px-0 max-w-90% mx-auto py-5 overflow-x-hidden overflow-y-hidden'>
       {renderPhrase()}
+
       {children}
     </div>
   );
