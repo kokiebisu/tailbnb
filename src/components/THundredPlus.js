@@ -59,6 +59,105 @@ export default () => {
       price: '86',
       ratings: '4.81',
       reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
+    },
+    {
+      type: 'normal',
+      img: stay1,
+      imglow: stay1low,
+      size: 'Entire apartment',
+      location: 'Sol Madrid',
+      title: 'Waterfront with extraordinary view',
+      price: '86',
+      ratings: '4.81',
+      reviews: '156'
     }
   ];
 

@@ -3889,7 +3889,7 @@ __webpack_require__.r(__webpack_exports__);
     price,
     reviews
   }) => {
-    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TopRatedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       img: img,
@@ -3916,8 +3916,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-loading-skeleton */ "react-loading-skeleton");
-/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "react-lazy-progressive-image");
+/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
@@ -3927,28 +3927,16 @@ __webpack_require__.r(__webpack_exports__);
   price,
   reviews
 }) => {
-  const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-
-  const sleep = milliseconds => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-  };
-
-  const setLoad = () => {
-    sleep(4000).then(() => {
-      setLoaded(true);
-    });
-  };
-
-  setLoad();
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-30/31"
-  }, loaded ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "rounded-lg",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
+    placeholder: img
+  }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "rounded-lg",
+    src: src,
     alt: "adventure1"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    height: 385
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "uppercase text-xs my-2 font-semibold"
   }, location), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "my-1"
@@ -4156,17 +4144,6 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("react-lazy-progressive-image");
-
-/***/ }),
-
-/***/ "react-loading-skeleton":
-/*!*****************************************!*\
-  !*** external "react-loading-skeleton" ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-loading-skeleton");
 
 /***/ }),
 

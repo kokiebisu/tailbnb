@@ -45,15 +45,17 @@ export default () => {
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>
         {toprateds.map(({ img, location, title, price, reviews }) => {
-          <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
-            <TopRatedCard
-              img={img}
-              location={location}
-              title={title}
-              price={price}
-              reviews={reviews}
-            />
-          </div>;
+          return (
+            <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
+              <TopRatedCard
+                img={img}
+                location={location}
+                title={title}
+                price={price}
+                reviews={reviews}
+              />
+            </div>
+          );
         })}
       </div>
       <ShowAll title='Show all experiences' />
