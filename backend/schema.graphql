@@ -1,0 +1,21 @@
+type Query {
+  getStays: [Stay!]!
+  getStay(title: String!): Stay
+}
+
+type Mutation {
+  createStay(
+    title: String!
+    cost: Int!
+    hostType: String
+    country: String!
+  ): Stay
+}
+
+type Stay {
+  id: ID!
+  title: String!
+  cost: Int!
+  hostType: String
+  country: String!
+}
