@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 
-export default ({ type, img, imglow, location, title, price }) => {
+export default ({ hostType, img, imglow, location, title, cost, ratings }) => {
   const renderhost = () => {
-    if (type === 'normal') {
+    if (hostType === 'normal') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='mt-3 text-sm sm:my-2 font-light text-gray-600'>
@@ -11,22 +11,22 @@ export default ({ type, img, imglow, location, title, price }) => {
           </p>
         </div>
       );
-    } else if (type === 'superhost') {
+    } else if (hostType === 'superhost') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
-            {type}
+            {hostType}
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
             {location}
           </p>
         </div>
       );
-    } else if (type === 'plus') {
+    } else if (hostType === 'plus') {
       return (
         <div className='sm:flex sm:flex-wrap sm:items-center sm:justify-start'>
           <p className='inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
-            {type}
+            {hostType}
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
             {location}
@@ -48,8 +48,6 @@ export default ({ type, img, imglow, location, title, price }) => {
         {renderhost()}
         <div className='flex items-center justify-center flex-wrap'>
           <svg
-            version='1.1'
-            id='Capa_1'
             xmlns='http://www.w3.org/2000/svg'
             x='0px'
             y='0px'
@@ -68,12 +66,12 @@ export default ({ type, img, imglow, location, title, price }) => {
               />
             </g>
           </svg>
-          <p className='pl-1 text-sm'>4.71</p>
+          <p className='pl-1 text-sm'>{ratings}</p>
         </div>
       </div>
       <p className='my-1'>{title}</p>
       <p className='tracking-wide'>
-        <span className='font-bold'>${price} CAD</span>/night
+        <span className='font-bold'>${cost} CAD</span>/night
       </p>
     </div>
   );

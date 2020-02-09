@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2803,34 +2803,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
-  type,
+  hostType,
   img,
   imglow,
   location,
   title,
-  price
+  cost,
+  ratings
 }) => {
   const renderhost = () => {
-    if (type === 'normal') {
+    if (hostType === 'normal') {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "mt-3 text-sm sm:my-2 font-light text-gray-600"
       }, location));
-    } else if (type === 'superhost') {
+    } else if (hostType === 'superhost') {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs"
-      }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, hostType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600"
       }, location));
-    } else if (type === 'plus') {
+    } else if (hostType === 'plus') {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sm:flex sm:flex-wrap sm:items-center sm:justify-start"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800"
-      }, type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, hostType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600"
       }, location));
     }
@@ -2849,8 +2850,6 @@ __webpack_require__.r(__webpack_exports__);
   }, renderhost(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-center flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    version: "1.1",
-    id: "Capa_1",
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
     y: "0px",
@@ -2864,13 +2863,13 @@ __webpack_require__.r(__webpack_exports__);
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "pl-1 text-sm"
-  }, "4.71"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, ratings))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "my-1"
   }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "tracking-wide"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "font-bold"
-  }, "$", price, " CAD"), "/night"));
+  }, "$", cost, " CAD"), "/night"));
 });
 
 /***/ }),
@@ -3369,7 +3368,11 @@ __webpack_require__.r(__webpack_exports__);
 const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   query {
     stays {
+      hostType
+      location
       title
+      cost
+      ratings
     }
   }
 `;
@@ -3379,85 +3382,96 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     error,
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(staydata);
-  console.log(data);
-  const stays = [{
-    type: 'normal',
-    img: _public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    imglow: _public_img_low_stay1_low_jpg__WEBPACK_IMPORTED_MODULE_13___default.a,
-    location: 'Sol Madrid',
-    title: 'Private Studio in Sol, Madrid',
-    price: 91
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay2_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    imglow: _public_img_low_stay2_low_jpg__WEBPACK_IMPORTED_MODULE_14___default.a,
-    location: 'Makawao',
-    title: 'Adorable Garden Gingerbread',
-    price: 257
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay3_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    imglow: _public_img_low_stay3_low_jpg__WEBPACK_IMPORTED_MODULE_15___default.a,
-    location: 'Roma Norte',
-    title: 'Radiant Apartment with Terrace in...',
-    price: '104'
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay4_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
-    imglow: _public_img_low_stay4_low_jpg__WEBPACK_IMPORTED_MODULE_16___default.a,
-    location: 'Portici',
-    title: 'Villa San Gennariello',
-    price: 87
-  }, {
-    type: 'plus',
-    img: _public_img_high_stay5_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
-    imglow: _public_img_low_stay5_low_jpg__WEBPACK_IMPORTED_MODULE_17___default.a,
-    location: 'Old Town',
-    title: 'Classical Apartment on the Royal...',
-    price: 206
-  }, {
-    type: 'normal',
-    img: _public_img_high_stay6_jpg__WEBPACK_IMPORTED_MODULE_10___default.a,
-    imglow: _public_img_low_stay6_low_jpg__WEBPACK_IMPORTED_MODULE_18___default.a,
-    location: 'Porto',
-    title: 'PORTA33 | PORTO PENTHOUSE',
-    price: 126
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay7_jpg__WEBPACK_IMPORTED_MODULE_11___default.a,
-    imglow: _public_img_low_stay7_low_jpg__WEBPACK_IMPORTED_MODULE_19___default.a,
-    location: 'Krakow',
-    title: 'Amazing and Extremely Central Flat',
-    price: 31
-  }, {
-    type: 'superhost',
-    img: _public_img_high_stay8_jpg__WEBPACK_IMPORTED_MODULE_12___default.a,
-    imglow: _public_img_low_stay8_low_jpg__WEBPACK_IMPORTED_MODULE_20___default.a,
-    location: 'Tricase',
-    title: 'La Salentina, sea, nature & relax',
-    price: 68
-  }];
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
+  console.log(data.stays); // const stays = [
+  //   {
+  //     type: 'normal',
+  //     img: stay1,
+  //     imglow: stay1low,
+  //     location: 'Sol Madrid',
+  //     title: 'Private Studio in Sol, Madrid',
+  //     price: 91
+  //   },
+  //   {
+  //     type: 'superhost',
+  //     img: stay2,
+  //     imglow: stay2low,
+  //     location: 'Makawao',
+  //     title: 'Adorable Garden Gingerbread',
+  //     price: 257
+  //   },
+  //   {
+  //     type: 'superhost',
+  //     img: stay3,
+  //     imglow: stay3low,
+  //     location: 'Roma Norte',
+  //     title: 'Radiant Apartment with Terrace in...',
+  //     price: '104'
+  //   },
+  //   {
+  //     type: 'superhost',
+  //     img: stay4,
+  //     imglow: stay4low,
+  //     location: 'Portici',
+  //     title: 'Villa San Gennariello',
+  //     price: 87
+  //   },
+  //   {
+  //     type: 'plus',
+  //     img: stay5,
+  //     imglow: stay5low,
+  //     location: 'Old Town',
+  //     title: 'Classical Apartment on the Royal...',
+  //     price: 206
+  //   },
+  //   {
+  //     type: 'normal',
+  //     img: stay6,
+  //     imglow: stay6low,
+  //     location: 'Porto',
+  //     title: 'PORTA33 | PORTO PENTHOUSE',
+  //     price: 126
+  //   },
+  //   {
+  //     type: 'superhost',
+  //     img: stay7,
+  //     imglow: stay7low,
+  //     location: 'Krakow',
+  //     title: 'Amazing and Extremely Central Flat',
+  //     price: 31
+  //   },
+  //   {
+  //     type: 'superhost',
+  //     img: stay8,
+  //     imglow: stay8low,
+  //     location: 'Tricase',
+  //     title: 'La Salentina, sea, nature & relax',
+  //     price: 68
+  //   }
+  // ];
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
-  }, stays.map(({
+  }, data.stays.map(({
     id,
-    type,
-    img,
-    imglow,
+    hostType,
     location,
     title,
-    price
+    cost,
+    ratings
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_StayCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: id,
-      type: type,
-      img: img,
-      imglow: imglow,
+      hostType: hostType,
+      img: _public_img_high_stay1_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+      imglow: _public_img_low_stay1_low_jpg__WEBPACK_IMPORTED_MODULE_13___default.a,
       location: location,
       title: title,
-      price: price
+      cost: cost,
+      ratings: ratings
     }));
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Show(2000+)"
@@ -4111,7 +4125,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
