@@ -4,7 +4,7 @@ import React from 'react';
 import HeaderCard from '../components/HeaderCard';
 
 // Images
-import background from '../../public/img/airbnb-background.jpg';
+import background from '../../public/img/high/airbnb-background.jpg';
 
 export default () => {
   return (

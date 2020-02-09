@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
-import Skeleton from 'react-loading-skeleton';
+import LazyImage from 'react-lazy-progressive-image';
 
-export default ({ type, img, location, title, price }) => {
-  const [loaded, setLoaded] = useState(false);
-
-  const sleep = (milliseconds) => {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-  };
-
-  const setLoad = () => {
-    sleep(4000).then(() => {
-      setLoaded(true);
-    });
-  };
-  setLoad();
+export default ({ type, img, imglow, location, title, price }) => {
   const renderhost = () => {
     if (type === 'normal') {
       return (
@@ -50,11 +38,12 @@ export default ({ type, img, location, title, price }) => {
 
   return (
     <div className='w-30/31'>
-      {loaded ? (
-        <img className='rounded' src={img} alt='adventure1' />
-      ) : (
-        <Skeleton height={165} />
-      )}
+      <LazyImage src={img} placeholder={imglow}>
+        {(src, loading, isVisible) => (
+          <img className='w-full rounded' src={src} />
+        )}
+      </LazyImage>
+
       <div className='flex flex-wrap items-center justify-between'>
         {renderhost()}
         <div className='flex items-center justify-center flex-wrap'>

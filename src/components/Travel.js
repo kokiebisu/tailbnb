@@ -1,9 +1,9 @@
 import React from 'react';
 import TravelCard from './TravelCard';
 
-import explore1 from '../../public/img/explore-1.jpg';
-import explore2 from '../../public/img/explore-2.jpg';
-import explore3 from '../../public/img/explore-3.jpg';
+import explore1 from '../../public/img/high/explore-1.jpg';
+import explore2 from '../../public/img/high/explore-2.jpg';
+import explore3 from '../../public/img/high/explore-3.jpg';
 
 export default () => {
   const countries = [
@@ -41,7 +41,7 @@ export default () => {
             {countries.map(({ img, location }) => {
               return (
                 <div className='w-32 sm:w-1/3 mr-3'>
-                  <TravelCard img={img} location={location} />
+                  <TravelCard img={img} location={location} />} />
                 </div>
               );
             })}
