@@ -8791,7 +8791,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "z-10 sticky bg-white top-0 flex items-center justify-between relative border-b-2 shadow pb-2"
+    className: "z-10 sticky bg-white top-0 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex items-center justify-between relative border-b-2 shadow pb-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "m-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -8845,7 +8847,7 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full"
-  }, "Filters"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Filters")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "max-w-90% md:px-0 mx-auto py-5 border-b border-gray-400"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
