@@ -15,8 +15,8 @@ type Mutation {
     country: String
     location: String
     ratings: Float
-    img: String
-    imglow: String
+    img: String!
+    imglow: String!
   ): Stay!
   deleteStay(title: String!): Stay
   createAdventure(
@@ -24,6 +24,8 @@ type Mutation {
     period: Int!
     cost: Int!
     country: String!
+    img: String
+    imglow: String
   ): Adventure
   deleteAdventure(title: String!): Adventure
   createExperience(
@@ -32,8 +34,8 @@ type Mutation {
     ratings: Float
     reviews: Int
     country: String!
-    img: String
-    imglow: String
+    img: String!
+    imglow: String!
   ): Experience
   deleteExperience(title: String!): Experience
 }
@@ -55,6 +57,8 @@ type Adventure {
   period: Int!
   cost: Int!
   country: String!
+  img: String
+  imglow: String
 }
 
 type Experience {

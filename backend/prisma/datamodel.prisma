@@ -6,8 +6,8 @@ type Stay {
   country: String
   location: String
   ratings: Float @default(value: 0.0)
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type Adventure {
@@ -16,6 +16,8 @@ type Adventure {
   period: Int!
   cost: Int!
   country: String!
+  img: String
+  imglow: String
 }
 
 type Experience {
@@ -25,6 +27,6 @@ type Experience {
   ratings: Float @default(value: 0.0)
   reviews: Int @default(value: 0)
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }

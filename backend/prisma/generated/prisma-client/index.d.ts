@@ -189,7 +189,11 @@ export type AdventureOrderByInput =
   | "cost_ASC"
   | "cost_DESC"
   | "country_ASC"
-  | "country_DESC";
+  | "country_DESC"
+  | "img_ASC"
+  | "img_DESC"
+  | "imglow_ASC"
+  | "imglow_DESC";
 
 export type ExperienceOrderByInput =
   | "id_ASC"
@@ -295,6 +299,34 @@ export interface AdventureWhereInput {
   country_not_starts_with?: Maybe<String>;
   country_ends_with?: Maybe<String>;
   country_not_ends_with?: Maybe<String>;
+  img?: Maybe<String>;
+  img_not?: Maybe<String>;
+  img_in?: Maybe<String[] | String>;
+  img_not_in?: Maybe<String[] | String>;
+  img_lt?: Maybe<String>;
+  img_lte?: Maybe<String>;
+  img_gt?: Maybe<String>;
+  img_gte?: Maybe<String>;
+  img_contains?: Maybe<String>;
+  img_not_contains?: Maybe<String>;
+  img_starts_with?: Maybe<String>;
+  img_not_starts_with?: Maybe<String>;
+  img_ends_with?: Maybe<String>;
+  img_not_ends_with?: Maybe<String>;
+  imglow?: Maybe<String>;
+  imglow_not?: Maybe<String>;
+  imglow_in?: Maybe<String[] | String>;
+  imglow_not_in?: Maybe<String[] | String>;
+  imglow_lt?: Maybe<String>;
+  imglow_lte?: Maybe<String>;
+  imglow_gt?: Maybe<String>;
+  imglow_gte?: Maybe<String>;
+  imglow_contains?: Maybe<String>;
+  imglow_not_contains?: Maybe<String>;
+  imglow_starts_with?: Maybe<String>;
+  imglow_not_starts_with?: Maybe<String>;
+  imglow_ends_with?: Maybe<String>;
+  imglow_not_ends_with?: Maybe<String>;
   AND?: Maybe<AdventureWhereInput[] | AdventureWhereInput>;
   OR?: Maybe<AdventureWhereInput[] | AdventureWhereInput>;
   NOT?: Maybe<AdventureWhereInput[] | AdventureWhereInput>;
@@ -536,6 +568,8 @@ export interface AdventureCreateInput {
   period: Int;
   cost: Int;
   country: String;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface AdventureUpdateInput {
@@ -543,6 +577,8 @@ export interface AdventureUpdateInput {
   period?: Maybe<Int>;
   cost?: Maybe<Int>;
   country?: Maybe<String>;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface AdventureUpdateManyMutationInput {
@@ -550,6 +586,8 @@ export interface AdventureUpdateManyMutationInput {
   period?: Maybe<Int>;
   cost?: Maybe<Int>;
   country?: Maybe<String>;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface ExperienceCreateInput {
@@ -559,8 +597,8 @@ export interface ExperienceCreateInput {
   ratings?: Maybe<Float>;
   reviews?: Maybe<Int>;
   country: String;
-  img?: Maybe<String>;
-  imglow?: Maybe<String>;
+  img: String;
+  imglow: String;
 }
 
 export interface ExperienceUpdateInput {
@@ -591,8 +629,8 @@ export interface StayCreateInput {
   country?: Maybe<String>;
   location?: Maybe<String>;
   ratings?: Maybe<Float>;
-  img?: Maybe<String>;
-  imglow?: Maybe<String>;
+  img: String;
+  imglow: String;
 }
 
 export interface StayUpdateInput {
@@ -672,6 +710,8 @@ export interface Adventure {
   period: Int;
   cost: Int;
   country: String;
+  img?: String;
+  imglow?: String;
 }
 
 export interface AdventurePromise extends Promise<Adventure>, Fragmentable {
@@ -680,6 +720,8 @@ export interface AdventurePromise extends Promise<Adventure>, Fragmentable {
   period: () => Promise<Int>;
   cost: () => Promise<Int>;
   country: () => Promise<String>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface AdventureSubscription
@@ -690,6 +732,8 @@ export interface AdventureSubscription
   period: () => Promise<AsyncIterator<Int>>;
   cost: () => Promise<AsyncIterator<Int>>;
   country: () => Promise<AsyncIterator<String>>;
+  img: () => Promise<AsyncIterator<String>>;
+  imglow: () => Promise<AsyncIterator<String>>;
 }
 
 export interface AdventureNullablePromise
@@ -700,6 +744,8 @@ export interface AdventureNullablePromise
   period: () => Promise<Int>;
   cost: () => Promise<Int>;
   country: () => Promise<String>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface AdventureConnection {
@@ -788,8 +834,8 @@ export interface Experience {
   ratings?: Float;
   reviews?: Int;
   country: String;
-  img?: String;
-  imglow?: String;
+  img: String;
+  imglow: String;
 }
 
 export interface ExperiencePromise extends Promise<Experience>, Fragmentable {
@@ -893,8 +939,8 @@ export interface Stay {
   country?: String;
   location?: String;
   ratings?: Float;
-  img?: String;
-  imglow?: String;
+  img: String;
+  imglow: String;
 }
 
 export interface StayPromise extends Promise<Stay>, Fragmentable {
@@ -1038,6 +1084,8 @@ export interface AdventurePreviousValues {
   period: Int;
   cost: Int;
   country: String;
+  img?: String;
+  imglow?: String;
 }
 
 export interface AdventurePreviousValuesPromise
@@ -1048,6 +1096,8 @@ export interface AdventurePreviousValuesPromise
   period: () => Promise<Int>;
   cost: () => Promise<Int>;
   country: () => Promise<String>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface AdventurePreviousValuesSubscription
@@ -1058,6 +1108,8 @@ export interface AdventurePreviousValuesSubscription
   period: () => Promise<AsyncIterator<Int>>;
   cost: () => Promise<AsyncIterator<Int>>;
   country: () => Promise<AsyncIterator<String>>;
+  img: () => Promise<AsyncIterator<String>>;
+  imglow: () => Promise<AsyncIterator<String>>;
 }
 
 export interface ExperienceSubscriptionPayload {
@@ -1092,8 +1144,8 @@ export interface ExperiencePreviousValues {
   ratings?: Float;
   reviews?: Int;
   country: String;
-  img?: String;
-  imglow?: String;
+  img: String;
+  imglow: String;
 }
 
 export interface ExperiencePreviousValuesPromise
@@ -1155,8 +1207,8 @@ export interface StayPreviousValues {
   country?: String;
   location?: String;
   ratings?: Float;
-  img?: String;
-  imglow?: String;
+  img: String;
+  imglow: String;
 }
 
 export interface StayPreviousValuesPromise

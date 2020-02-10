@@ -40,7 +40,9 @@ const resolvers = {
         title: args.title,
         period: args.period,
         cost: args.cost,
-        country: args.country
+        country: args.country,
+        img: args.img,
+        imglow: args.imglow
       });
     },
     deleteAdventure(root, args, context) {

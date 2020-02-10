@@ -6,18 +6,6 @@ import { gql } from 'apollo-boost';
 import TopRatedCard from '../cards/TopRatedCard';
 import ShowAll from '../ShowAll';
 
-// Images
-// High Resolution
-import experience1 from '../../../public/img/high/experience1.jpg';
-import experience2 from '../../../public/img/high/experience2.jpg';
-import experience3 from '../../../public/img/high/experience3.jpg';
-import experience4 from '../../../public/img/high/experience4.jpg';
-// Low Resolution
-import experience1low from '../../../public/img/low/experience1-low.jpg';
-import experience2low from '../../../public/img/low/experience2-low.jpg';
-import experience3low from '../../../public/img/low/experience3-low.jpg';
-import experience4low from '../../../public/img/low/experience4-low.jpg';
-
 const experiencedata = gql`
   query {
     experiences {

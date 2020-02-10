@@ -9,6 +9,8 @@ module.exports = {
   period: Int!
   cost: Int!
   country: String!
+  img: String
+  imglow: String
 }
 
 type AdventureConnection {
@@ -23,6 +25,8 @@ input AdventureCreateInput {
   period: Int!
   cost: Int!
   country: String!
+  img: String
+  imglow: String
 }
 
 type AdventureEdge {
@@ -41,6 +45,10 @@ enum AdventureOrderByInput {
   cost_DESC
   country_ASC
   country_DESC
+  img_ASC
+  img_DESC
+  imglow_ASC
+  imglow_DESC
 }
 
 type AdventurePreviousValues {
@@ -49,6 +57,8 @@ type AdventurePreviousValues {
   period: Int!
   cost: Int!
   country: String!
+  img: String
+  imglow: String
 }
 
 type AdventureSubscriptionPayload {
@@ -74,6 +84,8 @@ input AdventureUpdateInput {
   period: Int
   cost: Int
   country: String
+  img: String
+  imglow: String
 }
 
 input AdventureUpdateManyMutationInput {
@@ -81,6 +93,8 @@ input AdventureUpdateManyMutationInput {
   period: Int
   cost: Int
   country: String
+  img: String
+  imglow: String
 }
 
 input AdventureWhereInput {
@@ -142,6 +156,34 @@ input AdventureWhereInput {
   country_not_starts_with: String
   country_ends_with: String
   country_not_ends_with: String
+  img: String
+  img_not: String
+  img_in: [String!]
+  img_not_in: [String!]
+  img_lt: String
+  img_lte: String
+  img_gt: String
+  img_gte: String
+  img_contains: String
+  img_not_contains: String
+  img_starts_with: String
+  img_not_starts_with: String
+  img_ends_with: String
+  img_not_ends_with: String
+  imglow: String
+  imglow_not: String
+  imglow_in: [String!]
+  imglow_not_in: [String!]
+  imglow_lt: String
+  imglow_lte: String
+  imglow_gt: String
+  imglow_gte: String
+  imglow_contains: String
+  imglow_not_contains: String
+  imglow_starts_with: String
+  imglow_not_starts_with: String
+  imglow_ends_with: String
+  imglow_not_ends_with: String
   AND: [AdventureWhereInput!]
   OR: [AdventureWhereInput!]
   NOT: [AdventureWhereInput!]
@@ -175,8 +217,8 @@ type Experience {
   ratings: Float
   reviews: Int
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type ExperienceConnection {
@@ -192,8 +234,8 @@ input ExperienceCreateInput {
   ratings: Float
   reviews: Int
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type ExperienceEdge {
@@ -227,8 +269,8 @@ type ExperiencePreviousValues {
   ratings: Float
   reviews: Int
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type ExperienceSubscriptionPayload {
@@ -435,8 +477,8 @@ type Stay {
   country: String
   location: String
   ratings: Float
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type StayConnection {
@@ -453,8 +495,8 @@ input StayCreateInput {
   country: String
   location: String
   ratings: Float
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type StayEdge {
@@ -491,8 +533,8 @@ type StayPreviousValues {
   country: String
   location: String
   ratings: Float
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type StaySubscriptionPayload {
