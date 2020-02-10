@@ -15,12 +15,27 @@ type Mutation {
     country: String
     location: String
     ratings: Float
+    img: String
+    imglow: String
   ): Stay!
   deleteStay(title: String!): Stay
-  createAdventure(title: String!, period: Int!, cost: Int!, country: String!): Adventure
-  deleteAdventure(title: String!)
-  createExperience(title: String!, cost: Int!, ratings: Float, reviews: Int, country: String!)
-  deleteExperience(title: String!)
+  createAdventure(
+    title: String!
+    period: Int!
+    cost: Int!
+    country: String!
+  ): Adventure
+  deleteAdventure(title: String!): Adventure
+  createExperience(
+    title: String!
+    cost: Int!
+    ratings: Float
+    reviews: Int
+    country: String!
+    img: String
+    imglow: String
+  ): Experience
+  deleteExperience(title: String!): Experience
 }
 
 type Stay {
@@ -49,4 +64,6 @@ type Experience {
   ratings: Float
   reviews: Int
   country: String!
+  img: String
+  imglow: String
 }

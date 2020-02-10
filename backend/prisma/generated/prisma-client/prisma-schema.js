@@ -175,6 +175,8 @@ type Experience {
   ratings: Float
   reviews: Int
   country: String!
+  img: String
+  imglow: String
 }
 
 type ExperienceConnection {
@@ -190,6 +192,8 @@ input ExperienceCreateInput {
   ratings: Float
   reviews: Int
   country: String!
+  img: String
+  imglow: String
 }
 
 type ExperienceEdge {
@@ -210,6 +214,10 @@ enum ExperienceOrderByInput {
   reviews_DESC
   country_ASC
   country_DESC
+  img_ASC
+  img_DESC
+  imglow_ASC
+  imglow_DESC
 }
 
 type ExperiencePreviousValues {
@@ -219,6 +227,8 @@ type ExperiencePreviousValues {
   ratings: Float
   reviews: Int
   country: String!
+  img: String
+  imglow: String
 }
 
 type ExperienceSubscriptionPayload {
@@ -245,6 +255,8 @@ input ExperienceUpdateInput {
   ratings: Float
   reviews: Int
   country: String
+  img: String
+  imglow: String
 }
 
 input ExperienceUpdateManyMutationInput {
@@ -253,6 +265,8 @@ input ExperienceUpdateManyMutationInput {
   ratings: Float
   reviews: Int
   country: String
+  img: String
+  imglow: String
 }
 
 input ExperienceWhereInput {
@@ -322,6 +336,34 @@ input ExperienceWhereInput {
   country_not_starts_with: String
   country_ends_with: String
   country_not_ends_with: String
+  img: String
+  img_not: String
+  img_in: [String!]
+  img_not_in: [String!]
+  img_lt: String
+  img_lte: String
+  img_gt: String
+  img_gte: String
+  img_contains: String
+  img_not_contains: String
+  img_starts_with: String
+  img_not_starts_with: String
+  img_ends_with: String
+  img_not_ends_with: String
+  imglow: String
+  imglow_not: String
+  imglow_in: [String!]
+  imglow_not_in: [String!]
+  imglow_lt: String
+  imglow_lte: String
+  imglow_gt: String
+  imglow_gte: String
+  imglow_contains: String
+  imglow_not_contains: String
+  imglow_starts_with: String
+  imglow_not_starts_with: String
+  imglow_ends_with: String
+  imglow_not_ends_with: String
   AND: [ExperienceWhereInput!]
   OR: [ExperienceWhereInput!]
   NOT: [ExperienceWhereInput!]
