@@ -20727,7 +20727,7 @@ __webpack_require__.r(__webpack_exports__);
     placeholder: imglow
   }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "w-full rounded-lg",
-    src: 'https://nextbnb.sfo2.digitaloceanspaces.com/stay2-low.jpg'
+    src: src
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "uppercase text-xs my-2 font-semibold"
   }, country), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -21232,6 +21232,8 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       ratings
       reviews
       country
+      img
+      imglow
     }
   }
 `;
@@ -21251,14 +21253,16 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     cost,
     ratings,
     reviews,
-    country
+    country,
+    img,
+    imglow
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_TopRatedCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: id,
-      img: _public_img_high_experience1_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
-      imglow: _public_img_low_experience1_low_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
+      img: img,
+      imglow: imglow,
       title: title,
       cost: cost,
       ratings: ratings,

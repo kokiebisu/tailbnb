@@ -27,6 +27,8 @@ const experiencedata = gql`
       ratings
       reviews
       country
+      img
+      imglow
     }
   }
 `;
@@ -39,13 +41,13 @@ export default () => {
     <>
       <div className='flex items-start justify-start flex-wrap w-full grid'>
         {data.experiences.map(
-          ({ id, title, cost, ratings, reviews, country }) => {
+          ({ id, title, cost, ratings, reviews, country, img, imglow }) => {
             return (
               <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
                 <TopRatedCard
                   key={id}
-                  img={experience1}
-                  imglow={experience1low}
+                  img={img}
+                  imglow={imglow}
                   title={title}
                   cost={cost}
                   ratings={ratings}

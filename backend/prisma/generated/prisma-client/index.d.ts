@@ -203,7 +203,11 @@ export type ExperienceOrderByInput =
   | "reviews_ASC"
   | "reviews_DESC"
   | "country_ASC"
-  | "country_DESC";
+  | "country_DESC"
+  | "img_ASC"
+  | "img_DESC"
+  | "imglow_ASC"
+  | "imglow_DESC";
 
 export type StayOrderByInput =
   | "id_ASC"
@@ -368,6 +372,34 @@ export interface ExperienceWhereInput {
   country_not_starts_with?: Maybe<String>;
   country_ends_with?: Maybe<String>;
   country_not_ends_with?: Maybe<String>;
+  img?: Maybe<String>;
+  img_not?: Maybe<String>;
+  img_in?: Maybe<String[] | String>;
+  img_not_in?: Maybe<String[] | String>;
+  img_lt?: Maybe<String>;
+  img_lte?: Maybe<String>;
+  img_gt?: Maybe<String>;
+  img_gte?: Maybe<String>;
+  img_contains?: Maybe<String>;
+  img_not_contains?: Maybe<String>;
+  img_starts_with?: Maybe<String>;
+  img_not_starts_with?: Maybe<String>;
+  img_ends_with?: Maybe<String>;
+  img_not_ends_with?: Maybe<String>;
+  imglow?: Maybe<String>;
+  imglow_not?: Maybe<String>;
+  imglow_in?: Maybe<String[] | String>;
+  imglow_not_in?: Maybe<String[] | String>;
+  imglow_lt?: Maybe<String>;
+  imglow_lte?: Maybe<String>;
+  imglow_gt?: Maybe<String>;
+  imglow_gte?: Maybe<String>;
+  imglow_contains?: Maybe<String>;
+  imglow_not_contains?: Maybe<String>;
+  imglow_starts_with?: Maybe<String>;
+  imglow_not_starts_with?: Maybe<String>;
+  imglow_ends_with?: Maybe<String>;
+  imglow_not_ends_with?: Maybe<String>;
   AND?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
   OR?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
   NOT?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
@@ -527,6 +559,8 @@ export interface ExperienceCreateInput {
   ratings?: Maybe<Float>;
   reviews?: Maybe<Int>;
   country: String;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface ExperienceUpdateInput {
@@ -535,6 +569,8 @@ export interface ExperienceUpdateInput {
   ratings?: Maybe<Float>;
   reviews?: Maybe<Int>;
   country?: Maybe<String>;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface ExperienceUpdateManyMutationInput {
@@ -543,6 +579,8 @@ export interface ExperienceUpdateManyMutationInput {
   ratings?: Maybe<Float>;
   reviews?: Maybe<Int>;
   country?: Maybe<String>;
+  img?: Maybe<String>;
+  imglow?: Maybe<String>;
 }
 
 export interface StayCreateInput {
@@ -750,6 +788,8 @@ export interface Experience {
   ratings?: Float;
   reviews?: Int;
   country: String;
+  img?: String;
+  imglow?: String;
 }
 
 export interface ExperiencePromise extends Promise<Experience>, Fragmentable {
@@ -759,6 +799,8 @@ export interface ExperiencePromise extends Promise<Experience>, Fragmentable {
   ratings: () => Promise<Float>;
   reviews: () => Promise<Int>;
   country: () => Promise<String>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface ExperienceSubscription
@@ -770,6 +812,8 @@ export interface ExperienceSubscription
   ratings: () => Promise<AsyncIterator<Float>>;
   reviews: () => Promise<AsyncIterator<Int>>;
   country: () => Promise<AsyncIterator<String>>;
+  img: () => Promise<AsyncIterator<String>>;
+  imglow: () => Promise<AsyncIterator<String>>;
 }
 
 export interface ExperienceNullablePromise
@@ -781,6 +825,8 @@ export interface ExperienceNullablePromise
   ratings: () => Promise<Float>;
   reviews: () => Promise<Int>;
   country: () => Promise<String>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface ExperienceConnection {
@@ -1046,6 +1092,8 @@ export interface ExperiencePreviousValues {
   ratings?: Float;
   reviews?: Int;
   country: String;
+  img?: String;
+  imglow?: String;
 }
 
 export interface ExperiencePreviousValuesPromise
@@ -1057,6 +1105,8 @@ export interface ExperiencePreviousValuesPromise
   ratings: () => Promise<Float>;
   reviews: () => Promise<Int>;
   country: () => Promise<String>;
+  img: () => Promise<String>;
+  imglow: () => Promise<String>;
 }
 
 export interface ExperiencePreviousValuesSubscription
@@ -1068,6 +1118,8 @@ export interface ExperiencePreviousValuesSubscription
   ratings: () => Promise<AsyncIterator<Float>>;
   reviews: () => Promise<AsyncIterator<Int>>;
   country: () => Promise<AsyncIterator<String>>;
+  img: () => Promise<AsyncIterator<String>>;
+  imglow: () => Promise<AsyncIterator<String>>;
 }
 
 export interface StaySubscriptionPayload {

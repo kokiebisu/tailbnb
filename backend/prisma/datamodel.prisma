@@ -25,4 +25,6 @@ type Experience {
   ratings: Float @default(value: 0.0)
   reviews: Int @default(value: 0)
   country: String!
+  img: String
+  imglow: String
 }

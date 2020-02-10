@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
     placeholder: imglow
   }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "w-full rounded-lg",
-    src: 'https://nextbnb.sfo2.digitaloceanspaces.com/stay2-low.jpg'
+    src: src
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "uppercase text-xs my-2 font-semibold"
   }, country), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -57,4 +57,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 })
-//# sourceMappingURL=index.js.dd83514eac31b5990b44.hot-update.js.map
+//# sourceMappingURL=index.js.1da0c80f85c9b9fc737b.hot-update.js.map

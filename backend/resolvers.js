@@ -54,7 +54,9 @@ const resolvers = {
         cost: args.cost,
         ratings: args.ratings,
         reviews: args.reviews,
-        country: args.country
+        country: args.country,
+        img: args.img,
+        imglow: args.imglow
       });
     },
     deleteExperience(root, args, context) {
