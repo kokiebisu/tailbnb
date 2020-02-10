@@ -13,7 +13,7 @@ export default () => {
         backgroundImage: `url(${background})`,
         maxHeight: '80rem'
       }}
-      className='md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
+      className='w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
       <div className='flex flex-wrap items-center justify-between'>
         <div className='m-6'>
           <a href='/'>

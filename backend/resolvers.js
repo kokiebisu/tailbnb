@@ -28,8 +28,10 @@ const resolvers = {
         country: args.country,
         location: args.location,
         ratings: args.ratings,
+        reviews: args.reviews,
         img: args.img,
-        imglow: args.imglow
+        imglow: args.imglow,
+        size: args.size
       });
     },
     deleteStay(root, args, context) {
@@ -58,7 +60,8 @@ const resolvers = {
         reviews: args.reviews,
         country: args.country,
         img: args.img,
-        imglow: args.imglow
+        imglow: args.imglow,
+        location: args.location
       });
     },
     deleteExperience(root, args, context) {

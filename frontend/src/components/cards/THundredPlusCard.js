@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 
 export default ({
-  id,
-  type,
-  size,
+  hostType,
   img,
   imglow,
+  size,
   location,
   title,
-  price,
+  cost,
   ratings,
   reviews
 }) => {
   const renderhost = () => {
-    if (type === 'normal') {
+    if (hostType === 'normal') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p
@@ -26,11 +25,11 @@ export default ({
           </p>
         </div>
       );
-    } else if (type === 'superhost') {
+    } else if (hostType === 'superhost') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
-            {type}
+            {hostType}
           </p>
           <p
             style={{ fontFamily: 'airbnb-book' }}
@@ -39,11 +38,11 @@ export default ({
           </p>
         </div>
       );
-    } else if (type === 'plus') {
+    } else if (hostType === 'plus') {
       return (
         <div className='sm:flex sm:flex-wrap sm:items-center sm:justify-start'>
           <p className='inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
-            {type}
+            {hostType}
           </p>
           <p
             style={{ fontFamily: 'airbnb-book' }}
@@ -79,7 +78,7 @@ export default ({
       </div>
       <p className='my-1'>{title}</p>
       <p className='tracking-wide'>
-        <span className='font-bold'>${price} CAD</span>/night
+        <span className='font-bold'>${cost} CAD</span>/night
       </p>
       <div className='flex items-center justify-start flex-wrap'>
         <svg

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 
-export default ({ id, img, imglow, description, location }) => {
+export default ({ title, location, country, img, imglow }) => {
   return (
     <div className='w-30/31'>
       <LazyImage src={img} placeholder={imglow}>
@@ -11,10 +11,10 @@ export default ({ id, img, imglow, description, location }) => {
       </LazyImage>
 
       <p style={{ fontFamily: 'airbnb-medium' }} className=' my-2 '>
-        {description}
+        {title}
       </p>
       <p style={{ fontFamily: 'airbnb-book' }} className='text-sm my-2 '>
-        {location}
+        {location}, {country}
       </p>
     </div>
   );

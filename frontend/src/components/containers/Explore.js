@@ -38,7 +38,7 @@ export default () => {
           <div className='scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full'>
             {explores.map(({ img, imglow, title }, index) => {
               return (
-                <div className='w-32 sm:w-1/3 cursor-pointer'>
+                <div className='w-32 mr-4 sm:w-1/3 cursor-pointer'>
                   <ExploreCard
                     key={index}
                     id={index}

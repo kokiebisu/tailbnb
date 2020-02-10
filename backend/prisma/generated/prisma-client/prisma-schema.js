@@ -9,8 +9,8 @@ module.exports = {
   period: Int!
   cost: Int!
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type AdventureConnection {
@@ -25,8 +25,8 @@ input AdventureCreateInput {
   period: Int!
   cost: Int!
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type AdventureEdge {
@@ -57,8 +57,8 @@ type AdventurePreviousValues {
   period: Int!
   cost: Int!
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type AdventureSubscriptionPayload {
@@ -219,6 +219,7 @@ type Experience {
   country: String!
   img: String!
   imglow: String!
+  location: String!
 }
 
 type ExperienceConnection {
@@ -236,6 +237,7 @@ input ExperienceCreateInput {
   country: String!
   img: String!
   imglow: String!
+  location: String!
 }
 
 type ExperienceEdge {
@@ -260,6 +262,8 @@ enum ExperienceOrderByInput {
   img_DESC
   imglow_ASC
   imglow_DESC
+  location_ASC
+  location_DESC
 }
 
 type ExperiencePreviousValues {
@@ -271,6 +275,7 @@ type ExperiencePreviousValues {
   country: String!
   img: String!
   imglow: String!
+  location: String!
 }
 
 type ExperienceSubscriptionPayload {
@@ -299,6 +304,7 @@ input ExperienceUpdateInput {
   country: String
   img: String
   imglow: String
+  location: String
 }
 
 input ExperienceUpdateManyMutationInput {
@@ -309,6 +315,7 @@ input ExperienceUpdateManyMutationInput {
   country: String
   img: String
   imglow: String
+  location: String
 }
 
 input ExperienceWhereInput {
@@ -406,6 +413,20 @@ input ExperienceWhereInput {
   imglow_not_starts_with: String
   imglow_ends_with: String
   imglow_not_ends_with: String
+  location: String
+  location_not: String
+  location_in: [String!]
+  location_not_in: [String!]
+  location_lt: String
+  location_lte: String
+  location_gt: String
+  location_gte: String
+  location_contains: String
+  location_not_contains: String
+  location_starts_with: String
+  location_not_starts_with: String
+  location_ends_with: String
+  location_not_ends_with: String
   AND: [ExperienceWhereInput!]
   OR: [ExperienceWhereInput!]
   NOT: [ExperienceWhereInput!]
@@ -473,12 +494,14 @@ type Stay {
   id: ID!
   title: String
   cost: Int!
-  hostType: String
-  country: String
-  location: String
+  hostType: String!
+  country: String!
+  location: String!
   ratings: Float
+  reviews: Int
   img: String!
   imglow: String!
+  size: String!
 }
 
 type StayConnection {
@@ -491,12 +514,14 @@ input StayCreateInput {
   id: ID
   title: String
   cost: Int!
-  hostType: String
-  country: String
-  location: String
+  hostType: String!
+  country: String!
+  location: String!
   ratings: Float
+  reviews: Int
   img: String!
   imglow: String!
+  size: String!
 }
 
 type StayEdge {
@@ -519,22 +544,28 @@ enum StayOrderByInput {
   location_DESC
   ratings_ASC
   ratings_DESC
+  reviews_ASC
+  reviews_DESC
   img_ASC
   img_DESC
   imglow_ASC
   imglow_DESC
+  size_ASC
+  size_DESC
 }
 
 type StayPreviousValues {
   id: ID!
   title: String
   cost: Int!
-  hostType: String
-  country: String
-  location: String
+  hostType: String!
+  country: String!
+  location: String!
   ratings: Float
+  reviews: Int
   img: String!
   imglow: String!
+  size: String!
 }
 
 type StaySubscriptionPayload {
@@ -562,8 +593,10 @@ input StayUpdateInput {
   country: String
   location: String
   ratings: Float
+  reviews: Int
   img: String
   imglow: String
+  size: String
 }
 
 input StayUpdateManyMutationInput {
@@ -573,8 +606,10 @@ input StayUpdateManyMutationInput {
   country: String
   location: String
   ratings: Float
+  reviews: Int
   img: String
   imglow: String
+  size: String
 }
 
 input StayWhereInput {
@@ -664,6 +699,14 @@ input StayWhereInput {
   ratings_lte: Float
   ratings_gt: Float
   ratings_gte: Float
+  reviews: Int
+  reviews_not: Int
+  reviews_in: [Int!]
+  reviews_not_in: [Int!]
+  reviews_lt: Int
+  reviews_lte: Int
+  reviews_gt: Int
+  reviews_gte: Int
   img: String
   img_not: String
   img_in: [String!]
@@ -692,6 +735,20 @@ input StayWhereInput {
   imglow_not_starts_with: String
   imglow_ends_with: String
   imglow_not_ends_with: String
+  size: String
+  size_not: String
+  size_in: [String!]
+  size_not_in: [String!]
+  size_lt: String
+  size_lte: String
+  size_gt: String
+  size_gte: String
+  size_contains: String
+  size_not_contains: String
+  size_starts_with: String
+  size_not_starts_with: String
+  size_ends_with: String
+  size_not_ends_with: String
   AND: [StayWhereInput!]
   OR: [StayWhereInput!]
   NOT: [StayWhereInput!]

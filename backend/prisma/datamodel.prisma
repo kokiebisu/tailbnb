@@ -2,12 +2,15 @@ type Stay {
   id: ID! @id
   title: String @unique
   cost: Int!
-  hostType: String
-  country: String
-  location: String
+  hostType: String!
+  country: String!
+  location: String!
   ratings: Float @default(value: 0.0)
+  reviews: Int @default(value: 0)
   img: String!
   imglow: String!
+  size: String!
+
 }
 
 type Adventure {
@@ -16,8 +19,8 @@ type Adventure {
   period: Int!
   cost: Int!
   country: String!
-  img: String
-  imglow: String
+  img: String!
+  imglow: String!
 }
 
 type Experience {
@@ -29,4 +32,5 @@ type Experience {
   country: String!
   img: String!
   imglow: String!
+  location: String!
 }

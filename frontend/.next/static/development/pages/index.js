@@ -20711,7 +20711,7 @@ __webpack_require__.r(__webpack_exports__);
     title
   }, index) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "w-32 sm:w-1/3 cursor-pointer"
+      className: "w-32 mr-4 sm:w-1/3 cursor-pointer"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: index,
       id: index,
@@ -21356,7 +21356,7 @@ __webpack_require__.r(__webpack_exports__);
       backgroundImage: `url(${_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a})`,
       maxHeight: '80rem'
     },
-    className: "md:h-screen md:min-h-80 relative bg-cover bg-no-repeat"
+    className: "w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-center justify-between"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
