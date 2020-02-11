@@ -27,7 +27,7 @@ export default () => {
   if (error) return `Error! ${error.message}`;
   return (
     <>
-      <div className='flex items-start justify-start flex-wrap w-full grid'>
+      <div className='flex items-start justify-start flex-wrap w-full'>
         {data.experiences.map(
           ({ id, title, cost, ratings, reviews, country, img, imglow }) => {
             return (
