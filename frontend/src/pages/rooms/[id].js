@@ -7,6 +7,7 @@ import { gql } from 'apollo-boost';
 import ExploreHeader from '../../components/layout/ExploreHeader';
 import ImagePanel from '../../components/presentational/ImagePanel';
 import HeaderCard from '../../components/presentational/HeaderCard';
+import DetailSection from '../../components/wrapper/DetailSection';
 
 // Images
 import detail1 from '../../../public/img/high/staydetail1.jpg';
@@ -173,7 +174,7 @@ export default () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className='border-b border-gray-300'>
             <div className='flex items-center justify-center flex-wrap rounded-lg py-1 border border-gray-800'>
               <p>Translate this description to English (Canada)</p>
             </div>
@@ -186,7 +187,18 @@ export default () => {
                 unforgettable landscape of the Douro river.
               </p>
             </div>
+            <div className='flex items-start justify-start'>
+              <button>Read more about the space</button>
+              <svg viewBox='0 0 18 18' className='h-6 w-6'>
+                <path d='m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z' />
+              </svg>
+            </div>
+            <div>
+              <a href=''>Contact host</a>
+            </div>
           </div>
+          <DetailSection title='Amenities' />
+          <DetailSection title='Sleeping arrangements' />
         </div>
         <div className='bg-blue-500'>what</div>
       </div>

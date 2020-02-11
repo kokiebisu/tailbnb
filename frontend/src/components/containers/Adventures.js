@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
 // Component
-import AdventureCard from '../cards/AdventureCard';
+import AdventureCard from '../presentational/AdventureCard';
 import ShowAll from '../ShowAll';
 
 const adventuredata = gql`
