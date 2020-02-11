@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2618,7 +2618,7 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-start justify-start flex-wrap w-full grid"
+    className: "flex items-start justify-start flex-wrap w-full"
   }, data.experiences.map(({
     id,
     title,
@@ -3609,7 +3609,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/

@@ -9,6 +9,18 @@ import ImagePanel from '../../components/presentational/ImagePanel';
 import HeaderCard from '../../components/presentational/HeaderCard';
 import DetailSection from '../../components/wrapper/DetailSection';
 import Reviews from '../../components/containers/Reviews';
+import Footer from '../../components/layout/Footer';
+import HostedBy from '../../components/containers/HostedBy';
+import Neighborhood from '../../components/containers/Neighborhood';
+import KeepInMind from '../../components/containers/KeepInMind';
+import MoreHomes from '../../components/containers/MoreHomes';
+
+// Wrapper
+import Section from '../../components/wrapper/Section';
+
+// Containers
+import TodoNear from '../../components/containers/ToDoNear';
+import MoreLocations from '../../components/containers/MoreLocations';
 
 // Images
 import detail1 from '../../../public/img/high/staydetail1.jpg';
@@ -345,9 +357,25 @@ export default () => {
             <div className='w-full h-64 bg-blue-500'></div>
           </DetailSection>
           <Reviews />
+          <HostedBy />
+          <Neighborhood />
+          <KeepInMind />
         </div>
         <div className='bg-blue-500'>what</div>
+        <Section title='More homes you may like'>
+          <MoreHomes />
+        </Section>
+        <Section title='Things to do near this home'>
+          <TodoNear />
+        </Section>
+        <Section
+          title='Explore other options in and around Penafiel'
+          phrase='More place to stay in Penafiel: Apartments<span> . </span>Bed and
+              breakfasts'>
+          <MoreLocations />
+        </Section>
       </div>
+      <Footer />
     </>
   );
 };

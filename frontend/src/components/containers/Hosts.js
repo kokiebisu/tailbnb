@@ -3,9 +3,9 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
 // Components
-import TopRatedCard from '../cards/TopRatedCard';
+import TopRatedCard from '../presentational/TopRatedCard';
 import ShowAll from '../ShowAll';
-import HostCard from '../cards/HostCard';
+import HostCard from '../presentational/HostCard';
 
 const experiencedata = gql`
   query {

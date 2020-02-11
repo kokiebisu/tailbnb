@@ -20610,7 +20610,7 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-start justify-start flex-wrap w-full grid"
+    className: "flex items-start justify-start flex-wrap w-full"
   }, data.experiences.map(({
     id,
     title,
@@ -21601,7 +21601,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -21624,5 +21624,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -1,5 +1,5 @@
 import React from 'react';
-import TravelCard from '../cards/TravelCard';
+import TravelCard from '../presentational/TravelCard';
 
 // Image
 // High Resolution
