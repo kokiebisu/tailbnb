@@ -58,32 +58,46 @@ export default () => {
         img4={detail4}
         img5={detail5}
       />
-      <div className='px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap'>
-        <div className='w-4/6 '>
+      <div className='px-5 md:px-10 lg:max-w-4xl xl:max-w-5xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap'>
+        <div className='w-7/12 '>
           <div className='flex items-start justify-between border-b border-gray-200'>
             <div>
-              <h3 className='text-3xl font-semibold'>
+              <h3
+                style={{ fontFamily: 'airbnb-bold' }}
+                className='text-3xl text-gray-750 font-semibold leading-none'>
                 Douro Villa with swimming pool, Penafiel, Portugal
               </h3>
-              <p>Penafiel</p>
-              <div className='flex justify-start items-start flex-wrap'>
+              <p
+                style={{ fontFamily: 'airbnb-book' }}
+                className='text-gray-750 py-3'>
+                Penafiel
+              </p>
+              <div
+                style={{ fontFamily: 'airbnb-book' }}
+                className='text-gray-750 pb-3 flex justify-start items-start flex-wrap'>
                 <div className='mr-4'>
                   <p>9 guests</p>
                 </div>
                 <div className='mr-4'>
-                  <p>9 guests</p>
+                  <p>4 bedrooms</p>
                 </div>
                 <div className='mr-4'>
-                  <p>9 guests</p>
+                  <p>9 beds</p>
                 </div>
                 <div className='mr-4'>
-                  <p>9 guests</p>
+                  <p>3 baths</p>
                 </div>
               </div>
             </div>
-            <div className=''>
-              <img className='h-12 w-12 rounded-full' src={detail1} />
-              <p>Maria Henriqueta</p>
+            <div className='flex flex-col justify-center items-start'>
+              <div className='flex justify-center w-full'>
+                <img className='h-16 w-16 rounded-full' src={detail1} />
+              </div>
+              <p
+                style={{ fontFamily: 'airbnb-book' }}
+                className='mt-2 text-gray-650 text-center text-sm leading-snug'>
+                Maria Henriqueta
+              </p>
             </div>
           </div>
           <div className='my-6 border-b border-gray-300'>
@@ -361,7 +375,7 @@ export default () => {
           <Neighborhood />
           <KeepInMind />
         </div>
-        <div className='bg-blue-500'>what</div>
+        <div className='ml-5 w-4/12 bg-blue-500'>what</div>
         <Section title='More homes you may like'>
           <MoreHomes />
         </Section>

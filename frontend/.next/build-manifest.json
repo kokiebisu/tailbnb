@@ -28,10 +28,6 @@
     "/rooms/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/stays": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }
