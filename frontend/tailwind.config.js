@@ -8,7 +8,9 @@ module.exports = {
         background: '#fffcfc'
       },
       height: {
-        '28': '7rem'
+        '28': '7rem',
+        '1/2': '50%',
+        '2/3': '66vh'
       },
       width: {
         '80': '26rem',
