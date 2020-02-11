@@ -20446,9 +20446,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
 /* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
+  id,
   hostType,
   img,
   imglow,
@@ -20483,7 +20487,10 @@ __webpack_require__.r(__webpack_exports__);
     }
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/rooms/[id]",
+    as: `/rooms/${id}`
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-30/31"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
@@ -20515,7 +20522,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "tracking-wide"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "font-bold"
-  }, "$", cost, " CAD"), "/night"));
+  }, "$", cost, " CAD"), "/night")));
 });
 
 /***/ }),
@@ -20927,6 +20934,7 @@ __webpack_require__.r(__webpack_exports__);
 const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   query {
     stays {
+      id
       hostType
       location
       title
@@ -20961,6 +20969,7 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_StayCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: id,
+      id: id,
       hostType: hostType,
       img: img,
       imglow: imglow,

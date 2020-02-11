@@ -1,10 +1,10 @@
 type Query {
-  getStays: [Stay!]!
-  getStay(title: String!): Stay
-  getAdventures: [Adventure!]!
-  getAdventure(title: String!): Adventure
-  getExperiences: [Experience!]!
-  getExperience(title: String!): Experience
+  stays: [Stay!]!
+  stay(id: ID!): Stay
+  adventures: [Adventure!]!
+  adventure(id: ID!): Adventure
+  experiences: [Experience!]!
+  experience(id: ID!): Experience
 }
 
 type Mutation {

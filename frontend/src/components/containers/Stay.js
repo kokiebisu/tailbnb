@@ -9,6 +9,7 @@ import ShowAll from '../ShowAll';
 const staydata = gql`
   query {
     stays {
+      id
       hostType
       location
       title
@@ -34,6 +35,7 @@ export default () => {
               <div className='w-1/2 lg:w-1/3 xl:w-1/4 pb-5'>
                 <StayCard
                   key={id}
+                  id={id}
                   hostType={hostType}
                   img={img}
                   imglow={imglow}

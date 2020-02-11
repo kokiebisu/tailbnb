@@ -1,22 +1,22 @@
 const resolvers = {
   Query: {
-    getStays(root, args, context) {
+    stays(root, args, context) {
       return context.prisma.stays();
     },
-    getStay(root, args, context) {
+    stay(root, args, context) {
       return context.prisma.stay({ title: args.title });
     },
-    getAdventures(root, args, context) {
+    adventures(root, args, context) {
       return context.prisma.adventures();
     },
-    getAdventure(root, args, context) {
-      return context.prisma.adventure({ title: args.title });
+    adventure(root, args, context) {
+      return context.prisma.adventure({ id: args.id });
     },
-    getExperiences(root, args, context) {
+    experiences(root, args, context) {
       return context.prisma.experiences();
     },
-    getExperience(root, args, context) {
-      return context.prisma.experience({ title: args.title });
+    experience(root, args, context) {
+      return context.prisma.experience({ id: args.id });
     }
   },
   Mutation: {
