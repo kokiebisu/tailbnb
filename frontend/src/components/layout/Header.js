@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component
-import HeaderCard from '../cards/HeaderCard';
+import HeaderCard from '../presentational/HeaderCard';
 
 // Images
 import background from '../../../public/img/high/airbnb-background.jpg';

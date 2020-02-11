@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
 // Component
-import StayCard from '../cards/StayCard';
+import StayCard from '../presentational/StayCard';
 import ShowAll from '../ShowAll';
 
 const staydata = gql`

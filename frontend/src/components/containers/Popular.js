@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import Location from '../cards/Location';
+import Location from '../presentational/Location';
 
 export default () => {
   const locations = [

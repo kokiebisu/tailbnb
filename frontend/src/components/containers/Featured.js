@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import FeaturedCard from '../cards/FeaturedCard';
+import FeaturedCard from '../presentational/FeaturedCard';
 
 // Images
 // High Resolution
