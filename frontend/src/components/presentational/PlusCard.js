@@ -3,7 +3,7 @@ import LazyImage from 'react-lazy-progressive-image';
 
 export default ({ img, imglow }) => {
   return (
-    <div className='w-full'>
+    <div className='w-full cursor pointer'>
       <LazyImage src={img} placeholder={imglow}>
         {(src, loading, isVisible) => (
           <img
