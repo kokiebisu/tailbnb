@@ -48,7 +48,7 @@ export default ({
 
   return (
     <Link href='/rooms/[id]' as={`/rooms/${id}`}>
-      <div className='w-30/31'>
+      <div className='w-30/31 cursor-pointer'>
         <LazyImage src={img} placeholder={imglow}>
           {(src, loading, isVisible) => (
             <img className='w-full rounded' src={src} />

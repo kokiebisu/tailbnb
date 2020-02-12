@@ -21355,7 +21355,7 @@ __webpack_require__.r(__webpack_exports__);
     href: "/rooms/[id]",
     as: `/rooms/${id}`
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31"
+    className: "w-30/31 cursor-pointer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
     placeholder: imglow
