@@ -3,7 +3,7 @@ import LazyImage from 'react-lazy-progressive-image';
 
 export default ({ img, imglow, country, title, cost, period }) => {
   return (
-    <div className='w-30/31'>
+    <div className='w-30/31 cursor-pointer'>
       <LazyImage src={img} placeholder={imglow}>
         {(src, loading, isVisible) => (
           <img className='w-full rounded-lg' src={src} />
