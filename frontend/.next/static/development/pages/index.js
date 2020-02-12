@@ -21052,7 +21052,7 @@ __webpack_require__.r(__webpack_exports__);
   period
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31"
+    className: "w-30/31 cursor-pointer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
     placeholder: imglow
@@ -21285,7 +21285,7 @@ __webpack_require__.r(__webpack_exports__);
   imglow
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full"
+    className: "w-full cursor pointer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
     placeholder: imglow
@@ -21416,7 +21416,7 @@ __webpack_require__.r(__webpack_exports__);
   country
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31"
+    className: "w-30/31 cursor-pointer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
     placeholder: imglow
