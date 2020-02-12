@@ -4,6 +4,16 @@ module.exports = {
       '80': '43rem'
     },
     extend: {
+      borderColor: {
+        green: {
+          '850': '#008489'
+        }
+      },
+      textColor: {
+        green: {
+          '850': '#008489'
+        }
+      },
       backgroundColor: {
         background: '#fffcfc'
       },
