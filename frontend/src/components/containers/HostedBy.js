@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Image
 import img1 from '../../../public/img/high/medal.png';
 
 const description =
