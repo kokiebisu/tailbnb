@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -302,8 +302,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-gray-750"
   }, "\xB7 Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "w-12 h-full",
-    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a,
-    alt: ""
+    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a
   })))));
 });
 
@@ -1915,7 +1914,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!***************************************!*\
   !*** multi ./src/pages/rooms/[id].js ***!
   \***************************************/

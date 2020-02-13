@@ -19617,8 +19617,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-gray-750"
   }, "\xB7 Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "w-12 h-full",
-    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a,
-    alt: ""
+    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a
   })))));
 });
 
@@ -21228,7 +21227,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Frooms%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Frooms%2F%5Bid%5D.js ***!
   \******************************************************************************************************************************************************************/
@@ -21251,5 +21250,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
