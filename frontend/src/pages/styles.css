@@ -68,14 +68,3 @@ body {
 }
 
 @tailwind utilities;
-
-.line::after {
-  display: block;
-  content: '';
-  width: 30%;
-  border-bottom: solid 1px #fff;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  z-index: 1;
-}
