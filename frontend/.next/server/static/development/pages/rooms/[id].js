@@ -344,6 +344,12 @@ const renderDescription = description => {
       fontFamily: 'airbnb-bold'
     },
     className: "text-gray-750"
+<<<<<<< HEAD
+  }, "\xB7 Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "w-12 h-full",
+    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a
+  })))));
+=======
   }, "Interaction with guests"), renderDescription(interactionDescription)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "my-4 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -384,6 +390,7 @@ const renderDescription = description => {
     },
     href: "/#"
   }, "Learn more")))));
+>>>>>>> host_section
 });
 
 /***/ }),
