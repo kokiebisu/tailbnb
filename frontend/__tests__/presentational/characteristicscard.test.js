@@ -2,12 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Components
-import CharactersiticCard from '../../src/components/presentational/CharacteristicCard';
-import { isType } from 'graphql';
+import CharacteristicCard from '../../src/components/presentational/CharacteristicCard';
 
-describe('Characteristic Card', () => {
+describe('Characteristics Card', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<CharactersiticCard />);
-    expect(component).toMatchSnapshot();
+    const components = shallow(<CharacteristicCard />);
+    expect(components).toMatchSnapshot();
   });
 });

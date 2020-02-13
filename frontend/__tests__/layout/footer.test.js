@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import Explore from '../src/components/Explore';
+import Footer from '../../src/components/layout/Footer';
 
-describe('Explore', () => {
+describe('Footer', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<Explore />);
+    const component = shallow(<Footer />);
     expect(component).toMatchSnapshot();
   });
 });

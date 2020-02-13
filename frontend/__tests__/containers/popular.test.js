@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import Featured from '../src/components/Featured';
+import Popular from '../../src/components/containers/Popular';
 
-describe('Featured', () => {
+describe('Popular', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<Featured />);
+    const component = shallow(<Popular />);
     expect(component).toMatchSnapshot();
   });
 });
