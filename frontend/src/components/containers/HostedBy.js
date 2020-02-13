@@ -71,7 +71,7 @@ export default () => {
             to providing great stays for guests.
           </p>
           <div>
-            <img className='w-12 h-full' src={img1} alt='' />
+            <img className='w-12 h-full' src={img1} />
           </div>
         </div>
       </div>
