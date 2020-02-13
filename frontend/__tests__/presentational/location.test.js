@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import Location from '../src/components/Location';
+import Location from '../../src/components/presentational/Location';
 
 describe('Location', () => {
   it('should render correctl in "debug" mode', () => {

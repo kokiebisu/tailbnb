@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import Stay from '../src/components/Stay';
+import FooterContent from '../../src/components/layout/FooterContent';
 
-describe('Stay', () => {
+describe('FooterContent', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<Stay />);
+    const component = shallow(<FooterContent />);
     expect(component).toMatchSnapshot();
   });
 });

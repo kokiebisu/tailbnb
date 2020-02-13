@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import SectionOverflow from '../src/components/SectionOverflow';
+import FooterInducer from '../../src/components/layout/FooterInducer';
 
-describe('SectionOverflow', () => {
+describe('FooterInducer', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<SectionOverflow />);
+    const component = shallow(<FooterInducer />);
     expect(component).toMatchSnapshot();
   });
 });

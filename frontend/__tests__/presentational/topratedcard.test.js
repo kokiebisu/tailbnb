@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import StayCard from '../src/components/StayCard';
+import TopRatedCard from '../../src/components/presentational/TopRatedCard';
 
-describe('StayCard', () => {
+describe('TopRateCard', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<StayCard />);
+    const component = shallow(<TopRatedCard />);
     expect(component).toMatchSnapshot();
   });
 });

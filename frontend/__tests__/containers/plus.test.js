@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import HeaderCard from '../src/components/HeaderCard';
+import Plus from '../../src/components/containers/Plus';
 
-describe('HeaderCard', () => {
+describe('Plus', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<HeaderCard />);
+    const component = shallow(<Plus />);
     expect(component).toMatchSnapshot();
   });
 });
