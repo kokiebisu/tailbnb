@@ -2,15 +2,21 @@ import React from 'react';
 export default () => {
   return (
     <>
-      <div>
+      <div className='mt-12 border-b border-gray-300 mb-4'>
         <div className='py-4 border-b border-gray-300'>
-          <h3>Things to keep in mind</h3>
-          <p>
-            <span>Check-in:</span> After 4:00 p.m.
-          </p>
-          <p>
-            <span>Checkout:</span> 12:00 p.m.
-          </p>
+          <h3
+            style={{ fontFamily: 'airbnb-bold' }}
+            className='text-gray-750 text-2xl'>
+            Things to keep in mind
+          </h3>
+          <div classname='pt-6'>
+            <p>
+              <span>Check-in:</span> After 4:00 p.m.
+            </p>
+            <p>
+              <span>Checkout:</span> 12:00 p.m.
+            </p>
+          </div>
         </div>
         <div className='py-4 border-b border-gray-300'>
           <h3>House Rules</h3>
