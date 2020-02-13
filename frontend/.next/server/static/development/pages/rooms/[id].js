@@ -1420,19 +1420,57 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const renderDescription = description => {
+    const wordArray = description.split(' ');
+
+    if (wordArray.length < 50) {
+      return description;
+    } else {
+      const wordArray = description.split(' ');
+      const newArray = [];
+
+      for (let i = 0; i < 50; i++) {
+        newArray.push(wordArray[i]);
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "text-gray-750"
+      }, `${newArray.join(' ')}...`, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "text-green-850",
+        href: "/#"
+      }, "Read More")));
+    }
+  };
+
+  const description = "As we pulled into the driveway, we knew it was an incredible place. Maria and Alberto were the perfect hosts and toured us around their beautiful property. I'm not sure you will believe how amazing it is. We have spent 10 days in Portugal and the time in Penafiel has been the...";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-6 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-center justify-start"
+    className: "flex items-center justify-start pb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "h-12 w-12 rounded-full",
     src: _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_1___default.a
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "font-semibold"
-  }, "Maureen"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "October 2019"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "As we pulled into the driveway, we knew it was an incredible place. Maria and Alberto were the perfect hosts and toured us around their beautiful property. I'm not sure you will believe how amazing it is. We have spent 10 days in Portugal and the time in Penafiel has been the...", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-green-500",
-    href: "/#"
-  }, "hello")));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ml-4 pb-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750"
+  }, "Maureen"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm text-gray-750"
+  }, "October 2019"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-gray-750"
+  }, renderDescription(description)));
 });
 
 /***/ }),
