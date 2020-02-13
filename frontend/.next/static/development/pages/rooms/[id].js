@@ -19551,9 +19551,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1__);
 
 
+const description = 'I love living in Cancun , I love hosting guests and I have won certificates and titles for excellence for the quality of my rooms and attention to my guests. I traded Canada (Edmonton) for Cancun when I was 25 because I had a desire to never have to return to " reality" . It works ,we don’t count down to vacation anymore and board 20+ planes internationally each year to see new “ panorámicas” So we understand and are sympathetic to your stress and expectations. Our condominium property is out of our control so we often have to work much harder to ensure guests happiness but I’m almost always touched by the reviews . The rare time there is a negative aspect in a review I spring to action to change or even totally remodel the area in order to prevent it from happening again. For 15 years I worked in all the top luxury hotels as concierge / guest services and I learned many things that can help you have a fabulous experience. I\'m here full time, not an absentee owner. Sincerely , Michelle';
+const interactionDescription = 'The owners of the Seashell house are on the plot of land which is accessible by the fence you use to get in . Raquel and Vanessa are here full time. Please PRINT YOUR AIRBNB ITINERARY and let them know your arrival time and if you wish for a pick up at the marina. Golf cart rental also easily arranged .';
+
+const renderDescription = description => {
+  const wordArray = description.split(' ');
+
+  if (wordArray.length < 50) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "text-gray-750"
+    }, description);
+  } else {
+    const wordArray = description.split(' ');
+    const newArray = [];
+
+    for (let i = 0; i < 50; i++) {
+      newArray.push(wordArray[i]);
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      style: {
+        fontFamily: 'airbnb-book'
+      },
+      className: "text-gray-750"
+    }, `${newArray.join(' ')}...`, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      style: {
+        fontFamily: 'airbnb-book'
+      },
+      className: "hover:border-green-850 border-b text-green-850 border-transparent",
+      href: "/#"
+    }, "Read More")));
+  }
+};
+
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mt-12"
+    className: "mt-12 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-4 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -19605,21 +19638,66 @@ __webpack_require__.r(__webpack_exports__);
     d: "m261.355469 314.710938c-5.460938 0-10.921875-2.089844-15.082031-6.25l-90.667969-90.667969c-8.339844-8.339844-8.339844-21.824219 0-30.164063 8.34375-8.34375 21.824219-8.34375 30.167969 0l75.582031 75.582032 214.25-214.25c8.34375-8.339844 21.824219-8.339844 30.167969 0 8.339843 8.339843 8.339843 21.824218 0 30.164062l-229.335938 229.335938c-4.160156 4.160156-9.621094 6.25-15.082031 6.25zm0 0"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Verified"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-between border-b border-gray-300 py-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750"
-  }, "Maria Henriqueta is a Superhost"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Maria Henriqueta is a Superhost \xB7\xA0"), "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "w-12 h-full",
+    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "my-4"
+  }, renderDescription(description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     style: {
-      fontFamily: 'airbnb-book'
+      fontFamily: 'airbnb-bold'
     },
     className: "text-gray-750"
-  }, "\xB7 Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "w-12 h-full",
-    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a,
-    alt: ""
-  })))));
+  }, "Interaction with guests"), renderDescription(interactionDescription)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "my-4 border-b border-gray-300"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-gray-750 pb-3"
+  }, "Languages:\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    }
+  }, "English, Espanol")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-gray-750 pb-3"
+  }, "Response rate:\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    }
+  }, "100%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-gray-750 pb-3"
+  }, "Response time:\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    }
+  }, "within an hour")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "mb-4 border border-green-850 rounded py-2 px-3 text-green-850 text-sm mt-2"
+  }, "Contact Host")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "my-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-gray-750"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    }
+  }, "Always communicate through Airbnb \xB7\xA0"), "To protect your payment, never transfer money or communicate outside of the Airbnb website or app.\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "hover:border-green-850 border-b text-green-850 border-transparent",
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    href: "/#"
+  }, "Learn more")))));
 });
 
 /***/ }),
@@ -19719,11 +19797,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-12 border-b border-gray-300"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-4 border-b border-gray-300"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Hosted By Maria Henriqueta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Maria Henriqueta's place is located in Penafiel, Porto, Portugal."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-2xl"
+  }, "The neighborhood"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 pt-3 pb-2"
+  }, "Maria Henriqueta's place is located in Penafiel, Porto, Portugal."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 py-2"
+  }, "Residential area of Isla Mujeres is unique..away from the tourists and busy hotels...you can enjoy the stars at night and be incredibly tranquil."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "mt-3 mb-5 hover:border-green-850 border-b text-green-850 border-transparent"
+  }, "Read more about the neighbourhood"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bg-blue-500 h-64"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Exact location information is provided after a booking is confirmed.")));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 mt-2"
+  }, "The map shows this place\u2019s specific location.")));
 });
 
 /***/ }),
@@ -20855,7 +20960,7 @@ __webpack_require__.r(__webpack_exports__);
         style: {
           fontFamily: 'airbnb-book'
         },
-        className: "text-green-850",
+        className: "hover:border-green-850 border-b text-green-850 border-transparent",
         href: "/#"
       }, "Read More")));
     }
@@ -21228,7 +21333,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Frooms%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Frooms%2F%5Bid%5D.js ***!
   \******************************************************************************************************************************************************************/
@@ -21251,5 +21356,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
