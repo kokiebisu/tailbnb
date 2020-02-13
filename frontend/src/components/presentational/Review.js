@@ -7,7 +7,7 @@ export default () => {
   const renderDescription = (description) => {
     const wordArray = description.split(' ');
     if (wordArray.length < 50) {
-      return description;
+      return <p className='text-gray-750'>description</p>;
     } else {
       const wordArray = description.split(' ');
       const newArray = [];
@@ -47,7 +47,7 @@ export default () => {
           </p>
         </div>
       </div>
-      <p className='text-gray-750'>{renderDescription(description)}</p>
+      {renderDescription(description)}
     </div>
   );
 };

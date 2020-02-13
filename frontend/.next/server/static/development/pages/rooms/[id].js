@@ -104,6 +104,17 @@ module.exports = "/_next/static/images/airbnb-background-b8b3c94eb622e8a6083c338
 
 /***/ }),
 
+/***/ "./public/img/high/medal.png":
+/*!***********************************!*\
+  !*** ./public/img/high/medal.png ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/medal-c34e112e44b30c7d7a01a8ba7feea592.png";
+
+/***/ }),
+
 /***/ "./public/img/high/staydetail1.jpg":
 /*!*****************************************!*\
   !*** ./public/img/high/staydetail1.jpg ***!
@@ -221,34 +232,79 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../public/img/high/medal.png */ "./public/img/high/medal.png");
+/* harmony import */ var _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1__);
+
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-4 border-b border-gray-300"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hosted By Maria Henriqueta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Porto, Portugal", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " . "), "Joined in March 2012"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-center justify-start bg-blue-500"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-2xl"
+  }, "Hosted By Maria Henriqueta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 pt-3 pb-4"
+  }, "Porto, Portugal", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), "Joined in March 2012"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex items-center justify-start"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex items-center justify-start pr-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    className: "h-4 w-4",
+    className: "h-3 w-3",
     viewBox: "0 0 37.286 37.287",
     style: {
-      fill: '#F5385D'
+      fill: '#222222'
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "110 Reviews"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750"
+  }, "110 Reviews")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ml-2 pr-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-start"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "h-6 w-6",
-    viewBox: "0 0 460.24 460.24",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pr-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    viewBox: "0 -11 512.02797 512",
+    className: "h-3 w-3",
+    style: {
+      fill: '#222222'
+    },
     xmlns: "http://www.w3.org/2000/svg"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m187.777344 286.496094c-3.125 3.117187-8.183594 3.117187-11.304688 0l-39.640625-39.574219-11.3125 11.269531 56.601563 56.617188 147.085937-147.089844-11.328125-11.328125zm0 0"
+    d: "m441.644531 247.59375-11.457031-32.554688-123.582031 123.585938c-12.074219 12.097656-28.160157 18.75-45.25 18.75-17.085938 0-33.171875-6.652344-45.246094-18.75l-90.667969-90.667969c-12.097656-12.074219-18.753906-28.160156-18.753906-45.246093 0-17.089844 6.65625-33.175782 18.753906-45.25 12.074219-12.09375 28.160156-18.75 45.246094-18.75 17.089844 0 33.175781 6.65625 45.25 18.75l45.417969 45.398437 121.6875-121.683594-8.195313-23.253906-3.773437-22.570313c-2.367188-14.464843-11.90625-26.453124-25.453125-32.066406-13.609375-5.652344-28.796875-3.902344-40.722656 4.652344l-59.285157 42.921875-59.949219-43.03125c-12.03125-8.488281-27.261718-10.175781-40.789062-4.5-13.4375 5.632813-22.890625 17.601563-25.257812 31.980469l-11.605469 72.253906-72.683594 12.074219c-14.441406 2.371093-26.429687 11.90625-32.0625 25.453125-5.632813 13.589844-3.882813 28.820312 4.671875 40.746094l42.902344 59.285156-43.03125 59.945312c-8.46875 12.03125-10.175782 27.285156-4.5 40.789063 5.652344 13.441406 17.597656 22.890625 31.976562 25.261719l72.257813 11.625 12.074219 72.660156c2.347656 14.421875 11.820312 26.390625 25.257812 32.023437 13.546875 5.671875 28.800781 3.988281 40.941406-4.609375l59.285156-42.921875 59.796876 42.921875c7.316406 5.226563 15.828124 7.914063 24.46875 7.914063 5.480468 0 10.984374-1.066407 16.253906-3.261719 13.570312-5.632812 23.085937-17.621094 25.453125-32.023438l11.625-72.253906 72.660156-12.074218c14.421875-2.371094 26.371094-11.820313 32.023437-25.261719 5.675782-13.503907 3.988282-28.757813-4.609374-40.9375zm0 0"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "m423.128906 175.425781 6.304688-60.386719-55.480469-24.6875c-1.8125-.804687-3.261719-2.253906-4.066406-4.0625l-24.679688-55.480468-60.398437 6.3125c-1.960938.195312-3.925782-.335938-5.519532-1.488282l-49.167968-35.632812-49.167969 35.632812c-1.597656 1.152344-3.5625 1.683594-5.519531 1.488282l-60.402344-6.3125-24.679688 55.480468c-.800781 1.808594-2.25 3.257813-4.0625 4.054688l-55.480468 24.695312 6.304687 60.386719c.203125 1.960938-.324219 3.929688-1.480469 5.527344l-35.632812 49.167969 35.632812 49.167968c1.15625 1.597657 1.683594 3.566407 1.480469 5.527344l-6.304687 60.382813 55.480468 24.6875c1.808594.804687 3.257813 2.253906 4.0625 4.066406l24.679688 55.480469 60.402344-6.3125c.269531 0 .550781-.042969.796875-.042969 1.6875 0 3.328125.535156 4.691406 1.53125l49.199219 35.628906 49.167968-35.628906c1.59375-1.160156 3.558594-1.691406 5.519532-1.488281l60.398437 6.3125 24.679688-55.480469c.804687-1.8125 2.253906-3.257813 4.066406-4.058594l55.480469-24.695312-6.304688-60.382813c-.207031-1.960937.320313-3.929687 1.480469-5.527344l35.628906-49.167968-35.628906-49.167969c-1.160156-1.597656-1.6875-3.566406-1.480469-5.527344zm-76.953125-2.050781-158.398437 158.402344c-3.125 3.121094-8.1875 3.121094-11.3125 0l-67.921875-67.921875c-1.503907-1.5-2.347657-3.539063-2.347657-5.664063s.84375-4.164062 2.347657-5.664062l22.640625-22.558594c3.121094-3.113281 8.175781-3.113281 11.296875 0l39.640625 39.558594 130.101562-130.101563c3.125-3.125 8.1875-3.125 11.3125 0l22.640625 22.636719c3.125 3.125 3.125 8.191406 0 11.3125zm0 0"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Verified")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    d: "m261.355469 314.710938c-5.460938 0-10.921875-2.089844-15.082031-6.25l-90.667969-90.667969c-8.339844-8.339844-8.339844-21.824219 0-30.164063 8.34375-8.34375 21.824219-8.34375 30.167969 0l75.582031 75.582032 214.25-214.25c8.34375-8.339844 21.824219-8.339844 30.167969 0 8.339843 8.339843 8.339843 21.824218 0 30.164062l-229.335938 229.335938c-4.160156 4.160156-9.621094 6.25-15.082031 6.25zm0 0"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Verified"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-between border-b border-gray-300 py-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Maria Henriqueta is a Superhost ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "."), " Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750"
+  }, "Maria Henriqueta is a Superhost"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750"
+  }, "\xB7 Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "w-12 h-full",
+    src: _public_img_high_medal_png__WEBPACK_IMPORTED_MODULE_1___default.a,
+    alt: ""
+  })))));
 });
 
 /***/ }),
@@ -1464,7 +1520,9 @@ __webpack_require__.r(__webpack_exports__);
     const wordArray = description.split(' ');
 
     if (wordArray.length < 50) {
-      return description;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "text-gray-750"
+      }, "description");
     } else {
       const wordArray = description.split(' ');
       const newArray = [];
@@ -1508,9 +1566,7 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-750"
-  }, "October 2019"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-gray-750"
-  }, renderDescription(description)));
+  }, "October 2019"))), renderDescription(description));
 });
 
 /***/ }),
