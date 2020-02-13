@@ -1,9 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD
-exports[`Characteristic Card should render correctly in "debug" mode 1`] = `ShallowWrapper {}`;
-=======
 exports[` 1`] = `ShallowWrapper {}`;
 
 exports[`Characteristics Card should render correctly in "debug" mode 1`] = `ShallowWrapper {}`;
->>>>>>> 9cb84468960711922a5d55a444848face912a73b
