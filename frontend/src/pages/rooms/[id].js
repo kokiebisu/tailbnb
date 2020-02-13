@@ -32,18 +32,19 @@ import detail4 from '../../../public/img/high/staydetail4.jpg';
 import detail5 from '../../../public/img/high/staydetail5.jpg';
 import AmenityCard from '../../components/presentational/AmenityCard';
 
-const staydata = gql`
+const GET_STAY = gql`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
-      id
       title
+      location
+      ratings
     }
   }
 `;
 
 export default () => {
   const router = useRouter();
-  const { loading, error, data } = useQuery(staydata, {
+  const { loading, error, data } = useQuery(GET_STAY, {
     variables: {
       id: router.query.id
     }
@@ -68,12 +69,12 @@ export default () => {
               <h3
                 style={{ fontFamily: 'airbnb-bold' }}
                 className='text-3xl text-gray-750 font-semibold leading-none'>
-                Douro Villa with swimming pool, Penafiel, Portugal
+                {data.stay.title}
               </h3>
               <p
                 style={{ fontFamily: 'airbnb-book' }}
                 className='text-gray-750 py-3'>
-                Penafiel
+                {data.stay.location}
               </p>
               <div
                 style={{ fontFamily: 'airbnb-book' }}
@@ -180,7 +181,7 @@ export default () => {
             <p>Enter your trip dates for accurate pricing and availability</p>
             <div className='w-full h-64 bg-blue-500'></div>
           </DetailSection>
-          <Reviews />
+          <Reviews ratings={data.stay.ratings} />
           <HostedBy />
           <Neighborhood />
           <KeepInMind />

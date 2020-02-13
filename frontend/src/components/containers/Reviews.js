@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import Review from '../../components/presentational/Review';
 
-export default () => {
+export default ({ ratings }) => {
   return (
     <>
       <div>
@@ -38,7 +38,7 @@ export default () => {
                   id='line'
                   className='text-lg text-gray-750 ml-1 pr-4'
                   style={{ fontFamily: 'airbnb-bold' }}>
-                  4.95
+                  {ratings}
                 </p>
               </div>
               <div

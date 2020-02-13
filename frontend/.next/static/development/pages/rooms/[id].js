@@ -19687,7 +19687,9 @@ __webpack_require__.r(__webpack_exports__);
  // Components
 
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+/* harmony default export */ __webpack_exports__["default"] = (({
+  ratings
+}) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-medium'
@@ -19715,7 +19717,7 @@ __webpack_require__.r(__webpack_exports__);
     style: {
       fontFamily: 'airbnb-bold'
     }
-  }, "4.95")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, ratings)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       width: 1,
       height: 13
@@ -20934,11 +20936,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
+const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
-      id
       title
+      location
+      ratings
     }
   }
 `;
@@ -20948,7 +20951,7 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(staydata, {
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAY, {
     variables: {
       id: router.query.id
     }
@@ -20972,12 +20975,12 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
       fontFamily: 'airbnb-bold'
     },
     className: "text-3xl text-gray-750 font-semibold leading-none"
-  }, "Douro Villa with swimming pool, Penafiel, Portugal"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, data.stay.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-750 py-3"
-  }, "Penafiel"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, data.stay.location), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
@@ -21075,7 +21078,9 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
     title: "Availability"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Enter your trip dates for accurate pricing and availability"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full h-64 bg-blue-500"
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Neighborhood__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_12__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    ratings: data.stay.ratings
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Neighborhood__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_12__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "ml-5 w-4/12 bg-blue-500"
   }, "what"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_16__["default"], {
     title: "More homes you may like"
