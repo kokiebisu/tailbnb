@@ -20,7 +20,7 @@ export default () => {
             {`${newArray.join(' ')}...`}
             <a
               style={{ fontFamily: 'airbnb-book' }}
-              className='text-green-850'
+              className='hover:border-green-850 border-b text-green-850 border-transparent'
               href='/#'>
               Read More
             </a>

@@ -2,10 +2,40 @@ import React from 'react';
 
 import img1 from '../../../public/img/high/medal.png';
 
+const description =
+  'I love living in Cancun , I love hosting guests and I have won certificates and titles for excellence for the quality of my rooms and attention to my guests. I traded Canada (Edmonton) for Cancun when I was 25 because I had a desire to never have to return to " reality" . It works ,we don’t count down to vacation anymore and board 20+ planes internationally each year to see new “ panorámicas” So we understand and are sympathetic to your stress and expectations. Our condominium property is out of our control so we often have to work much harder to ensure guests happiness but I’m almost always touched by the reviews . The rare time there is a negative aspect in a review I spring to action to change or even totally remodel the area in order to prevent it from happening again. For 15 years I worked in all the top luxury hotels as concierge / guest services and I learned many things that can help you have a fabulous experience. I\'m here full time, not an absentee owner. Sincerely , Michelle';
+const interactionDescription =
+  'The owners of the Seashell house are on the plot of land which is accessible by the fence you use to get in . Raquel and Vanessa are here full time. Please PRINT YOUR AIRBNB ITINERARY and let them know your arrival time and if you wish for a pick up at the marina. Golf cart rental also easily arranged .';
+const renderDescription = (description) => {
+  const wordArray = description.split(' ');
+  if (wordArray.length < 50) {
+    return <p className='text-gray-750'>{description}</p>;
+  } else {
+    const wordArray = description.split(' ');
+    const newArray = [];
+    for (let i = 0; i < 50; i++) {
+      newArray.push(wordArray[i]);
+    }
+    return (
+      <>
+        <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
+          {`${newArray.join(' ')}...`}
+          <a
+            style={{ fontFamily: 'airbnb-book' }}
+            className='hover:border-green-850 border-b text-green-850 border-transparent'
+            href='/#'>
+            Read More
+          </a>
+        </p>
+      </>
+    );
+  }
+};
+
 export default () => {
   return (
     <>
-      <div className='mt-12'>
+      <div className='mt-12 border-b border-gray-300'>
         <div className='py-4 border-b border-gray-300'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
@@ -61,18 +91,61 @@ export default () => {
           </div>
         </div>
         <div className='flex items-center justify-between border-b border-gray-300 py-3'>
-          <span
-            style={{ fontFamily: 'airbnb-medium' }}
-            className='text-gray-750'>
-            Maria Henriqueta is a Superhost
-          </span>
           <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
-            · Superhosts are experienced, highly rated hosts who are committed
-            to providing great stays for guests.
+            <span
+              style={{ fontFamily: 'airbnb-medium' }}
+              className='text-gray-750'>
+              Maria Henriqueta is a Superhost ·&nbsp;
+            </span>
+            Superhosts are experienced, highly rated hosts who are committed to
+            providing great stays for guests.
           </p>
           <div>
             <img className='w-12 h-full' src={img1} />
           </div>
+        </div>
+        <div className='my-4'>{renderDescription(description)}</div>
+        <div>
+          <h3 style={{ fontFamily: 'airbnb-bold' }} className='text-gray-750'>
+            Interaction with guests
+          </h3>
+          {renderDescription(interactionDescription)}
+        </div>
+        <div className='my-4 border-b border-gray-300'>
+          <p className='text-gray-750 pb-3'>
+            Languages:&nbsp;
+            <span style={{ fontFamily: 'airbnb-medium' }}>
+              English, Espanol
+            </span>
+          </p>
+          <p className='text-gray-750 pb-3'>
+            Response rate:&nbsp;
+            <span style={{ fontFamily: 'airbnb-medium' }}>100%</span>
+          </p>
+          <p className='text-gray-750 pb-3'>
+            Response time:&nbsp;
+            <span style={{ fontFamily: 'airbnb-medium' }}>within an hour</span>
+          </p>
+          <button
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='mb-4 border border-green-850 rounded py-2 px-3 text-green-850 text-sm mt-2'>
+            Contact Host
+          </button>
+        </div>
+        <div className='my-4'>
+          <p className='text-gray-750'>
+            <span style={{ fontFamily: 'airbnb-medium' }}>
+              Always communicate through Airbnb ·&nbsp;
+            </span>
+            To protect your payment, never transfer money or communicate outside
+            of the Airbnb website or app.&nbsp;
+            <a
+              className='hover:border-green-850 border-b text-green-850 border-transparent'
+              style={{ fontFamily: 'airbnb-medium' }}
+              href='/#'>
+              Learn more
+            </a>
+          </p>
         </div>
       </div>
     </>
