@@ -16,16 +16,19 @@ import explore3low from '../../../public/img/low/explore3-low.jpg';
 export default () => {
   const explores = [
     {
+      id: 1,
       img: explore1,
       imglow: explore1low,
       title: 'Stays'
     },
     {
+      id: 2,
       img: explore2,
       imglow: explore2low,
       title: 'Experiences'
     },
     {
+      id: 3,
       img: explore3,
       imglow: explore3low,
       title: 'Adventures'
@@ -36,12 +39,11 @@ export default () => {
       <div className='w-full h-full overflow-y-hidden'>
         <div className='h-full scroller'>
           <div className='scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full'>
-            {explores.map(({ img, imglow, title }, index) => {
+            {explores.map(({ id, img, imglow, title }) => {
               return (
                 <div className='w-32 mr-4 sm:w-1/3 cursor-pointer'>
                   <ExploreCard
-                    key={index}
-                    id={index}
+                    key={id}
                     img={img}
                     imglow={imglow}
                     title={title}
