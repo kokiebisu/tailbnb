@@ -516,26 +516,66 @@ __webpack_require__.r(__webpack_exports__);
   }, "4.8")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "p-2 rounded-full border border-gray-700  mr-3 "
+    className: "p-2 rounded-full ml-2 mt-4 bg-green-850"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-5 h-5"
-  }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "p-2 rounded-full border border-gray-700  mr-3 "
+    className: "flex items-center justify-center w-4 h-4 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book',
+      marginRight: 1
+    },
+    className: "text-sm text-white"
+  }, "1"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "p-2 ml-10 mt-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-5 h-5"
-  }, "2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "p-2 rounded-full border border-gray-700  mr-3 "
+    className: "flex items-center justify-center w-4 h-4 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book',
+      marginRight: 1
+    },
+    className: "text-sm text-green-850"
+  }, "2"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "p-2 ml-10 mt-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-5 h-5"
-  }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mr-3"
-  }, "..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "p-2 rounded-full border border-gray-700  mr-3 "
+    className: "flex items-center justify-center w-4 h-4 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book',
+      marginRight: 1
+    },
+    className: "text-sm text-green-850"
+  }, "3"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "p-2 ml-10 mt-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-5 h-5 "
-  }, "16")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "flex items-center justify-center w-4 h-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book',
+      marginRight: 1,
+      marginBottom: 4
+    },
+    className: "text-sm text-gray-850"
+  }, "..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "p-2 ml-10 mt-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex items-center justify-center w-4 h-4 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book',
+      marginRight: 1
+    },
+    className: "text-sm text-green-850"
+  }, "38"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "p-2 ml-10 mt-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "border border-green-850 rounded-full p-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    className: "h-8 w-8",
+    className: "h-3 w-3",
+    style: {
+      fill: '#008489'
+    },
     viewBox: "0 0 492.004 492.004"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"

@@ -15,7 +15,10 @@ module.exports = {
         }
       },
       backgroundColor: {
-        background: '#fffcfc'
+        background: '#fffcfc',
+        green: {
+          '850': '#008489'
+        }
       },
       height: {
         '28': '7rem',

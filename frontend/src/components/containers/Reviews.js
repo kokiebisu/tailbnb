@@ -146,24 +146,61 @@ export default ({ ratings }) => {
         <Review />
       </div>
       <div className='flex items-center justify-start'>
-        <button className='p-2 rounded-full border border-gray-700  mr-3 '>
-          <div className='w-5 h-5'>1</div>
+        <button className='p-2 rounded-full ml-2 mt-4 bg-green-850'>
+          <div className='flex items-center justify-center w-4 h-4 '>
+            <p
+              style={{ fontFamily: 'airbnb-book', marginRight: 1 }}
+              className='text-sm text-white'>
+              1
+            </p>
+          </div>
         </button>
-        <button className='p-2 rounded-full border border-gray-700  mr-3 '>
-          <div className='w-5 h-5'>2</div>
+        <button className='p-2 ml-10 mt-4'>
+          <div className='flex items-center justify-center w-4 h-4 '>
+            <p
+              style={{ fontFamily: 'airbnb-book', marginRight: 1 }}
+              className='text-sm text-green-850'>
+              2
+            </p>
+          </div>
         </button>
-        <button className='p-2 rounded-full border border-gray-700  mr-3 '>
-          <div className='w-5 h-5'>3</div>
+        <button className='p-2 ml-10 mt-4'>
+          <div className='flex items-center justify-center w-4 h-4 '>
+            <p
+              style={{ fontFamily: 'airbnb-book', marginRight: 1 }}
+              className='text-sm text-green-850'>
+              3
+            </p>
+          </div>
         </button>
-        <div className='mr-3'>...</div>
-        <button className='p-2 rounded-full border border-gray-700  mr-3 '>
-          <div className='w-5 h-5 '>16</div>
+        <button className='p-2 ml-10 mt-4'>
+          <div className='flex items-center justify-center w-4 h-4'>
+            <p
+              style={{
+                fontFamily: 'airbnb-book',
+                marginRight: 1,
+                marginBottom: 4
+              }}
+              className='text-sm text-gray-850'>
+              ...
+            </p>
+          </div>
         </button>
-        <button>
-          <div>
+        <button className='p-2 ml-10 mt-4'>
+          <div className='flex items-center justify-center w-4 h-4 '>
+            <p
+              style={{ fontFamily: 'airbnb-book', marginRight: 1 }}
+              className='text-sm text-green-850'>
+              38
+            </p>
+          </div>
+        </button>
+        <button className='p-2 ml-10 mt-4'>
+          <div className='border border-green-850 rounded-full p-3'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='h-8 w-8'
+              className='h-3 w-3'
+              style={{ fill: '#008489' }}
               viewBox='0 0 492.004 492.004'>
               <g>
                 <g>
