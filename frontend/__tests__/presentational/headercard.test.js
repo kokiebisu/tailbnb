@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import FooterInducer from '../src/components/FooterInducer';
+import HeaderCard from '../../src/components/presentational/HeaderCard';
 
-describe('FooterInducer', () => {
+describe('HeaderCard', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<FooterInducer />);
+    const component = shallow(<HeaderCard />);
     expect(component).toMatchSnapshot();
   });
 });

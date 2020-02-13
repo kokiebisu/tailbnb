@@ -6,7 +6,7 @@ import { gql } from 'apollo-boost';
 import StayCard from '../presentational/StayCard';
 import ShowAll from '../ShowAll';
 
-const staydata = gql`
+export const GET_STAYS = gql`
   query {
     stays {
       id
@@ -22,7 +22,7 @@ const staydata = gql`
 `;
 
 export default () => {
-  const { loading, error, data } = useQuery(staydata);
+  const { loading, error, data } = useQuery(GET_STAYS);
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
 

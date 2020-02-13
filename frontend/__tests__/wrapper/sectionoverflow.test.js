@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import Popular from '../src/components/Popular';
+import SectionOverflow from '../../src/components/wrapper/SectionOverflow';
 
-describe('Popular', () => {
+describe('SectionOverflow', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<Popular />);
+    const component = shallow(<SectionOverflow />);
     expect(component).toMatchSnapshot();
   });
 });
