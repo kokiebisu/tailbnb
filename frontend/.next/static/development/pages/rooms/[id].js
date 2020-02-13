@@ -20424,8 +20424,8 @@ __webpack_require__.r(__webpack_exports__);
         viewBox: "0 0 511.999 511.999",
         xmlns: "http://www.w3.org/2000/svg"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
-        "clip-rule": "evenodd",
-        "fill-rule": "evenodd"
+        clipRule: "evenodd",
+        fillRule: "evenodd"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
         d: "m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
