@@ -1962,43 +1962,48 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap justify-start items-start"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      backgroundImage: `url(${img1})`
-    },
-    className: "border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat overflow-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: img1,
+    id: "zoom",
+    className: "w-full bg-cover bg-no-repeat"
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2 h-2/3 relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse1, null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2 h-2/3 relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-full md:flex items-start justify-start flex-wrap"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      backgroundImage: `url(${img2})`
-    },
-    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: img2,
+    id: "zoom",
+    className: "w-full bg-cover bg-no-repeat"
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full md:w-1/2 h-1/2 relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse2, null)), loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      backgroundImage: `url(${img3})`
-    },
-    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: img3,
+    id: "zoom",
+    className: "w-full bg-cover bg-no-repeat"
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full md:w-1/2 h-1/2 relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse3, null)), loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      backgroundImage: `url(${img4})`
-    },
-    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: img4,
+    id: "zoom",
+    className: "w-full bg-cover bg-no-repeat"
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full md:w-1/2 h-1/2 relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse4, null)), loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      backgroundImage: `url(${img5})`
-    },
-    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat"
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: img5,
+    id: "zoom",
+    className: "w-full bg-cover bg-no-repeat"
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full md:w-1/2 h-1/2 relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse5, null)))));
 });
