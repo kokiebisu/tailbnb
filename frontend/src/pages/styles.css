@@ -37,6 +37,18 @@ body {
 
 @tailwind components;
 
+#zoom {
+  cursor: pointer;
+  transition: transform 0.8s, filter 2s ease-in-out;
+  filter: blue(2px);
+  transform: scale(1.2);
+}
+
+#zoom:hover {
+  filter: blur(1);
+  transform: scale(1.25);
+}
+
 .scroller {
   overflow-x: scroll !important;
   overflow-y: auto !important;

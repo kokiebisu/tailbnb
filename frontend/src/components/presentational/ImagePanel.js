@@ -16,10 +16,9 @@ export default ({ img1, img2, img3, img4, img5 }) => {
   return (
     <div className='flex flex-wrap justify-start items-start'>
       {loading ? (
-        <div
-          style={{ backgroundImage: `url(${img1})` }}
-          className='border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat'
-        />
+        <div className='border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat overflow-hidden'>
+          <img src={img1} id='zoom' className='w-full bg-cover bg-no-repeat' />
+        </div>
       ) : (
         <div className='w-1/2 h-2/3 relative'>
           <SSkeletonPulse1 />
@@ -29,40 +28,52 @@ export default ({ img1, img2, img3, img4, img5 }) => {
       <div className='w-1/2 h-2/3 relative'>
         <div className='w-full h-full md:flex items-start justify-start flex-wrap'>
           {loading ? (
-            <div
-              style={{ backgroundImage: `url(${img2})` }}
-              className='w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat'
-            />
+            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+              <img
+                src={img2}
+                id='zoom'
+                className='w-full bg-cover bg-no-repeat'
+              />
+            </div>
           ) : (
             <div className='w-full md:w-1/2 h-1/2 relative'>
               <SSkeletonPulse2 />
             </div>
           )}
           {loading ? (
-            <div
-              style={{ backgroundImage: `url(${img3})` }}
-              className='w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat'
-            />
+            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+              <img
+                src={img3}
+                id='zoom'
+                className='w-full bg-cover bg-no-repeat'
+              />
+            </div>
           ) : (
             <div className='w-full md:w-1/2 h-1/2 relative'>
               <SSkeletonPulse3 />
             </div>
           )}
           {loading ? (
-            <div
-              style={{ backgroundImage: `url(${img4})` }}
-              className='w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat'
-            />
+            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+              <img
+                src={img4}
+                id='zoom'
+                className='w-full bg-cover bg-no-repeat'
+              />
+            </div>
           ) : (
             <div className='w-full md:w-1/2 h-1/2 relative'>
               <SSkeletonPulse4 />
             </div>
           )}
           {loading ? (
-            <div
-              style={{ backgroundImage: `url(${img5})` }}
-              className='w-full border border-gray-300 md:w-1/2 h-1/2 relative bg-cover bg-no-repeat'
-            />
+            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+              <img
+                src={img5}
+                id='zoom'
+                className='w-full bg-cover bg-no-repeat'
+              />
+            </div>
           ) : (
             <div className='w-full md:w-1/2 h-1/2 relative'>
               <SSkeletonPulse5 />
