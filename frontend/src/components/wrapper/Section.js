@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default ({ title, phrase, children }) => {
-  const renderContent = () => {
+  const renderContent = (phrase) => {
     if (phrase) {
       return (
         <>
@@ -21,8 +21,8 @@ export default ({ title, phrase, children }) => {
       return (
         <>
           <h3
-            style={{ fontFamily: 'airbnb-medium' }}
-            className='text-gray-850 text-2xl py-3 '>
+            style={{ fontFamily: 'airbnb-bold' }}
+            className='text-gray-750 text-2xl pt-3 pb-5'>
             {title}
           </h3>
         </>
@@ -30,8 +30,8 @@ export default ({ title, phrase, children }) => {
     }
   };
   return (
-    <div className='px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5'>
-      {renderContent()}
+    <div className='px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5 w-full'>
+      {renderContent(phrase)}
       {children}
     </div>
   );

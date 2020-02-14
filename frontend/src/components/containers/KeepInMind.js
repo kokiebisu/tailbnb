@@ -2,7 +2,7 @@ import React from 'react';
 export default () => {
   return (
     <>
-      <div className='mt-12 border-b border-gray-300 mb-4'>
+      <div className='mt-12 mb-4'>
         <div className='py-4 border-b border-gray-300'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
