@@ -16,6 +16,8 @@ import KeepInMind from '../../components/containers/KeepInMind';
 import MoreHomes from '../../components/containers/MoreHomes';
 import Characteristics from '../../components/containers/Characteristics';
 import SleepingArrangmentsCard from '../../components/presentational/SleepingArrangmentsCard';
+import Cancellations from '../../components/presentational/Cancellations';
+import CheckInCard from '../../components/presentational/CheckInCard';
 
 // Wrapper
 import Section from '../../components/wrapper/Section';
@@ -185,18 +187,18 @@ export default () => {
           <HostedBy />
           <Neighborhood />
           <KeepInMind />
+          <Cancellations />
         </div>
-        <div className='ml-5 w-4/12 bg-blue-500'>what</div>
+        <div className='ml-5 w-4/12 flex flex-col justify-start items-end'>
+          <CheckInCard />
+        </div>
         <Section title='More homes you may like'>
           <MoreHomes />
         </Section>
         <Section title='Things to do near this home'>
           <TodoNear />
         </Section>
-        <Section
-          title='Explore other options in and around Penafiel'
-          phrase='More place to stay in Penafiel: Apartments<span> . </span>Bed and
-              breakfasts'>
+        <Section title='Explore other options in and around Penafiel'>
           <MoreLocations />
         </Section>
       </div>

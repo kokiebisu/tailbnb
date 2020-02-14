@@ -15,7 +15,7 @@ export default () => {
 
       <div className='flex flex-wrap items-center justify-between'>
         <p>
-          Entire House<span> . </span>9 beds
+          Entire House<span> · </span>9 beds
         </p>
         <div className='flex items-center justify-center flex-wrap'>
           <svg
