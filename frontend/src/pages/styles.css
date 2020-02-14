@@ -57,6 +57,14 @@ body {
   filter: brightness(70%);
 }
 
+#hoverbox {
+  transition: box-shadow 0.5s ease-in;
+}
+
+#hoverbox:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
 .scroller {
   overflow-x: scroll !important;
   overflow-y: auto !important;
