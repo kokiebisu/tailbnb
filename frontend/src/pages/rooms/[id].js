@@ -1,9 +1,14 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
+import Head from 'next/head';
+
+// Loading
 import Skeleton from 'react-loading-skeleton';
 import PulseLoader from 'react-spinners/PulseLoader';
+
+// GraphQL
+import { gql } from 'apollo-boost';
 
 // Components
 import ExploreHeader from '../../components/layout/ExploreHeader';
@@ -72,6 +77,11 @@ export default () => {
   if (error) return 'error...';
   return (
     <>
+      <Head>
+        <title>{data.stay.title}</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <link rel='icon' type='image/x-icon' href='/img/high/favicon.ico' />
+      </Head>
       <ExploreHeader />
       <ImagePanel
         img1={detail1}
