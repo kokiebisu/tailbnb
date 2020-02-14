@@ -28955,7 +28955,7 @@ const MyApp = ({
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
     rel: "icon",
     type: "image/x-icon",
-    href: "/img/favicon.ico"
+    href: "/img/high/favicon.ico"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, pageProps)));
 };
 
