@@ -16,7 +16,7 @@ const MyApp = ({ Component, pageProps, apollo }) => {
             name='viewport'
             content='initial-scale=1.0, width=device-width'
           />
-          <link rel='icon' type='image/x-icon' href='/img/favicon.ico' />
+          <link rel='icon' type='image/x-icon' href='/img/high/favicon.ico' />
         </Head>
         <Component {...pageProps} />
       </ApolloProvider>
