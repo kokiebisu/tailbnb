@@ -14,7 +14,7 @@ export default ({ img1, img2, img3, img4, img5 }) => {
 
   setSkeleton(4000);
   return (
-    <div className='flex flex-wrap justify-start items-start'>
+    <div id='zoomwrapper' className='flex flex-wrap justify-start items-start'>
       {loading ? (
         <div className='border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat overflow-hidden'>
           <img src={img1} id='zoom' className='w-full bg-cover bg-no-repeat' />

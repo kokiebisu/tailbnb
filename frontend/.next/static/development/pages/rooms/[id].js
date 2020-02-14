@@ -26327,6 +26327,7 @@ __webpack_require__.r(__webpack_exports__);
 
   setSkeleton(4000);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "zoomwrapper",
     className: "flex flex-wrap justify-start items-start"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat overflow-hidden"

@@ -36,10 +36,17 @@ body {
 }
 
 @tailwind components;
+#zoomwrapper:hover #zoom:hover {
+  filter: brightness(100%);
+}
+
+#zoomwrapper:hover #zoom:not(:hover) {
+  filter: brightness(70%);
+}
 
 #zoom {
   cursor: pointer;
-  transition: transform 0.8s, filter 2s ease-in-out;
+  transition: transform 0.5s, filter 0.4s ease-in-out;
   filter: blue(2px);
   transform: scale(1.2);
 }
@@ -47,6 +54,7 @@ body {
 #zoom:hover {
   filter: blur(1);
   transform: scale(1.25);
+  filter: brightness(70%);
 }
 
 .scroller {
