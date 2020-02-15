@@ -7,37 +7,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import AdventureCard from '../presentational/AdventureCard';
 import ShowAll from '../ShowAll';
 
-const GET_ADVENTURES = gql`
-  query {
-    adventures {
-      id
-      title
-      period
-      cost
-      country
-      img
-      imglow
-    }
-  }
-`;
-
-export default () => {
-  const { loading, error, data } = useQuery(GET_ADVENTURES, {
-    fetchPolicy: 'no-cache',
-    ssr: true,
-    pollInterval: 500
-  });
-
-  if (loading) {
-    return (
-      <div className='flex justify-center items-center w-full py-20'>
-        <PulseLoader size={10} color={'#008489'} />
-      </div>
-    );
-  }
-
-  if (error) return `Error! ${error.message}`;
-
+export default ({ data }) => {
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>

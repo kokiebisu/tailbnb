@@ -30,6 +30,15 @@ const QUERY = gql`
       img
       imglow
     }
+    adventures {
+      id
+      title
+      period
+      cost
+      country
+      img
+      imglow
+    }
   }
 `;
 
@@ -54,7 +63,13 @@ const Home = () => {
         title='Introducing Airbnb Adventures'
         phrase='Multi-day trips led by local experts—activities, meals, and stays
         included'>
-        <Adventures />
+        {loading ? (
+          <div className='flex justify-center items-center w-full py-20'>
+            <PulseLoader size={10} color={'#008489'} />
+          </div>
+        ) : (
+          <Adventures data={data} />
+        )}
       </Section>
       <Section title='Places to stay around the world'>
         {loading ? (
@@ -62,7 +77,7 @@ const Home = () => {
             <PulseLoader size={10} color={'#008489'} />
           </div>
         ) : (
-          <Stay data={data} loading={loading} />
+          <Stay data={data} />
         )}
       </Section>
       <Section

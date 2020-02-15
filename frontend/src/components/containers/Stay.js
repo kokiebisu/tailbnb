@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import StayCard from '../presentational/StayCard';
 import ShowAll from '../ShowAll';
 
-export default ({ data, loading }) => {
+export default ({ data }) => {
   return (
     <>
       <div className='flex flex-wrap items-start justify-start w-full'>

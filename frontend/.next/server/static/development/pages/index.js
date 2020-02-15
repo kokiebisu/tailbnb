@@ -2192,40 +2192,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
-  query {
-    adventures {
-      id
-      title
-      period
-      cost
-      country
-      img
-      imglow
-    }
-  }
-`;
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  const {
-    loading,
-    error,
-    data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES, {
-    fetchPolicy: 'no-cache',
-    ssr: true,
-    pollInterval: 500
-  });
-
-  if (loading) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "flex justify-center items-center w-full py-20"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      size: 10,
-      color: '#008489'
-    }));
-  }
-
-  if (error) return `Error! ${error.message}`;
+/* harmony default export */ __webpack_exports__["default"] = (({
+  data
+}) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
   }, data.adventures.map(({
@@ -2584,8 +2553,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
-  data,
-  loading
+  data
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
@@ -3666,6 +3634,15 @@ const QUERY = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       img
       imglow
     }
+    adventures {
+      id
+      title
+      period
+      cost
+      country
+      img
+      imglow
+    }
   }
 `;
 
@@ -3686,7 +3663,14 @@ const Home = () => {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_containers_Plus__WEBPACK_IMPORTED_MODULE_8__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Introducing Airbnb Adventures",
     phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_9__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex justify-center items-center w-full py-20"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    size: 10,
+    color: '#008489'
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    data: data
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Places to stay around the world"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex justify-center items-center w-full py-20"
@@ -3694,8 +3678,7 @@ const Home = () => {
     size: 10,
     color: '#008489'
   })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    data: data,
-    loading: loading
+    data: data
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Top-rated experiences",
     phrase: "Book activities led by local hosts on your next trip."
