@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2181,15 +2181,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.js");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.js");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+
 
 
  // Component
 
 
 
-const adventuredata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
+const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   query {
     adventures {
       id
@@ -2207,8 +2210,21 @@ const adventuredata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(adventuredata);
-  if (loading) return 'Loading...';
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES, {
+    fetchPolicy: 'no-cache',
+    ssr: true,
+    pollInterval: 500
+  });
+
+  if (loading) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "flex justify-center items-center w-full py-20"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      size: 10,
+      color: '#008489'
+    }));
+  }
+
   if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
@@ -2223,7 +2239,7 @@ const adventuredata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
       key: id,
       img: img,
       imglow: imglow,
@@ -2232,7 +2248,7 @@ const adventuredata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       cost: cost,
       period: period
     }));
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Show all adventures"
   }));
 });
@@ -2330,19 +2346,22 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/FeaturedCard */ "./src/components/presentational/FeaturedCard.js");
-/* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
-/* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
-/* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/img/high/featured3.jpg */ "./public/img/high/featured3.jpg");
-/* harmony import */ var _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../public/img/low/featured1-low.jpg */ "./public/img/low/featured1-low.jpg");
-/* harmony import */ var _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../public/img/low/featured2-low.jpg */ "./public/img/low/featured2-low.jpg");
-/* harmony import */ var _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../public/img/low/featured3-low.jpg */ "./public/img/low/featured3-low.jpg");
-/* harmony import */ var _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/FeaturedCard */ "./src/components/presentational/FeaturedCard.js");
+/* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
+/* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
+/* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../public/img/high/featured3.jpg */ "./public/img/high/featured3.jpg");
+/* harmony import */ var _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../public/img/low/featured1-low.jpg */ "./public/img/low/featured1-low.jpg");
+/* harmony import */ var _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../public/img/low/featured2-low.jpg */ "./public/img/low/featured2-low.jpg");
+/* harmony import */ var _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../public/img/low/featured3-low.jpg */ "./public/img/low/featured3-low.jpg");
+/* harmony import */ var _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_8__);
+
  // Components
 
  // Images
@@ -2356,23 +2375,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const [loading, setLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  const setSleep = async seconds => {
+    await sleep(seconds);
+    setLoading(false);
+  };
+
   const featureds = [{
-    img: _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    imglow: _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    img: _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+    imglow: _public_img_low_featured1_low_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
     verified: 940,
     description: 'Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels'
   }, {
-    img: _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-    imglow: _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    img: _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+    imglow: _public_img_low_featured2_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
     verified: 300,
     description: 'Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.'
   }, {
-    img: _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    imglow: _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    img: _public_img_high_featured3_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    imglow: _public_img_low_featured3_low_jpg__WEBPACK_IMPORTED_MODULE_8___default.a,
     verified: 290,
     description: 'Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design'
   }];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  setSleep(3000);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex justify-center items-center w-full py-20"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    size: 10,
+    color: '#008489'
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "overflow-y-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-full overflow-y-hidden"
@@ -2389,7 +2425,7 @@ __webpack_require__.r(__webpack_exports__);
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "w-80 lg:w-1/3 pb-5 mr-2"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: id,
       img: img,
       imglow: imglow,
@@ -2445,11 +2481,25 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_Location__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/Location */ "./src/components/presentational/Location.js");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _presentational_Location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/Location */ "./src/components/presentational/Location.js");
+
  // Components
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const [loading, setLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  const setSleep = async seconds => {
+    await sleep(seconds);
+    setLoading(false);
+  };
+
   const locations = [{
     id: 1,
     location: 'San Francisco',
@@ -2491,7 +2541,13 @@ __webpack_require__.r(__webpack_exports__);
     location: 'New Orleans',
     price: 210
   }];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  setSleep(5000);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex justify-center items-center w-full py-20"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    size: 10,
+    color: '#008489'
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-center justify-start w-full"
   }, locations.map(({
     id,
@@ -2500,7 +2556,7 @@ __webpack_require__.r(__webpack_exports__);
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_Location__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_Location__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: id,
       location: location,
       price: price
@@ -2526,8 +2582,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.js");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.js");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+
 
 
  // Component
@@ -2553,8 +2612,21 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS);
-  if (loading) return 'Loading...';
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS, {
+    fetchPolicy: 'no-cache',
+    ssr: true,
+    pollInterval: 500
+  });
+
+  if (loading) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "flex justify-center items-center w-full py-20"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      size: 10,
+      color: '#008489'
+    }));
+  }
+
   if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
@@ -2570,7 +2642,7 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
       key: id,
       id: id,
       hostType: hostType,
@@ -2581,7 +2653,7 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       cost: cost,
       ratings: ratings
     }));
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Show(2000+)"
   }));
 });
@@ -2603,15 +2675,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../presentational/TopRatedCard */ "./src/components/presentational/TopRatedCard.js");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/TopRatedCard */ "./src/components/presentational/TopRatedCard.js");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+
 
 
  // Components
 
 
 
-const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
+const GET_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   query {
     experiences {
       id
@@ -2630,8 +2705,21 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(experiencedata);
-  if (loading) return 'Loading...';
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_EXPERIENCES, {
+    fetchPolicy: 'no-cache',
+    ssr: true,
+    pollInterval: 500
+  });
+
+  if (loading) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "flex justify-center items-center w-full py-20"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      size: 10,
+      color: '#008489'
+    }));
+  }
+
   if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
@@ -2647,7 +2735,7 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   }) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
       key: id,
       img: img,
       imglow: imglow,
@@ -2657,7 +2745,7 @@ const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       reviews: reviews,
       country: country
     }));
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Show all experiences"
   }));
 });
@@ -3625,7 +3713,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
@@ -3766,6 +3854,17 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("react-lazy-progressive-image");
+
+/***/ }),
+
+/***/ "react-spinners/PulseLoader":
+/*!*********************************************!*\
+  !*** external "react-spinners/PulseLoader" ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-spinners/PulseLoader");
 
 /***/ }),
 

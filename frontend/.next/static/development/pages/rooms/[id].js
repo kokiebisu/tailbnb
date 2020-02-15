@@ -26701,7 +26701,6 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     }
   });
   const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
-  const [secondLoaded, setSecondLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -26878,7 +26877,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Frooms%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Frooms%2F%5Bid%5D.js ***!
   \******************************************************************************************************************************************************************/
@@ -26901,5 +26900,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map

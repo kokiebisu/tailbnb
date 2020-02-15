@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2336,7 +2336,6 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     }
   });
   const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
-  const [secondLoaded, setSecondLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -2513,7 +2512,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!***************************************!*\
   !*** multi ./src/pages/rooms/[id].js ***!
   \***************************************/

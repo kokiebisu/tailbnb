@@ -1,12 +1,13 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+import PulseLoader from 'react-spinners/PulseLoader';
 
 // Components
 import TopRatedCard from '../presentational/TopRatedCard';
 import ShowAll from '../ShowAll';
 
-const experiencedata = gql`
+const GET_EXPERIENCES = gql`
   query {
     experiences {
       id
@@ -22,9 +23,22 @@ const experiencedata = gql`
 `;
 
 export default () => {
-  const { loading, error, data } = useQuery(experiencedata);
-  if (loading) return 'Loading...';
+  const { loading, error, data } = useQuery(GET_EXPERIENCES, {
+    fetchPolicy: 'no-cache',
+    ssr: true,
+    pollInterval: 500
+  });
+
+  if (loading) {
+    return (
+      <div className='flex justify-center items-center w-full py-20'>
+        <PulseLoader size={10} color={'#008489'} />
+      </div>
+    );
+  }
+
   if (error) return `Error! ${error.message}`;
+
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>

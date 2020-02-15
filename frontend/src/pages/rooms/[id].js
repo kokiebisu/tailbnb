@@ -60,7 +60,6 @@ export default () => {
   });
 
   const [loaded, setLoaded] = useState(false);
-  const [secondLoaded, setSecondLoaded] = useState(false);
 
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
