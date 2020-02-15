@@ -1,7 +1,4 @@
 import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
-import PulseLoader from 'react-spinners/PulseLoader';
 
 // Wrapper
 import Section from '../components/wrapper/Section';
@@ -18,36 +15,7 @@ import Popular from '../components/containers/Popular';
 import Featured from '../components/containers/Featured';
 import Footer from '../components/layout/Footer';
 
-const QUERY = gql`
-  query {
-    stays {
-      id
-      hostType
-      location
-      title
-      cost
-      ratings
-      img
-      imglow
-    }
-    adventures {
-      id
-      title
-      period
-      cost
-      country
-      img
-      imglow
-    }
-  }
-`;
-
 const Home = () => {
-  const { loading, error, data } = useQuery(QUERY, {
-    fetchPolicy: 'no-cache',
-    ssr: true
-  });
-
   return (
     <>
       <Header />
@@ -63,22 +31,10 @@ const Home = () => {
         title='Introducing Airbnb Adventures'
         phrase='Multi-day trips led by local experts—activities, meals, and stays
         included'>
-        {loading ? (
-          <div className='flex justify-center items-center w-full py-20'>
-            <PulseLoader size={10} color={'#008489'} />
-          </div>
-        ) : (
-          <Adventures data={data} />
-        )}
+        <Adventures />
       </Section>
       <Section title='Places to stay around the world'>
-        {loading ? (
-          <div className='flex justify-center items-center w-full py-20'>
-            <PulseLoader size={10} color={'#008489'} />
-          </div>
-        ) : (
-          <Stay data={data} />
-        )}
+        <Stay />
       </Section>
       <Section
         title='Top-rated experiences'
