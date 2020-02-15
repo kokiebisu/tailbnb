@@ -59,25 +59,11 @@ export default () => {
     }
   });
 
-  const [loaded, setLoaded] = useState(false);
-
-  function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  const setSkeleton = async (seconds) => {
-    await sleep(seconds);
-    setLoaded(true);
-  };
-
-  setSkeleton(4000);
-
-  if (loading) return 'loading...';
-  if (error) return 'error...';
   return (
     <>
       <Head>
-        <title>{data.stay.title}</title>
+        {loading ? <title>hello</title> : <title>{data.stay.title}</title>}
+
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <link rel='icon' type='image/x-icon' href='/img/high/favicon.ico' />
       </Head>
@@ -88,69 +74,74 @@ export default () => {
         img3={detail3}
         img4={detail4}
         img5={detail5}
+        loading={loading}
       />
 
       <div className='px-5 md:px-10 lg:max-w-4xl xl:max-w-5xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap'>
         <div className='w-7/12 '>
           <div className='flex items-start justify-between border-b border-gray-200'>
             <div>
-              {loaded ? (
+              {loading ? (
+                <Skeleton height={30} />
+              ) : (
                 <h3
                   style={{ fontFamily: 'airbnb-bold' }}
                   className='text-3xl text-gray-750 font-semibold leading-none'>
                   {data.stay.title}
                 </h3>
-              ) : (
-                <Skeleton height={30} />
               )}
-              {loaded ? (
+              {loading ? (
+                <Skeleton width={80} />
+              ) : (
                 <p
                   style={{ fontFamily: 'airbnb-book' }}
                   className='text-gray-750 py-3'>
                   {data.stay.location}
                 </p>
-              ) : (
-                <Skeleton width={80} />
               )}
 
               <div
                 style={{ fontFamily: 'airbnb-book' }}
                 className='text-gray-750 pb-3 flex justify-start items-start flex-wrap'>
                 <div className='mr-4'>
-                  {loaded ? <p>9 guests</p> : <Skeleton width={60} />}
+                  {loading ? <Skeleton width={60} /> : <p>9 guests</p>}
                 </div>
                 <div className='mr-4'>
-                  {loaded ? <p>4 bedrooms</p> : <Skeleton width={60} />}
+                  {loading ? <Skeleton width={60} /> : <p>4 bedrooms</p>}
                 </div>
                 <div className='mr-4'>
-                  {loaded ? <p>9 beds</p> : <Skeleton width={60} />}
+                  {loading ? <Skeleton width={60} /> : <p>9 beds</p>}
                 </div>
                 <div className='mr-4'>
-                  {loaded ? <p>3 baths</p> : <Skeleton width={60} />}
+                  {loading ? <Skeleton width={60} /> : <p>3 baths</p>}
                 </div>
               </div>
             </div>
             <div className='flex flex-col justify-center items-start'>
               <div className='flex justify-center w-full'>
-                {loaded ? (
-                  <img className='h-16 w-16 rounded-full' src={detail1} />
-                ) : (
+                {loading ? (
                   <Skeleton circle={true} width={65} height={65} />
+                ) : (
+                  <img className='h-16 w-16 rounded-full' src={detail1} />
                 )}
               </div>
-              {loaded ? (
+              {loading ? null : (
                 <p
                   style={{ fontFamily: 'airbnb-book' }}
                   className='mt-2 text-gray-650 text-center text-sm leading-snug'>
                   Maria Henriqueta
                 </p>
-              ) : null}
+              )}
             </div>
           </div>
           <div className='my-6 border-b border-gray-300'>
             <Characteristics />
           </div>
-          {loaded ? (
+          {loading ? (
+            <div className='flex justify-center items-center w-full py-20'>
+              <PulseLoader size={10} color={'#008489'} />
+            </div>
+          ) : (
             <>
               <div className='border-b border-gray-300'>
                 <div className='my-8'>
@@ -237,16 +228,12 @@ export default () => {
               <KeepInMind />
               <Cancellations />
             </>
-          ) : (
-            <div className='flex justify-center items-center w-full py-20'>
-              <PulseLoader size={10} color={'#008489'} />
-            </div>
           )}
         </div>
         <div className='ml-5 w-4/12 flex flex-col justify-start items-end'>
           <CheckInCard />
         </div>
-        {loaded ? (
+        {loading ? null : (
           <>
             <Section title='More homes you may like'>
               <MoreHomes />
@@ -258,7 +245,7 @@ export default () => {
               <MoreLocations />
             </Section>
           </>
-        ) : null}
+        )}
       </div>
       <Footer />
     </>

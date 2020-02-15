@@ -1,33 +1,37 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-export default ({ img1, img2, img3, img4, img5 }) => {
-  const [loading, setLoading] = useState(false);
-  function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
+export default ({ img1, img2, img3, img4, img5, loading }) => {
+  // const [loading, setLoading] = useState(false);
+  // function sleep(ms) {
+  //   return new Promise((resolve) => setTimeout(resolve, ms));
+  // }
 
-  const setSkeleton = async (seconds) => {
-    await sleep(seconds);
-    setLoading(true);
-  };
+  // const setSkeleton = async (seconds) => {
+  //   await sleep(seconds);
+  //   setLoading(true);
+  // };
 
-  setSkeleton(4000);
+  // setSkeleton(4000);
   return (
     <div id='zoomwrapper' className='flex flex-wrap justify-start items-start'>
       {loading ? (
-        <div className='border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat overflow-hidden'>
-          <img src={img1} id='zoom' className='w-full bg-cover bg-no-repeat' />
-        </div>
-      ) : (
         <div className='w-1/2 h-2/3 relative'>
           <SSkeletonPulse1 />
+        </div>
+      ) : (
+        <div className='border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat overflow-hidden'>
+          <img src={img1} id='zoom' className='w-full bg-cover bg-no-repeat' />
         </div>
       )}
 
       <div className='w-1/2 h-2/3 relative'>
         <div className='w-full h-full md:flex items-start justify-start flex-wrap'>
           {loading ? (
+            <div className='w-full md:w-1/2 h-1/2 relative'>
+              <SSkeletonPulse2 />
+            </div>
+          ) : (
             <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img2}
@@ -35,12 +39,12 @@ export default ({ img1, img2, img3, img4, img5 }) => {
                 className='w-full bg-cover bg-no-repeat'
               />
             </div>
-          ) : (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
-              <SSkeletonPulse2 />
-            </div>
           )}
           {loading ? (
+            <div className='w-full md:w-1/2 h-1/2 relative'>
+              <SSkeletonPulse3 />
+            </div>
+          ) : (
             <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img3}
@@ -48,12 +52,12 @@ export default ({ img1, img2, img3, img4, img5 }) => {
                 className='w-full bg-cover bg-no-repeat'
               />
             </div>
-          ) : (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
-              <SSkeletonPulse3 />
-            </div>
           )}
           {loading ? (
+            <div className='w-full md:w-1/2 h-1/2 relative'>
+              <SSkeletonPulse4 />
+            </div>
+          ) : (
             <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img4}
@@ -61,22 +65,18 @@ export default ({ img1, img2, img3, img4, img5 }) => {
                 className='w-full bg-cover bg-no-repeat'
               />
             </div>
-          ) : (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
-              <SSkeletonPulse4 />
-            </div>
           )}
           {loading ? (
+            <div className='w-full md:w-1/2 h-1/2 relative'>
+              <SSkeletonPulse5 />
+            </div>
+          ) : (
             <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img5}
                 id='zoom'
                 className='w-full bg-cover bg-no-repeat'
               />
-            </div>
-          ) : (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
-              <SSkeletonPulse5 />
             </div>
           )}
         </div>
