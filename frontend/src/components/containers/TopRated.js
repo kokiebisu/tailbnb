@@ -24,9 +24,7 @@ const GET_EXPERIENCES = gql`
 
 export default () => {
   const { loading, error, data } = useQuery(GET_EXPERIENCES, {
-    fetchPolicy: 'no-cache',
-    ssr: true,
-    pollInterval: 500
+    pollInterval: 6000
   });
 
   if (loading) {

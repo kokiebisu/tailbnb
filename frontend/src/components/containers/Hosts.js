@@ -21,7 +21,9 @@ const experiencedata = gql`
 `;
 
 export default () => {
-  const { loading, error, data } = useQuery(experiencedata);
+  const { loading, error, data } = useQuery(experiencedata, {
+    pollInterval: 9000
+  });
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
   return (

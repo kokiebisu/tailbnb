@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2210,7 +2210,9 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES);
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES, {
+    pollInterval: 5000
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2601,7 +2603,9 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS);
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS, {
+    pollInterval: 7000
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2685,9 +2689,7 @@ const GET_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     error,
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_EXPERIENCES, {
-    fetchPolicy: 'no-cache',
-    ssr: true,
-    pollInterval: 500
+    pollInterval: 6000
   });
 
   if (loading) {
@@ -3692,7 +3694,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/

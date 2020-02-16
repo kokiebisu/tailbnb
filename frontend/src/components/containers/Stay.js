@@ -23,7 +23,9 @@ import StayCard from '../presentational/StayCard';
 import ShowAll from '../ShowAll';
 
 export default () => {
-  const { loading, error, data } = useQuery(GET_STAYS);
+  const { loading, error, data } = useQuery(GET_STAYS, {
+    pollInterval: 7000
+  });
   return (
     <>
       <div className='flex flex-wrap items-start justify-start w-full'>

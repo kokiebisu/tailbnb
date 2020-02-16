@@ -33,18 +33,22 @@ export default () => {
   const description =
     "As we pulled into the driveway, we knew it was an incredible place. Maria and Alberto were the perfect hosts and toured us around their beautiful property. I'm not sure you will believe how amazing it is. We have spent 10 days in Portugal and the time in Penafiel has been the...";
   return (
-    <div className='py-6 border-b border-gray-300'>
+    <div className='py-6'>
       <div className='flex items-center justify-start pb-4'>
-        <img className='h-12 w-12 rounded-full' src={img1} />
-        <div className='ml-4 pb-4'>
-          <p style={{ fontFamily: 'airbnb-medium' }} className='text-gray-750'>
-            Maureen
-          </p>
-          <p
-            style={{ fontFamily: 'airbnb-book' }}
-            className='text-sm text-gray-750'>
-            October 2019
-          </p>
+        <img className='h-14 w-14 rounded-full' src={img1} />
+        <div className='ml-4 pb-4 flex items-center'>
+          <div className='flex flex-col items-start'>
+            <p
+              style={{ fontFamily: 'airbnb-medium' }}
+              className='text-gray-750'>
+              Maureen
+            </p>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='text-sm text-gray-750'>
+              October 2019
+            </p>
+          </div>
         </div>
       </div>
       {renderDescription(description)}

@@ -2,37 +2,26 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 export default ({ img1, img2, img3, img4, img5, loading }) => {
-  // const [loading, setLoading] = useState(false);
-  // function sleep(ms) {
-  //   return new Promise((resolve) => setTimeout(resolve, ms));
-  // }
-
-  // const setSkeleton = async (seconds) => {
-  //   await sleep(seconds);
-  //   setLoading(true);
-  // };
-
-  // setSkeleton(4000);
   return (
-    <div id='zoomwrapper' className='flex flex-wrap justify-start items-start'>
+    <div id='zoomwrapper' className='flex justify-start'>
       {loading ? (
         <div className='w-1/2 h-2/3 relative'>
           <SSkeletonPulse1 />
         </div>
       ) : (
-        <div className='border border-gray-100 w-1/2 h-2/3 relative bg-cover bg-no-repeat overflow-hidden'>
+        <div className='w-1/2 border-r-4 border-white relative bg-cover bg-no-repeat overflow-hidden rounded'>
           <img src={img1} id='zoom' className='w-full bg-cover bg-no-repeat' />
         </div>
       )}
 
-      <div className='w-1/2 h-2/3 relative'>
-        <div className='w-full h-full md:flex items-start justify-start flex-wrap'>
+      <div className='w-1/2 relative'>
+        <div className='w-full h-full flex items-start justify-start flex-wrap'>
           {loading ? (
             <div className='w-full md:w-1/2 h-1/2 relative'>
               <SSkeletonPulse2 />
             </div>
           ) : (
-            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+            <div className='rounded w-full border-l-4 border-b-4 border-r-4 border-white md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img2}
                 id='zoom'
@@ -45,7 +34,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
               <SSkeletonPulse3 />
             </div>
           ) : (
-            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+            <div className='rounded w-full border-l-4 border-b-4 border-white md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img3}
                 id='zoom'
@@ -58,7 +47,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
               <SSkeletonPulse4 />
             </div>
           ) : (
-            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+            <div className='rounded w-full border-l-4 border-t-4 border-r-4 border-white md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img4}
                 id='zoom'
@@ -71,7 +60,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
               <SSkeletonPulse5 />
             </div>
           ) : (
-            <div className='w-full border border-gray-300 md:w-1/2 h-1/2 relative overflow-hidden'>
+            <div className='rounded w-full border-l-4 border-t-4 border-white md:w-1/2 h-1/2 relative overflow-hidden'>
               <img
                 src={img5}
                 id='zoom'
