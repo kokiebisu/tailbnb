@@ -2357,6 +2357,10 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
       reviews
       country
       size
+      description
+      space
+      access
+      note
     }
   }
 `;
@@ -2551,7 +2555,43 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-750"
-  }, "We invite you to come and visit our beautiful countryside hourse on the shores of the Douro river. You will have a full countryside experience with our restored rustic ouse, our farm animals, a salt water 12 meter pool and a unique view for the unforgettable landscape of the Douro river."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, data.stay.description), data.stay.space ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "py-4"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "mb-3"
+  }, "The space"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750"
+  }, data.stay.space)) : null, data.stay.access ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "py-4"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "mb-3"
+  }, "Guest access"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750"
+  }, data.stay.access)) : null, data.stay.note ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "py-4"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "mb-3"
+  }, "Other things to note"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750"
+  }, data.stay.note)) : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "my-5"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-start"

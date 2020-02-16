@@ -54,6 +54,10 @@ const GET_STAY = gql`
       reviews
       country
       size
+      description
+      space
+      access
+      note
     }
   }
 `;
@@ -262,12 +266,51 @@ export default () => {
                   <p
                     style={{ fontFamily: 'airbnb-book' }}
                     className='text-gray-750'>
-                    We invite you to come and visit our beautiful countryside
-                    hourse on the shores of the Douro river. You will have a
-                    full countryside experience with our restored rustic ouse,
-                    our farm animals, a salt water 12 meter pool and a unique
-                    view for the unforgettable landscape of the Douro river.
+                    {data.stay.description}
                   </p>
+                  {data.stay.space ? (
+                    <div className='py-4'>
+                      <h3
+                        style={{ fontFamily: 'airbnb-medium' }}
+                        className='mb-3'>
+                        The space
+                      </h3>
+                      <p
+                        style={{ fontFamily: 'airbnb-book' }}
+                        className='text-gray-750'>
+                        {data.stay.space}
+                      </p>
+                    </div>
+                  ) : null}
+                  {data.stay.access ? (
+                    <div className='py-4'>
+                      <h3
+                        style={{ fontFamily: 'airbnb-medium' }}
+                        className='mb-3'>
+                        Guest access
+                      </h3>
+                      <p
+                        style={{ fontFamily: 'airbnb-book' }}
+                        className='text-gray-750'>
+                        {data.stay.access}
+                      </p>
+                    </div>
+                  ) : null}
+                  {data.stay.note ? (
+                    <div className='py-4'>
+                      <h3
+                        style={{ fontFamily: 'airbnb-medium' }}
+                        className='mb-3'>
+                        Other things to note
+                      </h3>
+                      <p
+                        style={{ fontFamily: 'airbnb-book' }}
+                        className='text-gray-750'>
+                        {data.stay.note}
+                      </p>
+                    </div>
+                  ) : null}
+
                   <div className='my-5'>
                     <button>
                       <div className='flex items-center justify-start'>

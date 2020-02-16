@@ -31,7 +31,11 @@ const resolvers = {
         reviews: args.reviews,
         img: args.img,
         imglow: args.imglow,
-        size: args.size
+        size: args.size,
+        description: args.description,
+        space: args.space,
+        access: args.access,
+        note: args.note
       });
     },
     deleteStay(root, args, context) {

@@ -19,6 +19,7 @@ type Mutation {
     imglow: String!
     reviews: Int
     size: String!
+    description: String!
   ): Stay!
   deleteStay(title: String!): Stay
   createAdventure(
@@ -54,6 +55,10 @@ type Stay {
   img: String!
   imglow: String!
   size: String!
+  description: String!
+  space: String
+  access: String
+  note: String
 }
 
 type Adventure {

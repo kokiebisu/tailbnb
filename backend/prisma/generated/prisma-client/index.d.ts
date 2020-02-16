@@ -237,7 +237,15 @@ export type StayOrderByInput =
   | "imglow_ASC"
   | "imglow_DESC"
   | "size_ASC"
-  | "size_DESC";
+  | "size_DESC"
+  | "description_ASC"
+  | "description_DESC"
+  | "space_ASC"
+  | "space_DESC"
+  | "access_ASC"
+  | "access_DESC"
+  | "note_ASC"
+  | "note_DESC";
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
@@ -599,6 +607,62 @@ export interface StayWhereInput {
   size_not_starts_with?: Maybe<String>;
   size_ends_with?: Maybe<String>;
   size_not_ends_with?: Maybe<String>;
+  description?: Maybe<String>;
+  description_not?: Maybe<String>;
+  description_in?: Maybe<String[] | String>;
+  description_not_in?: Maybe<String[] | String>;
+  description_lt?: Maybe<String>;
+  description_lte?: Maybe<String>;
+  description_gt?: Maybe<String>;
+  description_gte?: Maybe<String>;
+  description_contains?: Maybe<String>;
+  description_not_contains?: Maybe<String>;
+  description_starts_with?: Maybe<String>;
+  description_not_starts_with?: Maybe<String>;
+  description_ends_with?: Maybe<String>;
+  description_not_ends_with?: Maybe<String>;
+  space?: Maybe<String>;
+  space_not?: Maybe<String>;
+  space_in?: Maybe<String[] | String>;
+  space_not_in?: Maybe<String[] | String>;
+  space_lt?: Maybe<String>;
+  space_lte?: Maybe<String>;
+  space_gt?: Maybe<String>;
+  space_gte?: Maybe<String>;
+  space_contains?: Maybe<String>;
+  space_not_contains?: Maybe<String>;
+  space_starts_with?: Maybe<String>;
+  space_not_starts_with?: Maybe<String>;
+  space_ends_with?: Maybe<String>;
+  space_not_ends_with?: Maybe<String>;
+  access?: Maybe<String>;
+  access_not?: Maybe<String>;
+  access_in?: Maybe<String[] | String>;
+  access_not_in?: Maybe<String[] | String>;
+  access_lt?: Maybe<String>;
+  access_lte?: Maybe<String>;
+  access_gt?: Maybe<String>;
+  access_gte?: Maybe<String>;
+  access_contains?: Maybe<String>;
+  access_not_contains?: Maybe<String>;
+  access_starts_with?: Maybe<String>;
+  access_not_starts_with?: Maybe<String>;
+  access_ends_with?: Maybe<String>;
+  access_not_ends_with?: Maybe<String>;
+  note?: Maybe<String>;
+  note_not?: Maybe<String>;
+  note_in?: Maybe<String[] | String>;
+  note_not_in?: Maybe<String[] | String>;
+  note_lt?: Maybe<String>;
+  note_lte?: Maybe<String>;
+  note_gt?: Maybe<String>;
+  note_gte?: Maybe<String>;
+  note_contains?: Maybe<String>;
+  note_not_contains?: Maybe<String>;
+  note_starts_with?: Maybe<String>;
+  note_not_starts_with?: Maybe<String>;
+  note_ends_with?: Maybe<String>;
+  note_not_ends_with?: Maybe<String>;
   AND?: Maybe<StayWhereInput[] | StayWhereInput>;
   OR?: Maybe<StayWhereInput[] | StayWhereInput>;
   NOT?: Maybe<StayWhereInput[] | StayWhereInput>;
@@ -678,6 +742,10 @@ export interface StayCreateInput {
   img: String;
   imglow: String;
   size: String;
+  description: String;
+  space?: Maybe<String>;
+  access?: Maybe<String>;
+  note?: Maybe<String>;
 }
 
 export interface StayUpdateInput {
@@ -691,6 +759,10 @@ export interface StayUpdateInput {
   img?: Maybe<String>;
   imglow?: Maybe<String>;
   size?: Maybe<String>;
+  description?: Maybe<String>;
+  space?: Maybe<String>;
+  access?: Maybe<String>;
+  note?: Maybe<String>;
 }
 
 export interface StayUpdateManyMutationInput {
@@ -704,6 +776,10 @@ export interface StayUpdateManyMutationInput {
   img?: Maybe<String>;
   imglow?: Maybe<String>;
   size?: Maybe<String>;
+  description?: Maybe<String>;
+  space?: Maybe<String>;
+  access?: Maybe<String>;
+  note?: Maybe<String>;
 }
 
 export interface AdventureSubscriptionWhereInput {
@@ -998,6 +1074,10 @@ export interface Stay {
   img: String;
   imglow: String;
   size: String;
+  description: String;
+  space?: String;
+  access?: String;
+  note?: String;
 }
 
 export interface StayPromise extends Promise<Stay>, Fragmentable {
@@ -1012,6 +1092,10 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   img: () => Promise<String>;
   imglow: () => Promise<String>;
   size: () => Promise<String>;
+  description: () => Promise<String>;
+  space: () => Promise<String>;
+  access: () => Promise<String>;
+  note: () => Promise<String>;
 }
 
 export interface StaySubscription
@@ -1028,6 +1112,10 @@ export interface StaySubscription
   img: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
   size: () => Promise<AsyncIterator<String>>;
+  description: () => Promise<AsyncIterator<String>>;
+  space: () => Promise<AsyncIterator<String>>;
+  access: () => Promise<AsyncIterator<String>>;
+  note: () => Promise<AsyncIterator<String>>;
 }
 
 export interface StayNullablePromise
@@ -1044,6 +1132,10 @@ export interface StayNullablePromise
   img: () => Promise<String>;
   imglow: () => Promise<String>;
   size: () => Promise<String>;
+  description: () => Promise<String>;
+  space: () => Promise<String>;
+  access: () => Promise<String>;
+  note: () => Promise<String>;
 }
 
 export interface StayConnection {
@@ -1277,6 +1369,10 @@ export interface StayPreviousValues {
   img: String;
   imglow: String;
   size: String;
+  description: String;
+  space?: String;
+  access?: String;
+  note?: String;
 }
 
 export interface StayPreviousValuesPromise
@@ -1293,6 +1389,10 @@ export interface StayPreviousValuesPromise
   img: () => Promise<String>;
   imglow: () => Promise<String>;
   size: () => Promise<String>;
+  description: () => Promise<String>;
+  space: () => Promise<String>;
+  access: () => Promise<String>;
+  note: () => Promise<String>;
 }
 
 export interface StayPreviousValuesSubscription
@@ -1309,6 +1409,10 @@ export interface StayPreviousValuesSubscription
   img: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
   size: () => Promise<AsyncIterator<String>>;
+  description: () => Promise<AsyncIterator<String>>;
+  space: () => Promise<AsyncIterator<String>>;
+  access: () => Promise<AsyncIterator<String>>;
+  note: () => Promise<AsyncIterator<String>>;
 }
 
 /*

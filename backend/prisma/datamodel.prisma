@@ -10,6 +10,10 @@ type Stay {
   img: String!
   imglow: String!
   size: String!
+  description: String!
+  space: String
+  access: String
+  note: String
 
 }
 

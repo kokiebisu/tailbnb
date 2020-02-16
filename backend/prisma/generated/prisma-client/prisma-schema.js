@@ -502,6 +502,10 @@ type Stay {
   img: String!
   imglow: String!
   size: String!
+  description: String!
+  space: String
+  access: String
+  note: String
 }
 
 type StayConnection {
@@ -522,6 +526,10 @@ input StayCreateInput {
   img: String!
   imglow: String!
   size: String!
+  description: String!
+  space: String
+  access: String
+  note: String
 }
 
 type StayEdge {
@@ -552,6 +560,14 @@ enum StayOrderByInput {
   imglow_DESC
   size_ASC
   size_DESC
+  description_ASC
+  description_DESC
+  space_ASC
+  space_DESC
+  access_ASC
+  access_DESC
+  note_ASC
+  note_DESC
 }
 
 type StayPreviousValues {
@@ -566,6 +582,10 @@ type StayPreviousValues {
   img: String!
   imglow: String!
   size: String!
+  description: String!
+  space: String
+  access: String
+  note: String
 }
 
 type StaySubscriptionPayload {
@@ -597,6 +617,10 @@ input StayUpdateInput {
   img: String
   imglow: String
   size: String
+  description: String
+  space: String
+  access: String
+  note: String
 }
 
 input StayUpdateManyMutationInput {
@@ -610,6 +634,10 @@ input StayUpdateManyMutationInput {
   img: String
   imglow: String
   size: String
+  description: String
+  space: String
+  access: String
+  note: String
 }
 
 input StayWhereInput {
@@ -749,6 +777,62 @@ input StayWhereInput {
   size_not_starts_with: String
   size_ends_with: String
   size_not_ends_with: String
+  description: String
+  description_not: String
+  description_in: [String!]
+  description_not_in: [String!]
+  description_lt: String
+  description_lte: String
+  description_gt: String
+  description_gte: String
+  description_contains: String
+  description_not_contains: String
+  description_starts_with: String
+  description_not_starts_with: String
+  description_ends_with: String
+  description_not_ends_with: String
+  space: String
+  space_not: String
+  space_in: [String!]
+  space_not_in: [String!]
+  space_lt: String
+  space_lte: String
+  space_gt: String
+  space_gte: String
+  space_contains: String
+  space_not_contains: String
+  space_starts_with: String
+  space_not_starts_with: String
+  space_ends_with: String
+  space_not_ends_with: String
+  access: String
+  access_not: String
+  access_in: [String!]
+  access_not_in: [String!]
+  access_lt: String
+  access_lte: String
+  access_gt: String
+  access_gte: String
+  access_contains: String
+  access_not_contains: String
+  access_starts_with: String
+  access_not_starts_with: String
+  access_ends_with: String
+  access_not_ends_with: String
+  note: String
+  note_not: String
+  note_in: [String!]
+  note_not_in: [String!]
+  note_lt: String
+  note_lte: String
+  note_gt: String
+  note_gte: String
+  note_contains: String
+  note_not_contains: String
+  note_starts_with: String
+  note_not_starts_with: String
+  note_ends_with: String
+  note_not_ends_with: String
   AND: [StayWhereInput!]
   OR: [StayWhereInput!]
   NOT: [StayWhereInput!]
