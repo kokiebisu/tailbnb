@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2990,7 +2990,7 @@ __webpack_require__.r(__webpack_exports__);
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: swap,
-    className: "hidden md:block hover:bg-gray-100 md:flex md:items-center justify-start fixed bottom-0 md:ml-3 md:mb-3 lg:right-0  lg:mr-3 z-10 bg-white text-sm font-semibold py-2 px-4 rounded-lg shadow-xl"
+    className: "hidden md:block hover:bg-gray-100 md:flex md:items-center justify-start fixed bottom-0 md:ml-3 md:mb-3 lg:right-0  lg:mr-3 z-50 bg-white text-sm font-semibold py-2 px-4 rounded-lg shadow-xl"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 512 512",
@@ -3573,9 +3573,9 @@ __webpack_require__.r(__webpack_exports__);
     } else {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         style: {
-          fontFamily: 'airbnb-bold'
+          fontFamily: 'airbnb-medium'
         },
-        className: "text-gray-750 text-2xl pt-3 pb-5"
+        className: "text-gray-850 text-2xl pt-3 pb-5"
       }, title));
     }
   };
@@ -3619,7 +3619,10 @@ __webpack_require__.r(__webpack_exports__);
       }, phrase));
     } else {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-        className: "scrollable text-gray-850 text-2xl font-semibold py-3 w-5/6"
+        style: {
+          fontFamily: 'airbnb-medium'
+        },
+        className: "scrollable text-gray-850 text-2xl py-3 w-5/6"
       }, title));
     }
   }
@@ -3694,7 +3697,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/

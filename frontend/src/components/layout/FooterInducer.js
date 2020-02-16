@@ -4,7 +4,7 @@ export default ({ swap }) => {
   return (
     <button
       onClick={swap}
-      className='hidden md:block hover:bg-gray-100 md:flex md:items-center justify-start fixed bottom-0 md:ml-3 md:mb-3 lg:right-0  lg:mr-3 z-10 bg-white text-sm font-semibold py-2 px-4 rounded-lg shadow-xl'>
+      className='hidden md:block hover:bg-gray-100 md:flex md:items-center justify-start fixed bottom-0 md:ml-3 md:mb-3 lg:right-0  lg:mr-3 z-50 bg-white text-sm font-semibold py-2 px-4 rounded-lg shadow-xl'>
       <div>
         <svg
           xmlns='http://www.w3.org/2000/svg'

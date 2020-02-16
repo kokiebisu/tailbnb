@@ -506,6 +506,10 @@ type Stay {
   space: String
   access: String
   note: String
+  hostName: String!
+  joined: String!
+  hostDescription: String!
+  duringStay: String
 }
 
 type StayConnection {
@@ -530,6 +534,10 @@ input StayCreateInput {
   space: String
   access: String
   note: String
+  hostName: String!
+  joined: String!
+  hostDescription: String!
+  duringStay: String
 }
 
 type StayEdge {
@@ -568,6 +576,14 @@ enum StayOrderByInput {
   access_DESC
   note_ASC
   note_DESC
+  hostName_ASC
+  hostName_DESC
+  joined_ASC
+  joined_DESC
+  hostDescription_ASC
+  hostDescription_DESC
+  duringStay_ASC
+  duringStay_DESC
 }
 
 type StayPreviousValues {
@@ -586,6 +602,10 @@ type StayPreviousValues {
   space: String
   access: String
   note: String
+  hostName: String!
+  joined: String!
+  hostDescription: String!
+  duringStay: String
 }
 
 type StaySubscriptionPayload {
@@ -621,6 +641,10 @@ input StayUpdateInput {
   space: String
   access: String
   note: String
+  hostName: String
+  joined: String
+  hostDescription: String
+  duringStay: String
 }
 
 input StayUpdateManyMutationInput {
@@ -638,6 +662,10 @@ input StayUpdateManyMutationInput {
   space: String
   access: String
   note: String
+  hostName: String
+  joined: String
+  hostDescription: String
+  duringStay: String
 }
 
 input StayWhereInput {
@@ -833,6 +861,62 @@ input StayWhereInput {
   note_not_starts_with: String
   note_ends_with: String
   note_not_ends_with: String
+  hostName: String
+  hostName_not: String
+  hostName_in: [String!]
+  hostName_not_in: [String!]
+  hostName_lt: String
+  hostName_lte: String
+  hostName_gt: String
+  hostName_gte: String
+  hostName_contains: String
+  hostName_not_contains: String
+  hostName_starts_with: String
+  hostName_not_starts_with: String
+  hostName_ends_with: String
+  hostName_not_ends_with: String
+  joined: String
+  joined_not: String
+  joined_in: [String!]
+  joined_not_in: [String!]
+  joined_lt: String
+  joined_lte: String
+  joined_gt: String
+  joined_gte: String
+  joined_contains: String
+  joined_not_contains: String
+  joined_starts_with: String
+  joined_not_starts_with: String
+  joined_ends_with: String
+  joined_not_ends_with: String
+  hostDescription: String
+  hostDescription_not: String
+  hostDescription_in: [String!]
+  hostDescription_not_in: [String!]
+  hostDescription_lt: String
+  hostDescription_lte: String
+  hostDescription_gt: String
+  hostDescription_gte: String
+  hostDescription_contains: String
+  hostDescription_not_contains: String
+  hostDescription_starts_with: String
+  hostDescription_not_starts_with: String
+  hostDescription_ends_with: String
+  hostDescription_not_ends_with: String
+  duringStay: String
+  duringStay_not: String
+  duringStay_in: [String!]
+  duringStay_not_in: [String!]
+  duringStay_lt: String
+  duringStay_lte: String
+  duringStay_gt: String
+  duringStay_gte: String
+  duringStay_contains: String
+  duringStay_not_contains: String
+  duringStay_starts_with: String
+  duringStay_not_starts_with: String
+  duringStay_ends_with: String
+  duringStay_not_ends_with: String
   AND: [StayWhereInput!]
   OR: [StayWhereInput!]
   NOT: [StayWhereInput!]

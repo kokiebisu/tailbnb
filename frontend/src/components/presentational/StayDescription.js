@@ -4,7 +4,6 @@ export default ({ description, space, access, note }) => {
   const [display, setDisplay] = useState(false);
   const renderDescription = (description) => {
     const wordArray = description.split(' ');
-
     const newArray = [];
     for (let i = 0; i < 45; i++) {
       newArray.push(wordArray[i]);

@@ -1,42 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import detail1 from '../../../public/img/high/staydetail1.jpg';
 
 // Image
-import img1 from '../../../public/img/high/medal.png';
 import shield1 from '../../../public/img/high/shield.png';
 
-const description =
-  'I love living in Cancun , I love hosting guests and I have won certificates and titles for excellence for the quality of my rooms and attention to my guests. I traded Canada (Edmonton) for Cancun when I was 25 because I had a desire to never have to return to " reality" . It works ,we don’t count down to vacation anymore and board 20+ planes internationally each year to see new “ panorámicas” So we understand and are sympathetic to your stress and expectations. Our condominium property is out of our control so we often have to work much harder to ensure guests happiness but I’m almost always touched by the reviews . The rare time there is a negative aspect in a review I spring to action to change or even totally remodel the area in order to prevent it from happening again. For 15 years I worked in all the top luxury hotels as concierge / guest services and I learned many things that can help you have a fabulous experience. I\'m here full time, not an absentee owner. Sincerely , Michelle';
-const interactionDescription =
-  'The owners of the Seashell house are on the plot of land which is accessible by the fence you use to get in . Raquel and Vanessa are here full time. Please PRINT YOUR AIRBNB ITINERARY and let them know your arrival time and if you wish for a pick up at the marina. Golf cart rental also easily arranged .';
-const renderDescription = (description) => {
-  const wordArray = description.split(' ');
-  if (wordArray.length < 50) {
-    return <p className='text-gray-750'>{description}</p>;
-  } else {
-    const wordArray = description.split(' ');
-    const newArray = [];
-    for (let i = 0; i < 50; i++) {
-      newArray.push(wordArray[i]);
-    }
-    return (
-      <>
-        <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
-          {`${newArray.join(' ')}...`}
-          <a
-            style={{ fontFamily: 'airbnb-book' }}
-            className='hover:border-green-850 border-b text-green-850 border-transparent'
-            href='/#'>
-            Read More
-          </a>
-        </p>
-      </>
-    );
+const renderContent = (content) => {
+  const wordArray = content.split(' ');
+  const newArray = [];
+  for (let i = 0; i < 20; i++) {
+    newArray.push(wordArray[i]);
   }
+  return newArray;
 };
 
-export default () => {
+export default ({
+  hostName,
+  hostType,
+  hostDescription,
+  joined,
+  duringStay,
+  reviews
+}) => {
+  const [descriptionDisplay, setDescriptionDisplay] = useState(false);
+  const [stayDisplay, setStayDisplay] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const defaultDescription = renderContent(hostDescription);
+  const defaultDuringStay = renderContent(duringStay);
+  console.log(hostDescription);
   return (
     <>
       <div className='py-10 border-b border-gray-300'>
@@ -49,12 +40,12 @@ export default () => {
               <h3
                 style={{ fontFamily: 'airbnb-medium' }}
                 className='text-gray-750 text-xl'>
-                Hosted By Maria Henriqueta
+                Hosted By {hostName}
               </h3>
               <p
                 style={{ fontFamily: 'airbnb-book' }}
                 className='text-gray-750 text-sm'>
-                Joined in March 2012
+                Joined in {joined}
               </p>
             </div>
           </div>
@@ -85,7 +76,7 @@ export default () => {
                   <p
                     style={{ fontFamily: 'airbnb-book' }}
                     className='text-gray-750'>
-                    110 Reviews
+                    {reviews} Reviews
                   </p>
                 </div>
                 <div className='ml-2 pr-2'>
@@ -109,42 +100,94 @@ export default () => {
                 </div>
                 <div className='ml-2 pr-2'>
                   <div className='flex items-center justify-start'>
-                    <div className='pr-2'>
-                      <svg
-                        className='h-3 w-3'
-                        style={{ fill: '#E61E4D' }}
-                        viewBox='0 0 511.999 511.999'
-                        xmlns='http://www.w3.org/2000/svg'>
-                        <g clip-rule='evenodd' fill-rule='evenodd'>
-                          <path d='m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z' />
-                          <path d='m330.999 91.994v-76.994c0-8.284-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v76.994c-.033 0-.064.005-.097.005h150.193c-.032-.001-.064-.005-.096-.005z' />
-                          <path d='m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z' />
-                          <path d='m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z' />
-                        </g>
-                      </svg>
-                    </div>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-gray-750'>
-                      Superhost
-                    </p>
+                    {hostType == 'superhost' ? (
+                      <>
+                        <div className='pr-2'>
+                          <svg
+                            className='h-3 w-3'
+                            style={{ fill: '#E61E4D' }}
+                            viewBox='0 0 511.999 511.999'
+                            xmlns='http://www.w3.org/2000/svg'>
+                            <g clip-rule='evenodd' fill-rule='evenodd'>
+                              <path d='m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z' />
+                              <path d='m330.999 91.994v-76.994c0-8.284-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v76.994c-.033 0-.064.005-.097.005h150.193c-.032-.001-.064-.005-.096-.005z' />
+                              <path d='m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z' />
+                              <path d='m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z' />
+                            </g>
+                          </svg>
+                        </div>
+
+                        <p
+                          style={{ fontFamily: 'airbnb-book' }}
+                          className='text-gray-750'>
+                          Superhost
+                        </p>
+                      </>
+                    ) : null}
                   </div>
                 </div>
               </div>
-              <div className='my-4'>{renderDescription(description)}</div>
-              <div className='py-3'>
-                <p
-                  style={{ fontFamily: 'airbnb-medium' }}
-                  className='text-gray-850 py-3'>
-                  Maria Henriqueta is a Superhost
-                </p>
-                <p
-                  style={{ fontFamily: 'airbnb-book' }}
-                  className='text-gray-750'>
-                  Superhosts are experienced, highly rated hosts who are
-                  committed to providing great stays for guests.
-                </p>
+              <div className='my-4'>
+                {descriptionDisplay ? (
+                  <p className='text-gray-750'>{hostDescription}</p>
+                ) : (
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-gray-750'>
+                    {`${defaultDescription.join(' ')}...`}
+                    <button
+                      onClick={() => setDescriptionDisplay(true)}
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='hover:border-green-850 border-b text-green-850 border-transparent'>
+                      Read More
+                    </button>
+                  </p>
+                )}
               </div>
+              {duringStay ? (
+                <div className='my-4'>
+                  <h3 style={{ fontFamily: 'airbnb-medium' }} className='mb-3'>
+                    During your stay
+                  </h3>
+                  {stayDisplay ? (
+                    <div className='py-4'>
+                      <p
+                        style={{ fontFamily: 'airbnb-book' }}
+                        className='text-gray-750'>
+                        {duringStay}
+                      </p>
+                    </div>
+                  ) : (
+                    <p
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='text-gray-750'>
+                      {`${defaultDuringStay.join(' ')}...`}
+                      <button
+                        onClick={() => setStayDisplay(true)}
+                        style={{ fontFamily: 'airbnb-book' }}
+                        className='hover:border-green-850 border-b text-green-850 border-transparent'>
+                        Read More
+                      </button>
+                    </p>
+                  )}
+                </div>
+              ) : null}
+
+              {hostType == 'superhost' ? (
+                <div className='py-3'>
+                  <p
+                    style={{ fontFamily: 'airbnb-medium' }}
+                    className='text-gray-850 py-3'>
+                    {hostName} is a Superhost
+                  </p>
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-gray-750'>
+                    Superhosts are experienced, highly rated hosts who are
+                    committed to providing great stays for guests.
+                  </p>
+                </div>
+              ) : null}
             </div>
           </div>
 
@@ -187,29 +230,6 @@ export default () => {
             </div>
           </div>
         </div>
-
-        {/* <div>
-          <h3 style={{ fontFamily: 'airbnb-bold' }} className='text-gray-750'>
-            Interaction with guests
-          </h3>
-          {renderDescription(interactionDescription)}
-        </div>
-
-        <div className='my-4'>
-          <p className='text-gray-750'>
-            <span style={{ fontFamily: 'airbnb-medium' }}>
-              Always communicate through Airbnb ·&nbsp;
-            </span>
-            To protect your payment, never transfer money or communicate outside
-            of the Airbnb website or app.&nbsp;
-            <a
-              className='hover:border-green-850 border-b text-green-850 border-transparent'
-              style={{ fontFamily: 'airbnb-medium' }}
-              href='/#'>
-              Learn more
-            </a>
-          </p>
-        </div> */}
       </div>
     </>
   );

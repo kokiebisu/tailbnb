@@ -59,6 +59,12 @@ const GET_STAY = gql`
       space
       access
       note
+      hostName
+      hostDescription
+      hostType
+      joined
+      duringStay
+      hostType
     }
   }
 `;
@@ -327,7 +333,14 @@ export default () => {
         {loading ? null : (
           <>
             <Reviews ratings={data.stay.ratings} reviews={data.stay.reviews} />
-            <HostedBy />
+            <HostedBy
+              hostName={data.stay.hostName}
+              hostDescription={data.stay.hostDescription}
+              joined={data.stay.joined}
+              duringStay={data.stay.duringStay}
+              hostType={data.stay.hostType}
+              reviews={data.stay.reviews}
+            />
             <KeepInMind />
             <DetailSectionOverflow title='More places to stay'>
               <MoreHomes />

@@ -14,6 +14,10 @@ type Stay {
   space: String
   access: String
   note: String
+  hostName: String!
+  joined: String!
+  hostDescription: String!
+  duringStay: String
 
 }
 

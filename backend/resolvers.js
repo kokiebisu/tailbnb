@@ -35,7 +35,11 @@ const resolvers = {
         description: args.description,
         space: args.space,
         access: args.access,
-        note: args.note
+        note: args.note,
+        hostName: args.hostName,
+        joined: args.joined,
+        hostDescription: args.hostDescription,
+        duringStay: args.duringStay
       });
     },
     deleteStay(root, args, context) {

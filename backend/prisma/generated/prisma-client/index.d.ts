@@ -245,7 +245,15 @@ export type StayOrderByInput =
   | "access_ASC"
   | "access_DESC"
   | "note_ASC"
-  | "note_DESC";
+  | "note_DESC"
+  | "hostName_ASC"
+  | "hostName_DESC"
+  | "joined_ASC"
+  | "joined_DESC"
+  | "hostDescription_ASC"
+  | "hostDescription_DESC"
+  | "duringStay_ASC"
+  | "duringStay_DESC";
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
@@ -663,6 +671,62 @@ export interface StayWhereInput {
   note_not_starts_with?: Maybe<String>;
   note_ends_with?: Maybe<String>;
   note_not_ends_with?: Maybe<String>;
+  hostName?: Maybe<String>;
+  hostName_not?: Maybe<String>;
+  hostName_in?: Maybe<String[] | String>;
+  hostName_not_in?: Maybe<String[] | String>;
+  hostName_lt?: Maybe<String>;
+  hostName_lte?: Maybe<String>;
+  hostName_gt?: Maybe<String>;
+  hostName_gte?: Maybe<String>;
+  hostName_contains?: Maybe<String>;
+  hostName_not_contains?: Maybe<String>;
+  hostName_starts_with?: Maybe<String>;
+  hostName_not_starts_with?: Maybe<String>;
+  hostName_ends_with?: Maybe<String>;
+  hostName_not_ends_with?: Maybe<String>;
+  joined?: Maybe<String>;
+  joined_not?: Maybe<String>;
+  joined_in?: Maybe<String[] | String>;
+  joined_not_in?: Maybe<String[] | String>;
+  joined_lt?: Maybe<String>;
+  joined_lte?: Maybe<String>;
+  joined_gt?: Maybe<String>;
+  joined_gte?: Maybe<String>;
+  joined_contains?: Maybe<String>;
+  joined_not_contains?: Maybe<String>;
+  joined_starts_with?: Maybe<String>;
+  joined_not_starts_with?: Maybe<String>;
+  joined_ends_with?: Maybe<String>;
+  joined_not_ends_with?: Maybe<String>;
+  hostDescription?: Maybe<String>;
+  hostDescription_not?: Maybe<String>;
+  hostDescription_in?: Maybe<String[] | String>;
+  hostDescription_not_in?: Maybe<String[] | String>;
+  hostDescription_lt?: Maybe<String>;
+  hostDescription_lte?: Maybe<String>;
+  hostDescription_gt?: Maybe<String>;
+  hostDescription_gte?: Maybe<String>;
+  hostDescription_contains?: Maybe<String>;
+  hostDescription_not_contains?: Maybe<String>;
+  hostDescription_starts_with?: Maybe<String>;
+  hostDescription_not_starts_with?: Maybe<String>;
+  hostDescription_ends_with?: Maybe<String>;
+  hostDescription_not_ends_with?: Maybe<String>;
+  duringStay?: Maybe<String>;
+  duringStay_not?: Maybe<String>;
+  duringStay_in?: Maybe<String[] | String>;
+  duringStay_not_in?: Maybe<String[] | String>;
+  duringStay_lt?: Maybe<String>;
+  duringStay_lte?: Maybe<String>;
+  duringStay_gt?: Maybe<String>;
+  duringStay_gte?: Maybe<String>;
+  duringStay_contains?: Maybe<String>;
+  duringStay_not_contains?: Maybe<String>;
+  duringStay_starts_with?: Maybe<String>;
+  duringStay_not_starts_with?: Maybe<String>;
+  duringStay_ends_with?: Maybe<String>;
+  duringStay_not_ends_with?: Maybe<String>;
   AND?: Maybe<StayWhereInput[] | StayWhereInput>;
   OR?: Maybe<StayWhereInput[] | StayWhereInput>;
   NOT?: Maybe<StayWhereInput[] | StayWhereInput>;
@@ -746,6 +810,10 @@ export interface StayCreateInput {
   space?: Maybe<String>;
   access?: Maybe<String>;
   note?: Maybe<String>;
+  hostName: String;
+  joined: String;
+  hostDescription: String;
+  duringStay?: Maybe<String>;
 }
 
 export interface StayUpdateInput {
@@ -763,6 +831,10 @@ export interface StayUpdateInput {
   space?: Maybe<String>;
   access?: Maybe<String>;
   note?: Maybe<String>;
+  hostName?: Maybe<String>;
+  joined?: Maybe<String>;
+  hostDescription?: Maybe<String>;
+  duringStay?: Maybe<String>;
 }
 
 export interface StayUpdateManyMutationInput {
@@ -780,6 +852,10 @@ export interface StayUpdateManyMutationInput {
   space?: Maybe<String>;
   access?: Maybe<String>;
   note?: Maybe<String>;
+  hostName?: Maybe<String>;
+  joined?: Maybe<String>;
+  hostDescription?: Maybe<String>;
+  duringStay?: Maybe<String>;
 }
 
 export interface AdventureSubscriptionWhereInput {
@@ -1078,6 +1154,10 @@ export interface Stay {
   space?: String;
   access?: String;
   note?: String;
+  hostName: String;
+  joined: String;
+  hostDescription: String;
+  duringStay?: String;
 }
 
 export interface StayPromise extends Promise<Stay>, Fragmentable {
@@ -1096,6 +1176,10 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   space: () => Promise<String>;
   access: () => Promise<String>;
   note: () => Promise<String>;
+  hostName: () => Promise<String>;
+  joined: () => Promise<String>;
+  hostDescription: () => Promise<String>;
+  duringStay: () => Promise<String>;
 }
 
 export interface StaySubscription
@@ -1116,6 +1200,10 @@ export interface StaySubscription
   space: () => Promise<AsyncIterator<String>>;
   access: () => Promise<AsyncIterator<String>>;
   note: () => Promise<AsyncIterator<String>>;
+  hostName: () => Promise<AsyncIterator<String>>;
+  joined: () => Promise<AsyncIterator<String>>;
+  hostDescription: () => Promise<AsyncIterator<String>>;
+  duringStay: () => Promise<AsyncIterator<String>>;
 }
 
 export interface StayNullablePromise
@@ -1136,6 +1224,10 @@ export interface StayNullablePromise
   space: () => Promise<String>;
   access: () => Promise<String>;
   note: () => Promise<String>;
+  hostName: () => Promise<String>;
+  joined: () => Promise<String>;
+  hostDescription: () => Promise<String>;
+  duringStay: () => Promise<String>;
 }
 
 export interface StayConnection {
@@ -1373,6 +1465,10 @@ export interface StayPreviousValues {
   space?: String;
   access?: String;
   note?: String;
+  hostName: String;
+  joined: String;
+  hostDescription: String;
+  duringStay?: String;
 }
 
 export interface StayPreviousValuesPromise
@@ -1393,6 +1489,10 @@ export interface StayPreviousValuesPromise
   space: () => Promise<String>;
   access: () => Promise<String>;
   note: () => Promise<String>;
+  hostName: () => Promise<String>;
+  joined: () => Promise<String>;
+  hostDescription: () => Promise<String>;
+  duringStay: () => Promise<String>;
 }
 
 export interface StayPreviousValuesSubscription
@@ -1413,6 +1513,10 @@ export interface StayPreviousValuesSubscription
   space: () => Promise<AsyncIterator<String>>;
   access: () => Promise<AsyncIterator<String>>;
   note: () => Promise<AsyncIterator<String>>;
+  hostName: () => Promise<AsyncIterator<String>>;
+  joined: () => Promise<AsyncIterator<String>>;
+  hostDescription: () => Promise<AsyncIterator<String>>;
+  duringStay: () => Promise<AsyncIterator<String>>;
 }
 
 /*

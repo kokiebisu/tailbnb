@@ -21,8 +21,8 @@ export default ({ title, phrase, children }) => {
       return (
         <>
           <h3
-            style={{ fontFamily: 'airbnb-bold' }}
-            className='text-gray-750 text-2xl pt-3 pb-5'>
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='text-gray-850 text-2xl pt-3 pb-5'>
             {title}
           </h3>
         </>
