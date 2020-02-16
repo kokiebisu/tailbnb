@@ -298,7 +298,7 @@ export default () => {
             </>
           )}
         </div>
-        <div className='w-5/12 h-80v'>
+        <div className='lg:w-5/12 lg:h-80v'>
           <CheckInCard loading={loading} />
         </div>
 

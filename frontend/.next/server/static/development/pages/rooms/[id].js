@@ -993,15 +993,15 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-between flex-wrap w-full"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/5"
+    className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/5"
+    className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/5"
+    className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/5"
+    className: "block md:hidden w-1/2 lg:block lg:w-1/4 xl:w-1/5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/5"
+    className: "hidden w-1/2 xl:block xl:w-1/5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 });
 
@@ -2555,7 +2555,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
     },
     className: "py-3 px-6 rounded-xl border border-black "
   }, "Show all 32 amenities"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "w-5/12 h-80v"
+    className: "lg:w-5/12 lg:h-80v"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_21__["default"], {
     loading: loading
   })), loading ? null : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__["default"], {
