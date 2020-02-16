@@ -25206,7 +25206,7 @@ __webpack_require__.r(__webpack_exports__);
   ratings
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "my-4 border-b border-gray-300"
+    className: "my-4 lg:border-b lg:border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-4 flex items-center justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -25325,17 +25325,17 @@ __webpack_require__.r(__webpack_exports__);
   }, "4.8")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full lg:w-1/2 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full lg:w-1/2 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full lg:w-1/2 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full lg:w-1/2 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full lg:w-1/2 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full lg:w-1/2 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-10"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -26322,15 +26322,15 @@ __webpack_require__.r(__webpack_exports__);
   setSleep(2000);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "zoomwrapper",
-    className: "flex justify-start h-half"
+    className: "w-full flex justify-start h-half"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full lg:w-1/2 h-42v relative rounded border-r-4 border-white"
+    className: "w-full lg:w-1/2 h-57v relative rounded border-r-4 border-white"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse1, null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full lg:w-1/2 border-r-4 border-white relative bg-cover bg-no-repeat overflow-hidden rounded"
+    className: "w-full lg:w-1/2 border-r-4 border-white relative bg-cover bg-no-repeat overflow-hidden  rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: img1,
     id: "zoom",
-    className: "w-full bg-cover bg-no-repeat"
+    className: "w-full bg-cover bg-no-repeat "
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden lg:block w-1/2 relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -26451,7 +26451,7 @@ __webpack_require__.r(__webpack_exports__);
 
   const description = "As we pulled into the driveway, we knew it was an incredible place. Maria and Alberto were the perfect hosts and toured us around their beautiful property. I'm not sure you will believe how amazing it is. We have spent 10 days in Portugal and the time in Penafiel has been the...";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-25/31 py-6"
+    className: "lg:w-25/31 py-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-start pb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -26718,6 +26718,8 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "flex flex-col-reverse lg:flex-col"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full py-5"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     style: {
@@ -26814,14 +26816,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
     },
     className: "pl-2 text-sm text-gray-850 underline"
   }, "Save"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "w-full px-0 lg:px-10"
+    className: "w-full px-0"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_9__["default"], {
     img1: _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_25___default.a,
     img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26___default.a,
     img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
     img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
     img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29___default.a
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full lg:w-7/12 "
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-between border-b border-gray-200 mt-4"
@@ -26941,7 +26943,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
     title: "More places to stay"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_16__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_22__["default"], {
     title: "Things to do nearby"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_23__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_22__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_23__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_21__["default"], {
     title: "Explore other options in and around Penafiel"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_24__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
 });

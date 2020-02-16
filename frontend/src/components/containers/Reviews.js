@@ -6,7 +6,7 @@ import Review from '../../components/presentational/Review';
 export default ({ ratings }) => {
   return (
     <>
-      <div className='my-4 border-b border-gray-300'>
+      <div className='my-4 lg:border-b lg:border-gray-300'>
         <div className='py-4 flex items-center justify-start'>
           <div className='flex items-center justify-start'>
             <div className=''>
@@ -119,22 +119,22 @@ export default ({ ratings }) => {
           </div>
         </div>
         <div className='flex items-start justify-start flex-wrap w-full'>
-          <div className='w-1/2'>
+          <div className='w-full lg:w-1/2 border-b border-gray-300'>
             <Review />
           </div>
-          <div className='w-1/2'>
+          <div className='w-full lg:w-1/2 border-b border-gray-300'>
             <Review />
           </div>
-          <div className='w-1/2'>
+          <div className='w-full lg:w-1/2 border-b border-gray-300'>
             <Review />
           </div>
-          <div className='w-1/2'>
+          <div className='w-full lg:w-1/2 border-b border-gray-300'>
             <Review />
           </div>
-          <div className='w-1/2'>
+          <div className='w-full lg:w-1/2 border-b border-gray-300'>
             <Review />
           </div>
-          <div className='w-1/2'>
+          <div className='w-full lg:w-1/2 border-b border-gray-300'>
             <Review />
           </div>
         </div>
