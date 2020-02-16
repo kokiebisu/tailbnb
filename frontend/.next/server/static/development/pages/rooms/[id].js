@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1662,7 +1662,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-gray-750"
   }, title) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default.a, {
     height: 15,
-    width: 250
+    width: 300
   }), loaded ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
@@ -1976,7 +1976,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "zoomwrapper",
     className: "flex justify-start"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2 h-2/3 relative"
+    className: "w-1/2 full relative"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse1, null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2 border-r-4 border-white relative bg-cover bg-no-repeat overflow-hidden rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -2103,7 +2103,7 @@ __webpack_require__.r(__webpack_exports__);
 
   const description = "As we pulled into the driveway, we knew it was an incredible place. Maria and Alberto were the perfect hosts and toured us around their beautiful property. I'm not sure you will believe how amazing it is. We have spent 10 days in Portugal and the time in Penafiel has been the...";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "py-6"
+    className: "w-25/31 py-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-start pb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -2477,7 +2477,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex flex-col "
   }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    width: 60
+    width: 70
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-book'
@@ -2517,7 +2517,8 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     className: "flex justify-center items-center w-full py-20"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_5___default.a, {
     size: 10,
-    color: '#008489'
+    color: '#008489',
+    count: 10
   })) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -2579,7 +2580,9 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     className: "w-5/12 flex justify-center mt-10"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-25/31 flex flex-col justify-start items-center"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    width: 300
+  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
@@ -2589,7 +2592,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
       fontFamily: 'airbnb-medium'
     },
     className: "w-full bg-pink-850 text-white rounded-lg py-3"
-  }, "Check availability"))), loading ? null : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, "Check Availability"))), loading ? null : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__["default"], {
     ratings: data.stay.ratings
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
     title: "More places to stay"
@@ -2602,7 +2605,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***************************************!*\
   !*** multi ./src/pages/rooms/[id].js ***!
   \***************************************/

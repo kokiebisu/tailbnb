@@ -5,7 +5,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
   return (
     <div id='zoomwrapper' className='flex justify-start'>
       {loading ? (
-        <div className='w-1/2 h-2/3 relative'>
+        <div className='w-1/2 full relative'>
           <SSkeletonPulse1 />
         </div>
       ) : (

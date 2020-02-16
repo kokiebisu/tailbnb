@@ -191,7 +191,7 @@ export default () => {
               <div className='mt-4 flex items-start justify-center'>
                 <div className='flex flex-col '>
                   {loading ? (
-                    <Skeleton width={60} />
+                    <Skeleton width={70} />
                   ) : (
                     <h3
                       style={{ fontFamily: 'airbnb-book' }}
@@ -231,7 +231,7 @@ export default () => {
           </div>
           {loading ? (
             <div className='flex justify-center items-center w-full py-20'>
-              <PulseLoader size={10} color={'#008489'} />
+              <PulseLoader size={10} color={'#008489'} count={10} />
             </div>
           ) : (
             <>
@@ -298,18 +298,24 @@ export default () => {
         </div>
         <div className='w-5/12 flex justify-center mt-10'>
           <div className='w-25/31 flex flex-col justify-start items-center'>
-            <h3
-              style={{ fontFamily: 'airbnb-medium' }}
-              className='w-full py-5 text-2xl text-gray-850'>
-              Add dates for prices
-            </h3>
+            {loading ? (
+              <Skeleton width={300} />
+            ) : (
+              <h3
+                style={{ fontFamily: 'airbnb-medium' }}
+                className='w-full py-5 text-2xl text-gray-850'>
+                Add dates for prices
+              </h3>
+            )}
+
             <button
               style={{ fontFamily: 'airbnb-medium' }}
               className='w-full bg-pink-850 text-white rounded-lg py-3'>
-              Check availability
+              Check Availability
             </button>
           </div>
         </div>
+
         {loading ? null : (
           <>
             <Reviews ratings={data.stay.ratings} />

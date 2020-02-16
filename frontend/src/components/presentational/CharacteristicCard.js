@@ -138,7 +138,7 @@ export default ({
             {title}
           </h3>
         ) : (
-          <Skeleton height={15} width={250} />
+          <Skeleton height={15} width={300} />
         )}
         {loaded ? (
           <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-850'>
