@@ -20,7 +20,9 @@ export default ({ title, phrase, children }) => {
     } else {
       return (
         <>
-          <h3 className='scrollable text-gray-850 text-2xl font-semibold py-3 w-5/6'>
+          <h3
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='text-2xl my-4 text-gray-850'>
             {title}
           </h3>
         </>
@@ -28,10 +30,16 @@ export default ({ title, phrase, children }) => {
     }
   }
   return (
-    <div className='md:px-0 max-w-90% mx-auto py-5 overflow-x-hidden overflow-y-hidden'>
-      {renderPhrase()}
+    <div className='border-b border-gray-300 pt-4 pb-14 w-full mx-auto overflow-x-hidden overflow-y-hidden'>
+      <div className='pb-8'>
+        <h3
+          style={{ fontFamily: 'airbnb-medium' }}
+          className='text-2xl my-4 text-gray-850'>
+          {title}
+        </h3>
 
-      {children}
+        {children}
+      </div>
     </div>
   );
 };

@@ -3,6 +3,9 @@ module.exports = {
     minHeight: {
       '80': '43rem'
     },
+    minWidth: {
+      '90': '50rem'
+    },
     extend: {
       borderColor: {
         green: {

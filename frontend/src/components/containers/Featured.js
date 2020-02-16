@@ -60,7 +60,7 @@ export default () => {
         <div className='overflow-y-hidden'>
           <div className='w-full h-full overflow-y-hidden'>
             <div className='h-full scroller'>
-              <div className='scrollable sm:inset-x-0 flex items-start justify-startpy-2 rounded-xl w-featured md:w-full'>
+              <div className='scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full'>
                 {featureds.map(({ id, img, imglow, verified, description }) => {
                   return (
                     <div className='w-80 lg:w-1/3 pb-5 mr-2'>

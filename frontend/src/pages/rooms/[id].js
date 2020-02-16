@@ -17,7 +17,7 @@ import { gql } from 'apollo-boost';
 import ExploreHeader from '../../components/layout/ExploreHeader';
 import ImagePanel from '../../components/presentational/ImagePanel';
 import HeaderCard from '../../components/presentational/HeaderCard';
-import DetailSection from '../../components/wrapper/DetailSection';
+
 import Reviews from '../../components/containers/Reviews';
 import Footer from '../../components/layout/Footer';
 import HostedBy from '../../components/containers/HostedBy';
@@ -30,7 +30,8 @@ import Cancellations from '../../components/presentational/Cancellations';
 import CheckInCard from '../../components/presentational/CheckInCard';
 
 // Wrapper
-import Section from '../../components/wrapper/Section';
+import DetailSectionOverflow from '../../components/wrapper/DetailSectionOverflow';
+import DetailSection from '../../components/wrapper/DetailSection';
 
 // Containers
 import TodoNear from '../../components/containers/ToDoNear';
@@ -307,9 +308,9 @@ export default () => {
             <Reviews ratings={data.stay.ratings} />
             <HostedBy />
             <KeepInMind />
-            <DetailSection title='More places to stay'>
+            <DetailSectionOverflow title='More places to stay'>
               <MoreHomes />
-            </DetailSection>
+            </DetailSectionOverflow>
             <DetailSection title='Things to do nearby'>
               <TodoNear />
             </DetailSection>
