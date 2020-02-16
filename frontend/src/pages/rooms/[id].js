@@ -51,6 +51,9 @@ const GET_STAY = gql`
       title
       location
       ratings
+      reviews
+      country
+      size
     }
   }
 `;
@@ -82,66 +85,77 @@ export default () => {
       <ExploreHeader />
 
       <div className='px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap'>
-        <div className='flex flex-col-reverse lg:flex-col'>
+        <div className='w-full flex flex-col-reverse lg:flex-col'>
           <div className='w-full py-5'>
-            <h3
-              style={{ fontFamily: 'airbnb-medium' }}
-              className='text-3xl text-gray-850'>
-              Radiant Apartment with Terrace in Roma Norte (1/4)
-            </h3>
+            {loading ? (
+              <Skeleton height={30} width={350} />
+            ) : (
+              <h3
+                style={{ fontFamily: 'airbnb-medium' }}
+                className='text-3xl text-gray-850'>
+                {data.stay.title}
+              </h3>
+            )}
+
             <div className='flex items-center justify-between'>
-              <div className='flex items-center justify-start flex-wrap'>
-                <div>
-                  <svg
-                    style={{ fill: '#E61E4D', marginBottom: 1 }}
-                    xmlns='http://www.w3.org/2000/svg'
-                    className='h-3 w-3'
-                    viewBox='0 0 37.286 37.287'>
-                    <g>
-                      <path
-                        d='M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382
+              {loading ? (
+                <Skeleton height={20} width={500} />
+              ) : (
+                <div className='flex items-center justify-start flex-wrap'>
+                  <div>
+                    <svg
+                      style={{ fill: '#E61E4D', marginBottom: 1 }}
+                      xmlns='http://www.w3.org/2000/svg'
+                      className='h-3 w-3'
+                      viewBox='0 0 37.286 37.287'>
+                      <g>
+                        <path
+                          d='M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382
     c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15
     c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05
     c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116
     c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361
     C37.425,15.013,37.226,15.808,36.683,16.339z'
-                      />
-                    </g>
-                  </svg>
+                        />
+                      </g>
+                    </svg>
+                  </div>
+
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='pl-1 text-gray-650 text-sm'>
+                    {data.stay.ratings} ({data.stay.reviews})
+                  </p>
+
+                  <span className='text-gray-650'>&nbsp;·&nbsp;</span>
+                  <div>
+                    <svg
+                      className='h-3 w-3'
+                      style={{ fill: '#E61E4D' }}
+                      viewBox='0 0 511.999 511.999'
+                      xmlns='http://www.w3.org/2000/svg'>
+                      <g clip-rule='evenodd' fill-rule='evenodd'>
+                        <path d='m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z' />
+                        <path d='m330.999 91.994v-76.994c0-8.284-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v76.994c-.033 0-.064.005-.097.005h150.193c-.032-.001-.064-.005-.096-.005z' />
+                        <path d='m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z' />
+                        <path d='m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z' />
+                      </g>
+                    </svg>
+                  </div>
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='pl-1 text-gray-650 text-sm'>
+                    Superhost
+                  </p>
+                  <span className='text-gray-650'>&nbsp;·&nbsp;</span>
+                  <a
+                    style={{ fontFamily: 'airbnb-medium' }}
+                    className='text-sm text-gray-650 underline'
+                    href=''>
+                    {data.stay.location}, {data.stay.country}
+                  </a>
                 </div>
-                <p
-                  style={{ fontFamily: 'airbnb-book' }}
-                  className='pl-1 text-gray-650 text-sm'>
-                  4.81 (387)
-                </p>
-                <span className='text-gray-650'>&nbsp;·&nbsp;</span>
-                <div>
-                  <svg
-                    className='h-3 w-3'
-                    style={{ fill: '#E61E4D' }}
-                    viewBox='0 0 511.999 511.999'
-                    xmlns='http://www.w3.org/2000/svg'>
-                    <g clip-rule='evenodd' fill-rule='evenodd'>
-                      <path d='m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z' />
-                      <path d='m330.999 91.994v-76.994c0-8.284-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v76.994c-.033 0-.064.005-.097.005h150.193c-.032-.001-.064-.005-.096-.005z' />
-                      <path d='m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z' />
-                      <path d='m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z' />
-                    </g>
-                  </svg>
-                </div>
-                <p
-                  style={{ fontFamily: 'airbnb-book' }}
-                  className='pl-1 text-gray-650 text-sm'>
-                  Superhost
-                </p>
-                <span className='text-gray-650'>&nbsp;·&nbsp;</span>
-                <a
-                  style={{ fontFamily: 'airbnb-medium' }}
-                  className='text-sm text-gray-650 underline'
-                  href=''>
-                  Mexico City, Federal District, Mexico
-                </a>
-              </div>
+              )}
               <div className='flex items-center justify-start'>
                 <div className='flex items-center justify-start pl-2'>
                   <div>
@@ -196,31 +210,34 @@ export default () => {
               <div className='mt-4 flex items-start justify-center'>
                 <div className='flex flex-col '>
                   {loading ? (
-                    <Skeleton width={70} />
+                    <Skeleton height={30} width={300} />
                   ) : (
                     <h3
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-2xl text-gray-850 font-semibold leading-none'>
-                      {data.stay.title}
+                      style={{ fontFamily: 'airbnb-medium' }}
+                      className='text-2xl text-gray-850 leading-none'>
+                      {data.stay.size} hosted by HostName
                     </h3>
                   )}
-
-                  <div
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap'>
-                    <div className='mr-4'>
-                      {loading ? <Skeleton width={60} /> : <p>9 guests</p>}
+                  {loading ? (
+                    <Skeleton height={20} width={400} />
+                  ) : (
+                    <div
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap'>
+                      <div className='mr-4'>
+                        <p>9 guests</p>
+                      </div>
+                      <div className='mr-4'>
+                        <p>4 bedrooms</p>
+                      </div>
+                      <div className='mr-4'>
+                        <p>9 beds</p>
+                      </div>
+                      <div className='mr-4'>
+                        <p>3 baths</p>
+                      </div>
                     </div>
-                    <div className='mr-4'>
-                      {loading ? <Skeleton width={60} /> : <p>4 bedrooms</p>}
-                    </div>
-                    <div className='mr-4'>
-                      {loading ? <Skeleton width={60} /> : <p>9 beds</p>}
-                    </div>
-                    <div className='mr-4'>
-                      {loading ? <Skeleton width={60} /> : <p>3 baths</p>}
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -307,7 +324,7 @@ export default () => {
 
         {loading ? null : (
           <>
-            <Reviews ratings={data.stay.ratings} />
+            <Reviews ratings={data.stay.ratings} reviews={data.stay.reviews} />
             <HostedBy />
             <KeepInMind />
             <DetailSectionOverflow title='More places to stay'>

@@ -25203,7 +25203,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
-  ratings
+  ratings,
+  reviews
 }) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "my-4 lg:border-b lg:border-gray-300"
@@ -25236,7 +25237,7 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-medium'
     },
     className: "ml-1 text-2xl text-gray-850 "
-  }, "(264 reviews)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "(", reviews, " reviews)"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-3 flex flex-wrap items-start justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
@@ -26063,15 +26064,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-loading-skeleton */ "./node_modules/react-loading-skeleton/lib/index.js");
 /* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   loading
 }) => {
+  const [loaded, setLoaded] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  const setSleep = async seconds => {
+    await sleep(seconds);
+    setLoaded(false);
+  };
+
+  setSleep(5000);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "shadow-4xl lg:shadow-none left-0 w-full z-50 fixed bottom-0 py-2 lg:py-0 bg-white w-full lg:block lg:w-25/31 lg:sticky lg:top-0 flex lg:justify-center lg:mt-5 lg:ml-10"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full lg:flex-col flex mx-10 items-center justify-between"
+    className: "w-full  mx-10 items-center justify-between"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex justify-start mb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -26082,7 +26098,16 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-medium'
     },
     className: "text-md lg:w-full py-5 lg:text-2xl text-gray-850"
-  }, "Add dates for prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Add dates for prices"), loaded ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "flex justify-center px-4 lg:px-0 lg:w-full bg-pink-850 text-white rounded-lg py-3 whitespace-no-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    size: 10,
+    color: '#ffffff',
+    count: 10
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
@@ -26693,6 +26718,9 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
       title
       location
       ratings
+      reviews
+      country
+      size
     }
   }
 `;
@@ -26718,17 +26746,23 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "flex flex-col-reverse lg:flex-col"
+    className: "w-full flex flex-col-reverse lg:flex-col"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full py-5"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    height: 30,
+    width: 350
+  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-3xl text-gray-850"
-  }, "Radiant Apartment with Terrace in Roma Norte (1/4)"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, data.stay.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-between"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    height: 20,
+    width: 500
+  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
     style: {
@@ -26745,7 +26779,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
       fontFamily: 'airbnb-book'
     },
     className: "pl-1 text-gray-650 text-sm"
-  }, "4.81 (387)"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, data.stay.ratings, " (", data.stay.reviews, ")"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "text-gray-650"
   }, "\xA0\xB7\xA0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
     className: "h-3 w-3",
@@ -26778,7 +26812,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
     },
     className: "text-sm text-gray-650 underline",
     href: ""
-  }, "Mexico City, Federal District, Mexico")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, data.stay.location, ", ", data.stay.country)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-start pl-2"
@@ -26834,34 +26868,30 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex flex-col "
   }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    width: 70
+    height: 30,
+    width: 300
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     style: {
-      fontFamily: 'airbnb-book'
+      fontFamily: 'airbnb-medium'
     },
-    className: "text-2xl text-gray-850 font-semibold leading-none"
-  }, data.stay.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "text-2xl text-gray-850 leading-none"
+  }, data.stay.size, " hosted by HostName"), loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    height: 20,
+    width: 400
+  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    width: 60
-  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "9 guests")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "9 guests")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    width: 60
-  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "4 bedrooms")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "4 bedrooms")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    width: 60
-  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "9 beds")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "9 beds")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    width: 60
-  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "3 baths")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "3 baths")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex flex-col justify-center items-start"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex justify-center w-full"
@@ -26938,7 +26968,8 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__["default"], {
     loading: loading
   })), loading ? null : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    ratings: data.stay.ratings
+    ratings: data.stay.ratings,
+    reviews: data.stay.reviews
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_21__["default"], {
     title: "More places to stay"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_16__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_22__["default"], {
