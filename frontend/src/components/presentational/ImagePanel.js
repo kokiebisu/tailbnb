@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-export default ({ img1, img2, img3, img4, img5, loading }) => {
+export default ({ img1, img2, img3, img4, img5 }) => {
+  const [loading, setLoading] = useState(true);
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  const setSleep = async (seconds) => {
+    await sleep(seconds);
+    setLoading(false);
+  };
+  setSleep(2000);
   return (
-    <div id='zoomwrapper' className='flex justify-start'>
+    <div id='zoomwrapper' className='flex justify-start h-half'>
       {loading ? (
-        <div className='w-1/2 full relative'>
+        <div className='w-1/2 h-42v relative rounded border-r-4 border-white'>
           <SSkeletonPulse1 />
         </div>
       ) : (
@@ -17,7 +27,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
       <div className='w-1/2 relative'>
         <div className='w-full h-full flex items-start justify-start flex-wrap'>
           {loading ? (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
+            <div className='w-full md:w-1/2 h-1/2 relative border-l-4 border-b-4 border-r-4 border-white rounded'>
               <SSkeletonPulse2 />
             </div>
           ) : (
@@ -30,7 +40,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
             </div>
           )}
           {loading ? (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
+            <div className='w-full md:w-1/2 h-1/2 relative border-l-4 border-b-4 border-r-4 border-white rounded'>
               <SSkeletonPulse3 />
             </div>
           ) : (
@@ -43,7 +53,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
             </div>
           )}
           {loading ? (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
+            <div className='w-full md:w-1/2 h-1/2 relative border-l-4 border-t-4 border-r-4 border-white rounded'>
               <SSkeletonPulse4 />
             </div>
           ) : (
@@ -56,7 +66,7 @@ export default ({ img1, img2, img3, img4, img5, loading }) => {
             </div>
           )}
           {loading ? (
-            <div className='w-full md:w-1/2 h-1/2 relative'>
+            <div className='w-full md:w-1/2 h-1/2 relative border-l-4 border-t-4 border-white rounded'>
               <SSkeletonPulse5 />
             </div>
           ) : (

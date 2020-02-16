@@ -26055,69 +26055,33 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-loading-skeleton */ "./node_modules/react-loading-skeleton/lib/index.js");
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1__);
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31 p-6 border border-gray-300"
+
+/* harmony default export */ __webpack_exports__["default"] = (({
+  loading
+}) => {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-25/31 sticky top-0 flex justify-center mt-5 ml-10"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: " border border-gray-850"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "w-full"
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex justify-start mb-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    width: 300,
+    height: 30
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-gray-750 text-lg"
-  }, "Add dates for prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-center justify-start border-b border-gray-300"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    x: "0px",
-    y: "0px",
-    style: {
-      fill: '#008489'
-    },
-    className: "h-2 w-2",
-    viewBox: "0 0 37.286 37.287"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "w-full py-5 text-2xl text-gray-850"
+  }, "Add dates for prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "ml-1 text-xs text-gray-850"
-  }, "4.75"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "ml-1 text-xs text-gray-650"
-  }, "264 reviews")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "my-2 leading-tight"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-xs text-gray-750"
-  }, "Dates"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-center justify-start w-full"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "w-1/2",
-    type: "text",
-    placeholder: "Check-in",
-    name: "checkin"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    className: "w-1/2",
-    type: "text",
-    placeholder: "Check-in",
-    name: "checkout"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "my-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-xs text-gray-750"
-  }, "Guests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "text",
-    placeholder: "1 guest"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "rounded flex items-center justify-center w-full py-2 bg-red-500"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Add Dates"))));
+    className: "w-full bg-pink-850 text-white rounded-lg py-3"
+  }, "Check Availability"))));
 });
 
 /***/ }),
@@ -26336,14 +26300,25 @@ __webpack_require__.r(__webpack_exports__);
   img2,
   img3,
   img4,
-  img5,
-  loading
+  img5
 }) => {
+  const [loading, setLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  const setSleep = async seconds => {
+    await sleep(seconds);
+    setLoading(false);
+  };
+
+  setSleep(2000);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "zoomwrapper",
-    className: "flex justify-start"
+    className: "flex justify-start h-half"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2 full relative"
+    className: "w-1/2 h-42v relative rounded border-r-4 border-white"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse1, null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2 border-r-4 border-white relative bg-cover bg-no-repeat overflow-hidden rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -26355,7 +26330,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full h-full flex items-start justify-start flex-wrap"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full md:w-1/2 h-1/2 relative"
+    className: "w-full md:w-1/2 h-1/2 relative border-l-4 border-b-4 border-r-4 border-white rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse2, null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "rounded w-full border-l-4 border-b-4 border-r-4 border-white md:w-1/2 h-1/2 relative overflow-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -26363,7 +26338,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "zoom",
     className: "w-full bg-cover bg-no-repeat"
   })), loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full md:w-1/2 h-1/2 relative"
+    className: "w-full md:w-1/2 h-1/2 relative border-l-4 border-b-4 border-r-4 border-white rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse3, null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "rounded w-full border-l-4 border-b-4 border-white md:w-1/2 h-1/2 relative overflow-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -26371,7 +26346,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "zoom",
     className: "w-full bg-cover bg-no-repeat"
   })), loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full md:w-1/2 h-1/2 relative"
+    className: "w-full md:w-1/2 h-1/2 relative border-l-4 border-t-4 border-r-4 border-white rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse4, null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "rounded w-full border-l-4 border-t-4 border-r-4 border-white md:w-1/2 h-1/2 relative overflow-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -26379,7 +26354,7 @@ __webpack_require__.r(__webpack_exports__);
     id: "zoom",
     className: "w-full bg-cover bg-no-repeat"
   })), loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full md:w-1/2 h-1/2 relative"
+    className: "w-full md:w-1/2 h-1/2 relative border-l-4 border-t-4 border-white rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SSkeletonPulse5, null)) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "rounded w-full border-l-4 border-t-4 border-white md:w-1/2 h-1/2 relative overflow-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -26627,41 +26602,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-loading-skeleton */ "./node_modules/react-loading-skeleton/lib/index.js");
-/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
-/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.js");
-/* harmony import */ var _components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/presentational/ImagePanel */ "./src/components/presentational/ImagePanel.js");
-/* harmony import */ var _components_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
-/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.js");
-/* harmony import */ var _components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/containers/Reviews */ "./src/components/containers/Reviews.js");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.js");
-/* harmony import */ var _components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/containers/HostedBy */ "./src/components/containers/HostedBy.js");
-/* harmony import */ var _components_containers_Neighborhood__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/containers/Neighborhood */ "./src/components/containers/Neighborhood.js");
-/* harmony import */ var _components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/containers/KeepInMind */ "./src/components/containers/KeepInMind.js");
-/* harmony import */ var _components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/containers/MoreHomes */ "./src/components/containers/MoreHomes.js");
-/* harmony import */ var _components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/containers/Characteristics */ "./src/components/containers/Characteristics.js");
-/* harmony import */ var _components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/presentational/SleepingArrangmentsCard */ "./src/components/presentational/SleepingArrangmentsCard.js");
-/* harmony import */ var _components_presentational_Cancellations__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/presentational/Cancellations */ "./src/components/presentational/Cancellations.js");
-/* harmony import */ var _components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/presentational/CheckInCard */ "./src/components/presentational/CheckInCard.js");
-/* harmony import */ var _components_wrapper_Section__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/wrapper/Section */ "./src/components/wrapper/Section.js");
-/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.js");
-/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.js");
-/* harmony import */ var _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../../public/img/high/staydetail1.jpg */ "./public/img/high/staydetail1.jpg");
-/* harmony import */ var _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_25__);
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_26__);
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_27__);
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-loading-skeleton */ "./node_modules/react-loading-skeleton/lib/index.js");
+/* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.js");
+/* harmony import */ var _components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/presentational/ImagePanel */ "./src/components/presentational/ImagePanel.js");
+/* harmony import */ var _components_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
+/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.js");
+/* harmony import */ var _components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/containers/Reviews */ "./src/components/containers/Reviews.js");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.js");
+/* harmony import */ var _components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/containers/HostedBy */ "./src/components/containers/HostedBy.js");
+/* harmony import */ var _components_containers_Neighborhood__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/containers/Neighborhood */ "./src/components/containers/Neighborhood.js");
+/* harmony import */ var _components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/containers/KeepInMind */ "./src/components/containers/KeepInMind.js");
+/* harmony import */ var _components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/containers/MoreHomes */ "./src/components/containers/MoreHomes.js");
+/* harmony import */ var _components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/containers/Characteristics */ "./src/components/containers/Characteristics.js");
+/* harmony import */ var _components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/presentational/SleepingArrangmentsCard */ "./src/components/presentational/SleepingArrangmentsCard.js");
+/* harmony import */ var _components_presentational_Cancellations__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/presentational/Cancellations */ "./src/components/presentational/Cancellations.js");
+/* harmony import */ var _components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/presentational/CheckInCard */ "./src/components/presentational/CheckInCard.js");
+/* harmony import */ var _components_wrapper_Section__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/wrapper/Section */ "./src/components/wrapper/Section.js");
+/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.js");
+/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.js");
+/* harmony import */ var _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../../public/img/high/staydetail1.jpg */ "./public/img/high/staydetail1.jpg");
+/* harmony import */ var _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.js");
 
 
+
+ // Dependencies
 
  // Loading
 
@@ -26696,7 +26674,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
+const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_7__["gql"]`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
       title
@@ -26724,7 +26702,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     rel: "icon",
     type: "image/x-icon",
     href: "/img/high/favicon.ico"
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full py-5"
@@ -26824,13 +26802,12 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     className: "pl-2 text-sm text-gray-850 underline"
   }, "Save"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    img1: _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_24___default.a,
-    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_25___default.a,
-    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_26___default.a,
-    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
-    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
-    loading: loading
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    img1: _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_25___default.a,
+    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26___default.a,
+    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
+    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
+    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29___default.a
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-7/12 "
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -26841,7 +26818,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     className: "mt-4 flex items-start justify-center"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex flex-col "
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     width: 70
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     style: {
@@ -26855,19 +26832,19 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     className: "text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     width: 60
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "9 guests")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     width: 60
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "4 bedrooms")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     width: 60
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "9 beds")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     width: 60
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "3 baths")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex flex-col justify-center items-start"
@@ -26875,12 +26852,12 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     className: "flex justify-center w-full"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     className: "h-14 w-14 rounded-full",
-    src: _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_24___default.a
+    src: _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_25___default.a
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "my-6 border-b border-gray-300"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_17__["default"], null)), loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__["default"], null)), loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex justify-center items-center w-full py-20"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_6___default.a, {
     size: 10,
     color: '#008489',
     count: 10
@@ -26910,28 +26887,28 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
       fontFamily: 'airbnb-medium'
     },
     href: ""
-  }, "Contact host")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, "Contact host")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_11__["default"], {
     title: "Sleeping arrangements"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-start justify-start my-6"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4 w-1/3 border border-gray-300 rounded-xl flex justify-start"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_18__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_19__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4 w-1/3 border border-gray-300 rounded-xl"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_18__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_19__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_11__["default"], {
     title: "Amenities"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_29__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
     type: "wifi",
     title: "Wifi"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_29__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
     type: "laptop",
     title: "Laptop-friendly workspace"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_29__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
     type: "kitchen",
     title: "Kitchen"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_29__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
     type: "iron",
     title: "Iron"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -26942,31 +26919,37 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     },
     className: "py-3 px-6 rounded-xl border border-black "
   }, "Show all 32 amenities"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "w-5/12 flex justify-center mt-10"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "w-25/31 flex flex-col justify-start items-center"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    width: 300
-  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "w-full py-5 text-2xl text-gray-850"
-  }, "Add dates for prices"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "w-full bg-pink-850 text-white rounded-lg py-3"
-  }, "Check Availability"))), loading ? null : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    className: "  w-5/12 h-80v"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_21__["default"], {
+    loading: loading
+  })), loading ? null : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__["default"], {
     ratings: data.stay.ratings
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_11__["default"], {
     title: "More places to stay"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_16__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_11__["default"], {
     title: "Things to do nearby"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_22__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_23__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_11__["default"], {
     title: "Explore other options in and around Penafiel"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_23__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["default"], null));
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_24__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], null));
 });
+const SSkeletonPulse = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div`
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 400% 400%;
+  @keyframes pulse {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: -135% 0%;
+    }
+  }
+`;
+const SSkeletonPulse1 = Object(styled_components__WEBPACK_IMPORTED_MODULE_4__["default"])(SSkeletonPulse)`
+  animation: pulse 1.2s ease-in-out infinite;
+`;
 
 /***/ }),
 

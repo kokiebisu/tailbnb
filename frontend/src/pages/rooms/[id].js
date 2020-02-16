@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import Head from 'next/head';
 
+// Dependencies
+import styled from 'styled-components';
+
 // Loading
 import Skeleton from 'react-loading-skeleton';
 import PulseLoader from 'react-spinners/PulseLoader';
@@ -181,7 +184,6 @@ export default () => {
             img3={detail3}
             img4={detail4}
             img5={detail5}
-            loading={loading}
           />
         </div>
 
@@ -296,24 +298,8 @@ export default () => {
             </>
           )}
         </div>
-        <div className='w-5/12 flex justify-center mt-10'>
-          <div className='w-25/31 flex flex-col justify-start items-center'>
-            {loading ? (
-              <Skeleton width={300} />
-            ) : (
-              <h3
-                style={{ fontFamily: 'airbnb-medium' }}
-                className='w-full py-5 text-2xl text-gray-850'>
-                Add dates for prices
-              </h3>
-            )}
-
-            <button
-              style={{ fontFamily: 'airbnb-medium' }}
-              className='w-full bg-pink-850 text-white rounded-lg py-3'>
-              Check Availability
-            </button>
-          </div>
+        <div className='  w-5/12 h-80v'>
+          <CheckInCard loading={loading} />
         </div>
 
         {loading ? null : (
@@ -337,3 +323,23 @@ export default () => {
     </>
   );
 };
+
+const SSkeletonPulse = styled.div`
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 400% 400%;
+  @keyframes pulse {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: -135% 0%;
+    }
+  }
+`;
+
+const SSkeletonPulse1 = styled(SSkeletonPulse)`
+  animation: pulse 1.2s ease-in-out infinite;
+`;
