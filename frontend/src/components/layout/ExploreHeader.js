@@ -35,7 +35,7 @@ export default ({ type }) => {
       </div>
       <nav
         style={{ fontFamily: 'airbnb-medium' }}
-        className='hidden lg:block lg:flex items-center justify-around flex-wrap text-gray-750'>
+        className='hidden xl:block xl:flex items-center justify-around flex-wrap text-gray-750'>
         <div className='border-transparent border-b-2 hover:border-white py-6 px-1'>
           <a href='#' className='flex items-center justify-start text-sm mx-2'>
             <svg
