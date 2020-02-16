@@ -28,6 +28,7 @@ import Characteristics from '../../components/containers/Characteristics';
 import SleepingArrangmentsCard from '../../components/presentational/SleepingArrangmentsCard';
 import Cancellations from '../../components/presentational/Cancellations';
 import CheckInCard from '../../components/presentational/CheckInCard';
+import StayDescription from '../../components/presentational/StayDescription';
 
 // Wrapper
 import DetailSectionOverflow from '../../components/wrapper/DetailSectionOverflow';
@@ -263,54 +264,12 @@ export default () => {
             <>
               <div className='border-b border-gray-300'>
                 <div className='my-8'>
-                  <p
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='text-gray-750'>
-                    {data.stay.description}
-                  </p>
-                  {data.stay.space ? (
-                    <div className='py-4'>
-                      <h3
-                        style={{ fontFamily: 'airbnb-medium' }}
-                        className='mb-3'>
-                        The space
-                      </h3>
-                      <p
-                        style={{ fontFamily: 'airbnb-book' }}
-                        className='text-gray-750'>
-                        {data.stay.space}
-                      </p>
-                    </div>
-                  ) : null}
-                  {data.stay.access ? (
-                    <div className='py-4'>
-                      <h3
-                        style={{ fontFamily: 'airbnb-medium' }}
-                        className='mb-3'>
-                        Guest access
-                      </h3>
-                      <p
-                        style={{ fontFamily: 'airbnb-book' }}
-                        className='text-gray-750'>
-                        {data.stay.access}
-                      </p>
-                    </div>
-                  ) : null}
-                  {data.stay.note ? (
-                    <div className='py-4'>
-                      <h3
-                        style={{ fontFamily: 'airbnb-medium' }}
-                        className='mb-3'>
-                        Other things to note
-                      </h3>
-                      <p
-                        style={{ fontFamily: 'airbnb-book' }}
-                        className='text-gray-750'>
-                        {data.stay.note}
-                      </p>
-                    </div>
-                  ) : null}
-
+                  <StayDescription
+                    description={data.stay.description}
+                    space={data.stay.space}
+                    access={data.stay.access}
+                    note={data.stay.note}
+                  />
                   <div className='my-5'>
                     <button>
                       <div className='flex items-center justify-start'>
