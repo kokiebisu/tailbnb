@@ -67,7 +67,8 @@ module.exports = {
       },
       boxShadow: {
         focus: '0 0 0 3px rgba(66,153,225,0.5)',
-        '3xl': '0 35px 60px -15px rgba(0, 0, 0, .3)'
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, .3)',
+        '4xl': '0 60px 80px -15px rgba(0,0,0,.8)'
       },
       colors: {
         'gray-650': '#767676',

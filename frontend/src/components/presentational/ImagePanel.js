@@ -15,16 +15,16 @@ export default ({ img1, img2, img3, img4, img5 }) => {
   return (
     <div id='zoomwrapper' className='flex justify-start h-half'>
       {loading ? (
-        <div className='w-1/2 h-42v relative rounded border-r-4 border-white'>
+        <div className='w-full lg:w-1/2 h-42v relative rounded border-r-4 border-white'>
           <SSkeletonPulse1 />
         </div>
       ) : (
-        <div className='w-1/2 border-r-4 border-white relative bg-cover bg-no-repeat overflow-hidden rounded'>
+        <div className='w-full lg:w-1/2 border-r-4 border-white relative bg-cover bg-no-repeat overflow-hidden rounded'>
           <img src={img1} id='zoom' className='w-full bg-cover bg-no-repeat' />
         </div>
       )}
 
-      <div className='w-1/2 relative'>
+      <div className='hidden lg:block w-1/2 relative'>
         <div className='w-full h-full flex items-start justify-start flex-wrap'>
           {loading ? (
             <div className='w-full md:w-1/2 h-1/2 relative border-l-4 border-b-4 border-r-4 border-white rounded'>

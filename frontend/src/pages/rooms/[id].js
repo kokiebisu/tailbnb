@@ -177,7 +177,7 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className='w-full'>
+        <div className='w-full px-0 lg:px-10'>
           <ImagePanel
             img1={detail1}
             img2={detail2}
@@ -187,7 +187,7 @@ export default () => {
           />
         </div>
 
-        <div className='w-7/12 '>
+        <div className='w-full lg:w-7/12 '>
           <div className='flex items-center justify-between border-b border-gray-200 mt-4'>
             <div className='py-4'>
               <div className='mt-4 flex items-start justify-center'>
@@ -298,7 +298,7 @@ export default () => {
             </>
           )}
         </div>
-        <div className='  w-5/12 h-80v'>
+        <div className='w-5/12 h-80v'>
           <CheckInCard loading={loading} />
         </div>
 
