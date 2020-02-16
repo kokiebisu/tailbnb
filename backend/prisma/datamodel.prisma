@@ -9,6 +9,8 @@ type Stay {
   reviews: Int @default(value: 0)
   img: String!
   imglow: String!
+  hostImg: String!
+  hostImgLow: String!
   size: String!
   description: String!
   space: String

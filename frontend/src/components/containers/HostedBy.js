@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import detail1 from '../../../public/img/high/staydetail1.jpg';
+// Loading
+import LazyImage from 'react-lazy-progressive-image';
 
 // Image
 import shield1 from '../../../public/img/high/shield.png';
@@ -20,20 +21,25 @@ export default ({
   hostDescription,
   joined,
   duringStay,
-  reviews
+  reviews,
+  hostImg,
+  hostImgLow
 }) => {
   const [descriptionDisplay, setDescriptionDisplay] = useState(false);
   const [stayDisplay, setStayDisplay] = useState(false);
   const [loading, setLoading] = useState(true);
   const defaultDescription = renderContent(hostDescription);
   const defaultDuringStay = renderContent(duringStay);
-  console.log(hostDescription);
   return (
     <>
       <div className='py-10 border-b border-gray-300'>
         <div className='flex items-center justify-start mb-8'>
           <div className='flex justify-center'>
-            <img className='mr-6 h-16 w-16 rounded-full' src={detail1} />
+            <LazyImage src={hostImg} placeholder={hostImgLow}>
+              {(src, loading, isVisible) => (
+                <img className='mr-6 h-16 w-16 rounded-full' src={src} />
+              )}
+            </LazyImage>
           </div>
           <div>
             <div className='h-1/2'>

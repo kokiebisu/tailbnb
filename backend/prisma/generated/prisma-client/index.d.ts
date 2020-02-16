@@ -236,6 +236,10 @@ export type StayOrderByInput =
   | "img_DESC"
   | "imglow_ASC"
   | "imglow_DESC"
+  | "hostImg_ASC"
+  | "hostImg_DESC"
+  | "hostImgLow_ASC"
+  | "hostImgLow_DESC"
   | "size_ASC"
   | "size_DESC"
   | "description_ASC"
@@ -601,6 +605,34 @@ export interface StayWhereInput {
   imglow_not_starts_with?: Maybe<String>;
   imglow_ends_with?: Maybe<String>;
   imglow_not_ends_with?: Maybe<String>;
+  hostImg?: Maybe<String>;
+  hostImg_not?: Maybe<String>;
+  hostImg_in?: Maybe<String[] | String>;
+  hostImg_not_in?: Maybe<String[] | String>;
+  hostImg_lt?: Maybe<String>;
+  hostImg_lte?: Maybe<String>;
+  hostImg_gt?: Maybe<String>;
+  hostImg_gte?: Maybe<String>;
+  hostImg_contains?: Maybe<String>;
+  hostImg_not_contains?: Maybe<String>;
+  hostImg_starts_with?: Maybe<String>;
+  hostImg_not_starts_with?: Maybe<String>;
+  hostImg_ends_with?: Maybe<String>;
+  hostImg_not_ends_with?: Maybe<String>;
+  hostImgLow?: Maybe<String>;
+  hostImgLow_not?: Maybe<String>;
+  hostImgLow_in?: Maybe<String[] | String>;
+  hostImgLow_not_in?: Maybe<String[] | String>;
+  hostImgLow_lt?: Maybe<String>;
+  hostImgLow_lte?: Maybe<String>;
+  hostImgLow_gt?: Maybe<String>;
+  hostImgLow_gte?: Maybe<String>;
+  hostImgLow_contains?: Maybe<String>;
+  hostImgLow_not_contains?: Maybe<String>;
+  hostImgLow_starts_with?: Maybe<String>;
+  hostImgLow_not_starts_with?: Maybe<String>;
+  hostImgLow_ends_with?: Maybe<String>;
+  hostImgLow_not_ends_with?: Maybe<String>;
   size?: Maybe<String>;
   size_not?: Maybe<String>;
   size_in?: Maybe<String[] | String>;
@@ -805,6 +837,8 @@ export interface StayCreateInput {
   reviews?: Maybe<Int>;
   img: String;
   imglow: String;
+  hostImg: String;
+  hostImgLow: String;
   size: String;
   description: String;
   space?: Maybe<String>;
@@ -826,6 +860,8 @@ export interface StayUpdateInput {
   reviews?: Maybe<Int>;
   img?: Maybe<String>;
   imglow?: Maybe<String>;
+  hostImg?: Maybe<String>;
+  hostImgLow?: Maybe<String>;
   size?: Maybe<String>;
   description?: Maybe<String>;
   space?: Maybe<String>;
@@ -847,6 +883,8 @@ export interface StayUpdateManyMutationInput {
   reviews?: Maybe<Int>;
   img?: Maybe<String>;
   imglow?: Maybe<String>;
+  hostImg?: Maybe<String>;
+  hostImgLow?: Maybe<String>;
   size?: Maybe<String>;
   description?: Maybe<String>;
   space?: Maybe<String>;
@@ -1149,6 +1187,8 @@ export interface Stay {
   reviews?: Int;
   img: String;
   imglow: String;
+  hostImg: String;
+  hostImgLow: String;
   size: String;
   description: String;
   space?: String;
@@ -1171,6 +1211,8 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   reviews: () => Promise<Int>;
   img: () => Promise<String>;
   imglow: () => Promise<String>;
+  hostImg: () => Promise<String>;
+  hostImgLow: () => Promise<String>;
   size: () => Promise<String>;
   description: () => Promise<String>;
   space: () => Promise<String>;
@@ -1195,6 +1237,8 @@ export interface StaySubscription
   reviews: () => Promise<AsyncIterator<Int>>;
   img: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
+  hostImg: () => Promise<AsyncIterator<String>>;
+  hostImgLow: () => Promise<AsyncIterator<String>>;
   size: () => Promise<AsyncIterator<String>>;
   description: () => Promise<AsyncIterator<String>>;
   space: () => Promise<AsyncIterator<String>>;
@@ -1219,6 +1263,8 @@ export interface StayNullablePromise
   reviews: () => Promise<Int>;
   img: () => Promise<String>;
   imglow: () => Promise<String>;
+  hostImg: () => Promise<String>;
+  hostImgLow: () => Promise<String>;
   size: () => Promise<String>;
   description: () => Promise<String>;
   space: () => Promise<String>;
@@ -1460,6 +1506,8 @@ export interface StayPreviousValues {
   reviews?: Int;
   img: String;
   imglow: String;
+  hostImg: String;
+  hostImgLow: String;
   size: String;
   description: String;
   space?: String;
@@ -1484,6 +1532,8 @@ export interface StayPreviousValuesPromise
   reviews: () => Promise<Int>;
   img: () => Promise<String>;
   imglow: () => Promise<String>;
+  hostImg: () => Promise<String>;
+  hostImgLow: () => Promise<String>;
   size: () => Promise<String>;
   description: () => Promise<String>;
   space: () => Promise<String>;
@@ -1508,6 +1558,8 @@ export interface StayPreviousValuesSubscription
   reviews: () => Promise<AsyncIterator<Int>>;
   img: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
+  hostImg: () => Promise<AsyncIterator<String>>;
+  hostImgLow: () => Promise<AsyncIterator<String>>;
   size: () => Promise<AsyncIterator<String>>;
   description: () => Promise<AsyncIterator<String>>;
   space: () => Promise<AsyncIterator<String>>;

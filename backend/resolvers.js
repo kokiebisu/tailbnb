@@ -31,6 +31,8 @@ const resolvers = {
         reviews: args.reviews,
         img: args.img,
         imglow: args.imglow,
+        hostImg: args.hostImg,
+        hostImgLow: args.hostImgLow,
         size: args.size,
         description: args.description,
         space: args.space,

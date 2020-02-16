@@ -9,6 +9,7 @@ import styled from 'styled-components';
 // Loading
 import Skeleton from 'react-loading-skeleton';
 import PulseLoader from 'react-spinners/PulseLoader';
+import LazyImage from 'react-lazy-progressive-image';
 
 // GraphQL
 import { gql } from 'apollo-boost';
@@ -65,6 +66,8 @@ const GET_STAY = gql`
       joined
       duringStay
       hostType
+      hostImg
+      hostImgLow
     }
   }
 `;
@@ -77,7 +80,9 @@ export default () => {
     },
     pollInterval: 5000
   });
-
+  if (data) {
+    console.log(data.stay.hostImgLow);
+  }
   return (
     <>
       <Head>
@@ -254,9 +259,17 @@ export default () => {
             </div>
 
             <div className='flex flex-col justify-center items-start'>
-              <div className='flex justify-center w-full'>
-                <img className='h-14 w-14 rounded-full' src={detail1} />
-              </div>
+              {loading ? (
+                <Skeleton circle={true} height={60} width={60} />
+              ) : (
+                <LazyImage
+                  src={data.stay.hostImg}
+                  placeholder={data.stay.hostImgLow}>
+                  {(src, loading, isVisible) => (
+                    <img className='h-16 w-16 rounded-full' src={src} />
+                  )}
+                </LazyImage>
+              )}
             </div>
           </div>
           <div className='my-6 border-b border-gray-300'>
@@ -340,6 +353,8 @@ export default () => {
               duringStay={data.stay.duringStay}
               hostType={data.stay.hostType}
               reviews={data.stay.reviews}
+              hostImg={data.stay.hostImg}
+              hostImg={data.stay.hostImgLow}
             />
             <KeepInMind />
             <DetailSectionOverflow title='More places to stay'>
@@ -358,23 +373,3 @@ export default () => {
     </>
   );
 };
-
-const SSkeletonPulse = styled.div`
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
-  background-size: 400% 400%;
-  @keyframes pulse {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: -135% 0%;
-    }
-  }
-`;
-
-const SSkeletonPulse1 = styled(SSkeletonPulse)`
-  animation: pulse 1.2s ease-in-out infinite;
-`;

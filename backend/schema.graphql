@@ -17,9 +17,18 @@ type Mutation {
     ratings: Float
     img: String!
     imglow: String!
+    hostImg: String!
+    hostImgLow: String!
     reviews: Int
     size: String!
     description: String!
+    space: String
+    access: String
+    note: String
+    hostName: String!
+    joined: String!
+    hostDescription: String!
+    duringStay: String
   ): Stay!
   deleteStay(title: String!): Stay
   createAdventure(
@@ -54,6 +63,8 @@ type Stay {
   reviews: Int
   img: String!
   imglow: String!
+  hostImg: String!
+  hostImgLow: String!
   size: String!
   description: String!
   space: String

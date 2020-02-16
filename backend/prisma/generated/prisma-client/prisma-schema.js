@@ -501,6 +501,8 @@ type Stay {
   reviews: Int
   img: String!
   imglow: String!
+  hostImg: String!
+  hostImgLow: String!
   size: String!
   description: String!
   space: String
@@ -529,6 +531,8 @@ input StayCreateInput {
   reviews: Int
   img: String!
   imglow: String!
+  hostImg: String!
+  hostImgLow: String!
   size: String!
   description: String!
   space: String
@@ -566,6 +570,10 @@ enum StayOrderByInput {
   img_DESC
   imglow_ASC
   imglow_DESC
+  hostImg_ASC
+  hostImg_DESC
+  hostImgLow_ASC
+  hostImgLow_DESC
   size_ASC
   size_DESC
   description_ASC
@@ -597,6 +605,8 @@ type StayPreviousValues {
   reviews: Int
   img: String!
   imglow: String!
+  hostImg: String!
+  hostImgLow: String!
   size: String!
   description: String!
   space: String
@@ -636,6 +646,8 @@ input StayUpdateInput {
   reviews: Int
   img: String
   imglow: String
+  hostImg: String
+  hostImgLow: String
   size: String
   description: String
   space: String
@@ -657,6 +669,8 @@ input StayUpdateManyMutationInput {
   reviews: Int
   img: String
   imglow: String
+  hostImg: String
+  hostImgLow: String
   size: String
   description: String
   space: String
@@ -791,6 +805,34 @@ input StayWhereInput {
   imglow_not_starts_with: String
   imglow_ends_with: String
   imglow_not_ends_with: String
+  hostImg: String
+  hostImg_not: String
+  hostImg_in: [String!]
+  hostImg_not_in: [String!]
+  hostImg_lt: String
+  hostImg_lte: String
+  hostImg_gt: String
+  hostImg_gte: String
+  hostImg_contains: String
+  hostImg_not_contains: String
+  hostImg_starts_with: String
+  hostImg_not_starts_with: String
+  hostImg_ends_with: String
+  hostImg_not_ends_with: String
+  hostImgLow: String
+  hostImgLow_not: String
+  hostImgLow_in: [String!]
+  hostImgLow_not_in: [String!]
+  hostImgLow_lt: String
+  hostImgLow_lte: String
+  hostImgLow_gt: String
+  hostImgLow_gte: String
+  hostImgLow_contains: String
+  hostImgLow_not_contains: String
+  hostImgLow_starts_with: String
+  hostImgLow_not_starts_with: String
+  hostImgLow_ends_with: String
+  hostImgLow_not_ends_with: String
   size: String
   size_not: String
   size_in: [String!]
