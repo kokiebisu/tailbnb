@@ -367,7 +367,7 @@ export default () => {
               hostType={data.stay.hostType}
               reviews={data.stay.reviews}
               hostImg={data.stay.hostImg}
-              hostImg={data.stay.hostImgLow}
+              hostImgLow={data.stay.hostImgLow}
             />
             <KeepInMind />
             <DetailSectionOverflow title='More places to stay'>
