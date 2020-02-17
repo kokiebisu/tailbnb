@@ -80,9 +80,8 @@ export default () => {
     },
     pollInterval: 5000
   });
-  if (data) {
-    console.log(data.stay.hostImgLow);
-  }
+  const [length, setLength] = useState(false);
+  console.log('length:', length);
   return (
     <>
       <Head>
@@ -231,7 +230,7 @@ export default () => {
                     <h3
                       style={{ fontFamily: 'airbnb-medium' }}
                       className='text-2xl text-gray-850 leading-none'>
-                      {data.stay.size} hosted by HostName
+                      {data.stay.size} hosted by {data.stay.hostName}
                     </h3>
                   )}
                   {loading ? (
@@ -273,7 +272,14 @@ export default () => {
             </div>
           </div>
           <div className='my-6 border-b border-gray-300'>
-            <Characteristics />
+            {loading ? (
+              <Characteristics />
+            ) : (
+              <Characteristics
+                hostType={data.stay.hostType}
+                hostName={data.stay.hostName}
+              />
+            )}
           </div>
           {loading ? (
             <div className='flex justify-center items-center w-full py-20'>
@@ -288,6 +294,7 @@ export default () => {
                     space={data.stay.space}
                     access={data.stay.access}
                     note={data.stay.note}
+                    changeLength={() => setLength(!length)}
                   />
                   <div className='my-5'>
                     <button>
@@ -339,9 +346,15 @@ export default () => {
             </>
           )}
         </div>
-        <div className='lg:w-5/12 lg:h-80v'>
-          <CheckInCard loading={loading} />
-        </div>
+        {length ? (
+          <div className='lg:w-5/12 lg:h-100r'>
+            <CheckInCard loading={loading} />
+          </div>
+        ) : (
+          <div className='lg:w-5/12 lg:h-80v'>
+            <CheckInCard loading={loading} />
+          </div>
+        )}
 
         {loading ? null : (
           <>

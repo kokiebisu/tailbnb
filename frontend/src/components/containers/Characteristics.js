@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import CharacteristicCard from '../presentational/CharacteristicCard';
 
-export default () => {
+export default ({ hostType, hostName }) => {
   return (
     <>
       <CharacteristicCard
@@ -17,12 +17,15 @@ export default () => {
         guestnumber='13'
         description='recent guests said this place was sparkling clean.'
       />
-      <CharacteristicCard
-        type='superhost'
-        hostname='Tim'
-        title='is a Superhost'
-        description='Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.'
-      />
+      {hostType == 'superhost' ? (
+        <CharacteristicCard
+          type='superhost'
+          hostName={hostName}
+          title='is a Superhost'
+          description='Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.'
+        />
+      ) : null}
+
       <CharacteristicCard
         type='location'
         title='Great location'

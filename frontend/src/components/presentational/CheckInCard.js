@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import PulseLoader from 'react-spinners/PulseLoader';
 
-export default ({ loading }) => {
+export default ({ loading, length }) => {
   const [loaded, setLoaded] = useState(true);
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));

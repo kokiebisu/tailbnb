@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default ({ description, space, access, note }) => {
+export default ({ description, space, access, note, changeLength }) => {
   const [display, setDisplay] = useState(false);
   const renderDescription = (description) => {
     const wordArray = description.split(' ');
@@ -51,7 +51,10 @@ export default ({ description, space, access, note }) => {
           <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
             {`${newArray.join(' ')}...`}
             <button
-              onClick={() => setDisplay(true)}
+              onClick={() => {
+                setDisplay(true);
+                changeLength();
+              }}
               style={{ fontFamily: 'airbnb-book' }}
               className='hover:border-green-850 border-b text-green-850 border-transparent'>
               Read More

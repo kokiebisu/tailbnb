@@ -6,7 +6,7 @@ export default ({
   title,
   description,
   guestnumber,
-  hostname,
+  hostName,
   percentage
 }) => {
   const [loaded, setLoaded] = useState(false);
@@ -135,7 +135,7 @@ export default ({
       <div>
         {loaded ? (
           <h3 style={{ fontFamily: 'airbnb-medium' }} className='text-gray-750'>
-            {title}
+            {hostName} {title}
           </h3>
         ) : (
           <Skeleton height={15} width={300} />
