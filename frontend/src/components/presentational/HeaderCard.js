@@ -6,7 +6,7 @@ export default () => {
       <div className='mx-8'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
-          className='hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight'>
+          className='hidden md:inline-block md:text-3xl text-gray-750 leading-tight'>
           Book unique places to <br />
           stay and things to do.
         </h3>

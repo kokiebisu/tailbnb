@@ -3267,7 +3267,7 @@ __webpack_require__.r(__webpack_exports__);
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "hidden md:inline-block md:font-sans md:text-3xl md:font-bold md:text-gray-750 md:leading-tight"
+    className: "hidden md:inline-block md:text-3xl text-gray-750 leading-tight"
   }, "Book unique places to ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
