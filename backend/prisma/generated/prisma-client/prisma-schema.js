@@ -492,7 +492,7 @@ type Query {
 
 type Stay {
   id: ID!
-  title: String
+  name: String
   cost: Int!
   hostType: String!
   country: String!
@@ -507,7 +507,7 @@ type Stay {
   description: String!
   space: String
   access: String
-  note: String
+  notes: String
   hostName: String!
   joined: String!
   hostDescription: String!
@@ -522,7 +522,7 @@ type StayConnection {
 
 input StayCreateInput {
   id: ID
-  title: String
+  name: String
   cost: Int!
   hostType: String!
   country: String!
@@ -537,7 +537,7 @@ input StayCreateInput {
   description: String!
   space: String
   access: String
-  note: String
+  notes: String
   hostName: String!
   joined: String!
   hostDescription: String!
@@ -552,8 +552,8 @@ type StayEdge {
 enum StayOrderByInput {
   id_ASC
   id_DESC
-  title_ASC
-  title_DESC
+  name_ASC
+  name_DESC
   cost_ASC
   cost_DESC
   hostType_ASC
@@ -582,8 +582,8 @@ enum StayOrderByInput {
   space_DESC
   access_ASC
   access_DESC
-  note_ASC
-  note_DESC
+  notes_ASC
+  notes_DESC
   hostName_ASC
   hostName_DESC
   joined_ASC
@@ -596,7 +596,7 @@ enum StayOrderByInput {
 
 type StayPreviousValues {
   id: ID!
-  title: String
+  name: String
   cost: Int!
   hostType: String!
   country: String!
@@ -611,7 +611,7 @@ type StayPreviousValues {
   description: String!
   space: String
   access: String
-  note: String
+  notes: String
   hostName: String!
   joined: String!
   hostDescription: String!
@@ -637,7 +637,7 @@ input StaySubscriptionWhereInput {
 }
 
 input StayUpdateInput {
-  title: String
+  name: String
   cost: Int
   hostType: String
   country: String
@@ -652,7 +652,7 @@ input StayUpdateInput {
   description: String
   space: String
   access: String
-  note: String
+  notes: String
   hostName: String
   joined: String
   hostDescription: String
@@ -660,7 +660,7 @@ input StayUpdateInput {
 }
 
 input StayUpdateManyMutationInput {
-  title: String
+  name: String
   cost: Int
   hostType: String
   country: String
@@ -675,7 +675,7 @@ input StayUpdateManyMutationInput {
   description: String
   space: String
   access: String
-  note: String
+  notes: String
   hostName: String
   joined: String
   hostDescription: String
@@ -697,20 +697,20 @@ input StayWhereInput {
   id_not_starts_with: ID
   id_ends_with: ID
   id_not_ends_with: ID
-  title: String
-  title_not: String
-  title_in: [String!]
-  title_not_in: [String!]
-  title_lt: String
-  title_lte: String
-  title_gt: String
-  title_gte: String
-  title_contains: String
-  title_not_contains: String
-  title_starts_with: String
-  title_not_starts_with: String
-  title_ends_with: String
-  title_not_ends_with: String
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
   cost: Int
   cost_not: Int
   cost_in: [Int!]
@@ -889,20 +889,20 @@ input StayWhereInput {
   access_not_starts_with: String
   access_ends_with: String
   access_not_ends_with: String
-  note: String
-  note_not: String
-  note_in: [String!]
-  note_not_in: [String!]
-  note_lt: String
-  note_lte: String
-  note_gt: String
-  note_gte: String
-  note_contains: String
-  note_not_contains: String
-  note_starts_with: String
-  note_not_starts_with: String
-  note_ends_with: String
-  note_not_ends_with: String
+  notes: String
+  notes_not: String
+  notes_in: [String!]
+  notes_not_in: [String!]
+  notes_lt: String
+  notes_lte: String
+  notes_gt: String
+  notes_gte: String
+  notes_contains: String
+  notes_not_contains: String
+  notes_starts_with: String
+  notes_not_starts_with: String
+  notes_ends_with: String
+  notes_not_ends_with: String
   hostName: String
   hostName_not: String
   hostName_in: [String!]
@@ -966,7 +966,7 @@ input StayWhereInput {
 
 input StayWhereUniqueInput {
   id: ID
-  title: String
+  name: String
 }
 
 type Subscription {

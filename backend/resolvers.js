@@ -22,7 +22,7 @@ const resolvers = {
   Mutation: {
     createStay(root, args, context) {
       return context.prisma.createStay({
-        title: args.title,
+        name: args.name,
         cost: args.cost,
         hostType: args.hostType,
         country: args.country,
@@ -37,7 +37,7 @@ const resolvers = {
         description: args.description,
         space: args.space,
         access: args.access,
-        note: args.note,
+        notes: args.notes,
         hostName: args.hostName,
         joined: args.joined,
         hostDescription: args.hostDescription,

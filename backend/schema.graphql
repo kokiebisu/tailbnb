@@ -9,7 +9,7 @@ type Query {
 
 type Mutation {
   createStay(
-    title: String!
+    name: String!
     cost: Int!
     hostType: String!
     country: String
@@ -24,13 +24,13 @@ type Mutation {
     description: String!
     space: String
     access: String
-    note: String
+    notes: String
     hostName: String!
     joined: String!
     hostDescription: String!
     duringStay: String
   ): Stay!
-  deleteStay(title: String!): Stay
+  deleteStay(name: String!): Stay
   createAdventure(
     title: String!
     period: Int!
@@ -55,7 +55,7 @@ type Mutation {
 
 type Stay {
   id: ID!
-  title: String!
+  name: String!
   cost: Int!
   hostType: String
   country: String!
@@ -69,7 +69,7 @@ type Stay {
   description: String!
   space: String
   access: String
-  note: String
+  notes: String
   hostName: String!
   joined: String!
   hostDescription: String!

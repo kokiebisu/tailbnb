@@ -51,7 +51,7 @@ import SleepingArrangements from '../../components/containers/SleepingArrangemen
 const GET_STAY = gql`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
-      title
+      name
       location
       ratings
       reviews
@@ -60,7 +60,7 @@ const GET_STAY = gql`
       description
       space
       access
-      note
+      notes
       hostName
       hostDescription
       hostType
@@ -89,7 +89,7 @@ export default () => {
         {loading ? (
           <title>Vacation Rentals, Homes, Experiences & Places</title>
         ) : (
-          <title>{data.stay.title}</title>
+          <title>{data.stay.name}</title>
         )}
 
         <meta
@@ -109,7 +109,7 @@ export default () => {
               <h3
                 style={{ fontFamily: 'airbnb-medium' }}
                 className='text-3xl text-gray-850'>
-                {data.stay.title}
+                {data.stay.name}
               </h3>
             )}
 

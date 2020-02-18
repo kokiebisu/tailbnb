@@ -1,6 +1,6 @@
 type Stay {
   id: ID! @id
-  title: String @unique
+  name: String @unique
   cost: Int!
   hostType: String!
   country: String!
@@ -15,7 +15,7 @@ type Stay {
   description: String!
   space: String
   access: String
-  note: String
+  notes: String
   hostName: String!
   joined: String!
   hostDescription: String!

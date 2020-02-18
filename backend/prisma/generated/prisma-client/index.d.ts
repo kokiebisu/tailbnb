@@ -218,8 +218,8 @@ export type ExperienceOrderByInput =
 export type StayOrderByInput =
   | "id_ASC"
   | "id_DESC"
-  | "title_ASC"
-  | "title_DESC"
+  | "name_ASC"
+  | "name_DESC"
   | "cost_ASC"
   | "cost_DESC"
   | "hostType_ASC"
@@ -248,8 +248,8 @@ export type StayOrderByInput =
   | "space_DESC"
   | "access_ASC"
   | "access_DESC"
-  | "note_ASC"
-  | "note_DESC"
+  | "notes_ASC"
+  | "notes_DESC"
   | "hostName_ASC"
   | "hostName_DESC"
   | "joined_ASC"
@@ -479,7 +479,7 @@ export interface ExperienceWhereInput {
 
 export type StayWhereUniqueInput = AtLeastOne<{
   id: Maybe<ID_Input>;
-  title?: Maybe<String>;
+  name?: Maybe<String>;
 }>;
 
 export interface StayWhereInput {
@@ -497,20 +497,20 @@ export interface StayWhereInput {
   id_not_starts_with?: Maybe<ID_Input>;
   id_ends_with?: Maybe<ID_Input>;
   id_not_ends_with?: Maybe<ID_Input>;
-  title?: Maybe<String>;
-  title_not?: Maybe<String>;
-  title_in?: Maybe<String[] | String>;
-  title_not_in?: Maybe<String[] | String>;
-  title_lt?: Maybe<String>;
-  title_lte?: Maybe<String>;
-  title_gt?: Maybe<String>;
-  title_gte?: Maybe<String>;
-  title_contains?: Maybe<String>;
-  title_not_contains?: Maybe<String>;
-  title_starts_with?: Maybe<String>;
-  title_not_starts_with?: Maybe<String>;
-  title_ends_with?: Maybe<String>;
-  title_not_ends_with?: Maybe<String>;
+  name?: Maybe<String>;
+  name_not?: Maybe<String>;
+  name_in?: Maybe<String[] | String>;
+  name_not_in?: Maybe<String[] | String>;
+  name_lt?: Maybe<String>;
+  name_lte?: Maybe<String>;
+  name_gt?: Maybe<String>;
+  name_gte?: Maybe<String>;
+  name_contains?: Maybe<String>;
+  name_not_contains?: Maybe<String>;
+  name_starts_with?: Maybe<String>;
+  name_not_starts_with?: Maybe<String>;
+  name_ends_with?: Maybe<String>;
+  name_not_ends_with?: Maybe<String>;
   cost?: Maybe<Int>;
   cost_not?: Maybe<Int>;
   cost_in?: Maybe<Int[] | Int>;
@@ -689,20 +689,20 @@ export interface StayWhereInput {
   access_not_starts_with?: Maybe<String>;
   access_ends_with?: Maybe<String>;
   access_not_ends_with?: Maybe<String>;
-  note?: Maybe<String>;
-  note_not?: Maybe<String>;
-  note_in?: Maybe<String[] | String>;
-  note_not_in?: Maybe<String[] | String>;
-  note_lt?: Maybe<String>;
-  note_lte?: Maybe<String>;
-  note_gt?: Maybe<String>;
-  note_gte?: Maybe<String>;
-  note_contains?: Maybe<String>;
-  note_not_contains?: Maybe<String>;
-  note_starts_with?: Maybe<String>;
-  note_not_starts_with?: Maybe<String>;
-  note_ends_with?: Maybe<String>;
-  note_not_ends_with?: Maybe<String>;
+  notes?: Maybe<String>;
+  notes_not?: Maybe<String>;
+  notes_in?: Maybe<String[] | String>;
+  notes_not_in?: Maybe<String[] | String>;
+  notes_lt?: Maybe<String>;
+  notes_lte?: Maybe<String>;
+  notes_gt?: Maybe<String>;
+  notes_gte?: Maybe<String>;
+  notes_contains?: Maybe<String>;
+  notes_not_contains?: Maybe<String>;
+  notes_starts_with?: Maybe<String>;
+  notes_not_starts_with?: Maybe<String>;
+  notes_ends_with?: Maybe<String>;
+  notes_not_ends_with?: Maybe<String>;
   hostName?: Maybe<String>;
   hostName_not?: Maybe<String>;
   hostName_in?: Maybe<String[] | String>;
@@ -828,7 +828,7 @@ export interface ExperienceUpdateManyMutationInput {
 
 export interface StayCreateInput {
   id?: Maybe<ID_Input>;
-  title?: Maybe<String>;
+  name?: Maybe<String>;
   cost: Int;
   hostType: String;
   country: String;
@@ -843,7 +843,7 @@ export interface StayCreateInput {
   description: String;
   space?: Maybe<String>;
   access?: Maybe<String>;
-  note?: Maybe<String>;
+  notes?: Maybe<String>;
   hostName: String;
   joined: String;
   hostDescription: String;
@@ -851,7 +851,7 @@ export interface StayCreateInput {
 }
 
 export interface StayUpdateInput {
-  title?: Maybe<String>;
+  name?: Maybe<String>;
   cost?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
@@ -866,7 +866,7 @@ export interface StayUpdateInput {
   description?: Maybe<String>;
   space?: Maybe<String>;
   access?: Maybe<String>;
-  note?: Maybe<String>;
+  notes?: Maybe<String>;
   hostName?: Maybe<String>;
   joined?: Maybe<String>;
   hostDescription?: Maybe<String>;
@@ -874,7 +874,7 @@ export interface StayUpdateInput {
 }
 
 export interface StayUpdateManyMutationInput {
-  title?: Maybe<String>;
+  name?: Maybe<String>;
   cost?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
@@ -889,7 +889,7 @@ export interface StayUpdateManyMutationInput {
   description?: Maybe<String>;
   space?: Maybe<String>;
   access?: Maybe<String>;
-  note?: Maybe<String>;
+  notes?: Maybe<String>;
   hostName?: Maybe<String>;
   joined?: Maybe<String>;
   hostDescription?: Maybe<String>;
@@ -1178,7 +1178,7 @@ export interface AggregateExperienceSubscription
 
 export interface Stay {
   id: ID_Output;
-  title?: String;
+  name?: String;
   cost: Int;
   hostType: String;
   country: String;
@@ -1193,7 +1193,7 @@ export interface Stay {
   description: String;
   space?: String;
   access?: String;
-  note?: String;
+  notes?: String;
   hostName: String;
   joined: String;
   hostDescription: String;
@@ -1202,7 +1202,7 @@ export interface Stay {
 
 export interface StayPromise extends Promise<Stay>, Fragmentable {
   id: () => Promise<ID_Output>;
-  title: () => Promise<String>;
+  name: () => Promise<String>;
   cost: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
@@ -1217,7 +1217,7 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   description: () => Promise<String>;
   space: () => Promise<String>;
   access: () => Promise<String>;
-  note: () => Promise<String>;
+  notes: () => Promise<String>;
   hostName: () => Promise<String>;
   joined: () => Promise<String>;
   hostDescription: () => Promise<String>;
@@ -1228,7 +1228,7 @@ export interface StaySubscription
   extends Promise<AsyncIterator<Stay>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
-  title: () => Promise<AsyncIterator<String>>;
+  name: () => Promise<AsyncIterator<String>>;
   cost: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
@@ -1243,7 +1243,7 @@ export interface StaySubscription
   description: () => Promise<AsyncIterator<String>>;
   space: () => Promise<AsyncIterator<String>>;
   access: () => Promise<AsyncIterator<String>>;
-  note: () => Promise<AsyncIterator<String>>;
+  notes: () => Promise<AsyncIterator<String>>;
   hostName: () => Promise<AsyncIterator<String>>;
   joined: () => Promise<AsyncIterator<String>>;
   hostDescription: () => Promise<AsyncIterator<String>>;
@@ -1254,7 +1254,7 @@ export interface StayNullablePromise
   extends Promise<Stay | null>,
     Fragmentable {
   id: () => Promise<ID_Output>;
-  title: () => Promise<String>;
+  name: () => Promise<String>;
   cost: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
@@ -1269,7 +1269,7 @@ export interface StayNullablePromise
   description: () => Promise<String>;
   space: () => Promise<String>;
   access: () => Promise<String>;
-  note: () => Promise<String>;
+  notes: () => Promise<String>;
   hostName: () => Promise<String>;
   joined: () => Promise<String>;
   hostDescription: () => Promise<String>;
@@ -1497,7 +1497,7 @@ export interface StaySubscriptionPayloadSubscription
 
 export interface StayPreviousValues {
   id: ID_Output;
-  title?: String;
+  name?: String;
   cost: Int;
   hostType: String;
   country: String;
@@ -1512,7 +1512,7 @@ export interface StayPreviousValues {
   description: String;
   space?: String;
   access?: String;
-  note?: String;
+  notes?: String;
   hostName: String;
   joined: String;
   hostDescription: String;
@@ -1523,7 +1523,7 @@ export interface StayPreviousValuesPromise
   extends Promise<StayPreviousValues>,
     Fragmentable {
   id: () => Promise<ID_Output>;
-  title: () => Promise<String>;
+  name: () => Promise<String>;
   cost: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
@@ -1538,7 +1538,7 @@ export interface StayPreviousValuesPromise
   description: () => Promise<String>;
   space: () => Promise<String>;
   access: () => Promise<String>;
-  note: () => Promise<String>;
+  notes: () => Promise<String>;
   hostName: () => Promise<String>;
   joined: () => Promise<String>;
   hostDescription: () => Promise<String>;
@@ -1549,7 +1549,7 @@ export interface StayPreviousValuesSubscription
   extends Promise<AsyncIterator<StayPreviousValues>>,
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
-  title: () => Promise<AsyncIterator<String>>;
+  name: () => Promise<AsyncIterator<String>>;
   cost: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
@@ -1564,7 +1564,7 @@ export interface StayPreviousValuesSubscription
   description: () => Promise<AsyncIterator<String>>;
   space: () => Promise<AsyncIterator<String>>;
   access: () => Promise<AsyncIterator<String>>;
-  note: () => Promise<AsyncIterator<String>>;
+  notes: () => Promise<AsyncIterator<String>>;
   hostName: () => Promise<AsyncIterator<String>>;
   joined: () => Promise<AsyncIterator<String>>;
   hostDescription: () => Promise<AsyncIterator<String>>;
