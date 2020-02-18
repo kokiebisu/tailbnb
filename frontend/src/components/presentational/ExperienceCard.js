@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 import Link from 'next/link';
 
-export default ({ img, imglow, experiences, type, description }) => {
+export default ({ id, img, imglow, experiences, type, description }) => {
   return (
     <Link href='/experiences/[id]' as={`/experiences/${id}`}>
       <div className='w-30/31'>
