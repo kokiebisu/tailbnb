@@ -11,7 +11,7 @@ export default ({ ratings, reviews }) => {
           <div className='flex items-center justify-start'>
             <div className=''>
               <svg
-                style={{ fill: '#008489', marginBottom: 1 }}
+                style={{ fill: '#E61E4D', marginBottom: 1 }}
                 xmlns='http://www.w3.org/2000/svg'
                 className='h-5 w-5'
                 viewBox='0 0 37.286 37.287'>

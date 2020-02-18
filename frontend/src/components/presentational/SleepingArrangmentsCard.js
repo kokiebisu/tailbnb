@@ -2,7 +2,7 @@ import React from 'react';
 
 export default () => {
   return (
-    <div className='p-4 pl-6'>
+    <div className='w-64 bg-blue-500 p-4 pl-6'>
       <div className='pt-2 pb-4'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

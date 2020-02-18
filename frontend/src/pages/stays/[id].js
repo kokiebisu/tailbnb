@@ -221,7 +221,7 @@ export default () => {
 
         <div className='w-full lg:w-7/12 '>
           <div className='flex items-center justify-between border-b border-gray-200 mt-4'>
-            <div className='py-4'>
+            <div className='flex justify-start w-9/12 py-4'>
               <div className='mt-4 flex items-start justify-center'>
                 <div className='flex flex-col '>
                   {loading ? (
@@ -257,7 +257,7 @@ export default () => {
               </div>
             </div>
 
-            <div className='flex flex-col justify-center items-start'>
+            <div className='flex justify-end items-start w-3/12'>
               {loading ? (
                 <Skeleton circle={true} height={60} width={60} />
               ) : (
@@ -315,7 +315,7 @@ export default () => {
                   </div>
                 </div>
               </div>
-              <DetailSection title='Sleeping arrangements'>
+              <DetailSectionOverflow title='Sleeping arrangements'>
                 <div className='flex items-start justify-start my-6'>
                   <div className='mr-4 w-1/3 border border-gray-300 rounded-xl flex justify-start'>
                     <SleepingArrangmentsCard />
@@ -324,7 +324,7 @@ export default () => {
                     <SleepingArrangmentsCard />
                   </div>
                 </div>
-              </DetailSection>
+              </DetailSectionOverflow>
               <DetailSection title='Amenities'>
                 <div className='flex items-start justify-start flex-wrap'>
                   <AmenityCard type='wifi' title='Wifi' />

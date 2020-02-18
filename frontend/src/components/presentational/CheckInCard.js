@@ -16,7 +16,7 @@ export default ({ loading, length }) => {
   return (
     <>
       <div className='shadow-4xl lg:shadow-none left-0 w-full z-50 fixed bottom-0 py-2 lg:py-0 bg-white w-full lg:block lg:w-25/31 lg:sticky lg:top-0 flex lg:justify-center lg:mt-5 lg:ml-10'>
-        <div className='w-full mx-10 items-center flex lg:flex-col justify-between'>
+        <div className='w-full mx-5 items-center flex lg:flex-col justify-between'>
           {loading ? (
             <div className='flex justify-start w-full'>
               <Skeleton width={300} height={30} />

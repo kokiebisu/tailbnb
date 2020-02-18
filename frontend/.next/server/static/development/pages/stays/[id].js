@@ -874,7 +874,7 @@ __webpack_require__.r(__webpack_exports__);
     className: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     style: {
-      fill: '#008489',
+      fill: '#E61E4D',
       marginBottom: 1
     },
     xmlns: "http://www.w3.org/2000/svg",
@@ -1746,7 +1746,7 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "shadow-4xl lg:shadow-none left-0 w-full z-50 fixed bottom-0 py-2 lg:py-0 bg-white w-full lg:block lg:w-25/31 lg:sticky lg:top-0 flex lg:justify-center lg:mt-5 lg:ml-10"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full mx-10 items-center flex lg:flex-col justify-between"
+    className: "w-full mx-5 items-center flex lg:flex-col justify-between"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex justify-start w-full"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2175,7 +2175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "p-4 pl-6"
+    className: "w-64 bg-blue-500 p-4 pl-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pt-2 pb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -2639,7 +2639,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-between border-b border-gray-200 mt-4"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "py-4"
+    className: "flex justify-start w-9/12 py-4"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mt-4 flex items-start justify-center"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -2669,7 +2669,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "9 beds")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "mr-4"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "3 baths")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "flex flex-col justify-center items-start"
+    className: "flex justify-end items-start w-3/12"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     circle: true,
     height: 60,
@@ -2718,7 +2718,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
       fontFamily: 'airbnb-medium'
     },
     href: ""
-  }, "Contact host")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["default"], {
+  }, "Contact host")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "Sleeping arrangements"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-start justify-start my-6"
