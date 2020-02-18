@@ -9,8 +9,8 @@ export default () => {
           Things to know
         </h3>
       </div>
-      <div className='flex w-full border-b border-gray-300'>
-        <div className='w-1/2'>
+      <div className='flex justify-start items-start flex-wrap w-full border-b border-gray-300'>
+        <div className='w-full lg:w-1/2'>
           <div className=''>
             <h3
               className='text-gray-750 pb-2 '
@@ -143,7 +143,7 @@ export default () => {
             </button>
           </div>
         </div>
-        <div className='w-1/2'>
+        <div className='w-full mt-6 lg:mt-0 lg:w-1/2'>
           <h3
             className='text-gray-750 pb-2'
             style={{ fontFamily: 'airbnb-bold' }}>

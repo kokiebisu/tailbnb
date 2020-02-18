@@ -490,9 +490,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     className: "text-2xl text-gray-850"
   }, "Things to know")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex w-full border-b border-gray-300"
+    className: "flex justify-start items-start flex-wrap w-full border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full lg:w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -597,7 +597,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z"
   }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "w-full mt-6 lg:mt-0 lg:w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "text-gray-750 pb-2",
     style: {
