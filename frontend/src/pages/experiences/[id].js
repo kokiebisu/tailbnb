@@ -8,11 +8,7 @@ export default () => {
   return (
     <>
       <Head>
-        {loading ? (
-          <title>Vacation Rentals, Homes, Experiences & Places</title>
-        ) : (
-          <title>{data.stay.title}</title>
-        )}
+        <title>Vacation Rentals, Homes, Experiences & Places</title>
 
         <meta
           name='viewport'

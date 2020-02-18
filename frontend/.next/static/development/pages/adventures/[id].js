@@ -12550,7 +12550,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   const router = Object(next_router__WEBPACK_IMPORTED_MODULE_0__["useRouter"])();
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Vacation Rentals, Homes, Experiences & Places") : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, data.stay.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Vacation Rentals, Homes, Experiences & Places"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
     name: "viewport",
     content: "initial-scale=1.0, width=device-width "
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
