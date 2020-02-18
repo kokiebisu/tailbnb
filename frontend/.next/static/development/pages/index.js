@@ -23712,8 +23712,8 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/rooms/[id]",
-    as: `/rooms/${id}`
+    href: "/stays/[id]",
+    as: `/stays/${id}`
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-30/31 cursor-pointer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {

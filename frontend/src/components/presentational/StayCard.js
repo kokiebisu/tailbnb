@@ -47,7 +47,7 @@ export default ({
   };
 
   return (
-    <Link href='/rooms/[id]' as={`/rooms/${id}`}>
+    <Link href='/stays/[id]' as={`/stays/${id}`}>
       <div className='w-30/31 cursor-pointer'>
         <LazyImage src={img} placeholder={imglow}>
           {(src, loading, isVisible) => (
