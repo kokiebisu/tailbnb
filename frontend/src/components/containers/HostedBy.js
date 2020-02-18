@@ -33,7 +33,7 @@ export default ({
   return (
     <>
       <div className='py-10 border-b border-gray-300'>
-        <div className='flex items-center justify-start mb-8'>
+        <div className='flex items-center justify-start flex-wrap mb-8 lg:w-1/2'>
           <div className='flex justify-center'>
             <LazyImage src={hostImg} placeholder={hostImgLow}>
               {(src, loading, isVisible) => (
@@ -56,9 +56,9 @@ export default ({
             </div>
           </div>
         </div>
-        <div className='flex'>
-          <div className='w-1/2'>
-            <div className='w-25/31'>
+        <div className='flex justify-start items-start flex-wrap'>
+          <div className='lg:w-1/2'>
+            <div className='lg:w-25/31'>
               <div className='flex items-center justify-start'>
                 <div className='flex items-center justify-start pr-2'>
                   <div className='pr-2'>
@@ -196,42 +196,44 @@ export default ({
               ) : null}
             </div>
           </div>
-
-          <div className='w-1/2'>
-            <div className='my-4'>
-              <p className='text-gray-750 pb-3'>
-                Languages:&nbsp;
-                <span style={{ fontFamily: 'airbnb-medium' }}>
-                  English, Espanol
-                </span>
-              </p>
-              <p className='text-gray-750 pb-3'>
-                Response rate:&nbsp;
-                <span style={{ fontFamily: 'airbnb-medium' }}>100%</span>
-              </p>
-              <p className='text-gray-750 pb-3'>
-                Response time:&nbsp;
-                <span style={{ fontFamily: 'airbnb-medium' }}>
-                  within an hour
-                </span>
-              </p>
+          <div className='lg:w-1/2'>
+            <div className='w-1/2'>
+              <div className='my-4'>
+                <p className='text-gray-750 pb-3'>
+                  Languages:&nbsp;
+                  <span style={{ fontFamily: 'airbnb-medium' }}>
+                    English, Espanol
+                  </span>
+                </p>
+                <p className='text-gray-750 pb-3'>
+                  Response rate:&nbsp;
+                  <span style={{ fontFamily: 'airbnb-medium' }}>100%</span>
+                </p>
+                <p className='text-gray-750 pb-3'>
+                  Response time:&nbsp;
+                  <span style={{ fontFamily: 'airbnb-medium' }}>
+                    within an hour
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div>
               <button
                 style={{ fontFamily: 'airbnb-medium' }}
-                className='mb-4 border border-black rounded-lg py-3 px-5 text-gray-850 text-sm mt-2'>
+                className='w-full lg:w-auto mb-4 border border-black rounded-lg py-3 px-5 text-gray-850 text-sm mt-2'>
                 Contact Host
               </button>
-              <div>
-                <div className='flex items-center justify-start w-15/31'>
-                  <div>
-                    <img src={shield1} className='h-full w-12' />
-                  </div>
-                  <p
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='ml-4 text-xs text-gray-750'>
-                    To protect your payment, never transfer money or communicate
-                    outside of the Airbnb website or app.
-                  </p>
+
+              <div className='flex items-center justify-start'>
+                <div>
+                  <img src={shield1} className='h-full w-6' />
                 </div>
+                <p
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='w-full  lg:w-15/31 ml-4 text-xs text-gray-750'>
+                  To protect your payment, never transfer money or communicate
+                  outside of the Airbnb website or app.
+                </p>
               </div>
             </div>
           </div>

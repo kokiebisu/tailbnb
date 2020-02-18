@@ -274,7 +274,7 @@ const renderContent = content => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-10 border-b border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-center justify-start mb-8"
+    className: "flex items-center justify-start flex-wrap mb-8 lg:w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex justify-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -296,11 +296,11 @@ const renderContent = content => {
     },
     className: "text-gray-750 text-sm"
   }, "Joined in ", joined)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex"
+    className: "flex justify-start items-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2"
+    className: "lg:w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-25/31"
+    className: "lg:w-25/31"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -426,6 +426,8 @@ const renderContent = content => {
     },
     className: "text-gray-750"
   }, "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.")) : null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "lg:w-1/2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "my-4"
@@ -447,22 +449,22 @@ const renderContent = content => {
     style: {
       fontFamily: 'airbnb-medium'
     }
-  }, "within an hour")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "within an hour")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "mb-4 border border-black rounded-lg py-3 px-5 text-gray-850 text-sm mt-2"
-  }, "Contact Host"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-center justify-start w-15/31"
+    className: "w-full lg:w-auto mb-4 border border-black rounded-lg py-3 px-5 text-gray-850 text-sm mt-2"
+  }, "Contact Host"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex items-center justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _public_img_high_shield_png__WEBPACK_IMPORTED_MODULE_2___default.a,
-    className: "h-full w-12"
+    className: "h-full w-6"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "ml-4 text-xs text-gray-750"
-  }, "To protect your payment, never transfer money or communicate outside of the Airbnb website or app."))))))));
+    className: "w-full  lg:w-15/31 ml-4 text-xs text-gray-750"
+  }, "To protect your payment, never transfer money or communicate outside of the Airbnb website or app.")))))));
 });
 
 /***/ }),
