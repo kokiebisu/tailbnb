@@ -367,9 +367,9 @@ export default () => {
             <DetailSectionOverflow title='More places to stay'>
               <MoreHomes />
             </DetailSectionOverflow>
-            <DetailSection title='Things to do nearby'>
+            <DetailSectionOverflow title='Things to do nearby'>
               <TodoNear />
-            </DetailSection>
+            </DetailSectionOverflow>
             <DetailSectionOverflow title='Explore other options in and around Penafiel'>
               <MoreLocations />
             </DetailSectionOverflow>

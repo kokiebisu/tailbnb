@@ -6,8 +6,8 @@ import img1 from '../../../public/img/high/todonear1.jpg';
 
 export default () => {
   return (
-    <div className='w-30/31'>
-      <div className='relative'>
+    <div className='w-64'>
+      <div className='pt-2 pb-4'>
         <div
           style={{ height: 30, width: 30 }}
           className='flex items-center justify-center absolute z-10 right-0 mr-2 mt-2 mr-1 bg-gray-300 shadow-lg rounded-full'>

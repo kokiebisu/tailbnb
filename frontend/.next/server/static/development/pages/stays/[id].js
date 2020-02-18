@@ -658,7 +658,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "h-full scroller"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured w-full md:w-full"
+    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured w-full"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full lg:w-1/3 pb-5 mr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HomeCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1059,18 +1059,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex items-start justify-between flex-wrap w-full"
+    className: "overflow-y-hidden"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+    className: "w-full h-full overflow-y-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "h-full scroller"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured w-full md:w-full"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full lg:w-1/3 pb-5 mr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+    className: "w-full lg:w-1/3 pb-5 mr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+    className: "w-full lg:w-1/3 pb-5 mr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "block md:hidden w-1/2 lg:block lg:w-1/4 xl:w-1/5"
+    className: "w-full lg:w-1/3 pb-5 mr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hidden w-1/2 xl:block xl:w-1/5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+    className: "w-full lg:w-1/3 pb-5 mr-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeartExperienceCard__WEBPACK_IMPORTED_MODULE_1__["default"], null))))));
 });
 
 /***/ }),
@@ -1917,9 +1923,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-30/31"
+    className: "w-64"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "relative"
+    className: "pt-2 pb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       height: 30,
@@ -2802,7 +2808,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     hostImgLow: data.stay.hostImgLow
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "More places to stay"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "Things to do nearby"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_25__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "Explore other options in and around Penafiel"
