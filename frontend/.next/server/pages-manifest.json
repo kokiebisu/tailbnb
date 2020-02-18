@@ -1,1 +1,1 @@
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/stays/[id]":"static/development/pages/stays/[id].js","/":"static/development/pages/index.js"}
+{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/adventures/[id]":"static/development/pages/adventures/[id].js","/index":"static/development/pages/index.js","/":"static/development/pages/index.js"}

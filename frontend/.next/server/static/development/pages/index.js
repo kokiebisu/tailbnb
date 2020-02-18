@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2233,6 +2233,7 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
       key: id,
+      id: id,
       img: img,
       imglow: imglow,
       country: country,
@@ -3134,9 +3135,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "react-lazy-progressive-image");
 /* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (({
+  id,
   img,
   imglow,
   country,
@@ -3144,7 +3149,10 @@ __webpack_require__.r(__webpack_exports__);
   cost,
   period
 }) => {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/adventures/[id]",
+    as: `/adventures/${id}`
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-30/31 cursor-pointer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
     src: img,
@@ -3156,7 +3164,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "uppercase text-xs my-2 font-semibold"
   }, country), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "my-1 w-5/6"
-  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "From $", cost, " / person", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), period, " days"));
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "From $", cost, " / person", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " \xB7 "), period, " days")));
 });
 
 /***/ }),
@@ -3697,7 +3705,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/

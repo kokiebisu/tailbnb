@@ -5,4 +5,9 @@ import Head from 'next/head';
 
 export default () => {
   const router = useRouter();
+  return (
+    <>
+      <h1>Hello {router.query.id}</h1>
+    </>
+  );
 };

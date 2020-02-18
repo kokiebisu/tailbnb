@@ -39,6 +39,7 @@ export default () => {
                 <div className='lg:w-1/4 md:w-1/3 w-1/2 pb-5'>
                   <AdventureCard
                     key={id}
+                    id={id}
                     img={img}
                     imglow={imglow}
                     country={country}
