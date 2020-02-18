@@ -26942,7 +26942,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     },
     className: "text-3xl text-gray-850"
   }, data.stay.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "flex items-center justify-between"
+    className: "flex items-start justify-between"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     height: 20,
     width: 500
@@ -26997,7 +26997,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-sm text-gray-650 underline",
     href: ""
   }, data.stay.location, ", ", data.stay.country)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "flex items-center justify-start"
+    className: "hidden lg:block flex items-start justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-start pl-2"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -27058,7 +27058,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-2xl text-gray-850 leading-none"
+    className: "text-md lg:text-2xl text-gray-850 leading-none"
   }, data.stay.size, " hosted by ", data.stay.hostName), loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     height: 20,
     width: 400

@@ -113,7 +113,7 @@ export default () => {
               </h3>
             )}
 
-            <div className='flex items-center justify-between'>
+            <div className='flex items-start justify-between'>
               {loading ? (
                 <Skeleton height={20} width={500} />
               ) : (
@@ -172,7 +172,7 @@ export default () => {
                   </a>
                 </div>
               )}
-              <div className='flex items-center justify-start'>
+              <div className='hidden lg:block flex items-start justify-start'>
                 <div className='flex items-center justify-start pl-2'>
                   <div>
                     <svg
@@ -230,7 +230,7 @@ export default () => {
                   ) : (
                     <h3
                       style={{ fontFamily: 'airbnb-medium' }}
-                      className='text-2xl text-gray-850 leading-none'>
+                      className='text-md lg:text-2xl text-gray-850 leading-none'>
                       {data.stay.size} hosted by {data.stay.hostName}
                     </h3>
                   )}
