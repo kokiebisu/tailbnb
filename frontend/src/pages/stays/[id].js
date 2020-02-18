@@ -46,6 +46,7 @@ import detail3 from '../../../public/img/high/staydetail3.jpg';
 import detail4 from '../../../public/img/high/staydetail4.jpg';
 import detail5 from '../../../public/img/high/staydetail5.jpg';
 import AmenityCard from '../../components/presentational/AmenityCard';
+import SleepingArrangements from '../../components/containers/SleepingArrangements';
 
 const GET_STAY = gql`
   query Stay($id: ID!) {
@@ -316,14 +317,7 @@ export default () => {
                 </div>
               </div>
               <DetailSectionOverflow title='Sleeping arrangements'>
-                <div className='flex items-start justify-start my-6'>
-                  <div className='mr-4 w-1/3 border border-gray-300 rounded-xl flex justify-start'>
-                    <SleepingArrangmentsCard />
-                  </div>
-                  <div className='mr-4 w-1/3 border border-gray-300 rounded-xl'>
-                    <SleepingArrangmentsCard />
-                  </div>
-                </div>
+                <SleepingArrangements />
               </DetailSectionOverflow>
               <DetailSection title='Amenities'>
                 <div className='flex items-start justify-start flex-wrap'>

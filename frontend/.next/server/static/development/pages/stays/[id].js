@@ -1007,6 +1007,41 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/containers/SleepingArrangements.js":
+/*!***********************************************************!*\
+  !*** ./src/components/containers/SleepingArrangements.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/SleepingArrangmentsCard */ "./src/components/presentational/SleepingArrangmentsCard.js");
+ // Components
+
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "overflow-y-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full h-full overflow-y-hidden"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "h-full scroller"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured w-full md:w-full"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full lg:w-1/3 pb-5 mr-2 border border-gray-300 rounded-xl flex justify-start"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full lg:w-1/3 pb-5 mr-2 border border-gray-300 rounded-xl flex justify-start"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full lg:w-1/3 pb-5 mr-2 border border-gray-300 rounded-xl flex justify-start"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_1__["default"], null))))));
+});
+
+/***/ }),
+
 /***/ "./src/components/containers/ToDoNear.js":
 /*!***********************************************!*\
   !*** ./src/components/containers/ToDoNear.js ***!
@@ -2175,7 +2210,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-64 bg-blue-500 p-4 pl-6"
+    className: "w-64 p-4 pl-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pt-2 pb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -2435,6 +2470,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
 /* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__);
 /* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.js");
+/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.js");
 
 
 
@@ -2468,6 +2504,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // Images
+
 
 
 
@@ -2720,13 +2757,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: ""
   }, "Contact host")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "Sleeping arrangements"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "flex items-start justify-start my-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "mr-4 w-1/3 border border-gray-300 rounded-xl flex justify-start"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_19__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "mr-4 w-1/3 border border-gray-300 rounded-xl"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_SleepingArrangmentsCard__WEBPACK_IMPORTED_MODULE_19__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_33__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["default"], {
     title: "Amenities"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap"
