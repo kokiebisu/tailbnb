@@ -10,7 +10,7 @@ type Query {
 type Mutation {
   createStay(
     name: String!
-    cost: Int!
+    price: Int!
     hostType: String!
     country: String
     location: String
@@ -34,7 +34,7 @@ type Mutation {
   createAdventure(
     title: String!
     period: Int!
-    cost: Int!
+    price: Int!
     country: String!
     img: String
     imglow: String
@@ -42,7 +42,7 @@ type Mutation {
   deleteAdventure(title: String!): Adventure
   createExperience(
     title: String!
-    cost: Int!
+    price: Int!
     ratings: Float
     reviews: Int
     country: String!
@@ -56,7 +56,7 @@ type Mutation {
 type Stay {
   id: ID!
   name: String!
-  cost: Int!
+  price: Int!
   hostType: String
   country: String!
   ratings: Float
@@ -80,7 +80,7 @@ type Adventure {
   id: ID!
   title: String
   period: Int!
-  cost: Int!
+  price: Int!
   country: String!
   img: String!
   imglow: String!
@@ -89,7 +89,7 @@ type Adventure {
 type Experience {
   id: ID!
   title: String
-  cost: Int!
+  price: Int!
   ratings: Float
   reviews: Int
   country: String!

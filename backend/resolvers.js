@@ -23,7 +23,7 @@ const resolvers = {
     createStay(root, args, context) {
       return context.prisma.createStay({
         name: args.name,
-        cost: args.cost,
+        price: args.price,
         hostType: args.hostType,
         country: args.country,
         location: args.location,
@@ -51,7 +51,7 @@ const resolvers = {
       return context.prisma.createAdventure({
         title: args.title,
         period: args.period,
-        cost: args.cost,
+        price: args.price,
         country: args.country,
         img: args.img,
         imglow: args.imglow
@@ -65,7 +65,7 @@ const resolvers = {
     createExperience(root, args, context) {
       return context.prisma.createExperience({
         title: args.title,
-        cost: args.cost,
+        price: args.price,
         ratings: args.ratings,
         reviews: args.reviews,
         country: args.country,

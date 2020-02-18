@@ -1,7 +1,7 @@
 type Stay {
   id: ID! @id
   name: String @unique
-  cost: Int!
+  price: Int!
   hostType: String!
   country: String!
   location: String!
