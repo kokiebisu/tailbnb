@@ -2,7 +2,7 @@ type Stay {
   id: ID! @id
   name: String @unique
   price: Int!
-  hostType: String!
+  host_is_superhost: String!
   country: String!
   street: String!
   number_of_reviews: Float @default(value: 0.0)
@@ -16,10 +16,12 @@ type Stay {
   space: String
   access: String
   notes: String
-  hostName: String!
-  joined: String!
+  host_name: String!
+  host_since: String!
   hostDescription: String!
   duringStay: String
+  host_response_time: String!
+  host_response_rate: String!
 
 }
 

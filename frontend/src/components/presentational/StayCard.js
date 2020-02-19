@@ -4,42 +4,43 @@ import Link from 'next/link';
 
 export default ({
   id,
-  hostType,
+  host_is_superhost,
   img,
   imglow,
-  street,
   name,
   price,
+  country,
   reviews_per_month
 }) => {
-  const renderhost = () => {
-    if (hostType === 'normal') {
+  console.log('host is superhost', host_is_superhost);
+  const renderhost = (host_is_superhost) => {
+    if (!host_is_superhost) {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='mt-3 text-sm sm:my-2 font-light text-gray-600'>
-            {street}
+            {country}
           </p>
         </div>
       );
-    } else if (hostType === 'superhost') {
+    } else if (host_is_superhost) {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
-            {hostType}
+            Superhost
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
-            {street}
+            {country}
           </p>
         </div>
       );
-    } else if (hostType === 'plus') {
+    } else {
       return (
         <div className='sm:flex sm:flex-wrap sm:items-center sm:justify-start'>
           <p className='inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
-            {hostType}
+            plus
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
-            {street}
+            {country}
           </p>
         </div>
       );
@@ -56,7 +57,7 @@ export default ({
         </LazyImage>
 
         <div className='flex flex-wrap items-center justify-between'>
-          {renderhost()}
+          {renderhost(host_is_superhost)}
           <div className='flex items-center justify-center flex-wrap'>
             <svg
               xmlns='http://www.w3.org/2000/svg'

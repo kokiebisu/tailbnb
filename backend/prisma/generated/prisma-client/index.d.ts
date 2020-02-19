@@ -222,8 +222,8 @@ export type StayOrderByInput =
   | "name_DESC"
   | "price_ASC"
   | "price_DESC"
-  | "hostType_ASC"
-  | "hostType_DESC"
+  | "host_is_superhost_ASC"
+  | "host_is_superhost_DESC"
   | "country_ASC"
   | "country_DESC"
   | "street_ASC"
@@ -250,14 +250,18 @@ export type StayOrderByInput =
   | "access_DESC"
   | "notes_ASC"
   | "notes_DESC"
-  | "hostName_ASC"
-  | "hostName_DESC"
-  | "joined_ASC"
-  | "joined_DESC"
+  | "host_name_ASC"
+  | "host_name_DESC"
+  | "host_since_ASC"
+  | "host_since_DESC"
   | "hostDescription_ASC"
   | "hostDescription_DESC"
   | "duringStay_ASC"
-  | "duringStay_DESC";
+  | "duringStay_DESC"
+  | "host_response_time_ASC"
+  | "host_response_time_DESC"
+  | "host_response_rate_ASC"
+  | "host_response_rate_DESC";
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
@@ -519,20 +523,20 @@ export interface StayWhereInput {
   price_lte?: Maybe<Int>;
   price_gt?: Maybe<Int>;
   price_gte?: Maybe<Int>;
-  hostType?: Maybe<String>;
-  hostType_not?: Maybe<String>;
-  hostType_in?: Maybe<String[] | String>;
-  hostType_not_in?: Maybe<String[] | String>;
-  hostType_lt?: Maybe<String>;
-  hostType_lte?: Maybe<String>;
-  hostType_gt?: Maybe<String>;
-  hostType_gte?: Maybe<String>;
-  hostType_contains?: Maybe<String>;
-  hostType_not_contains?: Maybe<String>;
-  hostType_starts_with?: Maybe<String>;
-  hostType_not_starts_with?: Maybe<String>;
-  hostType_ends_with?: Maybe<String>;
-  hostType_not_ends_with?: Maybe<String>;
+  host_is_superhost?: Maybe<String>;
+  host_is_superhost_not?: Maybe<String>;
+  host_is_superhost_in?: Maybe<String[] | String>;
+  host_is_superhost_not_in?: Maybe<String[] | String>;
+  host_is_superhost_lt?: Maybe<String>;
+  host_is_superhost_lte?: Maybe<String>;
+  host_is_superhost_gt?: Maybe<String>;
+  host_is_superhost_gte?: Maybe<String>;
+  host_is_superhost_contains?: Maybe<String>;
+  host_is_superhost_not_contains?: Maybe<String>;
+  host_is_superhost_starts_with?: Maybe<String>;
+  host_is_superhost_not_starts_with?: Maybe<String>;
+  host_is_superhost_ends_with?: Maybe<String>;
+  host_is_superhost_not_ends_with?: Maybe<String>;
   country?: Maybe<String>;
   country_not?: Maybe<String>;
   country_in?: Maybe<String[] | String>;
@@ -703,34 +707,34 @@ export interface StayWhereInput {
   notes_not_starts_with?: Maybe<String>;
   notes_ends_with?: Maybe<String>;
   notes_not_ends_with?: Maybe<String>;
-  hostName?: Maybe<String>;
-  hostName_not?: Maybe<String>;
-  hostName_in?: Maybe<String[] | String>;
-  hostName_not_in?: Maybe<String[] | String>;
-  hostName_lt?: Maybe<String>;
-  hostName_lte?: Maybe<String>;
-  hostName_gt?: Maybe<String>;
-  hostName_gte?: Maybe<String>;
-  hostName_contains?: Maybe<String>;
-  hostName_not_contains?: Maybe<String>;
-  hostName_starts_with?: Maybe<String>;
-  hostName_not_starts_with?: Maybe<String>;
-  hostName_ends_with?: Maybe<String>;
-  hostName_not_ends_with?: Maybe<String>;
-  joined?: Maybe<String>;
-  joined_not?: Maybe<String>;
-  joined_in?: Maybe<String[] | String>;
-  joined_not_in?: Maybe<String[] | String>;
-  joined_lt?: Maybe<String>;
-  joined_lte?: Maybe<String>;
-  joined_gt?: Maybe<String>;
-  joined_gte?: Maybe<String>;
-  joined_contains?: Maybe<String>;
-  joined_not_contains?: Maybe<String>;
-  joined_starts_with?: Maybe<String>;
-  joined_not_starts_with?: Maybe<String>;
-  joined_ends_with?: Maybe<String>;
-  joined_not_ends_with?: Maybe<String>;
+  host_name?: Maybe<String>;
+  host_name_not?: Maybe<String>;
+  host_name_in?: Maybe<String[] | String>;
+  host_name_not_in?: Maybe<String[] | String>;
+  host_name_lt?: Maybe<String>;
+  host_name_lte?: Maybe<String>;
+  host_name_gt?: Maybe<String>;
+  host_name_gte?: Maybe<String>;
+  host_name_contains?: Maybe<String>;
+  host_name_not_contains?: Maybe<String>;
+  host_name_starts_with?: Maybe<String>;
+  host_name_not_starts_with?: Maybe<String>;
+  host_name_ends_with?: Maybe<String>;
+  host_name_not_ends_with?: Maybe<String>;
+  host_since?: Maybe<String>;
+  host_since_not?: Maybe<String>;
+  host_since_in?: Maybe<String[] | String>;
+  host_since_not_in?: Maybe<String[] | String>;
+  host_since_lt?: Maybe<String>;
+  host_since_lte?: Maybe<String>;
+  host_since_gt?: Maybe<String>;
+  host_since_gte?: Maybe<String>;
+  host_since_contains?: Maybe<String>;
+  host_since_not_contains?: Maybe<String>;
+  host_since_starts_with?: Maybe<String>;
+  host_since_not_starts_with?: Maybe<String>;
+  host_since_ends_with?: Maybe<String>;
+  host_since_not_ends_with?: Maybe<String>;
   hostDescription?: Maybe<String>;
   hostDescription_not?: Maybe<String>;
   hostDescription_in?: Maybe<String[] | String>;
@@ -759,6 +763,34 @@ export interface StayWhereInput {
   duringStay_not_starts_with?: Maybe<String>;
   duringStay_ends_with?: Maybe<String>;
   duringStay_not_ends_with?: Maybe<String>;
+  host_response_time?: Maybe<String>;
+  host_response_time_not?: Maybe<String>;
+  host_response_time_in?: Maybe<String[] | String>;
+  host_response_time_not_in?: Maybe<String[] | String>;
+  host_response_time_lt?: Maybe<String>;
+  host_response_time_lte?: Maybe<String>;
+  host_response_time_gt?: Maybe<String>;
+  host_response_time_gte?: Maybe<String>;
+  host_response_time_contains?: Maybe<String>;
+  host_response_time_not_contains?: Maybe<String>;
+  host_response_time_starts_with?: Maybe<String>;
+  host_response_time_not_starts_with?: Maybe<String>;
+  host_response_time_ends_with?: Maybe<String>;
+  host_response_time_not_ends_with?: Maybe<String>;
+  host_response_rate?: Maybe<String>;
+  host_response_rate_not?: Maybe<String>;
+  host_response_rate_in?: Maybe<String[] | String>;
+  host_response_rate_not_in?: Maybe<String[] | String>;
+  host_response_rate_lt?: Maybe<String>;
+  host_response_rate_lte?: Maybe<String>;
+  host_response_rate_gt?: Maybe<String>;
+  host_response_rate_gte?: Maybe<String>;
+  host_response_rate_contains?: Maybe<String>;
+  host_response_rate_not_contains?: Maybe<String>;
+  host_response_rate_starts_with?: Maybe<String>;
+  host_response_rate_not_starts_with?: Maybe<String>;
+  host_response_rate_ends_with?: Maybe<String>;
+  host_response_rate_not_ends_with?: Maybe<String>;
   AND?: Maybe<StayWhereInput[] | StayWhereInput>;
   OR?: Maybe<StayWhereInput[] | StayWhereInput>;
   NOT?: Maybe<StayWhereInput[] | StayWhereInput>;
@@ -830,7 +862,7 @@ export interface StayCreateInput {
   id?: Maybe<ID_Input>;
   name?: Maybe<String>;
   price: Int;
-  hostType: String;
+  host_is_superhost: String;
   country: String;
   street: String;
   number_of_reviews?: Maybe<Float>;
@@ -844,16 +876,18 @@ export interface StayCreateInput {
   space?: Maybe<String>;
   access?: Maybe<String>;
   notes?: Maybe<String>;
-  hostName: String;
-  joined: String;
+  host_name: String;
+  host_since: String;
   hostDescription: String;
   duringStay?: Maybe<String>;
+  host_response_time: String;
+  host_response_rate: String;
 }
 
 export interface StayUpdateInput {
   name?: Maybe<String>;
   price?: Maybe<Int>;
-  hostType?: Maybe<String>;
+  host_is_superhost?: Maybe<String>;
   country?: Maybe<String>;
   street?: Maybe<String>;
   number_of_reviews?: Maybe<Float>;
@@ -867,16 +901,18 @@ export interface StayUpdateInput {
   space?: Maybe<String>;
   access?: Maybe<String>;
   notes?: Maybe<String>;
-  hostName?: Maybe<String>;
-  joined?: Maybe<String>;
+  host_name?: Maybe<String>;
+  host_since?: Maybe<String>;
   hostDescription?: Maybe<String>;
   duringStay?: Maybe<String>;
+  host_response_time?: Maybe<String>;
+  host_response_rate?: Maybe<String>;
 }
 
 export interface StayUpdateManyMutationInput {
   name?: Maybe<String>;
   price?: Maybe<Int>;
-  hostType?: Maybe<String>;
+  host_is_superhost?: Maybe<String>;
   country?: Maybe<String>;
   street?: Maybe<String>;
   number_of_reviews?: Maybe<Float>;
@@ -890,10 +926,12 @@ export interface StayUpdateManyMutationInput {
   space?: Maybe<String>;
   access?: Maybe<String>;
   notes?: Maybe<String>;
-  hostName?: Maybe<String>;
-  joined?: Maybe<String>;
+  host_name?: Maybe<String>;
+  host_since?: Maybe<String>;
   hostDescription?: Maybe<String>;
   duringStay?: Maybe<String>;
+  host_response_time?: Maybe<String>;
+  host_response_rate?: Maybe<String>;
 }
 
 export interface AdventureSubscriptionWhereInput {
@@ -1180,7 +1218,7 @@ export interface Stay {
   id: ID_Output;
   name?: String;
   price: Int;
-  hostType: String;
+  host_is_superhost: String;
   country: String;
   street: String;
   number_of_reviews?: Float;
@@ -1194,17 +1232,19 @@ export interface Stay {
   space?: String;
   access?: String;
   notes?: String;
-  hostName: String;
-  joined: String;
+  host_name: String;
+  host_since: String;
   hostDescription: String;
   duringStay?: String;
+  host_response_time: String;
+  host_response_rate: String;
 }
 
 export interface StayPromise extends Promise<Stay>, Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
   price: () => Promise<Int>;
-  hostType: () => Promise<String>;
+  host_is_superhost: () => Promise<String>;
   country: () => Promise<String>;
   street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
@@ -1218,10 +1258,12 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   space: () => Promise<String>;
   access: () => Promise<String>;
   notes: () => Promise<String>;
-  hostName: () => Promise<String>;
-  joined: () => Promise<String>;
+  host_name: () => Promise<String>;
+  host_since: () => Promise<String>;
   hostDescription: () => Promise<String>;
   duringStay: () => Promise<String>;
+  host_response_time: () => Promise<String>;
+  host_response_rate: () => Promise<String>;
 }
 
 export interface StaySubscription
@@ -1230,7 +1272,7 @@ export interface StaySubscription
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
   price: () => Promise<AsyncIterator<Int>>;
-  hostType: () => Promise<AsyncIterator<String>>;
+  host_is_superhost: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
   street: () => Promise<AsyncIterator<String>>;
   number_of_reviews: () => Promise<AsyncIterator<Float>>;
@@ -1244,10 +1286,12 @@ export interface StaySubscription
   space: () => Promise<AsyncIterator<String>>;
   access: () => Promise<AsyncIterator<String>>;
   notes: () => Promise<AsyncIterator<String>>;
-  hostName: () => Promise<AsyncIterator<String>>;
-  joined: () => Promise<AsyncIterator<String>>;
+  host_name: () => Promise<AsyncIterator<String>>;
+  host_since: () => Promise<AsyncIterator<String>>;
   hostDescription: () => Promise<AsyncIterator<String>>;
   duringStay: () => Promise<AsyncIterator<String>>;
+  host_response_time: () => Promise<AsyncIterator<String>>;
+  host_response_rate: () => Promise<AsyncIterator<String>>;
 }
 
 export interface StayNullablePromise
@@ -1256,7 +1300,7 @@ export interface StayNullablePromise
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
   price: () => Promise<Int>;
-  hostType: () => Promise<String>;
+  host_is_superhost: () => Promise<String>;
   country: () => Promise<String>;
   street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
@@ -1270,10 +1314,12 @@ export interface StayNullablePromise
   space: () => Promise<String>;
   access: () => Promise<String>;
   notes: () => Promise<String>;
-  hostName: () => Promise<String>;
-  joined: () => Promise<String>;
+  host_name: () => Promise<String>;
+  host_since: () => Promise<String>;
   hostDescription: () => Promise<String>;
   duringStay: () => Promise<String>;
+  host_response_time: () => Promise<String>;
+  host_response_rate: () => Promise<String>;
 }
 
 export interface StayConnection {
@@ -1499,7 +1545,7 @@ export interface StayPreviousValues {
   id: ID_Output;
   name?: String;
   price: Int;
-  hostType: String;
+  host_is_superhost: String;
   country: String;
   street: String;
   number_of_reviews?: Float;
@@ -1513,10 +1559,12 @@ export interface StayPreviousValues {
   space?: String;
   access?: String;
   notes?: String;
-  hostName: String;
-  joined: String;
+  host_name: String;
+  host_since: String;
   hostDescription: String;
   duringStay?: String;
+  host_response_time: String;
+  host_response_rate: String;
 }
 
 export interface StayPreviousValuesPromise
@@ -1525,7 +1573,7 @@ export interface StayPreviousValuesPromise
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
   price: () => Promise<Int>;
-  hostType: () => Promise<String>;
+  host_is_superhost: () => Promise<String>;
   country: () => Promise<String>;
   street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
@@ -1539,10 +1587,12 @@ export interface StayPreviousValuesPromise
   space: () => Promise<String>;
   access: () => Promise<String>;
   notes: () => Promise<String>;
-  hostName: () => Promise<String>;
-  joined: () => Promise<String>;
+  host_name: () => Promise<String>;
+  host_since: () => Promise<String>;
   hostDescription: () => Promise<String>;
   duringStay: () => Promise<String>;
+  host_response_time: () => Promise<String>;
+  host_response_rate: () => Promise<String>;
 }
 
 export interface StayPreviousValuesSubscription
@@ -1551,7 +1601,7 @@ export interface StayPreviousValuesSubscription
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
   price: () => Promise<AsyncIterator<Int>>;
-  hostType: () => Promise<AsyncIterator<String>>;
+  host_is_superhost: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
   street: () => Promise<AsyncIterator<String>>;
   number_of_reviews: () => Promise<AsyncIterator<Float>>;
@@ -1565,10 +1615,12 @@ export interface StayPreviousValuesSubscription
   space: () => Promise<AsyncIterator<String>>;
   access: () => Promise<AsyncIterator<String>>;
   notes: () => Promise<AsyncIterator<String>>;
-  hostName: () => Promise<AsyncIterator<String>>;
-  joined: () => Promise<AsyncIterator<String>>;
+  host_name: () => Promise<AsyncIterator<String>>;
+  host_since: () => Promise<AsyncIterator<String>>;
   hostDescription: () => Promise<AsyncIterator<String>>;
   duringStay: () => Promise<AsyncIterator<String>>;
+  host_response_time: () => Promise<AsyncIterator<String>>;
+  host_response_rate: () => Promise<AsyncIterator<String>>;
 }
 
 /*

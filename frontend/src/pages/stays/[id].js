@@ -61,14 +61,15 @@ const GET_STAY = gql`
       space
       access
       notes
-      hostName
+      host_name
       hostDescription
-      hostType
-      joined
+      host_since
       duringStay
-      hostType
+      host_is_superhost
       hostImg
       hostImgLow
+      host_response_rate
+      host_response_time
     }
   }
 `;
@@ -157,11 +158,14 @@ export default () => {
                       </g>
                     </svg>
                   </div>
-                  <p
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='pl-1 text-gray-650 text-sm'>
-                    Superhost
-                  </p>
+                  {data.stay.host_is_superhost ? (
+                    <p
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='pl-1 text-gray-650 text-sm'>
+                      Superhost
+                    </p>
+                  ) : null}
+
                   <span className='text-gray-650'>&nbsp;·&nbsp;</span>
                   <a
                     style={{ fontFamily: 'airbnb-medium' }}
@@ -230,7 +234,7 @@ export default () => {
                     <h3
                       style={{ fontFamily: 'airbnb-medium' }}
                       className='text-md lg:text-2xl text-gray-850 leading-none'>
-                      {data.stay.size} hosted by {data.stay.hostName}
+                      {data.stay.size} hosted by {data.stay.host_name}
                     </h3>
                   )}
                   {loading ? (
@@ -276,8 +280,8 @@ export default () => {
               <Characteristics />
             ) : (
               <Characteristics
-                hostType={data.stay.hostType}
-                hostName={data.stay.hostName}
+                host_is_superhost={data.stay.host_is_superhost}
+                host_name={data.stay.host_name}
               />
             )}
           </div>
@@ -356,14 +360,16 @@ export default () => {
               number_of_reviews={data.stay.number_of_reviews}
             />
             <HostedBy
-              hostName={data.stay.hostName}
+              host_name={data.stay.host_name}
               hostDescription={data.stay.hostDescription}
-              joined={data.stay.joined}
+              host_since={data.stay.host_since}
               duringStay={data.stay.duringStay}
-              hostType={data.stay.hostType}
-              reviews={data.stay.reviews}
+              host_is_superhost={data.stay.host_is_superhost}
+              reviews_per_month={data.stay.reviews_per_month}
               hostImg={data.stay.hostImg}
               hostImgLow={data.stay.hostImgLow}
+              host_response_rate={data.stay.host_response_rate}
+              host_response_time={data.stay.host_response_time}
             />
             <KeepInMind />
             <DetailSectionOverflow title='More places to stay'>

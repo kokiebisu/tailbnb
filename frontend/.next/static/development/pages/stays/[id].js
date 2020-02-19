@@ -24625,14 +24625,16 @@ const renderContent = content => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (({
-  hostName,
-  hostType,
+  host_name,
+  host_is_superhost,
   hostDescription,
-  joined,
+  host_since,
   duringStay,
-  reviews,
+  reviews_per_month,
   hostImg,
-  hostImgLow
+  hostImgLow,
+  host_response_time,
+  host_response_rate
 }) => {
   const [descriptionDisplay, setDescriptionDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const [stayDisplay, setStayDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
@@ -24658,12 +24660,12 @@ const renderContent = content => {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-xl"
-  }, "Hosted By ", hostName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Hosted By ", host_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-750 text-sm"
-  }, "Joined in ", joined)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Joined in ", host_since)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex justify-start items-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "lg:w-1/2"
@@ -24690,7 +24692,7 @@ const renderContent = content => {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-750"
-  }, reviews, " Reviews")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, reviews_per_month, " Reviews")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "ml-2 pr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-start"
@@ -24716,7 +24718,7 @@ const renderContent = content => {
     className: "ml-2 pr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center justify-start"
-  }, hostType == 'superhost' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, host_is_superhost ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pr-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "h-3 w-3",
@@ -24781,14 +24783,14 @@ const renderContent = content => {
       fontFamily: 'airbnb-book'
     },
     className: "hover:border-green-850 border-b text-green-850 border-transparent"
-  }, "Read More"))) : null, hostType == 'superhost' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Read More"))) : null, host_is_superhost ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-850 py-3"
-  }, hostName, " is a Superhost"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, host_name, " is a Superhost"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
@@ -24811,13 +24813,13 @@ const renderContent = content => {
     style: {
       fontFamily: 'airbnb-medium'
     }
-  }, "100%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, host_response_rate)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text-gray-750 pb-3"
   }, "Response time:\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     style: {
       fontFamily: 'airbnb-medium'
     }
-  }, "within an hour")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, host_response_time)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
@@ -26895,14 +26897,15 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
       space
       access
       notes
-      hostName
+      host_name
       hostDescription
-      hostType
-      joined
+      host_since
       duringStay
-      hostType
+      host_is_superhost
       hostImg
       hostImgLow
+      host_response_rate
+      host_response_time
     }
   }
 `;
@@ -26981,12 +26984,12 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     d: "m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z"
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     d: "m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z"
-  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  })))), data.stay.host_is_superhost ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "pl-1 text-gray-650 text-sm"
-  }, "Superhost"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, "Superhost") : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "text-gray-650"
   }, "\xA0\xB7\xA0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     style: {
@@ -27057,7 +27060,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
       fontFamily: 'airbnb-medium'
     },
     className: "text-md lg:text-2xl text-gray-850 leading-none"
-  }, data.stay.size, " hosted by ", data.stay.hostName), loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, data.stay.size, " hosted by ", data.stay.host_name), loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     height: 20,
     width: 400
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -27088,8 +27091,8 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "my-6 border-b border-gray-300"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__["default"], null) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__["default"], {
-    hostType: data.stay.hostType,
-    hostName: data.stay.hostName
+    host_is_superhost: data.stay.host_is_superhost,
+    host_name: data.stay.host_name
   })), loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex justify-center items-center w-full py-20"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -27160,14 +27163,16 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     reviews_per_month: data.stay.reviews_per_month,
     number_of_reviews: data.stay.number_of_reviews
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    hostName: data.stay.hostName,
+    host_name: data.stay.host_name,
     hostDescription: data.stay.hostDescription,
-    joined: data.stay.joined,
+    host_since: data.stay.host_since,
     duringStay: data.stay.duringStay,
-    hostType: data.stay.hostType,
-    reviews: data.stay.reviews,
+    host_is_superhost: data.stay.host_is_superhost,
+    reviews_per_month: data.stay.reviews_per_month,
     hostImg: data.stay.hostImg,
-    hostImgLow: data.stay.hostImgLow
+    hostImgLow: data.stay.hostImgLow,
+    host_response_rate: data.stay.host_response_rate,
+    host_response_time: data.stay.host_response_time
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "More places to stay"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {

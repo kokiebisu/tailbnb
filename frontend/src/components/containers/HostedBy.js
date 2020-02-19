@@ -16,14 +16,16 @@ const renderContent = (content) => {
 };
 
 export default ({
-  hostName,
-  hostType,
+  host_name,
+  host_is_superhost,
   hostDescription,
-  joined,
+  host_since,
   duringStay,
-  reviews,
+  reviews_per_month,
   hostImg,
-  hostImgLow
+  hostImgLow,
+  host_response_time,
+  host_response_rate
 }) => {
   const [descriptionDisplay, setDescriptionDisplay] = useState(false);
   const [stayDisplay, setStayDisplay] = useState(false);
@@ -46,12 +48,12 @@ export default ({
               <h3
                 style={{ fontFamily: 'airbnb-medium' }}
                 className='text-gray-750 text-xl'>
-                Hosted By {hostName}
+                Hosted By {host_name}
               </h3>
               <p
                 style={{ fontFamily: 'airbnb-book' }}
                 className='text-gray-750 text-sm'>
-                Joined in {joined}
+                Joined in {host_since}
               </p>
             </div>
           </div>
@@ -82,7 +84,7 @@ export default ({
                   <p
                     style={{ fontFamily: 'airbnb-book' }}
                     className='text-gray-750'>
-                    {reviews} Reviews
+                    {reviews_per_month} Reviews
                   </p>
                 </div>
                 <div className='ml-2 pr-2'>
@@ -106,7 +108,7 @@ export default ({
                 </div>
                 <div className='ml-2 pr-2'>
                   <div className='flex items-center justify-start'>
-                    {hostType == 'superhost' ? (
+                    {host_is_superhost ? (
                       <>
                         <div className='pr-2'>
                           <svg
@@ -179,12 +181,12 @@ export default ({
                 </div>
               ) : null}
 
-              {hostType == 'superhost' ? (
+              {host_is_superhost ? (
                 <div className='py-3'>
                   <p
                     style={{ fontFamily: 'airbnb-medium' }}
                     className='text-gray-850 py-3'>
-                    {hostName} is a Superhost
+                    {host_name} is a Superhost
                   </p>
                   <p
                     style={{ fontFamily: 'airbnb-book' }}
@@ -207,12 +209,14 @@ export default ({
                 </p>
                 <p className='text-gray-750 pb-3'>
                   Response rate:&nbsp;
-                  <span style={{ fontFamily: 'airbnb-medium' }}>100%</span>
+                  <span style={{ fontFamily: 'airbnb-medium' }}>
+                    {host_response_rate}
+                  </span>
                 </p>
                 <p className='text-gray-750 pb-3'>
                   Response time:&nbsp;
                   <span style={{ fontFamily: 'airbnb-medium' }}>
-                    within an hour
+                    {host_response_time}
                   </span>
                 </p>
               </div>

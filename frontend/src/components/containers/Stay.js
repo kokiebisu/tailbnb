@@ -7,8 +7,8 @@ const GET_STAYS = gql`
   query {
     stays {
       id
-      hostType
-      street
+      host_is_superhost
+      country
       name
       price
       reviews_per_month
@@ -35,8 +35,8 @@ export default () => {
           data.stays.map(
             ({
               id,
-              hostType,
-              street,
+              host_is_superhost,
+              country,
               name,
               price,
               reviews_per_month,
@@ -48,10 +48,10 @@ export default () => {
                   <StayCard
                     key={id}
                     id={id}
-                    hostType={hostType}
+                    host_is_superhost={host_is_superhost}
                     img={img}
+                    country={country}
                     imglow={imglow}
-                    street={street}
                     name={name}
                     price={price}
                     reviews_per_month={reviews_per_month}

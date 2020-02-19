@@ -494,7 +494,7 @@ type Stay {
   id: ID!
   name: String
   price: Int!
-  hostType: String!
+  host_is_superhost: String!
   country: String!
   street: String!
   number_of_reviews: Float
@@ -508,10 +508,12 @@ type Stay {
   space: String
   access: String
   notes: String
-  hostName: String!
-  joined: String!
+  host_name: String!
+  host_since: String!
   hostDescription: String!
   duringStay: String
+  host_response_time: String!
+  host_response_rate: String!
 }
 
 type StayConnection {
@@ -524,7 +526,7 @@ input StayCreateInput {
   id: ID
   name: String
   price: Int!
-  hostType: String!
+  host_is_superhost: String!
   country: String!
   street: String!
   number_of_reviews: Float
@@ -538,10 +540,12 @@ input StayCreateInput {
   space: String
   access: String
   notes: String
-  hostName: String!
-  joined: String!
+  host_name: String!
+  host_since: String!
   hostDescription: String!
   duringStay: String
+  host_response_time: String!
+  host_response_rate: String!
 }
 
 type StayEdge {
@@ -556,8 +560,8 @@ enum StayOrderByInput {
   name_DESC
   price_ASC
   price_DESC
-  hostType_ASC
-  hostType_DESC
+  host_is_superhost_ASC
+  host_is_superhost_DESC
   country_ASC
   country_DESC
   street_ASC
@@ -584,21 +588,25 @@ enum StayOrderByInput {
   access_DESC
   notes_ASC
   notes_DESC
-  hostName_ASC
-  hostName_DESC
-  joined_ASC
-  joined_DESC
+  host_name_ASC
+  host_name_DESC
+  host_since_ASC
+  host_since_DESC
   hostDescription_ASC
   hostDescription_DESC
   duringStay_ASC
   duringStay_DESC
+  host_response_time_ASC
+  host_response_time_DESC
+  host_response_rate_ASC
+  host_response_rate_DESC
 }
 
 type StayPreviousValues {
   id: ID!
   name: String
   price: Int!
-  hostType: String!
+  host_is_superhost: String!
   country: String!
   street: String!
   number_of_reviews: Float
@@ -612,10 +620,12 @@ type StayPreviousValues {
   space: String
   access: String
   notes: String
-  hostName: String!
-  joined: String!
+  host_name: String!
+  host_since: String!
   hostDescription: String!
   duringStay: String
+  host_response_time: String!
+  host_response_rate: String!
 }
 
 type StaySubscriptionPayload {
@@ -639,7 +649,7 @@ input StaySubscriptionWhereInput {
 input StayUpdateInput {
   name: String
   price: Int
-  hostType: String
+  host_is_superhost: String
   country: String
   street: String
   number_of_reviews: Float
@@ -653,16 +663,18 @@ input StayUpdateInput {
   space: String
   access: String
   notes: String
-  hostName: String
-  joined: String
+  host_name: String
+  host_since: String
   hostDescription: String
   duringStay: String
+  host_response_time: String
+  host_response_rate: String
 }
 
 input StayUpdateManyMutationInput {
   name: String
   price: Int
-  hostType: String
+  host_is_superhost: String
   country: String
   street: String
   number_of_reviews: Float
@@ -676,10 +688,12 @@ input StayUpdateManyMutationInput {
   space: String
   access: String
   notes: String
-  hostName: String
-  joined: String
+  host_name: String
+  host_since: String
   hostDescription: String
   duringStay: String
+  host_response_time: String
+  host_response_rate: String
 }
 
 input StayWhereInput {
@@ -719,20 +733,20 @@ input StayWhereInput {
   price_lte: Int
   price_gt: Int
   price_gte: Int
-  hostType: String
-  hostType_not: String
-  hostType_in: [String!]
-  hostType_not_in: [String!]
-  hostType_lt: String
-  hostType_lte: String
-  hostType_gt: String
-  hostType_gte: String
-  hostType_contains: String
-  hostType_not_contains: String
-  hostType_starts_with: String
-  hostType_not_starts_with: String
-  hostType_ends_with: String
-  hostType_not_ends_with: String
+  host_is_superhost: String
+  host_is_superhost_not: String
+  host_is_superhost_in: [String!]
+  host_is_superhost_not_in: [String!]
+  host_is_superhost_lt: String
+  host_is_superhost_lte: String
+  host_is_superhost_gt: String
+  host_is_superhost_gte: String
+  host_is_superhost_contains: String
+  host_is_superhost_not_contains: String
+  host_is_superhost_starts_with: String
+  host_is_superhost_not_starts_with: String
+  host_is_superhost_ends_with: String
+  host_is_superhost_not_ends_with: String
   country: String
   country_not: String
   country_in: [String!]
@@ -903,34 +917,34 @@ input StayWhereInput {
   notes_not_starts_with: String
   notes_ends_with: String
   notes_not_ends_with: String
-  hostName: String
-  hostName_not: String
-  hostName_in: [String!]
-  hostName_not_in: [String!]
-  hostName_lt: String
-  hostName_lte: String
-  hostName_gt: String
-  hostName_gte: String
-  hostName_contains: String
-  hostName_not_contains: String
-  hostName_starts_with: String
-  hostName_not_starts_with: String
-  hostName_ends_with: String
-  hostName_not_ends_with: String
-  joined: String
-  joined_not: String
-  joined_in: [String!]
-  joined_not_in: [String!]
-  joined_lt: String
-  joined_lte: String
-  joined_gt: String
-  joined_gte: String
-  joined_contains: String
-  joined_not_contains: String
-  joined_starts_with: String
-  joined_not_starts_with: String
-  joined_ends_with: String
-  joined_not_ends_with: String
+  host_name: String
+  host_name_not: String
+  host_name_in: [String!]
+  host_name_not_in: [String!]
+  host_name_lt: String
+  host_name_lte: String
+  host_name_gt: String
+  host_name_gte: String
+  host_name_contains: String
+  host_name_not_contains: String
+  host_name_starts_with: String
+  host_name_not_starts_with: String
+  host_name_ends_with: String
+  host_name_not_ends_with: String
+  host_since: String
+  host_since_not: String
+  host_since_in: [String!]
+  host_since_not_in: [String!]
+  host_since_lt: String
+  host_since_lte: String
+  host_since_gt: String
+  host_since_gte: String
+  host_since_contains: String
+  host_since_not_contains: String
+  host_since_starts_with: String
+  host_since_not_starts_with: String
+  host_since_ends_with: String
+  host_since_not_ends_with: String
   hostDescription: String
   hostDescription_not: String
   hostDescription_in: [String!]
@@ -959,6 +973,34 @@ input StayWhereInput {
   duringStay_not_starts_with: String
   duringStay_ends_with: String
   duringStay_not_ends_with: String
+  host_response_time: String
+  host_response_time_not: String
+  host_response_time_in: [String!]
+  host_response_time_not_in: [String!]
+  host_response_time_lt: String
+  host_response_time_lte: String
+  host_response_time_gt: String
+  host_response_time_gte: String
+  host_response_time_contains: String
+  host_response_time_not_contains: String
+  host_response_time_starts_with: String
+  host_response_time_not_starts_with: String
+  host_response_time_ends_with: String
+  host_response_time_not_ends_with: String
+  host_response_rate: String
+  host_response_rate_not: String
+  host_response_rate_in: [String!]
+  host_response_rate_not_in: [String!]
+  host_response_rate_lt: String
+  host_response_rate_lte: String
+  host_response_rate_gt: String
+  host_response_rate_gte: String
+  host_response_rate_contains: String
+  host_response_rate_not_contains: String
+  host_response_rate_starts_with: String
+  host_response_rate_not_starts_with: String
+  host_response_rate_ends_with: String
+  host_response_rate_not_ends_with: String
   AND: [StayWhereInput!]
   OR: [StayWhereInput!]
   NOT: [StayWhereInput!]

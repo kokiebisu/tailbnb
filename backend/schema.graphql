@@ -11,7 +11,7 @@ type Mutation {
   createStay(
     name: String!
     price: Int!
-    hostType: String!
+    host_is_superhost: Boolean!
     country: String
     street: String
     reviews_per_month: Float
@@ -25,10 +25,12 @@ type Mutation {
     space: String
     access: String
     notes: String
-    hostName: String!
-    joined: String!
+    host_name: String!
+    host_since: String!
     hostDescription: String!
     duringStay: String
+    host_response_rate: String!
+    host_response_time: String!
   ): Stay!
   deleteStay(name: String!): Stay
   createAdventure(
@@ -57,7 +59,7 @@ type Stay {
   id: ID!
   name: String!
   price: Int!
-  hostType: String
+  host_is_superhost: Boolean!
   country: String!
   reviews_per_month: Float
   number_of_reviews: Int
@@ -70,10 +72,12 @@ type Stay {
   space: String
   access: String
   notes: String
-  hostName: String!
-  joined: String!
+  host_name: String!
+  host_since: String!
   hostDescription: String!
   duringStay: String
+  host_response_time: String!
+  host_response_rate: String!
 }
 
 type Adventure {

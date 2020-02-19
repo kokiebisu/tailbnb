@@ -24,7 +24,7 @@ const resolvers = {
       return context.prisma.createStay({
         name: args.name,
         price: args.price,
-        hostType: args.hostType,
+        host_is_superhost: args.host_is_superhost,
         country: args.country,
         street: args.street,
         reviews_per_month: args.reviews_per_month,
@@ -38,10 +38,12 @@ const resolvers = {
         space: args.space,
         access: args.access,
         notes: args.notes,
-        hostName: args.hostName,
-        joined: args.joined,
+        host_name: args.host_name,
+        host_since: args.host_since,
         hostDescription: args.hostDescription,
-        duringStay: args.duringStay
+        duringStay: args.duringStay,
+        host_response_rate: args.host_response_rate,
+        host_response_time: args.host_response_time
       });
     },
     deleteStay(root, args, context) {
