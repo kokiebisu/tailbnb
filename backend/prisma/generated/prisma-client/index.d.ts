@@ -220,18 +220,18 @@ export type StayOrderByInput =
   | "id_DESC"
   | "name_ASC"
   | "name_DESC"
-  | "cost_ASC"
-  | "cost_DESC"
+  | "price_ASC"
+  | "price_DESC"
   | "hostType_ASC"
   | "hostType_DESC"
   | "country_ASC"
   | "country_DESC"
   | "location_ASC"
   | "location_DESC"
-  | "ratings_ASC"
-  | "ratings_DESC"
-  | "reviews_ASC"
-  | "reviews_DESC"
+  | "number_of_reviews_ASC"
+  | "number_of_reviews_DESC"
+  | "reviews_per_month_ASC"
+  | "reviews_per_month_DESC"
   | "img_ASC"
   | "img_DESC"
   | "imglow_ASC"
@@ -511,14 +511,14 @@ export interface StayWhereInput {
   name_not_starts_with?: Maybe<String>;
   name_ends_with?: Maybe<String>;
   name_not_ends_with?: Maybe<String>;
-  cost?: Maybe<Int>;
-  cost_not?: Maybe<Int>;
-  cost_in?: Maybe<Int[] | Int>;
-  cost_not_in?: Maybe<Int[] | Int>;
-  cost_lt?: Maybe<Int>;
-  cost_lte?: Maybe<Int>;
-  cost_gt?: Maybe<Int>;
-  cost_gte?: Maybe<Int>;
+  price?: Maybe<Int>;
+  price_not?: Maybe<Int>;
+  price_in?: Maybe<Int[] | Int>;
+  price_not_in?: Maybe<Int[] | Int>;
+  price_lt?: Maybe<Int>;
+  price_lte?: Maybe<Int>;
+  price_gt?: Maybe<Int>;
+  price_gte?: Maybe<Int>;
   hostType?: Maybe<String>;
   hostType_not?: Maybe<String>;
   hostType_in?: Maybe<String[] | String>;
@@ -561,22 +561,22 @@ export interface StayWhereInput {
   location_not_starts_with?: Maybe<String>;
   location_ends_with?: Maybe<String>;
   location_not_ends_with?: Maybe<String>;
-  ratings?: Maybe<Float>;
-  ratings_not?: Maybe<Float>;
-  ratings_in?: Maybe<Float[] | Float>;
-  ratings_not_in?: Maybe<Float[] | Float>;
-  ratings_lt?: Maybe<Float>;
-  ratings_lte?: Maybe<Float>;
-  ratings_gt?: Maybe<Float>;
-  ratings_gte?: Maybe<Float>;
-  reviews?: Maybe<Int>;
-  reviews_not?: Maybe<Int>;
-  reviews_in?: Maybe<Int[] | Int>;
-  reviews_not_in?: Maybe<Int[] | Int>;
-  reviews_lt?: Maybe<Int>;
-  reviews_lte?: Maybe<Int>;
-  reviews_gt?: Maybe<Int>;
-  reviews_gte?: Maybe<Int>;
+  number_of_reviews?: Maybe<Float>;
+  number_of_reviews_not?: Maybe<Float>;
+  number_of_reviews_in?: Maybe<Float[] | Float>;
+  number_of_reviews_not_in?: Maybe<Float[] | Float>;
+  number_of_reviews_lt?: Maybe<Float>;
+  number_of_reviews_lte?: Maybe<Float>;
+  number_of_reviews_gt?: Maybe<Float>;
+  number_of_reviews_gte?: Maybe<Float>;
+  reviews_per_month?: Maybe<Float>;
+  reviews_per_month_not?: Maybe<Float>;
+  reviews_per_month_in?: Maybe<Float[] | Float>;
+  reviews_per_month_not_in?: Maybe<Float[] | Float>;
+  reviews_per_month_lt?: Maybe<Float>;
+  reviews_per_month_lte?: Maybe<Float>;
+  reviews_per_month_gt?: Maybe<Float>;
+  reviews_per_month_gte?: Maybe<Float>;
   img?: Maybe<String>;
   img_not?: Maybe<String>;
   img_in?: Maybe<String[] | String>;
@@ -829,12 +829,12 @@ export interface ExperienceUpdateManyMutationInput {
 export interface StayCreateInput {
   id?: Maybe<ID_Input>;
   name?: Maybe<String>;
-  cost: Int;
+  price: Int;
   hostType: String;
   country: String;
   location: String;
-  ratings?: Maybe<Float>;
-  reviews?: Maybe<Int>;
+  number_of_reviews?: Maybe<Float>;
+  reviews_per_month?: Maybe<Float>;
   img: String;
   imglow: String;
   hostImg: String;
@@ -852,12 +852,12 @@ export interface StayCreateInput {
 
 export interface StayUpdateInput {
   name?: Maybe<String>;
-  cost?: Maybe<Int>;
+  price?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
   location?: Maybe<String>;
-  ratings?: Maybe<Float>;
-  reviews?: Maybe<Int>;
+  number_of_reviews?: Maybe<Float>;
+  reviews_per_month?: Maybe<Float>;
   img?: Maybe<String>;
   imglow?: Maybe<String>;
   hostImg?: Maybe<String>;
@@ -875,12 +875,12 @@ export interface StayUpdateInput {
 
 export interface StayUpdateManyMutationInput {
   name?: Maybe<String>;
-  cost?: Maybe<Int>;
+  price?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
   location?: Maybe<String>;
-  ratings?: Maybe<Float>;
-  reviews?: Maybe<Int>;
+  number_of_reviews?: Maybe<Float>;
+  reviews_per_month?: Maybe<Float>;
   img?: Maybe<String>;
   imglow?: Maybe<String>;
   hostImg?: Maybe<String>;
@@ -1179,12 +1179,12 @@ export interface AggregateExperienceSubscription
 export interface Stay {
   id: ID_Output;
   name?: String;
-  cost: Int;
+  price: Int;
   hostType: String;
   country: String;
   location: String;
-  ratings?: Float;
-  reviews?: Int;
+  number_of_reviews?: Float;
+  reviews_per_month?: Float;
   img: String;
   imglow: String;
   hostImg: String;
@@ -1203,12 +1203,12 @@ export interface Stay {
 export interface StayPromise extends Promise<Stay>, Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
-  cost: () => Promise<Int>;
+  price: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
   location: () => Promise<String>;
-  ratings: () => Promise<Float>;
-  reviews: () => Promise<Int>;
+  number_of_reviews: () => Promise<Float>;
+  reviews_per_month: () => Promise<Float>;
   img: () => Promise<String>;
   imglow: () => Promise<String>;
   hostImg: () => Promise<String>;
@@ -1229,12 +1229,12 @@ export interface StaySubscription
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
-  cost: () => Promise<AsyncIterator<Int>>;
+  price: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
   location: () => Promise<AsyncIterator<String>>;
-  ratings: () => Promise<AsyncIterator<Float>>;
-  reviews: () => Promise<AsyncIterator<Int>>;
+  number_of_reviews: () => Promise<AsyncIterator<Float>>;
+  reviews_per_month: () => Promise<AsyncIterator<Float>>;
   img: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
   hostImg: () => Promise<AsyncIterator<String>>;
@@ -1255,12 +1255,12 @@ export interface StayNullablePromise
     Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
-  cost: () => Promise<Int>;
+  price: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
   location: () => Promise<String>;
-  ratings: () => Promise<Float>;
-  reviews: () => Promise<Int>;
+  number_of_reviews: () => Promise<Float>;
+  reviews_per_month: () => Promise<Float>;
   img: () => Promise<String>;
   imglow: () => Promise<String>;
   hostImg: () => Promise<String>;
@@ -1498,12 +1498,12 @@ export interface StaySubscriptionPayloadSubscription
 export interface StayPreviousValues {
   id: ID_Output;
   name?: String;
-  cost: Int;
+  price: Int;
   hostType: String;
   country: String;
   location: String;
-  ratings?: Float;
-  reviews?: Int;
+  number_of_reviews?: Float;
+  reviews_per_month?: Float;
   img: String;
   imglow: String;
   hostImg: String;
@@ -1524,12 +1524,12 @@ export interface StayPreviousValuesPromise
     Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
-  cost: () => Promise<Int>;
+  price: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
   location: () => Promise<String>;
-  ratings: () => Promise<Float>;
-  reviews: () => Promise<Int>;
+  number_of_reviews: () => Promise<Float>;
+  reviews_per_month: () => Promise<Float>;
   img: () => Promise<String>;
   imglow: () => Promise<String>;
   hostImg: () => Promise<String>;
@@ -1550,12 +1550,12 @@ export interface StayPreviousValuesSubscription
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
-  cost: () => Promise<AsyncIterator<Int>>;
+  price: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
   location: () => Promise<AsyncIterator<String>>;
-  ratings: () => Promise<AsyncIterator<Float>>;
-  reviews: () => Promise<AsyncIterator<Int>>;
+  number_of_reviews: () => Promise<AsyncIterator<Float>>;
+  reviews_per_month: () => Promise<AsyncIterator<Float>>;
   img: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
   hostImg: () => Promise<AsyncIterator<String>>;

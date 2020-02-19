@@ -9,8 +9,8 @@ export default ({
   imglow,
   location,
   title,
-  cost,
-  ratings
+  price,
+  reviews_per_month
 }) => {
   const renderhost = () => {
     if (hostType === 'normal') {
@@ -77,12 +77,12 @@ export default ({
                 />
               </g>
             </svg>
-            <p className='pl-1 text-sm'>{ratings}</p>
+            <p className='pl-1 text-sm'>{reviews_per_month}</p>
           </div>
         </div>
         <p className='my-1'>{title}</p>
         <p className='tracking-wide'>
-          <span className='font-bold'>${cost} CAD</span>/night
+          <span className='font-bold'>${price} CAD</span>/night
         </p>
       </div>
     </Link>

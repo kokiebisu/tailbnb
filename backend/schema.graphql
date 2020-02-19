@@ -14,12 +14,12 @@ type Mutation {
     hostType: String!
     country: String
     location: String
-    ratings: Float
+    reviews_per_month: Float
     img: String!
     imglow: String!
     hostImg: String!
     hostImgLow: String!
-    reviews: Int
+    number_of_reviews: Int
     size: String!
     description: String!
     space: String
@@ -59,8 +59,8 @@ type Stay {
   price: Int!
   hostType: String
   country: String!
-  ratings: Float
-  reviews: Int
+  reviews_per_month: Float
+  number_of_reviews: Int
   img: String!
   imglow: String!
   hostImg: String!

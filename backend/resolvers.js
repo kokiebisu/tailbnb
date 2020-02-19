@@ -4,7 +4,7 @@ const resolvers = {
       return context.prisma.stays();
     },
     stay(root, args, context) {
-      return context.prisma.stay({ title: args.title });
+      return context.prisma.stay({ name: args.name });
     },
     adventures(root, args, context) {
       return context.prisma.adventures();
@@ -27,8 +27,8 @@ const resolvers = {
         hostType: args.hostType,
         country: args.country,
         location: args.location,
-        ratings: args.ratings,
-        reviews: args.reviews,
+        reviews_per_month: args.reviews_per_month,
+        number_of_reviews: args.number_of_reviews,
         img: args.img,
         imglow: args.imglow,
         hostImg: args.hostImg,
@@ -45,7 +45,7 @@ const resolvers = {
       });
     },
     deleteStay(root, args, context) {
-      return context.prisma.deleteStay({ title: args.title });
+      return context.prisma.deleteStay({ name: args.name });
     },
     createAdventure(root, args, context) {
       return context.prisma.createAdventure({
@@ -66,8 +66,8 @@ const resolvers = {
       return context.prisma.createExperience({
         title: args.title,
         price: args.price,
-        ratings: args.ratings,
-        reviews: args.reviews,
+        reviews_per_month: args.reviews_per_month,
+        number_of_reviews: args.number_of_reviews,
         country: args.country,
         img: args.img,
         imglow: args.imglow,

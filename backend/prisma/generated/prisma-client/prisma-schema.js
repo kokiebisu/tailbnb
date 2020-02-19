@@ -493,12 +493,12 @@ type Query {
 type Stay {
   id: ID!
   name: String
-  cost: Int!
+  price: Int!
   hostType: String!
   country: String!
   location: String!
-  ratings: Float
-  reviews: Int
+  number_of_reviews: Float
+  reviews_per_month: Float
   img: String!
   imglow: String!
   hostImg: String!
@@ -523,12 +523,12 @@ type StayConnection {
 input StayCreateInput {
   id: ID
   name: String
-  cost: Int!
+  price: Int!
   hostType: String!
   country: String!
   location: String!
-  ratings: Float
-  reviews: Int
+  number_of_reviews: Float
+  reviews_per_month: Float
   img: String!
   imglow: String!
   hostImg: String!
@@ -554,18 +554,18 @@ enum StayOrderByInput {
   id_DESC
   name_ASC
   name_DESC
-  cost_ASC
-  cost_DESC
+  price_ASC
+  price_DESC
   hostType_ASC
   hostType_DESC
   country_ASC
   country_DESC
   location_ASC
   location_DESC
-  ratings_ASC
-  ratings_DESC
-  reviews_ASC
-  reviews_DESC
+  number_of_reviews_ASC
+  number_of_reviews_DESC
+  reviews_per_month_ASC
+  reviews_per_month_DESC
   img_ASC
   img_DESC
   imglow_ASC
@@ -597,12 +597,12 @@ enum StayOrderByInput {
 type StayPreviousValues {
   id: ID!
   name: String
-  cost: Int!
+  price: Int!
   hostType: String!
   country: String!
   location: String!
-  ratings: Float
-  reviews: Int
+  number_of_reviews: Float
+  reviews_per_month: Float
   img: String!
   imglow: String!
   hostImg: String!
@@ -638,12 +638,12 @@ input StaySubscriptionWhereInput {
 
 input StayUpdateInput {
   name: String
-  cost: Int
+  price: Int
   hostType: String
   country: String
   location: String
-  ratings: Float
-  reviews: Int
+  number_of_reviews: Float
+  reviews_per_month: Float
   img: String
   imglow: String
   hostImg: String
@@ -661,12 +661,12 @@ input StayUpdateInput {
 
 input StayUpdateManyMutationInput {
   name: String
-  cost: Int
+  price: Int
   hostType: String
   country: String
   location: String
-  ratings: Float
-  reviews: Int
+  number_of_reviews: Float
+  reviews_per_month: Float
   img: String
   imglow: String
   hostImg: String
@@ -711,14 +711,14 @@ input StayWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  cost: Int
-  cost_not: Int
-  cost_in: [Int!]
-  cost_not_in: [Int!]
-  cost_lt: Int
-  cost_lte: Int
-  cost_gt: Int
-  cost_gte: Int
+  price: Int
+  price_not: Int
+  price_in: [Int!]
+  price_not_in: [Int!]
+  price_lt: Int
+  price_lte: Int
+  price_gt: Int
+  price_gte: Int
   hostType: String
   hostType_not: String
   hostType_in: [String!]
@@ -761,22 +761,22 @@ input StayWhereInput {
   location_not_starts_with: String
   location_ends_with: String
   location_not_ends_with: String
-  ratings: Float
-  ratings_not: Float
-  ratings_in: [Float!]
-  ratings_not_in: [Float!]
-  ratings_lt: Float
-  ratings_lte: Float
-  ratings_gt: Float
-  ratings_gte: Float
-  reviews: Int
-  reviews_not: Int
-  reviews_in: [Int!]
-  reviews_not_in: [Int!]
-  reviews_lt: Int
-  reviews_lte: Int
-  reviews_gt: Int
-  reviews_gte: Int
+  number_of_reviews: Float
+  number_of_reviews_not: Float
+  number_of_reviews_in: [Float!]
+  number_of_reviews_not_in: [Float!]
+  number_of_reviews_lt: Float
+  number_of_reviews_lte: Float
+  number_of_reviews_gt: Float
+  number_of_reviews_gte: Float
+  reviews_per_month: Float
+  reviews_per_month_not: Float
+  reviews_per_month_in: [Float!]
+  reviews_per_month_not_in: [Float!]
+  reviews_per_month_lt: Float
+  reviews_per_month_lte: Float
+  reviews_per_month_gt: Float
+  reviews_per_month_gte: Float
   img: String
   img_not: String
   img_in: [String!]

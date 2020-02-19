@@ -53,8 +53,8 @@ const GET_STAY = gql`
     stay(where: { id: $id }) {
       name
       location
-      ratings
-      reviews
+      reviews_per_month
+      number_of_reviews
       country
       size
       description
@@ -140,7 +140,8 @@ export default () => {
                   <p
                     style={{ fontFamily: 'airbnb-book' }}
                     className='pl-1 text-gray-650 text-sm'>
-                    {data.stay.ratings} ({data.stay.reviews})
+                    {data.stay.reviews_per_month} ({data.stay.number_of_reviews}
+                    )
                   </p>
 
                   <span className='text-gray-650'>&nbsp;·&nbsp;</span>
@@ -352,7 +353,10 @@ export default () => {
 
         {loading ? null : (
           <>
-            <Reviews ratings={data.stay.ratings} reviews={data.stay.reviews} />
+            <Reviews
+              reviews_per_month={data.stay.reviews_per_month}
+              number_of_reviews={data.stay.number_of_reviews}
+            />
             <HostedBy
               hostName={data.stay.hostName}
               hostDescription={data.stay.hostDescription}

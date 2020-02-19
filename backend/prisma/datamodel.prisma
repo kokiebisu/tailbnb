@@ -5,8 +5,8 @@ type Stay {
   hostType: String!
   country: String!
   location: String!
-  ratings: Float @default(value: 0.0)
-  reviews: Int @default(value: 0)
+  number_of_reviews: Float @default(value: 0.0)
+  reviews_per_month: Float @default(value: 0)
   img: String!
   imglow: String!
   hostImg: String!

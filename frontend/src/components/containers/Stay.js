@@ -10,8 +10,8 @@ const GET_STAYS = gql`
       hostType
       location
       name
-      cost
-      ratings
+      price
+      reviews_per_month
       img
       imglow
     }
@@ -35,7 +35,16 @@ export default () => {
           </div>
         ) : (
           data.stays.map(
-            ({ id, hostType, location, name, cost, ratings, img, imglow }) => {
+            ({
+              id,
+              hostType,
+              location,
+              name,
+              price,
+              reviews_per_month,
+              img,
+              imglow
+            }) => {
               return (
                 <div className='w-1/2 lg:w-1/3 xl:w-1/4 pb-5'>
                   <StayCard
@@ -46,8 +55,8 @@ export default () => {
                     imglow={imglow}
                     location={location}
                     name={name}
-                    cost={cost}
-                    ratings={ratings}
+                    price={price}
+                    reviews_per_month={reviews_per_month}
                   />
                 </div>
               );

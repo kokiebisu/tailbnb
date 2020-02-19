@@ -15,8 +15,8 @@ const staydata = gql`
       imglow
       size
       location
-      title
-      cost
+      name
+      price
       ratings
       reviews
     }

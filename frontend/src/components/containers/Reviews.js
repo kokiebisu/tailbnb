@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import Review from '../../components/presentational/Review';
 
-export default ({ ratings, reviews }) => {
+export default ({ reviews_per_month, number_of_reviews }) => {
   return (
     <>
       <div className='my-4 lg:border-b lg:border-gray-300'>
@@ -31,7 +31,7 @@ export default ({ ratings, reviews }) => {
               id='line'
               className='text-2xl text-gray-850 ml-3'
               style={{ fontFamily: 'airbnb-medium' }}>
-              {ratings}
+              {reviews_per_month}
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export default ({ ratings, reviews }) => {
             <p
               style={{ fontFamily: 'airbnb-medium' }}
               className='ml-1 text-2xl text-gray-850 '>
-              ({reviews} reviews)
+              ({number_of_reviews} reviews)
             </p>
           </div>
         </div>
