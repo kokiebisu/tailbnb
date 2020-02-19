@@ -24483,17 +24483,6 @@ module.exports = "/_next/static/images/shield-a0dfe55987a114e9479b7b633f4dd3f1.p
 
 /***/ }),
 
-/***/ "./public/img/high/staydetail1.jpg":
-/*!*****************************************!*\
-  !*** ./public/img/high/staydetail1.jpg ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/staydetail1-af53d8cd31ef54c10fe9b8301410ee6b.jpg";
-
-/***/ }),
-
 /***/ "./public/img/high/staydetail2.jpg":
 /*!*****************************************!*\
   !*** ./public/img/high/staydetail2.jpg ***!
@@ -24631,8 +24620,8 @@ const renderContent = content => {
   host_since,
   duringStay,
   reviews_per_month,
-  hostImg,
-  hostImgLow,
+  host_thumbnail_url,
+  host_picture_url,
   host_response_time,
   host_response_rate
 }) => {
@@ -24648,8 +24637,8 @@ const renderContent = content => {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex justify-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: hostImg,
-    placeholder: hostImgLow
+    src: host_picture_url,
+    placeholder: host_thumbnail_url
   }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "mr-6 h-16 w-16 rounded-full",
     src: src
@@ -26845,18 +26834,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.js");
 /* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.js");
 /* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.js");
-/* harmony import */ var _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../../public/img/high/staydetail1.jpg */ "./public/img/high/staydetail1.jpg");
-/* harmony import */ var _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_27__);
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__);
-/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.js");
-/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.js");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.js");
+/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.js");
 
 
 
@@ -26890,7 +26877,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // Images
-
+// import detail1 from '../../../public/img/high/staydetail1.jpg';
 
 
 
@@ -26901,6 +26888,7 @@ __webpack_require__.r(__webpack_exports__);
 const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
+      picture_url
       name
       street
       reviews_per_month
@@ -26916,8 +26904,8 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
       host_since
       duringStay
       host_is_superhost
-      hostImg
-      hostImgLow
+      host_thumbnail_url
+      host_picture_url
       host_response_rate
       host_response_time
       beds
@@ -27055,12 +27043,12 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-2 text-sm text-gray-850 underline"
   }, "Save")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full px-0"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    img1: _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
-    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
-    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29___default.a,
-    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30___default.a,
-    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31___default.a
+  }, loading ? null : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    img1: data.stay.picture_url,
+    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
+    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
+    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29___default.a,
+    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30___default.a
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full lg:w-7/12 "
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -27102,8 +27090,8 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     height: 60,
     width: 60
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    src: data.stay.hostImg,
-    placeholder: data.stay.hostImgLow
+    src: data.stay.host_picture_url,
+    placeholder: data.stay.host_thumbnail_url
   }, (src, loading, isVisible) => react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     className: "h-16 w-16 rounded-full",
     src: src
@@ -27147,20 +27135,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: ""
   }, "Contact host")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "Sleeping arrangements"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_33__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_32__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["default"], {
     title: "Amenities"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_32__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_31__["default"], {
     type: "wifi",
     title: "Wifi"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_32__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_31__["default"], {
     type: "laptop",
     title: "Laptop-friendly workspace"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_32__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_31__["default"], {
     type: "kitchen",
     title: "Kitchen"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_32__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_31__["default"], {
     type: "iron",
     title: "Iron"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -27188,8 +27176,8 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     duringStay: data.stay.duringStay,
     host_is_superhost: data.stay.host_is_superhost,
     reviews_per_month: data.stay.reviews_per_month,
-    hostImg: data.stay.hostImg,
-    hostImgLow: data.stay.hostImgLow,
+    host_picture_url: data.stay.host_picture_url,
+    host_thumbnail_url: data.stay.host_thumbnail_url,
     host_response_rate: data.stay.host_response_rate,
     host_response_time: data.stay.host_response_time
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__["default"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {

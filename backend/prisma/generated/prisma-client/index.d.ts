@@ -232,14 +232,14 @@ export type StayOrderByInput =
   | "number_of_reviews_DESC"
   | "reviews_per_month_ASC"
   | "reviews_per_month_DESC"
-  | "img_ASC"
-  | "img_DESC"
+  | "picture_url_ASC"
+  | "picture_url_DESC"
   | "imglow_ASC"
   | "imglow_DESC"
-  | "hostImg_ASC"
-  | "hostImg_DESC"
-  | "hostImgLow_ASC"
-  | "hostImgLow_DESC"
+  | "host_thumbnail_url_ASC"
+  | "host_thumbnail_url_DESC"
+  | "host_picture_url_ASC"
+  | "host_picture_url_DESC"
   | "size_ASC"
   | "size_DESC"
   | "description_ASC"
@@ -587,20 +587,20 @@ export interface StayWhereInput {
   reviews_per_month_lte?: Maybe<Float>;
   reviews_per_month_gt?: Maybe<Float>;
   reviews_per_month_gte?: Maybe<Float>;
-  img?: Maybe<String>;
-  img_not?: Maybe<String>;
-  img_in?: Maybe<String[] | String>;
-  img_not_in?: Maybe<String[] | String>;
-  img_lt?: Maybe<String>;
-  img_lte?: Maybe<String>;
-  img_gt?: Maybe<String>;
-  img_gte?: Maybe<String>;
-  img_contains?: Maybe<String>;
-  img_not_contains?: Maybe<String>;
-  img_starts_with?: Maybe<String>;
-  img_not_starts_with?: Maybe<String>;
-  img_ends_with?: Maybe<String>;
-  img_not_ends_with?: Maybe<String>;
+  picture_url?: Maybe<String>;
+  picture_url_not?: Maybe<String>;
+  picture_url_in?: Maybe<String[] | String>;
+  picture_url_not_in?: Maybe<String[] | String>;
+  picture_url_lt?: Maybe<String>;
+  picture_url_lte?: Maybe<String>;
+  picture_url_gt?: Maybe<String>;
+  picture_url_gte?: Maybe<String>;
+  picture_url_contains?: Maybe<String>;
+  picture_url_not_contains?: Maybe<String>;
+  picture_url_starts_with?: Maybe<String>;
+  picture_url_not_starts_with?: Maybe<String>;
+  picture_url_ends_with?: Maybe<String>;
+  picture_url_not_ends_with?: Maybe<String>;
   imglow?: Maybe<String>;
   imglow_not?: Maybe<String>;
   imglow_in?: Maybe<String[] | String>;
@@ -615,34 +615,34 @@ export interface StayWhereInput {
   imglow_not_starts_with?: Maybe<String>;
   imglow_ends_with?: Maybe<String>;
   imglow_not_ends_with?: Maybe<String>;
-  hostImg?: Maybe<String>;
-  hostImg_not?: Maybe<String>;
-  hostImg_in?: Maybe<String[] | String>;
-  hostImg_not_in?: Maybe<String[] | String>;
-  hostImg_lt?: Maybe<String>;
-  hostImg_lte?: Maybe<String>;
-  hostImg_gt?: Maybe<String>;
-  hostImg_gte?: Maybe<String>;
-  hostImg_contains?: Maybe<String>;
-  hostImg_not_contains?: Maybe<String>;
-  hostImg_starts_with?: Maybe<String>;
-  hostImg_not_starts_with?: Maybe<String>;
-  hostImg_ends_with?: Maybe<String>;
-  hostImg_not_ends_with?: Maybe<String>;
-  hostImgLow?: Maybe<String>;
-  hostImgLow_not?: Maybe<String>;
-  hostImgLow_in?: Maybe<String[] | String>;
-  hostImgLow_not_in?: Maybe<String[] | String>;
-  hostImgLow_lt?: Maybe<String>;
-  hostImgLow_lte?: Maybe<String>;
-  hostImgLow_gt?: Maybe<String>;
-  hostImgLow_gte?: Maybe<String>;
-  hostImgLow_contains?: Maybe<String>;
-  hostImgLow_not_contains?: Maybe<String>;
-  hostImgLow_starts_with?: Maybe<String>;
-  hostImgLow_not_starts_with?: Maybe<String>;
-  hostImgLow_ends_with?: Maybe<String>;
-  hostImgLow_not_ends_with?: Maybe<String>;
+  host_thumbnail_url?: Maybe<String>;
+  host_thumbnail_url_not?: Maybe<String>;
+  host_thumbnail_url_in?: Maybe<String[] | String>;
+  host_thumbnail_url_not_in?: Maybe<String[] | String>;
+  host_thumbnail_url_lt?: Maybe<String>;
+  host_thumbnail_url_lte?: Maybe<String>;
+  host_thumbnail_url_gt?: Maybe<String>;
+  host_thumbnail_url_gte?: Maybe<String>;
+  host_thumbnail_url_contains?: Maybe<String>;
+  host_thumbnail_url_not_contains?: Maybe<String>;
+  host_thumbnail_url_starts_with?: Maybe<String>;
+  host_thumbnail_url_not_starts_with?: Maybe<String>;
+  host_thumbnail_url_ends_with?: Maybe<String>;
+  host_thumbnail_url_not_ends_with?: Maybe<String>;
+  host_picture_url?: Maybe<String>;
+  host_picture_url_not?: Maybe<String>;
+  host_picture_url_in?: Maybe<String[] | String>;
+  host_picture_url_not_in?: Maybe<String[] | String>;
+  host_picture_url_lt?: Maybe<String>;
+  host_picture_url_lte?: Maybe<String>;
+  host_picture_url_gt?: Maybe<String>;
+  host_picture_url_gte?: Maybe<String>;
+  host_picture_url_contains?: Maybe<String>;
+  host_picture_url_not_contains?: Maybe<String>;
+  host_picture_url_starts_with?: Maybe<String>;
+  host_picture_url_not_starts_with?: Maybe<String>;
+  host_picture_url_ends_with?: Maybe<String>;
+  host_picture_url_not_ends_with?: Maybe<String>;
   size?: Maybe<String>;
   size_not?: Maybe<String>;
   size_in?: Maybe<String[] | String>;
@@ -897,10 +897,10 @@ export interface StayCreateInput {
   street: String;
   number_of_reviews?: Maybe<Float>;
   reviews_per_month?: Maybe<Float>;
-  img: String;
+  picture_url: String;
   imglow: String;
-  hostImg: String;
-  hostImgLow: String;
+  host_thumbnail_url: String;
+  host_picture_url: String;
   size: String;
   description: String;
   space?: Maybe<String>;
@@ -925,10 +925,10 @@ export interface StayUpdateInput {
   street?: Maybe<String>;
   number_of_reviews?: Maybe<Float>;
   reviews_per_month?: Maybe<Float>;
-  img?: Maybe<String>;
+  picture_url?: Maybe<String>;
   imglow?: Maybe<String>;
-  hostImg?: Maybe<String>;
-  hostImgLow?: Maybe<String>;
+  host_thumbnail_url?: Maybe<String>;
+  host_picture_url?: Maybe<String>;
   size?: Maybe<String>;
   description?: Maybe<String>;
   space?: Maybe<String>;
@@ -953,10 +953,10 @@ export interface StayUpdateManyMutationInput {
   street?: Maybe<String>;
   number_of_reviews?: Maybe<Float>;
   reviews_per_month?: Maybe<Float>;
-  img?: Maybe<String>;
+  picture_url?: Maybe<String>;
   imglow?: Maybe<String>;
-  hostImg?: Maybe<String>;
-  hostImgLow?: Maybe<String>;
+  host_thumbnail_url?: Maybe<String>;
+  host_picture_url?: Maybe<String>;
   size?: Maybe<String>;
   description?: Maybe<String>;
   space?: Maybe<String>;
@@ -1262,10 +1262,10 @@ export interface Stay {
   street: String;
   number_of_reviews?: Float;
   reviews_per_month?: Float;
-  img: String;
+  picture_url: String;
   imglow: String;
-  hostImg: String;
-  hostImgLow: String;
+  host_thumbnail_url: String;
+  host_picture_url: String;
   size: String;
   description: String;
   space?: String;
@@ -1291,10 +1291,10 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
   reviews_per_month: () => Promise<Float>;
-  img: () => Promise<String>;
+  picture_url: () => Promise<String>;
   imglow: () => Promise<String>;
-  hostImg: () => Promise<String>;
-  hostImgLow: () => Promise<String>;
+  host_thumbnail_url: () => Promise<String>;
+  host_picture_url: () => Promise<String>;
   size: () => Promise<String>;
   description: () => Promise<String>;
   space: () => Promise<String>;
@@ -1322,10 +1322,10 @@ export interface StaySubscription
   street: () => Promise<AsyncIterator<String>>;
   number_of_reviews: () => Promise<AsyncIterator<Float>>;
   reviews_per_month: () => Promise<AsyncIterator<Float>>;
-  img: () => Promise<AsyncIterator<String>>;
+  picture_url: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
-  hostImg: () => Promise<AsyncIterator<String>>;
-  hostImgLow: () => Promise<AsyncIterator<String>>;
+  host_thumbnail_url: () => Promise<AsyncIterator<String>>;
+  host_picture_url: () => Promise<AsyncIterator<String>>;
   size: () => Promise<AsyncIterator<String>>;
   description: () => Promise<AsyncIterator<String>>;
   space: () => Promise<AsyncIterator<String>>;
@@ -1353,10 +1353,10 @@ export interface StayNullablePromise
   street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
   reviews_per_month: () => Promise<Float>;
-  img: () => Promise<String>;
+  picture_url: () => Promise<String>;
   imglow: () => Promise<String>;
-  hostImg: () => Promise<String>;
-  hostImgLow: () => Promise<String>;
+  host_thumbnail_url: () => Promise<String>;
+  host_picture_url: () => Promise<String>;
   size: () => Promise<String>;
   description: () => Promise<String>;
   space: () => Promise<String>;
@@ -1601,10 +1601,10 @@ export interface StayPreviousValues {
   street: String;
   number_of_reviews?: Float;
   reviews_per_month?: Float;
-  img: String;
+  picture_url: String;
   imglow: String;
-  hostImg: String;
-  hostImgLow: String;
+  host_thumbnail_url: String;
+  host_picture_url: String;
   size: String;
   description: String;
   space?: String;
@@ -1632,10 +1632,10 @@ export interface StayPreviousValuesPromise
   street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
   reviews_per_month: () => Promise<Float>;
-  img: () => Promise<String>;
+  picture_url: () => Promise<String>;
   imglow: () => Promise<String>;
-  hostImg: () => Promise<String>;
-  hostImgLow: () => Promise<String>;
+  host_thumbnail_url: () => Promise<String>;
+  host_picture_url: () => Promise<String>;
   size: () => Promise<String>;
   description: () => Promise<String>;
   space: () => Promise<String>;
@@ -1663,10 +1663,10 @@ export interface StayPreviousValuesSubscription
   street: () => Promise<AsyncIterator<String>>;
   number_of_reviews: () => Promise<AsyncIterator<Float>>;
   reviews_per_month: () => Promise<AsyncIterator<Float>>;
-  img: () => Promise<AsyncIterator<String>>;
+  picture_url: () => Promise<AsyncIterator<String>>;
   imglow: () => Promise<AsyncIterator<String>>;
-  hostImg: () => Promise<AsyncIterator<String>>;
-  hostImgLow: () => Promise<AsyncIterator<String>>;
+  host_thumbnail_url: () => Promise<AsyncIterator<String>>;
+  host_picture_url: () => Promise<AsyncIterator<String>>;
   size: () => Promise<AsyncIterator<String>>;
   description: () => Promise<AsyncIterator<String>>;
   space: () => Promise<AsyncIterator<String>>;

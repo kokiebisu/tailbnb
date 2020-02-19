@@ -40,7 +40,7 @@ import TodoNear from '../../components/containers/ToDoNear';
 import MoreLocations from '../../components/containers/MoreLocations';
 
 // Images
-import detail1 from '../../../public/img/high/staydetail1.jpg';
+// import detail1 from '../../../public/img/high/staydetail1.jpg';
 import detail2 from '../../../public/img/high/staydetail2.jpg';
 import detail3 from '../../../public/img/high/staydetail3.jpg';
 import detail4 from '../../../public/img/high/staydetail4.jpg';
@@ -51,6 +51,7 @@ import SleepingArrangements from '../../components/containers/SleepingArrangemen
 const GET_STAY = gql`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
+      picture_url
       name
       street
       reviews_per_month
@@ -66,8 +67,8 @@ const GET_STAY = gql`
       host_since
       duringStay
       host_is_superhost
-      hostImg
-      hostImgLow
+      host_thumbnail_url
+      host_picture_url
       host_response_rate
       host_response_time
       beds
@@ -218,13 +219,15 @@ export default () => {
             </div>
           </div>
           <div className='w-full px-0'>
-            <ImagePanel
-              img1={detail1}
-              img2={detail2}
-              img3={detail3}
-              img4={detail4}
-              img5={detail5}
-            />
+            {loading ? null : (
+              <ImagePanel
+                img1={data.stay.picture_url}
+                img2={detail2}
+                img3={detail3}
+                img4={detail4}
+                img5={detail5}
+              />
+            )}
           </div>
         </div>
 
@@ -279,8 +282,8 @@ export default () => {
                 <Skeleton circle={true} height={60} width={60} />
               ) : (
                 <LazyImage
-                  src={data.stay.hostImg}
-                  placeholder={data.stay.hostImgLow}>
+                  src={data.stay.host_picture_url}
+                  placeholder={data.stay.host_thumbnail_url}>
                   {(src, loading, isVisible) => (
                     <img className='h-16 w-16 rounded-full' src={src} />
                   )}
@@ -379,8 +382,8 @@ export default () => {
               duringStay={data.stay.duringStay}
               host_is_superhost={data.stay.host_is_superhost}
               reviews_per_month={data.stay.reviews_per_month}
-              hostImg={data.stay.hostImg}
-              hostImgLow={data.stay.hostImgLow}
+              host_picture_url={data.stay.host_picture_url}
+              host_thumbnail_url={data.stay.host_thumbnail_url}
               host_response_rate={data.stay.host_response_rate}
               host_response_time={data.stay.host_response_time}
             />

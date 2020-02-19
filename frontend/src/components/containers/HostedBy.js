@@ -22,8 +22,8 @@ export default ({
   host_since,
   duringStay,
   reviews_per_month,
-  hostImg,
-  hostImgLow,
+  host_thumbnail_url,
+  host_picture_url,
   host_response_time,
   host_response_rate
 }) => {
@@ -37,7 +37,7 @@ export default ({
       <div className='py-10 border-b border-gray-300'>
         <div className='flex items-center justify-start flex-wrap mb-8 lg:w-1/2'>
           <div className='flex justify-center'>
-            <LazyImage src={hostImg} placeholder={hostImgLow}>
+            <LazyImage src={host_picture_url} placeholder={host_thumbnail_url}>
               {(src, loading, isVisible) => (
                 <img className='mr-6 h-16 w-16 rounded-full' src={src} />
               )}

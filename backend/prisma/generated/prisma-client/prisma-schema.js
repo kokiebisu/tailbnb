@@ -499,10 +499,10 @@ type Stay {
   street: String!
   number_of_reviews: Float
   reviews_per_month: Float
-  img: String!
+  picture_url: String!
   imglow: String!
-  hostImg: String!
-  hostImgLow: String!
+  host_thumbnail_url: String!
+  host_picture_url: String!
   size: String!
   description: String!
   space: String
@@ -534,10 +534,10 @@ input StayCreateInput {
   street: String!
   number_of_reviews: Float
   reviews_per_month: Float
-  img: String!
+  picture_url: String!
   imglow: String!
-  hostImg: String!
-  hostImgLow: String!
+  host_thumbnail_url: String!
+  host_picture_url: String!
   size: String!
   description: String!
   space: String
@@ -576,14 +576,14 @@ enum StayOrderByInput {
   number_of_reviews_DESC
   reviews_per_month_ASC
   reviews_per_month_DESC
-  img_ASC
-  img_DESC
+  picture_url_ASC
+  picture_url_DESC
   imglow_ASC
   imglow_DESC
-  hostImg_ASC
-  hostImg_DESC
-  hostImgLow_ASC
-  hostImgLow_DESC
+  host_thumbnail_url_ASC
+  host_thumbnail_url_DESC
+  host_picture_url_ASC
+  host_picture_url_DESC
   size_ASC
   size_DESC
   description_ASC
@@ -623,10 +623,10 @@ type StayPreviousValues {
   street: String!
   number_of_reviews: Float
   reviews_per_month: Float
-  img: String!
+  picture_url: String!
   imglow: String!
-  hostImg: String!
-  hostImgLow: String!
+  host_thumbnail_url: String!
+  host_picture_url: String!
   size: String!
   description: String!
   space: String
@@ -669,10 +669,10 @@ input StayUpdateInput {
   street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  img: String
+  picture_url: String
   imglow: String
-  hostImg: String
-  hostImgLow: String
+  host_thumbnail_url: String
+  host_picture_url: String
   size: String
   description: String
   space: String
@@ -697,10 +697,10 @@ input StayUpdateManyMutationInput {
   street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  img: String
+  picture_url: String
   imglow: String
-  hostImg: String
-  hostImgLow: String
+  host_thumbnail_url: String
+  host_picture_url: String
   size: String
   description: String
   space: String
@@ -812,20 +812,20 @@ input StayWhereInput {
   reviews_per_month_lte: Float
   reviews_per_month_gt: Float
   reviews_per_month_gte: Float
-  img: String
-  img_not: String
-  img_in: [String!]
-  img_not_in: [String!]
-  img_lt: String
-  img_lte: String
-  img_gt: String
-  img_gte: String
-  img_contains: String
-  img_not_contains: String
-  img_starts_with: String
-  img_not_starts_with: String
-  img_ends_with: String
-  img_not_ends_with: String
+  picture_url: String
+  picture_url_not: String
+  picture_url_in: [String!]
+  picture_url_not_in: [String!]
+  picture_url_lt: String
+  picture_url_lte: String
+  picture_url_gt: String
+  picture_url_gte: String
+  picture_url_contains: String
+  picture_url_not_contains: String
+  picture_url_starts_with: String
+  picture_url_not_starts_with: String
+  picture_url_ends_with: String
+  picture_url_not_ends_with: String
   imglow: String
   imglow_not: String
   imglow_in: [String!]
@@ -840,34 +840,34 @@ input StayWhereInput {
   imglow_not_starts_with: String
   imglow_ends_with: String
   imglow_not_ends_with: String
-  hostImg: String
-  hostImg_not: String
-  hostImg_in: [String!]
-  hostImg_not_in: [String!]
-  hostImg_lt: String
-  hostImg_lte: String
-  hostImg_gt: String
-  hostImg_gte: String
-  hostImg_contains: String
-  hostImg_not_contains: String
-  hostImg_starts_with: String
-  hostImg_not_starts_with: String
-  hostImg_ends_with: String
-  hostImg_not_ends_with: String
-  hostImgLow: String
-  hostImgLow_not: String
-  hostImgLow_in: [String!]
-  hostImgLow_not_in: [String!]
-  hostImgLow_lt: String
-  hostImgLow_lte: String
-  hostImgLow_gt: String
-  hostImgLow_gte: String
-  hostImgLow_contains: String
-  hostImgLow_not_contains: String
-  hostImgLow_starts_with: String
-  hostImgLow_not_starts_with: String
-  hostImgLow_ends_with: String
-  hostImgLow_not_ends_with: String
+  host_thumbnail_url: String
+  host_thumbnail_url_not: String
+  host_thumbnail_url_in: [String!]
+  host_thumbnail_url_not_in: [String!]
+  host_thumbnail_url_lt: String
+  host_thumbnail_url_lte: String
+  host_thumbnail_url_gt: String
+  host_thumbnail_url_gte: String
+  host_thumbnail_url_contains: String
+  host_thumbnail_url_not_contains: String
+  host_thumbnail_url_starts_with: String
+  host_thumbnail_url_not_starts_with: String
+  host_thumbnail_url_ends_with: String
+  host_thumbnail_url_not_ends_with: String
+  host_picture_url: String
+  host_picture_url_not: String
+  host_picture_url_in: [String!]
+  host_picture_url_not_in: [String!]
+  host_picture_url_lt: String
+  host_picture_url_lte: String
+  host_picture_url_gt: String
+  host_picture_url_gte: String
+  host_picture_url_contains: String
+  host_picture_url_not_contains: String
+  host_picture_url_starts_with: String
+  host_picture_url_not_starts_with: String
+  host_picture_url_ends_with: String
+  host_picture_url_not_ends_with: String
   size: String
   size_not: String
   size_in: [String!]

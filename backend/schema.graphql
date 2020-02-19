@@ -15,10 +15,10 @@ type Mutation {
     country: String
     street: String
     reviews_per_month: Float
-    img: String!
+    picture_url: String!
     imglow: String!
-    hostImg: String!
-    hostImgLow: String!
+    host_thumbnail_url: String!
+    host_picture_url: String!
     number_of_reviews: Int
     size: String!
     description: String!
@@ -66,10 +66,10 @@ type Stay {
   country: String!
   reviews_per_month: Float
   number_of_reviews: Int
-  img: String!
+  picture_url: String!
   imglow: String!
-  hostImg: String!
-  hostImgLow: String!
+  host_thumbnail_url: String!
+  host_picture_url: String!
   size: String!
   description: String!
   space: String
