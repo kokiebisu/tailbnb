@@ -496,7 +496,7 @@ type Stay {
   price: Int!
   hostType: String!
   country: String!
-  location: String!
+  street: String!
   number_of_reviews: Float
   reviews_per_month: Float
   img: String!
@@ -526,7 +526,7 @@ input StayCreateInput {
   price: Int!
   hostType: String!
   country: String!
-  location: String!
+  street: String!
   number_of_reviews: Float
   reviews_per_month: Float
   img: String!
@@ -560,8 +560,8 @@ enum StayOrderByInput {
   hostType_DESC
   country_ASC
   country_DESC
-  location_ASC
-  location_DESC
+  street_ASC
+  street_DESC
   number_of_reviews_ASC
   number_of_reviews_DESC
   reviews_per_month_ASC
@@ -600,7 +600,7 @@ type StayPreviousValues {
   price: Int!
   hostType: String!
   country: String!
-  location: String!
+  street: String!
   number_of_reviews: Float
   reviews_per_month: Float
   img: String!
@@ -641,7 +641,7 @@ input StayUpdateInput {
   price: Int
   hostType: String
   country: String
-  location: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
   img: String
@@ -664,7 +664,7 @@ input StayUpdateManyMutationInput {
   price: Int
   hostType: String
   country: String
-  location: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
   img: String
@@ -747,20 +747,20 @@ input StayWhereInput {
   country_not_starts_with: String
   country_ends_with: String
   country_not_ends_with: String
-  location: String
-  location_not: String
-  location_in: [String!]
-  location_not_in: [String!]
-  location_lt: String
-  location_lte: String
-  location_gt: String
-  location_gte: String
-  location_contains: String
-  location_not_contains: String
-  location_starts_with: String
-  location_not_starts_with: String
-  location_ends_with: String
-  location_not_ends_with: String
+  street: String
+  street_not: String
+  street_in: [String!]
+  street_not_in: [String!]
+  street_lt: String
+  street_lte: String
+  street_gt: String
+  street_gte: String
+  street_contains: String
+  street_not_contains: String
+  street_starts_with: String
+  street_not_starts_with: String
+  street_ends_with: String
+  street_not_ends_with: String
   number_of_reviews: Float
   number_of_reviews_not: Float
   number_of_reviews_in: [Float!]

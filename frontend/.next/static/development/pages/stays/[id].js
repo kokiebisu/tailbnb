@@ -26886,7 +26886,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
       name
-      location
+      street
       reviews_per_month
       number_of_reviews
       country
@@ -26915,11 +26915,9 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAY, {
     variables: {
       id: router.query.id
-    },
-    pollInterval: 5000
+    }
   });
   const [length, setLength] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
-  console.log('length:', length);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, "Vacation Rentals, Homes, Experiences & Places") : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", null, data.stay.name), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
     name: "viewport",
     content: "initial-scale=1.0, width=device-width "
@@ -26996,7 +26994,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     },
     className: "text-sm text-gray-650 underline",
     href: ""
-  }, data.stay.location, ", ", data.stay.country)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, data.stay.street)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "hidden lg:block flex items-start justify-start"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-start pl-2"
@@ -27181,7 +27179,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.js ***!
   \******************************************************************************************************************************************************************/
@@ -27204,5 +27202,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map

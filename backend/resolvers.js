@@ -26,7 +26,7 @@ const resolvers = {
         price: args.price,
         hostType: args.hostType,
         country: args.country,
-        location: args.location,
+        street: args.street,
         reviews_per_month: args.reviews_per_month,
         number_of_reviews: args.number_of_reviews,
         img: args.img,
@@ -71,7 +71,7 @@ const resolvers = {
         country: args.country,
         img: args.img,
         imglow: args.imglow,
-        location: args.location
+        street: args.street
       });
     },
     deleteExperience(root, args, context) {

@@ -7,8 +7,8 @@ export default ({
   hostType,
   img,
   imglow,
-  location,
-  title,
+  street,
+  name,
   price,
   reviews_per_month
 }) => {
@@ -17,7 +17,7 @@ export default ({
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='mt-3 text-sm sm:my-2 font-light text-gray-600'>
-            {location}
+            {street}
           </p>
         </div>
       );
@@ -28,7 +28,7 @@ export default ({
             {hostType}
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
-            {location}
+            {street}
           </p>
         </div>
       );
@@ -39,7 +39,7 @@ export default ({
             {hostType}
           </p>
           <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
-            {location}
+            {street}
           </p>
         </div>
       );
@@ -80,7 +80,7 @@ export default ({
             <p className='pl-1 text-sm'>{reviews_per_month}</p>
           </div>
         </div>
-        <p className='my-1'>{title}</p>
+        <p className='my-1'>{name}</p>
         <p className='tracking-wide'>
           <span className='font-bold'>${price} CAD</span>/night
         </p>

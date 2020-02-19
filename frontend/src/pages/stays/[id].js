@@ -52,7 +52,7 @@ const GET_STAY = gql`
   query Stay($id: ID!) {
     stay(where: { id: $id }) {
       name
-      location
+      street
       reviews_per_month
       number_of_reviews
       country
@@ -78,11 +78,9 @@ export default () => {
   const { loading, error, data } = useQuery(GET_STAY, {
     variables: {
       id: router.query.id
-    },
-    pollInterval: 5000
+    }
   });
   const [length, setLength] = useState(false);
-  console.log('length:', length);
   return (
     <>
       <Head>
@@ -169,7 +167,7 @@ export default () => {
                     style={{ fontFamily: 'airbnb-medium' }}
                     className='text-sm text-gray-650 underline'
                     href=''>
-                    {data.stay.location}, {data.stay.country}
+                    {data.stay.street}
                   </a>
                 </div>
               )}

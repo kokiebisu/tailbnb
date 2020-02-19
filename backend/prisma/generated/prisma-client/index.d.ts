@@ -226,8 +226,8 @@ export type StayOrderByInput =
   | "hostType_DESC"
   | "country_ASC"
   | "country_DESC"
-  | "location_ASC"
-  | "location_DESC"
+  | "street_ASC"
+  | "street_DESC"
   | "number_of_reviews_ASC"
   | "number_of_reviews_DESC"
   | "reviews_per_month_ASC"
@@ -547,20 +547,20 @@ export interface StayWhereInput {
   country_not_starts_with?: Maybe<String>;
   country_ends_with?: Maybe<String>;
   country_not_ends_with?: Maybe<String>;
-  location?: Maybe<String>;
-  location_not?: Maybe<String>;
-  location_in?: Maybe<String[] | String>;
-  location_not_in?: Maybe<String[] | String>;
-  location_lt?: Maybe<String>;
-  location_lte?: Maybe<String>;
-  location_gt?: Maybe<String>;
-  location_gte?: Maybe<String>;
-  location_contains?: Maybe<String>;
-  location_not_contains?: Maybe<String>;
-  location_starts_with?: Maybe<String>;
-  location_not_starts_with?: Maybe<String>;
-  location_ends_with?: Maybe<String>;
-  location_not_ends_with?: Maybe<String>;
+  street?: Maybe<String>;
+  street_not?: Maybe<String>;
+  street_in?: Maybe<String[] | String>;
+  street_not_in?: Maybe<String[] | String>;
+  street_lt?: Maybe<String>;
+  street_lte?: Maybe<String>;
+  street_gt?: Maybe<String>;
+  street_gte?: Maybe<String>;
+  street_contains?: Maybe<String>;
+  street_not_contains?: Maybe<String>;
+  street_starts_with?: Maybe<String>;
+  street_not_starts_with?: Maybe<String>;
+  street_ends_with?: Maybe<String>;
+  street_not_ends_with?: Maybe<String>;
   number_of_reviews?: Maybe<Float>;
   number_of_reviews_not?: Maybe<Float>;
   number_of_reviews_in?: Maybe<Float[] | Float>;
@@ -832,7 +832,7 @@ export interface StayCreateInput {
   price: Int;
   hostType: String;
   country: String;
-  location: String;
+  street: String;
   number_of_reviews?: Maybe<Float>;
   reviews_per_month?: Maybe<Float>;
   img: String;
@@ -855,7 +855,7 @@ export interface StayUpdateInput {
   price?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
-  location?: Maybe<String>;
+  street?: Maybe<String>;
   number_of_reviews?: Maybe<Float>;
   reviews_per_month?: Maybe<Float>;
   img?: Maybe<String>;
@@ -878,7 +878,7 @@ export interface StayUpdateManyMutationInput {
   price?: Maybe<Int>;
   hostType?: Maybe<String>;
   country?: Maybe<String>;
-  location?: Maybe<String>;
+  street?: Maybe<String>;
   number_of_reviews?: Maybe<Float>;
   reviews_per_month?: Maybe<Float>;
   img?: Maybe<String>;
@@ -1182,7 +1182,7 @@ export interface Stay {
   price: Int;
   hostType: String;
   country: String;
-  location: String;
+  street: String;
   number_of_reviews?: Float;
   reviews_per_month?: Float;
   img: String;
@@ -1206,7 +1206,7 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   price: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
-  location: () => Promise<String>;
+  street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
   reviews_per_month: () => Promise<Float>;
   img: () => Promise<String>;
@@ -1232,7 +1232,7 @@ export interface StaySubscription
   price: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
-  location: () => Promise<AsyncIterator<String>>;
+  street: () => Promise<AsyncIterator<String>>;
   number_of_reviews: () => Promise<AsyncIterator<Float>>;
   reviews_per_month: () => Promise<AsyncIterator<Float>>;
   img: () => Promise<AsyncIterator<String>>;
@@ -1258,7 +1258,7 @@ export interface StayNullablePromise
   price: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
-  location: () => Promise<String>;
+  street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
   reviews_per_month: () => Promise<Float>;
   img: () => Promise<String>;
@@ -1501,7 +1501,7 @@ export interface StayPreviousValues {
   price: Int;
   hostType: String;
   country: String;
-  location: String;
+  street: String;
   number_of_reviews?: Float;
   reviews_per_month?: Float;
   img: String;
@@ -1527,7 +1527,7 @@ export interface StayPreviousValuesPromise
   price: () => Promise<Int>;
   hostType: () => Promise<String>;
   country: () => Promise<String>;
-  location: () => Promise<String>;
+  street: () => Promise<String>;
   number_of_reviews: () => Promise<Float>;
   reviews_per_month: () => Promise<Float>;
   img: () => Promise<String>;
@@ -1553,7 +1553,7 @@ export interface StayPreviousValuesSubscription
   price: () => Promise<AsyncIterator<Int>>;
   hostType: () => Promise<AsyncIterator<String>>;
   country: () => Promise<AsyncIterator<String>>;
-  location: () => Promise<AsyncIterator<String>>;
+  street: () => Promise<AsyncIterator<String>>;
   number_of_reviews: () => Promise<AsyncIterator<Float>>;
   reviews_per_month: () => Promise<AsyncIterator<Float>>;
   img: () => Promise<AsyncIterator<String>>;

@@ -22,9 +22,7 @@ const GET_ADVENTURES = gql`
 `;
 
 export default () => {
-  const { loading, error, data } = useQuery(GET_ADVENTURES, {
-    pollInterval: 5000
-  });
+  const { loading, error, data } = useQuery(GET_ADVENTURES);
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>

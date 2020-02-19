@@ -8,7 +8,7 @@ const GET_STAYS = gql`
     stays {
       id
       hostType
-      location
+      street
       name
       price
       reviews_per_month
@@ -23,9 +23,7 @@ import StayCard from '../presentational/StayCard';
 import ShowAll from '../ShowAll';
 
 export default () => {
-  const { loading, error, data } = useQuery(GET_STAYS, {
-    pollInterval: 7000
-  });
+  const { loading, error, data } = useQuery(GET_STAYS);
   return (
     <>
       <div className='flex flex-wrap items-start justify-start w-full'>
@@ -38,7 +36,7 @@ export default () => {
             ({
               id,
               hostType,
-              location,
+              street,
               name,
               price,
               reviews_per_month,
@@ -53,7 +51,7 @@ export default () => {
                     hostType={hostType}
                     img={img}
                     imglow={imglow}
-                    location={location}
+                    street={street}
                     name={name}
                     price={price}
                     reviews_per_month={reviews_per_month}
