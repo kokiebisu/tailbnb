@@ -12,8 +12,7 @@ const GET_STAYS = gql`
       name
       price
       reviews_per_month
-      img
-      imglow
+      picture_url
     }
   }
 `;
@@ -40,8 +39,7 @@ export default () => {
               name,
               price,
               reviews_per_month,
-              img,
-              imglow
+              picture_url
             }) => {
               return (
                 <div className='w-1/2 lg:w-1/3 xl:w-1/4 pb-5'>
@@ -49,9 +47,9 @@ export default () => {
                     key={id}
                     id={id}
                     host_is_superhost={host_is_superhost}
-                    img={img}
+                    img={picture_url}
                     country={country}
-                    imglow={imglow}
+                    imglow={picture_url}
                     name={name}
                     price={price}
                     reviews_per_month={reviews_per_month}
