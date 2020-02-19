@@ -7,7 +7,9 @@ export default () => {
     <div className='w-full'>
       <div className='mb-4 flex items-center justify-start flex-wrap'>
         <p>More place to stay in Penafiel:</p>
-        <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-650'>
+        <p
+          style={{ fontFamily: 'airbnb-book' }}
+          className='text-gray-650 lg:ml-2'>
           Apartments&nbsp;·&nbsp;Bed and breakfasts
         </p>
       </div>

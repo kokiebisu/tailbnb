@@ -694,7 +694,7 @@ __webpack_require__.r(__webpack_exports__);
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-650"
+    className: "text-gray-650 lg:ml-2"
   }, "Apartments\xA0\xB7\xA0Bed and breakfasts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       fontFamily: 'airbnb-book'
@@ -2596,7 +2596,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     },
     className: "text-3xl text-gray-850"
   }, data.stay.name), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "flex items-start justify-between"
+    className: "flex items-center justify-between"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
     height: 20,
     width: 500
@@ -2651,7 +2651,9 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-sm text-gray-650 underline",
     href: ""
   }, data.stay.street)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "hidden lg:block flex items-start justify-start"
+    className: "hidden lg:inline-block flex items-start justify-start"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "flex items-center pr-2"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "flex items-center justify-start pl-2"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -2687,7 +2689,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
       fontFamily: 'airbnb-medium'
     },
     className: "pl-2 text-sm text-gray-850 underline"
-  }, "Save"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, "Save")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "w-full px-0"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__["default"], {
     img1: _public_img_high_staydetail1_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
