@@ -4,19 +4,19 @@ import React from 'react';
 
 export default () => {
   return (
-    <div className='w-3/4'>
+    <div className='w-full'>
       <div className='mb-4 flex items-center justify-start flex-wrap'>
         <p>More place to stay in Penafiel:</p>
         <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-650'>
-          &nbsp;Apartments&nbsp;·&nbsp;Bed and breakfasts
+          Apartments&nbsp;·&nbsp;Bed and breakfasts
         </p>
       </div>
 
       <div
         style={{ fontFamily: 'airbnb-book' }}
-        className='flex items-start justify-between text-gray-650 text-sm'>
-        <div>
-          <ul className='flex-col flex leading-snug'>
+        className='w-full flex items-start justify-between flex-wrap text-gray-650'>
+        <div className='w-1/2 lg:w-1/4'>
+          <ul className='flex-col flex leading-loose'>
             <a href=''>
               <li className='inline-block hover:border-gray-600 border-b border-transparent'>
                 Playa del Carmen
@@ -42,15 +42,10 @@ export default () => {
                 Phillip
               </li>
             </a>
-            <a href=''>
-              <li className='inline-block hover:border-gray-600 border-b border-transparent'>
-                Exeter
-              </li>
-            </a>
           </ul>
         </div>
-        <div>
-          <ul className='flex-col flex leading-snug'>
+        <div className='w-1/2 lg:w-1/4'>
+          <ul className='flex-col flex leading-loose'>
             <a href=''>
               <li className='inline-block hover:border-gray-600 border-b border-transparent'>
                 Cancun
@@ -76,15 +71,39 @@ export default () => {
                 Eagle Bay
               </li>
             </a>
+          </ul>
+        </div>
+        <div className='w-1/2 lg:w-1/4'>
+          <ul className='flex-col flex leading-loose'>
             <a href=''>
               <li className='inline-block hover:border-gray-600 border-b border-transparent'>
-                Petehi
+                Cancun
+              </li>
+            </a>
+            <a href=''>
+              <li className='inline-block hover:border-gray-600 border-b border-transparent'>
+                Nanpean
+              </li>
+            </a>
+            <a href=''>
+              <li className='inline-block hover:border-gray-600 border-b border-transparent'>
+                Bridgewater
+              </li>
+            </a>
+            <a href=''>
+              <li className='inline-block hover:border-gray-600 border-b border-transparent'>
+                Hangzhou
+              </li>
+            </a>
+            <a href=''>
+              <li className='inline-block hover:border-gray-600 border-b border-transparent'>
+                Eagle Bay
               </li>
             </a>
           </ul>
         </div>
-        <div>
-          <ul className='flex-col flex leading-snug'>
+        <div className='w-1/2 lg:w-1/4'>
+          <ul className='flex-col flex leading-loose'>
             <a href=''>
               <li className='inline-block hover:border-gray-600 border-b border-transparent'>
                 Tulum
@@ -103,16 +122,6 @@ export default () => {
             <a href=''>
               <li className='inline-block hover:border-gray-600 border-b border-transparent'>
                 New South Wales
-              </li>
-            </a>
-            <a href=''>
-              <li className='inline-block hover:border-gray-600 border-b border-transparent'>
-                Taroona
-              </li>
-            </a>
-            <a href=''>
-              <li className='inline-block hover:border-gray-600 border-b border-transparent'>
-                Luodong Township
               </li>
             </a>
           </ul>

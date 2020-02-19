@@ -25055,7 +25055,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-3/4"
+    className: "w-full"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mb-4 flex items-center justify-start flex-wrap"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "More place to stay in Penafiel:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -25063,13 +25063,15 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-650"
-  }, "\xA0Apartments\xA0\xB7\xA0Bed and breakfasts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Apartments\xA0\xB7\xA0Bed and breakfasts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "flex items-start justify-between text-gray-650 text-sm"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "flex-col flex leading-snug"
+    className: "w-full flex items-start justify-between flex-wrap text-gray-650"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-1/2 lg:w-1/4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "flex-col flex leading-loose"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -25088,12 +25090,10 @@ __webpack_require__.r(__webpack_exports__);
     className: "inline-block hover:border-gray-600 border-b border-transparent"
   }, "Oswestry")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "inline-block hover:border-gray-600 border-b border-transparent"
-  }, "Phillip")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "inline-block hover:border-gray-600 border-b border-transparent"
-  }, "Exeter")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "flex-col flex leading-snug"
+  }, "Phillip")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-1/2 lg:w-1/4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "flex-col flex leading-loose"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -25114,12 +25114,34 @@ __webpack_require__.r(__webpack_exports__);
     href: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "inline-block hover:border-gray-600 border-b border-transparent"
-  }, "Eagle Bay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Eagle Bay")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-1/2 lg:w-1/4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "flex-col flex leading-loose"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "inline-block hover:border-gray-600 border-b border-transparent"
-  }, "Petehi")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "flex-col flex leading-snug"
+  }, "Cancun")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "inline-block hover:border-gray-600 border-b border-transparent"
+  }, "Nanpean")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "inline-block hover:border-gray-600 border-b border-transparent"
+  }, "Bridgewater")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "inline-block hover:border-gray-600 border-b border-transparent"
+  }, "Hangzhou")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "inline-block hover:border-gray-600 border-b border-transparent"
+  }, "Eagle Bay")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-1/2 lg:w-1/4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "flex-col flex leading-loose"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -25136,15 +25158,7 @@ __webpack_require__.r(__webpack_exports__);
     href: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "inline-block hover:border-gray-600 border-b border-transparent"
-  }, "New South Wales")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "inline-block hover:border-gray-600 border-b border-transparent"
-  }, "Taroona")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "inline-block hover:border-gray-600 border-b border-transparent"
-  }, "Luodong Township"))))));
+  }, "New South Wales"))))));
 });
 
 /***/ }),
