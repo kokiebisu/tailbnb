@@ -26585,7 +26585,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-64 p-4 pl-6"
+    className: "w-48 p-2 pl-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pt-2 pb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
