@@ -48,12 +48,12 @@ body {
   cursor: pointer;
   transition: transform 0.5s, filter 0.4s ease-in-out;
   filter: blue(2px);
-  transform: scale(1.2);
+  transform: scale(1.34);
 }
 
 #zoom:hover {
   filter: blur(1);
-  transform: scale(1.1);
+  transform: scale(1.27);
   filter: brightness(70%);
 }
 

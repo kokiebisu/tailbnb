@@ -44,6 +44,7 @@ const resolvers = {
         duringStay: args.duringStay,
         host_response_rate: args.host_response_rate,
         host_response_time: args.host_response_time,
+        accomodates: args.accommodates,
         beds: args.beds,
         bedrooms: args.bedrooms,
         bathrooms: args.bathrooms

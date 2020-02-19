@@ -514,6 +514,7 @@ type Stay {
   duringStay: String
   host_response_time: String!
   host_response_rate: String!
+  accommodates: Int!
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -549,6 +550,7 @@ input StayCreateInput {
   duringStay: String
   host_response_time: String!
   host_response_rate: String!
+  accommodates: Int!
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -606,6 +608,8 @@ enum StayOrderByInput {
   host_response_time_DESC
   host_response_rate_ASC
   host_response_rate_DESC
+  accommodates_ASC
+  accommodates_DESC
   beds_ASC
   beds_DESC
   bedrooms_ASC
@@ -638,6 +642,7 @@ type StayPreviousValues {
   duringStay: String
   host_response_time: String!
   host_response_rate: String!
+  accommodates: Int!
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -684,6 +689,7 @@ input StayUpdateInput {
   duringStay: String
   host_response_time: String
   host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -712,6 +718,7 @@ input StayUpdateManyMutationInput {
   duringStay: String
   host_response_time: String
   host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -1022,6 +1029,14 @@ input StayWhereInput {
   host_response_rate_not_starts_with: String
   host_response_rate_ends_with: String
   host_response_rate_not_ends_with: String
+  accommodates: Int
+  accommodates_not: Int
+  accommodates_in: [Int!]
+  accommodates_not_in: [Int!]
+  accommodates_lt: Int
+  accommodates_lte: Int
+  accommodates_gt: Int
+  accommodates_gte: Int
   beds: Int
   beds_not: Int
   beds_in: [Int!]

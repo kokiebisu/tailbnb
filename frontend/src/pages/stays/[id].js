@@ -71,6 +71,7 @@ const GET_STAY = gql`
       host_picture_url
       host_response_rate
       host_response_time
+      accommodates
       beds
       bedrooms
       bathrooms
@@ -252,7 +253,7 @@ export default () => {
                       style={{ fontFamily: 'airbnb-book' }}
                       className='text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap'>
                       <div className='mr-4'>
-                        <p>9 guests</p>
+                        <p>{data.stay.accommodates} guests</p>
                       </div>
                       <div className='mr-4'>
                         <p>

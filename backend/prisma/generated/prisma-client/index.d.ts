@@ -262,6 +262,8 @@ export type StayOrderByInput =
   | "host_response_time_DESC"
   | "host_response_rate_ASC"
   | "host_response_rate_DESC"
+  | "accommodates_ASC"
+  | "accommodates_DESC"
   | "beds_ASC"
   | "beds_DESC"
   | "bedrooms_ASC"
@@ -797,6 +799,14 @@ export interface StayWhereInput {
   host_response_rate_not_starts_with?: Maybe<String>;
   host_response_rate_ends_with?: Maybe<String>;
   host_response_rate_not_ends_with?: Maybe<String>;
+  accommodates?: Maybe<Int>;
+  accommodates_not?: Maybe<Int>;
+  accommodates_in?: Maybe<Int[] | Int>;
+  accommodates_not_in?: Maybe<Int[] | Int>;
+  accommodates_lt?: Maybe<Int>;
+  accommodates_lte?: Maybe<Int>;
+  accommodates_gt?: Maybe<Int>;
+  accommodates_gte?: Maybe<Int>;
   beds?: Maybe<Int>;
   beds_not?: Maybe<Int>;
   beds_in?: Maybe<Int[] | Int>;
@@ -912,6 +922,7 @@ export interface StayCreateInput {
   duringStay?: Maybe<String>;
   host_response_time: String;
   host_response_rate: String;
+  accommodates: Int;
   beds?: Maybe<Int>;
   bedrooms?: Maybe<Int>;
   bathrooms?: Maybe<Float>;
@@ -940,6 +951,7 @@ export interface StayUpdateInput {
   duringStay?: Maybe<String>;
   host_response_time?: Maybe<String>;
   host_response_rate?: Maybe<String>;
+  accommodates?: Maybe<Int>;
   beds?: Maybe<Int>;
   bedrooms?: Maybe<Int>;
   bathrooms?: Maybe<Float>;
@@ -968,6 +980,7 @@ export interface StayUpdateManyMutationInput {
   duringStay?: Maybe<String>;
   host_response_time?: Maybe<String>;
   host_response_rate?: Maybe<String>;
+  accommodates?: Maybe<Int>;
   beds?: Maybe<Int>;
   bedrooms?: Maybe<Int>;
   bathrooms?: Maybe<Float>;
@@ -1277,6 +1290,7 @@ export interface Stay {
   duringStay?: String;
   host_response_time: String;
   host_response_rate: String;
+  accommodates: Int;
   beds?: Int;
   bedrooms?: Int;
   bathrooms?: Float;
@@ -1306,6 +1320,7 @@ export interface StayPromise extends Promise<Stay>, Fragmentable {
   duringStay: () => Promise<String>;
   host_response_time: () => Promise<String>;
   host_response_rate: () => Promise<String>;
+  accommodates: () => Promise<Int>;
   beds: () => Promise<Int>;
   bedrooms: () => Promise<Int>;
   bathrooms: () => Promise<Float>;
@@ -1337,6 +1352,7 @@ export interface StaySubscription
   duringStay: () => Promise<AsyncIterator<String>>;
   host_response_time: () => Promise<AsyncIterator<String>>;
   host_response_rate: () => Promise<AsyncIterator<String>>;
+  accommodates: () => Promise<AsyncIterator<Int>>;
   beds: () => Promise<AsyncIterator<Int>>;
   bedrooms: () => Promise<AsyncIterator<Int>>;
   bathrooms: () => Promise<AsyncIterator<Float>>;
@@ -1368,6 +1384,7 @@ export interface StayNullablePromise
   duringStay: () => Promise<String>;
   host_response_time: () => Promise<String>;
   host_response_rate: () => Promise<String>;
+  accommodates: () => Promise<Int>;
   beds: () => Promise<Int>;
   bedrooms: () => Promise<Int>;
   bathrooms: () => Promise<Float>;
@@ -1616,6 +1633,7 @@ export interface StayPreviousValues {
   duringStay?: String;
   host_response_time: String;
   host_response_rate: String;
+  accommodates: Int;
   beds?: Int;
   bedrooms?: Int;
   bathrooms?: Float;
@@ -1647,6 +1665,7 @@ export interface StayPreviousValuesPromise
   duringStay: () => Promise<String>;
   host_response_time: () => Promise<String>;
   host_response_rate: () => Promise<String>;
+  accommodates: () => Promise<Int>;
   beds: () => Promise<Int>;
   bedrooms: () => Promise<Int>;
   bathrooms: () => Promise<Float>;
@@ -1678,6 +1697,7 @@ export interface StayPreviousValuesSubscription
   duringStay: () => Promise<AsyncIterator<String>>;
   host_response_time: () => Promise<AsyncIterator<String>>;
   host_response_rate: () => Promise<AsyncIterator<String>>;
+  accommodates: () => Promise<AsyncIterator<Int>>;
   beds: () => Promise<AsyncIterator<Int>>;
   bedrooms: () => Promise<AsyncIterator<Int>>;
   bathrooms: () => Promise<AsyncIterator<Float>>;
