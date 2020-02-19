@@ -43,7 +43,10 @@ const resolvers = {
         hostDescription: args.hostDescription,
         duringStay: args.duringStay,
         host_response_rate: args.host_response_rate,
-        host_response_time: args.host_response_time
+        host_response_time: args.host_response_time,
+        beds: args.beds,
+        bedrooms: args.bedrooms,
+        bathrooms: args.bathrooms
       });
     },
     deleteStay(root, args, context) {

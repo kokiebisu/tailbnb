@@ -22,7 +22,9 @@ type Stay {
   duringStay: String
   host_response_time: String!
   host_response_rate: String!
-
+  beds: Int
+  bedrooms: Int
+  bathrooms: Float
 }
 
 type Adventure {

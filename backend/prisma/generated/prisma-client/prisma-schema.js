@@ -514,6 +514,9 @@ type Stay {
   duringStay: String
   host_response_time: String!
   host_response_rate: String!
+  beds: Int
+  bedrooms: Int
+  bathrooms: Float
 }
 
 type StayConnection {
@@ -546,6 +549,9 @@ input StayCreateInput {
   duringStay: String
   host_response_time: String!
   host_response_rate: String!
+  beds: Int
+  bedrooms: Int
+  bathrooms: Float
 }
 
 type StayEdge {
@@ -600,6 +606,12 @@ enum StayOrderByInput {
   host_response_time_DESC
   host_response_rate_ASC
   host_response_rate_DESC
+  beds_ASC
+  beds_DESC
+  bedrooms_ASC
+  bedrooms_DESC
+  bathrooms_ASC
+  bathrooms_DESC
 }
 
 type StayPreviousValues {
@@ -626,6 +638,9 @@ type StayPreviousValues {
   duringStay: String
   host_response_time: String!
   host_response_rate: String!
+  beds: Int
+  bedrooms: Int
+  bathrooms: Float
 }
 
 type StaySubscriptionPayload {
@@ -669,6 +684,9 @@ input StayUpdateInput {
   duringStay: String
   host_response_time: String
   host_response_rate: String
+  beds: Int
+  bedrooms: Int
+  bathrooms: Float
 }
 
 input StayUpdateManyMutationInput {
@@ -694,6 +712,9 @@ input StayUpdateManyMutationInput {
   duringStay: String
   host_response_time: String
   host_response_rate: String
+  beds: Int
+  bedrooms: Int
+  bathrooms: Float
 }
 
 input StayWhereInput {
@@ -1001,6 +1022,30 @@ input StayWhereInput {
   host_response_rate_not_starts_with: String
   host_response_rate_ends_with: String
   host_response_rate_not_ends_with: String
+  beds: Int
+  beds_not: Int
+  beds_in: [Int!]
+  beds_not_in: [Int!]
+  beds_lt: Int
+  beds_lte: Int
+  beds_gt: Int
+  beds_gte: Int
+  bedrooms: Int
+  bedrooms_not: Int
+  bedrooms_in: [Int!]
+  bedrooms_not_in: [Int!]
+  bedrooms_lt: Int
+  bedrooms_lte: Int
+  bedrooms_gt: Int
+  bedrooms_gte: Int
+  bathrooms: Float
+  bathrooms_not: Float
+  bathrooms_in: [Float!]
+  bathrooms_not_in: [Float!]
+  bathrooms_lt: Float
+  bathrooms_lte: Float
+  bathrooms_gt: Float
+  bathrooms_gte: Float
   AND: [StayWhereInput!]
   OR: [StayWhereInput!]
   NOT: [StayWhereInput!]

@@ -70,6 +70,9 @@ const GET_STAY = gql`
       hostImgLow
       host_response_rate
       host_response_time
+      beds
+      bedrooms
+      bathrooms
     }
   }
 `;
@@ -247,13 +250,21 @@ export default () => {
                         <p>9 guests</p>
                       </div>
                       <div className='mr-4'>
-                        <p>4 bedrooms</p>
+                        <p>
+                          {data.stay.bedrooms}{' '}
+                          {data.stay.bedrooms > 1 ? 'bedrooms' : 'bedroom'}
+                        </p>
                       </div>
                       <div className='mr-4'>
-                        <p>9 beds</p>
+                        <p>
+                          {data.stay.beds} {data.stay.beds > 1 ? 'beds' : 'bed'}
+                        </p>
                       </div>
                       <div className='mr-4'>
-                        <p>3 baths</p>
+                        <p>
+                          {data.stay.bathrooms}{' '}
+                          {data.stay.bathrooms > 1 ? 'baths' : 'bath'}
+                        </p>
                       </div>
                     </div>
                   )}
