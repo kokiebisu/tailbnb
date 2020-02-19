@@ -220,7 +220,11 @@ export default () => {
             </div>
           </div>
           <div className='w-full px-0'>
-            {loading ? null : (
+            {loading ? (
+              <div className='w-full lg:w-1/2 h-12 lg:h-57v relative rounded border-r-4 border-white'>
+                <SSkeletonPulse1 />
+              </div>
+            ) : (
               <ImagePanel
                 img1={data.stay.picture_url}
                 img2={detail2}
@@ -238,7 +242,7 @@ export default () => {
               <div className='mt-4 flex items-start justify-center'>
                 <div className='flex flex-col '>
                   {loading ? (
-                    <Skeleton height={30} width={300} />
+                    <Skeleton height={30} width={100} />
                   ) : (
                     <h3
                       style={{ fontFamily: 'airbnb-medium' }}
@@ -247,13 +251,16 @@ export default () => {
                     </h3>
                   )}
                   {loading ? (
-                    <Skeleton height={20} width={400} />
+                    <Skeleton height={20} width={200} />
                   ) : (
                     <div
                       style={{ fontFamily: 'airbnb-book' }}
                       className='text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap'>
                       <div className='mr-4'>
-                        <p>{data.stay.accommodates} guests</p>
+                        <p>
+                          {data.stay.accommodates}{' '}
+                          {data.stay.accommodates > 1 ? 'guests' : 'guest'}
+                        </p>
                       </div>
                       <div className='mr-4'>
                         <p>
@@ -294,7 +301,9 @@ export default () => {
           </div>
           <div className='my-6 border-b border-gray-300'>
             {loading ? (
-              <Characteristics />
+              <div className='w-full'>
+                <SSkeletonPulse1 />
+              </div>
             ) : (
               <Characteristics
                 host_is_superhost={data.stay.host_is_superhost}
@@ -405,3 +414,23 @@ export default () => {
     </>
   );
 };
+
+const SSkeletonPulse = styled.div`
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 400% 400%;
+  @keyframes pulse {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: -135% 0%;
+    }
+  }
+`;
+
+const SSkeletonPulse1 = styled(SSkeletonPulse)`
+  animation: pulse 1.2s ease-in-out infinite;
+`;
