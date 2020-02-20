@@ -10,9 +10,9 @@ export default () => {
   const [photos, setPhotos] = useState({});
 
   const info = {
-    page: 1,
-    per_page: 10,
     query: 'home',
+    count: 2,
+    orientation: 'landscape',
     client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
   };
 
@@ -23,10 +23,11 @@ export default () => {
   const loadData = async () => {
     axios
       .get(
-        `https://api.unsplash.com/search/photos/?page=${info.page}&per_page=${info.per_page}&query=${info.query}&client_id=${info.client_id}`
+        `https://api.unsplash.com/photos/random?query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`
       )
       .then((data) => {
-        setPhotos({ imgs: data.data.results });
+        console.log(data.data);
+        setPhotos({ imgs: data.data });
       });
     setIsLoading(false);
   };
@@ -47,7 +48,11 @@ export default () => {
         <h1>Loading</h1>
       ) : (
         <div className=''>
-          {photos.imgs ? <img src={photos.imgs[1].urls.small} alt='' /> : null}
+          {photos.imgs
+            ? photos.imgs.map((photo) => {
+                return <img src={photo.urls.small} alt='' />;
+              })
+            : null}
         </div>
       )}
     </>

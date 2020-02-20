@@ -2568,19 +2568,22 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.js");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
+/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.js");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
 
 
 
 
-const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
+
+const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
   query {
     stays {
       id
@@ -2589,7 +2592,6 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       name
       price
       reviews_per_month
-      picture_url
     }
   }
 `; // Component
@@ -2601,12 +2603,34 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS);
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAYS);
+  const [isLoading, setIsLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
+  const [photos, setPhotos] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
+  const info = {
+    query: 'home',
+    count: 1,
+    orientation: 'landscape',
+    client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
+  };
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`https://api.unsplash.com/photos/random?query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`).then(data => {
+      console.log(data.data);
+      setPhotos({
+        imgs: data.data
+      });
+    });
+    setIsLoading(false);
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
   }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex justify-center items-center w-full py-20"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
     size: 10,
     color: '#008489'
   })) : data.stays.map(({
@@ -2615,23 +2639,22 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     country,
     name,
     price,
-    reviews_per_month,
-    picture_url
-  }) => {
+    reviews_per_month
+  }, index) => {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, photos.imgs ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
       key: id,
       id: id,
       host_is_superhost: host_is_superhost,
-      img: picture_url,
       country: country,
-      imglow: picture_url,
       name: name,
       price: price,
-      reviews_per_month: reviews_per_month
-    }));
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      reviews_per_month: reviews_per_month,
+      img: photos.imgs[index].urls.regular,
+      imglow: photos.imgs[index].urls.thumb
+    }) : null);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["default"], {
     title: "Show(2000+)"
   }));
 });
@@ -3413,12 +3436,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (({
   id,
   host_is_superhost,
-  img,
-  imglow,
   name,
   price,
   country,
-  reviews_per_month
+  reviews_per_month,
+  img,
+  imglow
 }) => {
   const renderhost = host_is_superhost => {
     if (!host_is_superhost) {
@@ -3730,6 +3753,17 @@ module.exports = require("@apollo/react-hooks");
 /***/ (function(module, exports) {
 
 module.exports = require("apollo-boost");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 

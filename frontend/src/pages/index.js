@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Wrapper
 import Section from '../components/wrapper/Section';

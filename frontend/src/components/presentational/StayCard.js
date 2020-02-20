@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 import Link from 'next/link';
 
 export default ({
   id,
   host_is_superhost,
-  img,
-  imglow,
   name,
   price,
   country,
-  reviews_per_month
+  reviews_per_month,
+  img,
+  imglow
 }) => {
   const renderhost = (host_is_superhost) => {
     if (!host_is_superhost) {
@@ -54,7 +54,6 @@ export default ({
             <img className='w-full rounded' src={src} />
           )}
         </LazyImage>
-
         <div className='flex flex-wrap items-center justify-between'>
           {renderhost(host_is_superhost)}
           <div className='flex items-center justify-center flex-wrap'>

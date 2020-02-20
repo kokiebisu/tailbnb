@@ -122,9 +122,9 @@ __webpack_require__.r(__webpack_exports__);
   const [isLoading, setIsLoading] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(true);
   const [photos, setPhotos] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({});
   const info = {
-    page: 1,
-    per_page: 10,
     query: 'home',
+    count: 2,
+    orientation: 'landscape',
     client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
   };
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
@@ -132,9 +132,10 @@ __webpack_require__.r(__webpack_exports__);
   }, []);
 
   const loadData = async () => {
-    axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(`https://api.unsplash.com/search/photos/?page=${info.page}&per_page=${info.per_page}&query=${info.query}&client_id=${info.client_id}`).then(data => {
+    axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(`https://api.unsplash.com/photos/random?query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`).then(data => {
+      console.log(data.data);
       setPhotos({
-        imgs: data.data.results
+        imgs: data.data
       });
     });
     setIsLoading(false);
@@ -149,9 +150,11 @@ __webpack_require__.r(__webpack_exports__);
     href: "/img/high/favicon.ico"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Hello ", router.query.id), isLoading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Loading") : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: ""
-  }, photos.imgs ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    src: photos.imgs[1].urls.small,
-    alt: ""
+  }, photos.imgs ? photos.imgs.map(photo => {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: photo.urls.small,
+      alt: ""
+    });
   }) : null));
 });
 
