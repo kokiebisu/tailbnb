@@ -32,6 +32,7 @@
     "@types/react": "^16.9.19",
     "apollo-boost": "^0.4.7",
     "autodll-webpack-plugin": "^0.4.2",
+    "axios": "^0.19.2",
     "graphql": "^14.6.0",
     "next": "^9.2.1",
     "next-compose-plugins": "^2.2.0",
@@ -43,7 +44,8 @@
     "react-lazy-progressive-image": "^1.5.5",
     "react-loading-skeleton": "^2.0.1",
     "react-spinners": "^0.8.0",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "unsplash-js": "^6.0.0"
   },
   "jest": {
     "moduleNameMapper": {

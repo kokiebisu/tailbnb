@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3420,8 +3420,6 @@ __webpack_require__.r(__webpack_exports__);
   country,
   reviews_per_month
 }) => {
-  console.log('host is superhost', host_is_superhost);
-
   const renderhost = host_is_superhost => {
     if (!host_is_superhost) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3701,7 +3699,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/

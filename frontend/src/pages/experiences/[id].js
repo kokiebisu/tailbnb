@@ -2,9 +2,11 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import Head from 'next/head';
+import Unsplash, { toJson } from 'unsplash-js';
 
 export default () => {
   const router = useRouter();
+
   return (
     <>
       <Head>

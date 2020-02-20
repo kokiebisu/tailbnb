@@ -23687,8 +23687,6 @@ __webpack_require__.r(__webpack_exports__);
   country,
   reviews_per_month
 }) => {
-  console.log('host is superhost', host_is_superhost);
-
   const renderhost = host_is_superhost => {
     if (!host_is_superhost) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -23968,7 +23966,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -23991,5 +23989,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

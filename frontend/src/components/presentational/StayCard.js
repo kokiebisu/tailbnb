@@ -12,7 +12,6 @@ export default ({
   country,
   reviews_per_month
 }) => {
-  console.log('host is superhost', host_is_superhost);
   const renderhost = (host_is_superhost) => {
     if (!host_is_superhost) {
       return (
