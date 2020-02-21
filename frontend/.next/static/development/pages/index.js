@@ -24871,6 +24871,17 @@ module.exports = "/_next/static/images/featured3-8b63bad827adf3b1fab9832d1f1dbd4
 
 /***/ }),
 
+/***/ "./public/img/high/google.png":
+/*!************************************!*\
+  !*** ./public/img/high/google.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/google-8b201685859c6b291fb39019e19896fd.png";
+
+/***/ }),
+
 /***/ "./public/img/high/plus-1.jpg":
 /*!************************************!*\
   !*** ./public/img/high/plus-1.jpg ***!
@@ -25922,10 +25933,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
 /* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
 /* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/img/high/google.png */ "./public/img/high/google.png");
+/* harmony import */ var _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_google_png__WEBPACK_IMPORTED_MODULE_4__);
 
  // Component
 
  // Images
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
@@ -26026,15 +26040,17 @@ __webpack_require__.r(__webpack_exports__);
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "centerAbsolute",
-    className: "fixed bg-white justify-center px-10 pt-10 pb-8 items-center z-50"
+    className: "fixed bg-white flex justify-center w-144 pt-10 pb-8 items-center z-50"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-red-500 py-8"
+    className: "w-10.5/12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pb-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "w-full flex justify-center items-center my-2 "
+    className: "bg-facebook w-full flex justify-center items-center my-2 rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-facebook flex items-center py-3 px-32 rounded"
+    className: "flex items-center py-3 rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pr-2"
+    className: "flex justify-around items-center pr-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     viewBox: "0 0 32 32",
     className: "h-4 w-4",
@@ -26049,14 +26065,24 @@ __webpack_require__.r(__webpack_exports__);
     },
     className: "text-white"
   }, "Continue with Facebook"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "w-full"
+    className: "border-2 border-gray-650 w-full flex justify-center items-center my-2 rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-red-500"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Google"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "flex items-center py-3 rounded"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex justify-around items-center pr-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+    className: "w-4 h-4"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-650"
+  }, "Continue with Google"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "w-full"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bg-blue-500"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Sign up with email"))))) : null);
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Sign up with email")))))) : null);
 });
 
 /***/ }),

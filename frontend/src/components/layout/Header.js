@@ -5,6 +5,7 @@ import HeaderCard from '../presentational/HeaderCard';
 
 // Images
 import background from '../../../public/img/high/airbnb-background.jpg';
+import google from '../../../public/img/high/google.png';
 
 export default () => {
   const [modal, setModal] = useState(false);
@@ -116,38 +117,48 @@ export default () => {
           />
           <div
             id='centerAbsolute'
-            className='fixed bg-white justify-center px-10 pt-10 pb-8 items-center z-50'>
-            <div className='bg-red-500 py-8'>
-              <div>svg here</div>
-            </div>
-            <button className='w-full flex justify-center items-center my-2 '>
-              <div className='bg-facebook flex items-center py-3 px-32 rounded'>
-                <div className='pr-2'>
-                  <svg
-                    viewBox='0 0 32 32'
-                    className='h-4 w-4'
-                    style={{ fill: '#ffffff' }}>
-                    <path d='m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78'></path>
-                  </svg>
+            className='fixed bg-white flex justify-center w-144 pt-10 pb-8 items-center z-50'>
+            <div className='w-10.5/12'>
+              <div className='pb-3'>
+                <div>svg here</div>
+              </div>
+              <button className='bg-facebook w-full flex justify-center items-center my-2 rounded'>
+                <div className='flex items-center py-3 rounded'>
+                  <div className='flex justify-around items-center pr-3'>
+                    <svg
+                      viewBox='0 0 32 32'
+                      className='h-4 w-4'
+                      style={{ fill: '#ffffff' }}>
+                      <path d='m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78'></path>
+                    </svg>
+                  </div>
+                  <p
+                    style={{ fontFamily: 'airbnb-bold' }}
+                    className='text-white'>
+                    Continue with Facebook
+                  </p>
                 </div>
-                <p style={{ fontFamily: 'airbnb-bold' }} className='text-white'>
-                  Continue with Facebook
-                </p>
-              </div>
-            </button>
-            <button className='w-full'>
-              <div className='bg-red-500'>
-                <div>svg here</div>
-                <p>Continue with Google</p>
-              </div>
-            </button>
-            <p>or</p>
-            <button className='w-full'>
-              <div className='bg-blue-500'>
-                <div>svg here</div>
-                <p>Sign up with email</p>
-              </div>
-            </button>
+              </button>
+              <button className='border-2 border-gray-650 w-full flex justify-center items-center my-2 rounded'>
+                <div className='flex items-center py-3 rounded'>
+                  <div className='flex justify-around items-center pr-3'>
+                    <img src={google} className='w-4 h-4' />
+                  </div>
+                  <p
+                    style={{ fontFamily: 'airbnb-bold' }}
+                    className='text-gray-650'>
+                    Continue with Google
+                  </p>
+                </div>
+              </button>
+              <p>or</p>
+              <button className='w-full'>
+                <div className='bg-blue-500'>
+                  <div>svg here</div>
+                  <p>Sign up with email</p>
+                </div>
+              </button>
+            </div>
           </div>
         </>
       ) : null}
