@@ -25929,6 +25929,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const [modal, setModal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const openModal = () => {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: ""
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hello"));
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     style: {
       backgroundImage: `url(${_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3___default.a})`,
@@ -25995,17 +26003,12 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-sm font-semibold tracking-wide"
   }, "Help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "text-sm font-semibold tracking-wide"
-    }, "Sign up"),
-    modal: true,
-    closeOnDocumentClick: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "h-64 bg-white"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-black"
-  }, "Hello")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: () => {
+      setModal(true);
+    },
+    className: "text-sm font-semibold tracking-wide"
+  }, "Sign up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
@@ -26018,7 +26021,12 @@ __webpack_require__.r(__webpack_exports__);
     className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 font-semibold text-right"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text-sm text-white"
-  }, "Over 300 unique places ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "to stay in Japan")));
+  }, "Over 300 unique places ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "to stay in Japan")), modal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, document.body.style.overflow = 'hidden', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "darkOverlay",
+    className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "fixed top-0 bg-white h-64 w-64 z-50"
+  }, "hello")) : null);
 });
 
 /***/ }),

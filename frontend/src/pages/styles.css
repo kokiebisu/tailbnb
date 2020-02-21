@@ -73,6 +73,11 @@ body {
   border: 2px solid #4caf50;
 }
 
+#darkOverlay {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.9;
+}
+
 .scroller {
   overflow-x: scroll !important;
   overflow-y: auto !important;

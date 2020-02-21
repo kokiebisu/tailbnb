@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 // Component
 import HeaderCard from '../presentational/HeaderCard';
@@ -7,6 +7,16 @@ import HeaderCard from '../presentational/HeaderCard';
 import background from '../../../public/img/high/airbnb-background.jpg';
 
 export default () => {
+  const [modal, setModal] = useState(false);
+
+  const openModal = () => {
+    return (
+      <div className=''>
+        <p>Hello</p>
+      </div>
+    );
+  };
+
   return (
     <header
       style={{
@@ -69,18 +79,13 @@ export default () => {
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <Popup
-                trigger={
-                  <button className='text-sm font-semibold tracking-wide'>
-                    Sign up
-                  </button>
-                }
-                modal
-                closeOnDocumentClick>
-                <div className='h-64 bg-white'>
-                  <p className='text-black'>Hello</p>
-                </div>
-              </Popup>
+              <button
+                onClick={() => {
+                  setModal(true);
+                }}
+                className='text-sm font-semibold tracking-wide'>
+                Sign up
+              </button>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <a href='#' className='text-sm font-semibold tracking-wide'>
@@ -102,6 +107,16 @@ export default () => {
           to stay in Japan
         </p>
       </div>
+      {modal ? (
+        <>
+          {(document.body.style.overflow = 'hidden')}
+          <div
+            id='darkOverlay'
+            className='fixed w-full h-full top-0 left-0 z-20 overflow-hidden'
+          />
+          <div className='fixed top-0 bg-white h-64 w-64 z-50'>hello</div>
+        </>
+      ) : null}
     </header>
   );
 };
