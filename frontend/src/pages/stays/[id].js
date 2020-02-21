@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import Head from 'next/head';
+import Router, { withRouter } from 'next/router';
 
 // Dependencies
 import styled from 'styled-components';
@@ -79,7 +80,7 @@ const GET_STAY = gql`
   }
 `;
 
-export default () => {
+export default ({ query }) => {
   const router = useRouter();
   const { loading, error, data } = useQuery(GET_STAY, {
     variables: {
@@ -178,6 +179,11 @@ export default () => {
                     href=''>
                     {data.stay.street}
                   </a>
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='pl-1 text-gray-650 text-sm'>
+                    Photo by Annie Spratt on Unsplash
+                  </p>
                 </div>
               )}
               <div className='hidden lg:inline-block flex items-start justify-start'>

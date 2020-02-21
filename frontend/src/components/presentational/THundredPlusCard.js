@@ -2,56 +2,43 @@ import React, { useState } from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 
 export default ({
-  hostType,
+  host_is_superhost,
   img,
   imglow,
   size,
-  location,
-  title,
-  cost,
-  ratings,
-  reviews
+  country,
+  name,
+  price,
+  reviews_per_month,
+  number_of_reviews
 }) => {
   const renderhost = () => {
-    if (hostType === 'normal') {
-      return (
-        <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
-          <p
-            style={{ fontFamily: 'airbnb-book' }}
-            className='mt-3 text-sm sm:my-2 font-light text-gray-650'>
-            {size}
-            <span> · </span>
-            {location}
-          </p>
-        </div>
-      );
-    } else if (hostType === 'superhost') {
+    if (host_is_superhost) {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
-            {hostType}
+            Superhost
           </p>
           <p
             style={{ fontFamily: 'airbnb-book' }}
             className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-650'>
-            {location}
-          </p>
-        </div>
-      );
-    } else if (hostType === 'plus') {
-      return (
-        <div className='sm:flex sm:flex-wrap sm:items-center sm:justify-start'>
-          <p className='inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
-            {hostType}
-          </p>
-          <p
-            style={{ fontFamily: 'airbnb-book' }}
-            className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-650'>
-            {location}
+            {country}
           </p>
         </div>
       );
     }
+
+    return (
+      <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
+        <p
+          style={{ fontFamily: 'airbnb-book' }}
+          className='mt-3 text-sm sm:my-2 font-light text-gray-650'>
+          {size}
+          <span> · </span>
+          {country}
+        </p>
+      </div>
+    );
   };
 
   return (
@@ -76,9 +63,9 @@ export default ({
       <div className='flex flex-wrap items-center justify-between'>
         {renderhost()}
       </div>
-      <p className='my-1'>{title}</p>
+      <p className='my-1'>{name}</p>
       <p className='tracking-wide'>
-        <span className='font-bold'>${cost} CAD</span>/night
+        <span className='font-bold'>${price} CAD</span>/night
       </p>
       <div className='flex items-center justify-start flex-wrap'>
         <svg
@@ -101,12 +88,12 @@ export default ({
           </g>
         </svg>
         <p style={{ fontFamily: 'airbnb-book' }} className='pl-1 text-sm'>
-          {ratings}
+          {reviews_per_month}
         </p>
         <p
           style={{ fontFamily: 'airbnb-book' }}
           className='text-sm text-gray-650'>
-          &nbsp; ({reviews})
+          &nbsp; ({number_of_reviews})
         </p>
       </div>
     </div>

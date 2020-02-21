@@ -26,7 +26,6 @@ export default () => {
         `https://api.unsplash.com/photos/random?query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`
       )
       .then((data) => {
-        console.log(data.data);
         setPhotos({ imgs: data.data });
       });
     setIsLoading(false);

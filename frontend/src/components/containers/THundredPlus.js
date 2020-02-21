@@ -10,15 +10,13 @@ const staydata = gql`
   query {
     stays {
       id
-      hostType
-      img
-      imglow
+      host_is_superhost
       size
-      location
+      country
       name
       price
-      ratings
-      reviews
+      reviews_per_month
+      number_of_reviews
     }
   }
 `;
@@ -34,29 +32,29 @@ export default () => {
         {data.stays.map(
           ({
             id,
-            hostType,
+            host_is_superhost,
             img,
             imglow,
             size,
-            location,
-            title,
-            cost,
-            ratings,
-            reviews
+            country,
+            name,
+            price,
+            reviews_per_month,
+            number_of_reviews
           }) => {
             return (
               <div className='lg:w-1/3 xl:w-1/4 pb-5'>
                 <THundredPlusCard
                   key={id}
-                  hostType={hostType}
+                  host_is_superhost={host_is_superhost}
                   img={img}
                   imglow={imglow}
                   size={size}
-                  location={location}
-                  title={title}
-                  cost={cost}
-                  ratings={ratings}
-                  reviews={reviews}
+                  country={country}
+                  name={name}
+                  price={price}
+                  reviews_per_month={reviews_per_month}
+                  number_of_reviews={number_of_reviews}
                 />
               </div>
             );

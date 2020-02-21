@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
+import axios from 'axios';
 
 // Components
 import TopRatedCard from '../presentational/TopRatedCard';
@@ -15,17 +16,39 @@ const GET_EXPERIENCES = gql`
       cost
       ratings
       reviews
-      country
-      img
-      imglow
+      ratings
+      location
     }
   }
 `;
 
 export default () => {
-  const { loading, error, data } = useQuery(GET_EXPERIENCES, {
-    pollInterval: 6000
-  });
+  const { loading, error, data } = useQuery(GET_EXPERIENCES);
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [photos, setPhotos] = useState({});
+
+  const info = {
+    query: 'experience',
+    count: 4,
+    orientation: 'portrait',
+    client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    axios
+      .get(
+        `https://api.unsplash.com/photos/random?query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`
+      )
+      .then((data) => {
+        setPhotos({ imgs: data.data });
+      });
+    setIsLoading(false);
+  };
 
   if (loading) {
     return (
@@ -41,19 +64,22 @@ export default () => {
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>
         {data.experiences.map(
-          ({ id, title, cost, ratings, reviews, country, img, imglow }) => {
+          ({ id, title, cost, reviews, ratings, location }, index) => {
             return (
               <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
-                <TopRatedCard
-                  key={id}
-                  img={img}
-                  imglow={imglow}
-                  title={title}
-                  cost={cost}
-                  ratings={ratings}
-                  reviews={reviews}
-                  country={country}
-                />
+                {photos.imgs ? (
+                  <TopRatedCard
+                    key={id}
+                    id={id}
+                    img={photos.imgs[index].urls.regular}
+                    imglow={photos.imgs[index].urls.thumb}
+                    title={title}
+                    cost={cost}
+                    ratings={ratings}
+                    reviews={reviews}
+                    location={location}
+                  />
+                ) : null}
               </div>
             );
           }

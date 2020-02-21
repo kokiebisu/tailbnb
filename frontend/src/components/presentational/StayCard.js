@@ -2,7 +2,7 @@ import React from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 import Link from 'next/link';
 
-export default ({
+export default () => ({
   id,
   host_is_superhost,
   name,
