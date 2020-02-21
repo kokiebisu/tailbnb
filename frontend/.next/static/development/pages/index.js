@@ -24734,14 +24734,19 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
     setIsLoading(false);
   };
 
+  if (loading) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "flex justify-center items-center w-full py-20"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      size: 10,
+      color: '#008489'
+    }));
+  }
+
+  if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex flex-wrap items-start justify-start w-full"
-  }, loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex justify-center items-center w-full py-20"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    size: 10,
-    color: '#008489'
-  })) : data.stays.map(({
+  }, data ? data.stays.map(({
     id,
     host_is_superhost,
     country,
@@ -24762,7 +24767,7 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
       img: photos.imgs[index].urls.regular,
       imglow: photos.imgs[index].urls.thumb
     }) : null);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["default"], {
     title: "Show(2000+)"
   }));
 });
@@ -25569,13 +25574,7 @@ __webpack_require__.r(__webpack_exports__);
   imglow
 }) => {
   const renderhost = host_is_superhost => {
-    if (!host_is_superhost) {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "md:flex md:flex-wrap md:items-center md:justify-start"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "mt-3 text-sm sm:my-2 font-light text-gray-600"
-      }, country));
-    } else if (host_is_superhost) {
+    if (host_is_superhost) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -25585,15 +25584,14 @@ __webpack_require__.r(__webpack_exports__);
       }, country));
     } else {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sm:flex sm:flex-wrap sm:items-center sm:justify-start"
+        className: "md:flex md:flex-wrap md:items-center md:justify-start"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800"
-      }, "plus"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600"
+        className: "mt-3 text-sm sm:my-2 font-light text-gray-600"
       }, country));
     }
   };
 
+  console.log('staycard rendered');
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/stays/[id]",
     as: `/stays/${id}`
@@ -25854,7 +25852,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -25877,5 +25875,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

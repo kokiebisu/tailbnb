@@ -13,15 +13,7 @@ export default () => ({
   imglow
 }) => {
   const renderhost = (host_is_superhost) => {
-    if (!host_is_superhost) {
-      return (
-        <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
-          <p className='mt-3 text-sm sm:my-2 font-light text-gray-600'>
-            {country}
-          </p>
-        </div>
-      );
-    } else if (host_is_superhost) {
+    if (host_is_superhost) {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
@@ -34,17 +26,16 @@ export default () => ({
       );
     } else {
       return (
-        <div className='sm:flex sm:flex-wrap sm:items-center sm:justify-start'>
-          <p className='inline-block mt-3 md:mt-0 px-1 rounded text-white uppercase tracking-wide text-xs font-semibold bg-pink-800'>
-            plus
-          </p>
-          <p className='sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600'>
+        <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
+          <p className='mt-3 text-sm sm:my-2 font-light text-gray-600'>
             {country}
           </p>
         </div>
       );
     }
   };
+
+  console.log('staycard rendered');
 
   return (
     <Link href='/stays/[id]' as={`/stays/${id}`}>

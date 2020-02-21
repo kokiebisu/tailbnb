@@ -49,46 +49,52 @@ export default () => {
     setIsLoading(false);
   };
 
+  if (loading) {
+    return (
+      <div className='flex justify-center items-center w-full py-20'>
+        <PulseLoader size={10} color={'#008489'} />
+      </div>
+    );
+  }
+
+  if (error) return `Error! ${error.message}`;
+
   return (
     <>
       <div className='flex flex-wrap items-start justify-start w-full'>
-        {loading ? (
-          <div className='flex justify-center items-center w-full py-20'>
-            <PulseLoader size={10} color={'#008489'} />
-          </div>
-        ) : (
-          data.stays.map(
-            (
-              {
-                id,
-                host_is_superhost,
-                country,
-                name,
-                price,
-                reviews_per_month
-              },
-              index
-            ) => {
-              return (
-                <div className='w-1/2 lg:w-1/3 xl:w-1/4 pb-5'>
-                  {photos.imgs ? (
-                    <StayCard
-                      key={id}
-                      id={id}
-                      host_is_superhost={host_is_superhost}
-                      country={country}
-                      name={name}
-                      price={price}
-                      reviews_per_month={reviews_per_month}
-                      img={photos.imgs[index].urls.regular}
-                      imglow={photos.imgs[index].urls.thumb}
-                    />
-                  ) : null}
-                </div>
-              );
-            }
-          )
-        )}
+        {data
+          ? data.stays.map(
+              (
+                {
+                  id,
+                  host_is_superhost,
+                  country,
+                  name,
+                  price,
+                  reviews_per_month
+                },
+                index
+              ) => {
+                return (
+                  <div className='w-1/2 lg:w-1/3 xl:w-1/4 pb-5'>
+                    {photos.imgs ? (
+                      <StayCard
+                        key={id}
+                        id={id}
+                        host_is_superhost={host_is_superhost}
+                        country={country}
+                        name={name}
+                        price={price}
+                        reviews_per_month={reviews_per_month}
+                        img={photos.imgs[index].urls.regular}
+                        imglow={photos.imgs[index].urls.thumb}
+                      />
+                    ) : null}
+                  </div>
+                );
+              }
+            )
+          : null}
       </div>
       <ShowAll title='Show(2000+)' />
     </>
