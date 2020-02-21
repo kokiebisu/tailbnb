@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2259,7 +2259,7 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     }, photos.imgs ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
       key: id,
       id: id,
-      img: photos.imgs[index].urls.regular,
+      img: photos.imgs[index].urls.full,
       imglow: photos.imgs[index].urls.thumb,
       country: country,
       title: title,
@@ -2682,7 +2682,7 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"]`
       name: name,
       price: price,
       reviews_per_month: reviews_per_month,
-      img: photos.imgs[index].urls.regular,
+      img: photos.imgs[index].urls.raw,
       imglow: photos.imgs[index].urls.thumb
     }) : null);
   }) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -2786,7 +2786,7 @@ const GET_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     }, photos.imgs ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
       key: id,
       id: id,
-      img: photos.imgs[index].urls.regular,
+      img: photos.imgs[index].urls.full,
       imglow: photos.imgs[index].urls.thumb,
       title: title,
       cost: cost,
@@ -3093,9 +3093,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactjs-popup */ "reactjs-popup");
+/* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactjs_popup__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
+/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
+/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3__);
+
  // Component
 
  // Images
@@ -3104,7 +3107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     style: {
-      backgroundImage: `url(${_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_2___default.a})`,
+      backgroundImage: `url(${_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3___default.a})`,
       maxHeight: '80rem'
     },
     className: "w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat"
@@ -3168,10 +3171,17 @@ __webpack_require__.r(__webpack_exports__);
     className: "text-sm font-semibold tracking-wide"
   }, "Help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-sm font-semibold tracking-wide"
-  }, "Sign up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactjs_popup__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    trigger: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "text-sm font-semibold tracking-wide"
+    }, "Sign up"),
+    modal: true,
+    closeOnDocumentClick: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "h-64 bg-white"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-black"
+  }, "Hello")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
@@ -3180,7 +3190,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "md:ml-20"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6"
-  }, "Book unique places to stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Book unique places to stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 font-semibold text-right"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text-sm text-white"
@@ -3772,7 +3782,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
@@ -3935,6 +3945,17 @@ module.exports = require("react-lazy-progressive-image");
 /***/ (function(module, exports) {
 
 module.exports = require("react-spinners/PulseLoader");
+
+/***/ }),
+
+/***/ "reactjs-popup":
+/*!********************************!*\
+  !*** external "reactjs-popup" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("reactjs-popup");
 
 /***/ }),
 

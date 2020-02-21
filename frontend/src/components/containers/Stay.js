@@ -86,7 +86,7 @@ export default () => {
                         name={name}
                         price={price}
                         reviews_per_month={reviews_per_month}
-                        img={photos.imgs[index].urls.regular}
+                        img={photos.imgs[index].urls.raw}
                         imglow={photos.imgs[index].urls.thumb}
                       />
                     ) : null}

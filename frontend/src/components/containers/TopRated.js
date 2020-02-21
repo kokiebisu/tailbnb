@@ -71,7 +71,7 @@ export default () => {
                   <TopRatedCard
                     key={id}
                     id={id}
-                    img={photos.imgs[index].urls.regular}
+                    img={photos.imgs[index].urls.full}
                     imglow={photos.imgs[index].urls.thumb}
                     title={title}
                     cost={cost}

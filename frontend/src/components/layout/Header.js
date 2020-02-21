@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Popup from 'reactjs-popup';
 // Component
 import HeaderCard from '../presentational/HeaderCard';
 
@@ -69,9 +69,18 @@ export default () => {
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm font-semibold tracking-wide'>
-                Sign up
-              </a>
+              <Popup
+                trigger={
+                  <button className='text-sm font-semibold tracking-wide'>
+                    Sign up
+                  </button>
+                }
+                modal
+                closeOnDocumentClick>
+                <div className='h-64 bg-white'>
+                  <p className='text-black'>Hello</p>
+                </div>
+              </Popup>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <a href='#' className='text-sm font-semibold tracking-wide'>

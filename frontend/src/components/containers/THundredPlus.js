@@ -86,7 +86,7 @@ export default () => {
                   <THundredPlusCard
                     key={id}
                     host_is_superhost={host_is_superhost}
-                    img={photos.imgs[index].urls.regular}
+                    img={photos.imgs[index].urls.raw}
                     imglow={photos.imgs[index].urls.thumb}
                     size={size}
                     country={country}
