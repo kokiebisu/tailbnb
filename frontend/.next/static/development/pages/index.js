@@ -26025,8 +26025,9 @@ __webpack_require__.r(__webpack_exports__);
     id: "darkOverlay",
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "fixed top-0 bg-white h-64 w-64 z-50"
-  }, "hello")) : null);
+    id: "centerAbsolute",
+    className: "fixed bg-white justify-center w-64 h-64 items-center z-50"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "hello"))) : null);
 });
 
 /***/ }),

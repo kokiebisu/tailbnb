@@ -7,6 +7,9 @@ module.exports = {
       '90': '50rem'
     },
     extend: {
+      inset: {
+        '1/2': '35%'
+      },
       borderColor: {
         green: {
           '850': '#008489'

@@ -114,7 +114,11 @@ export default () => {
             id='darkOverlay'
             className='fixed w-full h-full top-0 left-0 z-20 overflow-hidden'
           />
-          <div className='fixed top-0 bg-white h-64 w-64 z-50'>hello</div>
+          <div
+            id='centerAbsolute'
+            className='fixed bg-white justify-center w-64 h-64 items-center z-50'>
+            <p>hello</p>
+          </div>
         </>
       ) : null}
     </header>
