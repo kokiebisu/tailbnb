@@ -26026,8 +26026,37 @@ __webpack_require__.r(__webpack_exports__);
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "centerAbsolute",
-    className: "fixed bg-white justify-center w-64 h-64 items-center z-50"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "hello"))) : null);
+    className: "fixed bg-white justify-center px-10 pt-10 pb-8 items-center z-50"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bg-red-500 py-8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "w-full flex justify-center items-center my-2 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bg-facebook flex items-center py-3 px-32 rounded"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pr-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    viewBox: "0 0 32 32",
+    className: "h-4 w-4",
+    style: {
+      fill: '#ffffff'
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-white"
+  }, "Continue with Facebook"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "w-full"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bg-red-500"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Google"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "w-full"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bg-blue-500"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Sign up with email"))))) : null);
 });
 
 /***/ }),
