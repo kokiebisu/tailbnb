@@ -217,9 +217,17 @@ export default () => {
                     Continue with Google
                   </p>
                 </div>
-                <div>
-                  <p>Already have an account? </p>
-                  <a href=''>Login</a>
+                <div className='flex'>
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-sm text-gray-750'>
+                    Already have an account?
+                  </p>
+                  <button
+                    style={{ fontFamily: 'airbnb-medium' }}
+                    className='border-b border-gray-750 text-sm ml-2'>
+                    Log in
+                  </button>
                 </div>
               </div>
             </div>
