@@ -171,7 +171,7 @@ __webpack_require__.r(__webpack_exports__);
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We'll call or text you to confirm your number. Standard message and data rates apply.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "w-full bg-red-500"
+    className: "w-full bg-red-500 py-3 rounded-lg text-white"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Already have an account? "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, "Login")))))) : null);
@@ -180,4 +180,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 })
-//# sourceMappingURL=index.js.62da2178e11f39ed4be7.hot-update.js.map
+//# sourceMappingURL=index.js.af7bfb30f6004905b144.hot-update.js.map

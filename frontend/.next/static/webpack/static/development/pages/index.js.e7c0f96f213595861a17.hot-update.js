@@ -122,9 +122,9 @@ __webpack_require__.r(__webpack_exports__);
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-144 pt-5 pb-8 z-50"
+    className: "relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full border-b border-gray-300 flex justify-center items-center"
+    className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-10.5/12 flex justify-center items-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -143,7 +143,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex w-64 justify-center items-center pb-4 bg-blue-500 "
+    className: "flex w-64 justify-center items-center my-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-bold'
@@ -169,9 +169,12 @@ __webpack_require__.r(__webpack_exports__);
     name: "phone",
     placeholder: "Phone number"
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-blue-500 py-3"
+    className: "py-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We'll call or text you to confirm your number. Standard message and data rates apply.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "w-full bg-red-500"
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "w-full bg-red-500 py-3 rounded-lg text-white"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Already have an account? "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, "Login")))))) : null);
@@ -180,4 +183,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 })
-//# sourceMappingURL=index.js.8df9266d92c7f560da0c.hot-update.js.map
+//# sourceMappingURL=index.js.e7c0f96f213595861a17.hot-update.js.map

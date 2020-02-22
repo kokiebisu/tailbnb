@@ -172,7 +172,9 @@ export default () => {
                     message and data rates apply.
                   </p>
                 </div>
-                <button className='w-full bg-red-500'>
+                <button
+                  style={{ fontFamily: 'airbnb-medium' }}
+                  className='w-full bg-pink-750 py-3 rounded-lg text-white'>
                   <p>Continue</p>
                 </button>
                 <div>

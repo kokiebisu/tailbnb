@@ -25,6 +25,7 @@ module.exports = {
         background: '#fffcfc',
         facebook: '#4568B2',
         pink: {
+          '750': '#E31956',
           '850': '#E61E4D'
         },
         green: {
