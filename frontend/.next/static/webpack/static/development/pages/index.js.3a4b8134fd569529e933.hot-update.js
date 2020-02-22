@@ -215,23 +215,30 @@ __webpack_require__.r(__webpack_exports__);
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      marginLeft: 15
+      marginLeft: 17
     },
     className: "absolute left-0"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "w-6 h-6",
-    src: _public_img_high_facebook_png__WEBPACK_IMPORTED_MODULE_4___default.a
+    className: "w-5 h-5",
+    src: _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_5___default.a
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm"
-  }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Already have an account? "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
+  }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm text-gray-750"
+  }, "Already have an account?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "border-b border-gray-750 text-sm "
   }, "Login")))))) : null);
 });
 
 /***/ })
 
 })
-//# sourceMappingURL=index.js.c4f0f225c2b0147fd195.hot-update.js.map
+//# sourceMappingURL=index.js.3a4b8134fd569529e933.hot-update.js.map

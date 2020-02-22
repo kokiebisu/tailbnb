@@ -26155,9 +26155,19 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm"
-  }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Already have an account? "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "Login")))))) : null);
+  }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm text-gray-750"
+  }, "Already have an account?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "border-b border-gray-750 text-sm ml-2"
+  }, "Log in")))))) : null);
 });
 
 /***/ }),
@@ -26745,7 +26755,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -26768,5 +26778,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
