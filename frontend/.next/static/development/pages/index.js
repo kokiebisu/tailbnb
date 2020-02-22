@@ -26040,12 +26040,20 @@ __webpack_require__.r(__webpack_exports__);
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "centerAbsolute",
-    className: "fixed bg-white flex justify-center w-144 pt-10 pb-8 items-center z-50"
+    className: "fixed bg-white flex justify-center w-144 pt-5 pb-8 items-center z-50"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-10.5/12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pb-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "pb-1"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "p-2 inline-block bg-white shadow-6xl rounded-full z-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "h-4 w-4",
+    viewBox: "0 0 512.001 512.001"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "bg-facebook w-full flex justify-center items-center my-2 rounded"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-center py-3 rounded"
@@ -26670,7 +26678,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -26693,5 +26701,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
