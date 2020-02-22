@@ -183,7 +183,16 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-medium'
     },
     className: "w-full bg-pink-750 py-3 rounded-lg text-white"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pt-4 pb-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    id: "pseudo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-xs text-gray-750"
+  }, "or"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "absolute left-0 ml-4"
@@ -249,4 +258,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 })
-//# sourceMappingURL=index.js.448f8032fddae815721f.hot-update.js.map
+//# sourceMappingURL=index.js.b55d6d01c812480cd873.hot-update.js.map

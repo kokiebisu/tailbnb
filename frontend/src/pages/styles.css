@@ -69,6 +69,7 @@ body {
   background: #fff;
   z-index: 2;
   position: relative;
+  padding: 0px 10px;
 }
 
 #pseudo::before,
@@ -79,7 +80,7 @@ body {
   top: 50%;
   height: 1px;
   width: 500px;
-  background: #767676;
+  background: #e2e8f0;
   left: 50%;
   z-index: 1;
   transform: translateX(-50%);
