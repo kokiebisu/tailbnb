@@ -173,7 +173,12 @@ __webpack_require__.r(__webpack_exports__);
     placeholder: "Phone number"
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "py-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We'll call or text you to confirm your number. Standard message and data rates apply.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-xs text-gray-650"
+  }, "We'll call or text you to confirm your number. Standard message and data rates apply.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
@@ -226,17 +231,22 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm"
-  }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-750"
-  }, "Already have an account?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "Login")))))) : null);
+  }, "Already have an account?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "border-b border-gray-750 text-sm ml-2"
+  }, "Log in")))))) : null);
 });
 
 /***/ })
 
 })
-//# sourceMappingURL=index.js.98b3f70038156f3ad1d8.hot-update.js.map
+//# sourceMappingURL=index.js.448f8032fddae815721f.hot-update.js.map
