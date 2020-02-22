@@ -180,7 +180,7 @@ export default () => {
                 <div>
                   <p>or</p>
                 </div>
-                <div className='w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative'>
+                <div className='w-full border-gray-400 border-2 rounded-lg py-3 flex justify-center items-center relative'>
                   <div className='absolute left-0 ml-4'>
                     <svg
                       className='w-4 h-4'
