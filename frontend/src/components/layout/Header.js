@@ -168,7 +168,9 @@ export default () => {
                   </div>
                 </div>
                 <div className='py-3'>
-                  <p>
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-xs text-gray-650'>
                     We'll call or text you to confirm your number. Standard
                     message and data rates apply.
                   </p>
