@@ -180,8 +180,14 @@ export default () => {
                   className='w-full bg-pink-750 py-3 rounded-lg text-white'>
                   <p>Continue</p>
                 </button>
-                <div>
-                  <p>or</p>
+                <div className='pt-4 pb-2'>
+                  <p id='pseudo'>
+                    <span
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='text-xs text-gray-750'>
+                      or
+                    </span>
+                  </p>
                 </div>
                 <div className='w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
                   <div className='absolute left-0 ml-4'>
