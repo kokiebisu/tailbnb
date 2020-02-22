@@ -181,11 +181,7 @@ export default () => {
                 <div>
                   <p>or</p>
                 </div>
-<<<<<<< HEAD
-                <div className='w-full border-gray-400 border-2 rounded-lg py-3 flex justify-center items-center relative'>
-=======
-                <div className='w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
->>>>>>> 656ccfd5ba293d3ed09226720ae3703e7789f7b0
+                <div className='w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
                   <div className='absolute left-0 ml-4'>
                     <svg
                       className='w-5 h-5'
@@ -201,7 +197,7 @@ export default () => {
                     Continue with email
                   </p>
                 </div>
-                <div className='w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
+                <div className='w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
                   <div style={{ marginLeft: 15 }} className='absolute left-0'>
                     <img className='w-6 h-6' src={facebook} />
                   </div>
@@ -211,9 +207,15 @@ export default () => {
                     Continue with Facebook
                   </p>
                 </div>
-                <div>
-                  <div>svg here</div>
-                  <p>Continue with Google</p>
+                <div className='w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
+                  <div style={{ marginLeft: 17 }} className='absolute left-0'>
+                    <img className='w-5 h-5' src={google} />
+                  </div>
+                  <p
+                    style={{ fontFamily: 'airbnb-medium' }}
+                    className='text-gray-750 text-sm'>
+                    Continue with Google
+                  </p>
                 </div>
                 <div>
                   <p>Already have an account? </p>
