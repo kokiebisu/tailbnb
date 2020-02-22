@@ -117,8 +117,8 @@ export default () => {
           />
           <div
             id='centerAbsolute'
-            className='relative rounded-xl hidden fixed bg-white md:block w-144 pt-5 pb-8 z-50'>
-            <div className='w-full border-b border-gray-300 flex justify-center items-center'>
+            className='relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50'>
+            <div className='w-full border-b border-gray-300 mt-2 flex justify-center items-center'>
               <div className='w-10.5/12 flex justify-center items-center'>
                 <div
                   style={{ marginTop: 22 }}
@@ -141,8 +141,8 @@ export default () => {
                     </div>
                   </button>
                 </div>
-                <div className='flex w-64 justify-center items-center pb-3'>
-                  <h3>Sign up</h3>
+                <div className='flex w-64 justify-center items-center my-3'>
+                  <h3 style={{ fontFamily: 'airbnb-bold' }}>Sign up</h3>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default () => {
                     </form>
                   </div>
                 </div>
-                <div className='bg-blue-500 py-3'>
+                <div className='py-3'>
                   <p>
                     We'll call or text you to confirm your number. Standard
                     message and data rates apply.
