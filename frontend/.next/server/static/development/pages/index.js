@@ -2007,6 +2007,17 @@ module.exports = "/_next/static/images/explore3-aeb0d58d63e32f5efd9e3de68789726b
 
 /***/ }),
 
+/***/ "./public/img/high/facebook.png":
+/*!**************************************!*\
+  !*** ./public/img/high/facebook.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/facebook-8f5ce27564945d2c9a10ef827549a78c.png";
+
+/***/ }),
+
 /***/ "./public/img/high/featured1.jpg":
 /*!***************************************!*\
   !*** ./public/img/high/featured1.jpg ***!
@@ -3109,12 +3120,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
 /* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
 /* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/img/high/google.png */ "./public/img/high/google.png");
-/* harmony import */ var _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_google_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_high_facebook_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/img/high/facebook.png */ "./public/img/high/facebook.png");
+/* harmony import */ var _public_img_high_facebook_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_facebook_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../public/img/high/google.png */ "./public/img/high/google.png");
+/* harmony import */ var _public_img_high_google_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_google_png__WEBPACK_IMPORTED_MODULE_5__);
 
  // Component
 
  // Images
+
 
 
 
@@ -3270,11 +3284,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     className: "w-full bg-pink-750 py-3 rounded-lg text-white"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "or")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative"
+    className: "w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "absolute left-0 ml-4"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "w-4 h-4",
+    className: "w-5 h-5",
     style: {
       fill: '#767676'
     },
@@ -3287,7 +3301,22 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm"
-  }, "Continue with email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Already have an account? "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Continue with email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      marginLeft: 15
+    },
+    className: "absolute left-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "w-6 h-6",
+    src: _public_img_high_facebook_png__WEBPACK_IMPORTED_MODULE_4___default.a
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-sm"
+  }, "Continue with Facebook")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "svg here"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Already have an account? "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, "Login")))))) : null);
 });

@@ -5,6 +5,7 @@ import HeaderCard from '../presentational/HeaderCard';
 
 // Images
 import background from '../../../public/img/high/airbnb-background.jpg';
+import facebook from '../../../public/img/high/facebook.png';
 import google from '../../../public/img/high/google.png';
 
 export default () => {
@@ -180,10 +181,14 @@ export default () => {
                 <div>
                   <p>or</p>
                 </div>
+<<<<<<< HEAD
                 <div className='w-full border-gray-400 border-2 rounded-lg py-3 flex justify-center items-center relative'>
+=======
+                <div className='w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
+>>>>>>> 656ccfd5ba293d3ed09226720ae3703e7789f7b0
                   <div className='absolute left-0 ml-4'>
                     <svg
-                      className='w-4 h-4'
+                      className='w-5 h-5'
                       style={{ fill: '#767676' }}
                       viewBox='0 0 479.058 479.058'
                       xmlns='http://www.w3.org/2000/svg'>
@@ -196,9 +201,15 @@ export default () => {
                     Continue with email
                   </p>
                 </div>
-                <div>
-                  <div>svg here</div>
-                  <p>Continue with Facebook</p>
+                <div className='w-full border-gray-650 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4'>
+                  <div style={{ marginLeft: 15 }} className='absolute left-0'>
+                    <img className='w-6 h-6' src={facebook} />
+                  </div>
+                  <p
+                    style={{ fontFamily: 'airbnb-medium' }}
+                    className='text-gray-750 text-sm'>
+                    Continue with Facebook
+                  </p>
                 </div>
                 <div>
                   <div>svg here</div>
