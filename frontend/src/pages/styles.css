@@ -57,12 +57,45 @@ body {
   filter: brightness(70%);
 }
 
+#pseudo {
+  text-align: center;
+  line-height: 0.1em;
+  position: relative;
+  margin: 10px 0 20px;
+  background: #fff;
+}
+
+#pseudo span {
+  background: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+#pseudo::before,
+#pseudo::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  height: 1px;
+  width: 500px;
+  background: #767676;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
 #hoverbox {
   transition: box-shadow 0.5s ease-in;
 }
 
 #hoverbox:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+#justify-self {
+  justify-self: center;
 }
 
 #fixed {

@@ -7,6 +7,7 @@ module.exports = {
       '90': '50rem'
     },
     extend: {
+      margin: {},
       inset: {
         '1/2': '35%'
       },
