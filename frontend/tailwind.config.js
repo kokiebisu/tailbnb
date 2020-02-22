@@ -23,7 +23,7 @@ module.exports = {
       },
       backgroundColor: {
         background: '#fffcfc',
-        facebook: '#4568B2',
+        'gray-650': '#767676',
         pink: {
           '750': '#E31956',
           '850': '#E61E4D'
