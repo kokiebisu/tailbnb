@@ -19,6 +19,10 @@ export default () => {
     );
   };
 
+  const configureScroll = (name) => {
+    document.body.style.overflow = name;
+  };
+
   return (
     <header
       style={{
@@ -111,7 +115,7 @@ export default () => {
       </div>
       {modal ? (
         <>
-          {(document.body.style.overflow = 'hidden')}
+          {typeof window !== 'undefined' ? configureScroll('hidden') : null}
           <div
             id='darkOverlay'
             className='fixed w-full h-full top-0 left-0 z-20 overflow-hidden'
@@ -120,12 +124,10 @@ export default () => {
             id='centerAbsolute'
             className='relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50'>
             <div className='w-full border-b border-gray-300 mt-2 flex justify-center items-center'>
-              <div className='w-10.5/12 flex justify-center items-center'>
-                <div
-                  style={{ marginTop: 22 }}
-                  className='absolute left-0 top-0 pb-1 z-20 ml-10'>
+              <div className='relative w-11/12 flex justify-center items-center my-3'>
+                <div className='flex items-center absolute left-0 z-20 '>
                   <button onClick={() => setModal(false)}>
-                    <div className='inline-block  z-10'>
+                    <div className='inline-block z-10'>
                       <svg
                         className='w-4 h-4'
                         xmlns='http://www.w3.org/2000/svg'
@@ -142,28 +144,55 @@ export default () => {
                     </div>
                   </button>
                 </div>
-                <div className='flex w-64 justify-center items-center my-3'>
+                <div className='w-full flex justify-center items-center'>
                   <h3 style={{ fontFamily: 'airbnb-bold' }}>Sign up</h3>
                 </div>
               </div>
             </div>
             <div className='w-full flex justify-center'>
-              <div className='w-10.5/12'>
-                <div className='bg-blue-500 py-3'>
+              <div className='w-11/12'>
+                <div className='my-3 mt-10'>
                   <div className='w-full'>
                     <form action=''>
-                      <input
-                        className='w-full'
-                        type='text'
-                        name='country'
-                        placeholder='Country/Region'
-                      />
-                      <input
-                        className='w-full'
-                        type='text'
-                        name='phone'
-                        placeholder='Phone number'
-                      />
+                      <div className='relative'>
+                        <label
+                          style={{ fontFamily: 'airbnb-book' }}
+                          htmlFor='country'
+                        />
+                        <p
+                          style={{ fontFamily: 'airbnb-book' }}
+                          className='absolute text-gray-650 text-xs pt-2 pl-4'>
+                          Country/Region
+                        </p>
+                        <select
+                          name='country'
+                          style={{ fontFamily: 'airbnb-book' }}
+                          className='appearance-none w-full border-t border-r border-l border-gray-500 py-4 rounded-b-none rounded-lg placeholder-gray-900 pl-3'
+                          id='countryinput'>
+                          <option value='1'>2 Guests</option>
+                          <option value='2'>3 Guests</option>
+                          <option value='3'>4 Guests</option>
+                        </select>
+
+                        <div className='h-full pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
+                          <svg
+                            className='fill-current h-6 w-6'
+                            xmlns='http://www.w3.org/2000/svg'
+                            viewBox='0 0 20 20'>
+                            <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div>
+                        <input
+                          className='appearance-none  w-full border border-gray-500 py-3 rounded-t-none rounded-lg placeholder-gray-900 pl-4'
+                          type='text'
+                          name='phone'
+                          style={{ fontFamily: 'airbnb-book' }}
+                          placeholder='Phone number'
+                        />
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -241,7 +270,9 @@ export default () => {
             </div>
           </div>
         </>
-      ) : null}
+      ) : (
+        <>{typeof window !== 'undefined' ? configureScroll('auto') : null}</>
+      )}
     </header>
   );
 };
