@@ -3117,10 +3117,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactjs-popup */ "reactjs-popup");
 /* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(reactjs_popup__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
-/* harmony import */ var _presentational_RegisterModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../presentational/RegisterModal */ "./src/components/presentational/RegisterModal.js");
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-addons-css-transition-group */ "react-addons-css-transition-group");
+/* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
+/* harmony import */ var _presentational_RegisterModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/RegisterModal */ "./src/components/presentational/RegisterModal.js");
+/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
+/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_5__);
+
 
  // Component
 
@@ -3146,7 +3149,7 @@ __webpack_require__.r(__webpack_exports__);
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     style: {
-      backgroundImage: `url(${_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_4___default.a})`,
+      backgroundImage: `url(${_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_5___default.a})`,
       maxHeight: '80rem'
     },
     className: "w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat"
@@ -3229,20 +3232,20 @@ __webpack_require__.r(__webpack_exports__);
     className: "md:ml-20"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6"
-  }, "Book unique places to stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Book unique places to stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 text-right"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-sm text-white"
-  }, "Over 300 unique places ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "to stay in Japan")), modal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, false ? undefined : null, type == 'Log in' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_RegisterModal__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Over 300 unique places ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "to stay in Japan")), modal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, false ? undefined : null, type == 'Log in' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_RegisterModal__WEBPACK_IMPORTED_MODULE_4__["default"], {
     setModal: setModal,
     type: "Log in",
     nottype: "Sign up",
     phrase: `Don\'t`,
     setType: switchType
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_RegisterModal__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_RegisterModal__WEBPACK_IMPORTED_MODULE_4__["default"], {
     setModal: setModal,
     type: "Sign up",
     nottype: "Log in",
@@ -4182,6 +4185,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-addons-css-transition-group":
+/*!****************************************************!*\
+  !*** external "react-addons-css-transition-group" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-addons-css-transition-group");
 
 /***/ }),
 
