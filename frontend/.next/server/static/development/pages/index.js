@@ -3263,7 +3263,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "z-100 bg-red-500 md:block fixed right-0 top-0"
+    className: "z-100 bg-red-500 md:block fixed right-0 top-0 h-screen"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recommend help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "border-b border-t border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Search by keyword"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {

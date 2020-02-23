@@ -2,7 +2,7 @@ import React from 'react';
 
 export default () => {
   return (
-    <div className='z-100 bg-red-500 md:block fixed right-0 top-0'>
+    <div className='z-100 bg-red-500 md:block fixed right-0 top-0 h-screen'>
       <div>
         <h3>Recommend help</h3>
       </div>
