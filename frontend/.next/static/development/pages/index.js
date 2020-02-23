@@ -25941,9 +25941,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "z-100 bg-red-500 md:block fixed right-0 top-0 h-screen"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recommend help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "border-b border-t border-gray-300"
+    className: "bg-white z-100 md:block fixed right-0 top-0 h-screen w-104 shadow-xl"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full flex justify-center items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "py-5 text-gray-850"
+  }, "Recommended help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bg-red-500 border-b border-t border-gray-300"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Search by keyword"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recommend Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help Card here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -26751,7 +26758,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -26774,5 +26781,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
