@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2207,8 +2207,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.js");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "react-media");
+/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_media__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.js");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+
 
 
 
@@ -2237,24 +2240,28 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES);
   const [isLoading, setIsLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
-  const [photos, setPhotos] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
-  const info = {
-    query: 'adventure',
-    count: 4,
-    orientation: 'portrait',
-    client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
-  };
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    loadData();
-  }, []);
+  const [card, setCard] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
 
-  const loadData = async () => {
-    axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(`https://api.unsplash.com/photos/random?h=140&query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`).then(data => {
-      setPhotos({
-        imgs: data.data
-      });
-    });
-    setIsLoading(false);
+  const renderContent = (data, number) => {
+    var content = [];
+
+    for (let i = 0; i < number; i++) {
+      content.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        key: data[i].id,
+        id: data[i].id,
+        img: data[i].img,
+        imglow: data[i].imglow,
+        country: data[i].country,
+        title: data[i].title,
+        cost: data[i].cost,
+        period: data[i].period
+      })));
+    }
+
+    console.log(content.length);
+    return content;
   };
 
   if (loading) {
@@ -2269,26 +2276,23 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
-  }, data.adventures.map(({
-    id,
-    country,
-    title,
-    cost,
-    period
-  }, index) => {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-    }, photos.imgs ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      key: id,
-      id: id,
-      img: photos.imgs[index].urls.full,
-      imglow: photos.imgs[index].urls.thumb,
-      country: country,
-      title: title,
-      cost: cost,
-      period: period
-    }) : null);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, data ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    queries: {
+      small: '(max-width: 987px)'
+    }
+  }, matches => matches.small ? (setCard(4), renderContent(data.adventures, card)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    queries: {
+      large: '(min-width: 988px) and (max-width: 1299px)'
+    }
+  }, matches => matches.large ? (setCard(4), renderContent(data.adventures, card)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    queries: {
+      xl: '(min-width: 1300px) and (max-width: 1529px)'
+    }
+  }, matches => matches.xl ? (setCard(5), renderContent(data.adventures, card)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    queries: {
+      xl: '(min-width: 1530px)'
+    }
+  }, matches => matches.xl ? (setCard(6), renderContent(data.adventures, card)) : null)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: "Show all adventures"
   }));
 });
@@ -3921,7 +3925,7 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "px-5 md:px-10 lg:max-w-5.5xl xl:max-w-7xl 4xl:max-w-layout xl:px-0 mx-auto py-5 w-full"
+    className: "px-5 md:px-10 lg:max-w-5.5xl xl:max-w-7xl 2xl: max-w-8.5xl 4xl:max-w-layout xl:px-0 mx-auto py-5 w-full"
   }, renderContent(phrase), children);
 });
 
@@ -4037,7 +4041,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
@@ -4200,6 +4204,17 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("react-lazy-progressive-image");
+
+/***/ }),
+
+/***/ "react-media":
+/*!******************************!*\
+  !*** external "react-media" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-media");
 
 /***/ }),
 

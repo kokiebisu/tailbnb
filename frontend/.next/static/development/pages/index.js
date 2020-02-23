@@ -1079,6 +1079,101 @@ module.exports = _typeof;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _assertThisInitialized; });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inheritsLoose; });
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/inheritsLoose.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
@@ -17359,6 +17454,128 @@ module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
 /***/ }),
 
+/***/ "./node_modules/invariant/browser.js":
+/*!*******************************************!*\
+  !*** ./node_modules/invariant/browser.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function(condition, format, a, b, c, d, e, f) {
+  if (true) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error(
+        'Minified exception occurred; use the non-minified dev environment ' +
+        'for the full error message and additional helpful warnings.'
+      );
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(
+        format.replace(/%s/g, function() { return args[argIndex++]; })
+      );
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+
+
+/***/ }),
+
+/***/ "./node_modules/json2mq/index.js":
+/*!***************************************!*\
+  !*** ./node_modules/json2mq/index.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var camel2hyphen = __webpack_require__(/*! string-convert/camel2hyphen */ "./node_modules/string-convert/camel2hyphen.js");
+
+var isDimension = function (feature) {
+  var re = /[height|width]$/;
+  return re.test(feature);
+};
+
+var obj2mq = function (obj) {
+  var mq = '';
+  var features = Object.keys(obj);
+  features.forEach(function (feature, index) {
+    var value = obj[feature];
+    feature = camel2hyphen(feature);
+    // Add px to dimension features
+    if (isDimension(feature) && typeof value === 'number') {
+      value = value + 'px';
+    }
+    if (value === true) {
+      mq += feature;
+    } else if (value === false) {
+      mq += 'not ' + feature;
+    } else {
+      mq += '(' + feature + ': ' + value + ')';
+    }
+    if (index < features.length-1) {
+      mq += ' and '
+    }
+  });
+  return mq;
+};
+
+var json2mq = function (query) {
+  var mq = '';
+  if (typeof query === 'string') {
+    return query;
+  }
+  // Handling array of media queries
+  if (query instanceof Array) {
+    query.forEach(function (q, index) {
+      mq += obj2mq(q);
+      if (index < query.length-1) {
+        mq += ', '
+      }
+    });
+    return mq;
+  }
+  // Handling single media query
+  return obj2mq(query);
+};
+
+module.exports = json2mq;
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
 /*!***********************************************************************************************************************!*\
   !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_ef0ff7c60362f24a921f ***!
@@ -21592,6 +21809,256 @@ c!==a.src&&(this.state.isVisible?this.loadImage(c):this.setState({image:d,loadin
 
 /***/ }),
 
+/***/ "./node_modules/react-media/esm/react-media.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-media/esm/react-media.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var invariant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
+/* harmony import */ var invariant__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(invariant__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var json2mq__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! json2mq */ "./node_modules/json2mq/index.js");
+/* harmony import */ var json2mq__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(json2mq__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+
+var MediaQueryListener =
+/*#__PURE__*/
+function () {
+  function MediaQueryListener(targetWindow, query, listener) {
+    var _this = this;
+
+    this.nativeMediaQueryList = targetWindow.matchMedia(query);
+    this.active = true; // Safari doesn't clear up listener with removeListener
+    // when the listener is already waiting in the event queue.
+    // Having an active flag to make sure the listener is not called
+    // after we removeListener.
+
+    this.cancellableListener = function () {
+      _this.matches = _this.nativeMediaQueryList.matches;
+
+      if (_this.active) {
+        listener.apply(void 0, arguments);
+      }
+    };
+
+    this.nativeMediaQueryList.addListener(this.cancellableListener);
+    this.matches = this.nativeMediaQueryList.matches;
+  }
+
+  var _proto = MediaQueryListener.prototype;
+
+  _proto.cancel = function cancel() {
+    this.active = false;
+    this.nativeMediaQueryList.removeListener(this.cancellableListener);
+  };
+
+  return MediaQueryListener;
+}();
+
+var queryType = prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object.isRequired)]);
+/**
+ * Conditionally renders based on whether or not a media query matches.
+ */
+
+var Media =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(Media, _React$Component);
+
+  function Media(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this;
+
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)), "queries", []);
+
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)), "getMatches", function () {
+      var result = _this.queries.reduce(function (acc, _ref) {
+        var _extends2;
+
+        var name = _ref.name,
+            mqListener = _ref.mqListener;
+        return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, acc, (_extends2 = {}, _extends2[name] = mqListener.matches, _extends2));
+      }, {}); // return result;
+
+
+      return unwrapSingleQuery(result);
+    });
+
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)), "updateMatches", function () {
+      var newMatches = _this.getMatches();
+
+      _this.setState(function () {
+        return {
+          matches: newMatches
+        };
+      }, _this.onChange);
+    });
+
+    !(!(!props.query && !props.queries) || props.query && props.queries) ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, '<Media> must be supplied with either "query" or "queries"') : undefined : void 0;
+    !(props.defaultMatches === undefined || !props.query || typeof props.defaultMatches === "boolean") ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, "<Media> when query is set, defaultMatches must be a boolean, received " + typeof props.defaultMatches) : undefined : void 0;
+    !(props.defaultMatches === undefined || !props.queries || typeof props.defaultMatches === "object") ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, "<Media> when queries is set, defaultMatches must be a object of booleans, received " + typeof props.defaultMatches) : undefined : void 0;
+
+    if (typeof window !== "object") {
+      // In case we're rendering on the server, apply the default matches
+      var matches;
+
+      if (props.defaultMatches !== undefined) {
+        matches = props.defaultMatches;
+      } else if (props.query) {
+        matches = true;
+      }
+      /* if (props.queries) */
+      else {
+          matches = Object.keys(_this.props.queries).reduce(function (acc, key) {
+            var _extends3;
+
+            return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, acc, (_extends3 = {}, _extends3[key] = true, _extends3));
+          }, {});
+        }
+
+      _this.state = {
+        matches: matches
+      };
+      return Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this);
+    }
+
+    _this.initialize(); // Instead of calling this.updateMatches, we manually set the initial state to prevent
+    // calling setState, which could trigger an unnecessary second render
+
+
+    _this.state = {
+      matches: _this.props.defaultMatches !== undefined ? _this.props.defaultMatches : _this.getMatches()
+    };
+
+    _this.onChange();
+
+    return _this;
+  }
+
+  var _proto = Media.prototype;
+
+  _proto.initialize = function initialize() {
+    var _this2 = this;
+
+    var targetWindow = this.props.targetWindow || window;
+    !(typeof targetWindow.matchMedia === "function") ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, "<Media targetWindow> does not support `matchMedia`.") : undefined : void 0;
+    var queries = this.props.queries || wrapInQueryObject(this.props.query);
+    this.queries = Object.keys(queries).map(function (name) {
+      var query = queries[name];
+      var qs = typeof query !== "string" ? json2mq__WEBPACK_IMPORTED_MODULE_7___default()(query) : query;
+      var mqListener = new MediaQueryListener(targetWindow, qs, _this2.updateMatches);
+      return {
+        name: name,
+        mqListener: mqListener
+      };
+    });
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.initialize(); // If props.defaultMatches has been set, ensure we trigger a two-pass render.
+    // This is useful for SSR with mismatching defaultMatches vs actual matches from window.matchMedia
+    // Details: https://github.com/ReactTraining/react-media/issues/81
+
+    if (this.props.defaultMatches !== undefined) {
+      this.updateMatches();
+    }
+  };
+
+  _proto.onChange = function onChange() {
+    var onChange = this.props.onChange;
+
+    if (onChange) {
+      onChange(this.state.matches);
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.queries.forEach(function (_ref2) {
+      var mqListener = _ref2.mqListener;
+      return mqListener.cancel();
+    });
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        children = _this$props.children,
+        render = _this$props.render;
+    var matches = this.state.matches;
+    var isAnyMatches = typeof matches === "object" ? Object.keys(matches).some(function (key) {
+      return matches[key];
+    }) : matches;
+    return render ? isAnyMatches ? render(matches) : null : children ? typeof children === "function" ? children(matches) : !Array.isArray(children) || children.length // Preact defaults to empty children array
+    ? isAnyMatches ? // We have to check whether child is a composite component or not to decide should we
+    // provide `matches` as a prop or not
+    react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children) && typeof react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children).type === "string" ? react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children) : react__WEBPACK_IMPORTED_MODULE_4___default.a.cloneElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children), {
+      matches: matches
+    }) : null : null : null;
+  };
+
+  return Media;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+/**
+ * Wraps a single query in an object. This is used to provide backward compatibility with
+ * the old `query` prop (as opposed to `queries`). If only a single query is passed, the object
+ * will be unpacked down the line, but this allows our internals to assume an object of queries
+ * at all times.
+ */
+
+
+Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Media, "propTypes", {
+  defaultMatches: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.objectOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool)]),
+  query: queryType,
+  queries: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.objectOf(queryType),
+  render: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.node, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func]),
+  targetWindow: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  onChange: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func
+});
+
+function wrapInQueryObject(query) {
+  return {
+    __DEFAULT__: query
+  };
+}
+/**
+ * Unwraps an object of queries, if it was originally passed as a single query.
+ */
+
+
+function unwrapSingleQuery(queryObject) {
+  var queryNames = Object.keys(queryObject);
+
+  if (queryNames.length === 1 && queryNames[0] === "__DEFAULT__") {
+    return queryObject.__DEFAULT__;
+  }
+
+  return queryObject;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Media);
+
+
+/***/ }),
+
 /***/ "./node_modules/react-spinners/PulseLoader.js":
 /*!****************************************************!*\
   !*** ./node_modules/react-spinners/PulseLoader.js ***!
@@ -23999,6 +24466,25 @@ if (true) {
 
 /***/ }),
 
+/***/ "./node_modules/string-convert/camel2hyphen.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/string-convert/camel2hyphen.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var camel2hyphen = function (str) {
+  return str
+          .replace(/[A-Z]/g, function (match) {
+            return '-' + match.toLowerCase();
+          })
+          .toLowerCase();
+};
+
+module.exports = camel2hyphen;
+
+/***/ }),
+
 /***/ "./node_modules/symbol-observable/es/index.js":
 /*!****************************************************!*\
   !*** ./node_modules/symbol-observable/es/index.js ***!
@@ -26219,8 +26705,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.js");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
+/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.js");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
+
 
 
 
@@ -26249,24 +26737,28 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES);
   const [isLoading, setIsLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
-  const [photos, setPhotos] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
-  const info = {
-    query: 'adventure',
-    count: 4,
-    orientation: 'portrait',
-    client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
-  };
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    loadData();
-  }, []);
+  const [card, setCard] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
 
-  const loadData = async () => {
-    axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(`https://api.unsplash.com/photos/random?h=140&query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`).then(data => {
-      setPhotos({
-        imgs: data.data
-      });
-    });
-    setIsLoading(false);
+  const renderContent = (data, number) => {
+    var content = [];
+
+    for (let i = 0; i < number; i++) {
+      content.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        key: data[i].id,
+        id: data[i].id,
+        img: data[i].img,
+        imglow: data[i].imglow,
+        country: data[i].country,
+        title: data[i].title,
+        cost: data[i].cost,
+        period: data[i].period
+      })));
+    }
+
+    console.log(content.length);
+    return content;
   };
 
   if (loading) {
@@ -26281,26 +26773,23 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   if (error) return `Error! ${error.message}`;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "flex items-start justify-start flex-wrap w-full"
-  }, data.adventures.map(({
-    id,
-    country,
-    title,
-    cost,
-    period
-  }, index) => {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "lg:w-1/4 md:w-1/3 w-1/2 pb-5"
-    }, photos.imgs ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      key: id,
-      id: id,
-      img: photos.imgs[index].urls.full,
-      imglow: photos.imgs[index].urls.thumb,
-      country: country,
-      title: title,
-      cost: cost,
-      period: period
-    }) : null);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, data ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    queries: {
+      small: '(max-width: 987px)'
+    }
+  }, matches => matches.small ? (setCard(4), renderContent(data.adventures, card)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    queries: {
+      large: '(min-width: 988px) and (max-width: 1299px)'
+    }
+  }, matches => matches.large ? (setCard(4), renderContent(data.adventures, card)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    queries: {
+      xl: '(min-width: 1300px) and (max-width: 1529px)'
+    }
+  }, matches => matches.xl ? (setCard(5), renderContent(data.adventures, card)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    queries: {
+      xl: '(min-width: 1530px)'
+    }
+  }, matches => matches.xl ? (setCard(6), renderContent(data.adventures, card)) : null)) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: "Show all adventures"
   }));
 });
@@ -27928,7 +28417,7 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "px-5 md:px-10 lg:max-w-5.5xl xl:max-w-7xl 4xl:max-w-layout xl:px-0 mx-auto py-5 w-full"
+    className: "px-5 md:px-10 lg:max-w-5.5xl xl:max-w-7xl 2xl: max-w-8.5xl 4xl:max-w-layout xl:px-0 mx-auto py-5 w-full"
   }, renderContent(phrase), children);
 });
 
@@ -28044,7 +28533,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -28067,5 +28556,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

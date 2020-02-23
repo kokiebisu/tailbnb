@@ -86,6 +86,7 @@ module.exports = {
         layout: '100rem',
         '5.5xl': '68rem',
         '7xl': '80rem',
+        '8.5xl': '90rem',
         '90%': '90vw'
       },
       borderRadius: {
