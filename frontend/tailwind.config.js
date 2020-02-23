@@ -85,6 +85,7 @@ module.exports = {
         '100': '27.4rem',
         layout: '100rem',
         '5.5xl': '68rem',
+        '7xl': '80rem',
         '90%': '90vw'
       },
       borderRadius: {
@@ -102,7 +103,9 @@ module.exports = {
         'gray-850': '#222222'
       },
       screens: {
-        '2xl': '1440px'
+        '2xl': '1440px',
+        '3xl': '1640px',
+        '4xl': '1880px'
       }
     }
   },
