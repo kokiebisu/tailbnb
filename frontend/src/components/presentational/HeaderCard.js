@@ -13,11 +13,13 @@ export default () => {
         <form>
           <div className=''>
             <label
-              className='block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider'
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='block mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider'
               htmlFor='where'>
               Where
             </label>
             <input
+              style={{ fontFamily: 'airbnb-book' }}
               className='w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide'
               type='text'
               id='where'
@@ -27,11 +29,13 @@ export default () => {
           <div className='flex flex-wrap items-stretch justify-start'>
             <div className='w-1/2'>
               <label
-                className='block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase'
+                style={{ fontFamily: 'airbnb-bold' }}
+                className='block mt-5 mb-2 text-xs text-gray-750 uppercase'
                 htmlFor='checkin'>
                 Check-In
               </label>
               <input
+                style={{ fontFamily: 'airbnb-book' }}
                 className='pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide'
                 type='text'
                 id='checkin'
@@ -40,11 +44,13 @@ export default () => {
             </div>
             <div className='w-1/2'>
               <label
-                className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-750'
+                style={{ fontFamily: 'airbnb-bold' }}
+                className='block mt-5 mb-2 text-xs uppercase text-gray-750'
                 htmlFor='checkout'>
                 Check-Out
               </label>
               <input
+                style={{ fontFamily: 'airbnb-book' }}
                 className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
                 type='text'
                 id='checkout'
@@ -54,12 +60,14 @@ export default () => {
           </div>
           <div>
             <label
-              className='block font-bold mt-5 mb-2 text-xs uppercase text-gray-750'
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='block mt-5 mb-2 text-xs uppercase text-gray-750'
               htmlFor='guests'>
               Guests
             </label>
             <div className='inline-block relative w-full'>
               <select
+                style={{ fontFamily: 'airbnb-book' }}
                 className='appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
                 id='guests'>
                 <option value='1'>2 Guests</option>
