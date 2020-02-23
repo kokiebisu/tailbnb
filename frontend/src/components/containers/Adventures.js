@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
-import axios from 'axios';
 import Media from 'react-media';
 
 // Component
@@ -25,8 +24,6 @@ const GET_ADVENTURES = gql`
 
 export default () => {
   const { loading, error, data } = useQuery(GET_ADVENTURES);
-
-  const [isLoading, setIsLoading] = useState(true);
   const [card, setCard] = useState(0);
 
   const renderContent = (data, number) => {
@@ -47,7 +44,6 @@ export default () => {
         </div>
       );
     }
-    console.log(content.length);
     return content;
   };
 
