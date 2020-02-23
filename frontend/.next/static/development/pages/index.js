@@ -27182,12 +27182,15 @@ __webpack_require__.r(__webpack_exports__);
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "hidden lg:block"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
     className: "flex items-center justify-around flex-wrap text-white"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    className: "flex items-center justify-start text-sm font-semibold mx-2"
+    className: "flex items-center justify-start text-sm mx-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "relative self-center h-3 w-3",
     style: {
@@ -27202,22 +27205,22 @@ __webpack_require__.r(__webpack_exports__);
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    className: "text-sm font-semibold tracking-wide"
+    className: "text-sm  tracking-wide"
   }, "$CAD")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    className: "text-sm font-semibold tracking-wide"
+    className: "text-sm  tracking-wide"
   }, "Host a home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    className: "text-sm font-semibold tracking-wide"
+    className: "text-sm  tracking-wide"
   }, "Host an experience")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
-    className: "text-sm font-semibold tracking-wide"
+    className: "text-sm  tracking-wide"
   }, "Help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -27225,7 +27228,7 @@ __webpack_require__.r(__webpack_exports__);
       switchType('Sign up');
       switchModal(true);
     },
-    className: "text-sm font-semibold tracking-wide"
+    className: "text-sm  tracking-wide"
   }, "Sign up")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -27234,7 +27237,7 @@ __webpack_require__.r(__webpack_exports__);
       switchModal(true, 'login');
     },
     href: "#",
-    className: "text-sm font-semibold tracking-wide"
+    className: "text-sm tracking-wide"
   }, "Log in"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "md:ml-20"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
