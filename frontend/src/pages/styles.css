@@ -120,6 +120,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#countryinput {
+  height: 54px;
+  padding: 22px 15px 10px 10px !important;
+}
+
 .scroller {
   overflow-x: scroll !important;
   overflow-y: auto !important;
