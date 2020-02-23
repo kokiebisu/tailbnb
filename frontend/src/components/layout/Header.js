@@ -51,11 +51,13 @@ export default () => {
         </div>
 
         <div className='hidden lg:block'>
-          <nav className='flex items-center justify-around flex-wrap text-white'>
+          <nav
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='flex items-center justify-around flex-wrap text-white'>
             <div className='border-transparent border-b-2 hover:border-white py-6 px-1'>
               <a
                 href='#'
-                className='flex items-center justify-start text-sm font-semibold mx-2'>
+                className='flex items-center justify-start text-sm mx-2'>
                 <svg
                   className='relative self-center h-3 w-3'
                   style={{ fill: '#ffffff', right: 5 }}
@@ -67,22 +69,22 @@ export default () => {
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm font-semibold tracking-wide'>
+              <a href='#' className='text-sm  tracking-wide'>
                 $CAD
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm font-semibold tracking-wide'>
+              <a href='#' className='text-sm  tracking-wide'>
                 Host a home
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm font-semibold tracking-wide'>
+              <a href='#' className='text-sm  tracking-wide'>
                 Host an experience
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm font-semibold tracking-wide'>
+              <a href='#' className='text-sm  tracking-wide'>
                 Help
               </a>
             </div>
@@ -92,7 +94,7 @@ export default () => {
                   switchType('Sign up');
                   switchModal(true);
                 }}
-                className='text-sm font-semibold tracking-wide'>
+                className='text-sm  tracking-wide'>
                 Sign up
               </button>
             </div>
@@ -103,7 +105,7 @@ export default () => {
                   switchModal(true, 'login');
                 }}
                 href='#'
-                className='text-sm font-semibold tracking-wide'>
+                className='text-sm tracking-wide'>
                 Log in
               </button>
             </div>
