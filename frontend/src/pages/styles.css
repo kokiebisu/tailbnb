@@ -125,6 +125,14 @@ body {
   padding: 22px 15px 10px 10px !important;
 }
 
+#helpplaceholder {
+  padding: 0 0 0 30px !important;
+}
+
+#helpsearch:focus {
+  border: 1.5px solid #008489;
+}
+
 .scroller {
   overflow-x: scroll !important;
   overflow-y: auto !important;
