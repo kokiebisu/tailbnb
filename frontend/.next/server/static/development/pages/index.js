@@ -3921,7 +3921,7 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "px-5 md:px-10 lg:max-w-5.5xl xl:px-0 mx-auto py-5 w-full"
+    className: "px-5 md:px-10 lg:max-w-5.5xl xl:max-w-7xl 4xl:max-w-layout xl:px-0 mx-auto py-5 w-full"
   }, renderContent(phrase), children);
 });
 
@@ -3968,7 +3968,7 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "px-5 md:px-10 xl:px-0 lg:max-w-5.5xl mx-auto py-5 overflow-x-hidden overflow-y-hidden"
+    className: "px-5 md:px-10 xl:px-0 lg:max-w-5.5xl xl:max-w-7xl 4xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden"
   }, renderPhrase(), children);
 });
 
