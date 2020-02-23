@@ -49,7 +49,6 @@ export default () => {
             }) => {
               return (
                 <div className='w-1/2 lg:w-1/3 xl:w-1/4 pb-5'>
-                  {console.log(picture_url)}
                   <StayCard
                     key={id}
                     id={id}
