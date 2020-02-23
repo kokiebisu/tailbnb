@@ -4,17 +4,23 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // Component
 import HeaderCard from '../presentational/HeaderCard';
-import RegisterModal from '../presentational/RegisterModal';
+import RegisterModal from '../modals/RegisterModal';
+import HelpModal from '../modals/HelpModal';
 
 // Images
 import background from '../../../public/img/high/airbnb-background.jpg';
 
 export default () => {
-  const [modal, setModal] = useState(false);
+  const [registerModal, setRegisterModal] = useState(false);
+  const [helpModal, setHelpModal] = useState(false);
   const [type, setType] = useState('');
 
-  const switchModal = (mode) => {
-    setModal(mode);
+  const switchRegisterModal = (mode) => {
+    setRegisterModal(mode);
+  };
+
+  const switchHelpModal = (mode) => {
+    setHelpModal(mode);
   };
 
   const switchType = (type) => {
@@ -84,15 +90,17 @@ export default () => {
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm  tracking-wide'>
+              <button
+                onClick={() => switchHelpModal(true)}
+                className='text-sm  tracking-wide'>
                 Help
-              </a>
+              </button>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <button
                 onClick={() => {
                   switchType('Sign up');
-                  switchModal(true);
+                  switchRegisterModal(true);
                 }}
                 className='text-sm  tracking-wide'>
                 Sign up
@@ -102,7 +110,7 @@ export default () => {
               <button
                 onClick={() => {
                   switchType('Log in');
-                  switchModal(true, 'login');
+                  switchRegisterModal(true, 'login');
                 }}
                 href='#'
                 className='text-sm tracking-wide'>
@@ -126,12 +134,12 @@ export default () => {
           to stay in Japan
         </p>
       </div>
-      {modal ? (
+      {registerModal ? (
         <>
           {typeof window !== 'undefined' ? configureScroll('hidden') : null}
           {type == 'Log in' ? (
             <RegisterModal
-              setModal={setModal}
+              setRegisterModal={setRegisterModal}
               type='Log in'
               nottype='Sign up'
               phrase={`Don\'t`}
@@ -139,7 +147,7 @@ export default () => {
             />
           ) : (
             <RegisterModal
-              setModal={setModal}
+              setRegisterModal={setRegisterModal}
               type='Sign up'
               nottype='Log in'
               phrase='Already'
@@ -150,6 +158,7 @@ export default () => {
       ) : (
         <>{typeof window !== 'undefined' ? configureScroll('auto') : null}</>
       )}
+      {helpModal ? <HelpModal /> : null}
     </header>
   );
 };

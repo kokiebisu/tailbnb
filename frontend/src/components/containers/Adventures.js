@@ -63,7 +63,7 @@ export default () => {
         {data ? (
           <>
             <Media
-              queries={{ small: '(min-width: 0px) and (max-width: 987px)' }}>
+              queries={{ small: '(min-width: 0px) and (max-width: 640px)' }}>
               {(matches) =>
                 matches.small
                   ? (setCard(4), renderContent(data.adventures, card))
@@ -72,17 +72,17 @@ export default () => {
             </Media>
             <Media
               queries={{
-                large: '(min-width: 988px) and (max-width: 1299px)'
+                large: '(min-width: 641px) and (max-width: 767px)'
               }}>
               {(matches) =>
                 matches.large
-                  ? (setCard(4), renderContent(data.adventures, card))
+                  ? (setCard(3), renderContent(data.adventures, card))
                   : null
               }
             </Media>
             <Media
               queries={{
-                xl: '(min-width: 1300px) and (max-width: 1529px)'
+                xl: '(min-width: 768px) and (max-width: 1023px)'
               }}>
               {(matches) =>
                 matches.xl
@@ -92,10 +92,10 @@ export default () => {
             </Media>
             <Media
               queries={{
-                xl: '(min-width: 1530px)'
+                twoxl: '(min-width: 1024px)'
               }}>
               {(matches) =>
-                matches.xl
+                matches.twoxl
                   ? (setCard(6), renderContent(data.adventures, card))
                   : null
               }
