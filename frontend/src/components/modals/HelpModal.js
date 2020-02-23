@@ -1,6 +1,14 @@
 import React, { useState, useRef } from 'react';
 
 export default () => {
+  const [word, setWord] = useState('');
+
+  const handleChange = (event) => {
+    return setWord(event.target.value);
+  };
+
+  console.log(word);
+
   return (
     <div className='bg-white z-100 md:block fixed right-0 top-0 h-screen w-104 shadow-xl'>
       <div className='w-full flex justify-center items-center'>
@@ -29,6 +37,8 @@ export default () => {
             </div>
             <div className='w-11/12'>
               <input
+                value={word}
+                onChange={handleChange}
                 style={{ fontFamily: 'airbnb-medium' }}
                 type='text'
                 className='w-full h-8 text-sm text-gray-750 focus:outline-none'
