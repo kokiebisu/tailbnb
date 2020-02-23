@@ -26375,9 +26375,15 @@ __webpack_require__.r(__webpack_exports__);
   }, "Book unique places to ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "stay and things to do."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: ""
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "block mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider",
     htmlFor: "where"
   }, "Where"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
     className: "w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide",
     type: "text",
     id: "where",
@@ -26387,9 +26393,15 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs text-gray-750 uppercase",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "block mt-5 mb-2 text-xs text-gray-750 uppercase",
     htmlFor: "checkin"
   }, "Check-In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
     className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide",
     type: "text",
     id: "checkin",
@@ -26397,19 +26409,31 @@ __webpack_require__.r(__webpack_exports__);
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-1/2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-750",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "block mt-5 mb-2 text-xs uppercase text-gray-750",
     htmlFor: "checkout"
   }, "Check-Out"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
     className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     type: "text",
     id: "checkout",
     placeholder: "dd-mm-yyyy"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "block font-bold mt-5 mb-2 text-xs uppercase text-gray-750",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "block mt-5 mb-2 text-xs uppercase text-gray-750",
     htmlFor: "guests"
   }, "Guests"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "inline-block relative w-full"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
     className: "appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     id: "guests"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
@@ -26801,7 +26825,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -26824,5 +26848,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
