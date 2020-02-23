@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
 import axios from 'axios';
+import Media from 'react-media';
 
 // Component
 import AdventureCard from '../presentational/AdventureCard';
@@ -26,28 +27,28 @@ export default () => {
   const { loading, error, data } = useQuery(GET_ADVENTURES);
 
   const [isLoading, setIsLoading] = useState(true);
-  const [photos, setPhotos] = useState({});
+  const [card, setCard] = useState(0);
 
-  const info = {
-    query: 'adventure',
-    count: 4,
-    orientation: 'portrait',
-    client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
-  };
-
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  const loadData = async () => {
-    axios
-      .get(
-        `https://api.unsplash.com/photos/random?h=140&query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`
-      )
-      .then((data) => {
-        setPhotos({ imgs: data.data });
-      });
-    setIsLoading(false);
+  const renderContent = (data, number) => {
+    var content = [];
+    for (let i = 0; i < number; i++) {
+      content.push(
+        <div className='w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5'>
+          <AdventureCard
+            key={data[i].id}
+            id={data[i].id}
+            img={data[i].img}
+            imglow={data[i].imglow}
+            country={data[i].country}
+            title={data[i].title}
+            cost={data[i].cost}
+            period={data[i].period}
+          />
+        </div>
+      );
+    }
+    console.log(content.length);
+    return content;
   };
 
   if (loading) {
@@ -63,24 +64,47 @@ export default () => {
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>
-        {data.adventures.map(({ id, country, title, cost, period }, index) => {
-          return (
-            <div className='lg:w-1/4 md:w-1/3 w-1/2 pb-5'>
-              {photos.imgs ? (
-                <AdventureCard
-                  key={id}
-                  id={id}
-                  img={photos.imgs[index].urls.full}
-                  imglow={photos.imgs[index].urls.thumb}
-                  country={country}
-                  title={title}
-                  cost={cost}
-                  period={period}
-                />
-              ) : null}
-            </div>
-          );
-        })}
+        {data ? (
+          <>
+            <Media queries={{ small: '(max-width: 987px)' }}>
+              {(matches) =>
+                matches.small
+                  ? (setCard(4), renderContent(data.adventures, card))
+                  : null
+              }
+            </Media>
+            <Media
+              queries={{
+                large: '(min-width: 988px) and (max-width: 1299px)'
+              }}>
+              {(matches) =>
+                matches.large
+                  ? (setCard(4), renderContent(data.adventures, card))
+                  : null
+              }
+            </Media>
+            <Media
+              queries={{
+                xl: '(min-width: 1300px) and (max-width: 1529px)'
+              }}>
+              {(matches) =>
+                matches.xl
+                  ? (setCard(5), renderContent(data.adventures, card))
+                  : null
+              }
+            </Media>
+            <Media
+              queries={{
+                xl: '(min-width: 1530px)'
+              }}>
+              {(matches) =>
+                matches.xl
+                  ? (setCard(6), renderContent(data.adventures, card))
+                  : null
+              }
+            </Media>
+          </>
+        ) : null}
       </div>
 
       <ShowAll title='Show all adventures' />

@@ -30,7 +30,7 @@ export default ({ title, phrase, children }) => {
     }
   };
   return (
-    <div className='px-5 md:px-10 lg:max-w-5.5xl xl:max-w-7xl 4xl:max-w-layout xl:px-0 mx-auto py-5 w-full'>
+    <div className='px-5 md:px-10 lg:max-w-5.5xl xl:max-w-7xl 2xl: max-w-8.5xl 4xl:max-w-layout xl:px-0 mx-auto py-5 w-full'>
       {renderContent(phrase)}
       {children}
     </div>
