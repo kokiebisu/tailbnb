@@ -2,18 +2,18 @@ import React from 'react';
 import LazyImage from 'react-lazy-progressive-image';
 import Link from 'next/link';
 
-export default () => ({
+export default ({
   id,
   host_is_superhost,
   name,
   price,
   country,
   reviews_per_month,
-  img,
-  imglow
+  picture_url,
+  picture_url_low
 }) => {
   const renderhost = (host_is_superhost) => {
-    if (host_is_superhost) {
+    if (host_is_superhost == 't') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>
@@ -40,7 +40,7 @@ export default () => ({
   return (
     <Link href='/stays/[id]' as={`/stays/${id}`}>
       <div className='w-30/31 cursor-pointer'>
-        <LazyImage src={img} placeholder={imglow}>
+        <LazyImage src={picture_url} placeholder={picture_url_low}>
           {(src, loading, isVisible) => (
             <img className='w-full rounded' src={src} />
           )}
