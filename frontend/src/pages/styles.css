@@ -109,15 +109,15 @@ body {
 
 #darkOverlay {
   background: rgba(0, 0, 0, 0.6);
-  opacity: 0.9;
+  animation: fadeIn 0.3s;
 }
 
 #centerAbsolute {
   position: absolute;
-  top: 50%; /* position the top  edge of the element at the middle of the parent */
-  left: 50%; /* position the left edge of the element at the middle of the parent */
-
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  animation: fadeIn 0.4s;
 }
 
 #countryinput {
@@ -143,10 +143,37 @@ body {
   background-color: transparent;
 }
 
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 4000ms ease-in;
+}
+
+.register-leave {
+  opacity: 1;
+}
+
+.register-leave.register-leave-active {
+  opacity: 0.01;
+  transition: opacity 4000ms ease-in;
+}
+
 .appearance-none {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1280px) {
