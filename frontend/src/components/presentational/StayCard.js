@@ -35,8 +35,6 @@ export default ({
     }
   };
 
-  console.log('staycard rendered');
-
   return (
     <Link href='/stays/[id]' as={`/stays/${id}`}>
       <div className='w-30/31 cursor-pointer'>

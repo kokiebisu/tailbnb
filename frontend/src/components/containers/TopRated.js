@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
-import axios from 'axios';
+import Media from 'react-media';
 
 // Components
 import TopRatedCard from '../presentational/TopRatedCard';
@@ -18,36 +18,37 @@ const GET_EXPERIENCES = gql`
       reviews
       ratings
       location
+      imglow
+      img
     }
   }
 `;
 
 export default () => {
   const { loading, error, data } = useQuery(GET_EXPERIENCES);
+  const [card, setCard] = useState(0);
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [photos, setPhotos] = useState({});
-
-  const info = {
-    query: 'experience',
-    count: 4,
-    orientation: 'portrait',
-    client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
-  };
-
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  const loadData = async () => {
-    axios
-      .get(
-        `https://api.unsplash.com/photos/random?query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`
-      )
-      .then((data) => {
-        setPhotos({ imgs: data.data });
-      });
-    setIsLoading(false);
+  const renderContent = (data, number) => {
+    var content = [];
+    for (let i = 0; i < number; i++) {
+      content.push(
+        <div className='w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5'>
+          <TopRatedCard
+            key={data[i].id}
+            id={data[i].id}
+            img={data[i].img}
+            imglow={data[i].imglow}
+            country={data[i].country}
+            title={data[i].title}
+            cost={data[i].cost}
+            period={data[i].period}
+            ratings={data[i].ratings}
+            reviews={data[i].reviews}
+          />
+        </div>
+      );
+    }
+    return content;
   };
 
   if (loading) {
@@ -63,27 +64,56 @@ export default () => {
   return (
     <>
       <div className='flex items-start justify-start flex-wrap w-full'>
-        {data.experiences.map(
-          ({ id, title, cost, reviews, ratings, location }, index) => {
-            return (
-              <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
-                {photos.imgs ? (
-                  <TopRatedCard
-                    key={id}
-                    id={id}
-                    img={photos.imgs[index].urls.full}
-                    imglow={photos.imgs[index].urls.thumb}
-                    title={title}
-                    cost={cost}
-                    ratings={ratings}
-                    reviews={reviews}
-                    location={location}
-                  />
-                ) : null}
-              </div>
-            );
-          }
-        )}
+        {data ? (
+          <>
+            <Media
+              queries={{ xs: '(min-width: 500px) and (max-width: 739px)' }}>
+              {(matches) =>
+                matches.xs
+                  ? (setCard(4), renderContent(data.experiences, card))
+                  : null
+              }
+            </Media>
+            <Media
+              queries={{ small: '(min-width: 740px) and (max-width: 987px)' }}>
+              {(matches) =>
+                matches.small
+                  ? (setCard(3), renderContent(data.experiences, card))
+                  : null
+              }
+            </Media>
+            <Media
+              queries={{
+                large: '(min-width: 988px) and (max-width: 1299px)'
+              }}>
+              {(matches) =>
+                matches.large
+                  ? (setCard(4), renderContent(data.experiences, card))
+                  : null
+              }
+            </Media>
+            <Media
+              queries={{
+                xl: '(min-width: 1300px) and (max-width: 1529px)'
+              }}>
+              {(matches) =>
+                matches.xl
+                  ? (setCard(5), renderContent(data.experiences, card))
+                  : null
+              }
+            </Media>
+            <Media
+              queries={{
+                xl: '(min-width: 1530px)'
+              }}>
+              {(matches) =>
+                matches.xl
+                  ? (setCard(6), renderContent(data.experiences, card))
+                  : null
+              }
+            </Media>
+          </>
+        ) : null}
       </div>
       <ShowAll title='Show all experiences' />
     </>
