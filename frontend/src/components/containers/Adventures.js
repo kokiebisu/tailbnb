@@ -62,7 +62,8 @@ export default () => {
       <div className='flex items-start justify-start flex-wrap w-full'>
         {data ? (
           <>
-            <Media queries={{ small: '(max-width: 987px)' }}>
+            <Media
+              queries={{ small: '(min-width: 0px) and (max-width: 987px)' }}>
               {(matches) =>
                 matches.small
                   ? (setCard(4), renderContent(data.adventures, card))
