@@ -14,12 +14,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   const [word, setWord] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
-  console.log(word);
 
   const handleChange = event => {
     return setWord(event.target.value);
   };
 
+  console.log(word);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bg-white z-100 md:block fixed right-0 top-0 h-screen w-104 shadow-xl"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -63,7 +63,14 @@ __webpack_require__.r(__webpack_exports__);
     type: "text",
     className: "w-full h-8 text-sm text-gray-750 focus:outline-none",
     placeholder: "E.g. reservation status"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recommend Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help Card here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-xs text-gray-750"
+  }, "Recommended Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help Card here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, "Give Feedback"));
 });
@@ -71,4 +78,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 })
-//# sourceMappingURL=index.js.fb76b1d8397005c135ed.hot-update.js.map
+//# sourceMappingURL=index.js.7cedfa2f481d49d34684.hot-update.js.map
