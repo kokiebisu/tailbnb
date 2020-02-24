@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
 // Image
-import img1 from '../../../public/img/high/airbnb-background.jpg';
+const img1 = require('../../../public/img/high/airbnb-background.jpg');
 
-export default () => {
-  const renderDescription = (description) => {
+export const ReviewCard: React.FC<{}> = () => {
+  const renderDescription = (description: string) => {
     const wordArray = description.split(' ');
     if (wordArray.length < 50) {
       return <p className='text-gray-750'>description</p>;
