@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-export default () => {
+export const Neighborhood: React.FC<{}> = () => {
   return (
     <div className='mt-12 border-b border-gray-300'>
       <div className='py-4 border-b border-gray-300'>
