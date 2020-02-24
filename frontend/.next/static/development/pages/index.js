@@ -28696,7 +28696,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/HelpCard */ "./src/components/presentational/HelpCard.tsx");
-/* harmony import */ var _presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HelpAdditional */ "./src/components/presentational/HelpAdditional.js");
+/* harmony import */ var _presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HelpAdditional */ "./src/components/presentational/HelpAdditional.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/HelpModal.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // Components
@@ -28932,14 +28932,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 104
     },
     __self: this
-  }, __jsx(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
     title: "Reservation requests",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 105
     },
     __self: this
-  }), __jsx(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
     title: "Reservation requests",
     __source: {
       fileName: _jsxFileName,
@@ -29936,21 +29936,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/HelpAdditional.js":
-/*!*********************************************************!*\
-  !*** ./src/components/presentational/HelpAdditional.js ***!
-  \*********************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/HelpAdditional.tsx":
+/*!**********************************************************!*\
+  !*** ./src/components/presentational/HelpAdditional.tsx ***!
+  \**********************************************************/
+/*! exports provided: HelpAdditional */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpAdditional", function() { return HelpAdditional; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HelpAdditional.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HelpAdditional.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var HelpAdditional = function HelpAdditional() {
   return __jsx("div", {
     className: "border-b border-gray-300",
     __source: {
@@ -30013,7 +30014,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   })))))));
-});
+};
 
 /***/ }),
 
@@ -30797,7 +30798,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -30820,5 +30821,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
