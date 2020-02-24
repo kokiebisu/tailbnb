@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-export default () => {
+export const Cancellations: React.FC<{}> = () => {
   return (
     <div className='border-b border-gray-300 mt-4'>
       <div className='border-gray-300'>
