@@ -3244,7 +3244,9 @@ __webpack_require__.r(__webpack_exports__);
     nottype: "Log in",
     phrase: "Already",
     setType: switchType
-  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, false ? undefined : null), helpModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_5__["default"], null) : null);
+  })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, false ? undefined : null), helpModal ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    setHelpModal: switchHelpModal
+  }) : null);
 });
 
 /***/ }),
@@ -3266,7 +3268,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+/* harmony default export */ __webpack_exports__["default"] = (({
+  setHelpModal
+}) => {
   const [word, setWord] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
   const [accountModal, setAccountModal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
 
@@ -3287,7 +3291,18 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-medium'
     },
     className: "py-5 text-gray-750"
-  }, "Recommended help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Recommended help"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: () => setHelpModal(false),
+    className: "absolute top-0 right-0 "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pt-6 pr-5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "h-4 w-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512.001 512.001"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+  }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "border-b border-t border-gray-300 p-8"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: ""

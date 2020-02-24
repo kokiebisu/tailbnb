@@ -158,7 +158,7 @@ export default () => {
       ) : (
         <>{typeof window !== 'undefined' ? configureScroll('auto') : null}</>
       )}
-      {helpModal ? <HelpModal /> : null}
+      {helpModal ? <HelpModal setHelpModal={switchHelpModal} /> : null}
     </header>
   );
 };
