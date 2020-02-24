@@ -23,7 +23,8 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^25.1.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "typescript": "^3.8.2"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
