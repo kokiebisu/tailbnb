@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Components
-import PlusCard from '../presentational/PlusCard';
+import { PlusCard } from '../presentational/PlusCard';
 
 // Images
 // High Resolution
