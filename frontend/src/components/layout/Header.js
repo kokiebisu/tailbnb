@@ -5,7 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // Component
 import { HeaderCard } from '../presentational/HeaderCard';
 import { RegisterModal } from '../modals/RegisterModal';
-import HelpModal from '../modals/HelpModal';
+import { HelpModal } from '../modals/HelpModal';
 
 // Images
 import background from '../../../public/img/high/airbnb-background.jpg';
@@ -15,12 +15,12 @@ export default () => {
   const [helpModal, setHelpModal] = useState(false);
   const [type, setType] = useState('');
 
-  const switchRegisterModal = (mode) => {
-    setRegisterModal(mode);
+  const switchRegisterModal = () => {
+    setRegisterModal(!mode);
   };
 
-  const switchHelpModal = (mode) => {
-    setHelpModal(mode);
+  const switchHelpModal = () => {
+    setHelpModal(!mode);
   };
 
   const switchType = (type) => {
@@ -110,7 +110,7 @@ export default () => {
               <button
                 onClick={() => {
                   switchType('Log in');
-                  switchRegisterModal(true, 'login');
+                  switchRegisterModal(true);
                 }}
                 href='#'
                 className='text-sm tracking-wide'>

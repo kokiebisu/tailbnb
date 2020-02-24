@@ -5,8 +5,10 @@ const facebook = require('../../../public/img/high/facebook.png');
 const google = require('../../../public/img/high/google.png');
 
 interface Prop {
-  setRegisterModal: (mode: boolean) => void;
-  setType: (type: string) => void;
+  setRegisterModal: (
+    value: boolean | ((prevValue: boolean) => boolean)
+  ) => void;
+  setType: (type: string | ((prevValue: string) => string)) => void;
   type: string;
   nottype: string;
   phrase: string;

@@ -1,15 +1,19 @@
-import React, { useState, useRef } from 'react';
+import * as React from 'react';
+import { useState } from 'react';
 
 // Components
 import { HelpCard } from '../presentational/HelpCard';
 import { HelpAdditional } from '../presentational/HelpAdditional';
 
-export default ({ setHelpModal }) => {
-  const [word, setWord] = useState('');
-  const [accountModal, setAccountModal] = useState(false);
+interface Prop {
+  setHelpModal: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+}
 
-  const handleChange = (event) => {
-    return setWord(event.target.value);
+export const HelpModal: React.FC<Prop> = ({ setHelpModal }) => {
+  const [word, setWord] = useState<string | number | string[] | undefined>('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    return setWord(e.target.value);
   };
 
   const questions = [
@@ -88,9 +92,6 @@ export default ({ setHelpModal }) => {
           </h3>
         </div>
         <div>
-          {/* {questions.map(({ id, title, answer }) => {
-            <HelpCard key={id} title={title} answer={answer} />;
-          })} */}
           <HelpCard title={questions[0].title} answer={questions[0].answer} />
           <HelpCard title={questions[0].title} answer={questions[0].answer} />
         </div>
