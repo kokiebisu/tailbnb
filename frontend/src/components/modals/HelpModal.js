@@ -1,13 +1,23 @@
 import React, { useState, useRef } from 'react';
 
+// Components
+import HelpCard from '../presentational/HelpCard';
+
 export default () => {
   const [word, setWord] = useState('');
+  const [accountModal, setAccountModal] = useState(false);
 
   const handleChange = (event) => {
     return setWord(event.target.value);
   };
 
-  console.log(word);
+  const questions = [
+    {
+      title: 'How do I create an account?',
+      answer:
+        "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
+    }
+  ];
 
   return (
     <div className='bg-white z-100 md:block fixed right-0 top-0 h-screen w-104 shadow-xl'>
@@ -55,7 +65,10 @@ export default () => {
           </h3>
         </div>
         <div>
-          <h1>Help Card here</h1>
+          {/* {questions.map(({ id, title, answer }) => {
+            <HelpCard key={id} title={title} answer={answer} />;
+          })} */}
+          <HelpCard title={questions[0].title} answer={questions[0].answer} />
         </div>
         <div>Explore More Articles By Topic</div>
         <div>

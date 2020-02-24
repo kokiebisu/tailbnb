@@ -25938,15 +25938,22 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/HelpCard */ "./src/components/presentational/HelpCard.js");
+ // Components
+
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   const [word, setWord] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const [accountModal, setAccountModal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
 
   const handleChange = event => {
     return setWord(event.target.value);
   };
 
-  console.log(word);
+  const questions = [{
+    title: 'How do I create an account?',
+    answer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
+  }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "bg-white z-100 md:block fixed right-0 top-0 h-screen w-104 shadow-xl"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -25997,7 +26004,10 @@ __webpack_require__.r(__webpack_exports__);
       fontFamily: 'airbnb-bold'
     },
     className: "uppercase text-xs text-gray-750"
-  }, "Recommended Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help Card here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Recommended Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: questions[0].title,
+    answer: questions[0].answer
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, "Give Feedback"));
 });
@@ -26433,6 +26443,71 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold"
   }, "Search"))));
+});
+
+/***/ }),
+
+/***/ "./src/components/presentational/HelpCard.js":
+/*!***************************************************!*\
+  !*** ./src/components/presentational/HelpCard.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (({
+  title,
+  answer
+}) => {
+  const renderAnswer = answer => {
+    const wordArray = answer.split(' ');
+    const newArray = [];
+
+    for (let i = 0; i < 20; i++) {
+      newArray.push(wordArray[i]);
+    }
+
+    newArray.push('...');
+    const something = newArray.join(' ');
+    return something;
+  };
+
+  const newAnswer = renderAnswer(answer);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750"
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm"
+  }, newAnswer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "flex "
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-green-850 text-sm"
+  }, "Read more"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pl-3 flex justify-center items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "h-3 w-3",
+    style: {
+      fill: '#008489',
+      paddingTop: 1,
+      paddingRight: 3
+    },
+    viewBox: "0 0 451.846 451.847"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"
+  }))))));
 });
 
 /***/ }),
