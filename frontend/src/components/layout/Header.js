@@ -4,7 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // Component
 import { HeaderCard } from '../presentational/HeaderCard';
-import RegisterModal from '../modals/RegisterModal';
+import { RegisterModal } from '../modals/RegisterModal';
 import HelpModal from '../modals/HelpModal';
 
 // Images

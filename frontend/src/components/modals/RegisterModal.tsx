@@ -1,10 +1,24 @@
-import React from 'react';
+import * as React from 'react';
 
 // Images
-import facebook from '../../../public/img/high/facebook.png';
-import google from '../../../public/img/high/google.png';
+const facebook = require('../../../public/img/high/facebook.png');
+const google = require('../../../public/img/high/google.png');
 
-export default ({ setRegisterModal, setType, type, nottype, phrase }) => {
+interface Prop {
+  setRegisterModal: (mode: boolean) => void;
+  setType: (type: string) => void;
+  type: string;
+  nottype: string;
+  phrase: string;
+}
+
+export const RegisterModal: React.FC<Prop> = ({
+  setRegisterModal,
+  setType,
+  type,
+  nottype,
+  phrase
+}) => {
   return (
     <>
       <div
