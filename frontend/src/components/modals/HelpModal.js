@@ -72,7 +72,7 @@ export default () => {
           <HelpCard title={questions[0].title} answer={questions[0].answer} />
           <HelpCard title={questions[0].title} answer={questions[0].answer} />
         </div>
-        <div className='mt-4'>
+        <div className='mt-6'>
           <p
             style={{ fontFamily: 'airbnb-bold' }}
             className='uppercase text-gray-750 text-xs'>
@@ -81,10 +81,22 @@ export default () => {
         </div>
         <div>
           <HelpAdditional title='Reservation requests' />
+          <HelpAdditional title='Reservation requests' />
         </div>
       </div>
-      <button>Visit the Help Centre</button>
-      <a href='#'>Give Feedback</a>
+      <div className='flex flex-col justify-end items-center my-2'>
+        <button
+          style={{ fontFamily: 'airbnb-bold' }}
+          className='w-11/12 bg-green-850 py-2 text-white rounded'>
+          Visit the Help Centre
+        </button>
+        <a
+          style={{ fontFamily: 'airbnb-book' }}
+          className='border-b border-green-850 text-green-850 text-sm my-1'
+          href='#'>
+          Give Feedback
+        </a>
+      </div>
     </div>
   );
 };

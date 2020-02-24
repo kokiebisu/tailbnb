@@ -26013,7 +26013,7 @@ __webpack_require__.r(__webpack_exports__);
     title: questions[0].title,
     answer: questions[0].answer
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mt-4"
+    className: "mt-6"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     style: {
       fontFamily: 'airbnb-bold'
@@ -26021,9 +26021,22 @@ __webpack_require__.r(__webpack_exports__);
     className: "uppercase text-gray-750 text-xs"
   }, "Explore More Articles By Topic")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Reservation requests"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "Reservation requests"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex flex-col justify-end items-center my-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "w-11/12 bg-green-850 py-2 text-white rounded"
+  }, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "border-b border-green-850 text-green-850 text-sm my-1",
     href: "#"
-  }, "Give Feedback"));
+  }, "Give Feedback")));
 });
 
 /***/ }),
@@ -26527,7 +26540,9 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   const newAnswer = renderAnswer(answer);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mb-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
@@ -26927,7 +26942,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -26950,5 +26965,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
