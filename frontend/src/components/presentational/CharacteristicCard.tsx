@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
-import Skeleton from 'react-loading-skeleton';
+import * as React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
-export default ({
+interface Prop {
+  type: string;
+  title: string;
+  description: string;
+  guestnumber: number;
+  hostName: string;
+  percentage: string;
+}
+
+export const CharacteristicCard: React.FC<Prop> = ({
   type,
   title,
   description,
@@ -10,18 +19,19 @@ export default ({
   hostName,
   percentage
 }) => {
-  const [loaded, setLoaded] = useState(false);
-  function sleep(ms) {
+  const [loaded, setLoaded] = useState<boolean>(false);
+  function sleep(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  const setSkeleton = async (seconds) => {
+  const setSkeleton = async (seconds: number) => {
     await sleep(seconds);
     setLoaded(true);
   };
 
   setSkeleton(4000);
-  const renderIcon = (type) => {
+
+  const renderIcon = (type: string) => {
     if (type === 'home') {
       return (
         <>
