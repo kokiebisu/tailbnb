@@ -6300,7 +6300,7 @@ function doRender(_ref5) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(process) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
@@ -6347,7 +6347,10 @@ window.next = next;
   });
   if (true) (0, _devBuildWatcher["default"])();
 
-  if (false) {} // delay rendering until after styles have been applied in development
+  if ( true && // disable by default in electron
+  !(typeof process !== 'undefined' && 'electron' in process.versions)) {
+    (0, _prerenderIndicator["default"])();
+  } // delay rendering until after styles have been applied in development
 
 
   (0, _fouc.displayContent)(function () {
@@ -6384,6 +6387,7 @@ window.next = next;
 })["catch"](function (err) {
   console.error('Error was not caught', err);
 });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 

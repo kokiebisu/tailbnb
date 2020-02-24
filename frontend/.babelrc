@@ -8,7 +8,9 @@
         }
       }
     ],
-    ["@babel/preset-react"]
+    ["@babel/preset-react"],
+    ["next/babel"],
+    ["@zeit/next-typescript/babel"]
   ],
   "plugins": [
     [
