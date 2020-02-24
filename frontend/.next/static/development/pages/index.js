@@ -25955,9 +25955,9 @@ __webpack_require__.r(__webpack_exports__);
     answer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
   }];
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-white z-100 md:block fixed right-0 top-0 h-screen w-104 shadow-xl"
+    className: "bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full flex justify-center items-center"
+    className: "w-full flex justify-center items-center "
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     style: {
       fontFamily: 'airbnb-medium'
@@ -26007,7 +26007,17 @@ __webpack_require__.r(__webpack_exports__);
   }, "Recommended Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: questions[0].title,
     answer: questions[0].answer
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: questions[0].title,
+    answer: questions[0].answer
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-gray-750 text-xs"
+  }, "Explore More Articles By Topic")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, "Give Feedback"));
 });

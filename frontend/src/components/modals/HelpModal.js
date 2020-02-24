@@ -20,8 +20,8 @@ export default () => {
   ];
 
   return (
-    <div className='bg-white z-100 md:block fixed right-0 top-0 h-screen w-104 shadow-xl'>
-      <div className='w-full flex justify-center items-center'>
+    <div className='bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl'>
+      <div className='w-full flex justify-center items-center '>
         <h3
           style={{ fontFamily: 'airbnb-medium' }}
           className='py-5 text-gray-750'>
@@ -69,8 +69,15 @@ export default () => {
             <HelpCard key={id} title={title} answer={answer} />;
           })} */}
           <HelpCard title={questions[0].title} answer={questions[0].answer} />
+          <HelpCard title={questions[0].title} answer={questions[0].answer} />
         </div>
-        <div>Explore More Articles By Topic</div>
+        <div className='mt-4'>
+          <p
+            style={{ fontFamily: 'airbnb-bold' }}
+            className='uppercase text-gray-750 text-xs'>
+            Explore More Articles By Topic
+          </p>
+        </div>
         <div>
           <h1>Help More Modal Here</h1>
         </div>
