@@ -1,16 +1,27 @@
-import React, { useState } from 'react';
-import LazyImage from 'react-lazy-progressive-image';
+import * as React from 'react';
 import Link from 'next/link';
 
-export default ({ id, img, imglow, country, title, cost, period }) => {
+interface Prop {
+  id: string;
+  img: string;
+  country: string;
+  title: string;
+  cost: number;
+  period: number;
+}
+
+export const AdventureCard: React.FC<Prop> = ({
+  id,
+  img,
+  country,
+  title,
+  cost,
+  period
+}) => {
   return (
     <Link href='/adventures/[id]' as={`/adventures/${id}`}>
       <div className='w-30/31 cursor-pointer'>
-        <LazyImage src={img} placeholder={imglow}>
-          {(src, loading, isVisible) => (
-            <img className='w-full rounded-lg' src={src} />
-          )}
-        </LazyImage>
+        <img className='w-full rounded-lg' src={img} />
 
         <p className='uppercase text-xs my-2 font-semibold'>{country}</p>
         <p className='my-1 w-5/6'>{title}</p>
