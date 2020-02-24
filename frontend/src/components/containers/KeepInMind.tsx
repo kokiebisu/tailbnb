@@ -1,5 +1,6 @@
-import React from 'react';
-export default () => {
+import * as React from 'react';
+
+export const KeepInMind: React.FC<{}> = () => {
   return (
     <>
       <div className='py-6'>
