@@ -32790,7 +32790,7 @@ var SSkeletonPulse1 = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["def
 
 /***/ }),
 
-/***/ 4:
+/***/ 1:
 /*!******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.js ***!
   \******************************************************************************************************************************************************************/
@@ -32813,5 +32813,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
