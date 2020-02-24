@@ -6,9 +6,9 @@ interface Prop {
   type: string;
   title: string;
   description: string;
-  guestnumber: number;
-  hostName: string;
-  percentage: string;
+  guestnumber?: number;
+  hostName?: string;
+  percentage?: number;
 }
 
 export const CharacteristicCard: React.FC<Prop> = ({
