@@ -6,7 +6,7 @@ import Media from 'react-media';
 
 // Component
 import { AdventureCard } from '../presentational/AdventureCard';
-import ShowAll from '../ShowAll';
+import { ShowAll } from '../ShowAll';
 
 const GET_ADVENTURES = gql`
   query {

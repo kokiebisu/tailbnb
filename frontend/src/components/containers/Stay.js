@@ -5,7 +5,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 
 // Component
 import { StayCard } from '../presentational/StayCard';
-import ShowAll from '../ShowAll';
+import { ShowAll } from '../ShowAll';
 
 const GET_STAYS = gql`
   query {

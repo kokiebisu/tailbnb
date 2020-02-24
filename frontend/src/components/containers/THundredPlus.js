@@ -6,7 +6,7 @@ import axios from 'axios';
 
 // Component
 import { THundredPlusCard } from '../presentational/THundredPlusCard';
-import ShowAll from '../ShowAll';
+import { ShowAll } from '../ShowAll';
 
 const staydata = gql`
   query {

@@ -6,7 +6,7 @@ import Media from 'react-media';
 
 // Components
 import { TopRatedCard } from '../presentational/TopRatedCard';
-import ShowAll from '../ShowAll';
+import { ShowAll } from '../ShowAll';
 
 const GET_EXPERIENCES = gql`
   query {
