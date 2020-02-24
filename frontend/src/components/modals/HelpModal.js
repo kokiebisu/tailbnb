@@ -47,8 +47,12 @@ export default () => {
             </div>
           </div>
         </div>
-        <div>
-          <h3>Recommend Articles</h3>
+        <div className='mt-8 mb-4'>
+          <h3
+            style={{ fontFamily: 'airbnb-bold' }}
+            className='uppercase text-xs text-gray-750'>
+            Recommended Articles
+          </h3>
         </div>
         <div>
           <h1>Help Card here</h1>

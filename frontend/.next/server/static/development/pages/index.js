@@ -3312,7 +3312,14 @@ __webpack_require__.r(__webpack_exports__);
     type: "text",
     className: "w-full h-8 text-sm text-gray-750 focus:outline-none",
     placeholder: "E.g. reservation status"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recommend Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help Card here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mt-8 mb-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-xs text-gray-750"
+  }, "Recommended Articles")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help Card here")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Explore More Articles By Topic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Help More Modal Here"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Visit the Help Centre"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#"
   }, "Give Feedback"));
 });
