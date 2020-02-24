@@ -6,7 +6,7 @@ import SectionOverflow from '../components/wrapper/SectionOverflow';
 
 // Component
 import Header from '../components/layout/Header';
-import Explore from '../components/containers/Explore';
+import { Explore } from '../components/containers/Explore';
 import Plus from '../components/containers/Plus';
 import Adventures from '../components/containers/Adventures';
 import Stay from '../components/containers/Stay';
