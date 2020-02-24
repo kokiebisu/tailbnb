@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2694,7 +2694,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _presentational_Location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/Location */ "./src/components/presentational/Location.js");
+/* harmony import */ var _presentational_Location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/Location */ "./src/components/presentational/Location.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2792,7 +2792,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         lineNumber: 73
       },
       __self: undefined
-    }, __jsx(_presentational_Location__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_presentational_Location__WEBPACK_IMPORTED_MODULE_2__["Location"], {
       key: id,
       location: location,
       price: price,
@@ -5782,21 +5782,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/Location.js":
-/*!***************************************************!*\
-  !*** ./src/components/presentational/Location.js ***!
-  \***************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/Location.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/presentational/Location.tsx ***!
+  \****************************************************/
+/*! exports provided: Location */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Location", function() { return Location; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/Location.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/Location.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (({
+const Location = ({
   location,
   price
 }) => {
@@ -5804,25 +5805,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "w-30/31 py-3 my-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 10
     },
     __self: undefined
   }, __jsx("h3", {
     className: "font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 11
     },
     __self: undefined
   }, location), __jsx("p", {
     className: "text-xs font-normal text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 12
     },
     __self: undefined
   }, "$", price, "/night average"));
-});
+};
 
 /***/ }),
 
@@ -6448,7 +6449,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
