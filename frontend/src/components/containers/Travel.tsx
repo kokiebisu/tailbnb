@@ -1,17 +1,17 @@
 import React from 'react';
-import TravelCard from '../presentational/TravelCard';
+import { TravelCard } from '../presentational/TravelCard';
 
 // Image
 // High Resolution
-import explore1 from '../../../public/img/high/explore1.jpg';
-import explore2 from '../../../public/img/high/explore2.jpg';
-import explore3 from '../../../public/img/high/explore3.jpg';
+const explore1 = require('../../../public/img/high/explore1.jpg');
+const explore2 = require('../../../public/img/high/explore2.jpg');
+const explore3 = require('../../../public/img/high/explore3.jpg');
 // Low Resolution
-import explore1low from '../../../public/img/low/explore1-low.jpg';
-import explore2low from '../../../public/img/low/explore2-low.jpg';
-import explore3low from '../../../public/img/low/explore3-low.jpg';
+const explore1low = require('../../../public/img/low/explore1-low.jpg');
+const explore2low = require('../../../public/img/low/explore2-low.jpg');
+const explore3low = require('../../../public/img/low/explore3-low.jpg');
 
-export default () => {
+export const Travel: React.FC = () => {
   const countries = [
     {
       img: explore1,
@@ -50,11 +50,11 @@ export default () => {
       <div className='w-full h-full overflow-y-hidden'>
         <div className='h-full scroller'>
           <div className='scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-screen'>
-            {countries.map(({ id, img, imglow, location }) => {
+            {countries.map(({ img, imglow, location }, index) => {
               return (
                 <div className='min-w-32 w-full mr-3'>
                   <TravelCard
-                    key={id}
+                    key={index}
                     img={img}
                     imglow={imglow}
                     location={location}
