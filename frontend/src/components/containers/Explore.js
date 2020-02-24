@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import ExploreCard from '../presentational/ExploreCard';
+import { ExploreCard } from '../presentational/ExploreCard';
 
 // Images
 // High Resolution
