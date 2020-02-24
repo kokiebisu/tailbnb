@@ -17,7 +17,7 @@ import { gql } from 'apollo-boost';
 
 // Components
 import ExploreHeader from '../../components/layout/ExploreHeader';
-import ImagePanel from '../../components/presentational/ImagePanel';
+import { ImagePanel } from '../../components/presentational/ImagePanel';
 import HeaderCard from '../../components/presentational/HeaderCard';
 
 import Reviews from '../../components/containers/Reviews';
@@ -178,11 +178,6 @@ export default ({ query }) => {
                     href=''>
                     {data.stay.street}
                   </a>
-                  <p
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='pl-1 text-gray-650 text-sm'>
-                    Photo by Annie Spratt on Unsplash
-                  </p>
                 </div>
               )}
               <div className='hidden lg:inline-block flex items-start justify-start'>
