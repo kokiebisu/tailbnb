@@ -1,38 +1,37 @@
-import React from 'react';
+import * as React from 'react';
 
 // Components
 import { ExperienceCard } from '../presentational/ExperienceCard';
 
 // Images
 // High Resolution
-import featured1 from '../../../public/img/high/featured1.jpg';
-import featured2 from '../../../public/img/high/featured2.jpg';
-import featured3 from '../../../public/img/high/featured3.jpg';
+const featured1 = require('../../../public/img/high/featured1.jpg');
+const featured2 = require('../../../public/img/high/featured2.jpg');
+const featured3 = require('../../../public/img/high/featured3.jpg');
 
-// Low Resolution
-import featured1low from '../../../public/img/low/featured1-low.jpg';
-import featured2low from '../../../public/img/low/featured2-low.jpg';
-import featured3low from '../../../public/img/low/featured3-low.jpg';
+interface Feature {
+  img: string;
+  experiences: number;
+  type: string;
+  description: string;
+}
 
-export default () => {
-  const featureds = [
+export const Experiences: React.FC<{}> = () => {
+  const featureds: Feature[] = [
     {
       img: featured1,
-      imglow: featured1low,
       experiences: 940,
       type: 'Cooking',
       description: 'Make and eat meals with locals who treact you like family'
     },
     {
-      img: featured1,
-      imglow: featured1low,
+      img: featured2,
       experiences: 940,
       type: 'Cooking',
       description: 'Make and eat meals with locals who treact you like family'
     },
     {
-      img: featured1,
-      imglow: featured1low,
+      img: featured3,
       experiences: 940,
       type: 'Cooking',
       description: 'Make and eat meals with locals who treact you like family'
@@ -45,13 +44,12 @@ export default () => {
           <div className='h-full scroller'>
             <div className='scrollable sm:inset-x-0 flex items-start justify-startpy-2 w-featured md:w-full'>
               {featureds.map(
-                ({ id, img, imglow, experiences, type, description }) => {
+                ({ img, experiences, type, description }, index) => {
                   return (
                     <div className='w-80 lg:w-1/3 pb-5 mr-2'>
                       <ExperienceCard
-                        key={id}
+                        key={index}
                         img={img}
-                        imglow={imglow}
                         experiences={experiences}
                         type={type}
                         description={description}
