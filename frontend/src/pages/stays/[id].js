@@ -37,7 +37,7 @@ import DetailSectionOverflow from '../../components/wrapper/DetailSectionOverflo
 import DetailSection from '../../components/wrapper/DetailSection';
 
 // Containers
-import TodoNear from '../../components/containers/ToDoNear';
+import { ToDoNear } from '../../components/containers/ToDoNear';
 import MoreLocations from '../../components/containers/MoreLocations';
 
 // Images
@@ -408,7 +408,7 @@ export default ({ query }) => {
               <MoreHomes />
             </DetailSectionOverflow>
             <DetailSectionOverflow title='Things to do nearby'>
-              <TodoNear />
+              <ToDoNear />
             </DetailSectionOverflow>
             <DetailSectionOverflow title='Explore other options in and around Penafiel'>
               <MoreLocations />
