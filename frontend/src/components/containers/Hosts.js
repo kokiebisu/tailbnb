@@ -5,7 +5,7 @@ import { gql } from 'apollo-boost';
 // Components
 import TopRatedCard from '../presentational/TopRatedCard';
 import ShowAll from '../ShowAll';
-import HostCard from '../presentational/HostCard';
+import { HostCard } from '../presentational/HostCard';
 
 const experiencedata = gql`
   query {
