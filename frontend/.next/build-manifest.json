@@ -29,7 +29,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/stays/[id]": [
+    "/stays": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

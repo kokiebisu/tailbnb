@@ -22,7 +22,7 @@ export default ({ setHelpModal }) => {
 
   return (
     <div className='bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl'>
-      <div className='w-full flex justify-center items-center '>
+      <div className='w-full flex justify-center items-center'>
         <h3
           style={{ fontFamily: 'airbnb-medium' }}
           className='py-5 text-gray-750'>
@@ -51,7 +51,7 @@ export default ({ setHelpModal }) => {
           </div>
         </button>
       </div>
-      <div className='border-b border-t border-gray-300 p-8'>
+      <div className='bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto'>
         <div className=''>
           <p
             style={{ fontFamily: 'airbnb-bold' }}

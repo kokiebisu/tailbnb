@@ -4,7 +4,7 @@ import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 // Component
-import StayCard from '../presentational/StayCard';
+import { StayCard } from '../presentational/StayCard';
 import ShowAll from '../ShowAll';
 
 const GET_STAYS = gql`
