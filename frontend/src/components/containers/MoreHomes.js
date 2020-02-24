@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component
-import HomeCard from '../presentational/HomeCard';
+import { HomeCard } from '../presentational/HomeCard';
 
 export default () => {
   return (

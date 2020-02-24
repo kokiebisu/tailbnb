@@ -1,17 +1,13 @@
-import React from 'react';
-import LazyImage from 'react-lazy-progressive-image';
+import * as React from 'react';
+// import LazyImage from 'react-lazy-progressive-image';
 
 // Images
-import img1 from '../../../public/img/high/airbnb-background.jpg';
+const img1 = require('../../../public/img/high/airbnb-background.jpg');
 
-export default () => {
+export const HomeCard: React.FC<{}> = () => {
   return (
     <div className='w-30/31'>
-      <LazyImage src={img1} placeholder={img1}>
-        {(src, loading, isVisible) => (
-          <img className='w-full rounded' src={src} />
-        )}
-      </LazyImage>
+      <img className='w-full rounded' src={img1} />
 
       <div className='flex flex-wrap items-center justify-between'>
         <p>
