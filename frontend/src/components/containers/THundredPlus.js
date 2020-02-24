@@ -5,7 +5,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import axios from 'axios';
 
 // Component
-import THundredPlusCard from '../presentational/THundredPlusCard';
+import { THundredPlusCard } from '../presentational/THundredPlusCard';
 import ShowAll from '../ShowAll';
 
 const staydata = gql`
