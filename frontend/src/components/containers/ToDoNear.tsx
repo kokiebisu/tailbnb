@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Components
-import HeartExperienceCard from '../presentational/HeartExperienceCard';
+import { HeartExperienceCard } from '../presentational/HeartExperienceCard';
 
 export const ToDoNear: React.FC<{}> = () => {
   return (
