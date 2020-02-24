@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 // Components
-import FeaturedCard from '../presentational/FeaturedCard';
+import { FeaturedCard } from '../presentational/FeaturedCard';
 
 // Images
 // High Resolution

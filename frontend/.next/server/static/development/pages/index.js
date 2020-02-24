@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2507,7 +2507,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/FeaturedCard */ "./src/components/presentational/FeaturedCard.js");
+/* harmony import */ var _presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/FeaturedCard */ "./src/components/presentational/FeaturedCard.tsx");
 /* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
 /* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
@@ -2624,7 +2624,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         lineNumber: 66
       },
       __self: undefined
-    }, __jsx(_presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__["FeaturedCard"], {
       key: id,
       img: img,
       imglow: imglow,
@@ -5257,26 +5257,24 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/FeaturedCard.js":
-/*!*******************************************************!*\
-  !*** ./src/components/presentational/FeaturedCard.js ***!
-  \*******************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/FeaturedCard.tsx":
+/*!********************************************************!*\
+  !*** ./src/components/presentational/FeaturedCard.tsx ***!
+  \********************************************************/
+/*! exports provided: FeaturedCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturedCard", function() { return FeaturedCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "react-lazy-progressive-image");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/FeaturedCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/FeaturedCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // import LazyImage from 'react-lazy-progressive-image';
 
-
-/* harmony default export */ __webpack_exports__["default"] = (({
+const FeaturedCard = ({
   img,
-  imglow,
   verified,
   description
 }) => {
@@ -5284,56 +5282,48 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "w-30/31",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 16
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-full w-64 sm:w-full bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 17
     },
     __self: undefined
-  }, __jsx(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: img,
-    placeholder: imglow,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, (src, loading, isVisible) => __jsx("img", {
+  }, __jsx("img", {
     className: "w-full rounded-xl",
-    src: src,
+    src: img,
     alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 18
     },
     __self: undefined
-  })), __jsx("div", {
+  }), __jsx("div", {
     className: "flex flex-wrap items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("p", {
     className: "uppercase text-xs my-2 font-bold text-pink-700",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 21
     },
     __self: undefined
   }, verified, "+ Verified Stays")), __jsx("p", {
     className: "whitespace-normal my-1 text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 25
     },
     __self: undefined
   }, description)));
-});
+};
 
 /***/ }),
 
@@ -6452,7 +6442,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
