@@ -3624,21 +3624,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/AmenityCard.js":
-/*!******************************************************!*\
-  !*** ./src/components/presentational/AmenityCard.js ***!
-  \******************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/AmenityCard.tsx":
+/*!*******************************************************!*\
+  !*** ./src/components/presentational/AmenityCard.tsx ***!
+  \*******************************************************/
+/*! exports provided: AmenityCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AmenityCard", function() { return AmenityCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/AmenityCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/AmenityCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (({
+const AmenityCard = ({
   type,
   title
 }) => {
@@ -3653,35 +3654,35 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         xmlns: "http://www.w3.org/2000/svg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 12
         },
         __self: undefined
       }, __jsx("path", {
         d: "m210.125 310c-25.234375 25.226562-25.238281 66.132812-.011719 91.367188 25.226563 25.234374 66.132813 25.242187 91.363281.015624 25.234376-25.226562 25.242188-66.132812.015626-91.367187-.003907-.003906-.007813-.007813-.015626-.015625-25.550781-24.421875-65.796874-24.421875-91.351562 0zm68.515625 68.515625c-12.777344 12.207031-32.898437 12.207031-45.675781 0-12.617188-12.613281-12.621094-33.066406-.007813-45.683594 12.613281-12.617187 33.066407-12.621093 45.683594-.007812s12.621094 33.066406.007813 45.683593c-.003907.003907-.007813.003907-.007813.007813zm0 0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 17
         },
         __self: undefined
       }), __jsx("path", {
         d: "m141.59375 241.472656c-6.414062 6.195313-6.589844 16.421875-.394531 22.835938 6.195312 6.417968 16.421875 6.59375 22.835937.398437.136719-.128906.269532-.261719.398438-.398437 50.496094-50.375 132.238281-50.375 182.738281 0 6.414063 6.199218 16.640625 6.019531 22.835937-.394532 6.046876-6.261718 6.046876-16.183593 0-22.441406-63.113281-62.976562-165.296874-62.976562-228.414062 0zm0 0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 18
         },
         __self: undefined
       }), __jsx("path", {
         d: "m255.800781 97.253906c-68.574219-.1875-134.371093 27.070313-182.71875 75.703125-6.042969 6.5625-5.617187 16.78125.945313 22.820313 6.183594 5.691406 15.695312 5.691406 21.875 0 88.300781-88.308594 231.472656-88.316406 319.78125-.015625.007812.007812.011718.011719.015625.015625 6.199219 6.417968 16.421875 6.597656 22.839843.398437 6.417969-6.195312 6.59375-16.421875.398438-22.835937-.132812-.136719-.261719-.269532-.398438-.398438-48.355468-48.628906-114.160156-75.886718-182.738281-75.6875zm0 0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 19
         },
         __self: undefined
       }), __jsx("path", {
         d: "m507.070312 104.410156c-138.863281-138.546875-363.671874-138.546875-502.535156 0-6.199218 6.417969-6.019531 16.640625.394532 22.839844 6.261718 6.042969 16.183593 6.042969 22.441406 0 126.257812-125.921875 330.601562-125.921875 456.859375 0 6.195312 6.414062 16.421875 6.59375 22.839843.394531 6.414063-6.195312 6.59375-16.421875.394532-22.835937-.128906-.136719-.261719-.269532-.394532-.398438zm0 0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 20
         },
         __self: undefined
       }));
@@ -3695,42 +3696,42 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         viewBox: "0 0 512 512",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 25
         },
         __self: undefined
       }, __jsx("g", {
         id: "Laptop",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 30
         },
         __self: undefined
       }, __jsx("path", {
         d: "M496,344H471.039L472,144a40.045,40.045,0,0,0-40-40H80a40.037,40.037,0,0,0-40,39.962L39.038,344H16a8,8,0,0,0-8,8v32a40.045,40.045,0,0,0,40,40H464a40.045,40.045,0,0,0,40-40V352A8,8,0,0,0,496,344ZM56,144a24.027,24.027,0,0,1,24-24H432a24.019,24.019,0,0,1,24,23.962L455.039,344h-400ZM293.439,360l-4.5,16H222.246l-4-16ZM488,384a24.027,24.027,0,0,1-24,24H48a24.027,24.027,0,0,1-24-24V360H201.754l6.485,25.94A8,8,0,0,0,216,392h79a8,8,0,0,0,7.7-5.834L310.06,360H488Z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 31
         },
         __self: undefined
       }), __jsx("path", {
         d: "M448,328V136a8,8,0,0,0-8-8H72a8,8,0,0,0-8,8V328a8,8,0,0,0,8,8H440A8,8,0,0,0,448,328Zm-16-8H80V144H432Z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 32
         },
         __self: undefined
       }), __jsx("path", {
         d: "M104,368H48a8,8,0,0,0,0,16h56a8,8,0,0,0,0-16Z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 33
         },
         __self: undefined
       }), __jsx("path", {
         d: "M136,368h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 34
         },
         __self: undefined
       })));
@@ -3744,28 +3745,28 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         xmlns: "http://www.w3.org/2000/svg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 40
         },
         __self: undefined
       }, __jsx("path", {
         d: "m366.975 447.593-5.242-84.695c-1.359-21.986-2.711-38.991-3.903-53.994-2.068-26.015-3.854-48.482-4.823-86.042-.268-10.392 2.527-18.021 8.543-23.325 30.253-26.671 44.957-69.759 39.332-115.259-5.037-40.752-26.631-84.278-72.12-84.278-.047 0-.088 0-.137 0-45.497 0-67.097 43.529-72.133 84.276-.571 4.615-.937 9.304-1.088 13.938-.135 4.14 3.112 7.605 7.252 7.74 4.118.13 7.605-3.112 7.74-7.252.137-4.183.467-8.417.982-12.585 2.063-16.688 12.283-71.117 57.263-71.117h.106c44.958 0 55.185 54.43 57.247 71.117 5.017 40.581-7.83 78.774-34.365 102.167-9.42 8.305-14.001 20.068-13.617 34.963.979 37.961 2.779 60.614 4.864 86.844 1.188 14.941 2.533 31.876 3.886 53.731l5.224 84.433.021.314c.113 1.735.23 3.52.333 5.34.226 3.992 3.533 7.077 7.481 7.077.143 0 .286-.004.43-.012 4.136-.234 7.299-3.776 7.065-7.912-.106-1.863-.225-3.692-.341-5.469z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 45
         },
         __self: undefined
       }), __jsx("path", {
         d: "m358.86 481.421c-3.761-1.743-8.217-.105-9.957 3.654-1.195 2.581-2.658 4.778-4.473 6.718-3.61 3.861-11.26 5.64-15.376 5.434-.246-.013-.49-.013-.736 0-4.118.204-11.766-1.573-15.376-5.435-9.723-10.396-8.538-28.5-7.586-43.046l5.255-84.923c1.353-21.854 2.698-38.79 3.886-53.731 2.085-26.229 3.886-48.882 4.864-86.844.384-14.896-4.197-26.659-13.617-34.963-16.124-14.214-27.323-33.854-32.39-56.797-.893-4.044-4.892-6.601-8.94-5.707-4.045.893-6.6 4.896-5.706 8.941 5.756 26.07 18.591 48.483 37.116 64.815 6.016 5.303 8.811 12.933 8.543 23.325-.969 37.56-2.755 60.027-4.822 86.042-1.193 15.003-2.545 32.008-3.904 53.994l-5.221 84.381-.031.488c-1.081 16.514-2.561 39.131 11.598 54.271 6.958 7.441 18.612 10.481 26.701 10.187.35.013.706.019 1.068.019 8.008 0 18.976-3.086 25.631-10.205 2.88-3.079 5.278-6.666 7.128-10.66 1.74-3.759.104-8.217-3.655-9.958z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 46
         },
         __self: undefined
       }), __jsx("path", {
         d: "m216.716 0h-2.232c-9.935 0-18.018 8.083-18.018 18.018v100.104c0 1.515-1.232 2.748-2.748 2.748-1.515 0-2.747-1.232-2.747-2.748v-100.104c0-9.935-8.083-18.018-18.018-18.018h-.495c-9.935 0-18.018 8.083-18.018 18.018v100.104c0 1.515-1.232 2.748-2.748 2.748h-.494c-1.516 0-2.748-1.232-2.748-2.748v-100.104c0-9.935-8.083-18.018-18.017-18.018h-2.233c-9.935 0-18.018 8.083-18.018 18.018v115.703c0 25.197 10.583 49.064 29.064 65.508l.349.308c6.017 5.305 8.811 12.934 8.542 23.325-.969 37.563-2.755 60.032-4.822 86.048-1.192 15.002-2.544 32.005-3.903 53.988l-5.222 84.382-.032.496c-1.079 16.512-2.558 39.125 11.598 54.263 6.959 7.441 18.616 10.46 26.703 10.187.35.012.705.019 1.068.019 8.008 0 18.976-3.086 25.633-10.206 14.155-15.138 12.677-37.751 11.598-54.263l-5.253-84.877c-1.36-21.988-2.712-38.993-3.904-53.997-1.122-14.124-2.183-27.464-3.049-42.435-.238-4.135-3.769-7.3-7.921-7.054-4.135.239-7.293 3.785-7.054 7.92.875 15.132 1.941 28.55 3.07 42.757 1.188 14.942 2.534 31.878 3.887 53.734l5.223 84.433.033.497c.95 14.544 2.134 32.645-7.587 43.039-3.611 3.862-11.255 5.64-15.378 5.435-.246-.013-.492-.013-.736 0-4.116.204-11.766-1.573-15.376-5.435-9.721-10.395-8.537-28.495-7.587-43.039l5.257-84.93c1.353-21.852 2.698-38.785 3.886-53.726 2.084-26.231 3.885-48.885 4.863-86.849.386-14.895-4.196-26.658-13.634-34.979l-.311-.273c-15.256-13.574-24.005-33.356-24.005-54.275v-115.704c0-1.664 1.354-3.018 3.018-3.018h2.232c1.664 0 3.018 1.354 3.018 3.018v100.104c0 9.786 7.962 17.748 17.748 17.748h.494c9.786 0 17.748-7.961 17.748-17.748v-100.104c0-1.664 1.354-3.018 3.018-3.018h.495c1.664 0 3.018 1.354 3.018 3.018v100.104c0 9.786 7.961 17.748 17.747 17.748s17.748-7.961 17.748-17.748v-100.104c0-1.664 1.354-3.018 3.018-3.018h2.232c1.664 0 3.018 1.354 3.018 3.018v115.703c0 20.918-8.749 40.701-24.011 54.28l-.321.284c-9.42 8.305-14.001 20.068-13.617 34.963.078 3.054.162 6.006.251 8.867.128 4.14 3.544 7.383 7.728 7.265 4.14-.128 7.393-3.588 7.265-7.728-.087-2.836-.171-5.763-.249-8.79-.268-10.392 2.527-18.022 8.538-23.321l.383-.339c18.451-16.417 29.034-40.284 29.034-65.48v-115.704c-.002-9.935-8.085-18.018-18.019-18.018z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 47
         },
         __self: undefined
       }));
@@ -3779,46 +3780,46 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         viewBox: "0 0 512 512",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
-        },
-        __self: undefined
-      }, __jsx("g", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 52
         },
         __self: undefined
       }, __jsx("g", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 57
         },
         __self: undefined
       }, __jsx("g", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 58
+        },
+        __self: undefined
+      }, __jsx("g", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
         },
         __self: undefined
       }, __jsx("path", {
         d: "M404.211,180.547c0-22.289-18.132-40.421-40.421-40.421H212.884c-22.289,0-40.421,18.132-40.421,40.421 s18.132,40.421,40.421,40.421h150.905C386.078,220.968,404.211,202.836,404.211,180.547z M312.589,204.8h-48.505v-16.168h48.505 V204.8z M363.789,204.8h-35.032v-24.253c0-4.465-3.618-8.084-8.084-8.084H256c-4.465,0-8.084,3.62-8.084,8.084V204.8h-35.032 c-13.373,0-24.253-10.879-24.253-24.253c0-13.373,10.879-24.253,24.253-24.253h150.905c13.372,0,24.253,10.879,24.253,24.253 C388.042,193.921,377.162,204.8,363.789,204.8z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 60
         },
         __self: undefined
       }), __jsx("path", {
         d: "M384.269,317.979c13.372,0,24.253-10.879,24.253-24.253s-10.88-24.253-24.253-24.253s-24.253,10.879-24.253,24.253 S370.897,317.979,384.269,317.979z M384.269,285.642c4.458,0,8.084,3.626,8.084,8.084s-3.626,8.084-8.084,8.084 s-8.084-3.626-8.084-8.084S379.811,285.642,384.269,285.642z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 67
         },
         __self: undefined
       }), __jsx("path", {
         d: "M447.326,248.376v-78.608c0-40.119-32.639-72.758-72.758-72.758H220.032c-40.172,0-77.362,23.401-94.745,59.617 L24.556,366.484h-0.303C10.879,366.484,0,377.363,0,390.737c0,13.373,10.879,24.253,24.253,24.253h420.379 c13.372,0,24.253-10.879,24.253-24.253c0-13.373-10.88-24.253-24.253-24.253H42.49l23.283-48.505h233.344 c22.289,0,40.421-18.132,40.421-40.421c0-22.289-18.132-40.421-40.421-40.421H137.432c-4.465,0-8.084,3.62-8.084,8.084 c0,4.465,3.62,8.084,8.084,8.084h161.684c13.372,0,24.253,10.879,24.253,24.253c0,13.373-10.88,24.253-24.253,24.253H73.534 l0.004-0.01l66.324-138.176c14.709-30.645,46.177-50.445,80.168-50.445h154.538c31.203,0,56.589,25.385,56.589,56.589v161.684 c0,4.465,3.618,8.084,8.084,8.084c4.466,0,8.084-3.62,8.084-8.084v-66.781c27.386,3.935,48.505,27.544,48.505,56.003 c0,4.465,3.619,8.084,8.084,8.084c4.466,0,8.084-3.62,8.084-8.084C512,283.288,483.654,252.412,447.326,248.376z M444.632,382.653c4.458,0,8.084,3.626,8.084,8.084c0,4.458-3.626,8.084-8.084,8.084H24.253c-4.458,0-8.084-3.626-8.084-8.084 c0-4.458,3.626-8.084,8.084-8.084h5.345c0.013,0,0.058,0,0.068,0H444.632z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 72
         },
         __self: undefined
       })))));
@@ -3829,7 +3830,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "flex items-center justify-start p-2 w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 92
     },
     __self: undefined
   }, renderIcon(type), __jsx("p", {
@@ -3839,11 +3840,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "pl-2 text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 94
     },
     __self: undefined
   }, title));
-});
+};
 
 /***/ }),
 
@@ -5735,19 +5736,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_presentational_Cancellations__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/presentational/Cancellations */ "./src/components/presentational/Cancellations.tsx");
 /* harmony import */ var _components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/presentational/CheckInCard */ "./src/components/presentational/CheckInCard.tsx");
 /* harmony import */ var _components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/presentational/StayDescription */ "./src/components/presentational/StayDescription.tsx");
-/* harmony import */ var _components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/wrapper/DetailSectionOverflow */ "./src/components/wrapper/DetailSectionOverflow.js");
-/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.js");
-/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.tsx");
-/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.js");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26__);
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27__);
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.js");
+/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.tsx");
+/* harmony import */ var _components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/wrapper/DetailSectionOverflow */ "./src/components/wrapper/DetailSectionOverflow.js");
+/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.js");
+/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.tsx");
+/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.js");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__);
 /* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.js");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stays/[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -5777,6 +5778,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
  // Wrapper
 
 
@@ -5785,7 +5787,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
  // Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
-
 
 
 
@@ -5842,19 +5843,19 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 93
     },
     __self: undefined
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 95
     },
     __self: undefined
   }, "Vacation Rentals, Homes, Experiences & Places") : __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 97
     },
     __self: undefined
   }, data.stay.name), __jsx("meta", {
@@ -5862,7 +5863,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 100
     },
     __self: undefined
   }), __jsx("link", {
@@ -5871,34 +5872,34 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 104
     },
     __self: undefined
   })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 106
     },
     __self: undefined
   }), __jsx("div", {
     className: "px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 108
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex flex-col-reverse lg:flex-col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 109
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 110
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -5906,7 +5907,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 350,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 112
     },
     __self: undefined
   }) : __jsx("h3", {
@@ -5916,14 +5917,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-3xl text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 114
     },
     __self: undefined
   }, data.stay.name), __jsx("div", {
     className: "flex items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 121
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -5931,20 +5932,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 123
     },
     __self: undefined
   }) : __jsx("div", {
     className: "flex items-center justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 125
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 126
     },
     __self: undefined
   }, __jsx("svg", {
@@ -5957,20 +5958,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     viewBox: "0 0 37.286 37.287",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 127
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: undefined
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: undefined
   })))), __jsx("p", {
@@ -5980,20 +5981,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-1 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: undefined
   }, data.stay.reviews_per_month, " (", data.stay.number_of_reviews, ")"), __jsx("span", {
     className: "text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 152
     },
     __self: undefined
   }, "\xA0\xB7\xA0"), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 153
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6005,7 +6006,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 154
     },
     __self: undefined
   }, __jsx("g", {
@@ -6013,35 +6014,35 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     "fill-rule": "evenodd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 159
     },
     __self: undefined
   }, __jsx("path", {
     d: "m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 160
     },
     __self: undefined
   }), __jsx("path", {
     d: "m330.999 91.994v-76.994c0-8.284-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v76.994c-.033 0-.064.005-.097.005h150.193c-.032-.001-.064-.005-.096-.005z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 161
     },
     __self: undefined
   }), __jsx("path", {
     d: "m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 162
     },
     __self: undefined
   }), __jsx("path", {
     d: "m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 163
     },
     __self: undefined
   })))), data.stay.host_is_superhost ? __jsx("p", {
@@ -6051,14 +6052,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-1 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 168
     },
     __self: undefined
   }, "Superhost") : null, __jsx("span", {
     className: "text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 175
     },
     __self: undefined
   }, "\xA0\xB7\xA0"), __jsx("a", {
@@ -6069,34 +6070,34 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 176
     },
     __self: undefined
   }, data.stay.street)), __jsx("div", {
     className: "hidden lg:inline-block flex items-start justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 184
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center pr-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 185
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-start pl-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 186
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 187
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6108,21 +6109,21 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 188
     },
     __self: undefined
   }, __jsx("path", {
     d: "m507.523438 148.890625-138.667969-144c-4.523438-4.691406-11.457031-6.164063-17.492188-3.734375-6.058593 2.453125-10.027343 8.320312-10.027343 14.847656v69.335938h-5.332032c-114.6875 0-208 93.3125-208 208v32c0 7.421875 5.226563 13.609375 12.457032 15.296875 1.175781.296875 2.347656.425781 3.519531.425781 6.039062 0 11.820312-3.542969 14.613281-9.109375 29.996094-60.011719 90.304688-97.28125 157.398438-97.28125h25.34375v69.332031c0 6.53125 3.96875 12.398438 10.027343 14.828125 5.996094 2.453125 12.96875.960938 17.492188-3.734375l138.667969-144c5.972656-6.207031 5.972656-15.976562 0-22.207031zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 193
     },
     __self: undefined
   }), __jsx("path", {
     d: "m448.003906 512.003906h-384c-35.285156 0-63.99999975-28.710937-63.99999975-64v-298.664062c0-35.285156 28.71484375-64 63.99999975-64h64c11.796875 0 21.332032 9.535156 21.332032 21.332031s-9.535157 21.332031-21.332032 21.332031h-64c-11.777344 0-21.335937 9.558594-21.335937 21.335938v298.664062c0 11.777344 9.558593 21.335938 21.335937 21.335938h384c11.773438 0 21.332032-9.558594 21.332032-21.335938v-170.664062c0-11.796875 9.535156-21.335938 21.332031-21.335938 11.800781 0 21.335937 9.539063 21.335937 21.335938v170.664062c0 35.289063-28.714844 64-64 64zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 194
     },
     __self: undefined
   }))), __jsx("p", {
@@ -6132,20 +6133,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-2 text-sm text-gray-850 underline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 197
     },
     __self: undefined
   }, "Share")), __jsx("div", {
     className: "flex items-center justify-start pl-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 203
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 204
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6158,14 +6159,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 205
     },
     __self: undefined
   }, __jsx("path", {
     d: "m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 210
     },
     __self: undefined
   }))), __jsx("p", {
@@ -6175,73 +6176,73 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-2 text-sm text-gray-850 underline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 213
     },
     __self: undefined
   }, "Save")))))), __jsx("div", {
     className: "w-full px-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 223
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "w-full lg:w-1/2 h-12 lg:h-57v relative rounded border-r-4 border-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 225
     },
     __self: undefined
   }, __jsx(SSkeletonPulse1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225
+      lineNumber: 226
     },
     __self: undefined
   })) : __jsx(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__["ImagePanel"], {
     img1: data.stay.picture_url,
-    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_26___default.a,
-    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
-    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
-    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_29___default.a,
+    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
+    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
+    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29___default.a,
+    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30___default.a,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 229
     },
     __self: undefined
   }))), __jsx("div", {
     className: "w-full lg:w-7/12 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239
+      lineNumber: 240
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-between border-b border-gray-200 mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 241
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex justify-start w-9/12 py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 242
     },
     __self: undefined
   }, __jsx("div", {
     className: "mt-4 flex items-start justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 243
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex flex-col ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 244
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -6249,7 +6250,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 100,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245
+      lineNumber: 246
     },
     __self: undefined
   }) : __jsx("h3", {
@@ -6259,7 +6260,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-md lg:text-2xl text-gray-850 leading-none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 248
     },
     __self: undefined
   }, data.stay.size, " hosted by ", data.stay.host_name), loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -6267,7 +6268,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 200,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 255
     },
     __self: undefined
   }) : __jsx("div", {
@@ -6277,66 +6278,66 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256
+      lineNumber: 257
     },
     __self: undefined
   }, __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 260
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 261
     },
     __self: undefined
   }, data.stay.accommodates, ' ', data.stay.accommodates > 1 ? 'guests' : 'guest')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265
+      lineNumber: 266
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 267
     },
     __self: undefined
   }, data.stay.bedrooms, ' ', data.stay.bedrooms > 1 ? 'bedrooms' : 'bedroom')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271
+      lineNumber: 272
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272
+      lineNumber: 273
     },
     __self: undefined
   }, data.stay.beds, " ", data.stay.beds > 1 ? 'beds' : 'bed')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
+      lineNumber: 277
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 278
     },
     __self: undefined
   }, data.stay.bathrooms, ' ', data.stay.bathrooms > 1 ? 'baths' : 'bath')))))), __jsx("div", {
     className: "flex justify-end items-start w-3/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
+      lineNumber: 289
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -6345,7 +6346,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 60,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 291
     },
     __self: undefined
   }) : __jsx(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -6353,7 +6354,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     placeholder: data.stay.host_thumbnail_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292
+      lineNumber: 293
     },
     __self: undefined
   }, (src, loading, isVisible) => __jsx("img", {
@@ -6361,27 +6362,27 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     src: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
+      lineNumber: 297
     },
     __self: undefined
   })))), __jsx("div", {
     className: "my-6 border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 303
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 305
     },
     __self: undefined
   }, __jsx(SSkeletonPulse1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 306
     },
     __self: undefined
   })) : __jsx(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -6389,14 +6390,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     host_name: data.stay.host_name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 309
     },
     __self: undefined
   })), loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
+      lineNumber: 316
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -6405,21 +6406,21 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     count: 10,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316
+      lineNumber: 317
     },
     __self: undefined
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
     className: "border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 321
     },
     __self: undefined
   }, __jsx("div", {
     className: "my-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 322
     },
     __self: undefined
   }, __jsx(_components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_21__["StayDescription"], {
@@ -6430,27 +6431,27 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     changeLength: () => setLength(!length),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 323
     },
     __self: undefined
   }), __jsx("div", {
     className: "my-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 330
     },
     __self: undefined
   }, __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330
+      lineNumber: 331
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 332
     },
     __self: undefined
   }, __jsx("p", {
@@ -6460,14 +6461,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 333
     },
     __self: undefined
   }, "Any questions for the host?")))), __jsx("div", {
     className: "mt-10 mb-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338
+      lineNumber: 339
     },
     __self: undefined
   }, __jsx("a", {
@@ -6478,73 +6479,73 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339
+      lineNumber: 340
     },
     __self: undefined
-  }, "Contact host")))), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_22__["default"], {
+  }, "Contact host")))), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "Sleeping arrangements",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 348
-    },
-    __self: undefined
-  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_31__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 349
     },
     __self: undefined
-  })), __jsx(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_23__["default"], {
+  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_31__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 350
+    },
+    __self: undefined
+  })), __jsx(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["default"], {
     title: "Amenities",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 351
+      lineNumber: 352
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 352
-    },
-    __self: undefined
-  }, __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
-    type: "wifi",
-    title: "Wifi",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 353
     },
     __self: undefined
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
-    type: "laptop",
-    title: "Laptop-friendly workspace",
+  }, __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+    type: "wifi",
+    title: "Wifi",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 354
     },
     __self: undefined
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+    type: "laptop",
+    title: "Laptop-friendly workspace",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 355
+    },
+    __self: undefined
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
     type: "kitchen",
     title: "Kitchen",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358
+      lineNumber: 359
     },
     __self: undefined
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_30__["default"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
     type: "iron",
     title: "Iron",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 360
     },
     __self: undefined
   })), __jsx("div", {
     className: "mt-10 mb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361
+      lineNumber: 362
     },
     __self: undefined
   }, __jsx("a", {
@@ -6554,35 +6555,35 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "py-3 px-6 rounded-xl border border-black ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362
+      lineNumber: 363
     },
     __self: undefined
   }, "Show all 32 amenities"))))), length ? __jsx("div", {
     className: "lg:w-5/12 lg:h-100r",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 373
+      lineNumber: 374
     },
     __self: undefined
   }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__["CheckInCard"], {
     loading: loading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 374
+      lineNumber: 375
     },
     __self: undefined
   })) : __jsx("div", {
     className: "lg:w-5/12 lg:h-80v",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 377
+      lineNumber: 378
     },
     __self: undefined
   }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__["CheckInCard"], {
     loading: loading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378
+      lineNumber: 379
     },
     __self: undefined
   })), loading ? null : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -6590,7 +6591,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     number_of_reviews: data.stay.number_of_reviews,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 384
+      lineNumber: 385
     },
     __self: undefined
   }), __jsx(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -6606,58 +6607,58 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     host_response_time: data.stay.host_response_time,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388
+      lineNumber: 389
     },
     __self: undefined
   }), __jsx(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400
-    },
-    __self: undefined
-  }), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_22__["default"], {
-    title: "More places to stay",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 401
     },
     __self: undefined
-  }, __jsx(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["default"], {
+  }), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
+    title: "More places to stay",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 402
     },
     __self: undefined
-  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_22__["default"], {
-    title: "Things to do nearby",
+  }, __jsx(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
+      lineNumber: 403
     },
     __self: undefined
-  }, __jsx(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_24__["ToDoNear"], {
+  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
+    title: "Things to do nearby",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 405
     },
     __self: undefined
-  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_22__["default"], {
-    title: "Explore other options in and around Penafiel",
+  }, __jsx(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_25__["ToDoNear"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 407
+      lineNumber: 406
     },
     __self: undefined
-  }, __jsx(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_25__["default"], {
+  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
+    title: "Explore other options in and around Penafiel",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 408
     },
     __self: undefined
+  }, __jsx(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_26__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 409
+    },
+    __self: undefined
   })))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 413
+      lineNumber: 414
     },
     __self: undefined
   }));

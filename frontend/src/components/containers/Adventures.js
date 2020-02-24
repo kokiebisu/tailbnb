@@ -5,7 +5,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import Media from 'react-media';
 
 // Component
-import AdventureCard from '../presentational/AdventureCard';
+import { AdventureCard } from '../presentational/AdventureCard';
 import ShowAll from '../ShowAll';
 
 const GET_ADVENTURES = gql`

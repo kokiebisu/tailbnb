@@ -2240,7 +2240,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-media */ "react-media");
 /* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_media__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.js");
+/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2287,7 +2287,7 @@ const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
           lineNumber: 33
         },
         __self: undefined
-      }, __jsx(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, __jsx(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_5__["AdventureCard"], {
         key: data[i].id,
         id: data[i].id,
         img: data[i].img,
@@ -5092,94 +5092,83 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/AdventureCard.js":
-/*!********************************************************!*\
-  !*** ./src/components/presentational/AdventureCard.js ***!
-  \********************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/AdventureCard.tsx":
+/*!*********************************************************!*\
+  !*** ./src/components/presentational/AdventureCard.tsx ***!
+  \*********************************************************/
+/*! exports provided: AdventureCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdventureCard", function() { return AdventureCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "react-lazy-progressive-image");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/AdventureCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/AdventureCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = (({
+const AdventureCard = ({
   id,
   img,
-  imglow,
   country,
   title,
   cost,
   period
 }) => {
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/adventures/[id]",
     as: `/adventures/${id}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 22
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-30/31 cursor-pointer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 23
     },
     __self: undefined
-  }, __jsx(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: img,
-    placeholder: imglow,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }, (src, loading, isVisible) => __jsx("img", {
+  }, __jsx("img", {
     className: "w-full rounded-lg",
-    src: src,
+    src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 24
     },
     __self: undefined
-  })), __jsx("p", {
+  }), __jsx("p", {
     className: "uppercase text-xs my-2 font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 26
     },
     __self: undefined
   }, country), __jsx("p", {
     className: "my-1 w-5/6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: undefined
   }, title), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 28
     },
     __self: undefined
   }, "From $", cost, " / person", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 30
     },
     __self: undefined
   }, " \xB7 "), period, " days")));
-});
+};
 
 /***/ }),
 
@@ -6573,17 +6562,6 @@ module.exports = require("react-addons-css-transition-group");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
-
-/***/ }),
-
-/***/ "react-lazy-progressive-image":
-/*!***********************************************!*\
-  !*** external "react-lazy-progressive-image" ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-lazy-progressive-image");
 
 /***/ }),
 
