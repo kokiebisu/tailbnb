@@ -13,7 +13,7 @@ export default ({ title, answer }) => {
   };
   const newAnswer = renderAnswer(answer);
   return (
-    <div>
+    <div className='mb-3'>
       <h3 style={{ fontFamily: 'airbnb-bold' }} className='text-gray-750'>
         {title}
       </h3>
