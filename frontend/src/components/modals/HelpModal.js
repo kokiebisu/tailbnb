@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 
 // Components
 import HelpCard from '../presentational/HelpCard';
+import HelpAdditional from '../presentational/HelpAdditional';
 
 export default () => {
   const [word, setWord] = useState('');
@@ -79,7 +80,7 @@ export default () => {
           </p>
         </div>
         <div>
-          <h1>Help More Modal Here</h1>
+          <HelpAdditional title='Reservation requests' />
         </div>
       </div>
       <button>Visit the Help Centre</button>
