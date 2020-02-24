@@ -1,7 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ type, title }) => {
-  const renderIcon = (type) => {
+interface Prop {
+  type: string;
+  title: string;
+}
+
+export const AmenityCard: React.FC<Prop> = ({ type, title }) => {
+  const renderIcon = (type: string) => {
     if (type == 'wifi') {
       return (
         <svg
