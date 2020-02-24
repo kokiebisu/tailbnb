@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2824,7 +2824,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.js");
+/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.js");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2898,7 +2898,7 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
         lineNumber: 51
       },
       __self: undefined
-    }, __jsx(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__["StayCard"], {
       key: id,
       id: id,
       host_is_superhost: host_is_superhost,
@@ -4388,7 +4388,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full flex justify-center items-center ",
+    className: "w-full flex justify-center items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -4448,7 +4448,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }))))))), __jsx("div", {
-    className: "border-b border-t border-gray-300 p-8",
+    className: "bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -5875,35 +5875,33 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/StayCard.js":
-/*!***************************************************!*\
-  !*** ./src/components/presentational/StayCard.js ***!
-  \***************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/StayCard.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/presentational/StayCard.tsx ***!
+  \****************************************************/
+/*! exports provided: StayCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StayCard", function() { return StayCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "react-lazy-progressive-image");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/StayCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/StayCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // import LazyImage from 'react-lazy-progressive-image';
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = (({
+const StayCard = ({
   id,
   host_is_superhost,
   name,
   price,
   country,
   reviews_per_month,
-  picture_url,
-  picture_url_low
+  picture_url
 }) => {
   const renderhost = host_is_superhost => {
     if (host_is_superhost == 't') {
@@ -5911,21 +5909,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         className: "md:flex md:flex-wrap md:items-center md:justify-start",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 27
         },
         __self: undefined
       }, __jsx("p", {
         className: "uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 28
         },
         __self: undefined
       }, "Superhost"), __jsx("p", {
         className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 31
         },
         __self: undefined
       }, country));
@@ -5934,63 +5932,55 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         className: "md:flex md:flex-wrap md:items-center md:justify-start",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 38
         },
         __self: undefined
       }, __jsx("p", {
         className: "mt-3 text-sm sm:my-2 font-light text-gray-600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 39
         },
         __self: undefined
       }, country));
     }
   };
 
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/stays/[id]",
     as: `/stays/${id}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 48
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-30/31 cursor-pointer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 49
     },
     __self: undefined
-  }, __jsx(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: picture_url,
-    placeholder: picture_url_low,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
-  }, (src, loading, isVisible) => __jsx("img", {
+  }, __jsx("img", {
     className: "w-full rounded",
-    src: src,
+    src: picture_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 50
     },
     __self: undefined
-  })), __jsx("div", {
+  }), __jsx("div", {
     className: "flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 51
     },
     __self: undefined
   }, renderhost(host_is_superhost), __jsx("div", {
     className: "flex items-center justify-center flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6005,52 +5995,52 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: undefined
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 63
     },
     __self: undefined
   }))), __jsx("p", {
     className: "pl-1 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: undefined
   }, reviews_per_month))), __jsx("p", {
     className: "my-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 76
     },
     __self: undefined
   }, name), __jsx("p", {
     className: "tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: undefined
   }, __jsx("span", {
     className: "font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 78
     },
     __self: undefined
   }, "$", price, " CAD"), "/night")));
-});
+};
 
 /***/ }),
 
@@ -6468,7 +6458,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
