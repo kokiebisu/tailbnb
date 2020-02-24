@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import CharacteristicCard from '../presentational/CharacteristicCard';
+import { CharacteristicCard } from '../presentational/CharacteristicCard';
 
 export default ({ hostType, hostName }) => {
   return (
