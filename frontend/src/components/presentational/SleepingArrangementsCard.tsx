@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-export default () => {
+export const SleepingArrangementsCard: React.FC<{}> = () => {
   return (
     <div className='w-48 p-2 pl-6'>
       <div className='pt-2 pb-4'>

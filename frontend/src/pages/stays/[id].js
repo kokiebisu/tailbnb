@@ -27,7 +27,6 @@ import Neighborhood from '../../components/containers/Neighborhood';
 import KeepInMind from '../../components/containers/KeepInMind';
 import MoreHomes from '../../components/containers/MoreHomes';
 import Characteristics from '../../components/containers/Characteristics';
-import SleepingArrangmentsCard from '../../components/presentational/SleepingArrangmentsCard';
 import Cancellations from '../../components/presentational/Cancellations';
 import CheckInCard from '../../components/presentational/CheckInCard';
 import { StayDescription } from '../../components/presentational/StayDescription';
