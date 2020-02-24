@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1870,7 +1870,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/presentational/Review */ "./src/components/presentational/Review.js");
+/* harmony import */ var _presentational_ReviewCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/ReviewCard */ "./src/components/presentational/ReviewCard.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Reviews.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // Components
@@ -2187,7 +2187,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 122
     },
     __self: undefined
-  }, __jsx(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_presentational_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 123
@@ -2200,7 +2200,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 125
     },
     __self: undefined
-  }, __jsx(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_presentational_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 126
@@ -2213,7 +2213,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 128
     },
     __self: undefined
-  }, __jsx(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_presentational_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 129
@@ -2226,7 +2226,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 131
     },
     __self: undefined
-  }, __jsx(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_presentational_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 132
@@ -2239,7 +2239,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 134
     },
     __self: undefined
-  }, __jsx(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_presentational_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 135
@@ -2252,7 +2252,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 137
     },
     __self: undefined
-  }, __jsx(_components_presentational_Review__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_presentational_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 138
@@ -5168,25 +5168,25 @@ const SSkeletonPulse5 = styled_components__WEBPACK_IMPORTED_MODULE_1___default()
 
 /***/ }),
 
-/***/ "./src/components/presentational/Review.js":
-/*!*************************************************!*\
-  !*** ./src/components/presentational/Review.js ***!
-  \*************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/ReviewCard.tsx":
+/*!******************************************************!*\
+  !*** ./src/components/presentational/ReviewCard.tsx ***!
+  \******************************************************/
+/*! exports provided: ReviewCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewCard", function() { return ReviewCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
-/* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/Review.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/ReviewCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Image
 
+const img1 = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+const ReviewCard = () => {
   const renderDescription = description => {
     const wordArray = description.split(' ');
 
@@ -5207,7 +5207,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         newArray.push(wordArray[i]);
       }
 
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("p", {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("p", {
         style: {
           fontFamily: 'airbnb-book'
         },
@@ -5249,7 +5249,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined
   }, __jsx("img", {
     className: "h-14 w-14 rounded-full",
-    src: _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    src: img1,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -5290,7 +5290,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, "October 2019")))), renderDescription(description));
-});
+};
 
 /***/ }),
 
@@ -6710,7 +6710,7 @@ const SSkeletonPulse1 = styled_components__WEBPACK_IMPORTED_MODULE_4___default()
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /*!***************************************!*\
   !*** multi ./src/pages/stays/[id].js ***!
   \***************************************/

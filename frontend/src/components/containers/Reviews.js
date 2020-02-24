@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import Review from '../../components/presentational/Review';
+import { ReviewCard } from '../presentational/ReviewCard';
 
 export default ({ reviews_per_month, number_of_reviews }) => {
   return (
@@ -120,22 +120,22 @@ export default ({ reviews_per_month, number_of_reviews }) => {
         </div>
         <div className='flex items-start justify-start flex-wrap w-full'>
           <div className='w-full lg:w-1/2 border-b border-gray-300'>
-            <Review />
+            <ReviewCard />
           </div>
           <div className='w-full lg:w-1/2 border-b border-gray-300'>
-            <Review />
+            <ReviewCard />
           </div>
           <div className='w-full lg:w-1/2 border-b border-gray-300'>
-            <Review />
+            <ReviewCard />
           </div>
           <div className='w-full lg:w-1/2 border-b border-gray-300'>
-            <Review />
+            <ReviewCard />
           </div>
           <div className='w-full lg:w-1/2 border-b border-gray-300'>
-            <Review />
+            <ReviewCard />
           </div>
           <div className='w-full lg:w-1/2 border-b border-gray-300'>
-            <Review />
+            <ReviewCard />
           </div>
         </div>
         <div className='py-10'>
