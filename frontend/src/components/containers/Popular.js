@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 // Components
-import Location from '../presentational/Location';
+import { Location } from '../presentational/Location';
 
 export default () => {
   const [loading, setLoading] = useState(true);
