@@ -28339,7 +28339,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactjs_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactjs-popup */ "./node_modules/reactjs-popup/reactjs-popup.es.js");
 /* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-addons-css-transition-group */ "./node_modules/react-addons-css-transition-group/index.js");
 /* harmony import */ var react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_addons_css_transition_group__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
+/* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.tsx");
 /* harmony import */ var _modals_RegisterModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modals/RegisterModal */ "./src/components/modals/RegisterModal.js");
 /* harmony import */ var _modals_HelpModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modals/HelpModal */ "./src/components/modals/HelpModal.js");
 /* harmony import */ var _public_img_high_airbnb_background_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
@@ -28621,7 +28621,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 124
     },
     __self: this
-  }, "Book unique places to stay and things to do."), __jsx(_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "Book unique places to stay and things to do."), __jsx(_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_3__["HeaderCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 127
@@ -29687,21 +29687,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/HeaderCard.js":
-/*!*****************************************************!*\
-  !*** ./src/components/presentational/HeaderCard.js ***!
-  \*****************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/HeaderCard.tsx":
+/*!******************************************************!*\
+  !*** ./src/components/presentational/HeaderCard.tsx ***!
+  \******************************************************/
+/*! exports provided: HeaderCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderCard", function() { return HeaderCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HeaderCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HeaderCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var HeaderCard = function HeaderCard() {
   return __jsx("div", {
     className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
     __source: {
@@ -29932,7 +29933,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, "Search"))));
-});
+};
 
 /***/ }),
 
@@ -30798,7 +30799,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -30821,5 +30822,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
