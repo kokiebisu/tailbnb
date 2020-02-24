@@ -38,7 +38,7 @@ import DetailSection from '../../components/wrapper/DetailSection';
 
 // Containers
 import { ToDoNear } from '../../components/containers/ToDoNear';
-import MoreLocations from '../../components/containers/MoreLocations';
+import { MoreLocations } from '../../components/containers/MoreLocations';
 
 // Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
