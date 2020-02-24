@@ -1,7 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, answer }) => {
-  const renderAnswer = (answer) => {
+interface Prop {
+  title: string;
+  answer: string;
+}
+
+export const HelpCard: React.FC<Prop> = ({ title, answer }) => {
+  const renderAnswer = (answer: string) => {
     const wordArray = answer.split(' ');
     const newArray = [];
     for (let i = 0; i < 20; i++) {

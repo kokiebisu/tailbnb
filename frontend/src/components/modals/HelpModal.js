@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 
 // Components
-import HelpCard from '../presentational/HelpCard';
+import { HelpCard } from '../presentational/HelpCard';
 import HelpAdditional from '../presentational/HelpAdditional';
 
 export default ({ setHelpModal }) => {

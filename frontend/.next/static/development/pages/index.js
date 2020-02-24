@@ -28695,7 +28695,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/HelpCard */ "./src/components/presentational/HelpCard.js");
+/* harmony import */ var _presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/HelpCard */ "./src/components/presentational/HelpCard.tsx");
 /* harmony import */ var _presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HelpAdditional */ "./src/components/presentational/HelpAdditional.js");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/HelpModal.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -28893,7 +28893,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 90
     },
     __self: this
-  }, __jsx(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
     title: questions[0].title,
     answer: questions[0].answer,
     __source: {
@@ -28901,7 +28901,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 94
     },
     __self: this
-  }), __jsx(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), __jsx(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
     title: questions[0].title,
     answer: questions[0].answer,
     __source: {
@@ -30017,21 +30017,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/HelpCard.js":
-/*!***************************************************!*\
-  !*** ./src/components/presentational/HelpCard.js ***!
-  \***************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/HelpCard.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/presentational/HelpCard.tsx ***!
+  \****************************************************/
+/*! exports provided: HelpCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpCard", function() { return HelpCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HelpCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HelpCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+var HelpCard = function HelpCard(_ref) {
   var title = _ref.title,
       answer = _ref.answer;
 
@@ -30053,7 +30054,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "mb-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 21
     },
     __self: this
   }, __jsx("h3", {
@@ -30063,7 +30064,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 22
     },
     __self: this
   }, title), __jsx("p", {
@@ -30073,14 +30074,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "text-gray-750 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 25
     },
     __self: this
   }, newAnswer), __jsx("button", {
     className: "flex ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 30
     },
     __self: this
   }, __jsx("p", {
@@ -30090,14 +30091,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "text-green-850 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 31
     },
     __self: this
   }, "Read more"), __jsx("div", {
     className: "pl-3 flex justify-center items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: this
   }, __jsx("svg", {
@@ -30111,24 +30112,24 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     viewBox: "0 0 451.846 451.847",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 37
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 42
     },
     __self: this
   }, __jsx("path", {
     d: "M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 43
     },
     __self: this
   }))))));
-});
+};
 
 /***/ }),
 
@@ -30796,7 +30797,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -30819,5 +30820,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
