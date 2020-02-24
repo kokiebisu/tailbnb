@@ -26815,7 +26815,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/FeaturedCard */ "./src/components/presentational/FeaturedCard.js");
+/* harmony import */ var _presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/FeaturedCard */ "./src/components/presentational/FeaturedCard.tsx");
 /* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
 /* harmony import */ var _public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_featured1_jpg__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _public_img_high_featured2_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
@@ -26948,7 +26948,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
         lineNumber: 66
       },
       __self: this
-    }, __jsx(_presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx(_presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__["FeaturedCard"], {
       key: id,
       img: img,
       imglow: imglow,
@@ -29606,84 +29606,72 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/FeaturedCard.js":
-/*!*******************************************************!*\
-  !*** ./src/components/presentational/FeaturedCard.js ***!
-  \*******************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/FeaturedCard.tsx":
+/*!********************************************************!*\
+  !*** ./src/components/presentational/FeaturedCard.tsx ***!
+  \********************************************************/
+/*! exports provided: FeaturedCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturedCard", function() { return FeaturedCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/FeaturedCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/FeaturedCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // import LazyImage from 'react-lazy-progressive-image';
 
-
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+var FeaturedCard = function FeaturedCard(_ref) {
   var img = _ref.img,
-      imglow = _ref.imglow,
       verified = _ref.verified,
       description = _ref.description;
   return __jsx("div", {
     className: "w-30/31",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 16
     },
     __self: this
   }, __jsx("div", {
     className: "h-full w-64 sm:w-full bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 17
     },
     __self: this
-  }, __jsx(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, __jsx("img", {
+    className: "w-full rounded-xl",
     src: img,
-    placeholder: imglow,
+    alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 18
     },
     __self: this
-  }, function (src, loading, isVisible) {
-    return __jsx("img", {
-      className: "w-full rounded-xl",
-      src: src,
-      alt: "adventure1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      },
-      __self: this
-    });
   }), __jsx("div", {
     className: "flex flex-wrap items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 20
     },
     __self: this
   }, __jsx("p", {
     className: "uppercase text-xs my-2 font-bold text-pink-700",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 21
     },
     __self: this
   }, verified, "+ Verified Stays")), __jsx("p", {
     className: "whitespace-normal my-1 text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 25
     },
     __self: this
   }, description)));
-});
+};
 
 /***/ }),
 
@@ -30799,7 +30787,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -30822,5 +30810,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
