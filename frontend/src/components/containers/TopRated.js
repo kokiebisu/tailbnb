@@ -5,7 +5,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import Media from 'react-media';
 
 // Components
-import TopRatedCard from '../presentational/TopRatedCard';
+import { TopRatedCard } from '../presentational/TopRatedCard';
 import ShowAll from '../ShowAll';
 
 const GET_EXPERIENCES = gql`
