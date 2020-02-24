@@ -1,11 +1,15 @@
 import * as React from 'react';
 
-export const HelpAdditional: React.FC<{}> = () => {
+interface Prop {
+  title: string;
+}
+
+export const HelpAdditional: React.FC<Prop> = ({ title }) => {
   return (
     <div className='border-b border-gray-300'>
       <div className='flex items-center justify-between py-8'>
         <h3 style={{ fontFamily: 'airbnb-bold' }} className='text-gray-750'>
-          Reservation requests
+          {title}
         </h3>
         <div>
           <svg

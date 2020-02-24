@@ -31,7 +31,7 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   }), __jsx("div", {
@@ -39,44 +39,42 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     },
     __self: this
   }, __jsx("div", {
     className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: this
   }, __jsx("div", {
     className: "relative w-11/12 flex justify-center items-center my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-center absolute left-0 z-20 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }, __jsx("button", {
-    onClick: function onClick() {
-      return setRegisterModal(false);
-    },
+    onClick: setRegisterModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: this
   }, __jsx("div", {
     className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: this
   }, __jsx("svg", {
@@ -85,27 +83,27 @@ var RegisterModal = function RegisterModal(_ref) {
     viewBox: "0 0 47.971 47.971",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: this
   }, __jsx("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 43
     },
     __self: this
   })))))), __jsx("div", {
     className: "w-full flex justify-center items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 54
     },
     __self: this
   }, __jsx("h3", {
@@ -114,49 +112,49 @@ var RegisterModal = function RegisterModal(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
   }, type)))), __jsx("div", {
     className: "w-full flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
   }, __jsx("div", {
     className: "w-11/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: this
   }, __jsx("div", {
     className: "my-3 mt-10",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 61
     },
     __self: this
   }, __jsx("div", {
     className: "w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 62
     },
     __self: this
   }, __jsx("form", {
     action: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 63
     },
     __self: this
   }, __jsx("div", {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 64
     },
     __self: this
   }, __jsx("label", {
@@ -166,7 +164,7 @@ var RegisterModal = function RegisterModal(_ref) {
     htmlFor: "country",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 65
     },
     __self: this
   }), __jsx("p", {
@@ -176,7 +174,7 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "absolute text-gray-650 text-xs top-0 pl-3 pt-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 69
     },
     __self: this
   }, "Country/Region"), __jsx("select", {
@@ -188,35 +186,35 @@ var RegisterModal = function RegisterModal(_ref) {
     id: "countryinput",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 74
     },
     __self: this
   }, __jsx("option", {
     value: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 79
     },
     __self: this
   }, "Canada (+1)"), __jsx("option", {
     value: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 80
     },
     __self: this
   }, "Japan (+81)"), __jsx("option", {
     value: "3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 81
     },
     __self: this
   }, "United States (+1)")), __jsx("div", {
     className: "h-full pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 84
     },
     __self: this
   }, __jsx("svg", {
@@ -225,20 +223,20 @@ var RegisterModal = function RegisterModal(_ref) {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 85
     },
     __self: this
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 89
     },
     __self: this
   })))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 94
     },
     __self: this
   }, __jsx("input", {
@@ -251,14 +249,14 @@ var RegisterModal = function RegisterModal(_ref) {
     placeholder: "Phone number",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 95
     },
     __self: this
   }))))), __jsx("div", {
     className: "py-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 106
     },
     __self: this
   }, __jsx("p", {
@@ -268,7 +266,7 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "text-xs text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 107
     },
     __self: this
   }, "We'll call or text you to confirm your number. Standard message and data rates apply.")), __jsx("button", {
@@ -278,27 +276,27 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "w-full bg-pink-750 py-3 rounded-lg text-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 114
     },
     __self: this
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 117
     },
     __self: this
   }, "Continue")), __jsx("div", {
     className: "pt-4 pb-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 119
     },
     __self: this
   }, __jsx("p", {
     id: "pseudo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 120
     },
     __self: this
   }, __jsx("span", {
@@ -308,21 +306,21 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "text-xs text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 121
     },
     __self: this
   }, "or"))), __jsx("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 128
     },
     __self: this
   }, __jsx("div", {
     className: "absolute left-0 ml-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 129
     },
     __self: this
   }, __jsx("svg", {
@@ -334,14 +332,14 @@ var RegisterModal = function RegisterModal(_ref) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 130
     },
     __self: this
   }, __jsx("path", {
     d: "m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 135
     },
     __self: this
   }))), __jsx("p", {
@@ -351,14 +349,14 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "text-gray-750 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 138
     },
     __self: this
   }, "Continue with email")), __jsx("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 144
     },
     __self: this
   }, __jsx("div", {
@@ -368,7 +366,7 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "absolute left-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 145
     },
     __self: this
   }, __jsx("img", {
@@ -376,7 +374,7 @@ var RegisterModal = function RegisterModal(_ref) {
     src: facebook,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 146
     },
     __self: this
   })), __jsx("p", {
@@ -386,14 +384,14 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "text-gray-750 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 148
     },
     __self: this
   }, "Continue with Facebook")), __jsx("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 154
     },
     __self: this
   }, __jsx("div", {
@@ -403,7 +401,7 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "absolute left-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 155
     },
     __self: this
   }, __jsx("img", {
@@ -411,7 +409,7 @@ var RegisterModal = function RegisterModal(_ref) {
     src: google,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 156
     },
     __self: this
   })), __jsx("p", {
@@ -421,14 +419,14 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "text-gray-750 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 158
     },
     __self: this
   }, "Continue with Google")), __jsx("div", {
     className: "flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 164
     },
     __self: this
   }, __jsx("p", {
@@ -438,7 +436,7 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "text-sm text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 165
     },
     __self: this
   }, phrase, " have an account?"), __jsx("button", {
@@ -451,7 +449,7 @@ var RegisterModal = function RegisterModal(_ref) {
     className: "border-b border-gray-750 text-sm ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 170
     },
     __self: this
   }, nottype))))));
@@ -460,4 +458,4 @@ var RegisterModal = function RegisterModal(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.c8d3abc20c0e278d100e.hot-update.js.map
+//# sourceMappingURL=index.js.452a3eb49641dd207d07.hot-update.js.map
