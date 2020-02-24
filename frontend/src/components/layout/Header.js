@@ -3,7 +3,7 @@ import Popup from 'reactjs-popup';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // Component
-import HeaderCard from '../presentational/HeaderCard';
+import { HeaderCard } from '../presentational/HeaderCard';
 import RegisterModal from '../modals/RegisterModal';
 import HelpModal from '../modals/HelpModal';
 

@@ -30466,21 +30466,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 /***/ }),
 
-/***/ "./src/components/presentational/HeaderCard.js":
-/*!*****************************************************!*\
-  !*** ./src/components/presentational/HeaderCard.js ***!
-  \*****************************************************/
-/*! exports provided: default */
+/***/ "./src/components/presentational/HeaderCard.tsx":
+/*!******************************************************!*\
+  !*** ./src/components/presentational/HeaderCard.tsx ***!
+  \******************************************************/
+/*! exports provided: HeaderCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderCard", function() { return HeaderCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HeaderCard.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HeaderCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var HeaderCard = function HeaderCard() {
   return __jsx("div", {
     className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
     __source: {
@@ -30711,7 +30712,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, "Search"))));
-});
+};
 
 /***/ }),
 
@@ -31809,7 +31810,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.js");
 /* harmony import */ var _components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/presentational/ImagePanel */ "./src/components/presentational/ImagePanel.tsx");
-/* harmony import */ var _components_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/presentational/HeaderCard */ "./src/components/presentational/HeaderCard.js");
+/* harmony import */ var _components_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/presentational/HeaderCard */ "./src/components/presentational/HeaderCard.tsx");
 /* harmony import */ var _components_containers_Reviews__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/containers/Reviews */ "./src/components/containers/Reviews.js");
 /* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.js");
 /* harmony import */ var _components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/containers/HostedBy */ "./src/components/containers/HostedBy.js");
