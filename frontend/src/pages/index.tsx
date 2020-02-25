@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 // Wrapper
 import { Section } from '../components/wrapper/Section';
@@ -15,7 +15,7 @@ import { Popular } from '../components/containers/Popular';
 import { Featured } from '../components/containers/Featured';
 import { Footer } from '../components/layout/Footer';
 
-const Home = () => {
+export default () => {
   return (
     <>
       <Header />
@@ -53,5 +53,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;

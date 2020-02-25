@@ -36,7 +36,7 @@ interface AdventureData {
   adventures: Adventure[];
 }
 
-export const Adventures: () => string | JSX.Element = () => {
+export const Adventures: any = () => {
   const { loading, error, data } = useQuery<AdventureData>(GET_ADVENTURES);
   const [card, setCard] = useState<number>(0);
 

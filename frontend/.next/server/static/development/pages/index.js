@@ -6111,10 +6111,10 @@ const SectionOverflow = ({
 
 /***/ }),
 
-/***/ "./src/pages/index.js":
-/*!****************************!*\
-  !*** ./src/pages/index.js ***!
-  \****************************/
+/***/ "./src/pages/index.tsx":
+/*!*****************************!*\
+  !*** ./src/pages/index.tsx ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6133,8 +6133,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
 /* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
 /* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
 
 
@@ -6149,9 +6149,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-const Home = () => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_layout_Header__WEBPACK_IMPORTED_MODULE_3__["Header"], {
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_layout_Header__WEBPACK_IMPORTED_MODULE_3__["Header"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -6259,20 +6258,18 @@ const Home = () => {
     },
     __self: undefined
   }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+});
 
 /***/ }),
 
 /***/ 4:
-/*!**********************************!*\
-  !*** multi ./src/pages/index.js ***!
-  \**********************************/
+/*!***********************************!*\
+  !*** multi ./src/pages/index.tsx ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/index.js */"./src/pages/index.js");
+module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/index.tsx */"./src/pages/index.tsx");
 
 
 /***/ }),
