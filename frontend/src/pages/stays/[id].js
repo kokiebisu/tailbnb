@@ -32,7 +32,7 @@ import { AmenityCard } from '../../components/presentational/AmenityCard';
 import { SleepingArrangements } from '../../components/containers/SleepingArrangements';
 
 // Wrapper
-import DetailSectionOverflow from '../../components/wrapper/DetailSectionOverflow';
+import { DetailSectionOverflow } from '../../components/wrapper/DetailSectionOverflow';
 import { DetailSection } from '../../components/wrapper/DetailSection';
 
 // Containers

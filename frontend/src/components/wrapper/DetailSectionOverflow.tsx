@@ -1,7 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, phrase, children }) => {
-  function renderPhrase() {
+interface Prop {
+  title: string;
+  phrase: string | undefined;
+  children: React.ReactNode;
+}
+
+export const DetailSectionOverflow: React.FC<Prop> = ({
+  title,
+  phrase,
+  children
+}) => {
+  function renderPhrase(phrase: string | undefined) {
     if (phrase) {
       return (
         <>
@@ -32,12 +42,7 @@ export default ({ title, phrase, children }) => {
   return (
     <div className='border-b border-gray-300 pt-4 pb-14 w-full mx-auto overflow-x-hidden overflow-y-hidden'>
       <div className='pb-8'>
-        <h3
-          style={{ fontFamily: 'airbnb-medium' }}
-          className='text-2xl my-4 text-gray-850'>
-          {title}
-        </h3>
-
+        {renderPhrase(phrase)}
         {children}
       </div>
     </div>
