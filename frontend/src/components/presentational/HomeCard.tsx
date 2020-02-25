@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import LazyImage from 'react-lazy-progressive-image';
 
 // Images
 const img1 = require('../../../public/img/high/airbnb-background.jpg');
@@ -8,7 +7,6 @@ export const HomeCard: React.FC<{}> = () => {
   return (
     <div className='w-30/31'>
       <img className='w-full rounded' src={img1} />
-
       <div className='flex flex-wrap items-center justify-between'>
         <p>
           Entire House<span> · </span>9 beds

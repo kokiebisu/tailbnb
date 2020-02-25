@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import LazyImage from 'react-lazy-progressive-image';
 
 // Images
 const img1 = require('../../../public/img/high/todonear1.jpg');

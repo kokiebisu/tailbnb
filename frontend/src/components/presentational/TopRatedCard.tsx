@@ -1,9 +1,8 @@
 import * as React from 'react';
-// import LazyImage from 'react-lazy-progressive-image';
 import Link from 'next/link';
 
 interface Props {
-  id?: string;
+  id: string;
   img: string;
   title: string;
   cost: number;

@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import LazyImage from 'react-lazy-progressive-image';
 import Link from 'next/link';
 
 interface Prop {
@@ -53,8 +52,6 @@ export const StayCard: React.FC<Prop> = ({
           <div className='flex items-center justify-center flex-wrap'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              x='0px'
-              y='0px'
               width='13'
               height='13'
               viewBox='0 0 37.286 37.287'

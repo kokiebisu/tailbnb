@@ -15,7 +15,6 @@ export const TravelCard: React.FC<Props> = ({ img, location }) => {
       <Link href={`/${location.toLowerCase()}`}>
         <div className='h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white'>
           <img src={img} className='w-full h-full rounded-b-none rounded-lg ' />
-
           <p className='text-sm py-3 pl-4 sm:pl-4 text-gray-750 font-semibold'>
             {location}
           </p>
