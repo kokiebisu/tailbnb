@@ -25,7 +25,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/next/dist/pages/_error": [
+    "/stays/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
