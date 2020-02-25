@@ -5,7 +5,7 @@ import Section from '../components/wrapper/Section';
 import SectionOverflow from '../components/wrapper/SectionOverflow';
 import { ExploreHeader } from '../components/layout/ExploreHeader';
 import { ExploreSection } from '../components/wrapper/ExploreSection';
-import ExploreSectionOverflow from '../components/wrapper/ExploreSectionOverflow';
+import { ExploreSectionOverflow } from '../components/wrapper/ExploreSectionOverflow';
 import { Experiences } from '../components/containers/Experiences';
 import { Hosts } from '../components/containers/Hosts';
 
