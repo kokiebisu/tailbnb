@@ -10,6 +10,7 @@ const featured2 = require('../../../public/img/high/featured2.jpg');
 const featured3 = require('../../../public/img/high/featured3.jpg');
 
 interface Feature {
+  id?: string;
   img: string;
   experiences: number;
   type: string;
@@ -50,6 +51,7 @@ export const Experiences: React.FC<{}> = () => {
                     <div className='w-80 lg:w-1/3 pb-5 mr-2'>
                       <ExperienceCard
                         key={index}
+                        id={index.toString()}
                         img={img}
                         experiences={experiences}
                         type={type}

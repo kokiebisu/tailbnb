@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 
 interface Prop {
-  id?: string;
+  id: string;
   img: string;
   experiences: number;
   type: string;
@@ -21,7 +21,6 @@ export const ExperienceCard: React.FC<Prop> = ({
       <div className='w-30/31'>
         <div className='h-full w-64 sm:w-full bg-white'>
           <img className='w-full rounded-lg' src={img} alt='adventure1' />
-
           <div className='flex flex-wrap items-center justify-start'>
             <p
               style={{ fontFamily: 'airbnb-medium' }}

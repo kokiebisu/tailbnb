@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import LazyImage from 'react-lazy-progressive-image';
 
 interface Prop {
   img: string;

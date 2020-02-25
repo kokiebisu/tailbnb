@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import LazyImage from 'react-lazy-progressive-image';
 
 interface Prop {
   title: string;
@@ -12,7 +11,6 @@ export const HostCard: React.FC<Prop> = ({ title, location, country, img }) => {
   return (
     <div className='w-30/31'>
       <img className='w-full rounded-lg' src={img} />
-
       <p style={{ fontFamily: 'airbnb-medium' }} className=' my-2 '>
         {title}
       </p>

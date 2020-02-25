@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import LazyImage from 'react-lazy-progressive-image';
 
 interface Prop {
   host_is_superhost: string;
@@ -23,7 +22,7 @@ export const THundredPlusCard: React.FC<Prop> = ({
   number_of_reviews
 }) => {
   const renderhost = (host_is_superhost: string) => {
-    if (host_is_superhost) {
+    if (host_is_superhost == 't') {
       return (
         <div className='md:flex md:flex-wrap md:items-center md:justify-start'>
           <p className='uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs'>

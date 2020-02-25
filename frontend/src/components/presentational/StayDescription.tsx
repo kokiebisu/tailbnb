@@ -32,7 +32,7 @@ export const StayDescription: React.FC<Prop> = ({
   return (
     <>
       {display ? (
-        <div className=''>
+        <div>
           <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
             {description}
           </p>

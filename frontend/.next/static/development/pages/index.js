@@ -25832,15 +25832,16 @@ var ShowAll = function ShowAll(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/containers/Adventures.js":
-/*!*************************************************!*\
-  !*** ./src/components/containers/Adventures.js ***!
-  \*************************************************/
-/*! exports provided: default */
+/***/ "./src/components/containers/Adventures.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/containers/Adventures.tsx ***!
+  \**************************************************/
+/*! exports provided: Adventures */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Adventures", function() { return Adventures; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -25852,8 +25853,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    adventures {\n      id\n      title\n      period\n      cost\n      country\n      img\n      imglow\n    }\n  }\n"]);
@@ -25869,12 +25870,13 @@ function _templateObject() {
 
 
 
+
  // Component
 
 
 
 var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var Adventures = function Adventures() {
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_ADVENTURES),
       loading = _useQuery.loading,
       error = _useQuery.error,
@@ -25892,21 +25894,20 @@ var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_t
         className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 47
         },
         __self: this
       }, __jsx(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["AdventureCard"], {
         key: data[i].id,
         id: data[i].id,
         img: data[i].img,
-        imglow: data[i].imglow,
         country: data[i].country,
         title: data[i].title,
         cost: data[i].cost,
         period: data[i].period,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 48
         },
         __self: this
       })));
@@ -25915,40 +25916,36 @@ var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_t
     return content;
   };
 
-  if (loading) {
-    return __jsx("div", {
-      className: "flex justify-center items-center w-full py-20",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52
-      },
-      __self: this
-    }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
-      size: 10,
-      color: '#008489',
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      },
-      __self: this
-    }));
-  }
-
   if (error) return "Error! ".concat(error.message);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 67
     },
     __self: this
-  }, data ? __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, loading ? __jsx("div", {
+    className: "flex justify-center items-center w-full py-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    size: 10,
+    color: '#008489',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       small: '(min-width: 0px) and (max-width: 640px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 75
     },
     __self: this
   }, function (matches) {
@@ -25959,7 +25956,7 @@ var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_t
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 83
     },
     __self: this
   }, function (matches) {
@@ -25970,7 +25967,7 @@ var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_t
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 93
     },
     __self: this
   }, function (matches) {
@@ -25981,20 +25978,20 @@ var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_t
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 103
     },
     __self: this
   }, function (matches) {
     return matches.twoxl ? (setCard(6), renderContent(data.adventures, card)) : null;
-  })) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 118
     },
     __self: this
   }));
-});
+};
 
 /***/ }),
 
@@ -27612,11 +27609,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       setType = _useState3[1];
 
   var switchRegisterModal = function switchRegisterModal() {
-    setRegisterModal(!mode);
+    setRegisterModal(!registerModal);
   };
 
   var switchHelpModal = function switchHelpModal() {
-    setHelpModal(!mode);
+    setHelpModal(!helpModal);
   };
 
   var switchType = function switchType(type) {
@@ -28775,7 +28772,6 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/ExploreCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
- // import LazyImage from 'react-lazy-progressive-image';
 
 var ExploreCard = function ExploreCard(_ref) {
   var img = _ref.img,
@@ -28784,21 +28780,21 @@ var ExploreCard = function ExploreCard(_ref) {
     className: "w-30/31",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/".concat(title.toLowerCase()),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
     className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     },
     __self: this
   }, __jsx("img", {
@@ -28806,14 +28802,14 @@ var ExploreCard = function ExploreCard(_ref) {
     className: "h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     },
     __self: this
   }), __jsx("p", {
     className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 18
     },
     __self: this
   }, title))));
@@ -28835,7 +28831,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/FeaturedCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // import LazyImage from 'react-lazy-progressive-image';
 
 var FeaturedCard = function FeaturedCard(_ref) {
   var img = _ref.img,
@@ -28845,14 +28840,14 @@ var FeaturedCard = function FeaturedCard(_ref) {
     className: "w-30/31",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 15
     },
     __self: this
   }, __jsx("div", {
     className: "h-full w-64 sm:w-full bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 16
     },
     __self: this
   }, __jsx("img", {
@@ -28861,28 +28856,28 @@ var FeaturedCard = function FeaturedCard(_ref) {
     alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
   }), __jsx("div", {
     className: "flex flex-wrap items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 18
     },
     __self: this
   }, __jsx("p", {
     className: "uppercase text-xs my-2 font-bold text-pink-700",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
     },
     __self: this
   }, verified, "+ Verified Stays")), __jsx("p", {
     className: "whitespace-normal my-1 text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 23
     },
     __self: this
   }, description)));
@@ -29397,7 +29392,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/PlusCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // import LazyImage from 'react-lazy-progressive-image';
 
 var PlusCard = function PlusCard(_ref) {
   var img = _ref.img;
@@ -29405,7 +29399,7 @@ var PlusCard = function PlusCard(_ref) {
     className: "w-full cursor pointer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
   }, __jsx("img", {
@@ -29413,7 +29407,7 @@ var PlusCard = function PlusCard(_ref) {
     src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
   }));
@@ -29437,7 +29431,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/StayCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // import LazyImage from 'react-lazy-progressive-image';
 
 
 var StayCard = function StayCard(_ref) {
@@ -29455,21 +29448,21 @@ var StayCard = function StayCard(_ref) {
         className: "md:flex md:flex-wrap md:items-center md:justify-start",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, __jsx("p", {
         className: "uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, "Superhost"), __jsx("p", {
         className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 30
         },
         __self: this
       }, country));
@@ -29478,14 +29471,14 @@ var StayCard = function StayCard(_ref) {
         className: "md:flex md:flex-wrap md:items-center md:justify-start",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 37
         },
         __self: this
       }, __jsx("p", {
         className: "mt-3 text-sm sm:my-2 font-light text-gray-600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 38
         },
         __self: this
       }, country));
@@ -29497,14 +29490,14 @@ var StayCard = function StayCard(_ref) {
     as: "/stays/".concat(id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: this
   }, __jsx("div", {
     className: "w-30/31 cursor-pointer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 48
     },
     __self: this
   }, __jsx("img", {
@@ -29512,27 +29505,25 @@ var StayCard = function StayCard(_ref) {
     src: picture_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 49
     },
     __self: this
   }), __jsx("div", {
     className: "flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: this
   }, renderhost(host_is_superhost), __jsx("div", {
     className: "flex items-center justify-center flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 52
     },
     __self: this
   }, __jsx("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    x: "0px",
-    y: "0px",
     width: "13",
     height: "13",
     viewBox: "0 0 37.286 37.287",
@@ -29541,48 +29532,48 @@ var StayCard = function StayCard(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 53
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 59
     },
     __self: this
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 60
     },
     __self: this
   }))), __jsx("p", {
     className: "pl-1 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 70
     },
     __self: this
   }, reviews_per_month))), __jsx("p", {
     className: "my-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 73
     },
     __self: this
   }, name), __jsx("p", {
     className: "tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 74
     },
     __self: this
   }, __jsx("span", {
     className: "font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 75
     },
     __self: this
   }, "$", price, " CAD"), "/night")));
@@ -29606,7 +29597,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/TopRatedCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // import LazyImage from 'react-lazy-progressive-image';
 
 
 var TopRatedCard = function TopRatedCard(_ref) {
@@ -29622,14 +29612,14 @@ var TopRatedCard = function TopRatedCard(_ref) {
     as: "/experiences/".concat(id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: this
   }, __jsx("div", {
     className: "w-30/31 cursor-pointer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     },
     __self: this
   }, __jsx("img", {
@@ -29637,34 +29627,34 @@ var TopRatedCard = function TopRatedCard(_ref) {
     src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 26
     },
     __self: this
   }), __jsx("p", {
     className: "uppercase text-xs my-2 font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   }, location), __jsx("p", {
     className: "my-1 w-5/6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: this
   }, title), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, "From $", cost, "/person"), __jsx("div", {
     className: "flex items-center justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     },
     __self: this
   }, __jsx("svg", {
@@ -29676,34 +29666,34 @@ var TopRatedCard = function TopRatedCard(_ref) {
     viewBox: "0 0 37.286 37.287",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 38
     },
     __self: this
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 39
     },
     __self: this
   }))), __jsx("p", {
     className: "pl-1 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 49
     },
     __self: this
   }, ratings), __jsx("p", {
     className: "text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: this
   }, "\xA0 (", reviews, ")"))));
@@ -29865,7 +29855,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.js");
 /* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
 /* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
-/* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.js");
+/* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.tsx");
 /* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.tsx");
 /* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
 /* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
@@ -29930,7 +29920,7 @@ var Home = function Home() {
       lineNumber: 30
     },
     __self: this
-  }, __jsx(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, __jsx(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__["Adventures"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34

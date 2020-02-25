@@ -16,11 +16,11 @@ export default () => {
   const [type, setType] = useState('');
 
   const switchRegisterModal = () => {
-    setRegisterModal(!mode);
+    setRegisterModal(!registerModal);
   };
 
   const switchHelpModal = () => {
-    setHelpModal(!mode);
+    setHelpModal(!helpModal);
   };
 
   const switchType = (type) => {
