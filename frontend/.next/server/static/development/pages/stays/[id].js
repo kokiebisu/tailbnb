@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2270,24 +2270,25 @@ const Reviews = ({
 
 /***/ }),
 
-/***/ "./src/components/containers/SleepingArrangements.js":
-/*!***********************************************************!*\
-  !*** ./src/components/containers/SleepingArrangements.js ***!
-  \***********************************************************/
-/*! exports provided: default */
+/***/ "./src/components/containers/SleepingArrangements.tsx":
+/*!************************************************************!*\
+  !*** ./src/components/containers/SleepingArrangements.tsx ***!
+  \************************************************************/
+/*! exports provided: SleepingArrangements */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SleepingArrangements", function() { return SleepingArrangements; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _presentational_SleepingArrangementsCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/SleepingArrangementsCard */ "./src/components/presentational/SleepingArrangementsCard.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/SleepingArrangements.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/SleepingArrangements.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Components
 
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+const SleepingArrangements = () => {
   return __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
@@ -2356,7 +2357,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }))))));
-});
+};
 
 /***/ }),
 
@@ -5739,7 +5740,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29__);
 /* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
 /* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.js");
+/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stays/[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -6479,7 +6480,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
       lineNumber: 349
     },
     __self: undefined
-  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_31__["default"], {
+  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_31__["SleepingArrangements"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 350
@@ -6674,7 +6675,7 @@ const SSkeletonPulse1 = styled_components__WEBPACK_IMPORTED_MODULE_4___default()
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***************************************!*\
   !*** multi ./src/pages/stays/[id].js ***!
   \***************************************/
