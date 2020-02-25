@@ -1,7 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, phrase, children }) => {
-  function renderPhrase() {
+interface Prop {
+  title: string;
+  phrase: string;
+  children: React.ReactNode;
+}
+
+export const ExploreSectionOverflow: React.FC<Prop> = ({
+  title,
+  phrase,
+  children
+}) => {
+  function renderPhrase(phrase: string | undefined) {
     if (phrase) {
       return (
         <>
@@ -29,8 +39,7 @@ export default ({ title, phrase, children }) => {
   }
   return (
     <div className='md:px-0 max-w-90% mx-auto py-5 overflow-x-hidden overflow-y-hidden'>
-      {renderPhrase()}
-
+      {renderPhrase(phrase)}
       {children}
     </div>
   );
