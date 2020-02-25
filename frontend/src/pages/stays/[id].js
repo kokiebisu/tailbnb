@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import Head from 'next/head';
-import Router, { withRouter } from 'next/router';
 
 // Dependencies
 import styled from 'styled-components';
@@ -18,10 +17,9 @@ import { gql } from 'apollo-boost';
 // Components
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { ImagePanel } from '../../components/presentational/ImagePanel';
-import HeaderCard from '../../components/presentational/HeaderCard';
 
 import { Reviews } from '../../components/containers/Reviews';
-import Footer from '../../components/layout/Footer';
+import { Footer } from '../../components/layout/Footer';
 import { HostedBy } from '../../components/containers/HostedBy';
 import Neighborhood from '../../components/containers/Neighborhood';
 import { KeepInMind } from '../../components/containers/KeepInMind';

@@ -5,7 +5,7 @@ import Section from '../components/wrapper/Section';
 import SectionOverflow from '../components/wrapper/SectionOverflow';
 import StaySection from '../components/wrapper/ExploreSection';
 import StaySectionOverflow from '../components/wrapper/ExploreSectionOverflow';
-import Footer from '../components/layout/Footer';
+import { Footer } from '../components/layout/Footer';
 import { ExploreHeader } from '../components/layout/ExploreHeader';
 
 // Component
