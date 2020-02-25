@@ -26513,10 +26513,10 @@ var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templa
 
 /***/ }),
 
-/***/ "./src/components/containers/TopRated.js":
-/*!***********************************************!*\
-  !*** ./src/components/containers/TopRated.js ***!
-  \***********************************************/
+/***/ "./src/components/containers/TopRated.tsx":
+/*!************************************************!*\
+  !*** ./src/components/containers/TopRated.tsx ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -26533,8 +26533,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../presentational/TopRatedCard */ "./src/components/presentational/TopRatedCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/TopRated.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/TopRated.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    experiences {\n      id\n      title\n      cost\n      ratings\n      reviews\n      ratings\n      location\n      imglow\n      img\n    }\n  }\n"]);
@@ -26545,6 +26545,7 @@ function _templateObject() {
 
   return data;
 }
+
 
 
 
@@ -26573,23 +26574,21 @@ var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 50
         },
         __self: this
       }, __jsx(_presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__["TopRatedCard"], {
         key: data[i].id,
         id: data[i].id,
         img: data[i].img,
-        imglow: data[i].imglow,
-        country: data[i].country,
         title: data[i].title,
         cost: data[i].cost,
-        period: data[i].period,
         ratings: data[i].ratings,
         reviews: data[i].reviews,
+        location: data[i].location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 51
         },
         __self: this
       })));
@@ -26598,40 +26597,36 @@ var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_
     return content;
   };
 
-  if (loading) {
-    return __jsx("div", {
-      className: "flex justify-center items-center w-full py-20",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
-      },
-      __self: this
-    }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
-      size: 10,
-      color: '#008489',
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57
-      },
-      __self: this
-    }));
-  }
-
   if (error) return "Error! ".concat(error.message);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 71
     },
     __self: this
-  }, data ? __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, loading ? __jsx("div", {
+    className: "flex justify-center items-center w-full py-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    size: 10,
+    color: '#008489',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xs: '(min-width: 0px) and (max-width: 739px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 79
     },
     __self: this
   }, function (matches) {
@@ -26642,7 +26637,7 @@ var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 87
     },
     __self: this
   }, function (matches) {
@@ -26653,7 +26648,7 @@ var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 97
     },
     __self: this
   }, function (matches) {
@@ -26664,7 +26659,7 @@ var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 107
     },
     __self: this
   }, function (matches) {
@@ -26675,16 +26670,16 @@ var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 117
     },
     __self: this
   }, function (matches) {
     return matches.xl ? (setCard(6), renderContent(data.experiences, card)) : null;
-  })) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 131
     },
     __self: this
   }));
@@ -29870,7 +29865,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
 /* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.js");
 /* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.tsx");
-/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.js");
+/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
 /* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
 /* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
 /* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.js");
@@ -30006,7 +30001,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -30029,5 +30024,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
