@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Component
-import FooterContent from './FooterContent';
+import { FooterContent } from './FooterContent';
 import { FooterInducer } from './FooterInducer';
 
 export default () => {
