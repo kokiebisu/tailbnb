@@ -2,7 +2,7 @@ import React from 'react';
 
 // Wrapper
 import { Section } from '../components/wrapper/Section';
-import SectionOverflow from '../components/wrapper/SectionOverflow';
+import { SectionOverflow } from '../components/wrapper/SectionOverflow';
 
 // Component
 import { Header } from '../components/layout/Header';

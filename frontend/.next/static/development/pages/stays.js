@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/stays.js"],{
 
 /***/ "./node_modules/@apollo/react-common/lib/react-common.esm.js":
 /*!*******************************************************************!*\
@@ -949,17 +949,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-prope
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/promise.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/promise.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "./node_modules/core-js/library/fn/promise.js");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
@@ -1251,18 +1240,6 @@ function _inheritsLoose(subClass, superClass) {
 }
 
 module.exports = _inheritsLoose;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/regenerator/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
-
 
 /***/ }),
 
@@ -8854,24 +8831,6 @@ module.exports = function getOwnPropertyDescriptor(it, key) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/fn/promise.js":
-/*!****************************************************!*\
-  !*** ./node_modules/core-js/library/fn/promise.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/library/modules/es6.object.to-string.js");
-__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
-__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/library/modules/web.dom.iterable.js");
-__webpack_require__(/*! ../modules/es6.promise */ "./node_modules/core-js/library/modules/es6.promise.js");
-__webpack_require__(/*! ../modules/es7.promise.finally */ "./node_modules/core-js/library/modules/es7.promise.finally.js");
-__webpack_require__(/*! ../modules/es7.promise.try */ "./node_modules/core-js/library/modules/es7.promise.try.js");
-module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Promise;
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/fn/symbol/index.js":
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/library/fn/symbol/index.js ***!
@@ -9668,33 +9627,6 @@ module.exports = !__webpack_require__(/*! ./_descriptors */ "./node_modules/core
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/_invoke.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_invoke.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// fast apply, http://jsperf.lnkit.com/fast-apply/5
-module.exports = function (fn, args, that) {
-  var un = that === undefined;
-  switch (args.length) {
-    case 0: return un ? fn()
-                      : fn.call(that);
-    case 1: return un ? fn(args[0])
-                      : fn.call(that, args[0]);
-    case 2: return un ? fn(args[0], args[1])
-                      : fn.call(that, args[0], args[1]);
-    case 3: return un ? fn(args[0], args[1], args[2])
-                      : fn.call(that, args[0], args[1], args[2]);
-    case 4: return un ? fn(args[0], args[1], args[2], args[3])
-                      : fn.call(that, args[0], args[1], args[2], args[3]);
-  } return fn.apply(that, args);
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/_iobject.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/library/modules/_iobject.js ***!
@@ -9890,39 +9822,6 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/_iter-detect.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_iter-detect.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var ITERATOR = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/library/modules/_wks.js")('iterator');
-var SAFE_CLOSING = false;
-
-try {
-  var riter = [7][ITERATOR]();
-  riter['return'] = function () { SAFE_CLOSING = true; };
-  // eslint-disable-next-line no-throw-literal
-  Array.from(riter, function () { throw 2; });
-} catch (e) { /* empty */ }
-
-module.exports = function (exec, skipClosing) {
-  if (!skipClosing && !SAFE_CLOSING) return false;
-  var safe = false;
-  try {
-    var arr = [7];
-    var iter = arr[ITERATOR]();
-    iter.next = function () { return { done: safe = true }; };
-    arr[ITERATOR] = function () { return iter; };
-    exec(arr);
-  } catch (e) { /* empty */ }
-  return safe;
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/_iter-step.js":
 /*!************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_iter-step.js ***!
@@ -10020,116 +9919,6 @@ var meta = module.exports = {
   fastKey: fastKey,
   getWeak: getWeak,
   onFreeze: onFreeze
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_microtask.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_microtask.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js");
-var macrotask = __webpack_require__(/*! ./_task */ "./node_modules/core-js/library/modules/_task.js").set;
-var Observer = global.MutationObserver || global.WebKitMutationObserver;
-var process = global.process;
-var Promise = global.Promise;
-var isNode = __webpack_require__(/*! ./_cof */ "./node_modules/core-js/library/modules/_cof.js")(process) == 'process';
-
-module.exports = function () {
-  var head, last, notify;
-
-  var flush = function () {
-    var parent, fn;
-    if (isNode && (parent = process.domain)) parent.exit();
-    while (head) {
-      fn = head.fn;
-      head = head.next;
-      try {
-        fn();
-      } catch (e) {
-        if (head) notify();
-        else last = undefined;
-        throw e;
-      }
-    } last = undefined;
-    if (parent) parent.enter();
-  };
-
-  // Node.js
-  if (isNode) {
-    notify = function () {
-      process.nextTick(flush);
-    };
-  // browsers with MutationObserver, except iOS Safari - https://github.com/zloirock/core-js/issues/339
-  } else if (Observer && !(global.navigator && global.navigator.standalone)) {
-    var toggle = true;
-    var node = document.createTextNode('');
-    new Observer(flush).observe(node, { characterData: true }); // eslint-disable-line no-new
-    notify = function () {
-      node.data = toggle = !toggle;
-    };
-  // environments with maybe non-completely correct, but existent Promise
-  } else if (Promise && Promise.resolve) {
-    // Promise.resolve without an argument throws an error in LG WebOS 2
-    var promise = Promise.resolve(undefined);
-    notify = function () {
-      promise.then(flush);
-    };
-  // for other environments - macrotask based on:
-  // - setImmediate
-  // - MessageChannel
-  // - window.postMessag
-  // - onreadystatechange
-  // - setTimeout
-  } else {
-    notify = function () {
-      // strange IE + webpack dev server bug - use .call(global)
-      macrotask.call(global, flush);
-    };
-  }
-
-  return function (fn) {
-    var task = { fn: fn, next: undefined };
-    if (last) last.next = task;
-    if (!head) {
-      head = task;
-      notify();
-    } last = task;
-  };
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_new-promise-capability.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_new-promise-capability.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// 25.4.1.5 NewPromiseCapability(C)
-var aFunction = __webpack_require__(/*! ./_a-function */ "./node_modules/core-js/library/modules/_a-function.js");
-
-function PromiseCapability(C) {
-  var resolve, reject;
-  this.promise = new C(function ($$resolve, $$reject) {
-    if (resolve !== undefined || reject !== undefined) throw TypeError('Bad Promise constructor');
-    resolve = $$resolve;
-    reject = $$reject;
-  });
-  this.resolve = aFunction(resolve);
-  this.reject = aFunction(reject);
-}
-
-module.exports.f = function (C) {
-  return new PromiseCapability(C);
 };
 
 
@@ -10478,47 +10267,6 @@ module.exports = function (KEY, exec) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/_perform.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_perform.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function (exec) {
-  try {
-    return { e: false, v: exec() };
-  } catch (e) {
-    return { e: true, v: e };
-  }
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_promise-resolve.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_promise-resolve.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/library/modules/_an-object.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/library/modules/_is-object.js");
-var newPromiseCapability = __webpack_require__(/*! ./_new-promise-capability */ "./node_modules/core-js/library/modules/_new-promise-capability.js");
-
-module.exports = function (C, x) {
-  anObject(C);
-  if (isObject(x) && x.constructor === C) return x;
-  var promiseCapability = newPromiseCapability.f(C);
-  var resolve = promiseCapability.resolve;
-  resolve(x);
-  return promiseCapability.promise;
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/_property-desc.js":
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_property-desc.js ***!
@@ -10632,32 +10380,6 @@ module.exports = function (COLLECTION) {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/_set-species.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_set-species.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js");
-var core = __webpack_require__(/*! ./_core */ "./node_modules/core-js/library/modules/_core.js");
-var dP = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/library/modules/_object-dp.js");
-var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/library/modules/_descriptors.js");
-var SPECIES = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/library/modules/_wks.js")('species');
-
-module.exports = function (KEY) {
-  var C = typeof core[KEY] == 'function' ? core[KEY] : global[KEY];
-  if (DESCRIPTORS && C && !C[SPECIES]) dP.f(C, SPECIES, {
-    configurable: true,
-    get: function () { return this; }
-  });
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/_set-to-string-tag.js":
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_set-to-string-tag.js ***!
@@ -10715,26 +10437,6 @@ var store = global[SHARED] || (global[SHARED] = {});
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/modules/_species-constructor.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_species-constructor.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.3.20 SpeciesConstructor(O, defaultConstructor)
-var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/library/modules/_an-object.js");
-var aFunction = __webpack_require__(/*! ./_a-function */ "./node_modules/core-js/library/modules/_a-function.js");
-var SPECIES = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/library/modules/_wks.js")('species');
-module.exports = function (O, D) {
-  var C = anObject(O).constructor;
-  var S;
-  return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/modules/_string-at.js":
 /*!************************************************************!*\
   !*** ./node_modules/core-js/library/modules/_string-at.js ***!
@@ -10758,101 +10460,6 @@ module.exports = function (TO_STRING) {
       ? TO_STRING ? s.charAt(i) : a
       : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
   };
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_task.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_task.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/library/modules/_ctx.js");
-var invoke = __webpack_require__(/*! ./_invoke */ "./node_modules/core-js/library/modules/_invoke.js");
-var html = __webpack_require__(/*! ./_html */ "./node_modules/core-js/library/modules/_html.js");
-var cel = __webpack_require__(/*! ./_dom-create */ "./node_modules/core-js/library/modules/_dom-create.js");
-var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js");
-var process = global.process;
-var setTask = global.setImmediate;
-var clearTask = global.clearImmediate;
-var MessageChannel = global.MessageChannel;
-var Dispatch = global.Dispatch;
-var counter = 0;
-var queue = {};
-var ONREADYSTATECHANGE = 'onreadystatechange';
-var defer, channel, port;
-var run = function () {
-  var id = +this;
-  // eslint-disable-next-line no-prototype-builtins
-  if (queue.hasOwnProperty(id)) {
-    var fn = queue[id];
-    delete queue[id];
-    fn();
-  }
-};
-var listener = function (event) {
-  run.call(event.data);
-};
-// Node.js 0.9+ & IE10+ has setImmediate, otherwise:
-if (!setTask || !clearTask) {
-  setTask = function setImmediate(fn) {
-    var args = [];
-    var i = 1;
-    while (arguments.length > i) args.push(arguments[i++]);
-    queue[++counter] = function () {
-      // eslint-disable-next-line no-new-func
-      invoke(typeof fn == 'function' ? fn : Function(fn), args);
-    };
-    defer(counter);
-    return counter;
-  };
-  clearTask = function clearImmediate(id) {
-    delete queue[id];
-  };
-  // Node.js 0.8-
-  if (__webpack_require__(/*! ./_cof */ "./node_modules/core-js/library/modules/_cof.js")(process) == 'process') {
-    defer = function (id) {
-      process.nextTick(ctx(run, id, 1));
-    };
-  // Sphere (JS game engine) Dispatch API
-  } else if (Dispatch && Dispatch.now) {
-    defer = function (id) {
-      Dispatch.now(ctx(run, id, 1));
-    };
-  // Browsers with MessageChannel, includes WebWorkers
-  } else if (MessageChannel) {
-    channel = new MessageChannel();
-    port = channel.port2;
-    channel.port1.onmessage = listener;
-    defer = ctx(port.postMessage, port, 1);
-  // Browsers with postMessage, skip WebWorkers
-  // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
-  } else if (global.addEventListener && typeof postMessage == 'function' && !global.importScripts) {
-    defer = function (id) {
-      global.postMessage(id + '', '*');
-    };
-    global.addEventListener('message', listener, false);
-  // IE8-
-  } else if (ONREADYSTATECHANGE in cel('script')) {
-    defer = function (id) {
-      html.appendChild(cel('script'))[ONREADYSTATECHANGE] = function () {
-        html.removeChild(this);
-        run.call(id);
-      };
-    };
-  // Rest old browsers
-  } else {
-    defer = function (id) {
-      setTimeout(ctx(run, id, 1), 0);
-    };
-  }
-}
-module.exports = {
-  set: setTask,
-  clear: clearTask
 };
 
 
@@ -10978,21 +10585,6 @@ var px = Math.random();
 module.exports = function (key) {
   return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_user-agent.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_user-agent.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js");
-var navigator = global.navigator;
-
-module.exports = navigator && navigator.userAgent || '';
 
 
 /***/ }),
@@ -11207,304 +10799,6 @@ __webpack_require__(/*! ./_object-sap */ "./node_modules/core-js/library/modules
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es6.promise.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.promise.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var LIBRARY = __webpack_require__(/*! ./_library */ "./node_modules/core-js/library/modules/_library.js");
-var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js");
-var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/library/modules/_ctx.js");
-var classof = __webpack_require__(/*! ./_classof */ "./node_modules/core-js/library/modules/_classof.js");
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/library/modules/_is-object.js");
-var aFunction = __webpack_require__(/*! ./_a-function */ "./node_modules/core-js/library/modules/_a-function.js");
-var anInstance = __webpack_require__(/*! ./_an-instance */ "./node_modules/core-js/library/modules/_an-instance.js");
-var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/library/modules/_for-of.js");
-var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ "./node_modules/core-js/library/modules/_species-constructor.js");
-var task = __webpack_require__(/*! ./_task */ "./node_modules/core-js/library/modules/_task.js").set;
-var microtask = __webpack_require__(/*! ./_microtask */ "./node_modules/core-js/library/modules/_microtask.js")();
-var newPromiseCapabilityModule = __webpack_require__(/*! ./_new-promise-capability */ "./node_modules/core-js/library/modules/_new-promise-capability.js");
-var perform = __webpack_require__(/*! ./_perform */ "./node_modules/core-js/library/modules/_perform.js");
-var userAgent = __webpack_require__(/*! ./_user-agent */ "./node_modules/core-js/library/modules/_user-agent.js");
-var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ "./node_modules/core-js/library/modules/_promise-resolve.js");
-var PROMISE = 'Promise';
-var TypeError = global.TypeError;
-var process = global.process;
-var versions = process && process.versions;
-var v8 = versions && versions.v8 || '';
-var $Promise = global[PROMISE];
-var isNode = classof(process) == 'process';
-var empty = function () { /* empty */ };
-var Internal, newGenericPromiseCapability, OwnPromiseCapability, Wrapper;
-var newPromiseCapability = newGenericPromiseCapability = newPromiseCapabilityModule.f;
-
-var USE_NATIVE = !!function () {
-  try {
-    // correct subclassing with @@species support
-    var promise = $Promise.resolve(1);
-    var FakePromise = (promise.constructor = {})[__webpack_require__(/*! ./_wks */ "./node_modules/core-js/library/modules/_wks.js")('species')] = function (exec) {
-      exec(empty, empty);
-    };
-    // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
-    return (isNode || typeof PromiseRejectionEvent == 'function')
-      && promise.then(empty) instanceof FakePromise
-      // v8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
-      // https://bugs.chromium.org/p/chromium/issues/detail?id=830565
-      // we can't detect it synchronously, so just check versions
-      && v8.indexOf('6.6') !== 0
-      && userAgent.indexOf('Chrome/66') === -1;
-  } catch (e) { /* empty */ }
-}();
-
-// helpers
-var isThenable = function (it) {
-  var then;
-  return isObject(it) && typeof (then = it.then) == 'function' ? then : false;
-};
-var notify = function (promise, isReject) {
-  if (promise._n) return;
-  promise._n = true;
-  var chain = promise._c;
-  microtask(function () {
-    var value = promise._v;
-    var ok = promise._s == 1;
-    var i = 0;
-    var run = function (reaction) {
-      var handler = ok ? reaction.ok : reaction.fail;
-      var resolve = reaction.resolve;
-      var reject = reaction.reject;
-      var domain = reaction.domain;
-      var result, then, exited;
-      try {
-        if (handler) {
-          if (!ok) {
-            if (promise._h == 2) onHandleUnhandled(promise);
-            promise._h = 1;
-          }
-          if (handler === true) result = value;
-          else {
-            if (domain) domain.enter();
-            result = handler(value); // may throw
-            if (domain) {
-              domain.exit();
-              exited = true;
-            }
-          }
-          if (result === reaction.promise) {
-            reject(TypeError('Promise-chain cycle'));
-          } else if (then = isThenable(result)) {
-            then.call(result, resolve, reject);
-          } else resolve(result);
-        } else reject(value);
-      } catch (e) {
-        if (domain && !exited) domain.exit();
-        reject(e);
-      }
-    };
-    while (chain.length > i) run(chain[i++]); // variable length - can't use forEach
-    promise._c = [];
-    promise._n = false;
-    if (isReject && !promise._h) onUnhandled(promise);
-  });
-};
-var onUnhandled = function (promise) {
-  task.call(global, function () {
-    var value = promise._v;
-    var unhandled = isUnhandled(promise);
-    var result, handler, console;
-    if (unhandled) {
-      result = perform(function () {
-        if (isNode) {
-          process.emit('unhandledRejection', value, promise);
-        } else if (handler = global.onunhandledrejection) {
-          handler({ promise: promise, reason: value });
-        } else if ((console = global.console) && console.error) {
-          console.error('Unhandled promise rejection', value);
-        }
-      });
-      // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
-      promise._h = isNode || isUnhandled(promise) ? 2 : 1;
-    } promise._a = undefined;
-    if (unhandled && result.e) throw result.v;
-  });
-};
-var isUnhandled = function (promise) {
-  return promise._h !== 1 && (promise._a || promise._c).length === 0;
-};
-var onHandleUnhandled = function (promise) {
-  task.call(global, function () {
-    var handler;
-    if (isNode) {
-      process.emit('rejectionHandled', promise);
-    } else if (handler = global.onrejectionhandled) {
-      handler({ promise: promise, reason: promise._v });
-    }
-  });
-};
-var $reject = function (value) {
-  var promise = this;
-  if (promise._d) return;
-  promise._d = true;
-  promise = promise._w || promise; // unwrap
-  promise._v = value;
-  promise._s = 2;
-  if (!promise._a) promise._a = promise._c.slice();
-  notify(promise, true);
-};
-var $resolve = function (value) {
-  var promise = this;
-  var then;
-  if (promise._d) return;
-  promise._d = true;
-  promise = promise._w || promise; // unwrap
-  try {
-    if (promise === value) throw TypeError("Promise can't be resolved itself");
-    if (then = isThenable(value)) {
-      microtask(function () {
-        var wrapper = { _w: promise, _d: false }; // wrap
-        try {
-          then.call(value, ctx($resolve, wrapper, 1), ctx($reject, wrapper, 1));
-        } catch (e) {
-          $reject.call(wrapper, e);
-        }
-      });
-    } else {
-      promise._v = value;
-      promise._s = 1;
-      notify(promise, false);
-    }
-  } catch (e) {
-    $reject.call({ _w: promise, _d: false }, e); // wrap
-  }
-};
-
-// constructor polyfill
-if (!USE_NATIVE) {
-  // 25.4.3.1 Promise(executor)
-  $Promise = function Promise(executor) {
-    anInstance(this, $Promise, PROMISE, '_h');
-    aFunction(executor);
-    Internal.call(this);
-    try {
-      executor(ctx($resolve, this, 1), ctx($reject, this, 1));
-    } catch (err) {
-      $reject.call(this, err);
-    }
-  };
-  // eslint-disable-next-line no-unused-vars
-  Internal = function Promise(executor) {
-    this._c = [];             // <- awaiting reactions
-    this._a = undefined;      // <- checked in isUnhandled reactions
-    this._s = 0;              // <- state
-    this._d = false;          // <- done
-    this._v = undefined;      // <- value
-    this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
-    this._n = false;          // <- notify
-  };
-  Internal.prototype = __webpack_require__(/*! ./_redefine-all */ "./node_modules/core-js/library/modules/_redefine-all.js")($Promise.prototype, {
-    // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
-    then: function then(onFulfilled, onRejected) {
-      var reaction = newPromiseCapability(speciesConstructor(this, $Promise));
-      reaction.ok = typeof onFulfilled == 'function' ? onFulfilled : true;
-      reaction.fail = typeof onRejected == 'function' && onRejected;
-      reaction.domain = isNode ? process.domain : undefined;
-      this._c.push(reaction);
-      if (this._a) this._a.push(reaction);
-      if (this._s) notify(this, false);
-      return reaction.promise;
-    },
-    // 25.4.5.1 Promise.prototype.catch(onRejected)
-    'catch': function (onRejected) {
-      return this.then(undefined, onRejected);
-    }
-  });
-  OwnPromiseCapability = function () {
-    var promise = new Internal();
-    this.promise = promise;
-    this.resolve = ctx($resolve, promise, 1);
-    this.reject = ctx($reject, promise, 1);
-  };
-  newPromiseCapabilityModule.f = newPromiseCapability = function (C) {
-    return C === $Promise || C === Wrapper
-      ? new OwnPromiseCapability(C)
-      : newGenericPromiseCapability(C);
-  };
-}
-
-$export($export.G + $export.W + $export.F * !USE_NATIVE, { Promise: $Promise });
-__webpack_require__(/*! ./_set-to-string-tag */ "./node_modules/core-js/library/modules/_set-to-string-tag.js")($Promise, PROMISE);
-__webpack_require__(/*! ./_set-species */ "./node_modules/core-js/library/modules/_set-species.js")(PROMISE);
-Wrapper = __webpack_require__(/*! ./_core */ "./node_modules/core-js/library/modules/_core.js")[PROMISE];
-
-// statics
-$export($export.S + $export.F * !USE_NATIVE, PROMISE, {
-  // 25.4.4.5 Promise.reject(r)
-  reject: function reject(r) {
-    var capability = newPromiseCapability(this);
-    var $$reject = capability.reject;
-    $$reject(r);
-    return capability.promise;
-  }
-});
-$export($export.S + $export.F * (LIBRARY || !USE_NATIVE), PROMISE, {
-  // 25.4.4.6 Promise.resolve(x)
-  resolve: function resolve(x) {
-    return promiseResolve(LIBRARY && this === Wrapper ? $Promise : this, x);
-  }
-});
-$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-detect */ "./node_modules/core-js/library/modules/_iter-detect.js")(function (iter) {
-  $Promise.all(iter)['catch'](empty);
-})), PROMISE, {
-  // 25.4.4.1 Promise.all(iterable)
-  all: function all(iterable) {
-    var C = this;
-    var capability = newPromiseCapability(C);
-    var resolve = capability.resolve;
-    var reject = capability.reject;
-    var result = perform(function () {
-      var values = [];
-      var index = 0;
-      var remaining = 1;
-      forOf(iterable, false, function (promise) {
-        var $index = index++;
-        var alreadyCalled = false;
-        values.push(undefined);
-        remaining++;
-        C.resolve(promise).then(function (value) {
-          if (alreadyCalled) return;
-          alreadyCalled = true;
-          values[$index] = value;
-          --remaining || resolve(values);
-        }, reject);
-      });
-      --remaining || resolve(values);
-    });
-    if (result.e) reject(result.v);
-    return capability.promise;
-  },
-  // 25.4.4.4 Promise.race(iterable)
-  race: function race(iterable) {
-    var C = this;
-    var capability = newPromiseCapability(C);
-    var reject = capability.reject;
-    var result = perform(function () {
-      forOf(iterable, false, function (promise) {
-        C.resolve(promise).then(capability.resolve, reject);
-      });
-    });
-    if (result.e) reject(result.v);
-    return capability.promise;
-  }
-});
 
 
 /***/ }),
@@ -11864,62 +11158,6 @@ if (NATIVE_WEAK_MAP && IS_IE11) {
     });
   });
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.promise.finally.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.promise.finally.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// https://github.com/tc39/proposal-promise-finally
-
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-var core = __webpack_require__(/*! ./_core */ "./node_modules/core-js/library/modules/_core.js");
-var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/library/modules/_global.js");
-var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ "./node_modules/core-js/library/modules/_species-constructor.js");
-var promiseResolve = __webpack_require__(/*! ./_promise-resolve */ "./node_modules/core-js/library/modules/_promise-resolve.js");
-
-$export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
-  var C = speciesConstructor(this, core.Promise || global.Promise);
-  var isFunction = typeof onFinally == 'function';
-  return this.then(
-    isFunction ? function (x) {
-      return promiseResolve(C, onFinally()).then(function () { return x; });
-    } : onFinally,
-    isFunction ? function (e) {
-      return promiseResolve(C, onFinally()).then(function () { throw e; });
-    } : onFinally
-  );
-} });
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es7.promise.try.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es7.promise.try.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// https://github.com/tc39/proposal-promise-try
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-var newPromiseCapability = __webpack_require__(/*! ./_new-promise-capability */ "./node_modules/core-js/library/modules/_new-promise-capability.js");
-var perform = __webpack_require__(/*! ./_perform */ "./node_modules/core-js/library/modules/_perform.js");
-
-$export($export.S, 'Promise', { 'try': function (callbackfn) {
-  var promiseCapability = newPromiseCapability.f(this);
-  var result = perform(callbackfn);
-  (result.e ? promiseCapability.reject : promiseCapability.resolve)(result.v);
-  return promiseCapability.promise;
-} });
 
 
 /***/ }),
@@ -16361,21 +15599,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js!./":
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
-  \***********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays.tsx!./":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays.tsx ***!
+  \*****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/stays", function() {
+      var mod = __webpack_require__(/*! ./src/pages/stays.tsx */ "./src/pages/stays.tsx")
       if(true) {
-        module.hot.accept(/*! ./src/pages/index.js */ "./src/pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")
-          next.router.update("/", updatedPage)
+        module.hot.accept(/*! ./src/pages/stays.tsx */ "./src/pages/stays.tsx", function() {
+          if(!next.router.components["/stays"]) return
+          var updatedPage = __webpack_require__(/*! ./src/pages/stays.tsx */ "./src/pages/stays.tsx")
+          next.router.update("/stays", updatedPage)
         })
       }
       return mod
@@ -21050,743 +20288,6 @@ module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f
 
 /***/ }),
 
-/***/ "./node_modules/regenerator-runtime/runtime.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var runtime = (function (exports) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  exports.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
-        return this._invoke(method, arg);
-      };
-    });
-  }
-
-  exports.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  exports.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  exports.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return Promise.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return Promise.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new Promise(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  exports.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  exports.async = function(innerFn, outerFn, self, tryLocsList) {
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList)
-    );
-
-    return exports.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        // Note: ["return"] must be used for ES3 parsing compatibility.
-        if (delegate.iterator["return"]) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  Gp[toStringTagSymbol] = "Generator";
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  exports.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  exports.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-
-  // Regardless of whether this script is executing as a CommonJS module
-  // or not, return the runtime object so that we can declare the variable
-  // regeneratorRuntime in the outer scope, which allows this module to be
-  // injected easily by `bin/regenerator --include-runtime script.js`.
-  return exports;
-
-}(
-  // If this script is executing as a CommonJS module, use module.exports
-  // as the regeneratorRuntime namespace. Otherwise create a new empty
-  // object. Either way, the resulting object will be used to initialize
-  // the regeneratorRuntime variable at the top of this file.
-   true ? module.exports : undefined
-));
-
-try {
-  regeneratorRuntime = runtime;
-} catch (accidentalStrictMode) {
-  // This module should not be running in strict mode, so the above
-  // assignment should always work unless something is misconfigured. Just
-  // in case runtime.js accidentally runs in strict mode, we can escape
-  // strict mode using a global Function call. This could conceivably fail
-  // if a Content Security Policy forbids using Function, but in that case
-  // the proper solution is to fix the accidental strict mode problem. If
-  // you've misconfigured your bundler to force strict mode and applied a
-  // CSP to forbid Function, and you're not willing to fix either of those
-  // problems, please detail your unique predicament in a GitHub issue.
-  Function("r", "regeneratorRuntime = r")(runtime);
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/string-convert/camel2hyphen.js":
 /*!*****************************************************!*\
   !*** ./node_modules/string-convert/camel2hyphen.js ***!
@@ -23712,17 +22213,6 @@ if (hasSymbols()) {
 
 /***/ }),
 
-/***/ "./public/img/high/airbnb-background.jpg":
-/*!***********************************************!*\
-  !*** ./public/img/high/airbnb-background.jpg ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/airbnb-background-b8b3c94eb622e8a6083c338facb6c4fd.jpg";
-
-/***/ }),
-
 /***/ "./public/img/high/explore1.jpg":
 /*!**************************************!*\
   !*** ./public/img/high/explore1.jpg ***!
@@ -23756,69 +22246,36 @@ module.exports = "/_next/static/images/explore3-aeb0d58d63e32f5efd9e3de68789726b
 
 /***/ }),
 
-/***/ "./public/img/high/facebook.png":
-/*!**************************************!*\
-  !*** ./public/img/high/facebook.png ***!
-  \**************************************/
+/***/ "./public/img/low/explore1-low.jpg":
+/*!*****************************************!*\
+  !*** ./public/img/low/explore1-low.jpg ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/facebook-8f5ce27564945d2c9a10ef827549a78c.png";
+module.exports = "data:image/jpeg;base64,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"
 
 /***/ }),
 
-/***/ "./public/img/high/featured1.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured1.jpg ***!
-  \***************************************/
+/***/ "./public/img/low/explore2-low.jpg":
+/*!*****************************************!*\
+  !*** ./public/img/low/explore2-low.jpg ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/featured1-61cfa1ad94e59dfb8a0aa9025d12eda4.jpg";
+module.exports = "data:image/jpeg;base64,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"
 
 /***/ }),
 
-/***/ "./public/img/high/featured2.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured2.jpg ***!
-  \***************************************/
+/***/ "./public/img/low/explore3-low.jpg":
+/*!*****************************************!*\
+  !*** ./public/img/low/explore3-low.jpg ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/featured2-f194738a33c75d7529e437a24fce67e0.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured3.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured3.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured3-8b63bad827adf3b1fab9832d1f1dbd41.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/google.png":
-/*!************************************!*\
-  !*** ./public/img/high/google.png ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/google-8b201685859c6b291fb39019e19896fd.png";
-
-/***/ }),
-
-/***/ "./public/img/high/plus-1.jpg":
-/*!************************************!*\
-  !*** ./public/img/high/plus-1.jpg ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/plus-1-1cd90d428ed098d36d4099a3514aa633.jpg";
+module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAhADEDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAgGCQoHAQP/xABAEAACAgIBAgQBBgYTAAAAAAADBAIFAQYHABEIEhMUFQkWISIxVTZBdHWz0xckMjM1QldydpGUlpeytbbF1NX/xAAaAQACAgMAAAAAAAAAAAAAAAAFBgMEAQIH/8QAPREAAgEDAAUDEAsBAAAAAAAAAQIDBBESAAUTISIGYWIUFSMxMjNBU1Rxc5GTobKzByQ0NUNFY3KCg7HS/9oADAMBAAIRAxEAPwBZdP8Al+uHbmzQWuOGN7qBtVsTFXpts160tvi41wFYr1KS3T18ZY5lI014zu8OETkueAmJYaiG4Twu+LziPxca9cbDw/esXiettVyOwqWFdOquKhizQG+l71Ehj4ksTOWEoPLnKtKwQdVxPEhiyXKa14V/C/ulnrNtr24uLYq1iZtlyDrLq+rZekYy+wrNKOAa2BofoRkwhEcZEysQCU1pQKFpwvC1RaX4bN7PvnGfI6NzueUNh1sBth1NxXW86/dGTTm3ZUtfsFSseyQdTxMcGySUTMUjAVYEPOHSXQfSNEKiBqyeSSmZvrKPSxpUwKb8URhWGJwnAxV1DEhkyuQyEJ+TFQgZImpTJbsZFTeOQgKSLNkwUklcgO2QSLW01O15TlZNgvZeEGIijnJ4ZmSGRwJ5sDzntGUsSzmEM5jny9vNH8eZkIVZj6DT9SWZSxjGO0u8f4uc/uoxln7M575xjH4+s8/JnyoHPfEHEm5uNqcQ8gbMuFQFc1UaxuWoWigLRsNBOxo6aFkwS0+Aeue2LJ39rh9pKYptIT9LHbOG/lOrLZeJNY3zf9H1xaN7kga2+pX9wEnbqJkitKzsNfjR2j9NYYnEgyrqGeq7WfpW1M3CubwuB3TltqCajbWAnnp6RKgUjNLTyZCoKZrHhHtSwZBkGQsguVLAqwAQ6qrY6xaBljepamarsJVEYhWSOMkyvggKvIoKnFjfIC1r27vJhgwdicWk8kJHIvRzMi0xwx5frSxH6xJdo5znGYR7/RnHfPX39oY8BTyQ8lx4nnAu8Ie4z2ziPqTjOUxQxntmXbtPMu2My8nfGa+AfKOaPlWtYBqD9wu17iDNhS7pQyqSLBDmZj1s7VVIrUlzwyGxr3BotVf1DMSIOJci7PqPiq4c3OrTtmd+pNBdxGUHdX322rKd1A0MDlIgrMZzUtnXE8/dSxTe9JqPeUgLkjkWJ6PlTyfrHwp9bUhe25J2alJ7W5eqlhyYXHCpLAi9t19Mzaq1jCOOklINjlDjMLbuK8LycBt3VgPAd50ZP4ef7vX/ALVn9d0dQH9lvi7+VHi3/EjU/wD1ujoz1xpfK6X20XN0+YaU+pJvEzezb/nnHr0wH8ca3ZWDVgOMXpOmhaEhIpmMlHJCuweEQ+1lAREnIYdgt70uMeiOfqzFPBMZc/QOLePXoe+2flDeE7RpEtbYI1yg3KBZxUMkhhBasswbHKFuBYEBhxKJMhDNp4wW5zCofAu9ka3hhGoQLOwulXpVDJMLCZckpltdijIwWRBmkRaE0BmIJeAYrgAtDK7hcxlOrcyb8Wp2DFDaV9KlsFayEdgtSiPAVtGVyVW0zF76UxskSJh8U54HkwAuiPPHmjLgNZSVTvMBs4cTEC7Y7g6LZSGjkITurWGRMbHc28v9LNFHEGaFJy4kxzzIUqUtZSyjIkgMbEAMSN5AWw/i7w4L7o7tt3Tctk2W8oqt+glxlyxumt61Q7S/cV5K4SyjlUxUXtW5nDChK5hdEgxyYXDM7ZZfXnXKHDXLPGwaBzl7lbQ/DuO73uSuo17qtaTVntYTZHlSwswhs5/M+512jGIVxCbLqbzxlQxMseTHuUH0fmjfTGuEbevXdswKqZUd+F0zYzuJqJpIq2dK8EKNnXFT9PBIsCYdkvOQkiQZmPBLkqzf9k5TqOGNK8SDfF/JfHfKuobVr9RotRx1c1jD13riidpVW+7P7IJGFCRdGvsEEiabYInsfepnGB+nK16IU8EL0tW+AE1LUBYRTSROY1MJfZtEqgbGpfHIyMCSQoCsNGDV0dFXqpGrqY1SRy0ySus0KlJ54iNqYJ4nJ2sUaq0SqBiCyyEhWTfxW8aapxBoOvbrr/N6W2rAIT4+WNFUKobaG3EeyG7XfAqK3DXSUVikh7Z96BrELZ7Gwakw4NWCuaHyJxXvdOsg+vXK17Kia4oWrZkm0DLtlcmZKZI4GEbsoxHjPfKucMGnnGWsRXlN+el+KeBd62XjzX9Xq56vd+zs6eDAgJ6y6k+r6ZqhsSabftrQMGYFFd29iexyJQdYxYnXal6SObnsWlyss1ievM6kRn1wDWU9lmkE5bCGOPshyzJpWscLCBmqyDZcFyEbKXolzOZdaSlirEOENRGxcvBURIix7FCMgyLI8jsrnEMJZRbgJCgIYtcRx6uriOwQdjSN6dUeWIstrnakKVLqoLhoULbnORa4cP5hcY/e23/3rov+p0dIx59P+/nP6o/rujq11tTyyp8H5W/R6fP7/Pel1wpvFQeD8V+j+jz+/wBUN8Pv4UUX9Jjf5QdMlrP79s35K7+k2Lo6Ojevu+1f7qf4hoKp+8Rfz/yLSc6b9m9/mzW/9Vo+rseQ/wAKfCT+Wa1/zPR0dI+su2/o4/i1bo/cj+8J6aD5tbpV/wCPT+GuOP5tT/uA/VWV99j/AOe7v9FHo6OmTkv9mpv7PmLoK5bfeLeeH5Y086Ojo6LaImn/2Q=="
 
 /***/ }),
 
@@ -23893,16 +22350,16 @@ var ShowAll = function ShowAll(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/containers/Adventures.tsx":
-/*!**************************************************!*\
-  !*** ./src/components/containers/Adventures.tsx ***!
-  \**************************************************/
-/*! exports provided: Adventures */
+/***/ "./src/components/containers/THundredPlus.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/containers/THundredPlus.tsx ***!
+  \****************************************************/
+/*! exports provided: THundredPlus */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Adventures", function() { return Adventures; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THundredPlus", function() { return THundredPlus; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -23910,15 +22367,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
-/* harmony import */ var _presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../presentational/AdventureCard */ "./src/components/presentational/AdventureCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+/* harmony import */ var _presentational_THundredPlusCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/THundredPlusCard */ "./src/components/presentational/THundredPlusCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/THundredPlus.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    adventures {\n      id\n      title\n      period\n      cost\n      country\n      img\n      imglow\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    stays {\n      id\n      host_is_superhost\n      size\n      country\n      name\n      price\n      reviews_per_month\n      number_of_reviews\n      picture_url\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -23930,66 +22386,30 @@ function _templateObject() {
 
 
 
-
-
  // Component
 
 
 
-var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var Adventures = function Adventures() {
-  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_ADVENTURES),
+var staydata = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
+var THundredPlus = function THundredPlus() {
+  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(staydata),
       loading = _useQuery.loading,
       error = _useQuery.error,
       data = _useQuery.data;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 47
-        },
-        __self: this
-      }, __jsx(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["AdventureCard"], {
-        key: data[i].id,
-        id: data[i].id,
-        img: data[i].img,
-        country: data[i].country,
-        title: data[i].title,
-        cost: data[i].cost,
-        period: data[i].period,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
-
   if (error) return "Error! ".concat(error.message);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
+    className: "flex flex-wrap items-start justify-start w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 49
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 51
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -23997,574 +22417,46 @@ var Adventures = function Adventures() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      small: '(min-width: 0px) and (max-width: 640px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(4), renderContent(data.adventures, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      large: '(min-width: 641px) and (max-width: 767px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data.adventures, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xl: '(min-width: 768px) and (max-width: 1023px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl ? (setCard(5), renderContent(data.adventures, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      twoxl: '(min-width: 1024px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data.adventures, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
-    title: "Show all adventures",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 118
-    },
-    __self: this
-  }));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Explore.tsx":
-/*!***********************************************!*\
-  !*** ./src/components/containers/Explore.tsx ***!
-  \***********************************************/
-/*! exports provided: Explore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Explore", function() { return Explore; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_ExploreCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/ExploreCard */ "./src/components/presentational/ExploreCard.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Explore.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Components
-
- // Images
-// High Resolution
-
-var explore1 = __webpack_require__(/*! ../../../public/img/high/explore1.jpg */ "./public/img/high/explore1.jpg");
-
-var explore2 = __webpack_require__(/*! ../../../public/img/high/explore2.jpg */ "./public/img/high/explore2.jpg");
-
-var explore3 = __webpack_require__(/*! ../../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg");
-
-var explores = [{
-  img: explore1,
-  title: 'Stays'
-}, {
-  img: explore2,
-  title: 'Experiences'
-}, {
-  img: explore3,
-  title: 'Adventures'
-}];
-var Explore = function Explore() {
-  return __jsx("div", {
-    className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full h-full overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-full scroller",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, explores.map(function (_ref, index) {
-    var img = _ref.img,
-        title = _ref.title;
-    return __jsx("div", {
-      className: "w-32 mr-4 sm:w-1/3 cursor-pointer",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 40
-      },
-      __self: this
-    }, __jsx(_presentational_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["ExploreCard"], {
-      key: index,
-      img: img,
-      title: title,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }));
-  })))));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Featured.tsx":
-/*!************************************************!*\
-  !*** ./src/components/containers/Featured.tsx ***!
-  \************************************************/
-/*! exports provided: Featured */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Featured", function() { return Featured; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/FeaturedCard */ "./src/components/presentational/FeaturedCard.tsx");
-
-
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Featured.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
- // Components
-
- // Images
-// High Resolution
-
-var featured1 = __webpack_require__(/*! ../../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
-
-var featured2 = __webpack_require__(/*! ../../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
-
-var featured3 = __webpack_require__(/*! ../../../public/img/high/featured3.jpg */ "./public/img/high/featured3.jpg");
-
-var Featured = function Featured() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-      loading = _useState[0],
-      setLoading = _useState[1];
-
-  function sleep(ms) {
-    return new _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a(function (resolve) {
-      return setTimeout(resolve, ms);
-    });
-  }
-
-  var setSleep = function setSleep(seconds) {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function setSleep$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(sleep(seconds));
-
-          case 2:
-            setLoading(false);
-
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    });
-  };
-
-  var featureds = [{
-    img: featured1,
-    verified: 940,
-    description: 'Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels'
-  }, {
-    img: featured2,
-    verified: 300,
-    description: 'Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.'
-  }, {
-    img: featured3,
-    verified: 290,
-    description: 'Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design'
-  }];
-  setSleep(3000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: this
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  })) : __jsx("div", {
-    className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full h-full overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-full scroller",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, featureds.map(function (_ref, index) {
-    var img = _ref.img,
-        verified = _ref.verified,
-        description = _ref.description;
-    return __jsx("div", {
-      className: "w-80 lg:w-1/3 pb-5 mr-2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67
-      },
-      __self: this
-    }, __jsx(_presentational_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__["FeaturedCard"], {
-      key: index,
-      img: img,
-      verified: verified,
-      description: description,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 68
-      },
-      __self: this
-    }));
-  }))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Plus.tsx":
-/*!********************************************!*\
-  !*** ./src/components/containers/Plus.tsx ***!
-  \********************************************/
-/*! exports provided: Plus */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Plus", function() { return Plus; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_PlusCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/PlusCard */ "./src/components/presentational/PlusCard.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Plus.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Components
-
- // Images
-// High Resolution
-
-var img1 = __webpack_require__(/*! ../../../public/img/high/plus-1.jpg */ "./public/img/high/plus-1.jpg");
-
-var Plus = function Plus() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_presentational_PlusCard__WEBPACK_IMPORTED_MODULE_1__["PlusCard"], {
-    img: img1,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Popular.tsx":
-/*!***********************************************!*\
-  !*** ./src/components/containers/Popular.tsx ***!
-  \***********************************************/
-/*! exports provided: Popular */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Popular", function() { return Popular; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _presentational_Location__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/Location */ "./src/components/presentational/Location.tsx");
-
-
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2__["createElement"];
-
-
- // Components
-
-
-var Popular = function Popular() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-      loading = _useState[0],
-      setLoading = _useState[1];
-
-  function sleep(ms) {
-    return new _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a(function (resolve) {
-      return setTimeout(resolve, ms);
-    });
-  }
-
-  var setSleep = function setSleep(seconds) {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function setSleep$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(sleep(seconds));
-
-          case 2:
-            setLoading(false);
-
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    });
-  };
-
-  var locations = [{
-    location: 'San Francisco',
-    price: 216
-  }, {
-    location: 'Los Angeles',
-    price: 213
-  }, {
-    location: 'New York',
-    price: 159
-  }, {
-    location: 'Seattle',
-    price: 134
-  }, {
-    location: 'Denver',
-    price: 128
-  }, {
-    location: 'Washington DC',
-    price: 166
-  }, {
-    location: 'Phoenix',
-    price: 232
-  }, {
-    location: 'Austin',
-    price: 242
-  }, {
-    location: 'Houston',
-    price: 351
-  }, {
-    location: 'New Orleans',
-    price: 210
-  }];
-  setSleep(5000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  })) : __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, locations.map(function (_ref, index) {
-    var location = _ref.location,
-        price = _ref.price;
-    return __jsx("div", {
-      className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 74
-      },
-      __self: this
-    }, __jsx(_presentational_Location__WEBPACK_IMPORTED_MODULE_4__["Location"], {
-      key: index,
-      location: location,
-      price: price,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }));
-  })));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Stay.tsx":
-/*!********************************************!*\
-  !*** ./src/components/containers/Stay.tsx ***!
-  \********************************************/
-/*! exports provided: Stay */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Stay", function() { return Stay; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    stays {\n      id\n      host_is_superhost\n      country\n      name\n      price\n      reviews_per_month\n      picture_url\n    }\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-
- // Component
-
-
-
-var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var Stay = function Stay() {
-  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAYS),
-      loading = _useQuery.loading,
-      error = _useQuery.error,
-      data = _useQuery.data;
-
-  if (error) return "Error! ".concat(error.message);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 52
     },
     __self: this
   })) : data && data.stays.map(function (_ref, index) {
-    var id = _ref.id,
-        host_is_superhost = _ref.host_is_superhost,
+    var host_is_superhost = _ref.host_is_superhost,
+        size = _ref.size,
         country = _ref.country,
         name = _ref.name,
         price = _ref.price,
         reviews_per_month = _ref.reviews_per_month,
+        number_of_reviews = _ref.number_of_reviews,
         picture_url = _ref.picture_url;
     return __jsx("div", {
-      className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
+      className: "lg:w-1/3 xl:w-1/4 pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 71
       },
       __self: this
-    }, __jsx(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__["StayCard"], {
+    }, __jsx(_presentational_THundredPlusCard__WEBPACK_IMPORTED_MODULE_5__["THundredPlusCard"], {
       key: index,
-      id: id,
+      img: picture_url,
       host_is_superhost: host_is_superhost,
+      size: size,
       country: country,
       name: name,
       price: price,
       reviews_per_month: reviews_per_month,
-      picture_url: picture_url,
+      number_of_reviews: number_of_reviews,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 72
       },
       __self: this
     }));
-  }), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  })), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 89
     },
     __self: this
   }));
@@ -24743,6 +22635,374 @@ var TopRated = function TopRated() {
     },
     __self: this
   }));
+};
+
+/***/ }),
+
+/***/ "./src/components/containers/Travel.tsx":
+/*!**********************************************!*\
+  !*** ./src/components/containers/Travel.tsx ***!
+  \**********************************************/
+/*! exports provided: Travel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Travel", function() { return Travel; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _presentational_TravelCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/TravelCard */ "./src/components/presentational/TravelCard.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Travel.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+ // Image
+// High Resolution
+
+var explore1 = __webpack_require__(/*! ../../../public/img/high/explore1.jpg */ "./public/img/high/explore1.jpg");
+
+var explore2 = __webpack_require__(/*! ../../../public/img/high/explore2.jpg */ "./public/img/high/explore2.jpg");
+
+var explore3 = __webpack_require__(/*! ../../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg"); // Low Resolution
+
+
+var explore1low = __webpack_require__(/*! ../../../public/img/low/explore1-low.jpg */ "./public/img/low/explore1-low.jpg");
+
+var explore2low = __webpack_require__(/*! ../../../public/img/low/explore2-low.jpg */ "./public/img/low/explore2-low.jpg");
+
+var explore3low = __webpack_require__(/*! ../../../public/img/low/explore3-low.jpg */ "./public/img/low/explore3-low.jpg");
+
+var Travel = function Travel() {
+  var countries = [{
+    img: explore1,
+    imglow: explore1low,
+    location: 'Sydney'
+  }, {
+    img: explore2,
+    imglow: explore2low,
+    location: 'Cape Town'
+  }, {
+    img: explore3,
+    imglow: explore3low,
+    location: 'Buenos Aires'
+  }, {
+    img: explore1,
+    imglow: explore1low,
+    location: 'Seoul'
+  }, {
+    img: explore2,
+    imglow: explore2low,
+    location: 'Barcelona'
+  }, {
+    img: explore3,
+    imglow: explore3low,
+    location: 'Los Angeles'
+  }];
+  return __jsx("div", {
+    className: "overflow-y-hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full h-full overflow-y-hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-full scroller",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-screen",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, countries.map(function (_ref, index) {
+    var img = _ref.img,
+        imglow = _ref.imglow,
+        location = _ref.location;
+    return __jsx("div", {
+      className: "min-w-32 w-full mr-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, __jsx(_presentational_TravelCard__WEBPACK_IMPORTED_MODULE_1__["TravelCard"], {
+      key: index,
+      img: img,
+      imglow: imglow,
+      location: location,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }));
+  })))));
+};
+
+/***/ }),
+
+/***/ "./src/components/layout/ExploreHeader.tsx":
+/*!*************************************************!*\
+  !*** ./src/components/layout/ExploreHeader.tsx ***!
+  \*************************************************/
+/*! exports provided: ExploreHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExploreHeader", function() { return ExploreHeader; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/ExploreHeader.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+var ExploreHeader = function ExploreHeader(_ref) {
+  var type = _ref.type;
+  return __jsx("div", {
+    className: "flex items-center justify-between relative border-b border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex items-center justify-start w-full md:w-1/2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "ml-6 mr-6 md:mr-8 my-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx("span", {
+    className: "sr-only",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Airbnb"), __jsx("svg", {
+    viewBox: "0 0 1000 1000",
+    role: "presentation",
+    "aria-hidden": "true",
+    focusable: "false",
+    className: "block",
+    style: {
+      height: 34,
+      width: 34,
+      fill: '#FF6368'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  })))), __jsx("div", {
+    className: "w-full md:max-w-100 flex items-center justify-start",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx("div", {
+    id: "hoverbox",
+    className: "flex w-full md:w-120 items-center justify-start mr-7 py-3 px-4 shadow-md rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx("svg", {
+    viewBox: "0 0 16 16",
+    style: {
+      height: 18,
+      width: 18
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m2.5 7c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5m13.1 6.9-2.8-2.9c.7-1.1 1.2-2.5 1.2-4 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.5 0 2.9-.5 4-1.2l2.9 2.8c.2.3.5.4.9.4.3 0 .6-.1.8-.4.5-.5.5-1.2 0-1.7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  })), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 px-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, "Anywhere ", __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, " \xB7 "), " ", type)))), __jsx("nav", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "hidden xl:block xl:flex items-center justify-around flex-wrap text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "border-transparent border-b-2 hover:border-white py-6 px-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "flex items-center justify-start text-sm mx-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "relative self-center h-3 w-3",
+    style: {
+      fill: '#484848',
+      right: 5
+    },
+    viewBox: "0 0 512 512",
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  })), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, "English(CA)"))), __jsx("div", {
+    className: "mx-3 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "text-sm tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, "$CAD")), __jsx("div", {
+    className: "mx-3 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "text-sm tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, "Become a host")), __jsx("div", {
+    className: "mx-3 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "text-sm tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, "Help")), __jsx("div", {
+    className: "mx-3 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "text-sm tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, "Sign up")), __jsx("div", {
+    className: "mx-3 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "text-sm tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, "Log in"))));
 };
 
 /***/ }),
@@ -25630,1877 +23890,30 @@ var FooterInducer = function FooterInducer(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/layout/Header.tsx":
-/*!******************************************!*\
-  !*** ./src/components/layout/Header.tsx ***!
-  \******************************************/
-/*! exports provided: Header */
+/***/ "./src/components/presentational/THundredPlusCard.tsx":
+/*!************************************************************!*\
+  !*** ./src/components/presentational/THundredPlusCard.tsx ***!
+  \************************************************************/
+/*! exports provided: THundredPlusCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THundredPlusCard", function() { return THundredPlusCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/HeaderCard */ "./src/components/presentational/HeaderCard.tsx");
-/* harmony import */ var _modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modals/RegisterModal */ "./src/components/modals/RegisterModal.tsx");
-/* harmony import */ var _modals_HelpModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modals/HelpModal */ "./src/components/modals/HelpModal.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/Header.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/THundredPlusCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
- // Component
-
-
-
- // Images
-
-var background = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
-
-var Header = function Header() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      registerModal = _useState[0],
-      setRegisterModal = _useState[1];
-
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      helpModal = _useState2[0],
-      setHelpModal = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      type = _useState3[0],
-      setType = _useState3[1];
-
-  var switchRegisterModal = function switchRegisterModal() {
-    setRegisterModal(!registerModal);
-  };
-
-  var switchHelpModal = function switchHelpModal() {
-    setHelpModal(!helpModal);
-  };
-
-  var switchType = function switchType(type) {
-    setType(type);
-  };
-
-  var configureScroll = function configureScroll(name) {
-    document.body.style.overflow = name;
-  };
-
-  return __jsx("header", {
-    style: {
-      backgroundImage: "url(".concat(background, ")"),
-      maxHeight: '80rem'
-    },
-    className: "w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex flex-wrap items-center justify-between",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "m-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, __jsx("span", {
-    className: "sr-only",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, "Airbnb"), __jsx("svg", {
-    viewBox: "0 0 1000 1000",
-    role: "presentation",
-    "aria-hidden": "true",
-    focusable: "false",
-    className: "h-8 w-8 block",
-    style: {
-      fill: '#ffffff'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  }))))), __jsx("div", {
-    className: "hidden lg:block",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, __jsx("nav", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "flex items-center justify-around flex-wrap text-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "#",
-    className: "flex items-center justify-start text-sm mx-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "relative self-center h-3 w-3",
-    style: {
-      fill: '#ffffff',
-      right: 5
-    },
-    viewBox: "0 0 512 512",
-    xmlns: "http://www.w3.org/2000/svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  })), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }, "English(CA)"))), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "#",
-    className: "text-sm  tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, "$CAD")), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "#",
-    className: "text-sm  tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }, "Host a home")), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "#",
-    className: "text-sm  tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, "Host an experience")), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return switchHelpModal();
-    },
-    className: "text-sm  tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: this
-  }, "Help")), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      switchType('Sign up');
-      switchRegisterModal();
-    },
-    className: "text-sm  tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: this
-  }, "Sign up")), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 108
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      switchType('Log in');
-      switchRegisterModal();
-    },
-    className: "text-sm tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 109
-    },
-    __self: this
-  }, "Log in"))))), __jsx("div", {
-    className: "md:ml-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 121
-    },
-    __self: this
-  }, __jsx("h3", {
-    className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 122
-    },
-    __self: this
-  }, "Book unique places to stay and things to do."), __jsx(_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["HeaderCard"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 125
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 text-right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 127
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-sm text-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128
-    },
-    __self: this
-  }, "Over 300 unique places ", __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 131
-    },
-    __self: this
-  }), "to stay in Japan")), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('hidden') : undefined, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__["RegisterModal"], {
-    setRegisterModal: setRegisterModal,
-    type: "Log in",
-    nottype: "Sign up",
-    phrase: "Don't",
-    setType: switchType,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 139
-    },
-    __self: this
-  }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__["RegisterModal"], {
-    setRegisterModal: setRegisterModal,
-    type: "Sign up",
-    nottype: "Log in",
-    phrase: "Already",
-    setType: switchType,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 147
-    },
-    __self: this
-  })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('auto') : undefined), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_3__["HelpModal"], {
-    setHelpModal: switchHelpModal,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 159
-    },
-    __self: this
-  }) : null);
-};
-
-/***/ }),
-
-/***/ "./src/components/modals/HelpModal.tsx":
-/*!*********************************************!*\
-  !*** ./src/components/modals/HelpModal.tsx ***!
-  \*********************************************/
-/*! exports provided: HelpModal */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpModal", function() { return HelpModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/HelpCard */ "./src/components/presentational/HelpCard.tsx");
-/* harmony import */ var _presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../presentational/HelpAdditional */ "./src/components/presentational/HelpAdditional.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/HelpModal.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
- // Components
-
-
-
-var HelpModal = function HelpModal(_ref) {
-  var setHelpModal = _ref.setHelpModal;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      word = _useState[0],
-      setWord = _useState[1];
-
-  var handleChange = function handleChange(e) {
-    return setWord(e.target.value);
-  };
-
-  var questions = [{
-    title: 'How do I create an account?',
-    answer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
-  }];
-  return __jsx("div", {
-    className: "bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "py-5 text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, "Recommended help"), __jsx("button", {
-    onClick: function onClick() {
-      return setHelpModal(false);
-    },
-    className: "absolute top-0 right-0 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "pt-6 pr-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "h-4 w-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512.001 512.001",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }))))))), __jsx("div", {
-    className: "bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 mb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, "Search by keyword"), __jsx("div", {
-    id: "helpsearch",
-    className: "flex border border-gray-300 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-1/12 relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "absolute top-0 pl-2 pt-2 h-6 w-6",
-    style: {
-      fill: '#767676'
-    },
-    viewBox: "0 0 24 24",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m10.7227 19.9083c-4.919-.706-8.336-5.266-7.63-10.185.704-4.919 5.264-8.336 10.184-7.631 4.919.706 8.336 5.265 7.632 10.185-.706 4.92-5.266 8.336-10.186 7.631m11.65 2.76-3.729-4.196c1.706-1.514 2.905-3.618 3.254-6.053.783-5.467-3.013-10.533-8.479-11.317-5.467-.784-10.534 3.013-11.316 8.48-.784 5.466 3.012 10.532 8.478 11.315 2.675.384 5.254-.329 7.283-1.798l3.762 4.233c.184.207.5.225.706.042.206-.184.225-.5.041-.706",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "w-11/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, __jsx("input", {
-    value: word,
-    onChange: handleChange,
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    type: "text",
-    className: "w-full h-8 text-sm text-gray-750 focus:outline-none",
-    placeholder: "E.g. reservation status",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  })))), __jsx("div", {
-    className: "mt-8 mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "uppercase text-xs text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, "Recommended Articles")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }), __jsx(_presentational_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "mt-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "uppercase text-gray-750 text-xs",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: this
-  }, "Explore More Articles By Topic")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: this
-  }, __jsx(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
-    title: "Reservation requests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }), __jsx(_presentational_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
-    title: "Reservation requests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "flex flex-col justify-end items-center my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 110
-    },
-    __self: this
-  }, __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "w-11/12 bg-green-850 py-2 text-white rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: this
-  }, "Visit the Help Centre"), __jsx("a", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "border-b border-green-850 text-green-850 text-sm my-1",
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: this
-  }, "Give Feedback")));
-};
-
-/***/ }),
-
-/***/ "./src/components/modals/RegisterModal.tsx":
-/*!*************************************************!*\
-  !*** ./src/components/modals/RegisterModal.tsx ***!
-  \*************************************************/
-/*! exports provided: RegisterModal */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterModal", function() { return RegisterModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/RegisterModal.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Images
-
-var facebook = __webpack_require__(/*! ../../../public/img/high/facebook.png */ "./public/img/high/facebook.png");
-
-var google = __webpack_require__(/*! ../../../public/img/high/google.png */ "./public/img/high/google.png");
-
-var RegisterModal = function RegisterModal(_ref) {
-  var setRegisterModal = _ref.setRegisterModal,
-      setType = _ref.setType,
-      type = _ref.type,
-      nottype = _ref.nottype,
-      phrase = _ref.phrase;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    id: "darkOverlay",
-    className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), __jsx("div", {
-    id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "relative w-11/12 flex justify-center items-center my-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-center absolute left-0 z-20 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return setRegisterModal(false);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-4 h-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 47.971 47.971",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  })))))), __jsx("div", {
-    className: "w-full flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: this
-  }, type)))), __jsx("div", {
-    className: "w-full flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-11/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "my-3 mt-10",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("form", {
-    action: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    htmlFor: "country",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "absolute text-gray-650 text-xs top-0 pl-3 pt-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, "Country/Region"), __jsx("select", {
-    name: "country",
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "appearance-none w-full border-t border-r border-l border-gray-500 py-4 rounded-b-none rounded-lg placeholder-gray-900 pl-3",
-    id: "countryinput",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, __jsx("option", {
-    value: "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  }, "Canada (+1)"), __jsx("option", {
-    value: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: this
-  }, "Japan (+81)"), __jsx("option", {
-    value: "3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  }, "United States (+1)")), __jsx("div", {
-    className: "h-full pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "fill-current h-6 w-6",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: this
-  })))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx("input", {
-    className: "appearance-none  w-full border border-gray-500 py-3 rounded-t-none rounded-lg placeholder-gray-900 pl-4",
-    type: "text",
-    name: "phone",
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    placeholder: "Phone number",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }))))), __jsx("div", {
-    className: "py-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-xs text-gray-650",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, "We'll call or text you to confirm your number. Standard message and data rates apply.")), __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "w-full bg-pink-750 py-3 rounded-lg text-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 114
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: this
-  }, "Continue")), __jsx("div", {
-    className: "pt-4 pb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: this
-  }, __jsx("p", {
-    id: "pseudo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120
-    },
-    __self: this
-  }, __jsx("span", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-xs text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 121
-    },
-    __self: this
-  }, "or"))), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "absolute left-0 ml-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-5 h-5",
-    style: {
-      fill: '#767676'
-    },
-    viewBox: "0 0 479.058 479.058",
-    xmlns: "http://www.w3.org/2000/svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }))), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 138
-    },
-    __self: this
-  }, "Continue with email")), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }, __jsx("div", {
-    style: {
-      marginLeft: 15
-    },
-    className: "absolute left-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-6 h-6",
-    src: facebook,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 146
-    },
-    __self: this
-  })), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: this
-  }, "Continue with Facebook")), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 154
-    },
-    __self: this
-  }, __jsx("div", {
-    style: {
-      marginLeft: 17
-    },
-    className: "absolute left-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 155
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-5 h-5",
-    src: google,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 156
-    },
-    __self: this
-  })), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 158
-    },
-    __self: this
-  }, "Continue with Google")), __jsx("div", {
-    className: "flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 164
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-sm text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 165
-    },
-    __self: this
-  }, phrase, " have an account?"), __jsx("button", {
-    onClick: function onClick() {
-      return setType("".concat(nottype));
-    },
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "border-b border-gray-750 text-sm ml-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 170
-    },
-    __self: this
-  }, nottype))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/AdventureCard.tsx":
-/*!*********************************************************!*\
-  !*** ./src/components/presentational/AdventureCard.tsx ***!
-  \*********************************************************/
-/*! exports provided: AdventureCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdventureCard", function() { return AdventureCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/AdventureCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
-var AdventureCard = function AdventureCard(_ref) {
-  var id = _ref.id,
+var THundredPlusCard = function THundredPlusCard(_ref) {
+  var host_is_superhost = _ref.host_is_superhost,
       img = _ref.img,
+      size = _ref.size,
       country = _ref.country,
-      title = _ref.title,
-      cost = _ref.cost,
-      period = _ref.period;
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/adventures/[id]",
-    as: "/adventures/".concat(id),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-30/31 cursor-pointer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-full rounded-lg",
-    src: img,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }), __jsx("p", {
-    className: "uppercase text-xs my-2 font-semibold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, country), __jsx("p", {
-    className: "my-1 w-5/6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, title), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "From $", cost, " / person", __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, " \xB7 "), period, " days")));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/ExploreCard.tsx":
-/*!*******************************************************!*\
-  !*** ./src/components/presentational/ExploreCard.tsx ***!
-  \*******************************************************/
-/*! exports provided: ExploreCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExploreCard", function() { return ExploreCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/ExploreCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
-var ExploreCard = function ExploreCard(_ref) {
-  var img = _ref.img,
-      title = _ref.title;
-  return __jsx("div", {
-    className: "w-30/31",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/".concat(title.toLowerCase()),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx("img", {
-    src: img,
-    className: "h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), __jsx("p", {
-    className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, title))));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/FeaturedCard.tsx":
-/*!********************************************************!*\
-  !*** ./src/components/presentational/FeaturedCard.tsx ***!
-  \********************************************************/
-/*! exports provided: FeaturedCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturedCard", function() { return FeaturedCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/FeaturedCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var FeaturedCard = function FeaturedCard(_ref) {
-  var img = _ref.img,
-      verified = _ref.verified,
-      description = _ref.description;
-  return __jsx("div", {
-    className: "w-30/31",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-full w-64 sm:w-full bg-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-full rounded-xl",
-    src: img,
-    alt: "adventure1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }), __jsx("div", {
-    className: "flex flex-wrap items-center justify-start",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "uppercase text-xs my-2 font-bold text-pink-700",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, verified, "+ Verified Stays")), __jsx("p", {
-    className: "whitespace-normal my-1 text-sm tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, description)));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/HeaderCard.tsx":
-/*!******************************************************!*\
-  !*** ./src/components/presentational/HeaderCard.tsx ***!
-  \******************************************************/
-/*! exports provided: HeaderCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderCard", function() { return HeaderCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HeaderCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var HeaderCard = function HeaderCard() {
-  return __jsx("div", {
-    className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "mx-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "hidden md:inline-block md:text-3xl text-gray-750 leading-tight",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, "Book unique places to ", __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }), "stay and things to do."), __jsx("form", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider",
-    htmlFor: "where",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, "Where"), __jsx("input", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "where",
-    placeholder: "Anywhere",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "flex flex-wrap items-stretch justify-start",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-1/2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs text-gray-750 uppercase",
-    htmlFor: "checkin",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, "Check-In"), __jsx("input", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "checkin",
-    placeholder: "dd-mm-yyyy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "w-1/2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs uppercase text-gray-750",
-    htmlFor: "checkout",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
-  }, "Check-Out"), __jsx("input", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "checkout",
-    placeholder: "dd-mm-yyyy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  }))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs uppercase text-gray-750",
-    htmlFor: "guests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, "Guests"), __jsx("div", {
-    className: "inline-block relative w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, __jsx("select", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
-    id: "guests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, __jsx("option", {
-    value: "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }, "2 Guests"), __jsx("option", {
-    value: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, "3 Guests"), __jsx("option", {
-    value: "3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, "4 Guests")), __jsx("div", {
-    className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "fill-current h-4 w-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  })))))), __jsx("div", {
-    className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, __jsx("button", {
-    className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: this
-  }, "Search"))));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/HelpAdditional.tsx":
-/*!**********************************************************!*\
-  !*** ./src/components/presentational/HelpAdditional.tsx ***!
-  \**********************************************************/
-/*! exports provided: HelpAdditional */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpAdditional", function() { return HelpAdditional; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HelpAdditional.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var HelpAdditional = function HelpAdditional(_ref) {
-  var title = _ref.title;
-  return __jsx("div", {
-    className: "border-b border-gray-300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-center justify-between py-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, title), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx("svg", {
-    style: {
-      fill: '#000000'
-    },
-    className: "w-2 h-2",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512.011 512.011",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0 s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667 C514.096,145.416,514.096,131.933,505.755,123.592z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  })))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/HelpCard.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/presentational/HelpCard.tsx ***!
-  \****************************************************/
-/*! exports provided: HelpCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpCard", function() { return HelpCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HelpCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var HelpCard = function HelpCard(_ref) {
-  var title = _ref.title,
-      answer = _ref.answer;
-
-  var renderAnswer = function renderAnswer(answer) {
-    var wordArray = answer.split(' ');
-    var newArray = [];
-
-    for (var i = 0; i < 20; i++) {
-      newArray.push(wordArray[i]);
-    }
-
-    newArray.push('...');
-    var something = newArray.join(' ');
-    return something;
-  };
-
-  var newAnswer = renderAnswer(answer);
-  return __jsx("div", {
-    className: "mb-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, title), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, newAnswer), __jsx("button", {
-    className: "flex ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-green-850 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, "Read more"), __jsx("div", {
-    className: "pl-3 flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, __jsx("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    className: "h-3 w-3",
-    style: {
-      fill: '#008489',
-      paddingTop: 1,
-      paddingRight: 3
-    },
-    viewBox: "0 0 451.846 451.847",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/Location.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/presentational/Location.tsx ***!
-  \****************************************************/
-/*! exports provided: Location */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Location", function() { return Location; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/Location.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var Location = function Location(_ref) {
-  var location = _ref.location,
-      price = _ref.price;
-  return __jsx("div", {
-    className: "w-30/31 py-3 my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, __jsx("h3", {
-    className: "font-semibold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, location), __jsx("p", {
-    className: "text-xs font-normal text-gray-650 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, "$", price, "/night average"));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/PlusCard.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/presentational/PlusCard.tsx ***!
-  \****************************************************/
-/*! exports provided: PlusCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlusCard", function() { return PlusCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/PlusCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var PlusCard = function PlusCard(_ref) {
-  var img = _ref.img;
-  return __jsx("div", {
-    className: "w-full cursor pointer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-full h-64 bg-cover bg-no-repeat object-cover rounded",
-    src: img,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }));
-};
-
-/***/ }),
-
-/***/ "./src/components/presentational/StayCard.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/presentational/StayCard.tsx ***!
-  \****************************************************/
-/*! exports provided: StayCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StayCard", function() { return StayCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/StayCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
-var StayCard = function StayCard(_ref) {
-  var id = _ref.id,
-      host_is_superhost = _ref.host_is_superhost,
       name = _ref.name,
       price = _ref.price,
-      country = _ref.country,
       reviews_per_month = _ref.reviews_per_month,
-      picture_url = _ref.picture_url;
+      number_of_reviews = _ref.number_of_reviews;
 
   var renderhost = function renderhost(host_is_superhost) {
     if (host_is_superhost == 't') {
@@ -27508,82 +23921,143 @@ var StayCard = function StayCard(_ref) {
         className: "md:flex md:flex-wrap md:items-center md:justify-start",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 27
         },
         __self: this
       }, __jsx("p", {
         className: "uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 28
         },
         __self: this
       }, "Superhost"), __jsx("p", {
-        className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-600",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
+        style: {
+          fontFamily: 'airbnb-book'
         },
-        __self: this
-      }, country));
-    } else {
-      return __jsx("div", {
-        className: "md:flex md:flex-wrap md:items-center md:justify-start",
+        className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-650",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }, __jsx("p", {
-        className: "mt-3 text-sm sm:my-2 font-light text-gray-600",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 31
         },
         __self: this
       }, country));
     }
+
+    return __jsx("div", {
+      className: "md:flex md:flex-wrap md:items-center md:justify-start",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx("p", {
+      style: {
+        fontFamily: 'airbnb-book'
+      },
+      className: "mt-3 text-sm sm:my-2 font-light text-gray-650",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, size, __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, " \xB7 "), country));
   };
 
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/stays/[id]",
-    as: "/stays/".concat(id),
+  return __jsx("div", {
+    className: "w-30/31",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 54
     },
     __self: this
   }, __jsx("div", {
-    className: "w-30/31 cursor-pointer",
+    className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 55
     },
     __self: this
-  }, __jsx("img", {
+  }, __jsx("div", {
+    style: {
+      height: 30,
+      width: 30
+    },
+    className: "flex items-center justify-center absolute z-10 right-0 mr-2 mt-2 mr-1 bg-gray-300 shadow-lg rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "h-4 w-4",
+    viewBox: "0 -50 512 512",
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }))), __jsx("img", {
     className: "w-full rounded",
-    src: picture_url,
+    src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 67
     },
     __self: this
-  }), __jsx("div", {
+  })), __jsx("div", {
     className: "flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 69
     },
     __self: this
-  }, renderhost(host_is_superhost), __jsx("div", {
-    className: "flex items-center justify-center flex-wrap",
+  }, renderhost(host_is_superhost)), __jsx("p", {
+    className: "my-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 72
+    },
+    __self: this
+  }, name), __jsx("p", {
+    className: "tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, __jsx("span", {
+    className: "font-bold",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, "$", price, " CAD"), "/night"), __jsx("div", {
+    className: "flex items-center justify-start flex-wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
     },
     __self: this
   }, __jsx("svg", {
     xmlns: "http://www.w3.org/2000/svg",
+    x: "0px",
+    y: "0px",
     width: "13",
     height: "13",
     viewBox: "0 0 37.286 37.287",
@@ -27592,51 +24066,43 @@ var StayCard = function StayCard(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 77
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 85
     },
     __self: this
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 86
     },
     __self: this
   }))), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
     className: "pl-1 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 96
     },
     __self: this
-  }, reviews_per_month))), __jsx("p", {
-    className: "my-1",
+  }, reviews_per_month), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 99
     },
     __self: this
-  }, name), __jsx("p", {
-    className: "tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, __jsx("span", {
-    className: "font-bold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, "$", price, " CAD"), "/night")));
+  }, "\xA0 (", number_of_reviews, ")")));
 };
 
 /***/ }),
@@ -27761,22 +24227,85 @@ var TopRatedCard = function TopRatedCard(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/wrapper/Section.tsx":
-/*!********************************************!*\
-  !*** ./src/components/wrapper/Section.tsx ***!
-  \********************************************/
-/*! exports provided: Section */
+/***/ "./src/components/presentational/TravelCard.tsx":
+/*!******************************************************!*\
+  !*** ./src/components/presentational/TravelCard.tsx ***!
+  \******************************************************/
+/*! exports provided: TravelCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TravelCard", function() { return TravelCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/Section.tsx";
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/TravelCard.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // const { LazyImage } = require('react-lazy-progressive-image');
+
+
+var TravelCard = function TravelCard(_ref) {
+  var img = _ref.img,
+      location = _ref.location;
+  return __jsx("div", {
+    className: "w-30/31",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/".concat(location.toLowerCase()),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("img", {
+    src: img,
+    className: "w-full h-full rounded-b-none rounded-lg ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }), __jsx("p", {
+    className: "text-sm py-3 pl-4 sm:pl-4 text-gray-750 font-semibold",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, location))));
+};
+
+/***/ }),
+
+/***/ "./src/components/wrapper/ExploreSection.tsx":
+/*!***************************************************!*\
+  !*** ./src/components/wrapper/ExploreSection.tsx ***!
+  \***************************************************/
+/*! exports provided: ExploreSection */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExploreSection", function() { return ExploreSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/ExploreSection.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-var Section = function Section(_ref) {
+var ExploreSection = function ExploreSection(_ref) {
   var title = _ref.title,
       phrase = _ref.phrase,
       children = _ref.children;
@@ -27809,7 +24338,7 @@ var Section = function Section(_ref) {
         style: {
           fontFamily: 'airbnb-medium'
         },
-        className: "text-gray-850 text-2xl pt-3 pb-5",
+        className: "text-gray-850 text-2xl py-3 ",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
@@ -27820,7 +24349,7 @@ var Section = function Section(_ref) {
   };
 
   return __jsx("div", {
-    className: "px-10 md:px-20 xl:max-w-layout mx-auto py-5 w-full",
+    className: "md:px-0 max-w-90% xl:px-0 mx-auto py-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -27831,22 +24360,22 @@ var Section = function Section(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/wrapper/SectionOverflow.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/wrapper/SectionOverflow.tsx ***!
-  \****************************************************/
-/*! exports provided: SectionOverflow */
+/***/ "./src/components/wrapper/ExploreSectionOverflow.tsx":
+/*!***********************************************************!*\
+  !*** ./src/components/wrapper/ExploreSectionOverflow.tsx ***!
+  \***********************************************************/
+/*! exports provided: ExploreSectionOverflow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionOverflow", function() { return SectionOverflow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExploreSectionOverflow", function() { return ExploreSectionOverflow; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/SectionOverflow.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/ExploreSectionOverflow.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-var SectionOverflow = function SectionOverflow(_ref) {
+var ExploreSectionOverflow = function ExploreSectionOverflow(_ref) {
   var title = _ref.title,
       phrase = _ref.phrase,
       children = _ref.children;
@@ -27876,10 +24405,7 @@ var SectionOverflow = function SectionOverflow(_ref) {
       }, phrase));
     } else {
       return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
-        style: {
-          fontFamily: 'airbnb-medium'
-        },
-        className: "scrollable text-gray-850 text-2xl py-3 w-5/6",
+        className: "scrollable text-gray-850 text-2xl font-semibold py-3 w-5/6",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33
@@ -27890,10 +24416,10 @@ var SectionOverflow = function SectionOverflow(_ref) {
   }
 
   return __jsx("div", {
-    className: "px-10 md:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
+    className: "md:px-0 max-w-90% mx-auto py-5 overflow-x-hidden overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 41
     },
     __self: this
   }, renderPhrase(phrase), children);
@@ -27901,10 +24427,10 @@ var SectionOverflow = function SectionOverflow(_ref) {
 
 /***/ }),
 
-/***/ "./src/pages/index.js":
-/*!****************************!*\
-  !*** ./src/pages/index.js ***!
-  \****************************/
+/***/ "./src/pages/stays.tsx":
+/*!*****************************!*\
+  !*** ./src/pages/stays.tsx ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27912,20 +24438,19 @@ var SectionOverflow = function SectionOverflow(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/wrapper/Section */ "./src/components/wrapper/Section.tsx");
-/* harmony import */ var _components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
-/* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.tsx");
-/* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
-/* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
-/* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.tsx");
-/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.tsx");
-/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
-/* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
-/* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var _components_wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/wrapper/ExploreSection */ "./src/components/wrapper/ExploreSection.tsx");
+/* harmony import */ var _components_wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/wrapper/ExploreSectionOverflow */ "./src/components/wrapper/ExploreSectionOverflow.tsx");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
+/* harmony import */ var _components_containers_Travel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Travel */ "./src/components/containers/Travel.tsx");
+/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
+/* harmony import */ var _components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/THundredPlus */ "./src/components/containers/THundredPlus.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stays.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
+
+
+ // Layout
 
 
  // Component
@@ -27933,136 +24458,191 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-
-
-
-
-
-
-var Home = function Home() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_layout_Header__WEBPACK_IMPORTED_MODULE_3__["Header"], {
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("header", {
+    className: "z-20 sticky bg-white top-0 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_4__["ExploreHeader"], {
+    type: "Stays",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "px-5 md:px-0 mx-auto py-2 border-b border-gray-200",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }), __jsx(_components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["SectionOverflow"], {
-    title: "Explore Airbnb",
+  }, __jsx("div", {
+    className: "mx-auto md:max-w-90% flex flex-wrap items-center justify-start",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__["Explore"], {
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hover:border-gray-900 mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
-    title: "Airbnb Plus places to stay",
-    phrase: "A selection of places to stay verified for quality and design",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
+  }, "Dates"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
     },
-    __self: this
-  }, __jsx(_components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__["Plus"], {
+    className: "hover:border-gray-900 mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
-    title: "Introducing Airbnb Adventures",
-    phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
+  }, "Guests"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hover:border-gray-900 md:hidden lg:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 33
     },
     __self: this
-  }, __jsx(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__["Adventures"], {
+  }, "Filters"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hover:border-gray-900 hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 38
     },
     __self: this
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
-    title: "Places to stay around the world",
+  }, "Work trip"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hover:border-gray-900 hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 43
     },
     __self: this
-  }, __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__["Stay"], {
+  }, "Type of place"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hover:border-gray-900 hidden lg:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 48
     },
     __self: this
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
-    title: "Top-rated experiences",
-    phrase: "Book activities led by local hosts on your next trip.",
+  }, "Price"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hover:border-gray-900 hidden lg:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 53
     },
     __self: this
-  }, __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__["TopRated"], {
+  }, "Instant Book"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "hover:border-gray-900 hidden md:block mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 58
     },
     __self: this
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
-    title: "Popular destinations in the United States",
+  }, "More filters")))), __jsx("div", {
+    className: "max-w-90% md:px-0 mx-auto py-5 border-b border-gray-400",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 66
     },
     __self: this
-  }, __jsx(_components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__["Popular"], {
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 67
     },
     __self: this
-  })), __jsx(_components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["SectionOverflow"], {
-    title: "Featured Airbnb Plus destinations",
-    phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
+  }, "Enter dates and number of guests to see the total price per night. Tourism taxes may be added")), __jsx(_components_wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__["ExploreSectionOverflow"], {
+    title: "Travel the world with Airbnb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 74
     },
     __self: this
-  }, __jsx(_components_containers_Featured__WEBPACK_IMPORTED_MODULE_10__["Featured"], {
+  }, __jsx(_components_containers_Travel__WEBPACK_IMPORTED_MODULE_5__["Travel"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 75
     },
     __self: this
-  })), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__["Footer"], {
+  })), __jsx(_components_wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_1__["ExploreSection"], {
+    title: "Top-rated places to stay",
+    phrase: "Explore some of the best-reviewed stays in the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 77
+    },
+    __self: this
+  }, __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_6__["TopRated"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  })), __jsx(_components_wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_1__["ExploreSection"], {
+    title: "300+ places to stay",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }, __jsx(_components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_7__["THundredPlus"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  })), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_3__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
     },
     __self: this
   }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+});
 
 /***/ }),
 
-/***/ 2:
-/*!***************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
-  \***************************************************************************************************************************************/
+/***/ 4:
+/*!*********************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays.tsx ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays.tsx!./");
 
 
 /***/ }),
@@ -28078,5 +24658,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=index.js.map
+},[[4,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=stays.js.map

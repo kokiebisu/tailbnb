@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -5971,35 +5971,36 @@ const TopRatedCard = ({
 
 /***/ }),
 
-/***/ "./src/components/wrapper/Section.js":
-/*!*******************************************!*\
-  !*** ./src/components/wrapper/Section.js ***!
-  \*******************************************/
-/*! exports provided: default */
+/***/ "./src/components/wrapper/Section.tsx":
+/*!********************************************!*\
+  !*** ./src/components/wrapper/Section.tsx ***!
+  \********************************************/
+/*! exports provided: Section */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/Section.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/Section.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (({
+const Section = ({
   title,
   phrase,
   children
 }) => {
   const renderContent = phrase => {
     if (phrase) {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
         style: {
           fontFamily: 'airbnb-medium'
         },
         className: "text-2xl text-gray-850 pt-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 14
         },
         __self: undefined
       }, title), __jsx("p", {
@@ -6009,19 +6010,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         className: "text-md mb-5 text-gray-850 pb-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 19
         },
         __self: undefined
       }, phrase));
     } else {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
         style: {
           fontFamily: 'airbnb-medium'
         },
         className: "text-gray-850 text-2xl pt-3 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 29
         },
         __self: undefined
       }, title));
@@ -6032,43 +6033,44 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "px-10 md:px-20 xl:max-w-layout mx-auto py-5 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 39
     },
     __self: undefined
   }, renderContent(phrase), children);
-});
+};
 
 /***/ }),
 
-/***/ "./src/components/wrapper/SectionOverflow.js":
-/*!***************************************************!*\
-  !*** ./src/components/wrapper/SectionOverflow.js ***!
-  \***************************************************/
-/*! exports provided: default */
+/***/ "./src/components/wrapper/SectionOverflow.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/wrapper/SectionOverflow.tsx ***!
+  \****************************************************/
+/*! exports provided: SectionOverflow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionOverflow", function() { return SectionOverflow; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/SectionOverflow.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/SectionOverflow.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (({
+const SectionOverflow = ({
   title,
   phrase,
   children
 }) => {
-  function renderPhrase() {
+  function renderPhrase(phrase) {
     if (phrase) {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
         style: {
           fontFamily: 'airbnb-medium'
         },
         className: "scrollable text-gray-850 text-2xl pt-3 w-5/6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 18
         },
         __self: this
       }, title), __jsx("p", {
@@ -6078,19 +6080,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
         className: "scrollable text-md mb-5 text-gray-850 pb-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 23
         },
         __self: this
       }, phrase));
     } else {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("h3", {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
         style: {
           fontFamily: 'airbnb-medium'
         },
         className: "scrollable text-gray-850 text-2xl py-3 w-5/6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 33
         },
         __self: this
       }, title));
@@ -6101,11 +6103,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "px-10 md:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 43
     },
     __self: undefined
-  }, renderPhrase(), children);
-});
+  }, renderPhrase(phrase), children);
+};
 
 /***/ }),
 
@@ -6120,8 +6122,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/wrapper/Section */ "./src/components/wrapper/Section.js");
-/* harmony import */ var _components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.js");
+/* harmony import */ var _components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var _components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
 /* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.tsx");
 /* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
 /* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
@@ -6155,7 +6157,7 @@ const Home = () => {
       lineNumber: 21
     },
     __self: undefined
-  }), __jsx(_components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(_components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["SectionOverflow"], {
     title: "Explore Airbnb",
     __source: {
       fileName: _jsxFileName,
@@ -6168,7 +6170,7 @@ const Home = () => {
       lineNumber: 23
     },
     __self: undefined
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     title: "Airbnb Plus places to stay",
     phrase: "A selection of places to stay verified for quality and design",
     __source: {
@@ -6182,7 +6184,7 @@ const Home = () => {
       lineNumber: 28
     },
     __self: undefined
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     title: "Introducing Airbnb Adventures",
     phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
     __source: {
@@ -6196,7 +6198,7 @@ const Home = () => {
       lineNumber: 34
     },
     __self: undefined
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
@@ -6209,7 +6211,7 @@ const Home = () => {
       lineNumber: 37
     },
     __self: undefined
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     title: "Top-rated experiences",
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
@@ -6223,7 +6225,7 @@ const Home = () => {
       lineNumber: 42
     },
     __self: undefined
-  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })), __jsx(_components_wrapper_Section__WEBPACK_IMPORTED_MODULE_1__["Section"], {
     title: "Popular destinations in the United States",
     __source: {
       fileName: _jsxFileName,
@@ -6236,7 +6238,7 @@ const Home = () => {
       lineNumber: 45
     },
     __self: undefined
-  })), __jsx(_components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["SectionOverflow"], {
     title: "Featured Airbnb Plus destinations",
     phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
     __source: {
@@ -6263,7 +6265,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
