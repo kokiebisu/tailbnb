@@ -35,7 +35,7 @@ interface Stay {
   picture_url: string;
 }
 
-export default () => {
+export const Stay: () => string | JSX.Element = () => {
   const { loading, error, data } = useQuery<StayData>(GET_STAYS);
 
   if (error) return `Error! ${error.message}`;

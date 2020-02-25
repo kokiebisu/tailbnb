@@ -16,27 +16,28 @@ interface Feature {
   description: string;
 }
 
+const featureds: Feature[] = [
+  {
+    img: featured1,
+    experiences: 940,
+    type: 'Cooking',
+    description: 'Make and eat meals with locals who treact you like family'
+  },
+  {
+    img: featured2,
+    experiences: 940,
+    type: 'Cooking',
+    description: 'Make and eat meals with locals who treact you like family'
+  },
+  {
+    img: featured3,
+    experiences: 940,
+    type: 'Cooking',
+    description: 'Make and eat meals with locals who treact you like family'
+  }
+];
+
 export const Experiences: React.FC<{}> = () => {
-  const featureds: Feature[] = [
-    {
-      img: featured1,
-      experiences: 940,
-      type: 'Cooking',
-      description: 'Make and eat meals with locals who treact you like family'
-    },
-    {
-      img: featured2,
-      experiences: 940,
-      type: 'Cooking',
-      description: 'Make and eat meals with locals who treact you like family'
-    },
-    {
-      img: featured3,
-      experiences: 940,
-      type: 'Cooking',
-      description: 'Make and eat meals with locals who treact you like family'
-    }
-  ];
   return (
     <>
       <div className='overflow-y-hidden'>

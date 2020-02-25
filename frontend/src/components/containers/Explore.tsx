@@ -14,21 +14,22 @@ interface Explore {
   title: string;
 }
 
+const explores: Explore[] = [
+  {
+    img: explore1,
+    title: 'Stays'
+  },
+  {
+    img: explore2,
+    title: 'Experiences'
+  },
+  {
+    img: explore3,
+    title: 'Adventures'
+  }
+];
+
 export const Explore: React.FC<{}> = () => {
-  const explores: Explore[] = [
-    {
-      img: explore1,
-      title: 'Stays'
-    },
-    {
-      img: explore2,
-      title: 'Experiences'
-    },
-    {
-      img: explore3,
-      title: 'Adventures'
-    }
-  ];
   return (
     <div className='overflow-y-hidden'>
       <div className='w-full h-full overflow-y-hidden'>

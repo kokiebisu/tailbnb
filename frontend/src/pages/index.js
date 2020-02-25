@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 // Wrapper
 import Section from '../components/wrapper/Section';
@@ -9,8 +9,8 @@ import Header from '../components/layout/Header';
 import { Explore } from '../components/containers/Explore';
 import { Plus } from '../components/containers/Plus';
 import Adventures from '../components/containers/Adventures';
-import Stay from '../components/containers/Stay';
-import TopRated from '../components/containers/TopRated';
+import { Stay } from '../components/containers/Stay';
+import { TopRated } from '../components/containers/TopRated';
 import { Popular } from '../components/containers/Popular';
 import { Featured } from '../components/containers/Featured';
 import Footer from '../components/layout/Footer';
