@@ -11,7 +11,7 @@ import ExploreHeader from '../components/layout/ExploreHeader';
 // Component
 import { Travel } from '../components/containers/Travel';
 import TopRated from '../components/containers/TopRated';
-import THundredPlus from '../components/containers/THundredPlus';
+import { THundredPlus } from '../components/containers/THundredPlus';
 
 export default () => {
   return (
