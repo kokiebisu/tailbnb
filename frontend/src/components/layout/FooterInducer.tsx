@@ -1,6 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ swap }) => {
+interface Prop {
+  swap: () => void;
+}
+
+export const FooterInducer: React.FC<Prop> = ({ swap }) => {
   return (
     <button
       onClick={swap}
