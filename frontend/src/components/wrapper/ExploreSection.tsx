@@ -1,7 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, phrase, children }) => {
-  const renderContent = () => {
+interface Prop {
+  title: string;
+  phrase: string;
+  children: React.ReactNode;
+}
+
+export const ExploreSection: React.FC<Prop> = ({ title, phrase, children }) => {
+  const renderContent = (phrase: string) => {
     if (phrase) {
       return (
         <>
@@ -31,7 +37,7 @@ export default ({ title, phrase, children }) => {
   };
   return (
     <div className='md:px-0 max-w-90% xl:px-0 mx-auto py-5'>
-      {renderContent()}
+      {renderContent(phrase)}
       {children}
     </div>
   );
