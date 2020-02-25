@@ -2734,26 +2734,28 @@ const ExploreHeader = ({
 
 /***/ }),
 
-/***/ "./src/components/layout/Footer.js":
-/*!*****************************************!*\
-  !*** ./src/components/layout/Footer.js ***!
-  \*****************************************/
-/*! exports provided: default */
+/***/ "./src/components/layout/Footer.tsx":
+/*!******************************************!*\
+  !*** ./src/components/layout/Footer.tsx ***!
+  \******************************************/
+/*! exports provided: Footer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _FooterContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterContent */ "./src/components/layout/FooterContent.tsx");
 /* harmony import */ var _FooterInducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FooterInducer */ "./src/components/layout/FooterInducer.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/Footer.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/Footer.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
  // Component
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+const Footer = () => {
   const {
     0: display,
     1: setDisplay
@@ -2763,22 +2765,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     setDisplay(!display);
   };
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, display ? __jsx(_FooterContent__WEBPACK_IMPORTED_MODULE_1__["FooterContent"], {
-    swap: changeDisplay,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }) : __jsx(_FooterInducer__WEBPACK_IMPORTED_MODULE_2__["FooterInducer"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, display ? __jsx(_FooterContent__WEBPACK_IMPORTED_MODULE_1__["FooterContent"], {
     swap: changeDisplay,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: undefined
+  }) : __jsx(_FooterInducer__WEBPACK_IMPORTED_MODULE_2__["FooterInducer"], {
+    swap: changeDisplay,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
   }));
-});
+};
 
 /***/ }),
 
@@ -4431,256 +4433,6 @@ const CheckInCard = ({
 
 /***/ }),
 
-/***/ "./src/components/presentational/HeaderCard.tsx":
-/*!******************************************************!*\
-  !*** ./src/components/presentational/HeaderCard.tsx ***!
-  \******************************************************/
-/*! exports provided: HeaderCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderCard", function() { return HeaderCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/HeaderCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-const HeaderCard = () => {
-  return __jsx("div", {
-    className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "mx-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "hidden md:inline-block md:text-3xl text-gray-750 leading-tight",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
-  }, "Book unique places to ", __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  }), "stay and things to do."), __jsx("form", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs text-gray-750 uppercase tracking-wider",
-    htmlFor: "where",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
-  }, "Where"), __jsx("input", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "w-full border border-gray-300 p-2 rounded placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "where",
-    placeholder: "Anywhere",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "flex flex-wrap items-stretch justify-start",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-1/2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: undefined
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs text-gray-750 uppercase",
-    htmlFor: "checkin",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: undefined
-  }, "Check-In"), __jsx("input", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "checkin",
-    placeholder: "dd-mm-yyyy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "w-1/2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs uppercase text-gray-750",
-    htmlFor: "checkout",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
-  }, "Check-Out"), __jsx("input", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
-    type: "text",
-    id: "checkout",
-    placeholder: "dd-mm-yyyy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: undefined
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "block mt-5 mb-2 text-xs uppercase text-gray-750",
-    htmlFor: "guests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: undefined
-  }, "Guests"), __jsx("div", {
-    className: "inline-block relative w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: undefined
-  }, __jsx("select", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
-    id: "guests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: undefined
-  }, __jsx("option", {
-    value: "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
-  }, "2 Guests"), __jsx("option", {
-    value: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
-  }, "3 Guests"), __jsx("option", {
-    value: "3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: undefined
-  }, "4 Guests")), __jsx("div", {
-    className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: undefined
-  }, __jsx("svg", {
-    className: "fill-current h-4 w-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: undefined
-  })))))), __jsx("div", {
-    className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: undefined
-  }, __jsx("button", {
-    className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: undefined
-  }, "Search"))));
-};
-
-/***/ }),
-
 /***/ "./src/components/presentational/HeartExperienceCard.tsx":
 /*!***************************************************************!*\
   !*** ./src/components/presentational/HeartExperienceCard.tsx ***!
@@ -5554,21 +5306,22 @@ const StayDescription = ({
 
 /***/ }),
 
-/***/ "./src/components/wrapper/DetailSection.js":
-/*!*************************************************!*\
-  !*** ./src/components/wrapper/DetailSection.js ***!
-  \*************************************************/
-/*! exports provided: default */
+/***/ "./src/components/wrapper/DetailSection.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/wrapper/DetailSection.tsx ***!
+  \**************************************************/
+/*! exports provided: DetailSection */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailSection", function() { return DetailSection; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/DetailSection.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/DetailSection.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-/* harmony default export */ __webpack_exports__["default"] = (({
+const DetailSection = ({
   title,
   children
 }) => {
@@ -5576,14 +5329,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "border-b border-gray-300 pt-4 pb-14 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 10
     },
     __self: undefined
   }, __jsx("div", {
     className: "pb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 11
     },
     __self: undefined
   }, __jsx("h3", {
@@ -5593,11 +5346,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "text-2xl my-4 text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 12
     },
     __self: undefined
   }, title), children));
-});
+};
 
 /***/ }),
 
@@ -5716,34 +5469,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
 /* harmony import */ var _components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/presentational/ImagePanel */ "./src/components/presentational/ImagePanel.tsx");
-/* harmony import */ var _components_presentational_HeaderCard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/presentational/HeaderCard */ "./src/components/presentational/HeaderCard.tsx");
-/* harmony import */ var _components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/containers/Reviews */ "./src/components/containers/Reviews.tsx");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.js");
-/* harmony import */ var _components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/containers/HostedBy */ "./src/components/containers/HostedBy.tsx");
-/* harmony import */ var _components_containers_Neighborhood__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/containers/Neighborhood */ "./src/components/containers/Neighborhood.tsx");
-/* harmony import */ var _components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/containers/KeepInMind */ "./src/components/containers/KeepInMind.tsx");
-/* harmony import */ var _components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/containers/MoreHomes */ "./src/components/containers/MoreHomes.tsx");
-/* harmony import */ var _components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/containers/Characteristics */ "./src/components/containers/Characteristics.tsx");
-/* harmony import */ var _components_presentational_Cancellations__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/presentational/Cancellations */ "./src/components/presentational/Cancellations.tsx");
-/* harmony import */ var _components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/presentational/CheckInCard */ "./src/components/presentational/CheckInCard.tsx");
-/* harmony import */ var _components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/presentational/StayDescription */ "./src/components/presentational/StayDescription.tsx");
-/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.tsx");
-/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.tsx");
-/* harmony import */ var _components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/wrapper/DetailSectionOverflow */ "./src/components/wrapper/DetailSectionOverflow.js");
-/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.js");
-/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.tsx");
-/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.tsx");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var _components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/containers/Reviews */ "./src/components/containers/Reviews.tsx");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
+/* harmony import */ var _components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/containers/HostedBy */ "./src/components/containers/HostedBy.tsx");
+/* harmony import */ var _components_containers_Neighborhood__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/containers/Neighborhood */ "./src/components/containers/Neighborhood.tsx");
+/* harmony import */ var _components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/containers/KeepInMind */ "./src/components/containers/KeepInMind.tsx");
+/* harmony import */ var _components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/containers/MoreHomes */ "./src/components/containers/MoreHomes.tsx");
+/* harmony import */ var _components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/containers/Characteristics */ "./src/components/containers/Characteristics.tsx");
+/* harmony import */ var _components_presentational_Cancellations__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/presentational/Cancellations */ "./src/components/presentational/Cancellations.tsx");
+/* harmony import */ var _components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/presentational/CheckInCard */ "./src/components/presentational/CheckInCard.tsx");
+/* harmony import */ var _components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/presentational/StayDescription */ "./src/components/presentational/StayDescription.tsx");
+/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.tsx");
+/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.tsx");
+/* harmony import */ var _components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/wrapper/DetailSectionOverflow */ "./src/components/wrapper/DetailSectionOverflow.js");
+/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.tsx");
+/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.tsx");
+/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.tsx");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
+/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
+/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
+/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stays/[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
 
 
 
@@ -5756,7 +5507,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
  // GraphQL
 
  // Components
-
 
 
 
@@ -5834,19 +5584,19 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 90
     },
     __self: undefined
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 92
     },
     __self: undefined
   }, "Vacation Rentals, Homes, Experiences & Places") : __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 94
     },
     __self: undefined
   }, data.stay.name), __jsx("meta", {
@@ -5854,7 +5604,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 97
     },
     __self: undefined
   }), __jsx("link", {
@@ -5863,34 +5613,34 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 101
     },
     __self: undefined
   })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_9__["ExploreHeader"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 103
     },
     __self: undefined
   }), __jsx("div", {
     className: "px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 105
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex flex-col-reverse lg:flex-col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 106
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 107
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -5898,7 +5648,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 350,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 109
     },
     __self: undefined
   }) : __jsx("h3", {
@@ -5908,14 +5658,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-3xl text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 111
     },
     __self: undefined
   }, data.stay.name), __jsx("div", {
     className: "flex items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 118
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -5923,20 +5673,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 120
     },
     __self: undefined
   }) : __jsx("div", {
     className: "flex items-center justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 122
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 123
     },
     __self: undefined
   }, __jsx("svg", {
@@ -5949,20 +5699,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     viewBox: "0 0 37.286 37.287",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 124
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 129
     },
     __self: undefined
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 130
     },
     __self: undefined
   })))), __jsx("p", {
@@ -5972,20 +5722,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-1 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 142
     },
     __self: undefined
   }, data.stay.reviews_per_month, " (", data.stay.number_of_reviews, ")"), __jsx("span", {
     className: "text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 149
     },
     __self: undefined
   }, "\xA0\xB7\xA0"), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 150
     },
     __self: undefined
   }, __jsx("svg", {
@@ -5997,7 +5747,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 151
     },
     __self: undefined
   }, __jsx("g", {
@@ -6005,35 +5755,35 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     "fill-rule": "evenodd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 156
     },
     __self: undefined
   }, __jsx("path", {
     d: "m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 157
     },
     __self: undefined
   }), __jsx("path", {
     d: "m330.999 91.994v-76.994c0-8.284-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v76.994c-.033 0-.064.005-.097.005h150.193c-.032-.001-.064-.005-.096-.005z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 158
     },
     __self: undefined
   }), __jsx("path", {
     d: "m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 159
     },
     __self: undefined
   }), __jsx("path", {
     d: "m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 160
     },
     __self: undefined
   })))), data.stay.host_is_superhost ? __jsx("p", {
@@ -6043,14 +5793,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-1 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 165
     },
     __self: undefined
   }, "Superhost") : null, __jsx("span", {
     className: "text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 172
     },
     __self: undefined
   }, "\xA0\xB7\xA0"), __jsx("a", {
@@ -6061,34 +5811,34 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 173
     },
     __self: undefined
   }, data.stay.street)), __jsx("div", {
     className: "hidden lg:inline-block flex items-start justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 181
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center pr-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 182
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-start pl-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 183
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 184
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6100,21 +5850,21 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 185
     },
     __self: undefined
   }, __jsx("path", {
     d: "m507.523438 148.890625-138.667969-144c-4.523438-4.691406-11.457031-6.164063-17.492188-3.734375-6.058593 2.453125-10.027343 8.320312-10.027343 14.847656v69.335938h-5.332032c-114.6875 0-208 93.3125-208 208v32c0 7.421875 5.226563 13.609375 12.457032 15.296875 1.175781.296875 2.347656.425781 3.519531.425781 6.039062 0 11.820312-3.542969 14.613281-9.109375 29.996094-60.011719 90.304688-97.28125 157.398438-97.28125h25.34375v69.332031c0 6.53125 3.96875 12.398438 10.027343 14.828125 5.996094 2.453125 12.96875.960938 17.492188-3.734375l138.667969-144c5.972656-6.207031 5.972656-15.976562 0-22.207031zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 190
     },
     __self: undefined
   }), __jsx("path", {
     d: "m448.003906 512.003906h-384c-35.285156 0-63.99999975-28.710937-63.99999975-64v-298.664062c0-35.285156 28.71484375-64 63.99999975-64h64c11.796875 0 21.332032 9.535156 21.332032 21.332031s-9.535157 21.332031-21.332032 21.332031h-64c-11.777344 0-21.335937 9.558594-21.335937 21.335938v298.664062c0 11.777344 9.558593 21.335938 21.335937 21.335938h384c11.773438 0 21.332032-9.558594 21.332032-21.335938v-170.664062c0-11.796875 9.535156-21.335938 21.332031-21.335938 11.800781 0 21.335937 9.539063 21.335937 21.335938v170.664062c0 35.289063-28.714844 64-64 64zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 191
     },
     __self: undefined
   }))), __jsx("p", {
@@ -6124,20 +5874,20 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-2 text-sm text-gray-850 underline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 194
     },
     __self: undefined
   }, "Share")), __jsx("div", {
     className: "flex items-center justify-start pl-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 200
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 201
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6150,14 +5900,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 202
     },
     __self: undefined
   }, __jsx("path", {
     d: "m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 207
     },
     __self: undefined
   }))), __jsx("p", {
@@ -6167,73 +5917,73 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "pl-2 text-sm text-gray-850 underline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 210
     },
     __self: undefined
   }, "Save")))))), __jsx("div", {
     className: "w-full px-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 220
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "w-full lg:w-1/2 h-12 lg:h-57v relative rounded border-r-4 border-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 222
     },
     __self: undefined
   }, __jsx(SSkeletonPulse1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225
+      lineNumber: 223
     },
     __self: undefined
   })) : __jsx(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__["ImagePanel"], {
     img1: data.stay.picture_url,
-    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
-    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29___default.a,
-    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30___default.a,
-    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31___default.a,
+    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_27___default.a,
+    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
+    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_29___default.a,
+    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_30___default.a,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 226
     },
     __self: undefined
   }))), __jsx("div", {
     className: "w-full lg:w-7/12 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239
+      lineNumber: 237
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-between border-b border-gray-200 mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 238
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex justify-start w-9/12 py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 239
     },
     __self: undefined
   }, __jsx("div", {
     className: "mt-4 flex items-start justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 240
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex flex-col ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 241
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -6241,7 +5991,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 100,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245
+      lineNumber: 243
     },
     __self: undefined
   }) : __jsx("h3", {
@@ -6251,7 +6001,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-md lg:text-2xl text-gray-850 leading-none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 245
     },
     __self: undefined
   }, data.stay.size, " hosted by ", data.stay.host_name), loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -6259,7 +6009,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 200,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 252
     },
     __self: undefined
   }) : __jsx("div", {
@@ -6269,66 +6019,66 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256
+      lineNumber: 254
     },
     __self: undefined
   }, __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 257
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 258
     },
     __self: undefined
   }, data.stay.accommodates, ' ', data.stay.accommodates > 1 ? 'guests' : 'guest')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265
+      lineNumber: 263
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 264
     },
     __self: undefined
   }, data.stay.bedrooms, ' ', data.stay.bedrooms > 1 ? 'bedrooms' : 'bedroom')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271
+      lineNumber: 269
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272
+      lineNumber: 270
     },
     __self: undefined
   }, data.stay.beds, " ", data.stay.beds > 1 ? 'beds' : 'bed')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
+      lineNumber: 274
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 275
     },
     __self: undefined
   }, data.stay.bathrooms, ' ', data.stay.bathrooms > 1 ? 'baths' : 'bath')))))), __jsx("div", {
     className: "flex justify-end items-start w-3/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
+      lineNumber: 286
     },
     __self: undefined
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -6337,7 +6087,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     width: 60,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 288
     },
     __self: undefined
   }) : __jsx(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -6345,7 +6095,7 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     placeholder: data.stay.host_thumbnail_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292
+      lineNumber: 290
     },
     __self: undefined
   }, (src, loading, isVisible) => __jsx("img", {
@@ -6353,42 +6103,42 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     src: src,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
+      lineNumber: 294
     },
     __self: undefined
   })))), __jsx("div", {
     className: "my-6 border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 300
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 302
     },
     __self: undefined
   }, __jsx(SSkeletonPulse1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 303
     },
     __self: undefined
-  })) : __jsx(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__["Characteristics"], {
+  })) : __jsx(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_17__["Characteristics"], {
     host_is_superhost: data.stay.host_is_superhost,
     host_name: data.stay.host_name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 306
     },
     __self: undefined
   })), loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
+      lineNumber: 313
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -6397,24 +6147,24 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     count: 10,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316
+      lineNumber: 314
     },
     __self: undefined
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
     className: "border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 318
     },
     __self: undefined
   }, __jsx("div", {
     className: "my-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 319
     },
     __self: undefined
-  }, __jsx(_components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_21__["StayDescription"], {
+  }, __jsx(_components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_20__["StayDescription"], {
     description: data.stay.description,
     space: data.stay.space,
     access: data.stay.access,
@@ -6422,27 +6172,27 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     changeLength: () => setLength(!length),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 320
     },
     __self: undefined
   }), __jsx("div", {
     className: "my-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 327
     },
     __self: undefined
   }, __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330
+      lineNumber: 328
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 329
     },
     __self: undefined
   }, __jsx("p", {
@@ -6452,14 +6202,14 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 330
     },
     __self: undefined
   }, "Any questions for the host?")))), __jsx("div", {
     className: "mt-10 mb-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338
+      lineNumber: 336
     },
     __self: undefined
   }, __jsx("a", {
@@ -6470,73 +6220,73 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339
+      lineNumber: 337
     },
     __self: undefined
-  }, "Contact host")))), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["default"], {
+  }, "Contact host")))), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
     title: "Sleeping arrangements",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 346
     },
     __self: undefined
-  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_23__["SleepingArrangements"], {
+  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_22__["SleepingArrangements"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349
+      lineNumber: 347
     },
     __self: undefined
-  })), __jsx(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_25__["default"], {
+  })), __jsx(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_24__["DetailSection"], {
     title: "Amenities",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 351
+      lineNumber: 349
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 352
+      lineNumber: 350
     },
     __self: undefined
-  }, __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }, __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_21__["AmenityCard"], {
     type: "wifi",
     title: "Wifi",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353
+      lineNumber: 351
     },
     __self: undefined
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_21__["AmenityCard"], {
     type: "laptop",
     title: "Laptop-friendly workspace",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 354
+      lineNumber: 352
     },
     __self: undefined
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_21__["AmenityCard"], {
     type: "kitchen",
     title: "Kitchen",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358
+      lineNumber: 356
     },
     __self: undefined
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_21__["AmenityCard"], {
     type: "iron",
     title: "Iron",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 357
     },
     __self: undefined
   })), __jsx("div", {
     className: "mt-10 mb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361
+      lineNumber: 359
     },
     __self: undefined
   }, __jsx("a", {
@@ -6546,46 +6296,46 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     className: "py-3 px-6 rounded-xl border border-black ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362
+      lineNumber: 360
     },
     __self: undefined
   }, "Show all 32 amenities"))))), length ? __jsx("div", {
     className: "lg:w-5/12 lg:h-100r",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 373
+      lineNumber: 371
     },
     __self: undefined
-  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__["CheckInCard"], {
+  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_19__["CheckInCard"], {
     loading: loading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 374
+      lineNumber: 372
     },
     __self: undefined
   })) : __jsx("div", {
     className: "lg:w-5/12 lg:h-80v",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 377
+      lineNumber: 375
     },
     __self: undefined
-  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__["CheckInCard"], {
+  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_19__["CheckInCard"], {
     loading: loading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378
+      lineNumber: 376
     },
     __self: undefined
-  })), loading ? null : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__["Reviews"], {
+  })), loading ? null : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__["Reviews"], {
     reviews_per_month: data.stay.reviews_per_month,
     number_of_reviews: data.stay.number_of_reviews,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 384
+      lineNumber: 382
     },
     __self: undefined
-  }), __jsx(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__["HostedBy"], {
+  }), __jsx(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__["HostedBy"], {
     host_name: data.stay.host_name,
     hostDescription: data.stay.hostDescription,
     host_since: data.stay.host_since,
@@ -6598,58 +6348,58 @@ const GET_STAY = apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"]`
     host_response_time: data.stay.host_response_time,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388
+      lineNumber: 386
     },
     __self: undefined
-  }), __jsx(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__["KeepInMind"], {
+  }), __jsx(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__["KeepInMind"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 398
+    },
+    __self: undefined
+  }), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
+    title: "More places to stay",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 399
+    },
+    __self: undefined
+  }, __jsx(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_16__["MoreHomes"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 400
     },
     __self: undefined
-  }), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["default"], {
-    title: "More places to stay",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 401
-    },
-    __self: undefined
-  }, __jsx(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["MoreHomes"], {
+  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
+    title: "Things to do nearby",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 402
     },
     __self: undefined
-  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["default"], {
-    title: "Things to do nearby",
+  }, __jsx(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_25__["ToDoNear"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
+      lineNumber: 403
     },
     __self: undefined
-  }, __jsx(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_26__["ToDoNear"], {
+  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_23__["default"], {
+    title: "Explore other options in and around Penafiel",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 405
     },
     __self: undefined
-  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["default"], {
-    title: "Explore other options in and around Penafiel",
+  }, __jsx(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_26__["MoreLocations"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 407
+      lineNumber: 406
     },
     __self: undefined
-  }, __jsx(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_27__["MoreLocations"], {
+  })))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 408
-    },
-    __self: undefined
-  })))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 413
+      lineNumber: 411
     },
     __self: undefined
   }));
