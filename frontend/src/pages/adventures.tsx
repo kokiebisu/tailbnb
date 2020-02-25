@@ -1,8 +1,4 @@
-import React from 'react';
-
-// Wrapper
-import Section from '../components/wrapper/Section';
-import SectionOverflow from '../components/wrapper/SectionOverflow';
+import * as React from 'react';
 
 export default () => {
   return (
