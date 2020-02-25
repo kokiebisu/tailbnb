@@ -1,6 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ swap }) => {
+interface Prop {
+  swap: () => void;
+}
+
+export const FooterContent: React.FC<Prop> = ({ swap }) => {
   return (
     <div className='hidden md:block fixed bottom-0 bg-white w-full border-t border-gray-300'>
       <div className='lg:px-20 px-5 xl:px-0 lg:max-w-6xl xl:max-w-5.5xl mx-auto py-6 sm:py-12'>
