@@ -17,15 +17,15 @@ interface Explore {
 const explores: Explore[] = [
   {
     img: explore1,
-    title: 'Stays'
+    title: 'Stay'
   },
   {
     img: explore2,
-    title: 'Experiences'
+    title: 'Experience'
   },
   {
     img: explore3,
-    title: 'Adventures'
+    title: 'Adventure'
   }
 ];
 

@@ -2331,13 +2331,13 @@ const explore3 = __webpack_require__(/*! ../../../public/img/high/explore3.jpg *
 
 const explores = [{
   img: explore1,
-  title: 'Stays'
+  title: 'Stay'
 }, {
   img: explore2,
-  title: 'Experiences'
+  title: 'Experience'
 }, {
   img: explore3,
-  title: 'Adventures'
+  title: 'Adventure'
 }];
 const Explore = () => {
   return __jsx("div", {

@@ -32,7 +32,7 @@ interface ExperienceData {
   experiences: Experience[];
 }
 
-export const Hosts: () => string | JSX.Element = () => {
+export const Hosts: any = () => {
   const { loading, error, data } = useQuery<ExperienceData>(experiencedata, {
     pollInterval: 9000
   });
