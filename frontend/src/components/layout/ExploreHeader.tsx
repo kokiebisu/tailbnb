@@ -1,6 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ type }) => {
+interface Prop {
+  type: string;
+}
+
+export const ExploreHeader: React.FC<Prop> = ({ type }) => {
   return (
     <div className='flex items-center justify-between relative border-b border-gray-300'>
       <div className='flex items-center justify-start w-full md:w-1/2'>
