@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface Prop {
   title: string;
-  phrase: string;
+  phrase?: string | undefined;
   children: React.ReactNode;
 }
 
