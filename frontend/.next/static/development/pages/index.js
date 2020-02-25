@@ -26024,43 +26024,43 @@ var explore2 = __webpack_require__(/*! ../../../public/img/high/explore2.jpg */ 
 
 var explore3 = __webpack_require__(/*! ../../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg");
 
+var explores = [{
+  img: explore1,
+  title: 'Stays'
+}, {
+  img: explore2,
+  title: 'Experiences'
+}, {
+  img: explore3,
+  title: 'Adventures'
+}];
 var Explore = function Explore() {
-  var explores = [{
-    img: explore1,
-    title: 'Stays'
-  }, {
-    img: explore2,
-    title: 'Experiences'
-  }, {
-    img: explore3,
-    title: 'Adventures'
-  }];
   return __jsx("div", {
     className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
   }, __jsx("div", {
-    className: "h-full scroller",
+    className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
   }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
+    className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
     },
     __self: this
   }, explores.map(function (_ref, index) {
@@ -26070,7 +26070,7 @@ var Explore = function Explore() {
       className: "w-32 mr-4 sm:w-1/3 cursor-pointer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 40
       },
       __self: this
     }, __jsx(_presentational_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["ExploreCard"], {
@@ -26079,7 +26079,7 @@ var Explore = function Explore() {
       title: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 41
       },
       __self: this
     }));
@@ -26413,11 +26413,12 @@ var Popular = function Popular() {
 /*!********************************************!*\
   !*** ./src/components/containers/Stay.tsx ***!
   \********************************************/
-/*! exports provided: default */
+/*! exports provided: Stay */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Stay", function() { return Stay; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -26449,7 +26450,7 @@ function _templateObject() {
 
 
 var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var Stay = function Stay() {
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAYS),
       loading = _useQuery.loading,
       error = _useQuery.error,
@@ -26509,7 +26510,7 @@ var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templa
     },
     __self: this
   }));
-});
+};
 
 /***/ }),
 
@@ -26517,11 +26518,12 @@ var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templa
 /*!************************************************!*\
   !*** ./src/components/containers/TopRated.tsx ***!
   \************************************************/
-/*! exports provided: default */
+/*! exports provided: TopRated */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopRated", function() { return TopRated; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -26556,7 +26558,7 @@ function _templateObject() {
 
 
 var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var TopRated = function TopRated() {
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_EXPERIENCES),
       loading = _useQuery.loading,
       error = _useQuery.error,
@@ -26683,7 +26685,7 @@ var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_
     },
     __self: this
   }));
-});
+};
 
 /***/ }),
 
@@ -29941,7 +29943,7 @@ var Home = function Home() {
       lineNumber: 36
     },
     __self: this
-  }, __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__["Stay"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
@@ -29955,7 +29957,7 @@ var Home = function Home() {
       lineNumber: 39
     },
     __self: this
-  }, __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__["TopRated"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42

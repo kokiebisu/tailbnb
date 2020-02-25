@@ -39,7 +39,7 @@ interface ExperienceData {
   experiences: Experience[];
 }
 
-export default () => {
+export const TopRated: () => string | JSX.Element = () => {
   const { loading, error, data } = useQuery<ExperienceData>(GET_EXPERIENCES);
   const [card, setCard] = useState<number>(0);
 

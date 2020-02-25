@@ -11,7 +11,7 @@ const explore1low = require('../../../public/img/low/explore1-low.jpg');
 const explore2low = require('../../../public/img/low/explore2-low.jpg');
 const explore3low = require('../../../public/img/low/explore3-low.jpg');
 
-export const Travel: React.FC = () => {
+export const Travel: React.FC<{}> = () => {
   const countries = [
     {
       img: explore1,
