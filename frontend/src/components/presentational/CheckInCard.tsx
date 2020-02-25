@@ -5,7 +5,6 @@ import PulseLoader from 'react-spinners/PulseLoader';
 
 interface Prop {
   loading: boolean;
-  length: string;
 }
 
 export const CheckInCard: React.FC<Prop> = ({ loading }) => {

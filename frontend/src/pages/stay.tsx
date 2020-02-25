@@ -13,7 +13,10 @@ import { Travel } from '../components/containers/Travel';
 import { TopRated } from '../components/containers/TopRated';
 import { THundredPlus } from '../components/containers/THundredPlus';
 
-export default () => {
+// Next
+import { NextPage } from 'next';
+
+const Stay: NextPage = () => {
   return (
     <>
       <header className='z-20 sticky bg-white top-0 '>
@@ -86,3 +89,5 @@ export default () => {
     </>
   );
 };
+
+export default Stay;
