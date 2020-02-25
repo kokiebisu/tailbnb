@@ -40,8 +40,8 @@ export const HostedBy: React.FC<Prop> = ({
   host_response_time,
   host_response_rate
 }) => {
-  const [descriptionDisplay, setDescriptionDisplay] = useState(false);
-  const [stayDisplay, setStayDisplay] = useState(false);
+  const [descriptionDisplay, setDescriptionDisplay] = useState<boolean>(false);
+  const [stayDisplay, setStayDisplay] = useState<boolean>(false);
   const defaultDescription = renderContent(hostDescription);
   const defaultDuringStay = renderContent(duringStay);
   return (
