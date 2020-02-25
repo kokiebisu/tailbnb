@@ -1,7 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, phrase, children }) => {
-  function renderPhrase() {
+interface Prop {
+  title: string;
+  phrase?: string | undefined;
+  children: React.ReactNode;
+}
+
+export const SectionOverflow: React.FC<Prop> = ({
+  title,
+  phrase,
+  children
+}) => {
+  function renderPhrase(phrase: string | undefined) {
     if (phrase) {
       return (
         <>
@@ -31,7 +41,7 @@ export default ({ title, phrase, children }) => {
   }
   return (
     <div className='px-10 md:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden'>
-      {renderPhrase()}
+      {renderPhrase(phrase)}
       {children}
     </div>
   );

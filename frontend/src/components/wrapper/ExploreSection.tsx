@@ -2,12 +2,12 @@ import * as React from 'react';
 
 interface Prop {
   title: string;
-  phrase: string;
+  phrase?: string | undefined;
   children: React.ReactNode;
 }
 
 export const ExploreSection: React.FC<Prop> = ({ title, phrase, children }) => {
-  const renderContent = (phrase: string) => {
+  const renderContent = (phrase: string | undefined) => {
     if (phrase) {
       return (
         <>
