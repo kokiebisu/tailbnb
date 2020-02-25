@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
 // Wrapper
-import { Section } from '../components/wrapper/Section';
-import SectionOverflow from '../components/wrapper/SectionOverflow';
-import StaySection from '../components/wrapper/ExploreSection';
-import StaySectionOverflow from '../components/wrapper/ExploreSectionOverflow';
+import { ExploreSection } from '../components/wrapper/ExploreSection';
+import { ExploreSectionOverflow } from '../components/wrapper/ExploreSectionOverflow';
+
+// Layout
 import { Footer } from '../components/layout/Footer';
 import { ExploreHeader } from '../components/layout/ExploreHeader';
 
@@ -71,17 +71,17 @@ export default () => {
           Tourism taxes may be added
         </p>
       </div>
-      <StaySectionOverflow title='Travel the world with Airbnb'>
+      <ExploreSectionOverflow title='Travel the world with Airbnb'>
         <Travel />
-      </StaySectionOverflow>
-      <StaySection
+      </ExploreSectionOverflow>
+      <ExploreSection
         title='Top-rated places to stay'
         phrase='Explore some of the best-reviewed stays in the world'>
         <TopRated />
-      </StaySection>
-      <StaySection title='300+ places to stay'>
+      </ExploreSection>
+      <ExploreSection title='300+ places to stay'>
         <THundredPlus />
-      </StaySection>
+      </ExploreSection>
       <Footer />
     </>
   );

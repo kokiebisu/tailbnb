@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
@@ -39,10 +39,11 @@ interface Stay {
   picture_url: string;
 }
 
-export const THundredPlus: () => string | JSX.Element = () => {
+export const THundredPlus: any = () => {
   const { loading, error, data } = useQuery<StayData>(staydata);
 
   if (error) return `Error! ${error.message}`;
+
   return (
     <>
       <div className='flex flex-wrap items-start justify-start w-full'>
