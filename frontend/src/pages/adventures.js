@@ -1,9 +1,5 @@
 import React from 'react';
 
-// Wrapper
-import Section from '../components/wrapper/Section';
-import SectionOverflow from '../components/wrapper/SectionOverflow';
-
 export default () => {
   return (
     <header className='h-screen'>

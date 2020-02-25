@@ -1,7 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, phrase, children }) => {
-  const renderContent = (phrase) => {
+interface Prop {
+  title: string;
+  phrase: string | undefined;
+  children: React.ReactNode;
+}
+
+export const Section: React.FC<Prop> = ({ title, phrase, children }) => {
+  const renderContent = (phrase: string | undefined) => {
     if (phrase) {
       return (
         <>
