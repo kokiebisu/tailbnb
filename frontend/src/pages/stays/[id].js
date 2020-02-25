@@ -33,7 +33,7 @@ import { SleepingArrangements } from '../../components/containers/SleepingArrang
 
 // Wrapper
 import DetailSectionOverflow from '../../components/wrapper/DetailSectionOverflow';
-import DetailSection from '../../components/wrapper/DetailSection';
+import { DetailSection } from '../../components/wrapper/DetailSection';
 
 // Containers
 import { ToDoNear } from '../../components/containers/ToDoNear';

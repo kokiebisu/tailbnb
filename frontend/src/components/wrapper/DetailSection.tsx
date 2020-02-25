@@ -1,6 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, children }) => {
+interface Prop {
+  title: string;
+  children: React.ReactNode;
+}
+
+export const DetailSection: React.FC<Prop> = ({ title, children }) => {
   return (
     <div className='border-b border-gray-300 pt-4 pb-14 w-full'>
       <div className='pb-8'>

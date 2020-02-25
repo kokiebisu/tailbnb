@@ -2952,26 +2952,28 @@ const TopRated = () => {
 
 /***/ }),
 
-/***/ "./src/components/layout/Footer.js":
-/*!*****************************************!*\
-  !*** ./src/components/layout/Footer.js ***!
-  \*****************************************/
-/*! exports provided: default */
+/***/ "./src/components/layout/Footer.tsx":
+/*!******************************************!*\
+  !*** ./src/components/layout/Footer.tsx ***!
+  \******************************************/
+/*! exports provided: Footer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _FooterContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterContent */ "./src/components/layout/FooterContent.tsx");
 /* harmony import */ var _FooterInducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FooterInducer */ "./src/components/layout/FooterInducer.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/Footer.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/Footer.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
  // Component
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+const Footer = () => {
   const {
     0: display,
     1: setDisplay
@@ -2981,22 +2983,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     setDisplay(!display);
   };
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, display ? __jsx(_FooterContent__WEBPACK_IMPORTED_MODULE_1__["FooterContent"], {
-    swap: changeDisplay,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }) : __jsx(_FooterInducer__WEBPACK_IMPORTED_MODULE_2__["FooterInducer"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, display ? __jsx(_FooterContent__WEBPACK_IMPORTED_MODULE_1__["FooterContent"], {
     swap: changeDisplay,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: undefined
+  }) : __jsx(_FooterInducer__WEBPACK_IMPORTED_MODULE_2__["FooterInducer"], {
+    swap: changeDisplay,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
   }));
-});
+};
 
 /***/ }),
 
@@ -6128,7 +6130,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
 /* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
 /* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.js");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // Wrapper
@@ -6248,7 +6250,7 @@ const Home = () => {
       lineNumber: 50
     },
     __self: undefined
-  })), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  })), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__["Footer"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
