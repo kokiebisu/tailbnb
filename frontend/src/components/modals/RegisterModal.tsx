@@ -8,7 +8,7 @@ interface Prop {
   setRegisterModal: (
     value: boolean | ((prevValue: boolean) => boolean)
   ) => void;
-  setType: (type: string | ((prevValue: string) => string)) => void;
+  setType: (type: string) => void;
   type: string;
   nottype: string;
   phrase: string;

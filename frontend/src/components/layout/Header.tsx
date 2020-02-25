@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import Popup from 'reactjs-popup';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import * as React from 'react';
+import { useState } from 'react';
 
 // Component
 import { HeaderCard } from '../presentational/HeaderCard';
@@ -8,12 +7,12 @@ import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
 
 // Images
-import background from '../../../public/img/high/airbnb-background.jpg';
+const background = require('../../../public/img/high/airbnb-background.jpg');
 
-export default () => {
-  const [registerModal, setRegisterModal] = useState(false);
-  const [helpModal, setHelpModal] = useState(false);
-  const [type, setType] = useState('');
+export const Header: React.FC<{}> = () => {
+  const [registerModal, setRegisterModal] = useState<boolean>(false);
+  const [helpModal, setHelpModal] = useState<boolean>(false);
+  const [type, setType] = useState<string>('');
 
   const switchRegisterModal = () => {
     setRegisterModal(!registerModal);
@@ -23,11 +22,11 @@ export default () => {
     setHelpModal(!helpModal);
   };
 
-  const switchType = (type) => {
+  const switchType = (type: string) => {
     setType(type);
   };
 
-  const configureScroll = (name) => {
+  const configureScroll = (name: string) => {
     document.body.style.overflow = name;
   };
 
@@ -91,7 +90,7 @@ export default () => {
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <button
-                onClick={() => switchHelpModal(true)}
+                onClick={() => switchHelpModal()}
                 className='text-sm  tracking-wide'>
                 Help
               </button>
@@ -100,7 +99,7 @@ export default () => {
               <button
                 onClick={() => {
                   switchType('Sign up');
-                  switchRegisterModal(true);
+                  switchRegisterModal();
                 }}
                 className='text-sm  tracking-wide'>
                 Sign up
@@ -110,9 +109,8 @@ export default () => {
               <button
                 onClick={() => {
                   switchType('Log in');
-                  switchRegisterModal(true);
+                  switchRegisterModal();
                 }}
-                href='#'
                 className='text-sm tracking-wide'>
                 Log in
               </button>
