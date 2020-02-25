@@ -88,7 +88,11 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 6);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+>>>>>>> stay-type
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2101,16 +2105,27 @@ const ShowAll = ({
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/components/containers/THundredPlus.tsx":
 /*!****************************************************!*\
   !*** ./src/components/containers/THundredPlus.tsx ***!
   \****************************************************/
 /*! exports provided: THundredPlus */
+=======
+/***/ "./src/components/containers/THundredPlus.js":
+/*!***************************************************!*\
+  !*** ./src/components/containers/THundredPlus.js ***!
+  \***************************************************/
+/*! exports provided: default */
+>>>>>>> stay-type
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THundredPlus", function() { return THundredPlus; });
+=======
+>>>>>>> stay-type
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
@@ -2119,13 +2134,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
+<<<<<<< HEAD
 /* harmony import */ var _presentational_THundredPlusCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/THundredPlusCard */ "./src/components/presentational/THundredPlusCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/THundredPlus.tsx";
+=======
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _presentational_THundredPlusCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/THundredPlusCard */ "./src/components/presentational/THundredPlusCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/THundredPlus.js";
+>>>>>>> stay-type
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> stay-type
  // Component
 
 
@@ -2141,21 +2168,78 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       price
       reviews_per_month
       number_of_reviews
+<<<<<<< HEAD
       picture_url
     }
   }
 `;
 const THundredPlus = () => {
+=======
+    }
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+>>>>>>> stay-type
   const {
     loading,
     error,
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(staydata);
+<<<<<<< HEAD
+=======
+  const {
+    0: isLoading,
+    1: setIsLoading
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
+  const {
+    0: photos,
+    1: setPhotos
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
+  const info = {
+    query: 'house',
+    count: 4,
+    orientation: 'landscape',
+    client_id: 'RchVxgkvTlsApnvD7fdLAxFzqAa0yi6OPLS3pTWs3W4'
+  };
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(`https://api.unsplash.com/photos/random?query=${info.query}&count=${info.count}&orientation=${info.orientation}&client_id=${info.client_id}`).then(data => {
+      setPhotos({
+        imgs: data.data
+      });
+    });
+    setIsLoading(false);
+  };
+
+  if (loading) {
+    return __jsx("div", {
+      className: "flex justify-center items-center w-full py-20",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: undefined
+    }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      size: 10,
+      color: '#008489',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: undefined
+    }));
+  }
+
+>>>>>>> stay-type
   if (error) return `Error! ${error.message}`;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     className: "flex flex-wrap items-start justify-start w-full",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 48
     },
     __self: undefined
@@ -2176,18 +2260,33 @@ const THundredPlus = () => {
     __self: undefined
   })) : data && data.stays.map(({
     host_is_superhost,
+=======
+      lineNumber: 66
+    },
+    __self: undefined
+  }, data.stays.map(({
+    id,
+    host_is_superhost,
+    img,
+    imglow,
+>>>>>>> stay-type
     size,
     country,
     name,
     price,
     reviews_per_month,
+<<<<<<< HEAD
     number_of_reviews,
     picture_url
+=======
+    number_of_reviews
+>>>>>>> stay-type
   }, index) => {
     return __jsx("div", {
       className: "lg:w-1/3 xl:w-1/4 pb-5",
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD
         lineNumber: 70
       },
       __self: undefined
@@ -2195,6 +2294,16 @@ const THundredPlus = () => {
       key: index,
       img: picture_url,
       host_is_superhost: host_is_superhost,
+=======
+        lineNumber: 84
+      },
+      __self: undefined
+    }, photos.imgs ? __jsx(_presentational_THundredPlusCard__WEBPACK_IMPORTED_MODULE_5__["THundredPlusCard"], {
+      key: id,
+      host_is_superhost: host_is_superhost,
+      img: photos.imgs[index].urls.raw,
+      imglow: photos.imgs[index].urls.thumb,
+>>>>>>> stay-type
       size: size,
       country: country,
       name: name,
@@ -2203,6 +2312,7 @@ const THundredPlus = () => {
       number_of_reviews: number_of_reviews,
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD
         lineNumber: 71
       },
       __self: undefined
@@ -2216,6 +2326,21 @@ const THundredPlus = () => {
     __self: undefined
   }));
 };
+=======
+        lineNumber: 86
+      },
+      __self: undefined
+    }) : null);
+  })), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+    title: "Show(2000+)",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104
+    },
+    __self: undefined
+  }));
+});
+>>>>>>> stay-type
 
 /***/ }),
 
@@ -4340,7 +4465,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.js");
 /* harmony import */ var _components_containers_Travel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Travel */ "./src/components/containers/Travel.tsx");
 /* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.js");
+<<<<<<< HEAD
 /* harmony import */ var _components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/THundredPlus */ "./src/components/containers/THundredPlus.tsx");
+=======
+/* harmony import */ var _components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/THundredPlus */ "./src/components/containers/THundredPlus.js");
+>>>>>>> stay-type
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stays.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // Wrapper
@@ -4515,7 +4644,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 82
     },
     __self: undefined
+<<<<<<< HEAD
   }, __jsx(_components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_9__["THundredPlus"], {
+=======
+  }, __jsx(_components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_9__["default"], {
+>>>>>>> stay-type
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83
@@ -4532,7 +4665,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 6:
+=======
+/***/ 5:
+>>>>>>> stay-type
 /*!**********************************!*\
   !*** multi ./src/pages/stays.js ***!
   \**********************************/
@@ -4566,6 +4703,20 @@ module.exports = require("apollo-boost");
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+
+>>>>>>> stay-type
 /***/ "core-js/library/fn/object/define-property":
 /*!************************************************************!*\
   !*** external "core-js/library/fn/object/define-property" ***!

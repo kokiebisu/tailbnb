@@ -3,7 +3,7 @@ import * as React from 'react';
 import Link from 'next/link';
 
 interface Prop {
-  id?: string;
+  id: string;
   host_is_superhost: string;
   name: string;
   price: number;
