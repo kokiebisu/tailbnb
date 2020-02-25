@@ -7,7 +7,10 @@ import { ExploreSectionOverflow } from '../components/wrapper/ExploreSectionOver
 import { Experiences } from '../components/containers/Experiences';
 import { Hosts } from '../components/containers/Hosts';
 
-export default () => {
+// Next
+import { NextPage } from 'next';
+
+const Experience: NextPage<{}> = () => {
   return (
     <>
       <ExploreHeader type='Experiences' />
@@ -30,3 +33,5 @@ export default () => {
     </>
   );
 };
+
+export default Experience;

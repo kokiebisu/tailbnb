@@ -16167,31 +16167,20 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
-/*!***********************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_ef0ff7c60362f24a921f ***!
-  \***********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f */ "dll-reference dll_ef0ff7c60362f24a921f"))("./node_modules/next/dist/build/polyfills/object-assign.js");
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.js!./":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.js ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.tsx!./":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.tsx ***!
+  \***************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/stays/[id]", function() {
-      var mod = __webpack_require__(/*! ./src/pages/stays/[id].js */ "./src/pages/stays/[id].js")
+      var mod = __webpack_require__(/*! ./src/pages/stays/[id].tsx */ "./src/pages/stays/[id].tsx")
       if(true) {
-        module.hot.accept(/*! ./src/pages/stays/[id].js */ "./src/pages/stays/[id].js", function() {
+        module.hot.accept(/*! ./src/pages/stays/[id].tsx */ "./src/pages/stays/[id].tsx", function() {
           if(!next.router.components["/stays/[id]"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/stays/[id].js */ "./src/pages/stays/[id].js")
+          var updatedPage = __webpack_require__(/*! ./src/pages/stays/[id].tsx */ "./src/pages/stays/[id].tsx")
           next.router.update("/stays/[id]", updatedPage)
         })
       }
@@ -19185,657 +19174,6 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/prop-types/checkPropTypes.js":
-/*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_ef0ff7c60362f24a921f ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f */ "dll-reference dll_ef0ff7c60362f24a921f"))("./node_modules/prop-types/checkPropTypes.js");
-
-/***/ }),
-
-/***/ "./node_modules/prop-types/factoryWithTypeCheckers.js":
-/*!************************************************************!*\
-  !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
-var assign = __webpack_require__(/*! object-assign */ "./node_modules/next/dist/build/polyfills/object-assign.js");
-
-var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
-var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
-
-var has = Function.call.bind(Object.prototype.hasOwnProperty);
-var printWarning = function() {};
-
-if (true) {
-  printWarning = function(text) {
-    var message = 'Warning: ' + text;
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-}
-
-function emptyFunctionThatReturnsNull() {
-  return null;
-}
-
-module.exports = function(isValidElement, throwOnDirectAccess) {
-  /* global Symbol */
-  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-
-  /**
-   * Returns the iterator method function contained on the iterable object.
-   *
-   * Be sure to invoke the function with the iterable as context:
-   *
-   *     var iteratorFn = getIteratorFn(myIterable);
-   *     if (iteratorFn) {
-   *       var iterator = iteratorFn.call(myIterable);
-   *       ...
-   *     }
-   *
-   * @param {?object} maybeIterable
-   * @return {?function}
-   */
-  function getIteratorFn(maybeIterable) {
-    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
-    if (typeof iteratorFn === 'function') {
-      return iteratorFn;
-    }
-  }
-
-  /**
-   * Collection of methods that allow declaration and validation of props that are
-   * supplied to React components. Example usage:
-   *
-   *   var Props = require('ReactPropTypes');
-   *   var MyArticle = React.createClass({
-   *     propTypes: {
-   *       // An optional string prop named "description".
-   *       description: Props.string,
-   *
-   *       // A required enum prop named "category".
-   *       category: Props.oneOf(['News','Photos']).isRequired,
-   *
-   *       // A prop named "dialog" that requires an instance of Dialog.
-   *       dialog: Props.instanceOf(Dialog).isRequired
-   *     },
-   *     render: function() { ... }
-   *   });
-   *
-   * A more formal specification of how these methods are used:
-   *
-   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-   *   decl := ReactPropTypes.{type}(.isRequired)?
-   *
-   * Each and every declaration produces a function with the same signature. This
-   * allows the creation of custom validation functions. For example:
-   *
-   *  var MyLink = React.createClass({
-   *    propTypes: {
-   *      // An optional string or URI prop named "href".
-   *      href: function(props, propName, componentName) {
-   *        var propValue = props[propName];
-   *        if (propValue != null && typeof propValue !== 'string' &&
-   *            !(propValue instanceof URI)) {
-   *          return new Error(
-   *            'Expected a string or an URI for ' + propName + ' in ' +
-   *            componentName
-   *          );
-   *        }
-   *      }
-   *    },
-   *    render: function() {...}
-   *  });
-   *
-   * @internal
-   */
-
-  var ANONYMOUS = '<<anonymous>>';
-
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
-  var ReactPropTypes = {
-    array: createPrimitiveTypeChecker('array'),
-    bool: createPrimitiveTypeChecker('boolean'),
-    func: createPrimitiveTypeChecker('function'),
-    number: createPrimitiveTypeChecker('number'),
-    object: createPrimitiveTypeChecker('object'),
-    string: createPrimitiveTypeChecker('string'),
-    symbol: createPrimitiveTypeChecker('symbol'),
-
-    any: createAnyTypeChecker(),
-    arrayOf: createArrayOfTypeChecker,
-    element: createElementTypeChecker(),
-    elementType: createElementTypeTypeChecker(),
-    instanceOf: createInstanceTypeChecker,
-    node: createNodeChecker(),
-    objectOf: createObjectOfTypeChecker,
-    oneOf: createEnumTypeChecker,
-    oneOfType: createUnionTypeChecker,
-    shape: createShapeTypeChecker,
-    exact: createStrictShapeTypeChecker,
-  };
-
-  /**
-   * inlined Object.is polyfill to avoid requiring consumers ship their own
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-   */
-  /*eslint-disable no-self-compare*/
-  function is(x, y) {
-    // SameValue algorithm
-    if (x === y) {
-      // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x && y !== y;
-    }
-  }
-  /*eslint-enable no-self-compare*/
-
-  /**
-   * We use an Error-like object for backward compatibility as people may call
-   * PropTypes directly and inspect their output. However, we don't use real
-   * Errors anymore. We don't inspect their stack anyway, and creating them
-   * is prohibitively expensive if they are created too often, such as what
-   * happens in oneOfType() for any type before the one that matched.
-   */
-  function PropTypeError(message) {
-    this.message = message;
-    this.stack = '';
-  }
-  // Make `instanceof Error` still work for returned errors.
-  PropTypeError.prototype = Error.prototype;
-
-  function createChainableTypeChecker(validate) {
-    if (true) {
-      var manualPropTypeCallCache = {};
-      var manualPropTypeWarningCount = 0;
-    }
-    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
-      componentName = componentName || ANONYMOUS;
-      propFullName = propFullName || propName;
-
-      if (secret !== ReactPropTypesSecret) {
-        if (throwOnDirectAccess) {
-          // New behavior only for users of `prop-types` package
-          var err = new Error(
-            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-            'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
-          );
-          err.name = 'Invariant Violation';
-          throw err;
-        } else if ( true && typeof console !== 'undefined') {
-          // Old behavior for people using React.PropTypes
-          var cacheKey = componentName + ':' + propName;
-          if (
-            !manualPropTypeCallCache[cacheKey] &&
-            // Avoid spamming the console because they are often not actionable except for lib authors
-            manualPropTypeWarningCount < 3
-          ) {
-            printWarning(
-              'You are manually calling a React.PropTypes validation ' +
-              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
-              'and will throw in the standalone `prop-types` package. ' +
-              'You may be seeing this warning due to a third-party PropTypes ' +
-              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
-            );
-            manualPropTypeCallCache[cacheKey] = true;
-            manualPropTypeWarningCount++;
-          }
-        }
-      }
-      if (props[propName] == null) {
-        if (isRequired) {
-          if (props[propName] === null) {
-            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
-          }
-          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
-        }
-        return null;
-      } else {
-        return validate(props, propName, componentName, location, propFullName);
-      }
-    }
-
-    var chainedCheckType = checkType.bind(null, false);
-    chainedCheckType.isRequired = checkType.bind(null, true);
-
-    return chainedCheckType;
-  }
-
-  function createPrimitiveTypeChecker(expectedType) {
-    function validate(props, propName, componentName, location, propFullName, secret) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== expectedType) {
-        // `propValue` being instance of, say, date/regexp, pass the 'object'
-        // check, but we can offer a more precise error message here rather than
-        // 'of type `object`'.
-        var preciseType = getPreciseType(propValue);
-
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createAnyTypeChecker() {
-    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
-  }
-
-  function createArrayOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
-      }
-      var propValue = props[propName];
-      if (!Array.isArray(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
-      }
-      for (var i = 0; i < propValue.length; i++) {
-        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
-        if (error instanceof Error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createElementTypeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      if (!isValidElement(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createElementTypeTypeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      if (!ReactIs.isValidElementType(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement type.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createInstanceTypeChecker(expectedClass) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!(props[propName] instanceof expectedClass)) {
-        var expectedClassName = expectedClass.name || ANONYMOUS;
-        var actualClassName = getClassName(props[propName]);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createEnumTypeChecker(expectedValues) {
-    if (!Array.isArray(expectedValues)) {
-      if (true) {
-        if (arguments.length > 1) {
-          printWarning(
-            'Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' +
-            'A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).'
-          );
-        } else {
-          printWarning('Invalid argument supplied to oneOf, expected an array.');
-        }
-      }
-      return emptyFunctionThatReturnsNull;
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      for (var i = 0; i < expectedValues.length; i++) {
-        if (is(propValue, expectedValues[i])) {
-          return null;
-        }
-      }
-
-      var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
-        var type = getPreciseType(value);
-        if (type === 'symbol') {
-          return String(value);
-        }
-        return value;
-      });
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + String(propValue) + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createObjectOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
-      }
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
-      }
-      for (var key in propValue) {
-        if (has(propValue, key)) {
-          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-          if (error instanceof Error) {
-            return error;
-          }
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createUnionTypeChecker(arrayOfTypeCheckers) {
-    if (!Array.isArray(arrayOfTypeCheckers)) {
-       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : undefined;
-      return emptyFunctionThatReturnsNull;
-    }
-
-    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-      var checker = arrayOfTypeCheckers[i];
-      if (typeof checker !== 'function') {
-        printWarning(
-          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
-          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
-        );
-        return emptyFunctionThatReturnsNull;
-      }
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-        var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
-          return null;
-        }
-      }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createNodeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!isNode(props[propName])) {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      for (var key in shapeTypes) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createStrictShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      // We need to check all keys in case some are required but missing from
-      // props.
-      var allKeys = assign({}, props[propName], shapeTypes);
-      for (var key in allKeys) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          return new PropTypeError(
-            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
-            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
-          );
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-
-    return createChainableTypeChecker(validate);
-  }
-
-  function isNode(propValue) {
-    switch (typeof propValue) {
-      case 'number':
-      case 'string':
-      case 'undefined':
-        return true;
-      case 'boolean':
-        return !propValue;
-      case 'object':
-        if (Array.isArray(propValue)) {
-          return propValue.every(isNode);
-        }
-        if (propValue === null || isValidElement(propValue)) {
-          return true;
-        }
-
-        var iteratorFn = getIteratorFn(propValue);
-        if (iteratorFn) {
-          var iterator = iteratorFn.call(propValue);
-          var step;
-          if (iteratorFn !== propValue.entries) {
-            while (!(step = iterator.next()).done) {
-              if (!isNode(step.value)) {
-                return false;
-              }
-            }
-          } else {
-            // Iterator will provide entry [k,v] tuples rather than values.
-            while (!(step = iterator.next()).done) {
-              var entry = step.value;
-              if (entry) {
-                if (!isNode(entry[1])) {
-                  return false;
-                }
-              }
-            }
-          }
-        } else {
-          return false;
-        }
-
-        return true;
-      default:
-        return false;
-    }
-  }
-
-  function isSymbol(propType, propValue) {
-    // Native Symbol.
-    if (propType === 'symbol') {
-      return true;
-    }
-
-    // falsy value can't be a Symbol
-    if (!propValue) {
-      return false;
-    }
-
-    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
-    if (propValue['@@toStringTag'] === 'Symbol') {
-      return true;
-    }
-
-    // Fallback for non-spec compliant Symbols which are polyfilled.
-    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
-      return true;
-    }
-
-    return false;
-  }
-
-  // Equivalent of `typeof` but with special handling for array and regexp.
-  function getPropType(propValue) {
-    var propType = typeof propValue;
-    if (Array.isArray(propValue)) {
-      return 'array';
-    }
-    if (propValue instanceof RegExp) {
-      // Old webkits (at least until Android 4.0) return 'function' rather than
-      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-      // passes PropTypes.object.
-      return 'object';
-    }
-    if (isSymbol(propType, propValue)) {
-      return 'symbol';
-    }
-    return propType;
-  }
-
-  // This handles more types than `getPropType`. Only used for error messages.
-  // See `createPrimitiveTypeChecker`.
-  function getPreciseType(propValue) {
-    if (typeof propValue === 'undefined' || propValue === null) {
-      return '' + propValue;
-    }
-    var propType = getPropType(propValue);
-    if (propType === 'object') {
-      if (propValue instanceof Date) {
-        return 'date';
-      } else if (propValue instanceof RegExp) {
-        return 'regexp';
-      }
-    }
-    return propType;
-  }
-
-  // Returns a string that is postfixed to a warning about an invalid type.
-  // For example, "undefined" or "of type array"
-  function getPostfixForTypeWarning(value) {
-    var type = getPreciseType(value);
-    switch (type) {
-      case 'array':
-      case 'object':
-        return 'an ' + type;
-      case 'boolean':
-      case 'date':
-      case 'regexp':
-        return 'a ' + type;
-      default:
-        return type;
-    }
-  }
-
-  // Returns class name of the object, if any.
-  function getClassName(propValue) {
-    if (!propValue.constructor || !propValue.constructor.name) {
-      return ANONYMOUS;
-    }
-    return propValue.constructor.name;
-  }
-
-  ReactPropTypes.checkPropTypes = checkPropTypes;
-  ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/prop-types/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/prop-types/index.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (true) {
-  var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "./node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
-} else {}
-
-
-/***/ }),
-
-/***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
-/*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_ef0ff7c60362f24a921f ***!
-  \*******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f */ "dll-reference dll_ef0ff7c60362f24a921f"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
-
-/***/ }),
-
 /***/ "./node_modules/querystring-es3/decode.js":
 /*!************************************************!*\
   !*** ./node_modules/querystring-es3/decode.js ***!
@@ -20042,17 +19380,6 @@ var objectKeys = Object.keys || function (obj) {
 exports.decode = exports.parse = __webpack_require__(/*! ./decode */ "./node_modules/querystring-es3/decode.js");
 exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node_modules/querystring-es3/encode.js");
 
-
-/***/ }),
-
-/***/ "./node_modules/react-dom/index.js":
-/*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_ef0ff7c60362f24a921f ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f */ "dll-reference dll_ef0ff7c60362f24a921f"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -20309,19 +19636,6 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
 
-
-/***/ }),
-
-/***/ "./node_modules/react-lazy-progressive-image/lib/index.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/react-lazy-progressive-image/lib/index.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var _react=_interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js")),_propTypes=_interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js")),_reactVisibilitySensor=_interopRequireDefault(__webpack_require__(/*! react-visibility-sensor */ "./node_modules/react-visibility-sensor/dist/visibility-sensor.js"));function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}function _getRequireWildcardCache(){if("function"!=typeof WeakMap)return null;var a=new WeakMap;return _getRequireWildcardCache=function(){return a},a}function _interopRequireWildcard(a){if(a&&a.__esModule)return a;if(null===a||"object"!==_typeof(a)&&"function"!=typeof a)return{default:a};var b=_getRequireWildcardCache();if(b&&b.has(a))return b.get(a);var c={},d=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var e in a)if(Object.prototype.hasOwnProperty.call(a,e)){var f=d?Object.getOwnPropertyDescriptor(a,e):null;f&&(f.get||f.set)?Object.defineProperty(c,e,f):c[e]=a[e]}return c.default=a,b&&b.set(a,c),c}function _typeof(a){return _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&"function"==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a},_typeof(a)}function _extends(){return _extends=Object.assign||function(a){for(var b,c=1;c<arguments.length;c++)for(var d in b=arguments[c],b)Object.prototype.hasOwnProperty.call(b,d)&&(a[d]=b[d]);return a},_extends.apply(this,arguments)}function _classCallCheck(a,b){if(!(a instanceof b))throw new TypeError("Cannot call a class as a function")}function _defineProperties(a,b){for(var c,d=0;d<b.length;d++)c=b[d],c.enumerable=c.enumerable||!1,c.configurable=!0,"value"in c&&(c.writable=!0),Object.defineProperty(a,c.key,c)}function _createClass(a,b,c){return b&&_defineProperties(a.prototype,b),c&&_defineProperties(a,c),a}function _possibleConstructorReturn(a,b){return b&&("object"===_typeof(b)||"function"==typeof b)?b:_assertThisInitialized(a)}function _getPrototypeOf(a){return _getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function(a){return a.__proto__||Object.getPrototypeOf(a)},_getPrototypeOf(a)}function _assertThisInitialized(a){if(void 0===a)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return a}function _inherits(a,b){if("function"!=typeof b&&null!==b)throw new TypeError("Super expression must either be null or a function");a.prototype=Object.create(b&&b.prototype,{constructor:{value:a,writable:!0,configurable:!0}}),b&&_setPrototypeOf(a,b)}function _setPrototypeOf(a,b){return _setPrototypeOf=Object.setPrototypeOf||function(a,b){return a.__proto__=b,a},_setPrototypeOf(a,b)}function _defineProperty(a,b,c){return b in a?Object.defineProperty(a,b,{value:c,enumerable:!0,configurable:!0,writable:!0}):a[b]=c,a}var LazyImage=/*#__PURE__*/function(a){function b(a){var c;return _classCallCheck(this,b),c=_possibleConstructorReturn(this,_getPrototypeOf(b).call(this,a)),_defineProperty(_assertThisInitialized(c),"loadImage",function(a){c.image&&(c.image.onload=null,c.image.onerror=null);var b=new Image;c.image=b,b.onload=c.onLoad,b.onerror=c.onError,b.src=a}),_defineProperty(_assertThisInitialized(c),"handleVisibilityChange",function(a){c.setState({isVisible:a},function(){c.state.loading&&c.state.isVisible&&c.loadImage(c.props.src)})}),_defineProperty(_assertThisInitialized(c),"onLoad",function(){c.setState({image:c.image.src,loading:!1})}),_defineProperty(_assertThisInitialized(c),"onError",function(a){var b=c.props.onError;b&&b(a)}),c.image=null,c.state={image:a.placeholder,isVisible:!1,loading:!0},c}return _inherits(b,a),_createClass(b,[{key:"componentDidUpdate",value:function componentDidUpdate(a){var b=this.props,c=b.src,d=b.placeholder;// We only invalidate the current image if the src has changed.
-c!==a.src&&(this.state.isVisible?this.loadImage(c):this.setState({image:d,loading:!0}))}},{key:"componentWillUnmount",value:function componentWillUnmount(){this.image&&(this.image.onload=null,this.image.onerror=null)}},{key:"render",value:function render(){var a=this.state,b=a.image,c=a.loading,d=a.isVisible,e=this.props,f=e.children,g=e.visibilitySensorProps;if(!f||"function"!=typeof f)throw new Error("LazyProgressiveImage requires a function as its only child");return _react.default.createElement(_reactVisibilitySensor.default,_extends({},g,{onChange:this.handleVisibilityChange}),f(b,c,d))}}]),b}(_react.Component);LazyImage.propTypes={children:_propTypes.default.func,onError:_propTypes.default.func,placeholder:_propTypes.default.string,src:_propTypes.default.string,visibilitySensorProps:_propTypes.default.any};var _default=LazyImage;exports.default=_default;
 
 /***/ }),
 
@@ -20801,606 +20115,6 @@ function cssValue(value) {
 }
 exports.cssValue = cssValue;
 
-
-/***/ }),
-
-/***/ "./node_modules/react-visibility-sensor/dist/visibility-sensor.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/react-visibility-sensor/dist/visibility-sensor.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(true)
-		module.exports = factory(__webpack_require__(/*! react */ "./node_modules/react/index.js"), __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
-	else {}
-})(this, function(__WEBPACK_EXTERNAL_MODULE__1__, __WEBPACK_EXTERNAL_MODULE__2__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (false) { var throwOnDirectAccess, ReactIs; } else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(5)();
-}
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__1__;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__2__;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// Tell whether the rect is visible, given an offset
-//
-// return: boolean
-module.exports = function (offset, rect, containmentRect) {
-  var offsetDir = offset.direction;
-  var offsetVal = offset.value; // Rules for checking different kind of offsets. In example if the element is
-  // 90px below viewport and offsetTop is 100, it is considered visible.
-
-  switch (offsetDir) {
-    case 'top':
-      return containmentRect.top + offsetVal < rect.top && containmentRect.bottom > rect.bottom && containmentRect.left < rect.left && containmentRect.right > rect.right;
-
-    case 'left':
-      return containmentRect.left + offsetVal < rect.left && containmentRect.bottom > rect.bottom && containmentRect.top < rect.top && containmentRect.right > rect.right;
-
-    case 'bottom':
-      return containmentRect.bottom - offsetVal > rect.bottom && containmentRect.left < rect.left && containmentRect.right > rect.right && containmentRect.top < rect.top;
-
-    case 'right':
-      return containmentRect.right - offsetVal > rect.right && containmentRect.left < rect.left && containmentRect.top < rect.top && containmentRect.bottom > rect.bottom;
-  }
-};
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return VisibilitySensor; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_is_visible_with_offset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3);
-/* harmony import */ var _lib_is_visible_with_offset__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_lib_is_visible_with_offset__WEBPACK_IMPORTED_MODULE_3__);
-
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-function normalizeRect(rect) {
-  if (rect.width === undefined) {
-    rect.width = rect.right - rect.left;
-  }
-
-  if (rect.height === undefined) {
-    rect.height = rect.bottom - rect.top;
-  }
-
-  return rect;
-}
-
-var VisibilitySensor =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(VisibilitySensor, _React$Component);
-
-  function VisibilitySensor(props) {
-    var _this;
-
-    _classCallCheck(this, VisibilitySensor);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(VisibilitySensor).call(this, props));
-
-    _defineProperty(_assertThisInitialized(_this), "getContainer", function () {
-      return _this.props.containment || window;
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "addEventListener", function (target, event, delay, throttle) {
-      if (!_this.debounceCheck) {
-        _this.debounceCheck = {};
-      }
-
-      var timeout;
-      var func;
-
-      var later = function later() {
-        timeout = null;
-
-        _this.check();
-      };
-
-      if (throttle > -1) {
-        func = function func() {
-          if (!timeout) {
-            timeout = setTimeout(later, throttle || 0);
-          }
-        };
-      } else {
-        func = function func() {
-          clearTimeout(timeout);
-          timeout = setTimeout(later, delay || 0);
-        };
-      }
-
-      var info = {
-        target: target,
-        fn: func,
-        getLastTimeout: function getLastTimeout() {
-          return timeout;
-        }
-      };
-      target.addEventListener(event, info.fn);
-      _this.debounceCheck[event] = info;
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "startWatching", function () {
-      if (_this.debounceCheck || _this.interval) {
-        return;
-      }
-
-      if (_this.props.intervalCheck) {
-        _this.interval = setInterval(_this.check, _this.props.intervalDelay);
-      }
-
-      if (_this.props.scrollCheck) {
-        _this.addEventListener(_this.getContainer(), "scroll", _this.props.scrollDelay, _this.props.scrollThrottle);
-      }
-
-      if (_this.props.resizeCheck) {
-        _this.addEventListener(window, "resize", _this.props.resizeDelay, _this.props.resizeThrottle);
-      } // if dont need delayed call, check on load ( before the first interval fires )
-
-
-      !_this.props.delayedCall && _this.check();
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "stopWatching", function () {
-      if (_this.debounceCheck) {
-        // clean up event listeners and their debounce callers
-        for (var debounceEvent in _this.debounceCheck) {
-          if (_this.debounceCheck.hasOwnProperty(debounceEvent)) {
-            var debounceInfo = _this.debounceCheck[debounceEvent];
-            clearTimeout(debounceInfo.getLastTimeout());
-            debounceInfo.target.removeEventListener(debounceEvent, debounceInfo.fn);
-            _this.debounceCheck[debounceEvent] = null;
-          }
-        }
-      }
-
-      _this.debounceCheck = null;
-
-      if (_this.interval) {
-        _this.interval = clearInterval(_this.interval);
-      }
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "check", function () {
-      var el = _this.node;
-      var rect;
-      var containmentRect; // if the component has rendered to null, dont update visibility
-
-      if (!el) {
-        return _this.state;
-      }
-
-      rect = normalizeRect(_this.roundRectDown(el.getBoundingClientRect()));
-
-      if (_this.props.containment) {
-        var containmentDOMRect = _this.props.containment.getBoundingClientRect();
-
-        containmentRect = {
-          top: containmentDOMRect.top,
-          left: containmentDOMRect.left,
-          bottom: containmentDOMRect.bottom,
-          right: containmentDOMRect.right
-        };
-      } else {
-        containmentRect = {
-          top: 0,
-          left: 0,
-          bottom: window.innerHeight || document.documentElement.clientHeight,
-          right: window.innerWidth || document.documentElement.clientWidth
-        };
-      } // Check if visibility is wanted via offset?
-
-
-      var offset = _this.props.offset || {};
-      var hasValidOffset = _typeof(offset) === "object";
-
-      if (hasValidOffset) {
-        containmentRect.top += offset.top || 0;
-        containmentRect.left += offset.left || 0;
-        containmentRect.bottom -= offset.bottom || 0;
-        containmentRect.right -= offset.right || 0;
-      }
-
-      var visibilityRect = {
-        top: rect.top >= containmentRect.top,
-        left: rect.left >= containmentRect.left,
-        bottom: rect.bottom <= containmentRect.bottom,
-        right: rect.right <= containmentRect.right
-      }; // https://github.com/joshwnj/react-visibility-sensor/pull/114
-
-      var hasSize = rect.height > 0 && rect.width > 0;
-      var isVisible = hasSize && visibilityRect.top && visibilityRect.left && visibilityRect.bottom && visibilityRect.right; // check for partial visibility
-
-      if (hasSize && _this.props.partialVisibility) {
-        var partialVisible = rect.top <= containmentRect.bottom && rect.bottom >= containmentRect.top && rect.left <= containmentRect.right && rect.right >= containmentRect.left; // account for partial visibility on a single edge
-
-        if (typeof _this.props.partialVisibility === "string") {
-          partialVisible = visibilityRect[_this.props.partialVisibility];
-        } // if we have minimum top visibility set by props, lets check, if it meets the passed value
-        // so if for instance element is at least 200px in viewport, then show it.
-
-
-        isVisible = _this.props.minTopValue ? partialVisible && rect.top <= containmentRect.bottom - _this.props.minTopValue : partialVisible;
-      } // Deprecated options for calculating offset.
-
-
-      if (typeof offset.direction === "string" && typeof offset.value === "number") {
-        console.warn("[notice] offset.direction and offset.value have been deprecated. They still work for now, but will be removed in next major version. Please upgrade to the new syntax: { %s: %d }", offset.direction, offset.value);
-        isVisible = _lib_is_visible_with_offset__WEBPACK_IMPORTED_MODULE_3___default()(offset, rect, containmentRect);
-      }
-
-      var state = _this.state; // notify the parent when the value changes
-
-      if (_this.state.isVisible !== isVisible) {
-        state = {
-          isVisible: isVisible,
-          visibilityRect: visibilityRect
-        };
-
-        _this.setState(state);
-
-        if (_this.props.onChange) _this.props.onChange(isVisible);
-      }
-
-      return state;
-    });
-
-    _this.state = {
-      isVisible: null,
-      visibilityRect: {}
-    };
-    return _this;
-  }
-
-  _createClass(VisibilitySensor, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.node = react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.findDOMNode(this);
-
-      if (this.props.active) {
-        this.startWatching();
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.stopWatching();
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      // re-register node in componentDidUpdate if children diffs [#103]
-      this.node = react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.findDOMNode(this);
-
-      if (this.props.active && !prevProps.active) {
-        this.setState({
-          isVisible: null,
-          visibilityRect: {}
-        });
-        this.startWatching();
-      } else if (!this.props.active) {
-        this.stopWatching();
-      }
-    }
-  }, {
-    key: "roundRectDown",
-    value: function roundRectDown(rect) {
-      return {
-        top: Math.floor(rect.top),
-        left: Math.floor(rect.left),
-        bottom: Math.floor(rect.bottom),
-        right: Math.floor(rect.right)
-      };
-    }
-    /**
-     * Check if the element is within the visible viewport
-     */
-
-  }, {
-    key: "render",
-    value: function render() {
-      if (this.props.children instanceof Function) {
-        return this.props.children({
-          isVisible: this.state.isVisible,
-          visibilityRect: this.state.visibilityRect
-        });
-      }
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.Children.only(this.props.children);
-    }
-  }]);
-
-  return VisibilitySensor;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-_defineProperty(VisibilitySensor, "defaultProps", {
-  active: true,
-  partialVisibility: false,
-  minTopValue: 0,
-  scrollCheck: false,
-  scrollDelay: 250,
-  scrollThrottle: -1,
-  resizeCheck: false,
-  resizeDelay: 250,
-  resizeThrottle: -1,
-  intervalCheck: true,
-  intervalDelay: 100,
-  delayedCall: false,
-  offset: {},
-  containment: null,
-  children: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)
-});
-
-_defineProperty(VisibilitySensor, "propTypes", {
-  onChange: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-  active: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  partialVisibility: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool, prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOf(["top", "right", "bottom", "left"])]),
-  delayedCall: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  offset: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.shape({
-    top: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-    left: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-    bottom: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-    right: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number
-  }), // deprecated offset property
-  prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.shape({
-    direction: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOf(["top", "right", "bottom", "left"]),
-    value: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number
-  })]),
-  scrollCheck: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  scrollDelay: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  scrollThrottle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  resizeCheck: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  resizeDelay: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  resizeThrottle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  intervalCheck: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  intervalDelay: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  containment: typeof window !== "undefined" ? prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.instanceOf(window.Element) : prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.any,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.element, prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func]),
-  minTopValue: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number
-});
-
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = __webpack_require__(6);
-
-function emptyFunction() {}
-function emptyFunctionWithReset() {}
-emptyFunctionWithReset.resetWarningCache = emptyFunction;
-
-module.exports = function() {
-  function shim(props, propName, componentName, location, propFullName, secret) {
-    if (secret === ReactPropTypesSecret) {
-      // It is still safe when called from React.
-      return;
-    }
-    var err = new Error(
-      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-      'Use PropTypes.checkPropTypes() to call them. ' +
-      'Read more at http://fb.me/use-check-prop-types'
-    );
-    err.name = 'Invariant Violation';
-    throw err;
-  };
-  shim.isRequired = shim;
-  function getShim() {
-    return shim;
-  };
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-  var ReactPropTypes = {
-    array: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    elementType: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim,
-
-    checkPropTypes: emptyFunctionWithReset,
-    resetWarningCache: emptyFunction
-  };
-
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ })
-/******/ ]);
-});
 
 /***/ }),
 
@@ -26171,15 +24885,15 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var Characteristics = function Characteristics(_ref) {
-  var hostType = _ref.hostType,
-      hostName = _ref.hostName;
+  var host_is_superhost = _ref.host_is_superhost,
+      host_name = _ref.host_name;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_presentational_CharacteristicCard__WEBPACK_IMPORTED_MODULE_1__["CharacteristicCard"], {
     type: "home",
     title: "Entire Home",
     description: "You will have the house to yourself.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
   }), __jsx(_presentational_CharacteristicCard__WEBPACK_IMPORTED_MODULE_1__["CharacteristicCard"], {
@@ -26189,17 +24903,17 @@ var Characteristics = function Characteristics(_ref) {
     description: "recent guests said this place was sparkling clean.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 22
     },
     __self: this
-  }), hostType == 'superhost' ? __jsx(_presentational_CharacteristicCard__WEBPACK_IMPORTED_MODULE_1__["CharacteristicCard"], {
+  }), host_is_superhost === 't' ? __jsx(_presentational_CharacteristicCard__WEBPACK_IMPORTED_MODULE_1__["CharacteristicCard"], {
     type: "superhost",
-    hostName: hostName,
+    hostName: host_name,
     title: "is a Superhost",
     description: "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 29
     },
     __self: this
   }) : null, __jsx(_presentational_CharacteristicCard__WEBPACK_IMPORTED_MODULE_1__["CharacteristicCard"], {
@@ -26209,7 +24923,7 @@ var Characteristics = function Characteristics(_ref) {
     description: "of recent guests gave the location a 5-star rating.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 37
     },
     __self: this
   }));
@@ -27695,140 +26409,6 @@ var MoreLocations = function MoreLocations() {
     },
     __self: this
   }, "New South Wales"))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Neighborhood.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/containers/Neighborhood.tsx ***!
-  \****************************************************/
-/*! exports provided: Neighborhood */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Neighborhood", function() { return Neighborhood; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Neighborhood.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var Neighborhood = function Neighborhood() {
-  return __jsx("div", {
-    className: "mt-12 border-b border-gray-300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "py-4 border-b border-gray-300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 text-2xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, "The neighborhood"), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 pt-3 pb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, "Maria Henriqueta's place is located in Penafiel, Porto, Portugal."), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 py-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, "Residential area of Isla Mujeres is unique..away from the tourists and busy hotels...you can enjoy the stars at night and be incredibly tranquil."), __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "mt-3 mb-5 text-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-center justify-start",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "text-green-850 hover:border-green-850 border-b text-green-850 border-transparent",
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, "Read about the neighborhood"), __jsx("div", {
-    className: "ml-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, __jsx("svg", {
-    style: {
-      fill: '#008489'
-    },
-    viewBox: "0 0 18 18",
-    className: "h-2 w-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }))))), __jsx("div", {
-    className: "bg-blue-500 h-64",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 mt-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, "The map shows this place\u2019s specific location.")));
 };
 
 /***/ }),
@@ -29824,127 +28404,6 @@ var AmenityCard = function AmenityCard(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/presentational/Cancellations.tsx":
-/*!*********************************************************!*\
-  !*** ./src/components/presentational/Cancellations.tsx ***!
-  \*********************************************************/
-/*! exports provided: Cancellations */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cancellations", function() { return Cancellations; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/presentational/Cancellations.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var Cancellations = function Cancellations() {
-  return __jsx("div", {
-    className: "border-b border-gray-300 mt-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "border-gray-300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, "Cancellations"), __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "mt-4 text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, "Free cancellation for 48 hours"), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, "After that, cancel up to 7 days before check-in and get a 50% refund, minus the service fee.")), __jsx("button", {
-    className: "mb-4 mt-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-center justify-start",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "text-green-850 hover:border-green-850 border-b text-green-850 border-transparent",
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, "Read more about the policy"), __jsx("div", {
-    className: "ml-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("svg", {
-    style: {
-      fill: '#008489'
-    },
-    viewBox: "0 0 18 18",
-    className: "h-2 w-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  })))))));
-};
-
-/***/ }),
-
 /***/ "./src/components/presentational/CharacteristicCard.tsx":
 /*!**************************************************************!*\
   !*** ./src/components/presentational/CharacteristicCard.tsx ***!
@@ -30393,21 +28852,21 @@ var CheckInCard = function CheckInCard(_ref) {
     className: "shadow-4xl lg:shadow-none left-0 w-full z-50 fixed bottom-0 py-2 lg:py-0 bg-white w-full lg:block lg:w-25/31 lg:sticky lg:top-0 flex lg:justify-center lg:mt-5 lg:ml-10",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 26
     },
     __self: this
   }, __jsx("div", {
     className: "w-full mx-5 items-center flex lg:flex-col justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-start w-full mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -30415,7 +28874,7 @@ var CheckInCard = function CheckInCard(_ref) {
     height: 30,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     },
     __self: this
   })) : __jsx("h3", {
@@ -30425,7 +28884,7 @@ var CheckInCard = function CheckInCard(_ref) {
     className: "text-md lg:w-full py-5 lg:text-2xl text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }, "Add dates for prices"), loaded ? __jsx("button", {
@@ -30435,7 +28894,7 @@ var CheckInCard = function CheckInCard(_ref) {
     className: "flex justify-center px-4 lg:px-0 lg:w-full bg-pink-850 text-white rounded-lg py-3 whitespace-no-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 40
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -30443,7 +28902,7 @@ var CheckInCard = function CheckInCard(_ref) {
     color: '#ffffff',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: this
   })) : __jsx("button", {
@@ -30453,7 +28912,7 @@ var CheckInCard = function CheckInCard(_ref) {
     className: "px-4 lg:px-0 lg:w-full bg-pink-850 text-white rounded-lg py-3 whitespace-no-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 46
     },
     __self: this
   }, "Check Availability"))));
@@ -31517,10 +29976,10 @@ var DetailSectionOverflow = function DetailSectionOverflow(_ref) {
 
 /***/ }),
 
-/***/ "./src/pages/stays/[id].js":
-/*!*********************************!*\
-  !*** ./src/pages/stays/[id].js ***!
-  \*********************************/
+/***/ "./src/pages/stays/[id].tsx":
+/*!**********************************!*\
+  !*** ./src/pages/stays/[id].tsx ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -31539,38 +29998,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_loading_skeleton__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-lazy-progressive-image */ "./node_modules/react-lazy-progressive-image/lib/index.js");
-/* harmony import */ var react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
-/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
-/* harmony import */ var _components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/presentational/ImagePanel */ "./src/components/presentational/ImagePanel.tsx");
-/* harmony import */ var _components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/containers/Reviews */ "./src/components/containers/Reviews.tsx");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
-/* harmony import */ var _components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/containers/HostedBy */ "./src/components/containers/HostedBy.tsx");
-/* harmony import */ var _components_containers_Neighborhood__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/containers/Neighborhood */ "./src/components/containers/Neighborhood.tsx");
-/* harmony import */ var _components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/containers/KeepInMind */ "./src/components/containers/KeepInMind.tsx");
-/* harmony import */ var _components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/containers/MoreHomes */ "./src/components/containers/MoreHomes.tsx");
-/* harmony import */ var _components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/containers/Characteristics */ "./src/components/containers/Characteristics.tsx");
-/* harmony import */ var _components_presentational_Cancellations__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/presentational/Cancellations */ "./src/components/presentational/Cancellations.tsx");
-/* harmony import */ var _components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/presentational/CheckInCard */ "./src/components/presentational/CheckInCard.tsx");
-/* harmony import */ var _components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/presentational/StayDescription */ "./src/components/presentational/StayDescription.tsx");
-/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.tsx");
-/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.tsx");
-/* harmony import */ var _components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/wrapper/DetailSectionOverflow */ "./src/components/wrapper/DetailSectionOverflow.tsx");
-/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.tsx");
-/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.tsx");
-/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.tsx");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
-/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28__);
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
-/* harmony import */ var _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29__);
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
-/* harmony import */ var _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
-/* harmony import */ var _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
+/* harmony import */ var _components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/presentational/ImagePanel */ "./src/components/presentational/ImagePanel.tsx");
+/* harmony import */ var _components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/containers/Reviews */ "./src/components/containers/Reviews.tsx");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
+/* harmony import */ var _components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/containers/HostedBy */ "./src/components/containers/HostedBy.tsx");
+/* harmony import */ var _components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/containers/KeepInMind */ "./src/components/containers/KeepInMind.tsx");
+/* harmony import */ var _components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/containers/MoreHomes */ "./src/components/containers/MoreHomes.tsx");
+/* harmony import */ var _components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/containers/Characteristics */ "./src/components/containers/Characteristics.tsx");
+/* harmony import */ var _components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/presentational/CheckInCard */ "./src/components/presentational/CheckInCard.tsx");
+/* harmony import */ var _components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/presentational/StayDescription */ "./src/components/presentational/StayDescription.tsx");
+/* harmony import */ var _components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/presentational/AmenityCard */ "./src/components/presentational/AmenityCard.tsx");
+/* harmony import */ var _components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../components/containers/SleepingArrangements */ "./src/components/containers/SleepingArrangements.tsx");
+/* harmony import */ var _components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../components/wrapper/DetailSectionOverflow */ "./src/components/wrapper/DetailSectionOverflow.tsx");
+/* harmony import */ var _components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../components/wrapper/DetailSection */ "./src/components/wrapper/DetailSection.tsx");
+/* harmony import */ var _components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../components/containers/ToDoNear */ "./src/components/containers/ToDoNear.tsx");
+/* harmony import */ var _components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../components/containers/MoreLocations */ "./src/components/containers/MoreLocations.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stays/[id].js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stays/[id].tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2__["createElement"];
 
 function _templateObject3() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  animation: pulse 1.2s ease-in-out infinite;\n"]);
@@ -31605,17 +30052,15 @@ function _templateObject() {
 
 
 
+
  // Dependencies
 
  // Loading
 
 
-
  // GraphQL
 
  // Components
-
-
 
 
 
@@ -31634,16 +30079,21 @@ function _templateObject() {
  // Containers
 
 
- // Images
+
+
+// Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
+var detail2 = __webpack_require__(/*! ../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
 
+var detail3 = __webpack_require__(/*! ../../../public/img/high/staydetail3.jpg */ "./public/img/high/staydetail3.jpg");
 
+var detail4 = __webpack_require__(/*! ../../../public/img/high/staydetail4.jpg */ "./public/img/high/staydetail4.jpg");
 
+var detail5 = __webpack_require__(/*! ../../../public/img/high/staydetail5.jpg */ "./public/img/high/staydetail5.jpg");
 
+var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_8__["gql"])(_templateObject());
 
-var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templateObject());
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var query = _ref.query;
+var id = function id() {
   var router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
 
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__["useQuery"])(GET_STAY, {
@@ -31652,29 +30102,28 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     }
   }),
       loading = _useQuery.loading,
-      error = _useQuery.error,
       data = _useQuery.data;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
       length = _useState[0],
       setLength = _useState[1];
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 125
     },
     __self: this
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 127
     },
     __self: this
-  }, "Vacation Rentals, Homes, Experiences & Places") : __jsx("title", {
+  }, "Vacation Rentals, Homes, Experiences & Places") : data && __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 129
     },
     __self: this
   }, data.stay.name), __jsx("meta", {
@@ -31682,7 +30131,7 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 132
     },
     __self: this
   }), __jsx("link", {
@@ -31691,34 +30140,35 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 136
     },
     __self: this
-  })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_10__["ExploreHeader"], {
+  })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_9__["ExploreHeader"], {
+    type: "stay",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 138
     },
     __self: this
   }), __jsx("div", {
     className: "px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 140
     },
     __self: this
   }, __jsx("div", {
     className: "w-full flex flex-col-reverse lg:flex-col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 141
     },
     __self: this
   }, __jsx("div", {
     className: "w-full py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 142
     },
     __self: this
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -31726,24 +30176,24 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     width: 350,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 144
     },
     __self: this
-  }) : __jsx("h3", {
+  }) : data && __jsx("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-3xl text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 147
     },
     __self: this
   }, data.stay.name), __jsx("div", {
     className: "flex items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 155
     },
     __self: this
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -31751,20 +30201,20 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     width: 500,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 157
     },
     __self: this
-  }) : __jsx("div", {
+  }) : data && __jsx("div", {
     className: "flex items-center justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 160
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 161
     },
     __self: this
   }, __jsx("svg", {
@@ -31777,20 +30227,20 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     viewBox: "0 0 37.286 37.287",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 162
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 167
     },
     __self: this
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 168
     },
     __self: this
   })))), __jsx("p", {
@@ -31800,20 +30250,20 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     className: "pl-1 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 180
     },
     __self: this
   }, data.stay.reviews_per_month, " (", data.stay.number_of_reviews, ")"), __jsx("span", {
     className: "text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 187
     },
     __self: this
   }, "\xA0\xB7\xA0"), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 188
     },
     __self: this
   }, __jsx("svg", {
@@ -31825,7 +30275,7 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 189
     },
     __self: this
   }, __jsx("g", {
@@ -31833,35 +30283,35 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     "fill-rule": "evenodd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 194
     },
     __self: this
   }, __jsx("path", {
     d: "m345.999 174.051v-52.052h-180v52.052c26.942-14.077 57.555-22.053 90-22.053s63.058 7.975 90 22.053z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 195
     },
     __self: this
   }), __jsx("path", {
     d: "m330.999 91.994v-76.994c0-8.284-6.716-15-15-15h-120c-8.284 0-15 6.716-15 15v76.994c-.033 0-.064.005-.097.005h150.193c-.032-.001-.064-.005-.096-.005z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 196
     },
     __self: this
   }), __jsx("path", {
     d: "m271.572 324.382-15.572-23.478-15.572 23.478c-1.993 3.005-5.003 5.192-8.478 6.16l-27.142 7.555 17.517 22.066c2.242 2.825 3.392 6.363 3.238 9.966l-1.201 28.147 26.398-9.841c1.689-.63 3.465-.945 5.239-.945s3.55.315 5.239.945l26.398 9.841-1.201-28.147c-.153-3.603.996-7.141 3.238-9.966l17.517-22.065-27.142-7.555c-3.474-.969-6.483-3.156-8.476-6.161z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 197
     },
     __self: this
   }), __jsx("path", {
     d: "m255.999 181.998c-90.879 0-165 74.121-165 165s74.121 165 165 165 165-74.121 165-165-74.121-165-165-165zm88.748 157.039-28.101 35.398 1.928 45.155c.215 5.023-2.103 9.82-6.17 12.775-2.6 1.889-5.693 2.865-8.817 2.865-1.765 0-3.538-.311-5.238-.945l-42.35-15.787-42.35 15.787c-4.707 1.755-9.987 1.036-14.056-1.92-4.067-2.955-6.385-7.752-6.17-12.775l1.928-45.155-28.101-35.398c-3.126-3.938-4.071-9.18-2.518-13.961s5.399-8.467 10.243-9.815l43.541-12.121 24.981-37.664c2.778-4.19 7.473-6.709 12.5-6.709s9.722 2.519 12.5 6.709l24.981 37.664 43.541 12.121c4.844 1.349 8.689 5.034 10.243 9.815s.611 10.023-2.515 13.961z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 198
     },
     __self: this
   })))), data.stay.host_is_superhost ? __jsx("p", {
@@ -31871,14 +30321,14 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     className: "pl-1 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 203
     },
     __self: this
   }, "Superhost") : null, __jsx("span", {
     className: "text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 210
     },
     __self: this
   }, "\xA0\xB7\xA0"), __jsx("a", {
@@ -31889,34 +30339,34 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 211
     },
     __self: this
   }, data.stay.street)), __jsx("div", {
     className: "hidden lg:inline-block flex items-start justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 220
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-center pr-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 221
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-center justify-start pl-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 222
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 223
     },
     __self: this
   }, __jsx("svg", {
@@ -31928,21 +30378,21 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 224
     },
     __self: this
   }, __jsx("path", {
     d: "m507.523438 148.890625-138.667969-144c-4.523438-4.691406-11.457031-6.164063-17.492188-3.734375-6.058593 2.453125-10.027343 8.320312-10.027343 14.847656v69.335938h-5.332032c-114.6875 0-208 93.3125-208 208v32c0 7.421875 5.226563 13.609375 12.457032 15.296875 1.175781.296875 2.347656.425781 3.519531.425781 6.039062 0 11.820312-3.542969 14.613281-9.109375 29.996094-60.011719 90.304688-97.28125 157.398438-97.28125h25.34375v69.332031c0 6.53125 3.96875 12.398438 10.027343 14.828125 5.996094 2.453125 12.96875.960938 17.492188-3.734375l138.667969-144c5.972656-6.207031 5.972656-15.976562 0-22.207031zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 229
     },
     __self: this
   }), __jsx("path", {
     d: "m448.003906 512.003906h-384c-35.285156 0-63.99999975-28.710937-63.99999975-64v-298.664062c0-35.285156 28.71484375-64 63.99999975-64h64c11.796875 0 21.332032 9.535156 21.332032 21.332031s-9.535157 21.332031-21.332032 21.332031h-64c-11.777344 0-21.335937 9.558594-21.335937 21.335938v298.664062c0 11.777344 9.558593 21.335938 21.335937 21.335938h384c11.773438 0 21.332032-9.558594 21.332032-21.335938v-170.664062c0-11.796875 9.535156-21.335938 21.332031-21.335938 11.800781 0 21.335937 9.539063 21.335937 21.335938v170.664062c0 35.289063-28.714844 64-64 64zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 230
     },
     __self: this
   }))), __jsx("p", {
@@ -31952,20 +30402,20 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     className: "pl-2 text-sm text-gray-850 underline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 233
     },
     __self: this
   }, "Share")), __jsx("div", {
     className: "flex items-center justify-start pl-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 239
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 240
     },
     __self: this
   }, __jsx("svg", {
@@ -31978,14 +30428,14 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 241
     },
     __self: this
   }, __jsx("path", {
     d: "m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 246
     },
     __self: this
   }))), __jsx("p", {
@@ -31995,73 +30445,73 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     className: "pl-2 text-sm text-gray-850 underline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 249
     },
     __self: this
   }, "Save")))))), __jsx("div", {
     className: "w-full px-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 259
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "w-full lg:w-1/2 h-12 lg:h-57v relative rounded border-r-4 border-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 261
     },
     __self: this
   }, __jsx(SSkeletonPulse1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 262
     },
     __self: this
-  })) : __jsx(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_11__["ImagePanel"], {
+  })) : data && __jsx(_components_presentational_ImagePanel__WEBPACK_IMPORTED_MODULE_10__["ImagePanel"], {
     img1: data.stay.picture_url,
-    img2: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_28___default.a,
-    img3: _public_img_high_staydetail3_jpg__WEBPACK_IMPORTED_MODULE_29___default.a,
-    img4: _public_img_high_staydetail4_jpg__WEBPACK_IMPORTED_MODULE_30___default.a,
-    img5: _public_img_high_staydetail5_jpg__WEBPACK_IMPORTED_MODULE_31___default.a,
+    img2: detail2,
+    img3: detail3,
+    img4: detail4,
+    img5: detail5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 266
     },
     __self: this
   }))), __jsx("div", {
     className: "w-full lg:w-7/12 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 278
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-center justify-between border-b border-gray-200 mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 279
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-start w-9/12 py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239
+      lineNumber: 280
     },
     __self: this
   }, __jsx("div", {
     className: "mt-4 flex items-start justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 281
     },
     __self: this
   }, __jsx("div", {
     className: "flex flex-col ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 282
     },
     __self: this
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -32069,17 +30519,17 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     width: 100,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 284
     },
     __self: this
-  }) : __jsx("h3", {
+  }) : data && __jsx("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-md lg:text-2xl text-gray-850 leading-none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245
+      lineNumber: 287
     },
     __self: this
   }, data.stay.size, " hosted by ", data.stay.host_name), loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -32087,76 +30537,76 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     width: 200,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252
+      lineNumber: 295
     },
     __self: this
-  }) : __jsx("div", {
+  }) : data && __jsx("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 298
     },
     __self: this
   }, __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
+      lineNumber: 301
     },
     __self: this
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
+      lineNumber: 302
     },
     __self: this
   }, data.stay.accommodates, ' ', data.stay.accommodates > 1 ? 'guests' : 'guest')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263
+      lineNumber: 307
     },
     __self: this
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 308
     },
     __self: this
   }, data.stay.bedrooms, ' ', data.stay.bedrooms > 1 ? 'bedrooms' : 'bedroom')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 313
     },
     __self: this
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270
+      lineNumber: 314
     },
     __self: this
-  }, data.stay.beds, " ", data.stay.beds > 1 ? 'beds' : 'bed')), __jsx("div", {
+  }, data.stay.beds, ' ', data.stay.beds > 1 ? 'beds' : 'bed')), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274
+      lineNumber: 319
     },
     __self: this
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 320
     },
     __self: this
   }, data.stay.bathrooms, ' ', data.stay.bathrooms > 1 ? 'baths' : 'bath')))))), __jsx("div", {
     className: "flex justify-end items-start w-3/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286
+      lineNumber: 332
     },
     __self: this
   }, loading ? __jsx(react_loading_skeleton__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -32165,116 +30615,105 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     width: 60,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
+      lineNumber: 334
     },
     __self: this
-  }) : __jsx(react_lazy_progressive_image__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }) : data && __jsx("img", {
+    className: "h-16 w-16 rounded-full",
     src: data.stay.host_picture_url,
-    placeholder: data.stay.host_thumbnail_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 337
     },
     __self: this
-  }, function (src, loading, isVisible) {
-    return __jsx("img", {
-      className: "h-16 w-16 rounded-full",
-      src: src,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 294
-      },
-      __self: this
-    });
   }))), __jsx("div", {
     className: "my-6 border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300
+      lineNumber: 345
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 347
     },
     __self: this
   }, __jsx(SSkeletonPulse1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 348
     },
     __self: this
-  })) : __jsx(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_18__["Characteristics"], {
+  })) : data && __jsx(_components_containers_Characteristics__WEBPACK_IMPORTED_MODULE_16__["Characteristics"], {
     host_is_superhost: data.stay.host_is_superhost,
     host_name: data.stay.host_name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 352
     },
     __self: this
   })), loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 360
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_7___default.a, {
     size: 10,
     color: '#008489',
-    count: 10,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 361
     },
     __self: this
-  })) : __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx("div", {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, __jsx("div", {
     className: "border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 318
+      lineNumber: 366
     },
     __self: this
   }, __jsx("div", {
     className: "my-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 367
     },
     __self: this
-  }, __jsx(_components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_21__["StayDescription"], {
+  }, __jsx(_components_presentational_StayDescription__WEBPACK_IMPORTED_MODULE_18__["StayDescription"], {
     description: data.stay.description,
     space: data.stay.space,
     access: data.stay.access,
-    note: data.stay.note,
+    note: data.stay.notes,
     changeLength: function changeLength() {
       return setLength(!length);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 368
     },
     __self: this
   }), __jsx("div", {
     className: "my-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 327
+      lineNumber: 375
     },
     __self: this
   }, __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 376
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 377
     },
     __self: this
   }, __jsx("p", {
@@ -32284,14 +30723,14 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 330
+      lineNumber: 378
     },
     __self: this
   }, "Any questions for the host?")))), __jsx("div", {
     className: "mt-10 mb-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 336
+      lineNumber: 386
     },
     __self: this
   }, __jsx("a", {
@@ -32302,73 +30741,73 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 337
+      lineNumber: 387
     },
     __self: this
-  }, "Contact host")))), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["DetailSectionOverflow"], {
+  }, "Contact host")))), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_21__["DetailSectionOverflow"], {
     title: "Sleeping arrangements",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346
+      lineNumber: 396
     },
     __self: this
-  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_23__["SleepingArrangements"], {
+  }, __jsx(_components_containers_SleepingArrangements__WEBPACK_IMPORTED_MODULE_20__["SleepingArrangements"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347
+      lineNumber: 397
     },
     __self: this
-  })), __jsx(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_25__["DetailSection"], {
+  })), __jsx(_components_wrapper_DetailSection__WEBPACK_IMPORTED_MODULE_22__["DetailSection"], {
     title: "Amenities",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349
+      lineNumber: 399
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350
+      lineNumber: 400
     },
     __self: this
-  }, __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }, __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_19__["AmenityCard"], {
     type: "wifi",
     title: "Wifi",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 351
+      lineNumber: 401
     },
     __self: this
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_19__["AmenityCard"], {
     type: "laptop",
     title: "Laptop-friendly workspace",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 352
+      lineNumber: 402
     },
     __self: this
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_19__["AmenityCard"], {
     type: "kitchen",
     title: "Kitchen",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356
+      lineNumber: 406
     },
     __self: this
-  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_22__["AmenityCard"], {
+  }), __jsx(_components_presentational_AmenityCard__WEBPACK_IMPORTED_MODULE_19__["AmenityCard"], {
     type: "iron",
     title: "Iron",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 357
+      lineNumber: 407
     },
     __self: this
   })), __jsx("div", {
     className: "mt-10 mb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 409
     },
     __self: this
   }, __jsx("a", {
@@ -32378,46 +30817,61 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     className: "py-3 px-6 rounded-xl border border-black ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360
+      lineNumber: 410
     },
     __self: this
   }, "Show all 32 amenities"))))), length ? __jsx("div", {
     className: "lg:w-5/12 lg:h-100r",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 371
+      lineNumber: 422
     },
     __self: this
-  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__["CheckInCard"], {
+  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_17__["CheckInCard"], {
     loading: loading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 372
+      lineNumber: 423
     },
     __self: this
   })) : __jsx("div", {
     className: "lg:w-5/12 lg:h-80v",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 375
+      lineNumber: 426
     },
     __self: this
-  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_20__["CheckInCard"], {
+  }, __jsx(_components_presentational_CheckInCard__WEBPACK_IMPORTED_MODULE_17__["CheckInCard"], {
     loading: loading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 376
+      lineNumber: 427
     },
     __self: this
-  })), loading ? null : __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__["Reviews"], {
+  })), loading ? __jsx("div", {
+    className: "flex justify-center items-center w-full py-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 432
+    },
+    __self: this
+  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    size: 10,
+    color: '#008489',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 433
+    },
+    __self: this
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, __jsx(_components_containers_Reviews__WEBPACK_IMPORTED_MODULE_11__["Reviews"], {
     reviews_per_month: data.stay.reviews_per_month,
     number_of_reviews: data.stay.number_of_reviews,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 382
+      lineNumber: 438
     },
     __self: this
-  }), __jsx(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_14__["HostedBy"], {
+  }), __jsx(_components_containers_HostedBy__WEBPACK_IMPORTED_MODULE_13__["HostedBy"], {
     host_name: data.stay.host_name,
     hostDescription: data.stay.hostDescription,
     host_since: data.stay.host_since,
@@ -32430,75 +30884,77 @@ var GET_STAY = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_9__["gql"])(_templat
     host_response_time: data.stay.host_response_time,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 386
+      lineNumber: 442
     },
     __self: this
-  }), __jsx(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_16__["KeepInMind"], {
+  }), __jsx(_components_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_14__["KeepInMind"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 398
+      lineNumber: 454
     },
     __self: this
-  }), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["DetailSectionOverflow"], {
+  }), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_21__["DetailSectionOverflow"], {
     title: "More places to stay",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 399
+      lineNumber: 455
     },
     __self: this
-  }, __jsx(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_17__["MoreHomes"], {
+  }, __jsx(_components_containers_MoreHomes__WEBPACK_IMPORTED_MODULE_15__["MoreHomes"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400
+      lineNumber: 456
     },
     __self: this
-  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["DetailSectionOverflow"], {
+  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_21__["DetailSectionOverflow"], {
     title: "Things to do nearby",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 402
+      lineNumber: 458
     },
     __self: this
-  }, __jsx(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_26__["ToDoNear"], {
+  }, __jsx(_components_containers_ToDoNear__WEBPACK_IMPORTED_MODULE_23__["ToDoNear"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 403
+      lineNumber: 459
     },
     __self: this
-  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_24__["DetailSectionOverflow"], {
+  })), __jsx(_components_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_21__["DetailSectionOverflow"], {
     title: "Explore other options in and around Penafiel",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405
+      lineNumber: 461
     },
     __self: this
-  }, __jsx(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_27__["MoreLocations"], {
+  }, __jsx(_components_containers_MoreLocations__WEBPACK_IMPORTED_MODULE_24__["MoreLocations"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 406
+      lineNumber: 462
     },
     __self: this
-  })))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__["Footer"], {
+  })))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 411
+      lineNumber: 468
     },
     __self: this
   }));
-});
+};
+
 var SSkeletonPulse = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject2());
 var SSkeletonPulse1 = Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])(SSkeletonPulse)(_templateObject3());
+/* harmony default export */ __webpack_exports__["default"] = (id);
 
 /***/ }),
 
-/***/ 3:
-/*!******************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.js ***!
-  \******************************************************************************************************************************************************************/
+/***/ 6:
+/*!*******************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.tsx ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstays%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstays%2F%5Bid%5D.tsx!./");
 
 
 /***/ }),
@@ -32514,5 +30970,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[6,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map

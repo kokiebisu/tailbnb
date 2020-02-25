@@ -15,7 +15,10 @@ import { Popular } from '../components/containers/Popular';
 import { Featured } from '../components/containers/Featured';
 import { Footer } from '../components/layout/Footer';
 
-export default () => {
+// Next
+import { NextPage } from 'next';
+
+const Home: NextPage<{}> = () => {
   return (
     <>
       <Header />
@@ -53,3 +56,5 @@ export default () => {
     </>
   );
 };
+
+export default Home;

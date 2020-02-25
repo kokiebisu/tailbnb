@@ -4,11 +4,14 @@ import React from 'react';
 import { CharacteristicCard } from '../presentational/CharacteristicCard';
 
 interface Prop {
-  hostType: string;
-  hostName: string;
+  host_is_superhost: string;
+  host_name: string;
 }
 
-export const Characteristics: React.FC<Prop> = ({ hostType, hostName }) => {
+export const Characteristics: React.FC<Prop> = ({
+  host_is_superhost,
+  host_name
+}) => {
   return (
     <>
       <CharacteristicCard
@@ -22,10 +25,10 @@ export const Characteristics: React.FC<Prop> = ({ hostType, hostName }) => {
         guestnumber={13}
         description='recent guests said this place was sparkling clean.'
       />
-      {hostType == 'superhost' ? (
+      {host_is_superhost === 't' ? (
         <CharacteristicCard
           type='superhost'
-          hostName={hostName}
+          hostName={host_name}
           title='is a Superhost'
           description='Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.'
         />

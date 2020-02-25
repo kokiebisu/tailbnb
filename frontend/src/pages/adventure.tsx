@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-export const Adventures: React.FC<{}> = () => {
+// Next
+import { NextPage } from 'next';
+
+const Adventure: NextPage<{}> = () => {
   return (
     <header className='h-screen'>
       <div className='m-6'>
@@ -22,3 +25,5 @@ export const Adventures: React.FC<{}> = () => {
     </header>
   );
 };
+
+export default Adventure;
