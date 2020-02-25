@@ -16,7 +16,7 @@ import LazyImage from 'react-lazy-progressive-image';
 import { gql } from 'apollo-boost';
 
 // Components
-import ExploreHeader from '../../components/layout/ExploreHeader';
+import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { ImagePanel } from '../../components/presentational/ImagePanel';
 import HeaderCard from '../../components/presentational/HeaderCard';
 
