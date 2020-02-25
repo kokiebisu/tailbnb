@@ -20,7 +20,7 @@ import ExploreHeader from '../../components/layout/ExploreHeader';
 import { ImagePanel } from '../../components/presentational/ImagePanel';
 import HeaderCard from '../../components/presentational/HeaderCard';
 
-import Reviews from '../../components/containers/Reviews';
+import { Reviews } from '../../components/containers/Reviews';
 import Footer from '../../components/layout/Footer';
 import { HostedBy } from '../../components/containers/HostedBy';
 import Neighborhood from '../../components/containers/Neighborhood';
