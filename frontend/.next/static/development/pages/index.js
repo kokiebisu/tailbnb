@@ -25761,17 +25761,6 @@ module.exports = "/_next/static/images/plus-1-1cd90d428ed098d36d4099a3514aa633.j
 
 /***/ }),
 
-/***/ "./public/img/low/plus-1-low.jpg":
-/*!***************************************!*\
-  !*** ./public/img/low/plus-1-low.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/plus-1-low-a499e2d28f52b0dde07a4665e69e3865.jpg";
-
-/***/ }),
-
 /***/ "./src/components/ShowAll.tsx":
 /*!************************************!*\
   !*** ./src/components/ShowAll.tsx ***!
@@ -26248,55 +26237,51 @@ var Featured = function Featured() {
 
 /***/ }),
 
-/***/ "./src/components/containers/Plus.js":
-/*!*******************************************!*\
-  !*** ./src/components/containers/Plus.js ***!
-  \*******************************************/
-/*! exports provided: default */
+/***/ "./src/components/containers/Plus.tsx":
+/*!********************************************!*\
+  !*** ./src/components/containers/Plus.tsx ***!
+  \********************************************/
+/*! exports provided: Plus */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Plus", function() { return Plus; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _presentational_PlusCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../presentational/PlusCard */ "./src/components/presentational/PlusCard.tsx");
-/* harmony import */ var _public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/img/high/plus-1.jpg */ "./public/img/high/plus-1.jpg");
-/* harmony import */ var _public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../public/img/low/plus-1-low.jpg */ "./public/img/low/plus-1-low.jpg");
-/* harmony import */ var _public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Plus.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Plus.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Components
 
  // Images
 // High Resolution
 
- // Low Resolution
+var img1 = __webpack_require__(/*! ../../../public/img/high/plus-1.jpg */ "./public/img/high/plus-1.jpg");
 
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_presentational_PlusCard__WEBPACK_IMPORTED_MODULE_1__["PlusCard"], {
-    img: _public_img_high_plus_1_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
-    imglow: _public_img_low_plus_1_low_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+var Plus = function Plus() {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_presentational_PlusCard__WEBPACK_IMPORTED_MODULE_1__["PlusCard"], {
+    img: img1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 13
     },
     __self: this
   }));
-});
+};
 
 /***/ }),
 
-/***/ "./src/components/containers/Popular.js":
-/*!**********************************************!*\
-  !*** ./src/components/containers/Popular.js ***!
-  \**********************************************/
-/*! exports provided: default */
+/***/ "./src/components/containers/Popular.tsx":
+/*!***********************************************!*\
+  !*** ./src/components/containers/Popular.tsx ***!
+  \***********************************************/
+/*! exports provided: Popular */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Popular", function() { return Popular; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
@@ -26308,13 +26293,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presentational_Location__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/Location */ "./src/components/presentational/Location.tsx");
 
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2__["createElement"];
+
 
  // Components
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var Popular = function Popular() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
       loading = _useState[0],
       setLoading = _useState[1];
@@ -26345,52 +26331,42 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
   };
 
   var locations = [{
-    id: 1,
     location: 'San Francisco',
     price: 216
   }, {
-    id: 2,
     location: 'Los Angeles',
     price: 213
   }, {
-    id: 3,
     location: 'New York',
     price: 159
   }, {
-    id: 4,
     location: 'Seattle',
     price: 134
   }, {
-    id: 5,
     location: 'Denver',
     price: 128
   }, {
-    id: 6,
     location: 'Washington DC',
     price: 166
   }, {
-    id: 7,
     location: 'Phoenix',
     price: 232
   }, {
-    id: 8,
     location: 'Austin',
     price: 242
   }, {
-    id: 9,
     location: 'Houston',
     price: 351
   }, {
-    id: 10,
     location: 'New Orleans',
     price: 210
   }];
   setSleep(5000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, loading ? __jsx("div", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -26398,39 +26374,38 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
   })) : __jsx("div", {
     className: "flex flex-wrap items-center justify-start w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: this
-  }, locations.map(function (_ref) {
-    var id = _ref.id,
-        location = _ref.location,
+  }, locations.map(function (_ref, index) {
+    var location = _ref.location,
         price = _ref.price;
     return __jsx("div", {
       className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 74
       },
       __self: this
     }, __jsx(_presentational_Location__WEBPACK_IMPORTED_MODULE_4__["Location"], {
-      key: id,
+      key: index,
       location: location,
       price: price,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 75
       },
       __self: this
     }));
   })));
-});
+};
 
 /***/ }),
 
@@ -29904,11 +29879,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.js");
 /* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.js");
 /* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
-/* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.js");
+/* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
 /* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.js");
 /* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.js");
 /* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.js");
-/* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.js");
+/* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
 /* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
 /* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.js");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.js";
@@ -29956,7 +29931,7 @@ var Home = function Home() {
       lineNumber: 25
     },
     __self: this
-  }, __jsx(_components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx(_components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__["Plus"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -30010,7 +29985,7 @@ var Home = function Home() {
       lineNumber: 44
     },
     __self: this
-  }, __jsx(_components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, __jsx(_components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__["Popular"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
@@ -30043,7 +30018,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -30066,5 +30041,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
