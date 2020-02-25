@@ -26409,10 +26409,10 @@ var Popular = function Popular() {
 
 /***/ }),
 
-/***/ "./src/components/containers/Stay.js":
-/*!*******************************************!*\
-  !*** ./src/components/containers/Stay.js ***!
-  \*******************************************/
+/***/ "./src/components/containers/Stay.tsx":
+/*!********************************************!*\
+  !*** ./src/components/containers/Stay.tsx ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -26428,8 +26428,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    stays {\n      id\n      host_is_superhost\n      country\n      name\n      price\n      reviews_per_month\n      picture_url\n    }\n  }\n"]);
@@ -26455,34 +26455,23 @@ var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templa
       error = _useQuery.error,
       data = _useQuery.data;
 
-  if (loading) {
-    return __jsx("div", {
-      className: "flex justify-center items-center w-full py-20",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
-      size: 10,
-      color: '#008489',
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
-      },
-      __self: this
-    }));
-  }
-
   if (error) return "Error! ".concat(error.message);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, data ? __jsx("div", {
-    className: "flex flex-wrap items-start justify-start w-full",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, loading ? __jsx("div", {
+    className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 45
     },
     __self: this
-  }, data.stays.map(function (_ref) {
+  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    size: 10,
+    color: '#008489',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  })) : data && data.stays.map(function (_ref, index) {
     var id = _ref.id,
         host_is_superhost = _ref.host_is_superhost,
         country = _ref.country,
@@ -26494,11 +26483,11 @@ var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templa
       className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 64
       },
       __self: this
     }, __jsx(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__["StayCard"], {
-      key: id,
+      key: index,
       id: id,
       host_is_superhost: host_is_superhost,
       country: country,
@@ -26506,18 +26495,17 @@ var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templa
       price: price,
       reviews_per_month: reviews_per_month,
       picture_url: picture_url,
-      picture_url_low: picture_url,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 65
       },
       __self: this
     }));
-  })) : null, __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 81
     },
     __self: this
   }));
@@ -29881,7 +29869,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
 /* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
 /* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.js");
-/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.js");
+/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.tsx");
 /* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.js");
 /* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
 /* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
@@ -30018,7 +30006,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************/
@@ -30041,5 +30029,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -31,6 +31,7 @@ import { Cancellations } from '../../components/presentational/Cancellations';
 import { CheckInCard } from '../../components/presentational/CheckInCard';
 import { StayDescription } from '../../components/presentational/StayDescription';
 import { AmenityCard } from '../../components/presentational/AmenityCard';
+import { SleepingArrangements } from '../../components/containers/SleepingArrangements';
 
 // Wrapper
 import DetailSectionOverflow from '../../components/wrapper/DetailSectionOverflow';
@@ -46,8 +47,6 @@ import detail2 from '../../../public/img/high/staydetail2.jpg';
 import detail3 from '../../../public/img/high/staydetail3.jpg';
 import detail4 from '../../../public/img/high/staydetail4.jpg';
 import detail5 from '../../../public/img/high/staydetail5.jpg';
-
-import { SleepingArrangements } from '../../components/containers/SleepingArrangements';
 
 const GET_STAY = gql`
   query Stay($id: ID!) {
