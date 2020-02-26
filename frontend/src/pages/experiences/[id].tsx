@@ -4,7 +4,10 @@ import { useQuery } from '@apollo/react-hooks';
 import Head from 'next/head';
 import Unsplash, { toJson } from 'unsplash-js';
 
-export default () => {
+// Next
+import { NextPage } from 'next';
+
+const id: NextPage = () => {
   const router = useRouter();
 
   return (
@@ -22,3 +25,5 @@ export default () => {
     </>
   );
 };
+
+export default id;
