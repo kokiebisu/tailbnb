@@ -1,28 +1,28 @@
 type Stay {
   id: ID! @id
   name: String @unique
-  price: Int!
-  host_is_superhost: String!
-  country: String!
-  street: String!
+  price: Int
+  host_is_superhost: String
+  country: String
+  street: String
   number_of_reviews: Float @default(value: 0.0)
   reviews_per_month: Float @default(value: 0)
-  picture_url: String!
-  imglow: String!
-  host_thumbnail_url: String!
-  host_picture_url: String!
-  size: String!
-  description: String!
+  picture_url: String
+  imglow: String
+  host_thumbnail_url: String
+  host_picture_url: String
+  size: String
+  description: String
   space: String
   access: String
   notes: String
-  host_name: String!
-  host_since: String!
-  hostDescription: String!
+  host_name: String
+  host_since: String
+  hostDescription: String
   duringStay: String
-  host_response_time: String!
-  host_response_rate: String!
-  accommodates: Int!
+  host_response_time: String
+  host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -31,21 +31,19 @@ type Stay {
 type Adventure {
   id: ID! @id
   title: String @unique
-  period: Int!
-  cost: Int!
-  country: String!
-  img: String!
-  imglow: String!
+  period: Int
+  cost: Int
+  country: String
+  img: String
 }
 
 type Experience {
   id: ID! @id
   title: String @unique
-  cost: Int!
+  cost: Int
   ratings: Float @default(value: 0.0)
   reviews: Int @default(value: 0)
-  country: String!
-  img: String!
-  imglow: String!
-  location: String!
+  country: String
+  img: String
+  location: String
 }

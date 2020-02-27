@@ -6,11 +6,10 @@ module.exports = {
 /* GraphQL */ `type Adventure {
   id: ID!
   title: String
-  period: Int!
-  cost: Int!
-  country: String!
-  img: String!
-  imglow: String!
+  period: Int
+  cost: Int
+  country: String
+  img: String
 }
 
 type AdventureConnection {
@@ -22,11 +21,10 @@ type AdventureConnection {
 input AdventureCreateInput {
   id: ID
   title: String
-  period: Int!
-  cost: Int!
-  country: String!
-  img: String!
-  imglow: String!
+  period: Int
+  cost: Int
+  country: String
+  img: String
 }
 
 type AdventureEdge {
@@ -47,18 +45,15 @@ enum AdventureOrderByInput {
   country_DESC
   img_ASC
   img_DESC
-  imglow_ASC
-  imglow_DESC
 }
 
 type AdventurePreviousValues {
   id: ID!
   title: String
-  period: Int!
-  cost: Int!
-  country: String!
-  img: String!
-  imglow: String!
+  period: Int
+  cost: Int
+  country: String
+  img: String
 }
 
 type AdventureSubscriptionPayload {
@@ -85,7 +80,6 @@ input AdventureUpdateInput {
   cost: Int
   country: String
   img: String
-  imglow: String
 }
 
 input AdventureUpdateManyMutationInput {
@@ -94,7 +88,6 @@ input AdventureUpdateManyMutationInput {
   cost: Int
   country: String
   img: String
-  imglow: String
 }
 
 input AdventureWhereInput {
@@ -170,20 +163,6 @@ input AdventureWhereInput {
   img_not_starts_with: String
   img_ends_with: String
   img_not_ends_with: String
-  imglow: String
-  imglow_not: String
-  imglow_in: [String!]
-  imglow_not_in: [String!]
-  imglow_lt: String
-  imglow_lte: String
-  imglow_gt: String
-  imglow_gte: String
-  imglow_contains: String
-  imglow_not_contains: String
-  imglow_starts_with: String
-  imglow_not_starts_with: String
-  imglow_ends_with: String
-  imglow_not_ends_with: String
   AND: [AdventureWhereInput!]
   OR: [AdventureWhereInput!]
   NOT: [AdventureWhereInput!]
@@ -213,13 +192,12 @@ type BatchPayload {
 type Experience {
   id: ID!
   title: String
-  cost: Int!
+  cost: Int
   ratings: Float
   reviews: Int
-  country: String!
-  img: String!
-  imglow: String!
-  location: String!
+  country: String
+  img: String
+  location: String
 }
 
 type ExperienceConnection {
@@ -231,13 +209,12 @@ type ExperienceConnection {
 input ExperienceCreateInput {
   id: ID
   title: String
-  cost: Int!
+  cost: Int
   ratings: Float
   reviews: Int
-  country: String!
-  img: String!
-  imglow: String!
-  location: String!
+  country: String
+  img: String
+  location: String
 }
 
 type ExperienceEdge {
@@ -260,8 +237,6 @@ enum ExperienceOrderByInput {
   country_DESC
   img_ASC
   img_DESC
-  imglow_ASC
-  imglow_DESC
   location_ASC
   location_DESC
 }
@@ -269,13 +244,12 @@ enum ExperienceOrderByInput {
 type ExperiencePreviousValues {
   id: ID!
   title: String
-  cost: Int!
+  cost: Int
   ratings: Float
   reviews: Int
-  country: String!
-  img: String!
-  imglow: String!
-  location: String!
+  country: String
+  img: String
+  location: String
 }
 
 type ExperienceSubscriptionPayload {
@@ -303,7 +277,6 @@ input ExperienceUpdateInput {
   reviews: Int
   country: String
   img: String
-  imglow: String
   location: String
 }
 
@@ -314,7 +287,6 @@ input ExperienceUpdateManyMutationInput {
   reviews: Int
   country: String
   img: String
-  imglow: String
   location: String
 }
 
@@ -399,20 +371,6 @@ input ExperienceWhereInput {
   img_not_starts_with: String
   img_ends_with: String
   img_not_ends_with: String
-  imglow: String
-  imglow_not: String
-  imglow_in: [String!]
-  imglow_not_in: [String!]
-  imglow_lt: String
-  imglow_lte: String
-  imglow_gt: String
-  imglow_gte: String
-  imglow_contains: String
-  imglow_not_contains: String
-  imglow_starts_with: String
-  imglow_not_starts_with: String
-  imglow_ends_with: String
-  imglow_not_ends_with: String
   location: String
   location_not: String
   location_in: [String!]
@@ -493,28 +451,28 @@ type Query {
 type Stay {
   id: ID!
   name: String
-  price: Int!
-  host_is_superhost: String!
-  country: String!
-  street: String!
+  price: Int
+  host_is_superhost: String
+  country: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  picture_url: String!
-  imglow: String!
-  host_thumbnail_url: String!
-  host_picture_url: String!
-  size: String!
-  description: String!
+  picture_url: String
+  imglow: String
+  host_thumbnail_url: String
+  host_picture_url: String
+  size: String
+  description: String
   space: String
   access: String
   notes: String
-  host_name: String!
-  host_since: String!
-  hostDescription: String!
+  host_name: String
+  host_since: String
+  hostDescription: String
   duringStay: String
-  host_response_time: String!
-  host_response_rate: String!
-  accommodates: Int!
+  host_response_time: String
+  host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -529,28 +487,28 @@ type StayConnection {
 input StayCreateInput {
   id: ID
   name: String
-  price: Int!
-  host_is_superhost: String!
-  country: String!
-  street: String!
+  price: Int
+  host_is_superhost: String
+  country: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  picture_url: String!
-  imglow: String!
-  host_thumbnail_url: String!
-  host_picture_url: String!
-  size: String!
-  description: String!
+  picture_url: String
+  imglow: String
+  host_thumbnail_url: String
+  host_picture_url: String
+  size: String
+  description: String
   space: String
   access: String
   notes: String
-  host_name: String!
-  host_since: String!
-  hostDescription: String!
+  host_name: String
+  host_since: String
+  hostDescription: String
   duringStay: String
-  host_response_time: String!
-  host_response_rate: String!
-  accommodates: Int!
+  host_response_time: String
+  host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -621,28 +579,28 @@ enum StayOrderByInput {
 type StayPreviousValues {
   id: ID!
   name: String
-  price: Int!
-  host_is_superhost: String!
-  country: String!
-  street: String!
+  price: Int
+  host_is_superhost: String
+  country: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  picture_url: String!
-  imglow: String!
-  host_thumbnail_url: String!
-  host_picture_url: String!
-  size: String!
-  description: String!
+  picture_url: String
+  imglow: String
+  host_thumbnail_url: String
+  host_picture_url: String
+  size: String
+  description: String
   space: String
   access: String
   notes: String
-  host_name: String!
-  host_since: String!
-  hostDescription: String!
+  host_name: String
+  host_since: String
+  hostDescription: String
   duringStay: String
-  host_response_time: String!
-  host_response_rate: String!
-  accommodates: Int!
+  host_response_time: String
+  host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
