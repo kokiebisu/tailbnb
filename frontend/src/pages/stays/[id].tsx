@@ -1,5 +1,6 @@
-import { useRouter } from 'next/router';
 import * as React from 'react';
+import { useRouter } from 'next/router';
+
 import { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import Head from 'next/head';
@@ -77,7 +78,7 @@ const GET_STAY = gql`
   }
 `;
 
-const id = () => {
+const id: NextPage = () => {
   const router = useRouter();
   const { loading, data } = useQuery(GET_STAY, {
     variables: {
