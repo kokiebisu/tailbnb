@@ -1,5 +1,9 @@
 [
   {
-    "name": "something"
+    "title": "Atlas Mountains Experience",
+    "period": 2,
+    "cost": 128,
+    "country": "Morocco",
+    "img": "https://a0.muscache.com/im/pictures/56ba0225-92af-483f-a5c4-6d449d60f09b.jpg?aki_policy=poster"
   }
 ]

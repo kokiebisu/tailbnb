@@ -31,21 +31,19 @@ type Stay {
 type Adventure {
   id: ID! @id
   title: String @unique
-  period: Int!
-  cost: Int!
-  country: String!
-  img: String!
-  imglow: String!
+  period: Int
+  cost: Int
+  country: String
+  img: String
 }
 
 type Experience {
   id: ID! @id
   title: String @unique
-  cost: Int!
+  cost: Int
   ratings: Float @default(value: 0.0)
   reviews: Int @default(value: 0)
-  country: String!
-  img: String!
-  imglow: String!
-  location: String!
+  country: String
+  img: String
+  location: String
 }
