@@ -24010,7 +24010,7 @@ var Adventures = function Adventures() {
     },
     __self: this
   }, function (matches) {
-    return matches.small ? (setCard(4), renderContent(data, card)) : null;
+    return matches.small ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       large: '(min-width: 641px) and (max-width: 767px)'
@@ -24021,34 +24021,34 @@ var Adventures = function Adventures() {
     },
     __self: this
   }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data, card)) : null;
+    return matches.large && data.adventures ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 768px) and (max-width: 1023px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 92
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(5), renderContent(data, card)) : null;
+    return matches.xl && data.adventures ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       twoxl: '(min-width: 1024px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 102
     },
     __self: this
   }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
+    return matches.twoxl ? (setCard(1), renderContent(data, card)) : null;
   }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 115
     },
     __self: this
   }));
@@ -24634,21 +24634,21 @@ var TopRated = function TopRated() {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 50
         },
         __self: this
       }, __jsx(_presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__["TopRatedCard"], {
-        key: data[i].id,
-        id: data[i].id,
-        img: data[i].img,
-        title: data[i].title,
-        cost: data[i].cost,
-        ratings: data[i].ratings,
-        reviews: data[i].reviews,
-        location: data[i].location,
+        key: i,
+        id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
+        img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
+        title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
+        cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
+        ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
+        reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
+        location: data === null || data === void 0 ? void 0 : data.experiences[i].location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 51
         },
         __self: this
       })));
@@ -24662,14 +24662,14 @@ var TopRated = function TopRated() {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -24677,7 +24677,7 @@ var TopRated = function TopRated() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -24686,60 +24686,60 @@ var TopRated = function TopRated() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 79
     },
     __self: this
   }, function (matches) {
-    return matches.xs ? (setCard(4), renderContent(data.experiences, card)) : null;
+    return matches.xs ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       small: '(min-width: 740px) and (max-width: 987px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 85
     },
     __self: this
   }, function (matches) {
-    return matches.small ? (setCard(3), renderContent(data.experiences, card)) : null;
+    return matches.small ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       large: '(min-width: 988px) and (max-width: 1299px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 93
     },
     __self: this
   }, function (matches) {
-    return matches.large ? (setCard(4), renderContent(data.experiences, card)) : null;
+    return matches.large ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 101
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(5), renderContent(data.experiences, card)) : null;
+    return matches.xl ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 1530px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 109
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(6), renderContent(data.experiences, card)) : null;
+    return matches.xl ? (setCard(1), renderContent(data, card)) : null;
   }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 121
     },
     __self: this
   }));

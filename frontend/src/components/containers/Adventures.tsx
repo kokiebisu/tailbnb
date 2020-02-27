@@ -75,7 +75,7 @@ export const Adventures: any = () => {
               <Media
                 queries={{ small: '(min-width: 0px) and (max-width: 640px)' }}>
                 {(matches) =>
-                  matches.small ? (setCard(4), renderContent(data, card)) : null
+                  matches.small ? (setCard(1), renderContent(data, card)) : null
                 }
               </Media>
 
@@ -84,7 +84,9 @@ export const Adventures: any = () => {
                   large: '(min-width: 641px) and (max-width: 767px)'
                 }}>
                 {(matches) =>
-                  matches.large ? (setCard(3), renderContent(data, card)) : null
+                  matches.large && data.adventures
+                    ? (setCard(1), renderContent(data, card))
+                    : null
                 }
               </Media>
               <Media
@@ -92,7 +94,9 @@ export const Adventures: any = () => {
                   xl: '(min-width: 768px) and (max-width: 1023px)'
                 }}>
                 {(matches) =>
-                  matches.xl ? (setCard(5), renderContent(data, card)) : null
+                  matches.xl && data.adventures
+                    ? (setCard(1), renderContent(data, card))
+                    : null
                 }
               </Media>
               <Media
@@ -100,7 +104,7 @@ export const Adventures: any = () => {
                   twoxl: '(min-width: 1024px)'
                 }}>
                 {(matches) =>
-                  matches.twoxl ? (setCard(6), renderContent(data, card)) : null
+                  matches.twoxl ? (setCard(1), renderContent(data, card)) : null
                 }
               </Media>
             </>
