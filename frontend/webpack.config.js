@@ -6,6 +6,6 @@ module.exports = {
   },
 
   module: {
-    loaders: [{ test: /\.jsx?$/, loader: 'babel' }]
+    loaders: [{ test: /\.[tj]sx$/, loader: 'babel' }]
   }
 };
