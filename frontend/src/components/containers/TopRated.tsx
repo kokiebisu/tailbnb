@@ -19,7 +19,6 @@ const GET_EXPERIENCES = gql`
       reviews
       ratings
       location
-      imglow
       img
     }
   }

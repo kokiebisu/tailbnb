@@ -23918,7 +23918,7 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/container
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    adventures {\n      id\n      title\n      period\n      cost\n      country\n      img\n      imglow\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    adventures {\n      id\n      title\n      period\n      cost\n      country\n      img\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -23959,13 +23959,13 @@ var Adventures = function Adventures() {
         },
         __self: this
       }, __jsx(_presentational_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["AdventureCard"], {
-        key: data[i].id,
-        id: data[i].id,
-        img: data[i].img,
-        country: data[i].country,
-        title: data[i].title,
-        cost: data[i].cost,
-        period: data[i].period,
+        key: i,
+        id: data === null || data === void 0 ? void 0 : data.adventures[i].id,
+        img: data === null || data === void 0 ? void 0 : data.adventures[i].img,
+        country: data === null || data === void 0 ? void 0 : data.adventures[i].country,
+        title: data === null || data === void 0 ? void 0 : data.adventures[i].title,
+        cost: data === null || data === void 0 ? void 0 : data.adventures[i].cost,
+        period: data === null || data === void 0 ? void 0 : data.adventures[i].period,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 48
@@ -24010,45 +24010,45 @@ var Adventures = function Adventures() {
     },
     __self: this
   }, function (matches) {
-    return matches.small ? (setCard(4), renderContent(data.adventures, card)) : null;
+    return matches.small ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       large: '(min-width: 641px) and (max-width: 767px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 82
     },
     __self: this
   }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data.adventures, card)) : null;
+    return matches.large ? (setCard(3), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 768px) and (max-width: 1023px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 90
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(5), renderContent(data.adventures, card)) : null;
+    return matches.xl ? (setCard(5), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       twoxl: '(min-width: 1024px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 98
     },
     __self: this
   }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data.adventures, card)) : null;
+    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
   }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 111
     },
     __self: this
   }));
@@ -24597,7 +24597,7 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/container
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    experiences {\n      id\n      title\n      cost\n      ratings\n      reviews\n      ratings\n      location\n      imglow\n      img\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    experiences {\n      id\n      title\n      cost\n      ratings\n      reviews\n      ratings\n      location\n      img\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -24634,7 +24634,7 @@ var TopRated = function TopRated() {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 49
         },
         __self: this
       }, __jsx(_presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__["TopRatedCard"], {
@@ -24648,7 +24648,7 @@ var TopRated = function TopRated() {
         location: data[i].location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: this
       })));
@@ -24662,14 +24662,14 @@ var TopRated = function TopRated() {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 70
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -24677,7 +24677,7 @@ var TopRated = function TopRated() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: this
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -24686,7 +24686,7 @@ var TopRated = function TopRated() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 78
     },
     __self: this
   }, function (matches) {
@@ -24697,7 +24697,7 @@ var TopRated = function TopRated() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 86
     },
     __self: this
   }, function (matches) {
@@ -24708,7 +24708,7 @@ var TopRated = function TopRated() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 96
     },
     __self: this
   }, function (matches) {
@@ -24719,7 +24719,7 @@ var TopRated = function TopRated() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 106
     },
     __self: this
   }, function (matches) {
@@ -24730,7 +24730,7 @@ var TopRated = function TopRated() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 116
     },
     __self: this
   }, function (matches) {
@@ -24739,7 +24739,7 @@ var TopRated = function TopRated() {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 130
     },
     __self: this
   }));
@@ -28055,7 +28055,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************/
@@ -28078,5 +28078,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
