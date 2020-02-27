@@ -1,8 +1,11 @@
+import * as React from 'react';
 import { useRouter } from 'next/router';
-import React from 'react';
 import Head from 'next/head';
 
-const id = () => {
+// Next
+import { NextPage } from 'next';
+
+const id: NextPage = () => {
   const router = useRouter();
 
   return (
