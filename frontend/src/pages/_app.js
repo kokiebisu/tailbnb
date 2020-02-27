@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps, apollo }) => {
 
 export default withApollo(({ initialState }) => {
   return new ApolloClient({
-    uri: 'https://us1.prisma.sh/kokoaj-0cd9e2/backend/dev',
+    uri: 'https://localhost:4466',
     cache: new InMemoryCache().restore(initialState || {})
   });
 })(MyApp);
