@@ -3,7 +3,7 @@ const { GraphQLServer } = require('graphql-yoga');
 const resolvers = require('./resolvers');
 
 const server = new GraphQLServer({
-  typeDefs: './schema.graphql',
+  typeDefs: './prisma/schema.graphql',
   resolvers,
   context: {
     prisma

@@ -493,28 +493,28 @@ type Query {
 type Stay {
   id: ID!
   name: String
-  price: Int!
-  host_is_superhost: String!
-  country: String!
-  street: String!
+  price: Int
+  host_is_superhost: String
+  country: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  picture_url: String!
-  imglow: String!
-  host_thumbnail_url: String!
-  host_picture_url: String!
-  size: String!
-  description: String!
+  picture_url: String
+  imglow: String
+  host_thumbnail_url: String
+  host_picture_url: String
+  size: String
+  description: String
   space: String
   access: String
   notes: String
-  host_name: String!
-  host_since: String!
-  hostDescription: String!
+  host_name: String
+  host_since: String
+  hostDescription: String
   duringStay: String
-  host_response_time: String!
-  host_response_rate: String!
-  accommodates: Int!
+  host_response_time: String
+  host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -529,28 +529,28 @@ type StayConnection {
 input StayCreateInput {
   id: ID
   name: String
-  price: Int!
-  host_is_superhost: String!
-  country: String!
-  street: String!
+  price: Int
+  host_is_superhost: String
+  country: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  picture_url: String!
-  imglow: String!
-  host_thumbnail_url: String!
-  host_picture_url: String!
-  size: String!
-  description: String!
+  picture_url: String
+  imglow: String
+  host_thumbnail_url: String
+  host_picture_url: String
+  size: String
+  description: String
   space: String
   access: String
   notes: String
-  host_name: String!
-  host_since: String!
-  hostDescription: String!
+  host_name: String
+  host_since: String
+  hostDescription: String
   duringStay: String
-  host_response_time: String!
-  host_response_rate: String!
-  accommodates: Int!
+  host_response_time: String
+  host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float
@@ -621,28 +621,28 @@ enum StayOrderByInput {
 type StayPreviousValues {
   id: ID!
   name: String
-  price: Int!
-  host_is_superhost: String!
-  country: String!
-  street: String!
+  price: Int
+  host_is_superhost: String
+  country: String
+  street: String
   number_of_reviews: Float
   reviews_per_month: Float
-  picture_url: String!
-  imglow: String!
-  host_thumbnail_url: String!
-  host_picture_url: String!
-  size: String!
-  description: String!
+  picture_url: String
+  imglow: String
+  host_thumbnail_url: String
+  host_picture_url: String
+  size: String
+  description: String
   space: String
   access: String
   notes: String
-  host_name: String!
-  host_since: String!
-  hostDescription: String!
+  host_name: String
+  host_since: String
+  hostDescription: String
   duringStay: String
-  host_response_time: String!
-  host_response_rate: String!
-  accommodates: Int!
+  host_response_time: String
+  host_response_rate: String
+  accommodates: Int
   beds: Int
   bedrooms: Int
   bathrooms: Float

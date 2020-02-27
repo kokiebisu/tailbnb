@@ -33,12 +33,10 @@ interface ExperienceData {
 }
 
 export const Hosts: any = () => {
-  const { loading, error, data } = useQuery<ExperienceData>(experiencedata, {
-    pollInterval: 9000
-  });
+  const { loading, error, data } = useQuery<ExperienceData>(experiencedata);
 
-  if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
+
   return (
     <>
       {loading ? (
