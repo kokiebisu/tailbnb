@@ -1,15 +1,16 @@
+import * as React from 'react';
 import { useRouter } from 'next/router';
-import React from 'react';
-import Head from 'next/head';
 
-const id = () => {
+import Head from 'next/head';
+import { NextPage } from 'next';
+
+const id: NextPage = () => {
   const router = useRouter();
 
   return (
     <>
       <Head>
         <title>Vacation Rentals, Homes, Experiences & Places</title>
-
         <meta
           name='viewport'
           content='initial-scale=1.0, width=device-width '
