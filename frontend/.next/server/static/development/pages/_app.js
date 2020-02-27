@@ -212,7 +212,7 @@ const MyApp = ({
   initialState
 }) => {
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_6___default.a({
-    uri: 'https://us1.prisma.sh/kokoaj-0cd9e2/backend/dev',
+    uri: 'http://localhost:4466',
     cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]().restore(initialState || {})
   });
 })(MyApp));

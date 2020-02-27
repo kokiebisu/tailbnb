@@ -18,7 +18,6 @@ const GET_ADVENTURES = gql`
       cost
       country
       img
-      imglow
     }
   }
 `;
