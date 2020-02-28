@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import Plus from '../../src/components/containers/Plus';
+import { Plus } from '../../src/components/containers/Plus';
 
 describe('Plus', () => {
   it('should render correctly in "debug" mode', () => {
