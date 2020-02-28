@@ -1,10 +1,10 @@
 module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js'],
   transform: {
-    '^.+\\.jsx?$': 'babel-jest'
+    '^.+\\.tsx?$': 'babel-jest'
   },
   testMatch: ['**/*.(test|spec).(js|ts|tsx)'],
-  coveragePathIgnorePatterns: ['/node_modules/', 'enzyme.js'],
+  coveragePathIgnorePatterns: ['/node_modules/', 'enzyme.ts'],
   setupFilesAfterEnv: ['<rootDir>/enzyme.ts'],
   coverageReporters: ['json', 'lcov', 'text', 'text-summary'],
   moduleNameMapper: {
