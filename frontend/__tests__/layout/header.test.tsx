@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import Header from '../../src/components/layout/Header';
+import { Header } from '../../src/components/layout/Header';
 
 describe('Header', () => {
   it('should render correctly in "debug" mode', () => {
