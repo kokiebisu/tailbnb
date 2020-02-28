@@ -17,7 +17,6 @@ const GET_EXPERIENCES = gql`
       cost
       ratings
       reviews
-      ratings
       location
       img
     }
