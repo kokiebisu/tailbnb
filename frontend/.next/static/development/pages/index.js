@@ -23952,7 +23952,7 @@ var Adventures = function Adventures() {
 
     for (var i = 0; i < number; i++) {
       content.push(__jsx("div", {
-        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5",
+        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 pb-5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
@@ -24021,7 +24021,7 @@ var Adventures = function Adventures() {
     },
     __self: this
   }, function (matches) {
-    return matches.large && data.adventures ? (setCard(1), renderContent(data, card)) : null;
+    return matches.large && data.adventures ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 768px) and (max-width: 1023px)'
@@ -24032,7 +24032,7 @@ var Adventures = function Adventures() {
     },
     __self: this
   }, function (matches) {
-    return matches.xl && data.adventures ? (setCard(1), renderContent(data, card)) : null;
+    return matches.xl && data.adventures ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       twoxl: '(min-width: 1024px)'
@@ -24043,7 +24043,7 @@ var Adventures = function Adventures() {
     },
     __self: this
   }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
+    return matches.twoxl ? (setCard(4), renderContent(data, card)) : null;
   }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all adventures",
     __source: {
@@ -24607,7 +24607,7 @@ var Stay = function Stay() {
     },
     __self: this
   }, function (matches) {
-    return matches.large ? (setCard(1), renderContent(data, card)) : null;
+    return matches.large ? (setCard(8), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
@@ -24618,10 +24618,10 @@ var Stay = function Stay() {
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(1), renderContent(data, card)) : null;
+    return matches.xl ? (setCard(8), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
-      xl: '(min-width: 1530px)'
+      twoxl: '(min-width: 1530px)'
     },
     __source: {
       fileName: _jsxFileName,
@@ -24629,7 +24629,7 @@ var Stay = function Stay() {
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(8), renderContent(data, card)) : null;
+    return matches.twoxl ? (setCard(8), renderContent(data, card)) : null;
   }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
@@ -24701,7 +24701,7 @@ var TopRated = function TopRated() {
 
     for (var i = 0; i < number; i++) {
       content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
+        className: "w-1/2 md:w-1/3 lg:w-1/4 2xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 49
@@ -24782,7 +24782,7 @@ var TopRated = function TopRated() {
     },
     __self: this
   }, function (matches) {
-    return matches.large ? (setCard(1), renderContent(data, card)) : null;
+    return matches.large ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
@@ -24793,10 +24793,10 @@ var TopRated = function TopRated() {
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(1), renderContent(data, card)) : null;
+    return matches.xl ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
-      xl: '(min-width: 1530px)'
+      twoxl: '(min-width: 1530px)'
     },
     __source: {
       fileName: _jsxFileName,
@@ -24804,7 +24804,7 @@ var TopRated = function TopRated() {
     },
     __self: this
   }, function (matches) {
-    return matches.xl ? (setCard(6), renderContent(data, card)) : null;
+    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
   }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
@@ -28125,7 +28125,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************/
@@ -28148,5 +28148,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

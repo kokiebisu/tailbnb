@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2206,7 +2206,7 @@ const Adventures = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(__jsx("div", {
-        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5",
+        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 pb-5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
@@ -2272,7 +2272,7 @@ const Adventures = () => {
       lineNumber: 82
     },
     __self: undefined
-  }, matches => matches.large && data.adventures ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.large && data.adventures ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       xl: '(min-width: 768px) and (max-width: 1023px)'
     },
@@ -2281,7 +2281,7 @@ const Adventures = () => {
       lineNumber: 92
     },
     __self: undefined
-  }, matches => matches.xl && data.adventures ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.xl && data.adventures ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       twoxl: '(min-width: 1024px)'
     },
@@ -2290,7 +2290,7 @@ const Adventures = () => {
       lineNumber: 102
     },
     __self: undefined
-  }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, matches => matches.twoxl ? (setCard(4), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
@@ -2812,7 +2812,7 @@ const Stay = () => {
       lineNumber: 92
     },
     __self: undefined
-  }, matches => matches.large ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.large ? (setCard(8), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
     },
@@ -2821,16 +2821,16 @@ const Stay = () => {
       lineNumber: 100
     },
     __self: undefined
-  }, matches => matches.xl ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.xl ? (setCard(8), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
-      xl: '(min-width: 1530px)'
+      twoxl: '(min-width: 1530px)'
     },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 108
     },
     __self: undefined
-  }, matches => matches.xl ? (setCard(8), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, matches => matches.twoxl ? (setCard(8), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
@@ -2904,7 +2904,7 @@ const TopRated = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
+        className: "w-1/2 md:w-1/3 lg:w-1/4 2xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 49
@@ -2980,7 +2980,7 @@ const TopRated = () => {
       lineNumber: 92
     },
     __self: undefined
-  }, matches => matches.large ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.large ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
     },
@@ -2989,16 +2989,16 @@ const TopRated = () => {
       lineNumber: 100
     },
     __self: undefined
-  }, matches => matches.xl ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.xl ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
-      xl: '(min-width: 1530px)'
+      twoxl: '(min-width: 1530px)'
     },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 108
     },
     __self: undefined
-  }, matches => matches.xl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
@@ -6323,7 +6323,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/

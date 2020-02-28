@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps, apollo }) => {
 
 export default withApollo(({ initialState }) => {
   return new ApolloClient({
-    uri: 'http://localhost:4466',
+    uri: 'http://159.65.69.114:4466',
     cache: new InMemoryCache().restore(initialState || {})
   });
 })(MyApp);

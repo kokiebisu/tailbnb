@@ -44,7 +44,7 @@ export const Adventures: any = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(
-        <div className='w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 pb-5'>
+        <div className='w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 pb-5'>
           <AdventureCard
             key={i}
             id={data?.adventures[i].id}
@@ -85,7 +85,7 @@ export const Adventures: any = () => {
                 }}>
                 {(matches) =>
                   matches.large && data.adventures
-                    ? (setCard(1), renderContent(data, card))
+                    ? (setCard(4), renderContent(data, card))
                     : null
                 }
               </Media>
@@ -95,7 +95,7 @@ export const Adventures: any = () => {
                 }}>
                 {(matches) =>
                   matches.xl && data.adventures
-                    ? (setCard(1), renderContent(data, card))
+                    ? (setCard(4), renderContent(data, card))
                     : null
                 }
               </Media>
@@ -104,7 +104,7 @@ export const Adventures: any = () => {
                   twoxl: '(min-width: 1024px)'
                 }}>
                 {(matches) =>
-                  matches.twoxl ? (setCard(6), renderContent(data, card)) : null
+                  matches.twoxl ? (setCard(4), renderContent(data, card)) : null
                 }
               </Media>
             </>

@@ -29070,7 +29070,7 @@ var MyApp = function MyApp(_ref) {
 /* harmony default export */ __webpack_exports__["default"] = (next_with_apollo__WEBPACK_IMPORTED_MODULE_5___default()(function (_ref2) {
   var initialState = _ref2.initialState;
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_6__["default"]({
-    uri: 'http://localhost:4466',
+    uri: 'http://159.65.69.114:4466',
     cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]().restore(initialState || {})
   });
 })(MyApp));

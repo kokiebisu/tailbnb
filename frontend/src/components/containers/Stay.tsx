@@ -94,7 +94,7 @@ export const Stay: any = () => {
                   large: '(min-width: 988px) and (max-width: 1299px)'
                 }}>
                 {(matches) =>
-                  matches.large ? (setCard(1), renderContent(data, card)) : null
+                  matches.large ? (setCard(8), renderContent(data, card)) : null
                 }
               </Media>
               <Media
@@ -102,15 +102,15 @@ export const Stay: any = () => {
                   xl: '(min-width: 1300px) and (max-width: 1529px)'
                 }}>
                 {(matches) =>
-                  matches.xl ? (setCard(1), renderContent(data, card)) : null
+                  matches.xl ? (setCard(8), renderContent(data, card)) : null
                 }
               </Media>
               <Media
                 queries={{
-                  xl: '(min-width: 1530px)'
+                  twoxl: '(min-width: 1530px)'
                 }}>
                 {(matches) =>
-                  matches.xl ? (setCard(8), renderContent(data, card)) : null
+                  matches.twoxl ? (setCard(8), renderContent(data, card)) : null
                 }
               </Media>
             </>

@@ -212,7 +212,7 @@ const MyApp = ({
   initialState
 }) => {
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_6___default.a({
-    uri: 'http://localhost:4466',
+    uri: 'http://159.65.69.114:4466',
     cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]().restore(initialState || {})
   });
 })(MyApp));
