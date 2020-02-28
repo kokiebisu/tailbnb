@@ -6,7 +6,15 @@ import { CharacteristicCard } from '../../src/components/presentational/Characte
 
 describe('Characteristics Card', () => {
   it('should render correctly in "debug" mode', () => {
-    const components = shallow(<CharacteristicCard />);
+    const info = {
+      type: 'testtype',
+      title: 'testtitle',
+      description: 'testdescription',
+      guestnumber: 1,
+      hostName: 'testhost',
+      percentage: 30
+    };
+    const components = shallow(<CharacteristicCard {...info} />);
     expect(components).toMatchSnapshot();
   });
 });
