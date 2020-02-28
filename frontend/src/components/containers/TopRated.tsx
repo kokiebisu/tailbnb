@@ -46,7 +46,7 @@ export const TopRated: any = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(
-        <div className='w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5'>
+        <div className='w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5'>
           <TopRatedCard
             key={i}
             id={data?.experiences[i].id}
@@ -110,7 +110,7 @@ export const TopRated: any = () => {
                   xl: '(min-width: 1530px)'
                 }}>
                 {(matches) =>
-                  matches.xl ? (setCard(1), renderContent(data, card)) : null
+                  matches.xl ? (setCard(6), renderContent(data, card)) : null
                 }
               </Media>
             </>
