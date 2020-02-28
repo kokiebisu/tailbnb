@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2290,7 +2290,7 @@ const Adventures = () => {
       lineNumber: 102
     },
     __self: undefined
-  }, matches => matches.twoxl ? (setCard(1), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
@@ -2692,10 +2692,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-media */ "react-media");
+/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_media__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../presentational/StayCard */ "./src/components/presentational/StayCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+
 
 
 
@@ -2722,12 +2726,55 @@ const Stay = () => {
     error,
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS);
+  const {
+    0: card,
+    1: setCard
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+
+  const renderContent = (data, number) => {
+    var content = [];
+
+    for (let i = 0; i < number; i++) {
+      content.push(__jsx("div", {
+        className: "w-1/2 md:w-1/3 lg:w-1/4 pb-5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: undefined
+      }, __jsx(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_5__["StayCard"], {
+        key: i,
+        id: data === null || data === void 0 ? void 0 : data.stays[i].id,
+        host_is_superhost: data === null || data === void 0 ? void 0 : data.stays[i].host_is_superhost,
+        country: data === null || data === void 0 ? void 0 : data.stays[i].country,
+        name: data === null || data === void 0 ? void 0 : data.stays[i].name,
+        price: data === null || data === void 0 ? void 0 : data.stays[i].price,
+        reviews_per_month: data === null || data === void 0 ? void 0 : data.stays[i].reviews_per_month,
+        picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: undefined
+      })));
+    }
+
+    return content;
+  };
+
   if (error) return `Error! ${error.message}`;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, loading ? __jsx("div", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    className: "flex items-start justify-start flex-wrap w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: undefined
+  }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 72
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2735,45 +2782,59 @@ const Stay = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 73
     },
     __self: undefined
-  })) : data && data.stays.map(({
-    id,
-    host_is_superhost,
-    country,
-    name,
-    price,
-    reviews_per_month,
-    picture_url
-  }, index) => {
-    return __jsx("div", {
-      className: "w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: undefined
-    }, __jsx(_presentational_StayCard__WEBPACK_IMPORTED_MODULE_4__["StayCard"], {
-      key: index,
-      id: id,
-      host_is_superhost: host_is_superhost,
-      country: country,
-      name: name,
-      price: price,
-      reviews_per_month: reviews_per_month,
-      picture_url: picture_url,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 65
-      },
-      __self: undefined
-    }));
-  }), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_5__["ShowAll"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    queries: {
+      xs: '(min-width: 0px) and (max-width: 739px)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: undefined
+  }, matches => matches.xs ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    queries: {
+      small: '(min-width: 740px) and (max-width: 987px)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: undefined
+  }, matches => matches.small ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    queries: {
+      large: '(min-width: 988px) and (max-width: 1299px)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: undefined
+  }, matches => matches.large ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    queries: {
+      xl: '(min-width: 1300px) and (max-width: 1529px)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: undefined
+  }, matches => matches.xl ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    queries: {
+      xl: '(min-width: 1530px)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: undefined
+  }, matches => matches.xl ? (setCard(8), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 120
     },
     __self: undefined
   }));
@@ -2822,7 +2883,6 @@ const GET_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       cost
       ratings
       reviews
-      ratings
       location
       img
     }
@@ -2844,10 +2904,10 @@ const TopRated = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 49
         },
         __self: undefined
       }, __jsx(_presentational_TopRatedCard__WEBPACK_IMPORTED_MODULE_5__["TopRatedCard"], {
@@ -2861,7 +2921,7 @@ const TopRated = () => {
         location: data === null || data === void 0 ? void 0 : data.experiences[i].location,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: undefined
       })));
@@ -2875,14 +2935,14 @@ const TopRated = () => {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 70
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2890,7 +2950,7 @@ const TopRated = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2899,7 +2959,7 @@ const TopRated = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 78
     },
     __self: undefined
   }, matches => matches.xs ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2908,7 +2968,7 @@ const TopRated = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 84
     },
     __self: undefined
   }, matches => matches.small ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2917,7 +2977,7 @@ const TopRated = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 92
     },
     __self: undefined
   }, matches => matches.large ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2926,7 +2986,7 @@ const TopRated = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: undefined
   }, matches => matches.xl ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2935,14 +2995,14 @@ const TopRated = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 108
     },
     __self: undefined
-  }, matches => matches.xl ? (setCard(1), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, matches => matches.xl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 120
     },
     __self: undefined
   }));
@@ -6263,7 +6323,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/

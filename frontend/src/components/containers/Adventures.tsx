@@ -104,7 +104,7 @@ export const Adventures: any = () => {
                   twoxl: '(min-width: 1024px)'
                 }}>
                 {(matches) =>
-                  matches.twoxl ? (setCard(1), renderContent(data, card)) : null
+                  matches.twoxl ? (setCard(6), renderContent(data, card)) : null
                 }
               </Media>
             </>
