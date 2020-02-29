@@ -14,6 +14,7 @@ import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import Banner from './functions/Banner';
 import WhatYouDo from './section/WhatYouDo';
 import Adventures from './section/Adventures';
+import Included from './section/Included';
 
 import { Footer } from '../../components/layout/Footer';
 
@@ -62,6 +63,8 @@ const id = () => {
       <Banner />
       <WhatYouDo />
       <Adventures />
+      <Included />
+
       <Footer />
     </>
   );
