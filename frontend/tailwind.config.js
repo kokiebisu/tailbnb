@@ -21,6 +21,9 @@ module.exports = {
           '850': '#008489'
         }
       },
+      fontSize: {
+        '2xs': '.625rem'
+      },
       backgroundColor: {
         background: '#fffcfc',
         'gray-650': '#767676',
@@ -110,7 +113,8 @@ module.exports = {
       colors: {
         'gray-650': '#767676',
         'gray-750': '#484848',
-        'gray-850': '#222222'
+        'gray-850': '#222222',
+        'gray-950': '#262626'
       },
       zIndex: {
         '100': '100'
