@@ -64,6 +64,38 @@ const id = () => {
       <WhatYouDo />
       <Adventures />
       <Included />
+      <div className='w-full flex justify-center'>
+        <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16'>
+          <div
+            style={{ fontFamily: 'airbnb-bold' }}
+            className='w-full md:w-4/12 h-full text-3xl text-gray-750'>
+            Your itinerary
+          </div>
+          <div
+            style={{ fontFamily: 'airbnb-book' }}
+            className='bg-red-500 w-full md:w-8/12 px-4 text-gray-750 text-lg border-l border-gray-800'>
+            <p>Day 1</p>
+            <div className='w-full flex justify-start items-start'>
+              <div className='w-1/2'>
+                <img className='h-full w-full' src={detail2} alt='' />
+              </div>
+
+              <div className='w-1/2'>
+                <p>Marrakech-Oughla - Tinzerte</p>
+                <p>
+                  Marrakech to imi oughlad small village situated 1,450m at the
+                  base of Toubkal. Here we begin the gentle accent.
+                </p>
+                <button
+                  style={{ fontFamily: 'airbnb-medium' }}
+                  className='text-green-850 text-sm'>
+                  Show more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </>
