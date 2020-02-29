@@ -1556,7 +1556,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
 /* harmony import */ var _functions_Banner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./functions/Banner */ "./src/pages/adventures/functions/Banner.js");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
+/* harmony import */ var _section_WhatYouDo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./section/WhatYouDo */ "./src/pages/adventures/section/WhatYouDo.js");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -1567,6 +1568,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // GraphQL
 
  // Components
+
 
 
 
@@ -1606,19 +1608,19 @@ const id = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: undefined
   }, "Vacation Rentals, Homes, Experiences & Places") : data && __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: undefined
   }, data.adventure.name), __jsx("meta", {
@@ -1626,7 +1628,7 @@ const id = () => {
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: undefined
   }), __jsx("link", {
@@ -1635,7 +1637,7 @@ const id = () => {
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: undefined
   })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_6__["ExploreHeader"], {
@@ -1643,74 +1645,25 @@ const id = () => {
     mode: "dark",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: undefined
   }), __jsx(_functions_Banner__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: undefined
-  }), __jsx("div", {
-    className: "w-full flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 61
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+  }), __jsx(_section_WhatYouDo__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: undefined
-  }, __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+  }), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_9__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
-  }, "What you'll do"), __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: undefined
-  }, __jsx("p", {
-    className: "mb-7",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: undefined
-  }, "Leave early from Marrakech and head to the Tinzert & Ouirgane for a 2 days Trek the village is Tucked in the mystical and peaceful foothills of the High Atlas Mountains, in the heart of the majestic Toubkal National Park lays the picturesque village of Ouirgane."), __jsx("p", {
-    className: "mb-7",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: undefined
-  }, "Spectacular views of the Toubkal mountain range await all trekkers who take the time to discover this magical land. Be welcomed by the Berber locals and discover true Moroccan hospitality as you step into a world not your own. Perfect for individuals and families alike this trek will be sure to delight the senses and cultivate unforgettable moments and memories."), __jsx("p", {
-    className: "mb-7",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: undefined
-  }, "During the two days trek you will get the chance to learn howto cook certain dishes in addition to tea making ceremony")))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_8__["Footer"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 64
     },
     __self: undefined
   }));
@@ -2273,6 +2226,81 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: undefined
   }, "2 days")))))))));
+});
+
+/***/ }),
+
+/***/ "./src/pages/adventures/section/WhatYouDo.js":
+/*!***************************************************!*\
+  !*** ./src/pages/adventures/section/WhatYouDo.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/section/WhatYouDo.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return __jsx("div", {
+    className: "w-full flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, "What you'll do"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "mb-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, "Leave early from Marrakech and head to the Tinzert & Ouirgane for a 2 days Trek the village is Tucked in the mystical and peaceful foothills of the High Atlas Mountains, in the heart of the majestic Toubkal National Park lays the picturesque village of Ouirgane."), __jsx("p", {
+    className: "mb-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, "Spectacular views of the Toubkal mountain range await all trekkers who take the time to discover this magical land. Be welcomed by the Berber locals and discover true Moroccan hospitality as you step into a world not your own. Perfect for individuals and families alike this trek will be sure to delight the senses and cultivate unforgettable moments and memories."), __jsx("p", {
+    className: "mb-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, "During the two days trek you will get the chance to learn howto cook certain dishes in addition to tea making ceremony"))));
 });
 
 /***/ }),

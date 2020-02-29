@@ -111,6 +111,7 @@ module.exports = {
         '6xl': '0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19)'
       },
       colors: {
+        'gray-150': '#F2F2F2',
         'gray-650': '#767676',
         'gray-750': '#484848',
         'gray-850': '#222222',
