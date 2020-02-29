@@ -101,7 +101,7 @@ const id: NextPage = () => {
         />
         <link rel='icon' type='image/x-icon' href='/img/high/favicon.ico' />
       </Head>
-      <ExploreHeader type='stay' />
+      <ExploreHeader type='stay' mode='white' />
 
       <div className='px-5 md:px-10 lg:max-w-6xl xl:px-0 mx-auto py-5 flex items-start justify-start flex-wrap'>
         <div className='w-full flex flex-col-reverse lg:flex-col'>
@@ -235,6 +235,7 @@ const id: NextPage = () => {
                   img3={detail3}
                   img4={detail4}
                   img5={detail5}
+                  type='stay'
                 />
               )
             )}
