@@ -86,7 +86,7 @@ const renderContent = (type: string, mode: string) => {
     );
   } else if (mode === 'dark') {
     return (
-      <div className='bg-black flex items-center justify-between relative border-b border-gray-300'>
+      <div className='bg-black flex items-center justify-between relative'>
         <div className='flex items-center justify-start w-full md:w-1/2'>
           <div className='ml-6 mr-6 md:mr-8 my-5'>
             <a href='/'>
