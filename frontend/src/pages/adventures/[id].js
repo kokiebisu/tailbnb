@@ -13,6 +13,7 @@ import { gql } from 'apollo-boost';
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import Banner from './functions/Banner';
 import WhatYouDo from './section/WhatYouDo';
+import Adventures from './section/Adventures';
 
 import { Footer } from '../../components/layout/Footer';
 
@@ -60,7 +61,7 @@ const id = () => {
       <ExploreHeader type='stay' mode='dark' />
       <Banner />
       <WhatYouDo />
-
+      <Adventures />
       <Footer />
     </>
   );
