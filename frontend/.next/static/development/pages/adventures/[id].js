@@ -22974,7 +22974,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section_Adventures__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./section/Adventures */ "./src/pages/adventures/section/Adventures.js");
 /* harmony import */ var _section_Included__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./section/Included */ "./src/pages/adventures/section/Included.js");
 /* harmony import */ var _section_Itinerary__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./section/Itinerary */ "./src/pages/adventures/section/Itinerary.js");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
+/* harmony import */ var _section_Host__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./section/Host */ "./src/pages/adventures/section/Host.js");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
@@ -23024,6 +23025,7 @@ function _templateObject() {
 
 
 
+
  // Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
 
@@ -23051,19 +23053,19 @@ var id = function id() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, "Vacation Rentals, Homes, Experiences & Places") : data && __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 55
     },
     __self: this
   }, data.adventure.name), __jsx("meta", {
@@ -23071,7 +23073,7 @@ var id = function id() {
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }), __jsx("link", {
@@ -23080,7 +23082,7 @@ var id = function id() {
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: this
   })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_7__["ExploreHeader"], {
@@ -23088,119 +23090,320 @@ var id = function id() {
     mode: "dark",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }), __jsx(_functions_Banner__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   }), __jsx(_section_WhatYouDo__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: this
   }), __jsx(_section_Adventures__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }), __jsx(_section_Included__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
   }), __jsx(_section_Itinerary__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
+    },
+    __self: this
+  }), __jsx(_section_Host__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
     },
     __self: this
   }), __jsx("div", {
     className: "w-full flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: this
   }, __jsx("div", {
     className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: this
   }, __jsx("div", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    className: "w-full text-3xl text-gray-750 mb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 73
     },
     __self: this
-  }, "Your host"), __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
+  }, "Availability"), __jsx("div", {
+    className: "w-full flex justify-start items-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 78
     },
     __self: this
   }, __jsx("div", {
-    className: "h-32 w-32 mb-12",
+    className: "w-23p bg-white shadow-md rounded-xl mr-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 79
     },
     __self: this
-  }, __jsx("img", {
-    className: "w-full h-full rounded-full",
-    src: detail2,
+  }, __jsx("div", {
+    className: "m-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 80
     },
     __self: this
-  })), __jsx("h3", {
+  }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "mb-3 text-2xl",
+    className: "text-gray-750 text-2xl py-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 81
     },
     __self: this
-  }, "Mohamed"), __jsx("p", {
-    className: "mb-7 leading-relaxed",
+  }, "Mar 03"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 86
     },
     __self: this
-  }, "Im an official Mountain guide born and raised in the atlas mountains i worked as a guide and trek planner for more tgan 17 Years i like meeting new people and make new friends in adfition to sharing my culture"), __jsx("button", {
+  }, "Tuesday"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, "From $130/person"), __jsx("button", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "border-2 border-green-850 rounded text-green-850 text-base py-2 px-4 ",
+    className: "text-green-850 mt-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 96
     },
     __self: this
-  }, "Contact host")))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_13__["Footer"], {
+  }, "Book"))), __jsx("div", {
+    className: "w-23p bg-white shadow-md rounded-xl mr-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 103
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "m-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-2xl py-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: this
+  }, "Mar 03"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110
+    },
+    __self: this
+  }, "Tuesday"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
+    },
+    __self: this
+  }, "From $130/person"), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850 mt-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120
+    },
+    __self: this
+  }, "Book"))), __jsx("div", {
+    className: "w-23p bg-white shadow-md rounded-xl mr-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "m-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-2xl py-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: this
+  }, "Mar 03"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134
+    },
+    __self: this
+  }, "Tuesday"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 139
+    },
+    __self: this
+  }, "From $130/person"), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850 mt-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 144
+    },
+    __self: this
+  }, "Book"))), __jsx("div", {
+    className: "w-23p bg-white shadow-md rounded-xl mr-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "m-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 152
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-2xl py-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 153
+    },
+    __self: this
+  }, "Mar 03"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158
+    },
+    __self: this
+  }, "Tuesday"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 163
+    },
+    __self: this
+  }, "From $130/person"), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850 mt-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168
+    },
+    __self: this
+  }, "Book"))), __jsx("button", {
+    className: "border-2 border-green-850 rounded mt-24",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "py-2 px-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177
+    },
+    __self: this
+  }, "Show more availability")))))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_14__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 187
     },
     __self: this
   }));
@@ -23990,6 +24193,106 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, "Every adventure is fully planned, from activities to accommodations.")))));
+});
+
+/***/ }),
+
+/***/ "./src/pages/adventures/section/Host.js":
+/*!**********************************************!*\
+  !*** ./src/pages/adventures/section/Host.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
+/* harmony import */ var _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/section/Host.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // Images
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return __jsx("div", {
+    className: "w-full flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Your host"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-32 w-32 mb-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "w-full h-full rounded-full",
+    src: _public_img_high_staydetail2_jpg__WEBPACK_IMPORTED_MODULE_1___default.a,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  })), __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "mb-3 text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, "Mohamed"), __jsx("p", {
+    className: "mb-7 leading-relaxed",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Im an official Mountain guide born and raised in the atlas mountains i worked as a guide and trek planner for more tgan 17 Years i like meeting new people and make new friends in adfition to sharing my culture"), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "border-2 border-green-850 rounded text-green-850 text-base py-2 px-4 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, "Contact host"))));
 });
 
 /***/ }),
