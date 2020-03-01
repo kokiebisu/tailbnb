@@ -23113,10 +23113,271 @@ var id = function id() {
       lineNumber: 66
     },
     __self: this
-  }), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["Footer"], {
+  }), __jsx("div", {
+    className: "w-full flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 68
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, "Your itinerary"), __jsx("div", {
+    className: "w-full md:w-8/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "px-5 text-gray-750 border-l border-gray-800 relative ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      height: 7,
+      width: 7,
+      top: -7,
+      left: -3.6
+    },
+    className: "absolute",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }))))), __jsx("p", {
+    className: "mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }, "Day 1"), __jsx("div", {
+    className: "w-full flex justify-start items-start pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-5/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "h-full w-full",
+    src: detail2,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "w-7/12 pl-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, "Marrakech-Oughla - Tinzerte"), __jsx("p", {
+    className: "text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  }, "Marrakech to imi oughlad small village situated 1,450m at the base of Toubkal. Here we begin the gentle accent."), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-green-850 text-sm mt-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: this
+  }, "Show more"))), __jsx("div", {
+    style: {
+      height: 7,
+      width: 7,
+      bottom: -7,
+      left: -3.6
+    },
+    className: "absolute z-100",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127
+    },
+    __self: this
+  })))))), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "relative px-5 text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 139
+    },
+    __self: this
+  }, "Day 2"), __jsx("div", {
+    className: "w-full flex justify-start items-start pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 140
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-5/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "h-full w-full",
+    src: detail2,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "w-7/12 pl-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  }, "Tizerte - Ouirgane - Marrakech"), __jsx("p", {
+    className: "text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151
+    },
+    __self: this
+  }, "The day's trek will take you through the villages of Imariren Noufla and Anraz. A picnic style lunch will be enjoyed.."), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-green-850 text-sm mt-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156
+    },
+    __self: this
+  }, "Show more"))))))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168
     },
     __self: this
   }));
