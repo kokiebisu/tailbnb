@@ -23138,33 +23138,123 @@ var id = function id() {
     },
     __self: this
   }, "Your itinerary"), __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "bg-red-500 w-full md:w-8/12 px-4 text-gray-750 text-lg border-l border-gray-800",
+    className: "w-full md:w-8/12 relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74
     },
     __self: this
-  }, __jsx("p", {
+  }, __jsx("div", {
+    style: {
+      height: 7,
+      width: 7,
+      top: -7,
+      left: -3.5
+    },
+    className: "absolute",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 75
     },
     __self: this
-  }, "Day 1"), __jsx("div", {
-    className: "w-full flex justify-start items-start",
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
     },
     __self: this
-  }, __jsx("div", {
-    className: "w-1/2",
+  }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 82
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }))))), __jsx("div", {
+    style: {
+      height: 7,
+      width: 7,
+      bottom: -7,
+      left: -3.5
+    },
+    className: "absolute",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }))))), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "px-5 text-gray-750 border-l border-gray-800",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112
+    },
+    __self: this
+  }, "Day 1"), __jsx("div", {
+    className: "w-full flex justify-start items-start pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-5/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 114
     },
     __self: this
   }, __jsx("img", {
@@ -23173,42 +23263,53 @@ var id = function id() {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 115
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2",
+    className: "w-7/12 pl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 118
     },
     __self: this
   }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-base",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 119
     },
     __self: this
   }, "Marrakech-Oughla - Tinzerte"), __jsx("p", {
+    className: "text-base",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 124
     },
     __self: this
   }, "Marrakech to imi oughlad small village situated 1,450m at the base of Toubkal. Here we begin the gentle accent."), __jsx("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-green-850 text-sm",
+    className: "text-green-850 text-sm mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 128
     },
     __self: this
-  }, "Show more")))))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["Footer"], {
+  }, "Show more"))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 135
+    },
+    __self: this
+  }, "Day 2"))))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141
     },
     __self: this
   }));
