@@ -23376,10 +23376,34 @@ var id = function id() {
       lineNumber: 168
     },
     __self: this
-  }, "Book")))))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_14__["Footer"], {
+  }, "Book"))), __jsx("button", {
+    className: "border-2 border-green-850 rounded mt-24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 175
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "py-2 px-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177
+    },
+    __self: this
+  }, "Show more availability")))))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_14__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 187
     },
     __self: this
   }));

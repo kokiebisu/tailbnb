@@ -172,6 +172,15 @@ const id = () => {
                 </button>
               </div>
             </div>
+            <button className='border-2 border-green-850 rounded mt-24'>
+              <div className='py-2 px-4'>
+                <p
+                  style={{ fontFamily: 'airbnb-bold' }}
+                  className='text-green-850'>
+                  Show more availability
+                </p>
+              </div>
+            </button>
           </div>
         </div>
       </div>
