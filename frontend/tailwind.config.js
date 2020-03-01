@@ -26,6 +26,7 @@ module.exports = {
       },
       backgroundColor: {
         background: '#fffcfc',
+        'gray-350': '#F2F2F2',
         'gray-650': '#767676',
         pink: {
           '750': '#E31956',
