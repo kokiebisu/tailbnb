@@ -15,6 +15,7 @@ import Banner from './functions/Banner';
 import WhatYouDo from './section/WhatYouDo';
 import Adventures from './section/Adventures';
 import Included from './section/Included';
+import Itinerary from './section/Itinerary';
 
 import { Footer } from '../../components/layout/Footer';
 
@@ -64,103 +65,37 @@ const id = () => {
       <WhatYouDo />
       <Adventures />
       <Included />
+      <Itinerary />
       <div className='w-full flex justify-center'>
         <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16'>
           <div
             style={{ fontFamily: 'airbnb-bold' }}
             className='w-full md:w-4/12 h-full text-3xl text-gray-750'>
-            Your itinerary
+            Your host
           </div>
-          <div className='w-full md:w-8/12'>
-            <div
-              style={{ fontFamily: 'airbnb-book' }}
-              className='px-5 text-gray-750 border-l border-gray-800 relative '>
-              <div
-                style={{ height: 7, width: 7, top: -7, left: -3.6 }}
-                className='absolute'>
-                <svg
-                  className='h-full w-full'
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 512 512'>
-                  <g>
-                    <g>
-                      <path
-                        d='M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z
-			 M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z'
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <p className='mb-2'>Day 1</p>
-              <div className='w-full flex justify-start items-start pb-8'>
-                <div className='w-5/12'>
-                  <img className='h-full w-full' src={detail2} alt='' />
-                </div>
-
-                <div className='w-7/12 pl-5'>
-                  <p
-                    style={{ fontFamily: 'airbnb-medium' }}
-                    className='text-base'>
-                    Marrakech-Oughla - Tinzerte
-                  </p>
-                  <p className='text-base'>
-                    Marrakech to imi oughlad small village situated 1,450m at
-                    the base of Toubkal. Here we begin the gentle accent.
-                  </p>
-                  <button
-                    style={{ fontFamily: 'airbnb-medium' }}
-                    className='text-green-850 text-sm mt-4'>
-                    Show more
-                  </button>
-                </div>
-              </div>
-              <div
-                style={{ height: 7, width: 7, bottom: -7, left: -3.6 }}
-                className='absolute z-100'>
-                <svg
-                  className='h-full w-full'
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 512 512'>
-                  <g>
-                    <g>
-                      <path
-                        d='M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z
-			 M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z'
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </div>
+          <div
+            style={{ fontFamily: 'airbnb-book' }}
+            className='w-full md:w-8/12 px-4 text-gray-750 text-lg '>
+            <div className='h-32 w-32 mb-12'>
+              <img className='w-full h-full rounded-full' src={detail2} />
             </div>
-            <div
-              style={{ fontFamily: 'airbnb-book' }}
-              className='relative px-5 text-gray-750'>
-              <p className='mb-2'>Day 2</p>
-              <div className='w-full flex justify-start items-start pb-8'>
-                <div className='w-5/12'>
-                  <img className='h-full w-full' src={detail2} alt='' />
-                </div>
+            <h3
+              style={{ fontFamily: 'airbnb-medium' }}
+              className='mb-3 text-2xl'>
+              Mohamed
+            </h3>
+            <p className='mb-7 leading-relaxed'>
+              Im an official Mountain guide born and raised in the atlas
+              mountains i worked as a guide and trek planner for more tgan 17
+              Years i like meeting new people and make new friends in adfition
+              to sharing my culture
+            </p>
 
-                <div className='w-7/12 pl-5'>
-                  <p
-                    style={{ fontFamily: 'airbnb-medium' }}
-                    className='text-base'>
-                    Tizerte - Ouirgane - Marrakech
-                  </p>
-                  <p className='text-base'>
-                    The day's trek will take you through the villages of
-                    Imariren Noufla and Anraz. A picnic style lunch will be
-                    enjoyed..
-                  </p>
-                  <button
-                    style={{ fontFamily: 'airbnb-medium' }}
-                    className='text-green-850 text-sm mt-4'>
-                    Show more
-                  </button>
-                </div>
-              </div>
-            </div>
+            <button
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='border-2 border-green-850 rounded text-green-850 text-base py-2 px-4 '>
+              Contact host
+            </button>
           </div>
         </div>
       </div>
