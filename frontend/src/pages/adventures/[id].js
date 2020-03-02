@@ -20,6 +20,7 @@ import Availability from './section/Availability';
 import Reviews from './section/Reviews';
 import Safety from './section/Safety';
 import KeepInMind from './section/KeepInMind';
+import KeepExploring from './section/KeepExploring';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
@@ -77,31 +78,7 @@ const id = () => {
       <Reviews />
       <Safety />
       <KeepInMind />
-      <div className='w-full flex justify-center'>
-        <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16'>
-          <div
-            style={{ fontFamily: 'airbnb-bold' }}
-            className='w-full text-3xl text-gray-750 mb-8'>
-            Keep exploring in Marrakech
-          </div>
-          <div className='w-full flex justify-start items-start flex-wrap'>
-            <div className='w-23p bg-white shadow-sm rounded mr-4 border border-gray-300'>
-              <div className='px-6 py-5'>
-                <h3
-                  style={{ fontFamily: 'airbnb-bold' }}
-                  className='text-gray-750'>
-                  Nature and outdoors
-                </h3>
-                <p
-                  style={{ fontFamily: 'airbnb-medium' }}
-                  className='text-xs text-gray-650'>
-                  193 experiences
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <KeepExploring />
       <Footer />
     </>
   );
