@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Function
+import BannerCard from '../functions/BannerCard';
+
 export default () => {
   return (
     <div className='w-full bg-black h-80v flex justify-center'>
@@ -56,156 +59,12 @@ export default () => {
               </p>
               <div className='w-full flex justify-start flex-wrap'>
                 <div className='flex w-1/2'>
-                  <div className='w-1/2'>
-                    <div className='h-4 w-4 my-2'>
-                      <svg
-                        className='h-full w-full'
-                        style={{ fill: '#ffffff' }}
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 512 512'>
-                        <g>
-                          <g>
-                            <path
-                              d='M256,0C114.509,0,0,114.497,0,256c0,141.491,114.497,256,256,256c141.49,0,256-114.497,256-256
-			C512,114.51,397.503,0,256,0z M256,477.867c-122.337,0-221.867-99.529-221.867-221.867S133.663,34.133,256,34.133
-			S477.867,133.663,477.867,256S378.337,477.867,256,477.867z'
-                            />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path
-                              d='M308.776,250.888h-55.79v-95.056c0-9.425-7.641-17.067-17.067-17.067s-17.067,7.641-17.067,17.067v112.122
-			c0,9.425,7.641,17.067,17.067,17.067h72.856c9.425,0,17.067-7.641,17.067-17.067S318.201,250.888,308.776,250.888z'
-                            />
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-gray-650'>
-                      Duration
-                    </p>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-white'>
-                      2 days
-                    </p>
-                  </div>
-                  <div className='w-1/2'>
-                    <div className='h-4 w-4 my-2'>
-                      <svg
-                        className='h-full w-full'
-                        style={{ fill: '#ffffff' }}
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 512 512'>
-                        <g>
-                          <g>
-                            <path
-                              d='M256,0C114.509,0,0,114.497,0,256c0,141.491,114.497,256,256,256c141.49,0,256-114.497,256-256
-			C512,114.51,397.503,0,256,0z M256,477.867c-122.337,0-221.867-99.529-221.867-221.867S133.663,34.133,256,34.133
-			S477.867,133.663,477.867,256S378.337,477.867,256,477.867z'
-                            />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path
-                              d='M308.776,250.888h-55.79v-95.056c0-9.425-7.641-17.067-17.067-17.067s-17.067,7.641-17.067,17.067v112.122
-			c0,9.425,7.641,17.067,17.067,17.067h72.856c9.425,0,17.067-7.641,17.067-17.067S318.201,250.888,308.776,250.888z'
-                            />
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-gray-650'>
-                      Duration
-                    </p>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-white'>
-                      2 days
-                    </p>
-                  </div>
+                  <BannerCard type='Duration' value={2} />
+                  <BannerCard type='Group size' value={6} />
                 </div>
                 <div className='flex w-1/2'>
-                  <div className='w-1/2'>
-                    <div className='h-4 w-4 my-2'>
-                      <svg
-                        className='h-full w-full'
-                        style={{ fill: '#ffffff' }}
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 512 512'>
-                        <g>
-                          <g>
-                            <path
-                              d='M256,0C114.509,0,0,114.497,0,256c0,141.491,114.497,256,256,256c141.49,0,256-114.497,256-256
-			C512,114.51,397.503,0,256,0z M256,477.867c-122.337,0-221.867-99.529-221.867-221.867S133.663,34.133,256,34.133
-			S477.867,133.663,477.867,256S378.337,477.867,256,477.867z'
-                            />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path
-                              d='M308.776,250.888h-55.79v-95.056c0-9.425-7.641-17.067-17.067-17.067s-17.067,7.641-17.067,17.067v112.122
-			c0,9.425,7.641,17.067,17.067,17.067h72.856c9.425,0,17.067-7.641,17.067-17.067S318.201,250.888,308.776,250.888z'
-                            />
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-gray-650'>
-                      Duration
-                    </p>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-white'>
-                      2 days
-                    </p>
-                  </div>
-                  <div className='w-1/2'>
-                    <div className='h-4 w-4 my-2'>
-                      <svg
-                        className='h-full w-full'
-                        style={{ fill: '#ffffff' }}
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 512 512'>
-                        <g>
-                          <g>
-                            <path
-                              d='M256,0C114.509,0,0,114.497,0,256c0,141.491,114.497,256,256,256c141.49,0,256-114.497,256-256
-			C512,114.51,397.503,0,256,0z M256,477.867c-122.337,0-221.867-99.529-221.867-221.867S133.663,34.133,256,34.133
-			S477.867,133.663,477.867,256S378.337,477.867,256,477.867z'
-                            />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path
-                              d='M308.776,250.888h-55.79v-95.056c0-9.425-7.641-17.067-17.067-17.067s-17.067,7.641-17.067,17.067v112.122
-			c0,9.425,7.641,17.067,17.067,17.067h72.856c9.425,0,17.067-7.641,17.067-17.067S318.201,250.888,308.776,250.888z'
-                            />
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-gray-650'>
-                      Duration
-                    </p>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-white'>
-                      2 days
-                    </p>
-                  </div>
+                  <BannerCard type='Activity level' value='moderate' />
+                  <BannerCard type='Hosted in' value='English' />
                 </div>
               </div>
             </div>
