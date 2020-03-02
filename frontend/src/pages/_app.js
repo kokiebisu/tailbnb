@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps, apollo }) => {
 
 export default withApollo(({ initialState }) => {
   return new ApolloClient({
-    uri: 'http://159.65.69.114:4466',
+    uri: 'https://nextbnb-server-ccec18c325.herokuapp.com',
     cache: new InMemoryCache().restore(initialState || {})
   });
 })(MyApp);

@@ -15,22 +15,22 @@ import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { Footer } from '../../components/layout/Footer';
 
 // Containers
-import { Reviews } from './containers/Reviews';
-import { ToDoNear } from './containers/ToDoNear';
-import { MoreLocations } from './containers/MoreLocations';
-import Amenities from './containers/Amenities';
-import PlaceInfo from './containers/PlaceInfo';
-import StayInfo from './containers/StayInfo';
-import { MoreHomes } from './containers/MoreHomes';
-import { KeepInMind } from './containers/KeepInMind';
-import { Characteristics } from './containers/Characteristics';
-import { SleepingArrangements } from './containers/SleepingArrangements';
+import { Reviews } from '../../components/stays/containers/Reviews';
+import { ToDoNear } from '../../components/stays/containers/ToDoNear';
+import { MoreLocations } from '../../components/stays/containers/MoreLocations';
+import Amenities from '../../components/stays/containers/Amenities';
+import PlaceInfo from '../../components/stays/containers/PlaceInfo';
+import StayInfo from '../../components/stays/containers/StayInfo';
+import { MoreHomes } from '../../components/stays/containers/MoreHomes';
+import { KeepInMind } from '../../components/stays/containers/KeepInMind';
+import { Characteristics } from '../../components/stays/containers/Characteristics';
+import { SleepingArrangements } from '../../components/stays/containers/SleepingArrangements';
 
 // Functions
-import { ImagePanel } from './functions/ImagePanel';
-import MainInfo from './functions/MainInfo';
-import { CheckInCard } from './functions/CheckInCard';
-import { HostedBy } from './functions/HostedBy';
+import { ImagePanel } from '../../components/stays/functions/ImagePanel';
+import MainInfo from '../../components/stays/functions/MainInfo';
+import { CheckInCard } from '../../components/stays/functions/CheckInCard';
+import { HostedBy } from '../../components/stays/functions/HostedBy';
 
 // Next
 import { NextPage } from 'next';

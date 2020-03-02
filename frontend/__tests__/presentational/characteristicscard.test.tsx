@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 // Components
-import { CharacteristicCard } from '../../src/pages/stays/functions/CharacteristicCard';
+import { CharacteristicCard } from '../../src/components/stays/functions/CharacteristicCard';
 
 describe('Characteristics Card', () => {
   it('should render correctly in "debug" mode', () => {

@@ -10,17 +10,17 @@ import styled from 'styled-components';
 import { gql } from 'apollo-boost';
 
 // Section
-import Banner from './containers/Banner';
-import WhatYouDo from './containers/WhatYouDo';
-import Adventures from './containers/Adventures';
-import Included from './containers/Included';
-import Itinerary from './containers/Itinerary';
-import Host from './containers/Host';
-import Availability from './containers/Availability';
-import Reviews from './containers/Reviews';
-import Safety from './containers/Safety';
-import KeepInMind from './containers/KeepInMind';
-import KeepExploring from './containers/KeepExploring';
+import Banner from '../../components/adventures/containers/Banner';
+import WhatYouDo from '../../components/adventures/containers/WhatYouDo';
+import Adventures from '../../components/adventures/containers/Adventures';
+import Included from '../../components/adventures/containers/Included';
+import Itinerary from '../../components/adventures/containers/Itinerary';
+import Host from '../../components/adventures/containers/Host';
+import Availability from '../../components/adventures/containers/Availability';
+import Reviews from '../../components/adventures/containers/Reviews';
+import Safety from '../../components/adventures/containers/Safety';
+import KeepInMind from '../../components/adventures/containers/KeepInMind';
+import KeepExploring from '../../components/adventures/containers/KeepExploring';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
