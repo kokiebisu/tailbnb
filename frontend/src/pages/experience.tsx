@@ -2,8 +2,6 @@ import * as React from 'react';
 
 // Wrapper
 import { ExploreHeader } from '../components/layout/ExploreHeader';
-import { ExploreSection } from '../components/wrapper/ExploreSection';
-import { ExploreSectionOverflow } from '../components/wrapper/ExploreSectionOverflow';
 import { Experiences } from '../components/containers/Experiences';
 import { Hosts } from '../components/containers/Hosts';
 
@@ -24,12 +22,8 @@ const Experience: NextPage<{}> = () => {
           One-of-a-kind activities hosted by locals
         </h3>
       </div>
-      <ExploreSectionOverflow>
-        <Experiences />
-      </ExploreSectionOverflow>
-      <ExploreSection title='Meet hosts around the world'>
-        <Hosts />
-      </ExploreSection>
+      <Experiences />
+      <Hosts />
     </>
   );
 };
