@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 // Components
-import { FeaturedCard } from '../presentational/FeaturedCard';
+import { FeaturedCard } from '../functions/FeaturedCard';
+
+// Wrapper
+import { SectionOverflow } from '../wrapper/SectionOverflow';
 
 // Images
 // High Resolution
@@ -53,32 +56,36 @@ export const Featured: React.FC<{}> = () => {
 
   return (
     <>
-      {loading ? (
-        <div className='flex justify-center items-center w-full py-20'>
-          <PulseLoader size={10} color={'#008489'} />
-        </div>
-      ) : (
-        <div className='overflow-y-hidden'>
-          <div className='w-full h-full overflow-y-hidden'>
-            <div className='h-full scroller'>
-              <div className='scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full'>
-                {featureds.map(({ img, verified, description }, index) => {
-                  return (
-                    <div className='w-80 lg:w-1/3 pb-5 mr-2'>
-                      <FeaturedCard
-                        key={index}
-                        img={img}
-                        verified={verified}
-                        description={description}
-                      />
-                    </div>
-                  );
-                })}
+      <SectionOverflow
+        title='Featured Airbnb Plus destinations'
+        phrase='Browse beautiful places to stay with all the comforts of home, plus more'>
+        {loading ? (
+          <div className='flex justify-center items-center w-full py-20'>
+            <PulseLoader size={10} color={'#008489'} />
+          </div>
+        ) : (
+          <div className='overflow-y-hidden'>
+            <div className='w-full h-full overflow-y-hidden'>
+              <div className='h-full scroller'>
+                <div className='scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full'>
+                  {featureds.map(({ img, verified, description }, index) => {
+                    return (
+                      <div className='w-80 lg:w-1/3 pb-5 mr-2'>
+                        <FeaturedCard
+                          key={index}
+                          img={img}
+                          verified={verified}
+                          description={description}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </SectionOverflow>
     </>
   );
 };

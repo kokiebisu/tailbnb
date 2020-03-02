@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Components
-import { HeartExperienceCard } from '../../../components/presentational/HeartExperienceCard';
+import { HeartExperienceCard } from '../../../components/functions/HeartExperienceCard';
 
 // Wrapper
 import { DetailSectionOverflow } from '../../../components/wrapper/DetailSectionOverflow';

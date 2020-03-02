@@ -3,7 +3,10 @@ import { useState } from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 // Components
-import { Location } from '../presentational/Location';
+import { Location } from '../functions/Location';
+
+// Wrapper
+import { Section } from '../wrapper/Section';
 
 interface Location {
   location: string;
@@ -63,21 +66,23 @@ export const Popular: React.FC<{}> = () => {
 
   return (
     <>
-      {loading ? (
-        <div className='flex justify-center items-center w-full py-20'>
-          <PulseLoader size={10} color={'#008489'} />
-        </div>
-      ) : (
-        <div className='flex flex-wrap items-center justify-start w-full'>
-          {locations.map(({ location, price }, index) => {
-            return (
-              <div className='text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5'>
-                <Location key={index} location={location} price={price} />
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <Section title='Popular destinations in the United States'>
+        {loading ? (
+          <div className='flex justify-center items-center w-full py-20'>
+            <PulseLoader size={10} color={'#008489'} />
+          </div>
+        ) : (
+          <div className='flex flex-wrap items-center justify-start w-full'>
+            {locations.map(({ location, price }, index) => {
+              return (
+                <div className='text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5'>
+                  <Location key={index} location={location} price={price} />
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </Section>
     </>
   );
 };

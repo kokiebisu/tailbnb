@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Component
-import { HomeCard } from '../../../components/presentational/HomeCard';
+import { HomeCard } from '../../../components/functions/HomeCard';
 
 // Wrapper
 import { DetailSectionOverflow } from '../../../components/wrapper/DetailSectionOverflow';

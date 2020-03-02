@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import { ExploreCard } from '../../src/components/presentational/ExploreCard';
+import { ExploreCard } from '../../src/components/functions/ExploreCard';
 
 describe('ExploreCard', () => {
   it('should render correctly in "debug" mode', () => {

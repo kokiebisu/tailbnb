@@ -2,8 +2,8 @@ import * as React from 'react';
 import { useState } from 'react';
 
 // Components
-import { HelpCard } from '../presentational/HelpCard';
-import { HelpAdditional } from '../presentational/HelpAdditional';
+import { HelpCard } from '../functions/HelpCard';
+import { HelpAdditional } from '../functions/HelpAdditional';
 
 interface Prop {
   setHelpModal: (value: boolean | ((prevVar: boolean) => boolean)) => void;

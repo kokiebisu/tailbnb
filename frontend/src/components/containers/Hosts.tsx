@@ -4,7 +4,7 @@ import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 // Components
-import { HostCard } from '../presentational/HostCard';
+import { HostCard } from '../functions/HostCard';
 
 const experiencedata = gql`
   query {
