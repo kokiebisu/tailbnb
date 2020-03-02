@@ -2408,130 +2408,6 @@ const TopRated = () => {
 
 /***/ }),
 
-/***/ "./src/components/containers/Travel.tsx":
-/*!**********************************************!*\
-  !*** ./src/components/containers/Travel.tsx ***!
-  \**********************************************/
-/*! exports provided: Travel */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Travel", function() { return Travel; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_TravelCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/TravelCard */ "./src/components/functions/TravelCard.tsx");
-/* harmony import */ var _wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../wrapper/ExploreSectionOverflow */ "./src/components/wrapper/ExploreSectionOverflow.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Travel.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
- // Wrapper
-
- // Image
-// High Resolution
-
-const explore1 = __webpack_require__(/*! ../../../public/img/high/explore1.jpg */ "./public/img/high/explore1.jpg");
-
-const explore2 = __webpack_require__(/*! ../../../public/img/high/explore2.jpg */ "./public/img/high/explore2.jpg");
-
-const explore3 = __webpack_require__(/*! ../../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg"); // Low Resolution
-
-
-const explore1low = __webpack_require__(/*! ../../../public/img/low/explore1-low.jpg */ "./public/img/low/explore1-low.jpg");
-
-const explore2low = __webpack_require__(/*! ../../../public/img/low/explore2-low.jpg */ "./public/img/low/explore2-low.jpg");
-
-const explore3low = __webpack_require__(/*! ../../../public/img/low/explore3-low.jpg */ "./public/img/low/explore3-low.jpg");
-
-const Travel = () => {
-  const countries = [{
-    img: explore1,
-    imglow: explore1low,
-    location: 'Sydney'
-  }, {
-    img: explore2,
-    imglow: explore2low,
-    location: 'Cape Town'
-  }, {
-    img: explore3,
-    imglow: explore3low,
-    location: 'Buenos Aires'
-  }, {
-    img: explore1,
-    imglow: explore1low,
-    location: 'Seoul'
-  }, {
-    img: explore2,
-    imglow: explore2low,
-    location: 'Barcelona'
-  }, {
-    img: explore3,
-    imglow: explore3low,
-    location: 'Los Angeles'
-  }];
-  return __jsx(_wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__["ExploreSectionOverflow"], {
-    title: "Travel the world with Airbnb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-full h-full overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "h-full scroller",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-screen",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  }, countries.map(({
-    img,
-    imglow,
-    location
-  }, index) => {
-    return __jsx("div", {
-      className: "min-w-32 w-full mr-3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59
-      },
-      __self: undefined
-    }, __jsx(_functions_TravelCard__WEBPACK_IMPORTED_MODULE_1__["TravelCard"], {
-      key: index,
-      img: img,
-      imglow: imglow,
-      location: location,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60
-      },
-      __self: undefined
-    }));
-  }))))));
-};
-
-/***/ }),
-
 /***/ "./src/components/functions/THundredPlusCard.tsx":
 /*!*******************************************************!*\
   !*** ./src/components/functions/THundredPlusCard.tsx ***!
@@ -2866,6 +2742,130 @@ const TopRatedCard = ({
     },
     __self: undefined
   }, "\xA0 (", reviews, ")"))));
+};
+
+/***/ }),
+
+/***/ "./src/components/functions/Travel.tsx":
+/*!*********************************************!*\
+  !*** ./src/components/functions/Travel.tsx ***!
+  \*********************************************/
+/*! exports provided: Travel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Travel", function() { return Travel; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_functions_TravelCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/functions/TravelCard */ "./src/components/functions/TravelCard.tsx");
+/* harmony import */ var _wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../wrapper/ExploreSectionOverflow */ "./src/components/wrapper/ExploreSectionOverflow.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/Travel.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+ // Wrapper
+
+ // Image
+// High Resolution
+
+const explore1 = __webpack_require__(/*! ../../../public/img/high/explore1.jpg */ "./public/img/high/explore1.jpg");
+
+const explore2 = __webpack_require__(/*! ../../../public/img/high/explore2.jpg */ "./public/img/high/explore2.jpg");
+
+const explore3 = __webpack_require__(/*! ../../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg"); // Low Resolution
+
+
+const explore1low = __webpack_require__(/*! ../../../public/img/low/explore1-low.jpg */ "./public/img/low/explore1-low.jpg");
+
+const explore2low = __webpack_require__(/*! ../../../public/img/low/explore2-low.jpg */ "./public/img/low/explore2-low.jpg");
+
+const explore3low = __webpack_require__(/*! ../../../public/img/low/explore3-low.jpg */ "./public/img/low/explore3-low.jpg");
+
+const Travel = () => {
+  const countries = [{
+    img: explore1,
+    imglow: explore1low,
+    location: 'Sydney'
+  }, {
+    img: explore2,
+    imglow: explore2low,
+    location: 'Cape Town'
+  }, {
+    img: explore3,
+    imglow: explore3low,
+    location: 'Buenos Aires'
+  }, {
+    img: explore1,
+    imglow: explore1low,
+    location: 'Seoul'
+  }, {
+    img: explore2,
+    imglow: explore2low,
+    location: 'Barcelona'
+  }, {
+    img: explore3,
+    imglow: explore3low,
+    location: 'Los Angeles'
+  }];
+  return __jsx(_wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__["ExploreSectionOverflow"], {
+    title: "Travel the world with Airbnb",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "overflow-y-hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-full h-full overflow-y-hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-full scroller",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-screen",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: undefined
+  }, countries.map(({
+    img,
+    imglow,
+    location
+  }, index) => {
+    return __jsx("div", {
+      className: "min-w-32 w-full mr-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: undefined
+    }, __jsx(_components_functions_TravelCard__WEBPACK_IMPORTED_MODULE_1__["TravelCard"], {
+      key: index,
+      img: img,
+      imglow: imglow,
+      location: location,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: undefined
+    }));
+  }))))));
 };
 
 /***/ }),
@@ -4537,10 +4537,10 @@ const Section = ({
 
 /***/ }),
 
-/***/ "./src/pages/stay.tsx":
-/*!****************************!*\
-  !*** ./src/pages/stay.tsx ***!
-  \****************************/
+/***/ "./src/pages/stay/index.tsx":
+/*!**********************************!*\
+  !*** ./src/pages/stay/index.tsx ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4548,12 +4548,12 @@ const Section = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
-/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
-/* harmony import */ var _components_containers_Travel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/containers/Travel */ "./src/components/containers/Travel.tsx");
-/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
-/* harmony import */ var _components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/THundredPlus */ "./src/components/containers/THundredPlus.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stay.tsx";
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
+/* harmony import */ var _components_functions_Travel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/functions/Travel */ "./src/components/functions/Travel.tsx");
+/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
+/* harmony import */ var _components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/containers/THundredPlus */ "./src/components/containers/THundredPlus.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stay/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Layout
 
@@ -4691,7 +4691,7 @@ const Stay = () => {
       lineNumber: 66
     },
     __self: undefined
-  }, "Enter dates and number of guests to see the total price per night. Tourism taxes may be added")), __jsx(_components_containers_Travel__WEBPACK_IMPORTED_MODULE_3__["Travel"], {
+  }, "Enter dates and number of guests to see the total price per night. Tourism taxes may be added")), __jsx(_components_functions_Travel__WEBPACK_IMPORTED_MODULE_3__["Travel"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73
@@ -4723,13 +4723,13 @@ const Stay = () => {
 /***/ }),
 
 /***/ 5:
-/*!**********************************!*\
-  !*** multi ./src/pages/stay.tsx ***!
-  \**********************************/
+/*!****************************************!*\
+  !*** multi ./src/pages/stay/index.tsx ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/stay.tsx */"./src/pages/stay.tsx");
+module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/stay/index.tsx */"./src/pages/stay/index.tsx");
 
 
 /***/ }),

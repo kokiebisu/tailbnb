@@ -15382,20 +15382,20 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience.tsx!./":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience.tsx ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience%2Findex.tsx!./":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience%2Findex.tsx ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/experience", function() {
-      var mod = __webpack_require__(/*! ./src/pages/experience.tsx */ "./src/pages/experience.tsx")
+      var mod = __webpack_require__(/*! ./src/pages/experience/index.tsx */ "./src/pages/experience/index.tsx")
       if(true) {
-        module.hot.accept(/*! ./src/pages/experience.tsx */ "./src/pages/experience.tsx", function() {
+        module.hot.accept(/*! ./src/pages/experience/index.tsx */ "./src/pages/experience/index.tsx", function() {
           if(!next.router.components["/experience"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/experience.tsx */ "./src/pages/experience.tsx")
+          var updatedPage = __webpack_require__(/*! ./src/pages/experience/index.tsx */ "./src/pages/experience/index.tsx")
           next.router.update("/experience", updatedPage)
         })
       }
@@ -22781,10 +22781,10 @@ var ExploreSectionOverflow = function ExploreSectionOverflow(_ref) {
 
 /***/ }),
 
-/***/ "./src/pages/experience.tsx":
-/*!**********************************!*\
-  !*** ./src/pages/experience.tsx ***!
-  \**********************************/
+/***/ "./src/pages/experience/index.tsx":
+/*!****************************************!*\
+  !*** ./src/pages/experience/index.tsx ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -22792,10 +22792,10 @@ var ExploreSectionOverflow = function ExploreSectionOverflow(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
-/* harmony import */ var _components_containers_Experiences__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/containers/Experiences */ "./src/components/containers/Experiences.tsx");
-/* harmony import */ var _components_containers_Hosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/containers/Hosts */ "./src/components/containers/Hosts.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/experience.tsx";
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
+/* harmony import */ var _components_containers_Experiences__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/containers/Experiences */ "./src/components/containers/Experiences.tsx");
+/* harmony import */ var _components_containers_Hosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/containers/Hosts */ "./src/components/containers/Hosts.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/experience/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
 
@@ -22858,14 +22858,14 @@ var Experience = function Experience() {
 
 /***/ }),
 
-/***/ 1:
-/*!*******************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience.tsx ***!
-  \*******************************************************************************************************************************************************/
+/***/ 4:
+/*!***************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience%2Findex.tsx ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience%2Findex.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fexperience&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fexperience%2Findex.tsx!./");
 
 
 /***/ }),
@@ -22881,5 +22881,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=experience.js.map

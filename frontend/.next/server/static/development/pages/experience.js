@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3021,10 +3021,10 @@ const ExploreSectionOverflow = ({
 
 /***/ }),
 
-/***/ "./src/pages/experience.tsx":
-/*!**********************************!*\
-  !*** ./src/pages/experience.tsx ***!
-  \**********************************/
+/***/ "./src/pages/experience/index.tsx":
+/*!****************************************!*\
+  !*** ./src/pages/experience/index.tsx ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3032,10 +3032,10 @@ const ExploreSectionOverflow = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
-/* harmony import */ var _components_containers_Experiences__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/containers/Experiences */ "./src/components/containers/Experiences.tsx");
-/* harmony import */ var _components_containers_Hosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/containers/Hosts */ "./src/components/containers/Hosts.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/experience.tsx";
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
+/* harmony import */ var _components_containers_Experiences__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/containers/Experiences */ "./src/components/containers/Experiences.tsx");
+/* harmony import */ var _components_containers_Hosts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/containers/Hosts */ "./src/components/containers/Hosts.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/experience/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
 
@@ -3098,14 +3098,14 @@ const Experience = () => {
 
 /***/ }),
 
-/***/ 3:
-/*!****************************************!*\
-  !*** multi ./src/pages/experience.tsx ***!
-  \****************************************/
+/***/ 6:
+/*!**********************************************!*\
+  !*** multi ./src/pages/experience/index.tsx ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/experience.tsx */"./src/pages/experience.tsx");
+module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/experience/index.tsx */"./src/pages/experience/index.tsx");
 
 
 /***/ }),
