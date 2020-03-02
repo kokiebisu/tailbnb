@@ -9,7 +9,7 @@ interface Prop {
 export const ExploreCard: React.FC<Prop> = ({ img, title }) => {
   return (
     <div className='w-30/31'>
-      <Link href={`/${title.toLowerCase()}`}>
+      <Link href={`/${title.toLowerCase()}/index.tsx`}>
         <div className='h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white'>
           <img
             src={img}

@@ -3194,7 +3194,7 @@ const ExploreCard = ({
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: `/${title.toLowerCase()}`,
+    href: `/${title.toLowerCase()}/index.tsx`,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
