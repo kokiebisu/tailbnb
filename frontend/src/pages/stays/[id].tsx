@@ -258,132 +258,120 @@ const id: NextPage = () => {
                       </h3>
                     )
                   )}
-                  {loading ? (
-                    <Skeleton height={20} width={200} />
-                  ) : (
-                    data && (
-                      <div
-                        style={{ fontFamily: 'airbnb-book' }}
-                        className='text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap'>
-                        <div className='mr-4'>
-                          <p>
-                            {data.stay.accommodates}{' '}
-                            {data.stay.accommodates > 1 ? 'guests' : 'guest'}
-                          </p>
+                  {loading
+                    ? null
+                    : data && (
+                        <div
+                          style={{ fontFamily: 'airbnb-book' }}
+                          className='text-gray-750 pt-1 pb-3 flex justify-start items-start flex-wrap'>
+                          <div className='mr-4'>
+                            <p>
+                              {data.stay.accommodates}{' '}
+                              {data.stay.accommodates > 1 ? 'guests' : 'guest'}
+                            </p>
+                          </div>
+                          <div className='mr-4'>
+                            <p>
+                              {data.stay.bedrooms}{' '}
+                              {data.stay.bedrooms > 1 ? 'bedrooms' : 'bedroom'}
+                            </p>
+                          </div>
+                          <div className='mr-4'>
+                            <p>
+                              {data.stay.beds}{' '}
+                              {data.stay.beds > 1 ? 'beds' : 'bed'}
+                            </p>
+                          </div>
+                          <div className='mr-4'>
+                            <p>
+                              {data.stay.bathrooms}{' '}
+                              {data.stay.bathrooms > 1 ? 'baths' : 'bath'}
+                            </p>
+                          </div>
                         </div>
-                        <div className='mr-4'>
-                          <p>
-                            {data.stay.bedrooms}{' '}
-                            {data.stay.bedrooms > 1 ? 'bedrooms' : 'bedroom'}
-                          </p>
-                        </div>
-                        <div className='mr-4'>
-                          <p>
-                            {data.stay.beds}{' '}
-                            {data.stay.beds > 1 ? 'beds' : 'bed'}
-                          </p>
-                        </div>
-                        <div className='mr-4'>
-                          <p>
-                            {data.stay.bathrooms}{' '}
-                            {data.stay.bathrooms > 1 ? 'baths' : 'bath'}
-                          </p>
-                        </div>
-                      </div>
-                    )
-                  )}
+                      )}
                 </div>
               </div>
             </div>
 
             <div className='flex justify-end items-start w-3/12'>
-              {loading ? (
-                <Skeleton circle={true} height={60} width={60} />
-              ) : (
-                data && (
-                  <img
-                    className='h-16 w-16 rounded-full'
-                    src={data.stay.host_picture_url}
-                  />
-                )
-              )}
+              {loading
+                ? null
+                : data && (
+                    <img
+                      className='h-16 w-16 rounded-full'
+                      src={data.stay.host_picture_url}
+                    />
+                  )}
             </div>
           </div>
           <div className='my-6 border-b border-gray-300'>
-            {loading ? (
-              <div className='w-full'>
-                <SSkeletonPulse1 />
-              </div>
-            ) : (
-              data && (
-                <Characteristics
-                  host_is_superhost={data.stay.host_is_superhost}
-                  host_name={data.stay.host_name}
-                />
-              )
-            )}
+            {loading
+              ? null
+              : data && (
+                  <Characteristics
+                    host_is_superhost={data.stay.host_is_superhost}
+                    host_name={data.stay.host_name}
+                  />
+                )}
           </div>
-          {loading ? (
-            <div className='flex justify-center items-center w-full py-20'>
-              <PulseLoader size={10} color={'#008489'} />
-            </div>
-          ) : (
-            data && (
-              <>
-                <div className='border-b border-gray-300'>
-                  <div className='my-8'>
-                    <StayDescription
-                      description={data.stay.description}
-                      space={data.stay.space}
-                      access={data.stay.access}
-                      note={data.stay.notes}
-                      changeLength={() => setLength(!length)}
-                    />
-                    <div className='my-5'>
-                      <button>
-                        <div className='flex items-center justify-start'>
-                          <p
-                            className=''
-                            style={{ fontFamily: 'airbnb-medium' }}>
-                            Any questions for the host?
-                          </p>
-                        </div>
-                      </button>
+          {loading
+            ? null
+            : data && (
+                <>
+                  <div className='border-b border-gray-300'>
+                    <div className='my-8'>
+                      <StayDescription
+                        description={data.stay.description}
+                        space={data.stay.space}
+                        access={data.stay.access}
+                        note={data.stay.notes}
+                        changeLength={() => setLength(!length)}
+                      />
+                      <div className='my-5'>
+                        <button>
+                          <div className='flex items-center justify-start'>
+                            <p
+                              className=''
+                              style={{ fontFamily: 'airbnb-medium' }}>
+                              Any questions for the host?
+                            </p>
+                          </div>
+                        </button>
+                      </div>
+                      <div className='mt-10 mb-16'>
+                        <a
+                          className='py-3 px-6 border border-black rounded-lg'
+                          style={{ fontFamily: 'airbnb-medium' }}
+                          href=''>
+                          Contact host
+                        </a>
+                      </div>
                     </div>
-                    <div className='mt-10 mb-16'>
+                  </div>
+                  <DetailSectionOverflow title='Sleeping arrangements'>
+                    <SleepingArrangements />
+                  </DetailSectionOverflow>
+                  <DetailSection title='Amenities'>
+                    <div className='flex items-start justify-start flex-wrap'>
+                      <AmenityCard type='wifi' title='Wifi' />
+                      <AmenityCard
+                        type='laptop'
+                        title='Laptop-friendly workspace'
+                      />
+                      <AmenityCard type='kitchen' title='Kitchen' />
+                      <AmenityCard type='iron' title='Iron' />
+                    </div>
+                    <div className='mt-10 mb-8'>
                       <a
-                        className='py-3 px-6 border border-black rounded-lg'
                         style={{ fontFamily: 'airbnb-medium' }}
-                        href=''>
-                        Contact host
+                        className='py-3 px-6 rounded-xl border border-black '>
+                        Show all 32 amenities
                       </a>
                     </div>
-                  </div>
-                </div>
-                <DetailSectionOverflow title='Sleeping arrangements'>
-                  <SleepingArrangements />
-                </DetailSectionOverflow>
-                <DetailSection title='Amenities'>
-                  <div className='flex items-start justify-start flex-wrap'>
-                    <AmenityCard type='wifi' title='Wifi' />
-                    <AmenityCard
-                      type='laptop'
-                      title='Laptop-friendly workspace'
-                    />
-                    <AmenityCard type='kitchen' title='Kitchen' />
-                    <AmenityCard type='iron' title='Iron' />
-                  </div>
-                  <div className='mt-10 mb-8'>
-                    <a
-                      style={{ fontFamily: 'airbnb-medium' }}
-                      className='py-3 px-6 rounded-xl border border-black '>
-                      Show all 32 amenities
-                    </a>
-                  </div>
-                </DetailSection>
-              </>
-            )
-          )}
+                  </DetailSection>
+                </>
+              )}
         </div>
         {length ? (
           <div className='lg:w-5/12 lg:h-100r'>
