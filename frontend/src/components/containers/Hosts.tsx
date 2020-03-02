@@ -17,7 +17,6 @@ const experiencedata = gql`
       location
       country
       img
-      imglow
     }
   }
 `;
