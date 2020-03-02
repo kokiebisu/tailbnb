@@ -8,6 +8,7 @@ import { HostCard } from '../functions/HostCard';
 
 // Wrapper
 import { ExploreSection } from '../wrapper/ExploreSection';
+import cuid from 'cuid';
 
 const experiencedata = gql`
   query {
@@ -51,15 +52,17 @@ export const Hosts: any = () => {
             {data &&
               data.experiences.map(({ id, title, location, country, img }) => {
                 return (
-                  <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
-                    <HostCard
-                      key={id}
-                      title={title}
-                      img={img}
-                      location={location}
-                      country={country}
-                    />
-                  </div>
+                  <React.Fragment key={cuid()}>
+                    <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
+                      <HostCard
+                        key={id}
+                        title={title}
+                        img={img}
+                        location={location}
+                        country={country}
+                      />
+                    </div>
+                  </React.Fragment>
                 );
               })}
           </div>

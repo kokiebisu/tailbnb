@@ -5,6 +5,7 @@ import { ExperienceCard } from '../functions/ExperienceCard';
 
 // Wrapper
 import { ExploreSectionOverflow } from '../wrapper/ExploreSectionOverflow';
+import cuid from 'cuid';
 
 // Images
 // High Resolution
@@ -52,16 +53,18 @@ export const Experiences: React.FC<{}> = () => {
                 {featureds.map(
                   ({ img, experiences, type, description }, index) => {
                     return (
-                      <div className='w-80 lg:w-1/3 pb-5 mr-2'>
-                        <ExperienceCard
-                          key={index}
-                          id={index.toString()}
-                          img={img}
-                          experiences={experiences}
-                          type={type}
-                          description={description}
-                        />
-                      </div>
+                      <React.Fragment key={cuid()}>
+                        <div className='w-80 lg:w-1/3 pb-5 mr-2'>
+                          <ExperienceCard
+                            key={index}
+                            id={index.toString()}
+                            img={img}
+                            experiences={experiences}
+                            type={type}
+                            description={description}
+                          />
+                        </div>
+                      </React.Fragment>
                     );
                   }
                 )}

@@ -12004,6 +12004,168 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
+/***/ "./node_modules/cuid/index.js":
+/*!************************************!*\
+  !*** ./node_modules/cuid/index.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * cuid.js
+ * Collision-resistant UID generator for browsers and node.
+ * Sequential for fast db lookups and recency sorting.
+ * Safe for element IDs and server-side lookups.
+ *
+ * Extracted from CLCTR
+ *
+ * Copyright (c) Eric Elliott 2012
+ * MIT License
+ */
+
+var fingerprint = __webpack_require__(/*! ./lib/fingerprint.js */ "./node_modules/cuid/lib/fingerprint.browser.js");
+var pad = __webpack_require__(/*! ./lib/pad.js */ "./node_modules/cuid/lib/pad.js");
+var getRandomValue = __webpack_require__(/*! ./lib/getRandomValue.js */ "./node_modules/cuid/lib/getRandomValue.browser.js");
+
+var c = 0,
+  blockSize = 4,
+  base = 36,
+  discreteValues = Math.pow(base, blockSize);
+
+function randomBlock () {
+  return pad((getRandomValue() *
+    discreteValues << 0)
+    .toString(base), blockSize);
+}
+
+function safeCounter () {
+  c = c < discreteValues ? c : 0;
+  c++; // this is not subliminal
+  return c - 1;
+}
+
+function cuid () {
+  // Starting with a lowercase letter makes
+  // it HTML element ID friendly.
+  var letter = 'c', // hard-coded allows for sequential access
+
+    // timestamp
+    // warning: this exposes the exact date and time
+    // that the uid was created.
+    timestamp = (new Date().getTime()).toString(base),
+
+    // Prevent same-machine collisions.
+    counter = pad(safeCounter().toString(base), blockSize),
+
+    // A few chars to generate distinct ids for different
+    // clients (so different computers are far less
+    // likely to generate the same id)
+    print = fingerprint(),
+
+    // Grab some more chars from Math.random()
+    random = randomBlock() + randomBlock();
+
+  return letter + timestamp + counter + print + random;
+}
+
+cuid.slug = function slug () {
+  var date = new Date().getTime().toString(36),
+    counter = safeCounter().toString(36).slice(-4),
+    print = fingerprint().slice(0, 1) +
+      fingerprint().slice(-1),
+    random = randomBlock().slice(-2);
+
+  return date.slice(-2) +
+    counter + print + random;
+};
+
+cuid.isCuid = function isCuid (stringToCheck) {
+  if (typeof stringToCheck !== 'string') return false;
+  if (stringToCheck.startsWith('c')) return true;
+  return false;
+};
+
+cuid.isSlug = function isSlug (stringToCheck) {
+  if (typeof stringToCheck !== 'string') return false;
+  var stringLength = stringToCheck.length;
+  if (stringLength >= 7 && stringLength <= 10) return true;
+  return false;
+};
+
+cuid.fingerprint = fingerprint;
+
+module.exports = cuid;
+
+
+/***/ }),
+
+/***/ "./node_modules/cuid/lib/fingerprint.browser.js":
+/*!******************************************************!*\
+  !*** ./node_modules/cuid/lib/fingerprint.browser.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var pad = __webpack_require__(/*! ./pad.js */ "./node_modules/cuid/lib/pad.js");
+
+var env = typeof window === 'object' ? window : self;
+var globalCount = Object.keys(env).length;
+var mimeTypesLength = navigator.mimeTypes ? navigator.mimeTypes.length : 0;
+var clientId = pad((mimeTypesLength +
+  navigator.userAgent.length).toString(36) +
+  globalCount.toString(36), 4);
+
+module.exports = function fingerprint () {
+  return clientId;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/cuid/lib/getRandomValue.browser.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/cuid/lib/getRandomValue.browser.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+var getRandomValue;
+
+var crypto = typeof window !== 'undefined' &&
+  (window.crypto || window.msCrypto) ||
+  typeof self !== 'undefined' &&
+  self.crypto;
+
+if (crypto) {
+    var lim = Math.pow(2, 32) - 1;
+    getRandomValue = function () {
+        return Math.abs(crypto.getRandomValues(new Uint32Array(1))[0] / lim);
+    };
+} else {
+    getRandomValue = Math.random;
+}
+
+module.exports = getRandomValue;
+
+
+/***/ }),
+
+/***/ "./node_modules/cuid/lib/pad.js":
+/*!**************************************!*\
+  !*** ./node_modules/cuid/lib/pad.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function pad (num, size) {
+  var s = '000000000' + num;
+  return s.substr(s.length - size);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/fast-json-stable-stringify/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/fast-json-stable-stringify/index.js ***!
@@ -24012,6 +24174,7 @@ var Adventures = function Adventures() {
     },
     __self: this
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    key: 1,
     queries: {
       small: '(min-width: 0px) and (max-width: 640px)'
     },
@@ -24023,34 +24186,37 @@ var Adventures = function Adventures() {
   }, function (matches) {
     return matches.small ? (setCard(1), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    key: 2,
     queries: {
       large: '(min-width: 641px) and (max-width: 767px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 94
     },
     __self: this
   }, function (matches) {
     return matches.large && data.adventures ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    key: 3,
     queries: {
       xl: '(min-width: 768px) and (max-width: 1023px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 106
     },
     __self: this
   }, function (matches) {
     return matches.xl && data.adventures ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    key: 4,
     queries: {
       twoxl: '(min-width: 1024px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 117
     },
     __self: this
   }, function (matches) {
@@ -24059,7 +24225,7 @@ var Adventures = function Adventures() {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 133
     },
     __self: this
   })));
@@ -24079,10 +24245,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Explore", function() { return Explore; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_ExploreCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/ExploreCard */ "./src/components/functions/ExploreCard.tsx");
-/* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/ExploreCard */ "./src/components/functions/ExploreCard.tsx");
+/* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Explore.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+ // Dependency
+
  // Components
 
  // Wrapper
@@ -24107,61 +24278,67 @@ var explores = [{
   title: 'Adventure'
 }];
 var Explore = function Explore() {
-  return __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["SectionOverflow"], {
+  return __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__["SectionOverflow"], {
     title: "Explore Airbnb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 41
     },
     __self: this
   }, __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 42
     },
     __self: this
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 43
     },
     __self: this
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 44
     },
     __self: this
   }, __jsx("div", {
     className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 45
     },
     __self: this
-  }, explores.map(function (_ref, index) {
+  }, explores.map(function (_ref) {
     var img = _ref.img,
         title = _ref.title;
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: cuid__WEBPACK_IMPORTED_MODULE_1___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, __jsx("div", {
       className: "w-32 mr-4 sm:w-1/3 cursor-pointer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 49
       },
       __self: this
-    }, __jsx(_functions_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["ExploreCard"], {
-      key: index,
+    }, __jsx(_functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__["ExploreCard"], {
       img: img,
       title: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 50
       },
       __self: this
-    }));
+    })));
   }))))));
 };
 
@@ -24187,6 +24364,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../functions/FeaturedCard */ "./src/components/functions/FeaturedCard.tsx");
 /* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_6__);
 
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Featured.tsx";
@@ -24195,6 +24374,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
  // Components
 
  // Wrapper
+
 
  // Images
 // High Resolution
@@ -24254,14 +24434,14 @@ var Featured = function Featured() {
     phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -24269,46 +24449,53 @@ var Featured = function Featured() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   })) : __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: this
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
   }, __jsx("div", {
     className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: this
   }, featureds.map(function (_ref, index) {
     var img = _ref.img,
         verified = _ref.verified,
         description = _ref.description;
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
+      key: cuid__WEBPACK_IMPORTED_MODULE_6___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74
+      },
+      __self: this
+    }, __jsx("div", {
       className: "w-80 lg:w-1/3 pb-5 mr-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 75
       },
       __self: this
     }, __jsx(_functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__["FeaturedCard"], {
@@ -24318,10 +24505,10 @@ var Featured = function Featured() {
       description: description,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 76
       },
       __self: this
-    }));
+    })));
   })))))));
 };
 
@@ -24393,6 +24580,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _functions_Location__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../functions/Location */ "./src/components/functions/Location.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_6__);
 
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
@@ -24402,6 +24591,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2__["createElement"];
  // Components
 
  // Wrapper
+
 
 
 var Popular = function Popular() {
@@ -24470,14 +24660,14 @@ var Popular = function Popular() {
     title: "Popular destinations in the United States",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -24485,24 +24675,31 @@ var Popular = function Popular() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   })) : __jsx("div", {
     className: "flex flex-wrap items-center justify-start w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 76
     },
     __self: this
   }, locations.map(function (_ref, index) {
     var location = _ref.location,
         price = _ref.price;
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], {
+      key: cuid__WEBPACK_IMPORTED_MODULE_6___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }, __jsx("div", {
       className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 80
       },
       __self: this
     }, __jsx(_functions_Location__WEBPACK_IMPORTED_MODULE_4__["Location"], {
@@ -24511,10 +24708,10 @@ var Popular = function Popular() {
       price: price,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 81
       },
       __self: this
-    }));
+    })));
   }))));
 };
 
@@ -24541,6 +24738,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_9__);
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
@@ -24566,6 +24765,7 @@ function _templateObject() {
  // Wrapper
 
 
+
 var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
 var Stay = function Stay() {
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAYS),
@@ -24585,7 +24785,7 @@ var Stay = function Stay() {
         className: "w-1/2 md:w-1/3 lg:w-1/4 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 53
         },
         __self: this
       }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_6__["StayCard"], {
@@ -24599,7 +24799,7 @@ var Stay = function Stay() {
         picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         },
         __self: this
       })));
@@ -24613,21 +24813,21 @@ var Stay = function Stay() {
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 77
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -24635,69 +24835,104 @@ var Stay = function Stay() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 78
     },
     __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xs: '(min-width: 0px) and (max-width: 739px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 84
     },
     __self: this
   }, function (matches) {
     return matches.xs ? (setCard(1), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       small: '(min-width: 740px) and (max-width: 987px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 94
     },
     __self: this
   }, function (matches) {
     return matches.small ? (setCard(1), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: this
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       large: '(min-width: 988px) and (max-width: 1299px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 106
     },
     __self: this
   }, function (matches) {
     return matches.large ? (setCard(8), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 118
     },
     __self: this
   }, function (matches) {
     return matches.xl ? (setCard(8), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: this
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       twoxl: '(min-width: 1530px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 130
     },
     __self: this
   }, function (matches) {
     return matches.twoxl ? (setCard(8), renderContent(data, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  })))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 146
     },
     __self: this
   })));
@@ -25000,6 +25235,7 @@ var ExploreCard = function ExploreCard(_ref) {
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/".concat(title.toLowerCase(), "/index.tsx"),
+    as: "/".concat(title.toLowerCase()),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -25009,7 +25245,7 @@ var ExploreCard = function ExploreCard(_ref) {
     className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, __jsx("img", {
@@ -25017,14 +25253,14 @@ var ExploreCard = function ExploreCard(_ref) {
     className: "h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }), __jsx("p", {
     className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: this
   }, title))));
