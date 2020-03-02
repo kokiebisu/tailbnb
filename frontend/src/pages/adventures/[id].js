@@ -9,8 +9,7 @@ import styled from 'styled-components';
 // GraphQL
 import { gql } from 'apollo-boost';
 
-// Components
-import { ExploreHeader } from '../../components/layout/ExploreHeader';
+// Section
 import Banner from './functions/Banner';
 import WhatYouDo from './section/WhatYouDo';
 import Adventures from './section/Adventures';
@@ -19,7 +18,10 @@ import Itinerary from './section/Itinerary';
 import Host from './section/Host';
 import Availability from './section/Availability';
 import Reviews from './section/Reviews';
+import Safety from './section/Safety';
 
+// Layout
+import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { Footer } from '../../components/layout/Footer';
 
 // Images
@@ -72,37 +74,36 @@ const id = () => {
       <Host />
       <Availability />
       <Reviews />
+      <Safety />
       <div className='w-full flex justify-center'>
-        <div className='w-full lg:max-w-7xl  py-12 bg-gray-350 rounded-xl'>
-          <div className='w-full lg:max-w-6xl mx-auto flex justify-start items-start flex-wrap h-full'>
-            <div
-              style={{ fontFamily: 'airbnb-bold' }}
-              className='w-full md:w-4/12 h-full '>
-              <div className='flex justify-start items-center h-full'>
-                <div className='h-12 w-12 mr-3 '>
-                  <img
-                    className='h-full w-full'
-                    src='https://a0.muscache.com/pictures/4b4fb657-aff9-40cd-884a-e3785fa1ef91.jpg'
-                  />
-                </div>
-                <p className='text-3xl text-gray-750'>Guest safety</p>
+        <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16'>
+          <div
+            style={{ fontFamily: 'airbnb-bold' }}
+            className='w-full md:w-4/12 h-full text-3xl text-gray-750'>
+            Things to keep in mind
+          </div>
+          <div
+            style={{ fontFamily: 'airbnb-book' }}
+            className='w-full md:w-8/12 px-4 text-gray-750'>
+            <div className='w-full flex pb-4 border-b border-gray-300'>
+              <div className='w-1/3'>
+                <h3
+                  style={{ fontFamily: 'airbnb-medium' }}
+                  className='text-2xl'>
+                  Cancellation policy
+                </h3>
               </div>
-            </div>
-            <div
-              style={{ fontFamily: 'airbnb-book' }}
-              className='w-full md:w-8/12 px-4 text-gray-750 text-lg '>
-              <p className='mb-7'>
-                Every adventure follows industry guidelines. We partnered with
-                the Adventure Travel Trade Association, expert leaders in
-                adventure travel, to define best practices and standards for
-                safety.
-              </p>
-              <p>
-                Please note outdoor activities carry risks, and you may be
-                exposed to dangerous situations as part of this experience. Make
-                sure you can participate safely given your abilities and the
-                conditions (such as location, weather, and equipment).
-              </p>
+              <div className='w-2/3'>
+                <p style={{ fontFamily: 'airbnb-book' }}>
+                  Any experience can be cancelled and fully refunded within 24
+                  hours of purchase.
+                </p>
+                <button
+                  style={{ fontFamily: 'airbnb-medium' }}
+                  className='text-green-850 text-sm my-3'>
+                  Learn more
+                </button>
+              </div>
             </div>
           </div>
         </div>
