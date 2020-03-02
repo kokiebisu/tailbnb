@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-const renderIcon = (type) => {
+const renderIcon = (type: string) => {
   switch (type) {
     case 'Duration':
       return (
@@ -135,7 +135,7 @@ c0,9.425,7.641,17.067,17.067,17.067h72.856c9.425,0,17.067-7.641,17.067-17.067S31
   }
 };
 
-const renderDescription = (type, value) => {
+const renderDescription = (type: string, value: string) => {
   switch (type) {
     case 'Duration':
       return (
@@ -180,7 +180,12 @@ const renderDescription = (type, value) => {
   }
 };
 
-export default ({ type, value }) => {
+interface Props {
+  type: string;
+  value: string;
+}
+
+export const BannerCard: React.FC<Props> = ({ type, value }) => {
   return (
     <div className='w-1/2'>
       <div className='h-4 w-4 my-2'>{renderIcon(type)}</div>

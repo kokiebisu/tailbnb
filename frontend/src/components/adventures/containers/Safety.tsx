@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-export default () => {
+export const Safety: React.FC<{}> = () => {
   return (
     <div className='w-full flex justify-center'>
       <div className='w-full lg:max-w-7xl  py-12 bg-gray-350 rounded-xl'>

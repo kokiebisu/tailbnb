@@ -1,6 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, experienceNumber }) => {
+interface Props {
+  title: string;
+  experienceNumber: number;
+}
+
+export const ExploringCard: React.FC<Props> = ({ title, experienceNumber }) => {
   return (
     <div className='bg-white shadow-sm rounded mr-4 border border-gray-300 mt-4'>
       <div className='px-5 py-5 mr-5'>

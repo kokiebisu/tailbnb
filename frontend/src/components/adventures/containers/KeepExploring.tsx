@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
 // Function
-import ExploringCard from '../functions/ExploringCard';
+import { ExploringCard } from '../functions/ExploringCard';
 
-export default () => {
+export const KeepExploring: React.FC<{}> = () => {
   return (
     <div className='w-full flex justify-center'>
       <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16'>
