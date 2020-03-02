@@ -10,17 +10,17 @@ import styled from 'styled-components';
 import { gql } from 'apollo-boost';
 
 // Section
-import Banner from './section/Banner';
-import WhatYouDo from './section/WhatYouDo';
-import Adventures from './section/Adventures';
-import Included from './section/Included';
-import Itinerary from './section/Itinerary';
-import Host from './section/Host';
-import Availability from './section/Availability';
-import Reviews from './section/Reviews';
-import Safety from './section/Safety';
-import KeepInMind from './section/KeepInMind';
-import KeepExploring from './section/KeepExploring';
+import Banner from './containers/Banner';
+import WhatYouDo from './containers/WhatYouDo';
+import Adventures from './containers/Adventures';
+import Included from './containers/Included';
+import Itinerary from './containers/Itinerary';
+import Host from './containers/Host';
+import Availability from './containers/Availability';
+import Reviews from './containers/Reviews';
+import Safety from './containers/Safety';
+import KeepInMind from './containers/KeepInMind';
+import KeepExploring from './containers/KeepExploring';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
