@@ -1,9 +1,5 @@
 import * as React from 'react';
 
-// Wrapper
-import { ExploreSection } from '../components/wrapper/ExploreSection';
-import { ExploreSectionOverflow } from '../components/wrapper/ExploreSectionOverflow';
-
 // Layout
 import { Footer } from '../components/layout/Footer';
 import { ExploreHeader } from '../components/layout/ExploreHeader';
@@ -20,7 +16,7 @@ const Stay: NextPage = () => {
   return (
     <>
       <header className='z-20 sticky bg-white top-0 '>
-        <ExploreHeader type='Stays' />
+        <ExploreHeader mode='white' type='Stays' />
         <div className='px-5 md:px-0 mx-auto py-2 border-b border-gray-200'>
           <div className='mx-auto md:max-w-90% flex flex-wrap items-center justify-start'>
             <div
@@ -74,17 +70,9 @@ const Stay: NextPage = () => {
           Tourism taxes may be added
         </p>
       </div>
-      <ExploreSectionOverflow title='Travel the world with Airbnb'>
-        <Travel />
-      </ExploreSectionOverflow>
-      <ExploreSection
-        title='Top-rated places to stay'
-        phrase='Explore some of the best-reviewed stays in the world'>
-        <TopRated />
-      </ExploreSection>
-      <ExploreSection title='300+ places to stay'>
-        <THundredPlus />
-      </ExploreSection>
+      <Travel />
+      <TopRated />
+      <THundredPlus />
       <Footer />
     </>
   );
