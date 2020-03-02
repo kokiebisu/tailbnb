@@ -17,7 +17,11 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
+<<<<<<< HEAD
     "/stays/[id]": [
+=======
+    "/adventures/[id]": [
+>>>>>>> dadceb5c6387b74f37f8ba30065e4897fbb3bee0
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
