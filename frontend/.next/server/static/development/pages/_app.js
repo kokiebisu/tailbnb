@@ -212,7 +212,7 @@ const MyApp = ({
   initialState
 }) => {
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_6___default.a({
-    uri: 'http://159.65.69.114:4466',
+    uri: 'https://nextbnb-server-ccec18c325.herokuapp.com',
     cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]().restore(initialState || {})
   });
 })(MyApp));

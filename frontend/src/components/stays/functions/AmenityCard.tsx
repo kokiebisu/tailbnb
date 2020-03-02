@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-interface Prop {
+interface Props {
   type: string;
   title: string;
 }
 
-export const AmenityCard: React.FC<Prop> = ({ type, title }) => {
+export const AmenityCard: React.FC<Props> = ({ type, title }) => {
   const renderIcon = (type: string) => {
     if (type == 'wifi') {
       return (
