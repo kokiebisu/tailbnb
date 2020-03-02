@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
 // Function
-import BannerCard from '../functions/BannerCard';
+import { BannerCard } from '../functions/BannerCard';
 
-export default () => {
+export const Banner: React.FC<{}> = () => {
   return (
     <div className='w-full bg-black h-80v flex justify-center'>
       <div className='w-full max-w-6xl h-full'>

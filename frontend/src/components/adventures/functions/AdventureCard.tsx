@@ -1,6 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 
-const renderIcon = (icon) => {
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const renderIcon = (icon: string) => {
   switch (icon) {
     case 'camp':
       return (
@@ -135,7 +141,11 @@ const renderIcon = (icon) => {
   }
 };
 
-export default ({ icon, title, description }) => {
+export const AdventureCard: React.FC<Props> = ({
+  icon,
+  title,
+  description
+}) => {
   return (
     <div className='w-1/3 pr-3'>
       <div className='h-8 w-8 mb-3'>{renderIcon(icon)}</div>

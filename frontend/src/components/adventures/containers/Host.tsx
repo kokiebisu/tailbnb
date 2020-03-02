@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
 // Images
-import detail2 from '../../../../public/img/high/staydetail2.jpg';
+const detail2 = require('../../../../public/img/high/staydetail2.jpg');
 
-export default () => {
+export const Host: React.FC<{}> = () => {
   return (
     <div className='w-full flex justify-center'>
       <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16'>

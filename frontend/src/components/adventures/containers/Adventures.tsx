@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
 // Function
 import AdventureCard from '../functions/AdventureCard';
 
-export default () => {
+export const Adventures: React.FC<{}> = () => {
   return (
     <div className='w-full flex justify-center bg-gray-150'>
       <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-32'>

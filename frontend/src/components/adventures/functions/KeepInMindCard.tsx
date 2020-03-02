@@ -1,6 +1,16 @@
-import React from 'react';
+import * as React from 'react';
 
-export default ({ title, description, order }) => {
+interface Props {
+  title: string;
+  description: string;
+  order: string;
+}
+
+export const KeepInMindCard: React.FC<Props> = ({
+  title,
+  description,
+  order
+}) => {
   return (
     <>
       {order === 'top' ? (
