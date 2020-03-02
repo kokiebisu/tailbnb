@@ -135,7 +135,7 @@ c0,9.425,7.641,17.067,17.067,17.067h72.856c9.425,0,17.067-7.641,17.067-17.067S31
   }
 };
 
-const renderDescription = (type: string, value: string) => {
+const renderDescription = (type: string, value: string | number) => {
   switch (type) {
     case 'Duration':
       return (
@@ -182,7 +182,7 @@ const renderDescription = (type: string, value: string) => {
 
 interface Props {
   type: string;
-  value: string;
+  value: number | string;
 }
 
 export const BannerCard: React.FC<Props> = ({ type, value }) => {

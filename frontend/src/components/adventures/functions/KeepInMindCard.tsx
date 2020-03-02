@@ -3,7 +3,7 @@ import * as React from 'react';
 interface Props {
   title: string;
   description: string;
-  order: string;
+  order?: string | undefined;
 }
 
 export const KeepInMindCard: React.FC<Props> = ({

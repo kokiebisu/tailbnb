@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Function
-import AdventureCard from '../functions/AdventureCard';
+import { AdventureCard } from '../functions/AdventureCard';
 
 export const Adventures: React.FC<{}> = () => {
   return (
