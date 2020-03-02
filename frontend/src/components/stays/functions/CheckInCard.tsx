@@ -3,12 +3,12 @@ import { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import PulseLoader from 'react-spinners/PulseLoader';
 
-interface Prop {
+interface Props {
   length: boolean;
   loading: boolean;
 }
 
-export const CheckInCard: React.FC<Prop> = ({ loading, length }) => {
+export const CheckInCard: React.FC<Props> = ({ loading, length }) => {
   const [loaded, setLoaded] = useState<boolean>(true);
 
   function sleep(ms: number) {

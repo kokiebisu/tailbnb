@@ -18,9 +18,9 @@ import { Footer } from '../../components/layout/Footer';
 import { Reviews } from '../../components/stays/containers/Reviews';
 import { ToDoNear } from '../../components/stays/containers/ToDoNear';
 import { MoreLocations } from '../../components/stays/containers/MoreLocations';
-import Amenities from '../../components/stays/containers/Amenities';
-import PlaceInfo from '../../components/stays/containers/PlaceInfo';
-import StayInfo from '../../components/stays/containers/StayInfo';
+import { Amenities } from '../../components/stays/containers/Amenities';
+import { PlaceInfo } from '../../components/stays/containers/PlaceInfo';
+import { StayInfo } from '../../components/stays/containers/StayInfo';
 import { MoreHomes } from '../../components/stays/containers/MoreHomes';
 import { KeepInMind } from '../../components/stays/containers/KeepInMind';
 import { Characteristics } from '../../components/stays/containers/Characteristics';
@@ -28,7 +28,7 @@ import { SleepingArrangements } from '../../components/stays/containers/Sleeping
 
 // Functions
 import { ImagePanel } from '../../components/stays/functions/ImagePanel';
-import MainInfo from '../../components/stays/functions/MainInfo';
+import { MainInfo } from '../../components/stays/functions/MainInfo';
 import { CheckInCard } from '../../components/stays/functions/CheckInCard';
 import { HostedBy } from '../../components/stays/functions/HostedBy';
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-interface Prop {
+interface Props {
   type: string;
   title: string;
   description: string;
@@ -11,7 +11,7 @@ interface Prop {
   percentage?: number;
 }
 
-export const CharacteristicCard: React.FC<Prop> = ({
+export const CharacteristicCard: React.FC<Props> = ({
   type,
   title,
   description,
