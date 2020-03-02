@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -4560,7 +4560,7 @@ const GET_ADVENTURE = apollo_boost__WEBPACK_IMPORTED_MODULE_4__["gql"]`
 
 /***/ }),
 
-/***/ 7:
+/***/ 4:
 /*!*********************************************!*\
   !*** multi ./src/pages/adventures/[id].tsx ***!
   \*********************************************/
