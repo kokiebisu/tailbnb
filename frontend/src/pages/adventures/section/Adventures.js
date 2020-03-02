@@ -16,14 +16,17 @@ export default () => {
           style={{ fontFamily: 'airbnb-book' }}
           className='w-full md:w-8/12 px-4 text-gray-750 flex'>
           <AdventureCard
+            icon='camp'
             title='Meals and stays included'
             description='Every adventure is fully planned, from activities to accommodations.'
           />
           <AdventureCard
+            icon='map'
             title='Led by locals'
             description='Adventures are hosted by local insiders who immerse you in their culture.'
           />
           <AdventureCard
+            icon='campcar'
             title='One-of-a-kind access'
             description="Explore places and communities you can\'t easily access on your own."
           />
