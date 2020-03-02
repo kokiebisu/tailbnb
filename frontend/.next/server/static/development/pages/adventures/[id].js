@@ -1563,9 +1563,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section_Availability__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./section/Availability */ "./src/pages/adventures/section/Availability.js");
 /* harmony import */ var _section_Reviews__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./section/Reviews */ "./src/pages/adventures/section/Reviews.js");
 /* harmony import */ var _section_Safety__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./section/Safety */ "./src/pages/adventures/section/Safety.js");
-/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
-/* harmony import */ var _functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./functions/KeepInMindCard */ "./src/pages/adventures/functions/KeepInMindCard.js");
+/* harmony import */ var _section_KeepInMind__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./section/KeepInMind */ "./src/pages/adventures/section/KeepInMind.js");
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/layout/Footer */ "./src/components/layout/Footer.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -1585,10 +1585,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
+
  // Layout
 
-
- // Function
 
  // Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
@@ -1626,19 +1625,19 @@ const id = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 56
     },
     __self: undefined
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 58
     },
     __self: undefined
   }, "Vacation Rentals, Homes, Experiences & Places") : data && __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 60
     },
     __self: undefined
   }, data.adventure.name), __jsx("meta", {
@@ -1646,7 +1645,7 @@ const id = () => {
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 63
     },
     __self: undefined
   }), __jsx("link", {
@@ -1655,136 +1654,146 @@ const id = () => {
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 67
     },
     __self: undefined
-  })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_15__["ExploreHeader"], {
+  })), __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_16__["ExploreHeader"], {
     type: "stay",
     mode: "dark",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 69
     },
     __self: undefined
   }), __jsx(_section_Banner__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 70
     },
     __self: undefined
   }), __jsx(_section_WhatYouDo__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 71
     },
     __self: undefined
   }), __jsx(_section_Adventures__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 72
     },
     __self: undefined
   }), __jsx(_section_Included__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 73
     },
     __self: undefined
   }), __jsx(_section_Itinerary__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 74
     },
     __self: undefined
   }), __jsx(_section_Host__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 75
     },
     __self: undefined
   }), __jsx(_section_Availability__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 76
     },
     __self: undefined
   }), __jsx(_section_Reviews__WEBPACK_IMPORTED_MODULE_13__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 77
     },
     __self: undefined
   }), __jsx(_section_Safety__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 78
+    },
+    __self: undefined
+  }), __jsx(_section_KeepInMind__WEBPACK_IMPORTED_MODULE_15__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
     },
     __self: undefined
   }), __jsx("div", {
     className: "w-full flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 80
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 81
     },
     __self: undefined
   }, __jsx("div", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    className: "w-full text-3xl text-gray-750 mb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 82
     },
     __self: undefined
-  }, "Things to keep in mind"), __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-book'
+  }, "Keep exploring in Marrakech"), __jsx("div", {
+    className: "w-full flex justify-start items-start flex-wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
     },
-    className: "w-full md:w-8/12 px-4 text-gray-750",
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-23p bg-white shadow-sm rounded mr-4 border border-gray-300",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 88
     },
     __self: undefined
-  }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    top: true,
-    title: "Cancellation policy",
-    description: "Any experience can be cancelled and fully refunded within 24 hours of purchase.",
+  }, __jsx("div", {
+    className: "px-6 py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 89
     },
     __self: undefined
-  }), __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    top: false,
-    title: "Communication policy",
-    description: "Always communicate through Airbnb. To protect your payment, never transfer money or communicate outside of the Airbnb website or app.",
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 90
     },
     __self: undefined
-  }), __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    top: false,
-    title: "Guest requirements",
-    description: "Up to 6 guests ages 18 and up can attend. Parents may also bring children under 2 years of age. The activity level for this adventure is moderate.",
+  }, "Nature and outdoors"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-xs text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 95
     },
     __self: undefined
-  })))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_16__["Footer"], {
+  }, "193 experiences")))))), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_17__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 105
     },
     __self: undefined
   }));
@@ -1829,9 +1838,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (({
   title,
   description,
-  top
+  order
 }) => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, top ? __jsx("div", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, order === 'top' ? __jsx("div", {
     className: "w-full flex pb-4 border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
@@ -1881,18 +1890,18 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 15
     },
     __self: undefined
-  }, "Learn more"))) : __jsx("div", {
-    className: "w-full flex pb-4 pt-6 border-b border-gray-300",
+  }, "Learn more"))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, order === 'bottom' ? __jsx("div", {
+    className: "w-full flex pb-4 pt-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: undefined
   }, __jsx("h3", {
@@ -1902,14 +1911,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: undefined
   }, title)), __jsx("div", {
     className: "w-2/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("p", {
@@ -1918,7 +1927,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 34
     },
     __self: undefined
   }, description), __jsx("button", {
@@ -1928,10 +1937,60 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     className: "text-green-850 text-sm my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: undefined
-  }, "Learn more"))));
+  }, "Learn more"))) : __jsx("div", {
+    className: "w-full flex pb-4 pt-6 border-b border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-1/3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: undefined
+  }, title)), __jsx("div", {
+    className: "w-2/3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, description), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-green-850 text-sm my-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }, "Learn more")))));
 });
 
 /***/ }),
@@ -3543,6 +3602,89 @@ const detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.
     },
     __self: undefined
   }, "Show more")))))));
+});
+
+/***/ }),
+
+/***/ "./src/pages/adventures/section/KeepInMind.js":
+/*!****************************************************!*\
+  !*** ./src/pages/adventures/section/KeepInMind.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/KeepInMindCard */ "./src/pages/adventures/functions/KeepInMindCard.js");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/section/KeepInMind.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // Function
+
+
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  return __jsx("div", {
+    className: "w-full flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "Things to keep in mind"), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "w-full md:w-8/12 px-4 text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    order: "top",
+    title: "Cancellation policy",
+    description: "Any experience can be cancelled and fully refunded within 24 hours of purchase.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }), __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "Communication policy",
+    description: "Always communicate through Airbnb. To protect your payment, never transfer money or communicate outside of the Airbnb website or app.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }), __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    order: "bottom",
+    title: "Guest requirements",
+    description: "Up to 6 guests ages 18 and up can attend. Parents may also bring children under 2 years of age. The activity level for this adventure is moderate.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }))));
 });
 
 /***/ }),

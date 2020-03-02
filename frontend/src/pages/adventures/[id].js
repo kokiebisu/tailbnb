@@ -19,13 +19,11 @@ import Host from './section/Host';
 import Availability from './section/Availability';
 import Reviews from './section/Reviews';
 import Safety from './section/Safety';
+import KeepInMind from './section/KeepInMind';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { Footer } from '../../components/layout/Footer';
-
-// Function
-import KeepInMindCard from './functions/KeepInMindCard';
 
 // Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
@@ -78,34 +76,29 @@ const id = () => {
       <Availability />
       <Reviews />
       <Safety />
+      <KeepInMind />
       <div className='w-full flex justify-center'>
         <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16'>
           <div
             style={{ fontFamily: 'airbnb-bold' }}
-            className='w-full md:w-4/12 h-full text-3xl text-gray-750'>
-            Things to keep in mind
+            className='w-full text-3xl text-gray-750 mb-8'>
+            Keep exploring in Marrakech
           </div>
-          <div
-            style={{ fontFamily: 'airbnb-book' }}
-            className='w-full md:w-8/12 px-4 text-gray-750'>
-            <KeepInMindCard
-              top={true}
-              title='Cancellation policy'
-              description='Any experience can be cancelled and fully refunded within 24 hours of
-          purchase.'
-            />
-            <KeepInMindCard
-              top={false}
-              title='Communication policy'
-              description='Always communicate through Airbnb. To protect your payment, never transfer money or communicate outside of the Airbnb website or app.'
-            />
-            <KeepInMindCard
-              top={false}
-              title='Guest requirements'
-              description='Up to 6 guests ages 18 and up can attend. Parents may also bring children under 2 years of age.
-
-              The activity level for this adventure is moderate.'
-            />
+          <div className='w-full flex justify-start items-start flex-wrap'>
+            <div className='w-23p bg-white shadow-sm rounded mr-4 border border-gray-300'>
+              <div className='px-6 py-5'>
+                <h3
+                  style={{ fontFamily: 'airbnb-bold' }}
+                  className='text-gray-750'>
+                  Nature and outdoors
+                </h3>
+                <p
+                  style={{ fontFamily: 'airbnb-medium' }}
+                  className='text-xs text-gray-650'>
+                  193 experiences
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
