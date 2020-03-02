@@ -151,13 +151,13 @@ export const CharacteristicCard: React.FC<Prop> = ({
       <div style={{ paddingTop: 5 }} className='mr-4'>
         {renderIcon(type)}
       </div>
-      <div>
+      <div className='w-full'>
         {loaded ? (
           <h3 style={{ fontFamily: 'airbnb-medium' }} className='text-gray-750'>
             {hostName} {title}
           </h3>
         ) : (
-          <div className='w-40v h-3 mb-3'>
+          <div className='w-60p lg:w-30p h-3 mb-3'>
             <SSkeletonPulse1 />
           </div>
         )}
@@ -169,7 +169,7 @@ export const CharacteristicCard: React.FC<Prop> = ({
             {description}
           </p>
         ) : (
-          <div className='w-60v h-5 mb-3'>
+          <div className='w-80p lg:w-60p h-5 mb-3 mt-3'>
             <SSkeletonPulse1 />
           </div>
         )}
