@@ -1,9 +1,5 @@
 import * as React from 'react';
 
-// Wrapper
-import { Section } from '../components/wrapper/Section';
-import { SectionOverflow } from '../components/wrapper/SectionOverflow';
-
 // Component
 import { Header } from '../components/layout/Header';
 import { Explore } from '../components/containers/Explore';
@@ -22,36 +18,13 @@ const Home: NextPage<{}> = () => {
   return (
     <>
       <Header />
-      <SectionOverflow title='Explore Airbnb'>
-        <Explore />
-      </SectionOverflow>
-      <Section
-        title='Airbnb Plus places to stay'
-        phrase='A selection of places to stay verified for quality and design'>
-        <Plus />
-      </Section>
-      <Section
-        title='Introducing Airbnb Adventures'
-        phrase='Multi-day trips led by local experts—activities, meals, and stays
-        included'>
-        <Adventures />
-      </Section>
-      <Section title='Places to stay around the world'>
-        <Stay />
-      </Section>
-      <Section
-        title='Top-rated experiences'
-        phrase='Book activities led by local hosts on your next trip.'>
-        <TopRated />
-      </Section>
-      <Section title='Popular destinations in the United States'>
-        <Popular />
-      </Section>
-      <SectionOverflow
-        title='Featured Airbnb Plus destinations'
-        phrase='Browse beautiful places to stay with all the comforts of home, plus more'>
-        <Featured />
-      </SectionOverflow>
+      <Explore />
+      <Plus />
+      <Adventures />
+      <Stay />
+      <TopRated />
+      <Popular />
+      <Featured />
       <Footer />
     </>
   );

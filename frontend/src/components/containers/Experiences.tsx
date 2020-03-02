@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Components
-import { ExperienceCard } from '../presentational/ExperienceCard';
+import { ExperienceCard } from '../functions/ExperienceCard';
 
 // Images
 // High Resolution

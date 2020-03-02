@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import { AdventureCard } from '../../src/components/presentational/AdventureCard';
+import { AdventureCard } from '../../src/components/functions/AdventureCard';
 
 describe('AdventureCard', () => {
   it('should render correctly in "debug" mode', () => {

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import { TopRatedCard } from '../../src/components/presentational/TopRatedCard';
+import { TopRatedCard } from '../../src/components/functions/TopRatedCard';
 
 describe('TopRateCard', () => {
   it('should render correctly in "debug" mode', () => {

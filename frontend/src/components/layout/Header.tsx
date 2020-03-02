@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 
 // Component
-import { HeaderCard } from '../presentational/HeaderCard';
+import { HeaderCard } from '../functions/HeaderCard';
 import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
 

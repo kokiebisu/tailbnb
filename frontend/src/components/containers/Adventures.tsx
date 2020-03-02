@@ -6,8 +6,11 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import Media from 'react-media';
 
 // Component
-import { AdventureCard } from '../presentational/AdventureCard';
+import { AdventureCard } from '../functions/AdventureCard';
 import { ShowAll } from '../ShowAll';
+
+// Wrapper
+import { Section } from '../wrapper/Section';
 
 const GET_ADVENTURES = gql`
   query {
@@ -64,55 +67,66 @@ export const Adventures: any = () => {
 
   return (
     <>
-      <div className='flex items-start justify-start flex-wrap w-full'>
-        {loading ? (
-          <div className='flex justify-center items-center w-full py-20'>
-            <PulseLoader size={10} color={'#008489'} />
-          </div>
-        ) : (
-          data && (
-            <>
-              <Media
-                queries={{ small: '(min-width: 0px) and (max-width: 640px)' }}>
-                {(matches) =>
-                  matches.small ? (setCard(1), renderContent(data, card)) : null
-                }
-              </Media>
+      <Section
+        title='Introducing Airbnb Adventures'
+        phrase='Multi-day trips led by local experts—activities, meals, and stays
+        included'>
+        <div className='flex items-start justify-start flex-wrap w-full'>
+          {loading ? (
+            <div className='flex justify-center items-center w-full py-20'>
+              <PulseLoader size={10} color={'#008489'} />
+            </div>
+          ) : (
+            data && (
+              <>
+                <Media
+                  queries={{
+                    small: '(min-width: 0px) and (max-width: 640px)'
+                  }}>
+                  {(matches) =>
+                    matches.small
+                      ? (setCard(1), renderContent(data, card))
+                      : null
+                  }
+                </Media>
 
-              <Media
-                queries={{
-                  large: '(min-width: 641px) and (max-width: 767px)'
-                }}>
-                {(matches) =>
-                  matches.large && data.adventures
-                    ? (setCard(4), renderContent(data, card))
-                    : null
-                }
-              </Media>
-              <Media
-                queries={{
-                  xl: '(min-width: 768px) and (max-width: 1023px)'
-                }}>
-                {(matches) =>
-                  matches.xl && data.adventures
-                    ? (setCard(4), renderContent(data, card))
-                    : null
-                }
-              </Media>
-              <Media
-                queries={{
-                  twoxl: '(min-width: 1024px)'
-                }}>
-                {(matches) =>
-                  matches.twoxl ? (setCard(4), renderContent(data, card)) : null
-                }
-              </Media>
-            </>
-          )
-        )}
-      </div>
+                <Media
+                  queries={{
+                    large: '(min-width: 641px) and (max-width: 767px)'
+                  }}>
+                  {(matches) =>
+                    matches.large && data.adventures
+                      ? (setCard(4), renderContent(data, card))
+                      : null
+                  }
+                </Media>
+                <Media
+                  queries={{
+                    xl: '(min-width: 768px) and (max-width: 1023px)'
+                  }}>
+                  {(matches) =>
+                    matches.xl && data.adventures
+                      ? (setCard(4), renderContent(data, card))
+                      : null
+                  }
+                </Media>
+                <Media
+                  queries={{
+                    twoxl: '(min-width: 1024px)'
+                  }}>
+                  {(matches) =>
+                    matches.twoxl
+                      ? (setCard(4), renderContent(data, card))
+                      : null
+                  }
+                </Media>
+              </>
+            )
+          )}
+        </div>
 
-      <ShowAll title='Show all adventures' />
+        <ShowAll title='Show all adventures' />
+      </Section>
     </>
   );
 };

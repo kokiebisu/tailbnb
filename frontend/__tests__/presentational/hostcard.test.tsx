@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 // Component
-import { HostCard } from '../../src/components/presentational/HostCard';
+import { HostCard } from '../../src/components/functions/HostCard';
 
 describe('Host Card', () => {
   it('should render correctly in "debug" mode', () => {
