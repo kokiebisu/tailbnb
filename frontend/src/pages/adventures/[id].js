@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { gql } from 'apollo-boost';
 
 // Section
-import Banner from './functions/Banner';
+import Banner from './section/Banner';
 import WhatYouDo from './section/WhatYouDo';
 import Adventures from './section/Adventures';
 import Included from './section/Included';
@@ -23,6 +23,9 @@ import Safety from './section/Safety';
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { Footer } from '../../components/layout/Footer';
+
+// Function
+import KeepInMindCard from './functions/KeepInMindCard';
 
 // Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
@@ -85,26 +88,24 @@ const id = () => {
           <div
             style={{ fontFamily: 'airbnb-book' }}
             className='w-full md:w-8/12 px-4 text-gray-750'>
-            <div className='w-full flex pb-4 border-b border-gray-300'>
-              <div className='w-1/3'>
-                <h3
-                  style={{ fontFamily: 'airbnb-medium' }}
-                  className='text-2xl'>
-                  Cancellation policy
-                </h3>
-              </div>
-              <div className='w-2/3'>
-                <p style={{ fontFamily: 'airbnb-book' }}>
-                  Any experience can be cancelled and fully refunded within 24
-                  hours of purchase.
-                </p>
-                <button
-                  style={{ fontFamily: 'airbnb-medium' }}
-                  className='text-green-850 text-sm my-3'>
-                  Learn more
-                </button>
-              </div>
-            </div>
+            <KeepInMindCard
+              top={true}
+              title='Cancellation policy'
+              description='Any experience can be cancelled and fully refunded within 24 hours of
+          purchase.'
+            />
+            <KeepInMindCard
+              top={false}
+              title='Communication policy'
+              description='Always communicate through Airbnb. To protect your payment, never transfer money or communicate outside of the Airbnb website or app.'
+            />
+            <KeepInMindCard
+              top={false}
+              title='Guest requirements'
+              description='Up to 6 guests ages 18 and up can attend. Parents may also bring children under 2 years of age.
+
+              The activity level for this adventure is moderate.'
+            />
           </div>
         </div>
       </div>
