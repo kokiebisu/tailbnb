@@ -45,6 +45,7 @@
     "apollo-boost": "^0.4.7",
     "autodll-webpack-plugin": "^0.4.2",
     "axios": "^0.19.2",
+    "cuid": "^2.1.8",
     "graphql": "^14.6.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.2.1",

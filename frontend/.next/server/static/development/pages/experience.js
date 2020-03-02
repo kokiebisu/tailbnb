@@ -2010,11 +2010,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _functions_ExperienceCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/ExperienceCard */ "./src/components/functions/ExperienceCard.tsx");
 /* harmony import */ var _wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../wrapper/ExploreSectionOverflow */ "./src/components/wrapper/ExploreSectionOverflow.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! cuid */ "cuid");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Experiences.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Components
 
  // Wrapper
+
 
  // Images
 // High Resolution
@@ -2045,35 +2048,35 @@ const Experiences = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_ExploreSectionOverflow__WEBPACK_IMPORTED_MODULE_2__["ExploreSectionOverflow"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: undefined
   }, __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
     className: "scrollable sm:inset-x-0 flex items-start justify-startpy-2 w-featured md:w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: undefined
   }, featureds.map(({
@@ -2082,11 +2085,18 @@ const Experiences = () => {
     type,
     description
   }, index) => {
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: cuid__WEBPACK_IMPORTED_MODULE_3___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: undefined
+    }, __jsx("div", {
       className: "w-80 lg:w-1/3 pb-5 mr-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 57
       },
       __self: undefined
     }, __jsx(_functions_ExperienceCard__WEBPACK_IMPORTED_MODULE_1__["ExperienceCard"], {
@@ -2098,10 +2108,10 @@ const Experiences = () => {
       description: description,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 58
       },
       __self: undefined
-    }));
+    })));
   })))))));
 };
 
@@ -2127,6 +2137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _functions_HostCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../functions/HostCard */ "./src/components/functions/HostCard.tsx");
 /* harmony import */ var _wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../wrapper/ExploreSection */ "./src/components/wrapper/ExploreSection.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! cuid */ "cuid");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Hosts.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -2135,6 +2147,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Components
 
  // Wrapper
+
 
 
 const experiencedata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
@@ -2159,14 +2172,14 @@ const Hosts = () => {
     title: "Meet hosts around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2174,14 +2187,14 @@ const Hosts = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: undefined
   })) : __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: undefined
   }, data && data.experiences.map(({
@@ -2191,11 +2204,18 @@ const Hosts = () => {
     country,
     img
   }) => {
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: cuid__WEBPACK_IMPORTED_MODULE_6___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: undefined
+    }, __jsx("div", {
       className: "md:w-1/4 sm:w-1/3 w-1/2 pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 56
       },
       __self: undefined
     }, __jsx(_functions_HostCard__WEBPACK_IMPORTED_MODULE_4__["HostCard"], {
@@ -2206,10 +2226,10 @@ const Hosts = () => {
       country: country,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 57
       },
       __self: undefined
-    }));
+    })));
   }))));
 };
 
@@ -3184,6 +3204,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "cuid":
+/*!***********************!*\
+  !*** external "cuid" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("cuid");
 
 /***/ }),
 
