@@ -2266,6 +2266,7 @@ const Adventures = () => {
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    key: 1,
     queries: {
       small: '(min-width: 0px) and (max-width: 640px)'
     },
@@ -2275,37 +2276,40 @@ const Adventures = () => {
     },
     __self: undefined
   }, matches => matches.small ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    key: 2,
     queries: {
       large: '(min-width: 641px) and (max-width: 767px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 94
     },
     __self: undefined
   }, matches => matches.large && data.adventures ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    key: 3,
     queries: {
       xl: '(min-width: 768px) and (max-width: 1023px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 106
     },
     __self: undefined
   }, matches => matches.xl && data.adventures ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    key: 4,
     queries: {
       twoxl: '(min-width: 1024px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 117
     },
     __self: undefined
   }, matches => matches.twoxl ? (setCard(4), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 133
     },
     __self: undefined
   })));
@@ -2325,10 +2329,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Explore", function() { return Explore; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_ExploreCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/ExploreCard */ "./src/components/functions/ExploreCard.tsx");
-/* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cuid */ "cuid");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/ExploreCard */ "./src/components/functions/ExploreCard.tsx");
+/* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Explore.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+ // Dependency
+
  // Components
 
  // Wrapper
@@ -2353,62 +2362,68 @@ const explores = [{
   title: 'Adventure'
 }];
 const Explore = () => {
-  return __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_2__["SectionOverflow"], {
+  return __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__["SectionOverflow"], {
     title: "Explore Airbnb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 41
     },
     __self: undefined
   }, __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx("div", {
     className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 45
     },
     __self: undefined
   }, explores.map(({
     img,
     title
-  }, index) => {
-    return __jsx("div", {
+  }) => {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: cuid__WEBPACK_IMPORTED_MODULE_1___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: undefined
+    }, __jsx("div", {
       className: "w-32 mr-4 sm:w-1/3 cursor-pointer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 49
       },
       __self: undefined
-    }, __jsx(_functions_ExploreCard__WEBPACK_IMPORTED_MODULE_1__["ExploreCard"], {
-      key: index,
+    }, __jsx(_functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__["ExploreCard"], {
       img: img,
       title: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 50
       },
       __self: undefined
-    }));
+    })));
   }))))));
 };
 
@@ -2430,12 +2445,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/FeaturedCard */ "./src/components/functions/FeaturedCard.tsx");
 /* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cuid */ "cuid");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Featured.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  // Components
 
  // Wrapper
+
 
  // Images
 // High Resolution
@@ -2480,14 +2498,14 @@ const Featured = () => {
     phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2495,35 +2513,35 @@ const Featured = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: undefined
   })) : __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: undefined
   }, __jsx("div", {
     className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: undefined
   }, featureds.map(({
@@ -2531,11 +2549,18 @@ const Featured = () => {
     verified,
     description
   }, index) => {
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+      key: cuid__WEBPACK_IMPORTED_MODULE_4___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74
+      },
+      __self: undefined
+    }, __jsx("div", {
       className: "w-80 lg:w-1/3 pb-5 mr-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 75
       },
       __self: undefined
     }, __jsx(_functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__["FeaturedCard"], {
@@ -2545,10 +2570,10 @@ const Featured = () => {
       description: description,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 76
       },
       __self: undefined
-    }));
+    })));
   })))))));
 };
 
@@ -2616,6 +2641,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _functions_Location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/Location */ "./src/components/functions/Location.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cuid */ "cuid");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -2623,6 +2650,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Components
 
  // Wrapper
+
 
 
 const Popular = () => {
@@ -2676,14 +2704,14 @@ const Popular = () => {
     title: "Popular destinations in the United States",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2691,25 +2719,32 @@ const Popular = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: undefined
   })) : __jsx("div", {
     className: "flex flex-wrap items-center justify-start w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 76
     },
     __self: undefined
   }, locations.map(({
     location,
     price
   }, index) => {
-    return __jsx("div", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+      key: cuid__WEBPACK_IMPORTED_MODULE_4___default()(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: undefined
+    }, __jsx("div", {
       className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 80
       },
       __self: undefined
     }, __jsx(_functions_Location__WEBPACK_IMPORTED_MODULE_2__["Location"], {
@@ -2718,10 +2753,10 @@ const Popular = () => {
       price: price,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 81
       },
       __self: undefined
-    }));
+    })));
   }))));
 };
 
@@ -2750,6 +2785,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! cuid */ "cuid");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -2761,6 +2798,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
  // Wrapper
+
 
 
 const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
@@ -2795,7 +2833,7 @@ const Stay = () => {
         className: "w-1/2 md:w-1/3 lg:w-1/4 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 53
         },
         __self: undefined
       }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_5__["StayCard"], {
@@ -2809,7 +2847,7 @@ const Stay = () => {
         picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         },
         __self: undefined
       })));
@@ -2823,21 +2861,21 @@ const Stay = () => {
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 77
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2845,59 +2883,94 @@ const Stay = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 78
     },
     __self: undefined
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_8___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: undefined
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       xs: '(min-width: 0px) and (max-width: 739px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 84
     },
     __self: undefined
-  }, matches => matches.xs ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.xs ? (setCard(1), renderContent(data, card)) : null)), __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_8___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: undefined
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       small: '(min-width: 740px) and (max-width: 987px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 94
     },
     __self: undefined
-  }, matches => matches.small ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.small ? (setCard(1), renderContent(data, card)) : null)), __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_8___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: undefined
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       large: '(min-width: 988px) and (max-width: 1299px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 106
     },
     __self: undefined
-  }, matches => matches.large ? (setCard(8), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.large ? (setCard(8), renderContent(data, card)) : null)), __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_8___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: undefined
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 118
     },
     __self: undefined
-  }, matches => matches.xl ? (setCard(8), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.xl ? (setCard(8), renderContent(data, card)) : null)), __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    key: cuid__WEBPACK_IMPORTED_MODULE_8___default()(),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: undefined
+  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     queries: {
       twoxl: '(min-width: 1530px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 130
     },
     __self: undefined
-  }, matches => matches.twoxl ? (setCard(8), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, matches => matches.twoxl ? (setCard(8), renderContent(data, card)) : null)))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 146
     },
     __self: undefined
   })));
@@ -3195,6 +3268,7 @@ const ExploreCard = ({
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: `/${title.toLowerCase()}/index.tsx`,
+    as: `/${title.toLowerCase()}`,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -3204,7 +3278,7 @@ const ExploreCard = ({
     className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx("img", {
@@ -3212,14 +3286,14 @@ const ExploreCard = ({
     className: "h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: undefined
   }), __jsx("p", {
     className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: undefined
   }, title))));
@@ -6425,6 +6499,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "cuid":
+/*!***********************!*\
+  !*** external "cuid" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("cuid");
 
 /***/ }),
 

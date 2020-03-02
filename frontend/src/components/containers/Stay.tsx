@@ -11,6 +11,7 @@ import { ShowAll } from '../ShowAll';
 
 // Wrapper
 import { Section } from '../wrapper/Section';
+import cuid from 'cuid';
 
 const GET_STAYS = gql`
   query {
@@ -79,50 +80,64 @@ export const Stay: any = () => {
           ) : (
             data && (
               <>
-                <Media
-                  queries={{ xs: '(min-width: 0px) and (max-width: 739px)' }}>
-                  {(matches) =>
-                    matches.xs ? (setCard(1), renderContent(data, card)) : null
-                  }
-                </Media>
-                <Media
-                  queries={{
-                    small: '(min-width: 740px) and (max-width: 987px)'
-                  }}>
-                  {(matches) =>
-                    matches.small
-                      ? (setCard(1), renderContent(data, card))
-                      : null
-                  }
-                </Media>
-                <Media
-                  queries={{
-                    large: '(min-width: 988px) and (max-width: 1299px)'
-                  }}>
-                  {(matches) =>
-                    matches.large
-                      ? (setCard(8), renderContent(data, card))
-                      : null
-                  }
-                </Media>
-                <Media
-                  queries={{
-                    xl: '(min-width: 1300px) and (max-width: 1529px)'
-                  }}>
-                  {(matches) =>
-                    matches.xl ? (setCard(8), renderContent(data, card)) : null
-                  }
-                </Media>
-                <Media
-                  queries={{
-                    twoxl: '(min-width: 1530px)'
-                  }}>
-                  {(matches) =>
-                    matches.twoxl
-                      ? (setCard(8), renderContent(data, card))
-                      : null
-                  }
-                </Media>
+                <React.Fragment key={cuid()}>
+                  <Media
+                    queries={{ xs: '(min-width: 0px) and (max-width: 739px)' }}>
+                    {(matches) =>
+                      matches.xs
+                        ? (setCard(1), renderContent(data, card))
+                        : null
+                    }
+                  </Media>
+                </React.Fragment>
+                <React.Fragment key={cuid()}>
+                  <Media
+                    queries={{
+                      small: '(min-width: 740px) and (max-width: 987px)'
+                    }}>
+                    {(matches) =>
+                      matches.small
+                        ? (setCard(1), renderContent(data, card))
+                        : null
+                    }
+                  </Media>
+                </React.Fragment>
+                <React.Fragment key={cuid()}>
+                  <Media
+                    queries={{
+                      large: '(min-width: 988px) and (max-width: 1299px)'
+                    }}>
+                    {(matches) =>
+                      matches.large
+                        ? (setCard(8), renderContent(data, card))
+                        : null
+                    }
+                  </Media>
+                </React.Fragment>
+                <React.Fragment key={cuid()}>
+                  <Media
+                    queries={{
+                      xl: '(min-width: 1300px) and (max-width: 1529px)'
+                    }}>
+                    {(matches) =>
+                      matches.xl
+                        ? (setCard(8), renderContent(data, card))
+                        : null
+                    }
+                  </Media>
+                </React.Fragment>
+                <React.Fragment key={cuid()}>
+                  <Media
+                    queries={{
+                      twoxl: '(min-width: 1530px)'
+                    }}>
+                    {(matches) =>
+                      matches.twoxl
+                        ? (setCard(8), renderContent(data, card))
+                        : null
+                    }
+                  </Media>
+                </React.Fragment>
               </>
             )
           )}

@@ -80,6 +80,7 @@ export const Adventures: any = () => {
             data && (
               <>
                 <Media
+                  key={1}
                   queries={{
                     small: '(min-width: 0px) and (max-width: 640px)'
                   }}>
@@ -91,6 +92,7 @@ export const Adventures: any = () => {
                 </Media>
 
                 <Media
+                  key={2}
                   queries={{
                     large: '(min-width: 641px) and (max-width: 767px)'
                   }}>
@@ -100,7 +102,9 @@ export const Adventures: any = () => {
                       : null
                   }
                 </Media>
+
                 <Media
+                  key={3}
                   queries={{
                     xl: '(min-width: 768px) and (max-width: 1023px)'
                   }}>
@@ -111,6 +115,7 @@ export const Adventures: any = () => {
                   }
                 </Media>
                 <Media
+                  key={4}
                   queries={{
                     twoxl: '(min-width: 1024px)'
                   }}>
