@@ -13,7 +13,6 @@ interface Props {
 }
 
 const MyApp: React.FC<Props> = ({ Component, pageProps, apollo }) => {
-  console.log(typeof apollo);
   return (
     <>
       <ApolloProvider client={apollo}>
