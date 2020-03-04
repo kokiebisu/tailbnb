@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -616,21 +616,24 @@ const Banner = () => {
     },
     __self: undefined
   }))), __jsx("div", {
-    className: "w-full lg:max-w-6xl h-1/2 flex justify-start items-start flex-wrap",
+    className: "bg-blue-500 w-full lg:max-w-6xl flex justify-start items-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full md:w-4/12 h-full",
+    className: "bg-red-500 w-full md:w-1/2 lg:w-4/12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
     },
     __self: undefined
   }, __jsx("div", {
-    className: "items-end justify-start pt-6 text-xs uppercase text-white",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "items-end justify-start pt-6 text-xs uppercase text-white mb-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 53
@@ -640,10 +643,10 @@ const Banner = () => {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full text-4xl text-white ",
+    className: "w-2/3 text-3xl text-white leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: undefined
   }, "Atlas Mountains Experience"), __jsx("p", {
@@ -653,14 +656,14 @@ const Banner = () => {
     className: "w-full text-white ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 64
     },
     __self: undefined
   }, "Marrakech, Morocco"), __jsx("div", {
     className: "flex justify-start text-white my-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 69
     },
     __self: undefined
   }, __jsx("p", {
@@ -669,14 +672,14 @@ const Banner = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 70
     },
     __self: undefined
   }, "5.0"), __jsx("div", {
     className: "h-3 w-3 mx-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: undefined
   }, __jsx("svg", {
@@ -689,27 +692,27 @@ const Banner = () => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: undefined
   }, __jsx("path", {
     d: "m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 77
     },
     __self: undefined
   }))), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 80
     },
     __self: undefined
   }, "(1)")), __jsx("div", {
     className: "flex justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx("div", {
@@ -719,7 +722,7 @@ const Banner = () => {
     className: "text-2xs mt-2 mr-2 mb-2 py-1 px-2 bg-gray-950 text-white uppercase rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 83
     },
     __self: undefined
   }, "Hiking"), __jsx("div", {
@@ -729,21 +732,21 @@ const Banner = () => {
     className: "text-2xs mt-2 mr-2 mb-2 py-1 px-2 bg-gray-950 text-white uppercase rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: undefined
   }, "Trekking"))), __jsx("div", {
-    className: "w-full md:w-8/12 h-full",
+    className: "w-1/2 md:1/2 lg:w-8/12 h-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 95
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-9/12 mt-4 ml-4",
+    className: "w-9/12 mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 96
     },
     __self: undefined
   }, __jsx("p", {
@@ -753,21 +756,28 @@ const Banner = () => {
     className: "text-white text-lg py-10",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 97
     },
     __self: undefined
-  }, "Trek & Cook with the berbers"), __jsx("div", {
+  }, "Trek & Cook with the berbers"))), __jsx("div", {
+    className: "bg-red-200 w-full lg:w-1/2  lg:w-8/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104
+    },
+    __self: undefined
+  }, __jsx("div", {
     className: "w-full flex justify-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 105
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 106
     },
     __self: undefined
   }, __jsx(_functions_BannerCard__WEBPACK_IMPORTED_MODULE_1__["BannerCard"], {
@@ -775,7 +785,7 @@ const Banner = () => {
     value: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 107
     },
     __self: undefined
   }), __jsx(_functions_BannerCard__WEBPACK_IMPORTED_MODULE_1__["BannerCard"], {
@@ -783,14 +793,14 @@ const Banner = () => {
     value: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 108
     },
     __self: undefined
   })), __jsx("div", {
     className: "flex w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 110
     },
     __self: undefined
   }, __jsx(_functions_BannerCard__WEBPACK_IMPORTED_MODULE_1__["BannerCard"], {
@@ -798,7 +808,7 @@ const Banner = () => {
     value: "moderate",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 111
     },
     __self: undefined
   }), __jsx(_functions_BannerCard__WEBPACK_IMPORTED_MODULE_1__["BannerCard"], {
@@ -806,10 +816,10 @@ const Banner = () => {
     value: "English",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 112
     },
     __self: undefined
-  }))))))));
+  })))))));
 };
 
 /***/ }),
@@ -2121,7 +2131,7 @@ const WhatYouDo = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    className: "px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -2131,41 +2141,48 @@ const WhatYouDo = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    className: "md:w-4/12 md:h-full ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: undefined
-  }, "What you'll do"), __jsx("div", {
+  }, __jsx("p", {
+    className: "w-2/3 text-xl mb-12 md:mb-0 md:text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "What you'll do")), __jsx("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
+    className: "w-full md:w-8/12 text-gray-750 text-lg ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: undefined
   }, __jsx("p", {
     className: "mb-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: undefined
   }, "Leave early from Marrakech and head to the Tinzert & Ouirgane for a 2 days Trek the village is Tucked in the mystical and peaceful foothills of the High Atlas Mountains, in the heart of the majestic Toubkal National Park lays the picturesque village of Ouirgane."), __jsx("p", {
     className: "mb-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: undefined
   }, "Spectacular views of the Toubkal mountain range await all trekkers who take the time to discover this magical land. Be welcomed by the Berber locals and discover true Moroccan hospitality as you step into a world not your own. Perfect for individuals and families alike this trek will be sure to delight the senses and cultivate unforgettable moments and memories."), __jsx("p", {
     className: "mb-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: undefined
   }, "During the two days trek you will get the chance to learn howto cook certain dishes in addition to tea making ceremony"))));
@@ -4653,7 +4670,7 @@ const id = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*********************************************!*\
   !*** multi ./src/pages/adventures/[id].tsx ***!
   \*********************************************/
