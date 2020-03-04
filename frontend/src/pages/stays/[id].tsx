@@ -33,7 +33,7 @@ import { CheckInCard } from '../../components/stays/functions/CheckInCard';
 import { HostedBy } from '../../components/stays/functions/HostedBy';
 
 // Next
-import { NextPage } from 'next';
+// import { NextPage } from 'next';
 
 // Images
 const detail2 = require('../../../public/img/high/staydetail2.jpg');
@@ -72,7 +72,7 @@ const GET_STAY = gql`
   }
 `;
 
-const id: NextPage = () => {
+const id: () => string | JSX.Element = () => {
   const router = useRouter();
   const { loading, data } = useQuery(GET_STAY, {
     variables: {

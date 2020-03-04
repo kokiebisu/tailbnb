@@ -23,6 +23,9 @@ import { KeepExploring } from '../../components/adventures/containers/KeepExplor
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { Footer } from '../../components/layout/Footer';
 
+// Next
+// import { NextPage } from 'next';
+
 const GET_ADVENTURE = gql`
   query Adventure($id: ID!) {
     adventure(where: { id: $id }) {
@@ -35,7 +38,7 @@ const GET_ADVENTURE = gql`
   }
 `;
 
-export default () => {
+const id: () => string | JSX.Element = () => {
   const router = useRouter();
   const { loading, error, data } = useQuery(GET_ADVENTURE, {
     variables: {
@@ -48,10 +51,11 @@ export default () => {
   return (
     <>
       <Head>
+        {console.log(data)}
         {loading ? (
           <title>Vacation Rentals, Homes, Experiences & Places</title>
         ) : (
-          data && <title>{data.adventure.name}</title>
+          data.adventure && <title>{data.adventure.title}</title>
         )}
 
         <meta
@@ -60,19 +64,25 @@ export default () => {
         />
         <link rel='icon' type='image/x-icon' href='/img/high/favicon.ico' />
       </Head>
-      <ExploreHeader type='stay' mode='dark' />
-      <Banner />
-      <WhatYouDo />
-      <Adventures />
-      <Included />
-      <Itinerary />
-      <Host />
-      <Availability />
-      <Reviews />
-      <Safety />
-      <KeepInMind />
-      <KeepExploring />
-      <Footer />
+      {data && (
+        <>
+          <ExploreHeader type='stay' mode='dark' />
+          <Banner />
+          <WhatYouDo />
+          <Adventures />
+          <Included />
+          <Itinerary />
+          <Host />
+          <Availability />
+          <Reviews />
+          <Safety />
+          <KeepInMind />
+          <KeepExploring />
+          <Footer />
+        </>
+      )}
     </>
   );
 };
+
+export default id;

@@ -3,11 +3,51 @@ import * as React from 'react';
 // Function
 import { BannerCard } from '../functions/BannerCard';
 
+// Image
+
 export const Banner: React.FC<{}> = () => {
   return (
     <div className='w-full bg-black h-80v flex justify-center'>
-      <div className='w-full max-w-6xl h-full'>
-        <div className='bg-red-500 h-1/2'> hello</div>
+      <div className='px-16 w-full xl:px-0 max-w-6xl pt-12'>
+        <div className='w-full flex'>
+          <div className='w-2/7 border-r-4 border-white relative bg-cover bg-center overflow-hidden'>
+            <img
+              className='h-full w-full'
+              src='https://a0.muscache.com/im/pictures/a5845dc3-6d54-4864-a383-4dffbc16c20e.jpg?aki_policy=exp_md'
+              alt=''
+            />
+          </div>
+          <div className='w-2/7 border-r-4 border-white relative overflow-hidden'>
+            <img
+              className='h-full object-cover'
+              src='https://a0.muscache.com/im/pictures/2cde86ed-9fa5-4776-952a-c83e0afda996.jpg?aki_policy=exp_md'
+              alt=''
+            />
+          </div>
+          <div className='border-white w-1/7 relative overflow-hidden'>
+            <div className='w-full bg-blue-500 h-1/2'>
+              <img
+                className='h-full object-cover'
+                src='https://a0.muscache.com/im/pictures/lombard/MtTemplate-1317456-media_library/original/45cba600-ef28-4667-823e-453c31944b45.jpeg?aki_policy=exp_md'
+                alt=''
+              />
+            </div>
+            <div className='w-full bg-blue-300 h-1/2'>
+              <img
+                className='h-full object-cover'
+                src='https://a0.muscache.com/im/pictures/lombard/MtTemplate-1317456-media_library/original/5d0cbc89-ed65-4063-9ec2-83eb7690bbd7.jpeg?aki_policy=exp_md'
+                alt=''
+              />
+            </div>
+          </div>
+          <div className='rounded border-l-4 border-white w-2/7 relative overflow-hidden'>
+            <img
+              className='h-full object-cover'
+              src='https://a0.muscache.com/im/pictures/4177e9be-7c5e-4c05-9b79-f4afd144a389.jpg?aki_policy=exp_md'
+              alt=''
+            />
+          </div>
+        </div>
         <div className='w-full lg:max-w-6xl h-1/2 flex justify-start items-start flex-wrap'>
           <div className='w-full md:w-4/12 h-full'>
             <div className='items-end justify-start pt-6 text-xs uppercase text-white'>
