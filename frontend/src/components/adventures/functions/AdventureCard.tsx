@@ -152,35 +152,43 @@ export const AdventureCard: React.FC<Props> = ({
     <>
       {position === 'first' ? (
         <div className='pt-4 md:pt-0 md:pb-4 w-full flex lg:block lg:w-1/3 pr-3'>
-          <div className='h-8 w-8 lg:mb-3 mb-10'>{renderIcon(icon)}</div>
+          <div className='h-8 w-8 lg:mb-3 mb-10 mr-3'>{renderIcon(icon)}</div>
           <p
             style={{ fontFamily: 'airbnb-bold' }}
             className='hidden lg:block my-1'>
             {title}
           </p>
-          <p className='text-sm mt-1 ml-4 lg:ml-0 lg:mt-0'>{description}</p>
+          <p className='text-sm md:text-base mt-1 md:-mt-1 lg:ml-0 lg:mt-0'>
+            {description}
+          </p>
         </div>
       ) : (
         <>
           {position === 'last' ? (
             <div className='pt-4 md:pt-0 md:pb-4 w-full flex lg:block lg:w-1/3 pr-3'>
-              <div className='h-8 w-8 lg:mb-3'>{renderIcon(icon)}</div>
+              <div className='h-8 w-8 lg:mb-3 mr-3'>{renderIcon(icon)}</div>
               <p
                 style={{ fontFamily: 'airbnb-bold' }}
                 className='hidden lg:block my-1'>
                 {title}
               </p>
-              <p className='text-sm mt-1 ml-4 lg:ml-0 lg:mt-0'>{description}</p>
+              <p className='text-sm md:text-base mt-1 md:-mt-1 lg:ml-0 lg:mt-0'>
+                {description}
+              </p>
             </div>
           ) : (
             <div className='pt-4 md:pt-0 md:pb-4 w-full flex lg:block lg:w-1/3 pr-3'>
-              <div className='h-8 w-8 lg:mb-3 mb-10'>{renderIcon(icon)}</div>
+              <div className='h-8 w-8 lg:mb-3 mb-10 mr-3'>
+                {renderIcon(icon)}
+              </div>
               <p
                 style={{ fontFamily: 'airbnb-bold' }}
                 className='hidden lg:block my-1'>
                 {title}
               </p>
-              <p className='text-sm mt-1 ml-4 lg:ml-0 lg:mt-0'>{description}</p>
+              <p className='text-sm md:text-base mt-1 md:-mt-1 lg:ml-0 lg:mt-0'>
+                {description}
+              </p>
             </div>
           )}
         </>

@@ -7,9 +7,9 @@ export const Adventures: React.FC<{}> = () => {
   return (
     <div className='w-full flex justify-center bg-gray-150'>
       <div className='px-4 md:px-16 max-w-6xl xl:px-0 w-full flex justify-center'>
-        <div className='w-full lg:max-w-6xl md:flex justify-start items-start flex-wrap py-16 lg:py-32'>
-          <div className='md:flex justify-center items-start'>
-            <div className='md:w-4/12 w-full pb-10 border-b border-gray-300 md:border-none'>
+        <div className='w-full lg:max-w-6xl md:flex justify-start items-start flex-wrap md:py-16 lg:py-32'>
+          <div className='py-12 md:py-0 md:flex justify-center items-start'>
+            <div className='pb-8 md:w-4/12 w-full md:pt-0 border-b border-gray-300 md:border-none'>
               <div
                 style={{ fontFamily: 'airbnb-bold' }}
                 className='md:w-4/12 h-full flex md:items-start lg:items-center'>

@@ -138,21 +138,21 @@ const Adventures = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl md:flex justify-start items-start flex-wrap py-16 lg:py-32",
+    className: "w-full lg:max-w-6xl md:flex justify-start items-start flex-wrap md:py-16 lg:py-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
   }, __jsx("div", {
-    className: "md:flex justify-center items-start",
+    className: "py-12 md:py-0 md:flex justify-center items-start",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: undefined
   }, __jsx("div", {
-    className: "md:w-4/12 w-full pb-10 border-b border-gray-300 md:border-none",
+    className: "pb-8 md:w-4/12 w-full md:pt-0 border-b border-gray-300 md:border-none",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -2156,7 +2156,7 @@ const WhatYouDo = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -2445,7 +2445,7 @@ const AdventureCard = ({
     },
     __self: undefined
   }, __jsx("div", {
-    className: "h-8 w-8 lg:mb-3 mb-10",
+    className: "h-8 w-8 lg:mb-3 mb-10 mr-3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 155
@@ -2462,7 +2462,7 @@ const AdventureCard = ({
     },
     __self: undefined
   }, title), __jsx("p", {
-    className: "text-sm mt-1 ml-4 lg:ml-0 lg:mt-0",
+    className: "text-sm md:text-base mt-1 md:-mt-1 lg:ml-0 lg:mt-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 161
@@ -2472,14 +2472,14 @@ const AdventureCard = ({
     className: "pt-4 md:pt-0 md:pb-4 w-full flex lg:block lg:w-1/3 pr-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 168
     },
     __self: undefined
   }, __jsx("div", {
-    className: "h-8 w-8 lg:mb-3",
+    className: "h-8 w-8 lg:mb-3 mr-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 169
     },
     __self: undefined
   }, renderIcon(icon)), __jsx("p", {
@@ -2489,28 +2489,28 @@ const AdventureCard = ({
     className: "hidden lg:block my-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 170
     },
     __self: undefined
   }, title), __jsx("p", {
-    className: "text-sm mt-1 ml-4 lg:ml-0 lg:mt-0",
+    className: "text-sm md:text-base mt-1 md:-mt-1 lg:ml-0 lg:mt-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 175
     },
     __self: undefined
   }, description)) : __jsx("div", {
     className: "pt-4 md:pt-0 md:pb-4 w-full flex lg:block lg:w-1/3 pr-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 180
     },
     __self: undefined
   }, __jsx("div", {
-    className: "h-8 w-8 lg:mb-3 mb-10",
+    className: "h-8 w-8 lg:mb-3 mb-10 mr-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 181
     },
     __self: undefined
   }, renderIcon(icon)), __jsx("p", {
@@ -2520,14 +2520,14 @@ const AdventureCard = ({
     className: "hidden lg:block my-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 184
     },
     __self: undefined
   }, title), __jsx("p", {
-    className: "text-sm mt-1 ml-4 lg:ml-0 lg:mt-0",
+    className: "text-sm md:text-base mt-1 md:-mt-1 lg:ml-0 lg:mt-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 189
     },
     __self: undefined
   }, description))));
