@@ -876,7 +876,7 @@ const Host = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-8 md:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -886,7 +886,7 @@ const Host = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    className: "text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -896,14 +896,14 @@ const Host = () => {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
+    className: "w-full md:w-8/12 md:px-4 text-gray-750 text-lg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: undefined
   }, __jsx("div", {
-    className: "h-32 w-32 mb-12",
+    className: "my-10 h-32 w-32 md:mb-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
@@ -976,7 +976,7 @@ const Included = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-8 md:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -1090,7 +1090,7 @@ const Itinerary = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-4 md:px-16 w-full max-w-6xl flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full max-w-6xl flex justify-start items-start flex-wrap py-8 md:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -1905,7 +1905,7 @@ const WhatYouDo = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-8 md:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
