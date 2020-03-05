@@ -1642,7 +1642,7 @@ const Safety = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl mx-auto flex justify-start items-start flex-wrap h-full",
+    className: "px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -1652,14 +1652,14 @@ const Safety = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full ",
+    className: "w-full md:w-4/12 md:h-full ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex justify-start items-center h-full",
+    className: "mb-8 flex justify-start items-center h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -1681,7 +1681,7 @@ const Safety = () => {
     },
     __self: undefined
   })), __jsx("p", {
-    className: "text-3xl text-gray-750",
+    className: "text-2xl md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
@@ -1691,7 +1691,7 @@ const Safety = () => {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
+    className: "w-full md:w-8/12 md:pl-4 text-gray-750 text-lg ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
