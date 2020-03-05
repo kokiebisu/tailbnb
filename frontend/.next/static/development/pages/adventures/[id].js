@@ -19660,12 +19660,14 @@ var Itinerary = function Itinerary() {
     },
     __self: this
   }, __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    is_last: "false",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
   }), __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    is_last: "true",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -21419,15 +21421,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return __jsx("div", {
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var is_last = _ref.is_last;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, is_last === 'true' ? __jsx("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "px-5 text-gray-750 border-l border-gray-800 relative z-10",
+    className: "px-5 text-gray-750 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: this
   }, __jsx("div", {
@@ -21436,7 +21439,7 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
@@ -21444,12 +21447,12 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
       height: 7,
       width: 7,
       top: -7,
-      left: -3.6
+      left: -3.4
     },
     className: "absolute z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
   }, __jsx("svg", {
@@ -21458,47 +21461,47 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
     viewBox: "0 0 512 512",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: this
   }, __jsx("path", {
     d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: this
   }))))), __jsx("p", {
     className: "mb-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: this
   }, "Day 1"), __jsx("div", {
     className: "w-full md:flex justify-start items-start pb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: this
   }, __jsx("div", {
     className: "md:w-5/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
   }, __jsx("img", {
@@ -21507,14 +21510,14 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
     },
     __self: this
   })), __jsx("div", {
     className: "w-full md:w-7/12 md:pl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 43
     },
     __self: this
   }, __jsx("p", {
@@ -21524,14 +21527,14 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
     className: "pt-3 pb-2 md:pt-0 md:pb-0 text-base",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: this
   }, "Marrakech-Oughla - Tinzerte"), __jsx("p", {
     className: "text-base",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: this
   }, "Marrakech to imi oughlad small village situated 1,450m at the base of Toubkal. Here we begin the gentle accent."), __jsx("button", {
@@ -21541,10 +21544,134 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
     className: "text-green-850 text-sm mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: this
-  }, "Show more")))));
+  }, "Show more"))))) : __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "px-5 text-gray-750 border-l border-gray-800 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      marginBottom: 6
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      height: 7,
+      width: 7,
+      top: -7,
+      left: -3.6
+    },
+    className: "absolute",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }))))), __jsx("p", {
+    className: "mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, "Day 1"), __jsx("div", {
+    className: "w-full md:flex justify-start items-start pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "md:w-5/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "h-full w-full",
+    src: detail2,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "w-full md:w-7/12 md:pl-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "pt-3 pb-2 md:pt-0 md:pb-0 text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, "Marrakech-Oughla - Tinzerte"), __jsx("p", {
+    className: "text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, "Marrakech to imi oughlad small village situated 1,450m at the base of Toubkal. Here we begin the gentle accent."), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850 text-sm mt-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }, "Show more"))))));
 });
 {
   /* <div

@@ -16,8 +16,8 @@ export const Itinerary: React.FC<{}> = () => {
           Your itinerary
         </div>
         <div className='w-full md:w-8/12'>
-          <ItineraryCard />
-          <ItineraryCard />
+          <ItineraryCard is_last='false' />
+          <ItineraryCard is_last='true' />
         </div>
       </div>
     </div>
