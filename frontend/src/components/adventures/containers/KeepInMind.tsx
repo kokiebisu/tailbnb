@@ -9,8 +9,10 @@ export const KeepInMind: React.FC<{}> = () => {
       <div className='px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16'>
         <div
           style={{ fontFamily: 'airbnb-bold' }}
-          className='mb-8 md:mb-0 text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750'>
-          Things to keep in mind
+          className='mb-8 md:mb-0 w-full md:w-4/12 md:h-full'>
+          <p className='lg:w-2/3 lg:sticky top-0 text-2xl md:text-3xl text-gray-750'>
+            Things to keep in mind
+          </p>
         </div>
         <div
           style={{ fontFamily: 'airbnb-book' }}

@@ -27,7 +27,7 @@ export const ItineraryCard: React.FC<Props> = ({
               style={{
                 height: 7,
                 width: 7,
-                top: -7,
+                top: -6.5,
                 left: -3.4
               }}
               className='absolute z-50'>

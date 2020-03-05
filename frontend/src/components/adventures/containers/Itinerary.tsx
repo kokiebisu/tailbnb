@@ -9,12 +9,15 @@ export const Itinerary: React.FC<{}> = () => {
       <div className='px-4 md:px-16 w-full max-w-6xl flex justify-start items-start flex-wrap py-8 md:py-16'>
         <div
           style={{ fontFamily: 'airbnb-bold' }}
-          className='mb-16 text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750'>
-          Your itinerary
+          className='mb-16 w-full md:w-4/12 md:h-full'>
+          <p className='lg:sticky lg:top-0 text-2xl md:text-3xl text-gray-750'>
+            {' '}
+            Your itinerary
+          </p>
         </div>
         <div className='w-full md:w-8/12'>
           <ItineraryCard
-            is_last='false'
+            is_last={false}
             day={1}
             title='Meeting at 6pm'
             description='Pick up is at 6pm (18:00) from the main entrance of Clarion Hotel The Edge.'

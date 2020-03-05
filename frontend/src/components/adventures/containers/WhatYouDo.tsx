@@ -6,8 +6,8 @@ export const WhatYouDo: React.FC<{}> = () => {
       <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-8 md:py-16'>
         <div
           style={{ fontFamily: 'airbnb-bold' }}
-          className='md:w-4/12 md:h-full '>
-          <p className='w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750'>
+          className='md:w-4/12 md:h-full'>
+          <p className='lg:top-0 lg:sticky w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750'>
             What you'll do
           </p>
         </div>
