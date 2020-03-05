@@ -17,16 +17,30 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var Footer = function Footer() {
   return __jsx("div", {
-    className: "w-screen border-t border-gra-y-300",
+    className: "w-screen border-t border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: this
-  }, "Hello");
+  }, __jsx("div", {
+    className: " px-4 md:px-16 w-full max-w-6xl xl:px-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full bg-gray-500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "what")));
 };
 
 /***/ })
 
 })
-//# sourceMappingURL=[id].js.78683e2ce503995eef8b.hot-update.js.map
+//# sourceMappingURL=[id].js.96bbaa44761cd7d5213d.hot-update.js.map

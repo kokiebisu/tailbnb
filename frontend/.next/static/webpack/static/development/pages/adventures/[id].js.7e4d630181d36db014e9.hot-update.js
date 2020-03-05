@@ -20,13 +20,20 @@ var Footer = function Footer() {
     className: "w-screen border-t border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: this
-  }, "Hello");
+  }, __jsx("div", {
+    className: "bg-red-500 px-4 md:px-16 w-full max-w-6xl xl:px-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "what"));
 };
 
 /***/ })
 
 })
-//# sourceMappingURL=[id].js.c1274a5dd43046fd49a8.hot-update.js.map
+//# sourceMappingURL=[id].js.7e4d630181d36db014e9.hot-update.js.map
