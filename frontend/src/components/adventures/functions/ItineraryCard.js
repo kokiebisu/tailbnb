@@ -3,7 +3,7 @@ import React from 'react';
 // Images
 const detail2 = require('../../../../public/img/high/staydetail2.jpg');
 
-export default ({ is_last }) => {
+export default ({ is_last, day, title, description }) => {
   return (
     <>
       {is_last === 'true' ? (
@@ -34,7 +34,7 @@ export default ({ is_last }) => {
               </svg>
             </div>
 
-            <p className='mb-2'>Day 1</p>
+            <p className='mb-2'>Day {day}</p>
             <div className='w-full md:flex justify-start items-start pb-8'>
               <div className='md:w-5/12'>
                 <img className='h-full w-full' src={detail2} alt='' />
@@ -44,12 +44,9 @@ export default ({ is_last }) => {
                 <p
                   style={{ fontFamily: 'airbnb-bold' }}
                   className='pt-3 pb-2 md:pt-0 md:pb-0 text-base'>
-                  Marrakech-Oughla - Tinzerte
+                  {title}
                 </p>
-                <p className='text-base'>
-                  Marrakech to imi oughlad small village situated 1,450m at the
-                  base of Toubkal. Here we begin the gentle accent.
-                </p>
+                <p className='text-base'>{description}</p>
                 <button
                   style={{ fontFamily: 'airbnb-bold' }}
                   className='text-green-850 text-sm mt-4'>
@@ -87,7 +84,7 @@ export default ({ is_last }) => {
               </svg>
             </div>
 
-            <p className='mb-2'>Day 1</p>
+            <p className='mb-2'>Day {day}</p>
             <div className='w-full md:flex justify-start items-start pb-8'>
               <div className='md:w-5/12'>
                 <img className='h-full w-full' src={detail2} alt='' />
@@ -97,12 +94,9 @@ export default ({ is_last }) => {
                 <p
                   style={{ fontFamily: 'airbnb-bold' }}
                   className='pt-3 pb-2 md:pt-0 md:pb-0 text-base'>
-                  Marrakech-Oughla - Tinzerte
+                  {title}
                 </p>
-                <p className='text-base'>
-                  Marrakech to imi oughlad small village situated 1,450m at the
-                  base of Toubkal. Here we begin the gentle accent.
-                </p>
+                <p className='text-base'>{description}</p>
                 <button
                   style={{ fontFamily: 'airbnb-bold' }}
                   className='text-green-850 text-sm mt-4'>

@@ -16,8 +16,18 @@ export const Itinerary: React.FC<{}> = () => {
           Your itinerary
         </div>
         <div className='w-full md:w-8/12'>
-          <ItineraryCard is_last='false' />
-          <ItineraryCard is_last='true' />
+          <ItineraryCard
+            is_last='false'
+            day={1}
+            title='Meeting at 6pm'
+            description='Pick up is at 6pm (18:00) from the main entrance of Clarion Hotel The Edge.'
+          />
+          <ItineraryCard
+            is_last='true'
+            day={2}
+            title='Hiking (summer), Snowshoeing (winter)'
+            description='After the breakfast, we will do hiking in surrounding nature'
+          />
         </div>
       </div>
     </div>
