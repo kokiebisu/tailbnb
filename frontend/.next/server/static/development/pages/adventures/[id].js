@@ -1073,275 +1073,67 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Itinerary", function() { return Itinerary; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/ItineraryCard */ "./src/components/adventures/functions/ItineraryCard.js");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/adventures/containers/Itinerary.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Images
+ // Functions
 
-const detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
+ // // Images
+// const detail2 = require('../../../../public/img/high/staydetail2.jpg');
 
 const Itinerary = () => {
   return __jsx("div", {
     className: "w-full flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 11
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full max-w-6xl flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx("div", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    className: "mb-16 text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 13
     },
     __self: undefined
   }, "Your itinerary"), __jsx("div", {
     className: "w-full md:w-8/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: undefined
-  }, __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "px-5 text-gray-750 border-l border-gray-800 relative ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }, __jsx("div", {
-    style: {
-      height: 7,
-      width: 7,
-      top: -7,
-      left: -3.6
-    },
-    className: "absolute",
+  }, __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    is_last: "false",
+    day: 1,
+    title: "Meeting at 6pm",
+    description: "Pick up is at 6pm (18:00) from the main entrance of Clarion Hotel The Edge.",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: undefined
-  }, __jsx("svg", {
-    className: "h-full w-full",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512 512",
+  }), __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    is_last: "true",
+    day: 2,
+    title: "Hiking (summer), Snowshoeing (winter)",
+    description: "After the breakfast, we will do hiking in surrounding nature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: undefined
-  }))))), __jsx("p", {
-    className: "mb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }, "Day 1"), __jsx("div", {
-    className: "w-full flex justify-start items-start pb-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-5/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-full w-full",
-    src: detail2,
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "w-7/12 pl-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-base",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }, "Marrakech-Oughla - Tinzerte"), __jsx("p", {
-    className: "text-base",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: undefined
-  }, "Marrakech to imi oughlad small village situated 1,450m at the base of Toubkal. Here we begin the gentle accent."), __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-green-850 text-sm mt-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }, "Show more"))), __jsx("div", {
-    style: {
-      height: 7,
-      width: 7,
-      bottom: -7,
-      left: -3.6
-    },
-    className: "absolute z-100",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: undefined
-  }, __jsx("svg", {
-    className: "h-full w-full",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512 512",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: undefined
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: undefined
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: undefined
-  })))))), __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "relative px-5 text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: undefined
-  }, __jsx("p", {
-    className: "mb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: undefined
-  }, "Day 2"), __jsx("div", {
-    className: "w-full flex justify-start items-start pb-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-5/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-full w-full",
-    src: detail2,
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "w-7/12 pl-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-base",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: undefined
-  }, "Tizerte - Ouirgane - Marrakech"), __jsx("p", {
-    className: "text-base",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: undefined
-  }, "The day's trek will take you through the villages of Imariren Noufla and Anraz. A picnic style lunch will be enjoyed.."), __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-green-850 text-sm mt-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: undefined
-  }, "Show more")))))));
+  }))));
 };
 
 /***/ }),
@@ -3072,6 +2864,301 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     __self: undefined
   }, "2 breakfasts, 2 dinners, 1 lunch, snacks, dessert")));
 });
+
+/***/ }),
+
+/***/ "./src/components/adventures/functions/ItineraryCard.js":
+/*!**************************************************************!*\
+  !*** ./src/components/adventures/functions/ItineraryCard.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/adventures/functions/ItineraryCard.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // Images
+
+const detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jpg */ "./public/img/high/staydetail2.jpg");
+
+/* harmony default export */ __webpack_exports__["default"] = (({
+  is_last,
+  day,
+  title,
+  description
+}) => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, is_last === 'true' ? __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "px-5 text-gray-750 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      marginBottom: 6
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      height: 7,
+      width: 7,
+      top: -7,
+      left: -3.4
+    },
+    className: "absolute z-50",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }))))), __jsx("p", {
+    className: "mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, "Day ", day), __jsx("div", {
+    className: "w-full md:flex justify-start items-start pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "md:w-5/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "h-full w-full",
+    src: detail2,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "w-full md:w-7/12 md:pl-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "pt-3 pb-2 md:pt-0 md:pb-0 text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }, title), __jsx("p", {
+    className: "text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: undefined
+  }, description), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850 text-sm mt-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }, "Show more"))))) : __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "px-5 text-gray-750 border-l border-gray-800 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      marginBottom: 6
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      height: 7,
+      width: 7,
+      top: -7,
+      left: -3.6
+    },
+    className: "absolute",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: undefined
+  }))))), __jsx("p", {
+    className: "mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: undefined
+  }, "Day ", day), __jsx("div", {
+    className: "w-full md:flex justify-start items-start pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "md:w-5/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "h-full w-full",
+    src: detail2,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "w-full md:w-7/12 md:pl-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "pt-3 pb-2 md:pt-0 md:pb-0 text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: undefined
+  }, title), __jsx("p", {
+    className: "text-base",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: undefined
+  }, description), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-green-850 text-sm mt-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: undefined
+  }, "Show more"))))));
+});
+{
+  /* <div
+        style={{ height: 7, width: 7, bottom: -7, left: -3.6 }}
+        className='absolute z-100'>
+        <svg
+          className='h-full w-full'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 512 512'>
+          <g>
+            <g>
+              <path
+                d='M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z
+  	 M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z'
+              />
+            </g>
+          </g>
+        </svg>
+      </div> */
+}
 
 /***/ }),
 
