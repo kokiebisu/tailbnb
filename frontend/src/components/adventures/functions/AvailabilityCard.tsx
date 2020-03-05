@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-export default () => {
+export const AvailabilityCard: React.FC<{}> = () => {
   return (
     <div className='w-70v md:w-40v lg:w-72 flex justify-start items-start flex-wrap'>
       <div className='w-full border border-gray-300 bg-white shadow-md rounded-xl mr-4'>
