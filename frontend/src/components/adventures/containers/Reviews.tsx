@@ -66,7 +66,12 @@ export const Reviews: React.FC<{}> = () => {
             </div>
           </div>
         </div>
-        <ReviewCard />
+        <div className='md:w-8/12'>
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+        </div>
       </div>
     </div>
   );

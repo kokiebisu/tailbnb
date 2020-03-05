@@ -19938,13 +19938,38 @@ var Reviews = function Reviews() {
       lineNumber: 63
     },
     __self: this
-  })))))), __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })))))), __jsx("div", {
+    className: "md:w-8/12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 69
     },
     __self: this
-  })));
+  }, __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }), __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }), __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }), __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }))));
 };
 
 /***/ }),
@@ -21618,7 +21643,7 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "pt-12 pb-4 md:pt-0 md:pb-0 w-full md:w-8/12 text-gray-750 border-b border-gray-300 md:border-none",
+    className: "pt-12 pb-4 md:pt-0 md:pb-0 w-full text-gray-750 border-b border-gray-300 md:border-none",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -21657,6 +21682,7 @@ var detail2 = __webpack_require__(/*! ../../../../public/img/high/staydetail2.jp
     style: {
       fontFamily: 'airbnb-bold'
     },
+    className: "pb-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17

@@ -8,13 +8,13 @@ export default () => {
   return (
     <div
       style={{ fontFamily: 'airbnb-book' }}
-      className='pt-12 pb-4 md:pt-0 md:pb-0 w-full md:w-8/12 text-gray-750 border-b border-gray-300 md:border-none'>
+      className='pt-12 pb-4 md:pt-0 md:pb-0 w-full text-gray-750 border-b border-gray-300 md:border-none'>
       <div className='flex mb-6'>
         <div className='h-12 w-12'>
           <img className='w-full h-full rounded-full' src={detail2} />
         </div>
         <div className='ml-4'>
-          <p style={{ fontFamily: 'airbnb-bold' }}>
+          <p style={{ fontFamily: 'airbnb-bold' }} className='pb-1'>
             Marja ·{' '}
             <span style={{ fontFamily: 'airbnb-book' }}>February 2020</span>
           </p>
