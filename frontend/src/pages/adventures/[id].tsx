@@ -51,7 +51,6 @@ const id: () => string | JSX.Element = () => {
   return (
     <>
       <Head>
-        {console.log(data)}
         {loading ? (
           <title>Vacation Rentals, Homes, Experiences & Places</title>
         ) : (
