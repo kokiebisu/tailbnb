@@ -19482,6 +19482,34 @@ var DateCheck = function DateCheck() {
 
 /***/ }),
 
+/***/ "./src/components/adventures/containers/Footer.tsx":
+/*!*********************************************************!*\
+  !*** ./src/components/adventures/containers/Footer.tsx ***!
+  \*********************************************************/
+/*! exports provided: Footer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/adventures/containers/Footer.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+var Footer = function Footer() {
+  return __jsx("div", {
+    className: "w-screen border-t border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, "Hello");
+};
+
+/***/ }),
+
 /***/ "./src/components/adventures/containers/Host.tsx":
 /*!*******************************************************!*\
   !*** ./src/components/adventures/containers/Host.tsx ***!
@@ -23026,7 +23054,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_adventures_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/adventures/containers/KeepInMind */ "./src/components/adventures/containers/KeepInMind.tsx");
 /* harmony import */ var _components_adventures_containers_KeepExploring__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/adventures/containers/KeepExploring */ "./src/components/adventures/containers/KeepExploring.tsx");
 /* harmony import */ var _components_adventures_containers_DateCheck__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/adventures/containers/DateCheck */ "./src/components/adventures/containers/DateCheck.tsx");
-/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
+/* harmony import */ var _components_adventures_containers_Footer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/adventures/containers/Footer */ "./src/components/adventures/containers/Footer.tsx");
+/* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.tsx");
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/[id].tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
@@ -23059,10 +23088,9 @@ function _templateObject() {
 
 
 
+
  // Layout
 
- // Next
-// import { NextPage } from 'next';
 
 var GET_ADVENTURE = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_5__["gql"])(_templateObject());
 
@@ -23082,19 +23110,19 @@ var id = function id() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 51
     },
     __self: this
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: this
   }, "Vacation Rentals, Homes, Experiences & Places") : data.adventure && __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 55
     },
     __self: this
   }, data.adventure.title), __jsx("meta", {
@@ -23102,7 +23130,7 @@ var id = function id() {
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 58
     },
     __self: this
   }), __jsx("link", {
@@ -23111,87 +23139,93 @@ var id = function id() {
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 62
     },
     __self: this
-  })), data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_18__["ExploreHeader"], {
+  })), data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_19__["ExploreHeader"], {
     type: "stay",
     mode: "dark",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 66
     },
     __self: this
   }), __jsx(_components_adventures_containers_Banner__WEBPACK_IMPORTED_MODULE_6__["Banner"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 67
     },
     __self: this
   }), __jsx(_components_adventures_containers_WhatYouDo__WEBPACK_IMPORTED_MODULE_7__["WhatYouDo"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 68
     },
     __self: this
   }), __jsx(_components_adventures_containers_Adventures__WEBPACK_IMPORTED_MODULE_8__["Adventures"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 69
     },
     __self: this
   }), __jsx(_components_adventures_containers_Included__WEBPACK_IMPORTED_MODULE_9__["Included"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 70
     },
     __self: this
   }), __jsx(_components_adventures_containers_Itinerary__WEBPACK_IMPORTED_MODULE_10__["Itinerary"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 71
     },
     __self: this
   }), __jsx(_components_adventures_containers_Host__WEBPACK_IMPORTED_MODULE_11__["Host"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 72
     },
     __self: this
   }), __jsx(_components_adventures_containers_Availability__WEBPACK_IMPORTED_MODULE_12__["Availability"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 73
     },
     __self: this
   }), __jsx(_components_adventures_containers_Reviews__WEBPACK_IMPORTED_MODULE_13__["Reviews"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 74
     },
     __self: this
   }), __jsx(_components_adventures_containers_Safety__WEBPACK_IMPORTED_MODULE_14__["Safety"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 75
     },
     __self: this
   }), __jsx(_components_adventures_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__["KeepInMind"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 76
     },
     __self: this
   }), __jsx(_components_adventures_containers_KeepExploring__WEBPACK_IMPORTED_MODULE_16__["KeepExploring"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 77
+    },
+    __self: this
+  }), __jsx(_components_adventures_containers_Footer__WEBPACK_IMPORTED_MODULE_18__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
     },
     __self: this
   }), __jsx(_components_adventures_containers_DateCheck__WEBPACK_IMPORTED_MODULE_17__["DateCheck"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 79
     },
     __self: this
   })));
