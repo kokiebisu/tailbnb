@@ -8,7 +8,7 @@ import { BannerCard } from '../functions/BannerCard';
 export const Banner: React.FC<{}> = () => {
   return (
     <div className='w-full bg-black h-80v flex justify-center'>
-      <div className='px-16 w-full xl:px-0 max-w-6xl pt-12'>
+      <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 pt-12'>
         <div className='w-full flex'>
           <div className='w-2/7 border-r-4 border-white relative bg-cover bg-center overflow-hidden'>
             <img
@@ -48,8 +48,8 @@ export const Banner: React.FC<{}> = () => {
             />
           </div>
         </div>
-        <div className='bg-blue-500 w-full lg:max-w-6xl flex justify-start items-start flex-wrap'>
-          <div className='bg-red-500 w-full md:w-1/2 lg:w-4/12'>
+        <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap'>
+          <div className='w-full md:w-1/2 lg:w-4/12'>
             <div
               style={{ fontFamily: 'airbnb-bold' }}
               className='items-end justify-start pt-6 text-xs uppercase text-white mb-1'>
@@ -58,7 +58,7 @@ export const Banner: React.FC<{}> = () => {
 
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='w-2/3 text-3xl text-white leading-tight'>
+              className='w-full text-3xl text-white leading-tight'>
               Atlas Mountains Experience
             </p>
             <p

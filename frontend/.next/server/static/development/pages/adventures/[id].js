@@ -374,7 +374,7 @@ const Banner = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-16 w-full xl:px-0 max-w-6xl pt-12",
+    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 pt-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -475,14 +475,14 @@ const Banner = () => {
     },
     __self: undefined
   }))), __jsx("div", {
-    className: "bg-blue-500 w-full lg:max-w-6xl flex justify-start items-start flex-wrap",
+    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
-    className: "bg-red-500 w-full md:w-1/2 lg:w-4/12",
+    className: "w-full md:w-1/2 lg:w-4/12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
@@ -502,7 +502,7 @@ const Banner = () => {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-2/3 text-3xl text-white leading-tight",
+    className: "w-full text-3xl text-white leading-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
