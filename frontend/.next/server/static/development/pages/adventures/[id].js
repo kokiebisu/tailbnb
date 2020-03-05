@@ -999,7 +999,7 @@ const KeepExploring = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -1009,7 +1009,7 @@ const KeepExploring = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full text-3xl text-gray-750 mb-8",
+    className: "text-2xl w-full md:text-3xl text-gray-750 mb-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -1070,18 +1070,18 @@ const KeepExploring = () => {
       lineNumber: 21
     },
     __self: undefined
-  })), __jsx("div", {
+  }), __jsx("div", {
     className: "bg-white shadow-sm rounded mr-4 border border-gray-300 mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: undefined
   }, __jsx("div", {
     className: "px-6 py-7 mr-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: undefined
   }, __jsx("h3", {
@@ -1091,10 +1091,10 @@ const KeepExploring = () => {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: undefined
-  }, "Show all experiences")))));
+  }, "Show all experiences"))))));
 };
 
 /***/ }),
