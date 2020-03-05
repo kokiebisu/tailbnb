@@ -1,4 +1,4 @@
-endpoint: https://nextbnb-server-ccec18c325.herokuapp.com
+endpoint: https://nextbnb-server-97b1e5b0c9.herokuapp.com
 datamodel: datamodel.prisma
 
 generate:

@@ -3,7 +3,7 @@ import * as React from 'react';
 export const HeaderCard: React.FC<{}> = () => {
   return (
     <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
-      <div className='mx-8'>
+      <div className='px-4'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
           className='hidden md:inline-block md:text-3xl text-gray-750 leading-tight'>

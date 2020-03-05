@@ -40,7 +40,7 @@ export const SectionOverflow: React.FC<Prop> = ({
     }
   }
   return (
-    <div className='px-10 md:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden'>
+    <div className='px-4 md:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden'>
       {renderPhrase(phrase)}
       {children}
     </div>
