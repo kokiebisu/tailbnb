@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Functions
-import AvailabilityCard from '../functions/AvailabilityCard';
+import { AvailabilityCard } from '../functions/AvailabilityCard';
 
 export const Availability: React.FC<{}> = () => {
   return (
