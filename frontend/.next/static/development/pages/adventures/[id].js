@@ -18803,30 +18803,78 @@ var Availability = function Availability() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full text-3xl text-gray-750 mb-8",
+    className: "text-2xl w-full md:text-3xl text-gray-750 mb-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, "Availability"), __jsx(_functions_AvailabilityCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "Availability"), __jsx("div", {
+    className: "w-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }), __jsx("button", {
-    className: "border-2 border-green-850 rounded mt-24",
+  }, __jsx("div", {
+    className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
   }, __jsx("div", {
-    className: "py-2 px-4",
+    className: "w-full h-full scroller",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl md:w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mr-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, __jsx(_functions_AvailabilityCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "mr-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx(_functions_AvailabilityCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  })))))), __jsx("button", {
+    className: "border-2 border-green-850 rounded mt-24",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "py-2 px-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
     },
     __self: this
   }, __jsx("p", {
@@ -18836,7 +18884,7 @@ var Availability = function Availability() {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 31
     },
     __self: this
   }, "Show more availability")))));
@@ -20631,14 +20679,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("div", {
-    className: "w-full flex justify-start items-start flex-wrap",
+    className: "w-70v md:w-40v lg:w-72 flex justify-start items-start flex-wrap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, __jsx("div", {
-    className: "w-23p bg-white shadow-md rounded-xl mr-4",
+    className: "w-full border border-gray-300 bg-white shadow-md rounded-xl mr-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -20675,20 +20723,30 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-750 text-lg",
+    className: "w-2/3 text-gray-750 whitespace-normal py-1 leading-loose",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: this
-  }, "From $130/person"), __jsx("button", {
+  }, "From $130/person"), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-650 text-lg whitespace-normal ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "Join 3 other guests"), __jsx("button", {
     style: {
       fontFamily: 'airbnb-bold'
     },
     className: "text-green-850 mt-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 29
     },
     __self: this
   }, "Book"))));
