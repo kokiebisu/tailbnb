@@ -22,7 +22,6 @@ import { DateCheck } from '../../components/adventures/containers/DateCheck';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
-import { Footer } from '../../components/layout/Footer';
 
 // Next
 // import { NextPage } from 'next';
@@ -80,7 +79,6 @@ const id: () => string | JSX.Element = () => {
           <KeepInMind />
           <KeepExploring />
           <DateCheck />
-          <Footer />
         </>
       )}
     </>
