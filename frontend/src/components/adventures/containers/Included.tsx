@@ -6,7 +6,7 @@ import IncludedCard from '../functions/IncludedCard';
 export const Included: React.FC<{}> = () => {
   return (
     <div className='w-full flex justify-center'>
-      <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16'>
+      <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-8 md:py-16'>
         <div
           style={{ fontFamily: 'airbnb-bold' }}
           className='w-full md:w-4/12 md:h-full text-2xl md:text-3xl text-gray-750 pb-8 md:pb-0'>
