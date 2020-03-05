@@ -48,7 +48,7 @@ export const Banner: React.FC<{}> = () => {
             />
           </div>
         </div>
-        <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap'>
+        <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap relative'>
           <div className='w-full md:w-1/2 lg:w-4/12'>
             <div
               style={{ fontFamily: 'airbnb-bold' }}
@@ -58,7 +58,7 @@ export const Banner: React.FC<{}> = () => {
 
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='w-full text-3xl text-white leading-tight'>
+              className='w-full text-3xl text-white leading-tight lg:w-5/6'>
               Atlas Mountains Experience
             </p>
             <p
@@ -92,8 +92,8 @@ export const Banner: React.FC<{}> = () => {
               </div>
             </div>
           </div>
-          <div className='w-full md:w-1/2 lg:w-8/12 h-full'>
-            <div className='w-9/12 mt-4'>
+          <div className='w-full md:w-1/2 lg:w-8/12 pb-0'>
+            <div className='w-full md:w-9/12 mt-4'>
               <p
                 style={{ fontFamily: 'airbnb-book' }}
                 className='py-4 text-white md:text-lg md:py-10'>
@@ -101,13 +101,13 @@ export const Banner: React.FC<{}> = () => {
               </p>
             </div>
           </div>
-          <div className='w-full lg:w-1/2  lg:w-8/12'>
+          <div className='lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-8/12'>
             <div className='w-full flex justify-start flex-wrap'>
-              <div className='flex w-1/2'>
+              <div className='w-full flex md:w-1/2 mb-4'>
                 <BannerCard type='Duration' value={2} />
                 <BannerCard type='Group size' value={6} />
               </div>
-              <div className='flex w-1/2'>
+              <div className='w-full flex md:w-1/2 mb-4'>
                 <BannerCard type='Activity level' value='moderate' />
                 <BannerCard type='Hosted in' value='English' />
               </div>

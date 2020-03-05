@@ -475,7 +475,7 @@ const Banner = () => {
     },
     __self: undefined
   }))), __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap",
+    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
@@ -502,7 +502,7 @@ const Banner = () => {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full text-3xl text-white leading-tight",
+    className: "w-full text-3xl text-white leading-tight lg:w-5/6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
@@ -595,14 +595,14 @@ const Banner = () => {
     },
     __self: undefined
   }, "Trekking"))), __jsx("div", {
-    className: "w-full md:w-1/2 lg:w-8/12 h-full",
+    className: "w-full md:w-1/2 lg:w-8/12 pb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 95
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-9/12 mt-4",
+    className: "w-full md:w-9/12 mt-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 96
@@ -619,7 +619,7 @@ const Banner = () => {
     },
     __self: undefined
   }, "Trek & Cook with the berbers"))), __jsx("div", {
-    className: "w-full lg:w-1/2  lg:w-8/12",
+    className: "lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-8/12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
@@ -633,7 +633,7 @@ const Banner = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex w-1/2",
+    className: "w-full flex md:w-1/2 mb-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 106
@@ -656,7 +656,7 @@ const Banner = () => {
     },
     __self: undefined
   })), __jsx("div", {
-    className: "flex w-1/2",
+    className: "w-full flex md:w-1/2 mb-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 110
