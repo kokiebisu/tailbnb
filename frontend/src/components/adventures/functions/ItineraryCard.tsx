@@ -1,12 +1,24 @@
-import React from 'react';
+import * as React from 'react';
 
 // Images
 const detail2 = require('../../../../public/img/high/staydetail2.jpg');
 
-export default ({ is_last, day, title, description }) => {
+interface Props {
+  is_last: boolean;
+  day: number;
+  title: string;
+  description: string;
+}
+
+export const ItineraryCard: React.FC<Props> = ({
+  is_last,
+  day,
+  title,
+  description
+}) => {
   return (
     <>
-      {is_last === 'true' ? (
+      {is_last ? (
         <div
           style={{ fontFamily: 'airbnb-book' }}
           className='px-5 text-gray-750 relative'>
@@ -110,23 +122,3 @@ export default ({ is_last, day, title, description }) => {
     </>
   );
 };
-
-{
-  /* <div
-        style={{ height: 7, width: 7, bottom: -7, left: -3.6 }}
-        className='absolute z-100'>
-        <svg
-          className='h-full w-full'
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 512 512'>
-          <g>
-            <g>
-              <path
-                d='M256,0C115.03,0,0,115.05,0,256c0,140.97,115.05,256,256,256c140.97,0,256-115.05,256-256C512,115.03,396.95,0,256,0z
-			 M256,482C131.383,482,30,380.617,30,256S131.383,30,256,30s226,101.383,226,226S380.617,482,256,482z'
-              />
-            </g>
-          </g>
-        </svg>
-      </div> */
-}

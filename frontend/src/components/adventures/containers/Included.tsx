@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Function
-import IncludedCard from '../functions/IncludedCard';
+import { IncludedCard } from '../functions/IncludedCard';
 
 export const Included: React.FC<{}> = () => {
   return (

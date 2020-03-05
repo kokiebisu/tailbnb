@@ -1,10 +1,7 @@
 import * as React from 'react';
 
 // Functions
-import ItineraryCard from '../functions/ItineraryCard';
-
-// // Images
-// const detail2 = require('../../../../public/img/high/staydetail2.jpg');
+import { ItineraryCard } from '../functions/ItineraryCard';
 
 export const Itinerary: React.FC<{}> = () => {
   return (
@@ -23,7 +20,7 @@ export const Itinerary: React.FC<{}> = () => {
             description='Pick up is at 6pm (18:00) from the main entrance of Clarion Hotel The Edge.'
           />
           <ItineraryCard
-            is_last='true'
+            is_last={true}
             day={2}
             title='Hiking (summer), Snowshoeing (winter)'
             description='After the breakfast, we will do hiking in surrounding nature'

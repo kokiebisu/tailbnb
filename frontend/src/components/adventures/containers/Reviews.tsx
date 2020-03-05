@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Functions
-import ReviewCard from '../functions/ReviewCard';
+import { ReviewCard } from '../functions/ReviewCard';
 
 export const Reviews: React.FC<{}> = () => {
   return (

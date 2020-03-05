@@ -1,10 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 
 // Images
 // import detail1 from '../../../public/img/high/staydetail1.jpg';
 const detail2 = require('../../../../public/img/high/staydetail2.jpg');
 
-export default ({ is_last }) => {
+interface Props {
+  is_last: boolean;
+}
+
+export const ReviewCard: React.FC<Props> = ({ is_last }) => {
   return (
     <>
       {is_last ? (
