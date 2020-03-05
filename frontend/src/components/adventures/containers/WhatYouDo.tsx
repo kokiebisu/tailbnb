@@ -2,15 +2,12 @@ import * as React from 'react';
 
 export const WhatYouDo: React.FC<{}> = () => {
   return (
-    // <div className='lg:w-5/12 lg:h-121r'>
-    // <div className='shadow-4xl lg:shadow-none left-0 w-full z-50 fixed bottom-0 py-2 lg:py-0 bg-white w-full lg:block lg:w-25/31 lg:sticky lg:top-0 flex lg:justify-center lg:mt-5 lg:ml-10'>
-
     <div className='w-full flex justify-center'>
       <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-8 md:py-16'>
         <div
           style={{ fontFamily: 'airbnb-bold' }}
-          className='md:w-4/12 md:h-full '>
-          <p className='w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750'>
+          className='md:w-4/12 md:h-full'>
+          <p className='lg:top-0 lg:sticky w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750'>
             What you'll do
           </p>
         </div>

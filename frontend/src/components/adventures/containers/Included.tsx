@@ -9,8 +9,10 @@ export const Included: React.FC<{}> = () => {
       <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-8 md:py-16'>
         <div
           style={{ fontFamily: 'airbnb-bold' }}
-          className='w-full md:w-4/12 md:h-full text-2xl md:text-3xl text-gray-750 pb-8 md:pb-0'>
-          What's included
+          className='w-full md:w-4/12 md:h-full pb-8 md:pb-0'>
+          <p className='lg:sticky lg:top-0 text-2xl md:text-3xl text-gray-750'>
+            What's included
+          </p>
         </div>
         <div
           style={{ fontFamily: 'airbnb-book' }}

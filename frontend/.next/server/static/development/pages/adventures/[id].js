@@ -716,27 +716,34 @@ const Host = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750",
+    className: "w-full md:w-4/12 md:h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
-  }, "Your host"), __jsx("div", {
+  }, __jsx("p", {
+    className: "lg:sticky lg:top-0 text-2xl md:text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "Your host")), __jsx("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "w-full md:w-8/12 md:px-4 text-gray-750 text-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("div", {
     className: "my-10 h-32 w-32 md:mb-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("img", {
@@ -744,7 +751,7 @@ const Host = () => {
     src: detail2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: undefined
   })), __jsx("h3", {
@@ -754,14 +761,14 @@ const Host = () => {
     className: "mb-3 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: undefined
   }, "Mohamed"), __jsx("p", {
     className: "mb-7 leading-relaxed",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: undefined
   }, "Im an official Mountain guide born and raised in the atlas mountains i worked as a guide and trek planner for more tgan 17 Years i like meeting new people and make new friends in adfition to sharing my culture"), __jsx("button", {
@@ -771,7 +778,7 @@ const Host = () => {
     className: "border-2 border-green-850 rounded text-green-850 text-base py-2 px-4 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: undefined
   }, "Contact host"))));
@@ -816,74 +823,81 @@ const Included = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 md:h-full text-2xl md:text-3xl text-gray-750 pb-8 md:pb-0",
+    className: "w-full md:w-4/12 md:h-full pb-8 md:pb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
-  }, "What's included"), __jsx("div", {
+  }, __jsx("p", {
+    className: "lg:sticky lg:top-0 text-2xl md:text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "What's included")), __jsx("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "w-full md:w-8/12 md:px-4 text-gray-750 flex overflow-x-hidden overflow-y-hidden md:overflow-x-visible md:overflow-y-vidi ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: undefined
   }, __jsx("div", {
     className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-104 w-full md:w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx(_functions_IncludedCard__WEBPACK_IMPORTED_MODULE_1__["IncludedCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: undefined
   })), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx(_functions_IncludedCard__WEBPACK_IMPORTED_MODULE_1__["IncludedCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 29
     },
     __self: undefined
   })))))))));
@@ -928,17 +942,24 @@ const Itinerary = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "mb-16 text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750",
+    className: "mb-16 w-full md:w-4/12 md:h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
-  }, "Your itinerary"), __jsx("div", {
+  }, __jsx("p", {
+    className: "lg:sticky lg:top-0 text-2xl md:text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, ' ', "Your itinerary")), __jsx("div", {
     className: "w-full md:w-8/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["ItineraryCard"], {
@@ -948,7 +969,7 @@ const Itinerary = () => {
     description: "Pick up is at 6pm (18:00) from the main entrance of Clarion Hotel The Edge.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: undefined
   }), __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["ItineraryCard"], {
@@ -958,7 +979,7 @@ const Itinerary = () => {
     description: "After the breakfast, we will do hiking in surrounding nature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
   }))));
@@ -1130,27 +1151,34 @@ const KeepInMind = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "mb-8 md:mb-0 text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750",
+    className: "mb-8 md:mb-0 w-full md:w-4/12 md:h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
-  }, "Things to keep in mind"), __jsx("div", {
+  }, __jsx("p", {
+    className: "lg:w-2/3 lg:sticky top-0 text-2xl md:text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "Things to keep in mind")), __jsx("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "w-full md:w-8/12 md:px-4 text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex justify-between items-center border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
@@ -1159,14 +1187,14 @@ const KeepInMind = () => {
     description: "Any experience can be cancelled and fully refunded within 24 hours of purchase.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: undefined
   }), __jsx("div", {
     className: "h-3 w-3 md:hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("svg", {
@@ -1178,33 +1206,33 @@ const KeepInMind = () => {
     viewBox: "0 0 492.004 492.004",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("path", {
     d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: undefined
   })))))), __jsx("div", {
     className: "w-full flex justify-between items-center border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: undefined
   }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
@@ -1213,14 +1241,14 @@ const KeepInMind = () => {
     description: "Always communicate through Airbnb. To protect your payment, never transfer money or communicate outside of the Airbnb website or app.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: undefined
   }), __jsx("div", {
     className: "h-3 w-3 md:hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("svg", {
@@ -1232,33 +1260,33 @@ const KeepInMind = () => {
     viewBox: "0 0 492.004 492.004",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: undefined
   }, __jsx("path", {
     d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 61
     },
     __self: undefined
   })))))), __jsx("div", {
     className: "w-full flex justify-between items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: undefined
   }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
@@ -1267,14 +1295,14 @@ const KeepInMind = () => {
     description: "Up to 6 guests ages 18 and up can attend. Parents may also bring children under 2 years of age. The activity level for this adventure is moderate.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 73
     },
     __self: undefined
   }), __jsx("div", {
     className: "h-3 w-3 md:hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 80
     },
     __self: undefined
   }, __jsx("svg", {
@@ -1286,26 +1314,26 @@ const KeepInMind = () => {
     viewBox: "0 0 492.004 492.004",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 81
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 86
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 87
     },
     __self: undefined
   }, __jsx("path", {
     d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: undefined
   })))))))));
@@ -1356,18 +1384,25 @@ const Reviews = () => {
       lineNumber: 10
     },
     __self: undefined
+  }, __jsx("div", {
+    className: "lg:sticky lg:top-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
   }, __jsx("h3", {
     className: "text-2xl md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: undefined
   }, "Guest reviews"), __jsx("div", {
     className: "flex mt-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("p", {
@@ -1377,21 +1412,21 @@ const Reviews = () => {
     className: "text-lg text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: undefined
   }, "5.0"), __jsx("div", {
     className: "flex justify-start items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-4 w-4 mx-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("svg", {
@@ -1404,23 +1439,23 @@ const Reviews = () => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("path", {
     d: "m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    className: "h-4 w-4 mx-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: undefined
+  }))), __jsx("div", {
+    className: "h-4 w-4 mx-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
   }, __jsx("svg", {
     className: "w-full h-full ml-2",
     style: {
@@ -1431,23 +1466,23 @@ const Reviews = () => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("path", {
     d: "m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    className: "h-4 w-4 mx-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
     },
     __self: undefined
+  }))), __jsx("div", {
+    className: "h-4 w-4 mx-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
   }, __jsx("svg", {
     className: "w-full h-full ml-2",
     style: {
@@ -1458,23 +1493,23 @@ const Reviews = () => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("path", {
     d: "m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    className: "h-4 w-4 mx-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48
     },
     __self: undefined
+  }))), __jsx("div", {
+    className: "h-4 w-4 mx-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
   }, __jsx("svg", {
     className: "w-full h-full ml-2",
     style: {
@@ -1485,21 +1520,21 @@ const Reviews = () => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("path", {
     d: "m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 57
     },
     __self: undefined
   }))), __jsx("div", {
     className: "h-4 w-4 mx-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 60
     },
     __self: undefined
   }, __jsx("svg", {
@@ -1512,49 +1547,49 @@ const Reviews = () => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 61
     },
     __self: undefined
   }, __jsx("path", {
     d: "m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 66
     },
     __self: undefined
-  })))))), __jsx("div", {
+  }))))))), __jsx("div", {
     className: "md:w-8/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 73
     },
     __self: undefined
   }, __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     is_last: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 74
     },
     __self: undefined
   }), __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     is_last: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 75
     },
     __self: undefined
   }), __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     is_last: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 76
     },
     __self: undefined
   }), __jsx(_functions_ReviewCard__WEBPACK_IMPORTED_MODULE_1__["ReviewCard"], {
     is_last: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 77
     },
     __self: undefined
   }))));
@@ -1682,72 +1717,69 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/adventure
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const WhatYouDo = () => {
-  return (// <div className='lg:w-5/12 lg:h-121r'>
-    // <div className='shadow-4xl lg:shadow-none left-0 w-full z-50 fixed bottom-0 py-2 lg:py-0 bg-white w-full lg:block lg:w-25/31 lg:sticky lg:top-0 flex lg:justify-center lg:mt-5 lg:ml-10'>
-    __jsx("div", {
-      className: "w-full flex justify-center",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 8
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-8 md:py-16",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9
-      },
-      __self: undefined
-    }, __jsx("div", {
-      style: {
-        fontFamily: 'airbnb-bold'
-      },
-      className: "md:w-4/12 md:h-full ",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      },
-      __self: undefined
-    }, __jsx("p", {
-      className: "w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: undefined
-    }, "What you'll do")), __jsx("div", {
-      style: {
-        fontFamily: 'airbnb-book'
-      },
-      className: "w-full md:w-8/12 text-gray-750 text-lg ",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      },
-      __self: undefined
-    }, __jsx("p", {
-      className: "mb-7",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      },
-      __self: undefined
-    }, "Leave early from Marrakech and head to the Tinzert & Ouirgane for a 2 days Trek the village is Tucked in the mystical and peaceful foothills of the High Atlas Mountains, in the heart of the majestic Toubkal National Park lays the picturesque village of Ouirgane."), __jsx("p", {
-      className: "mb-7",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: undefined
-    }, "Spectacular views of the Toubkal mountain range await all trekkers who take the time to discover this magical land. Be welcomed by the Berber locals and discover true Moroccan hospitality as you step into a world not your own. Perfect for individuals and families alike this trek will be sure to delight the senses and cultivate unforgettable moments and memories."), __jsx("p", {
-      className: "mb-7",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: undefined
-    }, "During the two days trek you will get the chance to learn howto cook certain dishes in addition to tea making ceremony"))))
-  );
+  return __jsx("div", {
+    className: "w-full flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 md:flex justify-start items-start flex-wrap py-8 md:py-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "md:w-4/12 md:h-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "lg:top-0 lg:sticky w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "What you'll do")), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "w-full md:w-8/12 text-gray-750 text-lg ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "mb-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "Leave early from Marrakech and head to the Tinzert & Ouirgane for a 2 days Trek the village is Tucked in the mystical and peaceful foothills of the High Atlas Mountains, in the heart of the majestic Toubkal National Park lays the picturesque village of Ouirgane."), __jsx("p", {
+    className: "mb-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, "Spectacular views of the Toubkal mountain range await all trekkers who take the time to discover this magical land. Be welcomed by the Berber locals and discover true Moroccan hospitality as you step into a world not your own. Perfect for individuals and families alike this trek will be sure to delight the senses and cultivate unforgettable moments and memories."), __jsx("p", {
+    className: "mb-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, "During the two days trek you will get the chance to learn howto cook certain dishes in addition to tea making ceremony"))));
 };
 
 /***/ }),
