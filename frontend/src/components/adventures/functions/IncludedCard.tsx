@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-export default () => {
+export const IncludedCard: React.FC<{}> = () => {
   return (
     <div className='w-56 h-56 p-8 border border-gray-300 rounded'>
       <div className='w-full h-full'>
