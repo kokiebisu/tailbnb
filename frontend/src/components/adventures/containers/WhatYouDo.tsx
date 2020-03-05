@@ -7,7 +7,7 @@ export const WhatYouDo: React.FC<{}> = () => {
         <div
           style={{ fontFamily: 'airbnb-bold' }}
           className='md:w-4/12 md:h-full '>
-          <p className='w-2/3 text-xl mb-12 md:mb-0 md:text-3xl text-gray-750'>
+          <p className='w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750'>
             What you'll do
           </p>
         </div>

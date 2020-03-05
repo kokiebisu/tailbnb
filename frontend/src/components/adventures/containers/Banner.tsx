@@ -7,24 +7,24 @@ import { BannerCard } from '../functions/BannerCard';
 
 export const Banner: React.FC<{}> = () => {
   return (
-    <div className='w-full bg-black h-80v flex justify-center'>
-      <div className='px-16 w-full xl:px-0 max-w-6xl pt-12'>
+    <div className='w-full bg-black flex justify-center'>
+      <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 py-12'>
         <div className='w-full flex'>
-          <div className='w-2/7 border-r-4 border-white relative bg-cover bg-center overflow-hidden'>
+          <div className='w-2/7 border-r-4 border-black relative bg-cover bg-center overflow-hidden'>
             <img
               className='h-full w-full'
               src='https://a0.muscache.com/im/pictures/a5845dc3-6d54-4864-a383-4dffbc16c20e.jpg?aki_policy=exp_md'
               alt=''
             />
           </div>
-          <div className='w-2/7 border-r-4 border-white relative overflow-hidden'>
+          <div className='w-2/7 border-r-4 border-black relative overflow-hidden'>
             <img
               className='h-full object-cover'
               src='https://a0.muscache.com/im/pictures/2cde86ed-9fa5-4776-952a-c83e0afda996.jpg?aki_policy=exp_md'
               alt=''
             />
           </div>
-          <div className='border-white w-1/7 relative overflow-hidden'>
+          <div className='border-black w-1/7 relative overflow-hidden'>
             <div className='w-full bg-blue-500 h-1/2'>
               <img
                 className='h-full object-cover'
@@ -40,7 +40,7 @@ export const Banner: React.FC<{}> = () => {
               />
             </div>
           </div>
-          <div className='rounded border-l-4 border-white w-2/7 relative overflow-hidden'>
+          <div className='border-l-4 border-black w-2/7 relative overflow-hidden'>
             <img
               className='h-full object-cover'
               src='https://a0.muscache.com/im/pictures/4177e9be-7c5e-4c05-9b79-f4afd144a389.jpg?aki_policy=exp_md'
@@ -48,8 +48,8 @@ export const Banner: React.FC<{}> = () => {
             />
           </div>
         </div>
-        <div className='bg-blue-500 w-full lg:max-w-6xl flex justify-start items-start flex-wrap'>
-          <div className='bg-red-500 w-full md:w-1/2 lg:w-4/12'>
+        <div className='w-full lg:max-w-6xl flex justify-start items-start flex-wrap relative'>
+          <div className='w-full md:w-1/2 lg:w-4/12'>
             <div
               style={{ fontFamily: 'airbnb-bold' }}
               className='items-end justify-start pt-6 text-xs uppercase text-white mb-1'>
@@ -58,7 +58,7 @@ export const Banner: React.FC<{}> = () => {
 
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='w-2/3 text-3xl text-white leading-tight'>
+              className='w-full text-3xl text-white leading-tight lg:w-5/6'>
               Atlas Mountains Experience
             </p>
             <p
@@ -92,22 +92,22 @@ export const Banner: React.FC<{}> = () => {
               </div>
             </div>
           </div>
-          <div className='w-1/2 md:1/2 lg:w-8/12 h-full'>
-            <div className='w-9/12 mt-4'>
+          <div className='w-full md:w-1/2 lg:w-8/12 pb-0'>
+            <div className='w-full md:w-9/12 mt-4'>
               <p
                 style={{ fontFamily: 'airbnb-book' }}
-                className='text-white text-lg py-10'>
+                className='py-4 text-white md:text-lg md:py-10'>
                 Trek & Cook with the berbers
               </p>
             </div>
           </div>
-          <div className='bg-red-200 w-full lg:w-1/2  lg:w-8/12'>
+          <div className='lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-8/12'>
             <div className='w-full flex justify-start flex-wrap'>
-              <div className='flex w-1/2'>
+              <div className='w-full flex md:w-1/2 mb-4'>
                 <BannerCard type='Duration' value={2} />
                 <BannerCard type='Group size' value={6} />
               </div>
-              <div className='flex w-1/2'>
+              <div className='w-full flex md:w-1/2 mb-4'>
                 <BannerCard type='Activity level' value='moderate' />
                 <BannerCard type='Hosted in' value='English' />
               </div>

@@ -18913,14 +18913,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var Banner = function Banner() {
   return __jsx("div", {
-    className: "w-full bg-black h-80v flex justify-center",
+    className: "w-full bg-black flex justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
   }, __jsx("div", {
-    className: "px-16 w-full xl:px-0 max-w-6xl pt-12",
+    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 py-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -18934,7 +18934,7 @@ var Banner = function Banner() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-2/7 border-r-4 border-white relative bg-cover bg-center overflow-hidden",
+    className: "w-2/7 border-r-4 border-black relative bg-cover bg-center overflow-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -18950,7 +18950,7 @@ var Banner = function Banner() {
     },
     __self: this
   })), __jsx("div", {
-    className: "w-2/7 border-r-4 border-white relative overflow-hidden",
+    className: "w-2/7 border-r-4 border-black relative overflow-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -18966,7 +18966,7 @@ var Banner = function Banner() {
     },
     __self: this
   })), __jsx("div", {
-    className: "border-white w-1/7 relative overflow-hidden",
+    className: "border-black w-1/7 relative overflow-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
@@ -19005,7 +19005,7 @@ var Banner = function Banner() {
     },
     __self: this
   }))), __jsx("div", {
-    className: "rounded border-l-4 border-white w-2/7 relative overflow-hidden",
+    className: "border-l-4 border-black w-2/7 relative overflow-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -19021,14 +19021,14 @@ var Banner = function Banner() {
     },
     __self: this
   }))), __jsx("div", {
-    className: "bg-blue-500 w-full lg:max-w-6xl flex justify-start items-start flex-wrap",
+    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: this
   }, __jsx("div", {
-    className: "bg-red-500 w-full md:w-1/2 lg:w-4/12",
+    className: "w-full md:w-1/2 lg:w-4/12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
@@ -19048,7 +19048,7 @@ var Banner = function Banner() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-2/3 text-3xl text-white leading-tight",
+    className: "w-full text-3xl text-white leading-tight lg:w-5/6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
@@ -19141,14 +19141,14 @@ var Banner = function Banner() {
     },
     __self: this
   }, "Trekking"))), __jsx("div", {
-    className: "w-1/2 md:1/2 lg:w-8/12 h-full",
+    className: "w-full md:w-1/2 lg:w-8/12 pb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 95
     },
     __self: this
   }, __jsx("div", {
-    className: "w-9/12 mt-4",
+    className: "w-full md:w-9/12 mt-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 96
@@ -19158,14 +19158,14 @@ var Banner = function Banner() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-white text-lg py-10",
+    className: "py-4 text-white md:text-lg md:py-10",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 97
     },
     __self: this
   }, "Trek & Cook with the berbers"))), __jsx("div", {
-    className: "bg-red-200 w-full lg:w-1/2  lg:w-8/12",
+    className: "lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-8/12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
@@ -19179,7 +19179,7 @@ var Banner = function Banner() {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex w-1/2",
+    className: "w-full flex md:w-1/2 mb-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 106
@@ -19202,7 +19202,7 @@ var Banner = function Banner() {
     },
     __self: this
   })), __jsx("div", {
-    className: "flex w-1/2",
+    className: "w-full flex md:w-1/2 mb-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 110
@@ -20255,7 +20255,7 @@ var WhatYouDo = function WhatYouDo() {
     },
     __self: this
   }, __jsx("p", {
-    className: "w-2/3 text-xl mb-12 md:mb-0 md:text-3xl text-gray-750",
+    className: "w-2/3 text-2xl mb-12 md:mb-0 md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
