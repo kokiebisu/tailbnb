@@ -3,7 +3,7 @@ import * as React from 'react';
 export const Safety: React.FC<{}> = () => {
   return (
     <div className='w-full flex justify-center'>
-      <div className='w-full lg:max-w-7xl  py-12 bg-gray-350 rounded-xl'>
+      <div className='w-full lg:max-w-7xl  py-12 bg-gray-350 rounded-none xl:rounded-xl'>
         <div className='px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap h-full'>
           <div
             style={{ fontFamily: 'airbnb-bold' }}

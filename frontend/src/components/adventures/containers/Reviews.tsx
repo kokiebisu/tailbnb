@@ -67,10 +67,10 @@ export const Reviews: React.FC<{}> = () => {
           </div>
         </div>
         <div className='md:w-8/12'>
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
+          <ReviewCard is_last={false} />
+          <ReviewCard is_last={false} />
+          <ReviewCard is_last={false} />
+          <ReviewCard is_last={true} />
         </div>
       </div>
     </div>
