@@ -36,7 +36,7 @@ export const Section: React.FC<Prop> = ({ title, phrase, children }) => {
     }
   };
   return (
-    <div className='px-10 md:px-20 xl:max-w-layout mx-auto py-5 w-full'>
+    <div className='px-4 md:px-20 xl:max-w-layout mx-auto py-5 w-full'>
       {renderContent(phrase)}
       {children}
     </div>
