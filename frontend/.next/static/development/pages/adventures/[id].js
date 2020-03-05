@@ -19545,7 +19545,7 @@ var KeepExploring = function KeepExploring() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -19555,7 +19555,7 @@ var KeepExploring = function KeepExploring() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full text-3xl text-gray-750 mb-8",
+    className: "text-2xl w-full md:text-3xl text-gray-750 mb-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -19616,18 +19616,18 @@ var KeepExploring = function KeepExploring() {
       lineNumber: 21
     },
     __self: this
-  })), __jsx("div", {
+  }), __jsx("div", {
     className: "bg-white shadow-sm rounded mr-4 border border-gray-300 mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: this
   }, __jsx("div", {
     className: "px-6 py-7 mr-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, __jsx("h3", {
@@ -19637,10 +19637,10 @@ var KeepExploring = function KeepExploring() {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: this
-  }, "Show all experiences")))));
+  }, "Show all experiences"))))));
 };
 
 /***/ }),
@@ -19672,7 +19672,7 @@ var KeepInMind = function KeepInMind() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl flex justify-start items-start flex-wrap py-16",
+    className: "px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -19682,7 +19682,7 @@ var KeepInMind = function KeepInMind() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full text-3xl text-gray-750",
+    className: "mb-8 md:mb-0 text-2xl w-full md:w-4/12 md:h-full md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -19692,10 +19692,17 @@ var KeepInMind = function KeepInMind() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full md:w-8/12 px-4 text-gray-750",
+    className: "w-full md:w-8/12 md:px-4 text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full flex justify-between items-center border-b border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
     },
     __self: this
   }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
@@ -19704,27 +19711,156 @@ var KeepInMind = function KeepInMind() {
     description: "Any experience can be cancelled and fully refunded within 24 hours of purchase.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
-  }), __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
+  }), __jsx("div", {
+    className: "h-3 w-3 md:hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#484848'
+    },
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492.004 492.004",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  })))))), __jsx("div", {
+    className: "w-full flex justify-between items-center border-b border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
+    order: "middle",
     title: "Communication policy",
     description: "Always communicate through Airbnb. To protect your payment, never transfer money or communicate outside of the Airbnb website or app.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 46
     },
     __self: this
-  }), __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
+  }), __jsx("div", {
+    className: "h-3 w-3 md:hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#484848'
+    },
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492.004 492.004",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  })))))), __jsx("div", {
+    className: "w-full flex justify-between items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }, __jsx(_functions_KeepInMindCard__WEBPACK_IMPORTED_MODULE_1__["KeepInMindCard"], {
     order: "bottom",
     title: "Guest requirements",
     description: "Up to 6 guests ages 18 and up can attend. Parents may also bring children under 2 years of age. The activity level for this adventure is moderate.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 71
     },
     __self: this
-  }))));
+  }), __jsx("div", {
+    className: "h-3 w-3 md:hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#484848'
+    },
+    className: "h-full w-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492.004 492.004",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  })))))))));
 };
 
 /***/ }),
@@ -20005,7 +20141,7 @@ var Safety = function Safety() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full lg:max-w-6xl mx-auto flex justify-start items-start flex-wrap h-full",
+    className: "px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -20015,14 +20151,14 @@ var Safety = function Safety() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "w-full md:w-4/12 h-full ",
+    className: "w-full md:w-4/12 md:h-full ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-start items-center h-full",
+    className: "mb-8 flex justify-start items-center h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -20044,7 +20180,7 @@ var Safety = function Safety() {
     },
     __self: this
   })), __jsx("p", {
-    className: "text-3xl text-gray-750",
+    className: "text-2xl md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
@@ -20054,7 +20190,7 @@ var Safety = function Safety() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full md:w-8/12 px-4 text-gray-750 text-lg ",
+    className: "w-full md:w-8/12 md:pl-4 text-gray-750 text-lg ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -21466,14 +21602,14 @@ var KeepInMindCard = function KeepInMindCard(_ref) {
       description = _ref.description,
       order = _ref.order;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, order === 'top' ? __jsx("div", {
-    className: "w-full flex pb-4 border-b border-gray-300",
+    className: "w-full flex pb-6 pt-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
   }, __jsx("div", {
-    className: "w-1/3",
+    className: "w-full md:w-1/3 h-full items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
@@ -21483,136 +21619,139 @@ var KeepInMindCard = function KeepInMindCard(_ref) {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-2xl",
+    className: "pt-2 text-lg lg:text-2xl",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
   }, title)), __jsx("div", {
-    className: "w-2/3",
+    className: "w-2/3 pl-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: this
   }, __jsx("p", {
+    className: "hidden lg:block",
     style: {
       fontFamily: 'airbnb-book'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 27
     },
     __self: this
   }, description), __jsx("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-green-850 text-sm my-3",
+    className: "hidden lg:block text-green-850 text-sm my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 32
     },
     __self: this
   }, "Learn more"))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, order === 'bottom' ? __jsx("div", {
-    className: "w-full flex pb-4 pt-6",
+    className: "w-full flex pb-6 pt-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 42
     },
     __self: this
   }, __jsx("div", {
     className: "w-1/3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-2xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, title)), __jsx("div", {
-    className: "w-2/3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
     },
     __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-lg lg:text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, title)), __jsx("div", {
+    className: "w-2/3 pl-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
   }, __jsx("p", {
+    className: "hidden lg:block",
     style: {
       fontFamily: 'airbnb-book'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 51
     },
     __self: this
   }, description), __jsx("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-green-850 text-sm my-3",
+    className: "hidden lg:block text-green-850 text-sm my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 56
     },
     __self: this
   }, "Learn more"))) : __jsx("div", {
-    className: "w-full flex pb-4 pt-6 border-b border-gray-300",
+    className: "w-full flex pb-6 pt-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 64
     },
     __self: this
   }, __jsx("div", {
     className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 65
     },
     __self: this
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-2xl",
+    className: "text-lg lg:text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 66
     },
     __self: this
   }, title)), __jsx("div", {
-    className: "w-2/3",
+    className: "w-2/3 pl-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 72
     },
     __self: this
   }, __jsx("p", {
+    className: "hidden lg:block",
     style: {
       fontFamily: 'airbnb-book'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 73
     },
     __self: this
   }, description), __jsx("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-green-850 text-sm my-3",
+    className: "hidden lg:block text-green-850 text-sm my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 78
     },
     __self: this
   }, "Learn more")))));
