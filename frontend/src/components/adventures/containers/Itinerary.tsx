@@ -14,7 +14,7 @@ export const Itinerary: React.FC<{}> = () => {
         </div>
         <div className='w-full md:w-8/12'>
           <ItineraryCard
-            is_last='false'
+            is_last={false}
             day={1}
             title='Meeting at 6pm'
             description='Pick up is at 6pm (18:00) from the main entrance of Clarion Hotel The Edge.'

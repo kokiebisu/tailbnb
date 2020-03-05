@@ -10,41 +10,37 @@ export const Banner: React.FC<{}> = () => {
     <div className='w-full bg-black flex justify-center'>
       <div className='px-4 md:px-16 w-full max-w-6xl xl:px-0 py-12'>
         <div className='w-full flex'>
-          <div className='w-2/7 border-r-4 border-black relative bg-cover bg-center overflow-hidden'>
+          <div className='w-2/7 border-r-8 border-black relative bg-center overflow-hidden'>
             <img
-              className='h-full w-full'
-              src='https://a0.muscache.com/im/pictures/a5845dc3-6d54-4864-a383-4dffbc16c20e.jpg?aki_policy=exp_md'
-              alt=''
+              className='w-full h-full object-cover'
+              src='https://a0.muscache.com/im/pictures/lombard/MtTemplate-884613-media_library/original/b33f6239-b565-4fdf-acc7-fac480b4112b.jpeg?aki_policy=exp_md'
             />
           </div>
-          <div className='w-2/7 border-r-4 border-black relative overflow-hidden'>
+          <div className='w-2/7 border-r-8 border-black relative bg-center overflow-hidden'>
             <img
-              className='h-full object-cover'
-              src='https://a0.muscache.com/im/pictures/2cde86ed-9fa5-4776-952a-c83e0afda996.jpg?aki_policy=exp_md'
-              alt=''
+              className='w-full h-full object-cover'
+              src='https://a0.muscache.com/im/pictures/38bae2c8-058a-4eac-915e-9f15410fa130.jpg?aki_policy=exp_md'
             />
           </div>
-          <div className='border-black w-1/7 relative overflow-hidden'>
-            <div className='w-full bg-blue-500 h-1/2'>
+          <div className='w-1/7 border-r-8 border-black relative bg-center overflow-hidden'>
+            <div className='w-full h-1/2 border-b-4 border-black'>
               <img
-                className='h-full object-cover'
-                src='https://a0.muscache.com/im/pictures/lombard/MtTemplate-1317456-media_library/original/45cba600-ef28-4667-823e-453c31944b45.jpeg?aki_policy=exp_md'
+                className='w-full h-full object-cover'
+                src='https://a0.muscache.com/im/pictures/b6b69440-418f-49ac-afa1-9c02d7a4bdb8.jpg?aki_policy=exp_md'
+              />
+            </div>
+            <div className='bg-blue-500 border-t-4 border-black w-full h-1/2'>
+              <img
+                className='w-full h-full object-cover'
+                src='https://a0.muscache.com/im/pictures/7ba40e88-c17a-4bf4-b98c-50ebf772b406.jpg?aki_policy=exp_md'
                 alt=''
               />
             </div>
-            <div className='w-full bg-blue-300 h-1/2'>
-              <img
-                className='h-full object-cover'
-                src='https://a0.muscache.com/im/pictures/lombard/MtTemplate-1317456-media_library/original/5d0cbc89-ed65-4063-9ec2-83eb7690bbd7.jpeg?aki_policy=exp_md'
-                alt=''
-              />
-            </div>
           </div>
-          <div className='border-l-4 border-black w-2/7 relative overflow-hidden'>
+          <div className='w-2/7 relative bg-center overflow-hidden'>
             <img
-              className='h-full object-cover'
-              src='https://a0.muscache.com/im/pictures/4177e9be-7c5e-4c05-9b79-f4afd144a389.jpg?aki_policy=exp_md'
-              alt=''
+              className='w-full h-full object-cover'
+              src='https://a0.muscache.com/im/pictures/99691aad-e481-489b-8033-e184157e0b4b.jpg?aki_policy=exp_md'
             />
           </div>
         </div>
