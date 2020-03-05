@@ -18,6 +18,7 @@ import { Reviews } from '../../components/adventures/containers/Reviews';
 import { Safety } from '../../components/adventures/containers/Safety';
 import { KeepInMind } from '../../components/adventures/containers/KeepInMind';
 import { KeepExploring } from '../../components/adventures/containers/KeepExploring';
+import { DateCheck } from '../../components/adventures/containers/DateCheck';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
@@ -78,6 +79,7 @@ const id: () => string | JSX.Element = () => {
           <Safety />
           <KeepInMind />
           <KeepExploring />
+          <DateCheck />
           <Footer />
         </>
       )}
