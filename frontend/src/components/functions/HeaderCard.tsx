@@ -3,7 +3,7 @@ import * as React from 'react';
 export const HeaderCard: React.FC<{}> = () => {
   return (
     <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
-      <div className='px-4'>
+      <div className='mx-4 md:mx-8'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
           className='hidden md:inline-block md:text-3xl text-gray-750 leading-tight'>
@@ -86,7 +86,7 @@ export const HeaderCard: React.FC<{}> = () => {
           </div>
         </form>
         <div className='w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg'>
-          <button className='w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-500 rounded text-white font-bold'>
+          <button className='w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-550 rounded text-white font-bold'>
             Search
           </button>
         </div>
