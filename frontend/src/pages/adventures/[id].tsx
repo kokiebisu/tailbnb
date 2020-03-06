@@ -18,13 +18,11 @@ import { Reviews } from '../../components/adventures/containers/Reviews';
 import { Safety } from '../../components/adventures/containers/Safety';
 import { KeepInMind } from '../../components/adventures/containers/KeepInMind';
 import { KeepExploring } from '../../components/adventures/containers/KeepExploring';
+import { DateCheck } from '../../components/adventures/containers/DateCheck';
+import { Footer } from '../../components/adventures/containers/Footer';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
-import { Footer } from '../../components/layout/Footer';
-
-// Next
-// import { NextPage } from 'next';
 
 const GET_ADVENTURE = gql`
   query Adventure($id: ID!) {
@@ -51,7 +49,6 @@ const id: () => string | JSX.Element = () => {
   return (
     <>
       <Head>
-        {console.log(data)}
         {loading ? (
           <title>Vacation Rentals, Homes, Experiences & Places</title>
         ) : (
@@ -79,6 +76,7 @@ const id: () => string | JSX.Element = () => {
           <KeepInMind />
           <KeepExploring />
           <Footer />
+          <DateCheck />
         </>
       )}
     </>
