@@ -22448,7 +22448,6 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'file:': true
     },
     querystring = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -22510,69 +22509,6 @@ Url.prototype.parse = function(url, parseQueryString, slashesDenoteHost) {
     rest = rest.substr(proto.length);
   }
 
-=======
-
-function urlParse(url, parseQueryString, slashesDenoteHost) {
-  if (url && util.isObject(url) && url instanceof Url) return url;
-
-  var u = new Url;
-  u.parse(url, parseQueryString, slashesDenoteHost);
-  return u;
-}
-
-Url.prototype.parse = function(url, parseQueryString, slashesDenoteHost) {
-  if (!util.isString(url)) {
-    throw new TypeError("Parameter 'url' must be a string, not " + typeof url);
-  }
-
-  // Copy chrome, IE, opera backslash-handling behavior.
-  // Back slashes before the query string get converted to forward slashes
-  // See: https://code.google.com/p/chromium/issues/detail?id=25916
-  var queryIndex = url.indexOf('?'),
-      splitter =
-          (queryIndex !== -1 && queryIndex < url.indexOf('#')) ? '?' : '#',
-      uSplit = url.split(splitter),
-      slashRegex = /\\/g;
-  uSplit[0] = uSplit[0].replace(slashRegex, '/');
-  url = uSplit.join(splitter);
-
-  var rest = url;
-
-  // trim before proceeding.
-  // This is to support parse stuff like "  http://foo.com  \n"
-  rest = rest.trim();
-
-  if (!slashesDenoteHost && url.split('#').length === 1) {
-    // Try fast path regexp
-    var simplePath = simplePathPattern.exec(rest);
-    if (simplePath) {
-      this.path = rest;
-      this.href = rest;
-      this.pathname = simplePath[1];
-      if (simplePath[2]) {
-        this.search = simplePath[2];
-        if (parseQueryString) {
-          this.query = querystring.parse(this.search.substr(1));
-        } else {
-          this.query = this.search.substr(1);
-        }
-      } else if (parseQueryString) {
-        this.search = '';
-        this.query = {};
-      }
-      return this;
-    }
-  }
-
-  var proto = protocolPattern.exec(rest);
-  if (proto) {
-    proto = proto[0];
-    var lowerProto = proto.toLowerCase();
-    this.protocol = lowerProto;
-    rest = rest.substr(proto.length);
-  }
-
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
   // figure out if it's got a host
   // user@server is *always* interpreted as a hostname, and url
   // resolution will treat //foo/bar as host=foo,path=bar because that's
@@ -22584,7 +22520,6 @@ Url.prototype.parse = function(url, parseQueryString, slashesDenoteHost) {
       this.slashes = true;
     }
   }
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 
   if (!hostlessProtocol[proto] &&
       (slashes || (proto && !slashedProtocol[proto]))) {
@@ -22710,168 +22645,10 @@ Url.prototype.parse = function(url, parseQueryString, slashesDenoteHost) {
       this.hostname = punycode.toASCII(this.hostname);
     }
 
-=======
-
-  if (!hostlessProtocol[proto] &&
-      (slashes || (proto && !slashedProtocol[proto]))) {
-
-    // there's a hostname.
-    // the first instance of /, ?, ;, or # ends the host.
-    //
-    // If there is an @ in the hostname, then non-host chars *are* allowed
-    // to the left of the last @ sign, unless some host-ending character
-    // comes *before* the @-sign.
-    // URLs are obnoxious.
-    //
-    // ex:
-    // http://a@b@c/ => user:a@b host:c
-    // http://a@b?@c => user:a host:c path:/?@c
-
-    // v0.12 TODO(isaacs): This is not quite how Chrome does things.
-    // Review our test case against browsers more comprehensively.
-
-    // find the first instance of any hostEndingChars
-    var hostEnd = -1;
-    for (var i = 0; i < hostEndingChars.length; i++) {
-      var hec = rest.indexOf(hostEndingChars[i]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
-        hostEnd = hec;
-    }
-
-    // at this point, either we have an explicit point where the
-    // auth portion cannot go past, or the last @ char is the decider.
-    var auth, atSign;
-    if (hostEnd === -1) {
-      // atSign can be anywhere.
-      atSign = rest.lastIndexOf('@');
-    } else {
-      // atSign must be in auth portion.
-      // http://a@b/c@d => host:b auth:a path:/c@d
-      atSign = rest.lastIndexOf('@', hostEnd);
-    }
-
-    // Now we have a portion which is definitely the auth.
-    // Pull that off.
-    if (atSign !== -1) {
-      auth = rest.slice(0, atSign);
-      rest = rest.slice(atSign + 1);
-      this.auth = decodeURIComponent(auth);
-    }
-
-    // the host is the remaining to the left of the first non-host char
-    hostEnd = -1;
-    for (var i = 0; i < nonHostChars.length; i++) {
-      var hec = rest.indexOf(nonHostChars[i]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
-        hostEnd = hec;
-    }
-    // if we still have not hit it, then the entire thing is a host.
-    if (hostEnd === -1)
-      hostEnd = rest.length;
-
-    this.host = rest.slice(0, hostEnd);
-    rest = rest.slice(hostEnd);
-
-    // pull out port.
-    this.parseHost();
-
-    // we've indicated that there is a hostname,
-    // so even if it's empty, it has to be present.
-    this.hostname = this.hostname || '';
-
-    // if hostname begins with [ and ends with ]
-    // assume that it's an IPv6 address.
-    var ipv6Hostname = this.hostname[0] === '[' &&
-        this.hostname[this.hostname.length - 1] === ']';
-
-    // validate a little.
-    if (!ipv6Hostname) {
-      var hostparts = this.hostname.split(/\./);
-      for (var i = 0, l = hostparts.length; i < l; i++) {
-        var part = hostparts[i];
-        if (!part) continue;
-        if (!part.match(hostnamePartPattern)) {
-          var newpart = '';
-          for (var j = 0, k = part.length; j < k; j++) {
-            if (part.charCodeAt(j) > 127) {
-              // we replace non-ASCII char with a temporary placeholder
-              // we need this to make sure size of hostname is not
-              // broken by replacing non-ASCII by nothing
-              newpart += 'x';
-            } else {
-              newpart += part[j];
-            }
-          }
-          // we test again with ASCII char only
-          if (!newpart.match(hostnamePartPattern)) {
-            var validParts = hostparts.slice(0, i);
-            var notHost = hostparts.slice(i + 1);
-            var bit = part.match(hostnamePartStart);
-            if (bit) {
-              validParts.push(bit[1]);
-              notHost.unshift(bit[2]);
-            }
-            if (notHost.length) {
-              rest = '/' + notHost.join('.') + rest;
-            }
-            this.hostname = validParts.join('.');
-            break;
-          }
-        }
-      }
-    }
-
-    if (this.hostname.length > hostnameMaxLen) {
-      this.hostname = '';
-    } else {
-      // hostnames are always lower case.
-      this.hostname = this.hostname.toLowerCase();
-    }
-
-    if (!ipv6Hostname) {
-      // IDNA Support: Returns a punycoded representation of "domain".
-      // It only converts parts of the domain name that
-      // have non-ASCII characters, i.e. it doesn't matter if
-      // you call it with a domain that already is ASCII-only.
-      this.hostname = punycode.toASCII(this.hostname);
-    }
-
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     var p = this.port ? ':' + this.port : '';
     var h = this.hostname || '';
     this.host = h + p;
     this.href += this.host;
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-
-    // strip [ and ] from the hostname
-    // the host field still retains them, though
-    if (ipv6Hostname) {
-      this.hostname = this.hostname.substr(1, this.hostname.length - 2);
-      if (rest[0] !== '/') {
-        rest = '/' + rest;
-      }
-    }
-  }
-
-  // now rest is set to the post-host stuff.
-  // chop off any delim chars.
-  if (!unsafeProtocol[lowerProto]) {
-
-    // First, make 100% sure that any "autoEscape" chars get
-    // escaped, even if encodeURIComponent doesn't think they
-    // need to be.
-    for (var i = 0, l = autoEscape.length; i < l; i++) {
-      var ae = autoEscape[i];
-      if (rest.indexOf(ae) === -1)
-        continue;
-      var esc = encodeURIComponent(ae);
-      if (esc === ae) {
-        esc = escape(ae);
-      }
-      rest = rest.split(ae).join(esc);
-    }
-  }
-=======
 
     // strip [ and ] from the hostname
     // the host field still retains them, though
@@ -22965,7 +22742,6 @@ Url.prototype.format = function() {
       hash = this.hash || '',
       host = false,
       query = '';
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 
   if (this.host) {
     host = auth + this.host;
@@ -22978,254 +22754,6 @@ Url.prototype.format = function() {
     }
   }
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-  // chop off from the tail first.
-  var hash = rest.indexOf('#');
-  if (hash !== -1) {
-    // got a fragment string.
-    this.hash = rest.substr(hash);
-    rest = rest.slice(0, hash);
-  }
-  var qm = rest.indexOf('?');
-  if (qm !== -1) {
-    this.search = rest.substr(qm);
-    this.query = rest.substr(qm + 1);
-    if (parseQueryString) {
-      this.query = querystring.parse(this.query);
-    }
-    rest = rest.slice(0, qm);
-  } else if (parseQueryString) {
-    // no query string, but parseQueryString still requested
-    this.search = '';
-    this.query = {};
-  }
-  if (rest) this.pathname = rest;
-  if (slashedProtocol[lowerProto] &&
-      this.hostname && !this.pathname) {
-    this.pathname = '/';
-  }
-
-  //to support http.request
-  if (this.pathname || this.search) {
-    var p = this.pathname || '';
-    var s = this.search || '';
-    this.path = p + s;
-  }
-
-  // finally, reconstruct the href based on what has been validated.
-  this.href = this.format();
-  return this;
-};
-
-// format a parsed object into a url string
-function urlFormat(obj) {
-  // ensure it's an object, and not a string url.
-  // If it's an obj, this is a no-op.
-  // this way, you can call url_format() on strings
-  // to clean up potentially wonky urls.
-  if (util.isString(obj)) obj = urlParse(obj);
-  if (!(obj instanceof Url)) return Url.prototype.format.call(obj);
-  return obj.format();
-}
-
-Url.prototype.format = function() {
-  var auth = this.auth || '';
-  if (auth) {
-    auth = encodeURIComponent(auth);
-    auth = auth.replace(/%3A/i, ':');
-    auth += '@';
-  }
-
-  var protocol = this.protocol || '',
-      pathname = this.pathname || '',
-      hash = this.hash || '',
-      host = false,
-      query = '';
-
-  if (this.host) {
-    host = auth + this.host;
-  } else if (this.hostname) {
-    host = auth + (this.hostname.indexOf(':') === -1 ?
-        this.hostname :
-        '[' + this.hostname + ']');
-    if (this.port) {
-      host += ':' + this.port;
-    }
-  }
-
-  if (this.query &&
-      util.isObject(this.query) &&
-      Object.keys(this.query).length) {
-    query = querystring.stringify(this.query);
-  }
-
-  var search = this.search || (query && ('?' + query)) || '';
-
-  if (protocol && protocol.substr(-1) !== ':') protocol += ':';
-
-  // only the slashedProtocols get the //.  Not mailto:, xmpp:, etc.
-  // unless they had them to begin with.
-  if (this.slashes ||
-      (!protocol || slashedProtocol[protocol]) && host !== false) {
-    host = '//' + (host || '');
-    if (pathname && pathname.charAt(0) !== '/') pathname = '/' + pathname;
-  } else if (!host) {
-    host = '';
-  }
-
-  if (hash && hash.charAt(0) !== '#') hash = '#' + hash;
-  if (search && search.charAt(0) !== '?') search = '?' + search;
-
-  pathname = pathname.replace(/[?#]/g, function(match) {
-    return encodeURIComponent(match);
-  });
-  search = search.replace('#', '%23');
-
-  return protocol + host + pathname + search + hash;
-};
-
-function urlResolve(source, relative) {
-  return urlParse(source, false, true).resolve(relative);
-}
-
-Url.prototype.resolve = function(relative) {
-  return this.resolveObject(urlParse(relative, false, true)).format();
-};
-
-function urlResolveObject(source, relative) {
-  if (!source) return relative;
-  return urlParse(source, false, true).resolveObject(relative);
-}
-
-Url.prototype.resolveObject = function(relative) {
-  if (util.isString(relative)) {
-    var rel = new Url();
-    rel.parse(relative, false, true);
-    relative = rel;
-  }
-
-  var result = new Url();
-  var tkeys = Object.keys(this);
-  for (var tk = 0; tk < tkeys.length; tk++) {
-    var tkey = tkeys[tk];
-    result[tkey] = this[tkey];
-  }
-
-  // hash is always overridden, no matter what.
-  // even href="" will remove it.
-  result.hash = relative.hash;
-
-  // if the relative url is empty, then there's nothing left to do here.
-  if (relative.href === '') {
-    result.href = result.format();
-    return result;
-  }
-
-  // hrefs like //foo/bar always cut to the protocol.
-  if (relative.slashes && !relative.protocol) {
-    // take everything except the protocol from relative
-    var rkeys = Object.keys(relative);
-    for (var rk = 0; rk < rkeys.length; rk++) {
-      var rkey = rkeys[rk];
-      if (rkey !== 'protocol')
-        result[rkey] = relative[rkey];
-    }
-
-    //urlParse appends trailing / to urls like http://www.example.com
-    if (slashedProtocol[result.protocol] &&
-        result.hostname && !result.pathname) {
-      result.path = result.pathname = '/';
-    }
-
-    result.href = result.format();
-    return result;
-  }
-
-  if (relative.protocol && relative.protocol !== result.protocol) {
-    // if it's a known url protocol, then changing
-    // the protocol does weird things
-    // first, if it's not file:, then we MUST have a host,
-    // and if there was a path
-    // to begin with, then we MUST have a path.
-    // if it is file:, then the host is dropped,
-    // because that's known to be hostless.
-    // anything else is assumed to be absolute.
-    if (!slashedProtocol[relative.protocol]) {
-      var keys = Object.keys(relative);
-      for (var v = 0; v < keys.length; v++) {
-        var k = keys[v];
-        result[k] = relative[k];
-      }
-      result.href = result.format();
-      return result;
-    }
-
-    result.protocol = relative.protocol;
-    if (!relative.host && !hostlessProtocol[relative.protocol]) {
-      var relPath = (relative.pathname || '').split('/');
-      while (relPath.length && !(relative.host = relPath.shift()));
-      if (!relative.host) relative.host = '';
-      if (!relative.hostname) relative.hostname = '';
-      if (relPath[0] !== '') relPath.unshift('');
-      if (relPath.length < 2) relPath.unshift('');
-      result.pathname = relPath.join('/');
-    } else {
-      result.pathname = relative.pathname;
-    }
-    result.search = relative.search;
-    result.query = relative.query;
-    result.host = relative.host || '';
-    result.auth = relative.auth;
-    result.hostname = relative.hostname || relative.host;
-    result.port = relative.port;
-    // to support http.request
-    if (result.pathname || result.search) {
-      var p = result.pathname || '';
-      var s = result.search || '';
-      result.path = p + s;
-    }
-    result.slashes = result.slashes || relative.slashes;
-    result.href = result.format();
-    return result;
-  }
-
-  var isSourceAbs = (result.pathname && result.pathname.charAt(0) === '/'),
-      isRelAbs = (
-          relative.host ||
-          relative.pathname && relative.pathname.charAt(0) === '/'
-      ),
-      mustEndAbs = (isRelAbs || isSourceAbs ||
-                    (result.host && relative.pathname)),
-      removeAllDots = mustEndAbs,
-      srcPath = result.pathname && result.pathname.split('/') || [],
-      relPath = relative.pathname && relative.pathname.split('/') || [],
-      psychotic = result.protocol && !slashedProtocol[result.protocol];
-
-  // if the url is a non-slashed url, then relative
-  // links like ../.. should be able
-  // to crawl up to the hostname, as well.  This is strange.
-  // result.protocol has already been set by now.
-  // Later on, put the first path part into the host field.
-  if (psychotic) {
-    result.hostname = '';
-    result.port = null;
-    if (result.host) {
-      if (srcPath[0] === '') srcPath[0] = result.host;
-      else srcPath.unshift(result.host);
-    }
-    result.host = '';
-    if (relative.protocol) {
-      relative.hostname = null;
-      relative.port = null;
-      if (relative.host) {
-        if (relPath[0] === '') relPath[0] = relative.host;
-        else relPath.unshift(relative.host);
-      }
-      relative.host = null;
-    }
-    mustEndAbs = mustEndAbs && (relPath[0] === '' || srcPath[0] === '');
-  }
-=======
   if (this.query &&
       util.isObject(this.query) &&
       Object.keys(this.query).length) {
@@ -23564,289 +23092,6 @@ Url.prototype.parseHost = function() {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-
-  if (isRelAbs) {
-    // it's absolute.
-    result.host = (relative.host || relative.host === '') ?
-                  relative.host : result.host;
-    result.hostname = (relative.hostname || relative.hostname === '') ?
-                      relative.hostname : result.hostname;
-    result.search = relative.search;
-    result.query = relative.query;
-    srcPath = relPath;
-    // fall through to the dot-handling below.
-  } else if (relPath.length) {
-    // it's relative
-    // throw away the existing file, and take the new path instead.
-    if (!srcPath) srcPath = [];
-    srcPath.pop();
-    srcPath = srcPath.concat(relPath);
-    result.search = relative.search;
-    result.query = relative.query;
-  } else if (!util.isNullOrUndefined(relative.search)) {
-    // just pull out the search.
-    // like href='?foo'.
-    // Put this after the other two cases because it simplifies the booleans
-    if (psychotic) {
-      result.hostname = result.host = srcPath.shift();
-      //occationaly the auth can get stuck only in host
-      //this especially happens in cases like
-      //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-      var authInHost = result.host && result.host.indexOf('@') > 0 ?
-                       result.host.split('@') : false;
-      if (authInHost) {
-        result.auth = authInHost.shift();
-        result.host = result.hostname = authInHost.shift();
-      }
-    }
-    result.search = relative.search;
-    result.query = relative.query;
-    //to support http.request
-    if (!util.isNull(result.pathname) || !util.isNull(result.search)) {
-      result.path = (result.pathname ? result.pathname : '') +
-                    (result.search ? result.search : '');
-    }
-    result.href = result.format();
-    return result;
-  }
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-  if (!srcPath.length) {
-    // no path at all.  easy.
-    // we've already handled the other stuff above.
-    result.pathname = null;
-    //to support http.request
-    if (result.search) {
-      result.path = '/' + result.search;
-    } else {
-      result.path = null;
-    }
-    result.href = result.format();
-    return result;
-  }
-
-  // if a url ENDs in . or .., then it must get a trailing slash.
-  // however, if it ends in anything else non-slashy,
-  // then it must NOT get a trailing slash.
-  var last = srcPath.slice(-1)[0];
-  var hasTrailingSlash = (
-      (result.host || relative.host || srcPath.length > 1) &&
-      (last === '.' || last === '..') || last === '');
-
-  // strip single dots, resolve double dots to parent dir
-  // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-  for (var i = srcPath.length; i >= 0; i--) {
-    last = srcPath[i];
-    if (last === '.') {
-      srcPath.splice(i, 1);
-    } else if (last === '..') {
-      srcPath.splice(i, 1);
-      up++;
-    } else if (up) {
-      srcPath.splice(i, 1);
-      up--;
-    }
-  }
-
-  // if the path is allowed to go above the root, restore leading ..s
-  if (!mustEndAbs && !removeAllDots) {
-    for (; up--; up) {
-      srcPath.unshift('..');
-    }
-  }
-
-  if (mustEndAbs && srcPath[0] !== '' &&
-      (!srcPath[0] || srcPath[0].charAt(0) !== '/')) {
-    srcPath.unshift('');
-  }
-
-  if (hasTrailingSlash && (srcPath.join('/').substr(-1) !== '/')) {
-    srcPath.push('');
-  }
-
-  var isAbsolute = srcPath[0] === '' ||
-      (srcPath[0] && srcPath[0].charAt(0) === '/');
-
-  // put the host back
-  if (psychotic) {
-    result.hostname = result.host = isAbsolute ? '' :
-                                    srcPath.length ? srcPath.shift() : '';
-    //occationaly the auth can get stuck only in host
-    //this especially happens in cases like
-    //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-    var authInHost = result.host && result.host.indexOf('@') > 0 ?
-                     result.host.split('@') : false;
-    if (authInHost) {
-      result.auth = authInHost.shift();
-      result.host = result.hostname = authInHost.shift();
-    }
-  }
-
-  mustEndAbs = mustEndAbs || (result.host && srcPath.length);
-
-  if (mustEndAbs && !isAbsolute) {
-    srcPath.unshift('');
-  }
-
-  if (!srcPath.length) {
-    result.pathname = null;
-    result.path = null;
-  } else {
-    result.pathname = srcPath.join('/');
-  }
-
-  //to support request.http
-  if (!util.isNull(result.pathname) || !util.isNull(result.search)) {
-    result.path = (result.pathname ? result.pathname : '') +
-                  (result.search ? result.search : '');
-  }
-  result.auth = relative.auth || result.auth;
-  result.slashes = result.slashes || relative.slashes;
-  result.href = result.format();
-  return result;
-};
-
-Url.prototype.parseHost = function() {
-  var host = this.host;
-  var port = portPattern.exec(host);
-  if (port) {
-    port = port[0];
-    if (port !== ':') {
-      this.port = port.substr(1);
-    }
-    host = host.substr(0, host.length - port.length);
-  }
-  if (host) this.hostname = host;
-=======
-module.exports = {
-  isString: function(arg) {
-    return typeof(arg) === 'string';
-  },
-  isObject: function(arg) {
-    return typeof(arg) === 'object' && arg !== null;
-  },
-  isNull: function(arg) {
-    return arg === null;
-  },
-  isNullOrUndefined: function(arg) {
-    return arg == null;
-  }
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/harmony-module.js":
-/*!*******************************************!*\
-  !*** (webpack)/buildin/harmony-module.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(originalModule) {
-	if (!originalModule.webpackPolyfill) {
-		var module = Object.create(originalModule);
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		Object.defineProperty(module, "exports", {
-			enumerable: true
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-};
-
-
-/***/ }),
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/***/ "./node_modules/url/util.js":
-/*!**********************************!*\
-  !*** ./node_modules/url/util.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 module.exports = {
@@ -24112,160 +23357,11 @@ function cleanupSubscription(subscription) {
   }
 }
 
-=======
-/***/ "./node_modules/zen-observable-ts/lib/bundle.esm.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/zen-observable-ts/lib/bundle.esm.js ***!
-  \**********************************************************/
-/*! exports provided: default, Observable */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Observable", function() { return Observable; });
-/* harmony import */ var zen_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zen-observable */ "./node_modules/zen-observable/index.js");
-/* harmony import */ var zen_observable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zen_observable__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var Observable = zen_observable__WEBPACK_IMPORTED_MODULE_0___default.a;
-
-/* harmony default export */ __webpack_exports__["default"] = (Observable);
-
-//# sourceMappingURL=bundle.esm.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/zen-observable/index.js":
-/*!**********************************************!*\
-  !*** ./node_modules/zen-observable/index.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./lib/Observable.js */ "./node_modules/zen-observable/lib/Observable.js").Observable;
-
-
-/***/ }),
-
-/***/ "./node_modules/zen-observable/lib/Observable.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/zen-observable/lib/Observable.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Observable = void 0;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-// === Symbol Support ===
-var hasSymbols = function () {
-  return typeof Symbol === 'function';
-};
-
-var hasSymbol = function (name) {
-  return hasSymbols() && Boolean(Symbol[name]);
-};
-
-var getSymbol = function (name) {
-  return hasSymbol(name) ? Symbol[name] : '@@' + name;
-};
-
-if (hasSymbols() && !hasSymbol('observable')) {
-  Symbol.observable = Symbol('observable');
-}
-
-var SymbolIterator = getSymbol('iterator');
-var SymbolObservable = getSymbol('observable');
-var SymbolSpecies = getSymbol('species'); // === Abstract Operations ===
-
-function getMethod(obj, key) {
-  var value = obj[key];
-  if (value == null) return undefined;
-  if (typeof value !== 'function') throw new TypeError(value + ' is not a function');
-  return value;
-}
-
-function getSpecies(obj) {
-  var ctor = obj.constructor;
-
-  if (ctor !== undefined) {
-    ctor = ctor[SymbolSpecies];
-
-    if (ctor === null) {
-      ctor = undefined;
-    }
-  }
-
-  return ctor !== undefined ? ctor : Observable;
-}
-
-function isObservable(x) {
-  return x instanceof Observable; // SPEC: Brand check
-}
-
-function hostReportError(e) {
-  if (hostReportError.log) {
-    hostReportError.log(e);
-  } else {
-    setTimeout(function () {
-      throw e;
-    });
-  }
-}
-
-function enqueue(fn) {
-  Promise.resolve().then(function () {
-    try {
-      fn();
-    } catch (e) {
-      hostReportError(e);
-    }
-  });
-}
-
-function cleanupSubscription(subscription) {
-  var cleanup = subscription._cleanup;
-  if (cleanup === undefined) return;
-  subscription._cleanup = undefined;
-
-  if (!cleanup) {
-    return;
-  }
-
-  try {
-    if (typeof cleanup === 'function') {
-      cleanup();
-    } else {
-      var unsubscribe = getMethod(cleanup, 'unsubscribe');
-
-      if (unsubscribe) {
-        unsubscribe.call(cleanup);
-      }
-    }
-  } catch (e) {
-    hostReportError(e);
-  }
-}
-
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 function closeSubscription(subscription) {
   subscription._observer = undefined;
   subscription._queue = undefined;
   subscription._state = 'closed';
 }
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 
 function flushSubscription(subscription) {
   var queue = subscription._queue;
@@ -24353,95 +23449,6 @@ function () {
     this._state = 'initializing';
     var subscriptionObserver = new SubscriptionObserver(this);
 
-=======
-
-function flushSubscription(subscription) {
-  var queue = subscription._queue;
-
-  if (!queue) {
-    return;
-  }
-
-  subscription._queue = undefined;
-  subscription._state = 'ready';
-
-  for (var i = 0; i < queue.length; ++i) {
-    notifySubscription(subscription, queue[i].type, queue[i].value);
-    if (subscription._state === 'closed') break;
-  }
-}
-
-function notifySubscription(subscription, type, value) {
-  subscription._state = 'running';
-  var observer = subscription._observer;
-
-  try {
-    var m = getMethod(observer, type);
-
-    switch (type) {
-      case 'next':
-        if (m) m.call(observer, value);
-        break;
-
-      case 'error':
-        closeSubscription(subscription);
-        if (m) m.call(observer, value);else throw value;
-        break;
-
-      case 'complete':
-        closeSubscription(subscription);
-        if (m) m.call(observer);
-        break;
-    }
-  } catch (e) {
-    hostReportError(e);
-  }
-
-  if (subscription._state === 'closed') cleanupSubscription(subscription);else if (subscription._state === 'running') subscription._state = 'ready';
-}
-
-function onNotify(subscription, type, value) {
-  if (subscription._state === 'closed') return;
-
-  if (subscription._state === 'buffering') {
-    subscription._queue.push({
-      type: type,
-      value: value
-    });
-
-    return;
-  }
-
-  if (subscription._state !== 'ready') {
-    subscription._state = 'buffering';
-    subscription._queue = [{
-      type: type,
-      value: value
-    }];
-    enqueue(function () {
-      return flushSubscription(subscription);
-    });
-    return;
-  }
-
-  notifySubscription(subscription, type, value);
-}
-
-var Subscription =
-/*#__PURE__*/
-function () {
-  function Subscription(observer, subscriber) {
-    _classCallCheck(this, Subscription);
-
-    // ASSERT: observer is an object
-    // ASSERT: subscriber is callable
-    this._cleanup = undefined;
-    this._observer = observer;
-    this._queue = undefined;
-    this._state = 'initializing';
-    var subscriptionObserver = new SubscriptionObserver(this);
-
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     try {
       this._cleanup = subscriber.call(undefined, subscriptionObserver);
     } catch (e) {
@@ -24465,124 +23472,15 @@ function () {
       return this._state === 'closed';
     }
   }]);
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 
   return Subscription;
 }();
 
-=======
-
-  return Subscription;
-}();
-
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 var SubscriptionObserver =
 /*#__PURE__*/
 function () {
   function SubscriptionObserver(subscription) {
     _classCallCheck(this, SubscriptionObserver);
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-
-    this._subscription = subscription;
-  }
-
-  _createClass(SubscriptionObserver, [{
-    key: "next",
-    value: function next(value) {
-      onNotify(this._subscription, 'next', value);
-    }
-  }, {
-    key: "error",
-    value: function error(value) {
-      onNotify(this._subscription, 'error', value);
-    }
-  }, {
-    key: "complete",
-    value: function complete() {
-      onNotify(this._subscription, 'complete');
-    }
-  }, {
-    key: "closed",
-    get: function () {
-      return this._subscription._state === 'closed';
-    }
-  }]);
-
-  return SubscriptionObserver;
-}();
-
-var Observable =
-/*#__PURE__*/
-function () {
-  function Observable(subscriber) {
-    _classCallCheck(this, Observable);
-
-    if (!(this instanceof Observable)) throw new TypeError('Observable cannot be called as a function');
-    if (typeof subscriber !== 'function') throw new TypeError('Observable initializer must be a function');
-    this._subscriber = subscriber;
-  }
-
-  _createClass(Observable, [{
-    key: "subscribe",
-    value: function subscribe(observer) {
-      if (typeof observer !== 'object' || observer === null) {
-        observer = {
-          next: observer,
-          error: arguments[1],
-          complete: arguments[2]
-        };
-      }
-
-      return new Subscription(observer, this._subscriber);
-    }
-  }, {
-    key: "forEach",
-    value: function forEach(fn) {
-      var _this = this;
-
-      return new Promise(function (resolve, reject) {
-        if (typeof fn !== 'function') {
-          reject(new TypeError(fn + ' is not a function'));
-          return;
-        }
-
-        function done() {
-          subscription.unsubscribe();
-          resolve();
-        }
-
-        var subscription = _this.subscribe({
-          next: function (value) {
-            try {
-              fn(value, done);
-            } catch (e) {
-              reject(e);
-              subscription.unsubscribe();
-            }
-          },
-          error: reject,
-          complete: resolve
-        });
-      });
-    }
-  }, {
-    key: "map",
-    value: function map(fn) {
-      var _this2 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-      var C = getSpecies(this);
-      return new C(function (observer) {
-        return _this2.subscribe({
-          next: function (value) {
-            try {
-              value = fn(value);
-            } catch (e) {
-              return observer.error(e);
-            }
-
-            observer.next(value);
-=======
 
     this._subscription = subscription;
   }
@@ -24834,296 +23732,6 @@ function () {
               }
             });
             subscriptions.push(inner);
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-          },
-          error: function (e) {
-            observer.error(e);
-          },
-          complete: function () {
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-            observer.complete();
-          }
-        });
-      });
-    }
-  }, {
-    key: "filter",
-    value: function filter(fn) {
-      var _this3 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-      var C = getSpecies(this);
-      return new C(function (observer) {
-        return _this3.subscribe({
-          next: function (value) {
-            try {
-              if (!fn(value)) return;
-            } catch (e) {
-              return observer.error(e);
-            }
-
-            observer.next(value);
-          },
-          error: function (e) {
-            observer.error(e);
-          },
-          complete: function () {
-            observer.complete();
-          }
-        });
-      });
-    }
-  }, {
-    key: "reduce",
-    value: function reduce(fn) {
-      var _this4 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-      var C = getSpecies(this);
-      var hasSeed = arguments.length > 1;
-      var hasValue = false;
-      var seed = arguments[1];
-      var acc = seed;
-      return new C(function (observer) {
-        return _this4.subscribe({
-          next: function (value) {
-            var first = !hasValue;
-            hasValue = true;
-
-            if (!first || hasSeed) {
-              try {
-                acc = fn(acc, value);
-              } catch (e) {
-                return observer.error(e);
-              }
-            } else {
-              acc = value;
-            }
-          },
-          error: function (e) {
-            observer.error(e);
-          },
-          complete: function () {
-            if (!hasValue && !hasSeed) return observer.error(new TypeError('Cannot reduce an empty sequence'));
-            observer.next(acc);
-            observer.complete();
-          }
-        });
-      });
-    }
-  }, {
-    key: "concat",
-    value: function concat() {
-      var _this5 = this;
-
-      for (var _len = arguments.length, sources = new Array(_len), _key = 0; _key < _len; _key++) {
-        sources[_key] = arguments[_key];
-      }
-=======
-            completeIfDone();
-          }
-        });
-
-        function completeIfDone() {
-          if (outer.closed && subscriptions.length === 0) observer.complete();
-        }
-
-        return function () {
-          subscriptions.forEach(function (s) {
-            return s.unsubscribe();
-          });
-          outer.unsubscribe();
-        };
-      });
-    }
-  }, {
-    key: SymbolObservable,
-    value: function () {
-      return this;
-    }
-  }], [{
-    key: "from",
-    value: function from(x) {
-      var C = typeof this === 'function' ? this : Observable;
-      if (x == null) throw new TypeError(x + ' is not an object');
-      var method = getMethod(x, SymbolObservable);
-
-      if (method) {
-        var observable = method.call(x);
-        if (Object(observable) !== observable) throw new TypeError(observable + ' is not an object');
-        if (isObservable(observable) && observable.constructor === C) return observable;
-        return new C(function (observer) {
-          return observable.subscribe(observer);
-        });
-      }
-
-      if (hasSymbol('iterator')) {
-        method = getMethod(x, SymbolIterator);
-
-        if (method) {
-          return new C(function (observer) {
-            enqueue(function () {
-              if (observer.closed) return;
-              var _iteratorNormalCompletion = true;
-              var _didIteratorError = false;
-              var _iteratorError = undefined;
-
-              try {
-                for (var _iterator = method.call(x)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                  var _item = _step.value;
-                  observer.next(_item);
-                  if (observer.closed) return;
-                }
-              } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion && _iterator.return != null) {
-                    _iterator.return();
-                  }
-                } finally {
-                  if (_didIteratorError) {
-                    throw _iteratorError;
-                  }
-                }
-              }
-
-              observer.complete();
-            });
-          });
-        }
-      }
-
-      if (Array.isArray(x)) {
-        return new C(function (observer) {
-          enqueue(function () {
-            if (observer.closed) return;
-
-            for (var i = 0; i < x.length; ++i) {
-              observer.next(x[i]);
-              if (observer.closed) return;
-            }
-
-            observer.complete();
-          });
-        });
-      }
-
-      throw new TypeError(x + ' is not observable');
-    }
-  }, {
-    key: "of",
-    value: function of() {
-      for (var _len2 = arguments.length, items = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        items[_key2] = arguments[_key2];
-      }
-
-      var C = typeof this === 'function' ? this : Observable;
-      return new C(function (observer) {
-        enqueue(function () {
-          if (observer.closed) return;
-
-          for (var i = 0; i < items.length; ++i) {
-            observer.next(items[i]);
-            if (observer.closed) return;
-          }
-
-          observer.complete();
-        });
-      });
-    }
-  }, {
-    key: SymbolSpecies,
-    get: function () {
-      return this;
-    }
-  }]);
-
-  return Observable;
-}();
-
-exports.Observable = Observable;
-
-if (hasSymbols()) {
-  Object.defineProperty(Observable, Symbol('extensions'), {
-    value: {
-      symbol: SymbolObservable,
-      hostReportError: hostReportError
-    },
-    configurable: true
-  });
-}
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-
-      var C = getSpecies(this);
-      return new C(function (observer) {
-        var subscription;
-        var index = 0;
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-        function startNext(next) {
-          subscription = next.subscribe({
-            next: function (v) {
-              observer.next(v);
-            },
-            error: function (e) {
-              observer.error(e);
-            },
-            complete: function () {
-              if (index === sources.length) {
-                subscription = undefined;
-                observer.complete();
-              } else {
-                startNext(C.from(sources[index++]));
-              }
-            }
-          });
-        }
-
-        startNext(_this5);
-        return function () {
-          if (subscription) {
-            subscription.unsubscribe();
-            subscription = undefined;
-          }
-        };
-      });
-    }
-  }, {
-    key: "flatMap",
-    value: function flatMap(fn) {
-      var _this6 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-      var C = getSpecies(this);
-      return new C(function (observer) {
-        var subscriptions = [];
-
-        var outer = _this6.subscribe({
-          next: function (value) {
-            if (fn) {
-              try {
-                value = fn(value);
-              } catch (e) {
-                return observer.error(e);
-              }
-            }
-
-            var inner = C.from(value).subscribe({
-              next: function (value) {
-                observer.next(value);
-              },
-              error: function (e) {
-                observer.error(e);
-              },
-              complete: function () {
-                var i = subscriptions.indexOf(inner);
-                if (i >= 0) subscriptions.splice(i, 1);
-                completeIfDone();
-              }
-            });
-            subscriptions.push(inner);
           },
           error: function (e) {
             observer.error(e);
@@ -25266,359 +23874,6 @@ if (hasSymbols()) {
 
 /***/ }),
 
-/***/ "./public/img/high/airbnb-background.jpg":
-/*!***********************************************!*\
-  !*** ./public/img/high/airbnb-background.jpg ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/airbnb-background-b8b3c94eb622e8a6083c338facb6c4fd.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/explore1.jpg":
-/*!**************************************!*\
-  !*** ./public/img/high/explore1.jpg ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/explore1-78555eb8ecfa2b77afa64d6104f73a07.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/explore2.jpg":
-/*!**************************************!*\
-  !*** ./public/img/high/explore2.jpg ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/explore2-ea1d6be446ac091888bb2fdc6b7c809b.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/explore3.jpg":
-/*!**************************************!*\
-  !*** ./public/img/high/explore3.jpg ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/explore3-aeb0d58d63e32f5efd9e3de68789726b.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/facebook.png":
-/*!**************************************!*\
-  !*** ./public/img/high/facebook.png ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/facebook-8f5ce27564945d2c9a10ef827549a78c.png";
-
-/***/ }),
-
-/***/ "./public/img/high/featured1.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured1.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured1-61cfa1ad94e59dfb8a0aa9025d12eda4.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured2.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured2.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured2-f194738a33c75d7529e437a24fce67e0.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured3.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured3.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured3-8b63bad827adf3b1fab9832d1f1dbd41.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/google.png":
-/*!************************************!*\
-  !*** ./public/img/high/google.png ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/google-8b201685859c6b291fb39019e19896fd.png";
-
-/***/ }),
-
-/***/ "./public/img/high/plus-1.jpg":
-/*!************************************!*\
-  !*** ./public/img/high/plus-1.jpg ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/plus-1-1cd90d428ed098d36d4099a3514aa633.jpg";
-
-/***/ }),
-
-/***/ "./src/components/ShowAll.tsx":
-/*!************************************!*\
-  !*** ./src/components/ShowAll.tsx ***!
-  \************************************/
-/*! exports provided: ShowAll */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowAll", function() { return ShowAll; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/ShowAll.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var ShowAll = function ShowAll(_ref) {
-  var title = _ref.title;
-  return __jsx("div", {
-    className: "mt-4 flex flex-wrap items-center justify-start",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "#",
-    className: "font-semibold border-b border-gray-800",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, title), __jsx("div", {
-    className: "pl-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx("svg", {
-    version: "1.1",
-    id: "Capa_1",
-    xmlns: "http://www.w3.org/2000/svg",
-    x: "0px",
-    y: "0px",
-    width: "14px",
-    height: "14px",
-    viewBox: "0 0 451.846 451.847",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  })))));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Adventures.tsx":
-/*!**************************************************!*\
-  !*** ./src/components/containers/Adventures.tsx ***!
-  \**************************************************/
-/*! exports provided: Adventures */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Adventures", function() { return Adventures; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
-/* harmony import */ var _functions_AdventureCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/AdventureCard */ "./src/components/functions/AdventureCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    adventures {\n      id\n      title\n      period\n      cost\n      country\n      img\n    }\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-
-
-
- // Component
-
-
- // Wrapper
-
-
-var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var Adventures = function Adventures() {
-  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_ADVENTURES),
-      loading = _useQuery.loading,
-      error = _useQuery.error,
-      data = _useQuery.data;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }, __jsx(_functions_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["AdventureCard"], {
-        key: i,
-        id: data === null || data === void 0 ? void 0 : data.adventures[i].id,
-        img: data === null || data === void 0 ? void 0 : data.adventures[i].img,
-        country: data === null || data === void 0 ? void 0 : data.adventures[i].country,
-        title: data === null || data === void 0 ? void 0 : data.adventures[i].title,
-        cost: data === null || data === void 0 ? void 0 : data.adventures[i].cost,
-        period: data === null || data === void 0 ? void 0 : data.adventures[i].period,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
-
-  if (error) return "Error! ".concat(error.message);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
-    title: "Introducing Airbnb Adventures",
-    phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 1,
-    queries: {
-      small: '(min-width: 0px) and (max-width: 640px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(1), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 2,
-    queries: {
-      large: '(min-width: 641px) and (max-width: 767px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large && data.adventures ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 3,
-    queries: {
-      xl: '(min-width: 768px) and (max-width: 1023px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl && data.adventures ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 4,
-    queries: {
-      twoxl: '(min-width: 1024px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(4), renderContent(data, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
-    title: "Show all adventures",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 133
-=======
 /***/ "./public/img/high/airbnb-background.jpg":
 /*!***********************************************!*\
   !*** ./public/img/high/airbnb-background.jpg ***!
@@ -26504,407 +24759,6 @@ var Plus = function Plus() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-    },
-    __self: this
-  })));
-};
-
-/***/ }),
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/***/ "./src/components/containers/Explore.tsx":
-/*!***********************************************!*\
-  !*** ./src/components/containers/Explore.tsx ***!
-  \***********************************************/
-/*! exports provided: Explore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Explore", function() { return Explore; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/ExploreCard */ "./src/components/functions/ExploreCard.tsx");
-/* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Explore.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
- // Dependency
-
- // Components
-
- // Wrapper
-
- // Images
-// High Resolution
-
-var explore1 = __webpack_require__(/*! ../../../public/img/high/explore1.jpg */ "./public/img/high/explore1.jpg");
-
-var explore2 = __webpack_require__(/*! ../../../public/img/high/explore2.jpg */ "./public/img/high/explore2.jpg");
-
-var explore3 = __webpack_require__(/*! ../../../public/img/high/explore3.jpg */ "./public/img/high/explore3.jpg");
-
-var explores = [{
-  img: explore1,
-  title: 'Stay'
-}, {
-  img: explore2,
-  title: 'Experience'
-}, {
-  img: explore3,
-  title: 'Adventure'
-}];
-var Explore = function Explore() {
-  return __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__["SectionOverflow"], {
-    title: "Explore Airbnb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full h-full overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-full scroller",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, explores.map(function (_ref) {
-    var img = _ref.img,
-        title = _ref.title;
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-      key: cuid__WEBPACK_IMPORTED_MODULE_1___default()(),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "w-32 mr-4 sm:w-1/3 cursor-pointer",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 49
-      },
-      __self: this
-    }, __jsx(_functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__["ExploreCard"], {
-      img: img,
-      title: title,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50
-      },
-      __self: this
-    })));
-  }))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Featured.tsx":
-/*!************************************************!*\
-  !*** ./src/components/containers/Featured.tsx ***!
-  \************************************************/
-/*! exports provided: Featured */
-=======
-/***/ "./src/components/containers/Popular.tsx":
-/*!***********************************************!*\
-  !*** ./src/components/containers/Popular.tsx ***!
-  \***********************************************/
-/*! exports provided: Popular */
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Featured", function() { return Featured; });
-=======
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Popular", function() { return Popular; });
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/* harmony import */ var _functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../functions/FeaturedCard */ "./src/components/functions/FeaturedCard.tsx");
-/* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
-=======
-/* harmony import */ var _functions_Location__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../functions/Location */ "./src/components/functions/Location.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_6__);
-
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Featured.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-=======
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2__["createElement"];
-
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-
- // Components
-
- // Wrapper
-
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
- // Images
-// High Resolution
-
-var featured1 = __webpack_require__(/*! ../../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
-
-var featured2 = __webpack_require__(/*! ../../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
-
-var featured3 = __webpack_require__(/*! ../../../public/img/high/featured3.jpg */ "./public/img/high/featured3.jpg");
-
-var Featured = function Featured() {
-=======
-
-var Popular = function Popular() {
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-      loading = _useState[0],
-      setLoading = _useState[1];
-
-  function sleep(ms) {
-    return new _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a(function (resolve) {
-      return setTimeout(resolve, ms);
-    });
-  }
-
-  var setSleep = function setSleep(seconds) {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function setSleep$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(sleep(seconds));
-
-          case 2:
-            setLoading(false);
-
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    });
-  };
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-  var featureds = [{
-    img: featured1,
-    verified: 940,
-    description: 'Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels'
-  }, {
-    img: featured2,
-    verified: 300,
-    description: 'Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.'
-  }, {
-    img: featured3,
-    verified: 290,
-    description: 'Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design'
-  }];
-  setSleep(3000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_5__["SectionOverflow"], {
-    title: "Featured Airbnb Plus destinations",
-    phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-=======
-  var locations = [{
-    location: 'San Francisco',
-    price: 216
-  }, {
-    location: 'Los Angeles',
-    price: 213
-  }, {
-    location: 'New York',
-    price: 159
-  }, {
-    location: 'Seattle',
-    price: 134
-  }, {
-    location: 'Denver',
-    price: 128
-  }, {
-    location: 'Washington DC',
-    price: 166
-  }, {
-    location: 'Phoenix',
-    price: 232
-  }, {
-    location: 'Austin',
-    price: 242
-  }, {
-    location: 'Houston',
-    price: 351
-  }, {
-    location: 'New Orleans',
-    price: 210
-  }];
-  setSleep(5000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_5__["Section"], {
-    title: "Popular destinations in the United States",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-    },
-    __self: this
-  }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-      lineNumber: 64
-=======
-      lineNumber: 72
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-    },
-    __self: this
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-      lineNumber: 65
-    },
-    __self: this
-  })) : __jsx("div", {
-    className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full h-full overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-full scroller",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, featureds.map(function (_ref, index) {
-    var img = _ref.img,
-        verified = _ref.verified,
-        description = _ref.description;
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
-      key: cuid__WEBPACK_IMPORTED_MODULE_6___default()(),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 74
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "w-80 lg:w-1/3 pb-5 mr-2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }, __jsx(_functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_4__["FeaturedCard"], {
-      key: index,
-      img: img,
-      verified: verified,
-      description: description,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: this
-    })));
-  })))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Plus.tsx":
-/*!********************************************!*\
-  !*** ./src/components/containers/Plus.tsx ***!
-  \********************************************/
-/*! exports provided: Plus */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Plus", function() { return Plus; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_PlusCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/PlusCard */ "./src/components/functions/PlusCard.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Plus.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Components
-
- // Wrapper
-
- // Images
-// High Resolution
-
-var img1 = __webpack_require__(/*! ../../../public/img/high/plus-1.jpg */ "./public/img/high/plus-1.jpg");
-
-var Plus = function Plus() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_2__["Section"], {
-    title: "Airbnb Plus places to stay",
-    phrase: "A selection of places to stay verified for quality and design",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx(_functions_PlusCard__WEBPACK_IMPORTED_MODULE_1__["PlusCard"], {
-    img: img1,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
     },
     __self: this
   })));
@@ -27048,29 +24902,6 @@ var Popular = function Popular() {
       },
       __self: this
     }, __jsx("div", {
-=======
-      lineNumber: 73
-    },
-    __self: this
-  })) : __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }, locations.map(function (_ref, index) {
-    var location = _ref.location,
-        price = _ref.price;
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_2__["Fragment"], {
-      key: cuid__WEBPACK_IMPORTED_MODULE_6___default()(),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: this
-    }, __jsx("div", {
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
       className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
       __source: {
         fileName: _jsxFileName,
@@ -27315,8 +25146,6 @@ var Stay = function Stay() {
 
 /***/ }),
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-=======
 /***/ "./src/components/containers/Today.tsx":
 /*!*********************************************!*\
   !*** ./src/components/containers/Today.tsx ***!
@@ -27705,7 +25534,6 @@ var Tomorrow = function Tomorrow() {
 
 /***/ }),
 
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 /***/ "./src/components/containers/TopRated.tsx":
 /*!************************************************!*\
   !*** ./src/components/containers/TopRated.tsx ***!
@@ -27768,11 +25596,7 @@ var TopRated = function TopRated() {
 
     for (var i = 0; i < number; i++) {
       content.push(__jsx("div", {
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-        className: "w-1/2 md:w-1/3 lg:w-1/4 2xl:w-1/6 pb-5",
-=======
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
         __source: {
           fileName: _jsxFileName,
           lineNumber: 52
@@ -27839,11 +25663,7 @@ var TopRated = function TopRated() {
     },
     __self: this
   }, function (matches) {
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-    return matches.xs ? (setCard(1), renderContent(data, card)) : null;
-=======
     return matches.xs ? (setCard(4), renderContent(data, card)) : null;
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       small: '(min-width: 740px) and (max-width: 987px)'
@@ -27854,11 +25674,7 @@ var TopRated = function TopRated() {
     },
     __self: this
   }, function (matches) {
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-    return matches.small ? (setCard(1), renderContent(data, card)) : null;
-=======
     return matches.small ? (setCard(3), renderContent(data, card)) : null;
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       large: '(min-width: 988px) and (max-width: 1299px)'
@@ -27869,11 +25685,7 @@ var TopRated = function TopRated() {
     },
     __self: this
   }, function (matches) {
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-    return matches.large ? (setCard(4), renderContent(data, card)) : null;
-=======
     return matches.large ? (setCard(3), renderContent(data, card)) : null;
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     queries: {
       xl: '(min-width: 1300px) and (max-width: 1529px)'
@@ -28589,26 +26401,6 @@ var Location = function Location(_ref) {
     className: "w-30/31 py-3 my-2",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-      lineNumber: 10
-    },
-    __self: this
-  }, __jsx("h3", {
-    className: "font-semibold",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, location), __jsx("p", {
-    className: "text-xs font-normal text-gray-650 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, "$", price, "/night average"));
-=======
       lineNumber: 10
     },
     __self: this
@@ -28747,7 +26539,6 @@ var LocationExperienceCard = function LocationExperienceCard(_ref) {
     },
     __self: this
   }, "\xA0 (", reviews, ")"))));
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 };
 
 /***/ }),
@@ -29973,10 +27764,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_HeaderCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/HeaderCard */ "./src/components/functions/HeaderCard.tsx");
 /* harmony import */ var _modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modals/RegisterModal */ "./src/components/modals/RegisterModal.tsx");
 /* harmony import */ var _modals_HelpModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modals/HelpModal */ "./src/components/modals/HelpModal.tsx");
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 /* harmony import */ var _modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modals/CurrencyModal */ "./src/components/modals/CurrencyModal.jsx");
-=======
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/Header.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -29984,10 +27772,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 
-=======
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
  // Images
 
 var background = __webpack_require__(/*! ../../../public/img/high/airbnb-background.jpg */ "./public/img/high/airbnb-background.jpg");
@@ -30001,7 +27786,6 @@ var Header = function Header() {
       helpModal = _useState2[0],
       setHelpModal = _useState2[1];
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       currencyModal = _useState3[0],
       setCurrencyModal = _useState3[1];
@@ -30009,11 +27793,6 @@ var Header = function Header() {
   var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       type = _useState4[0],
       setType = _useState4[1];
-=======
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      type = _useState3[0],
-      setType = _useState3[1];
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 
   var switchRegisterModal = function switchRegisterModal() {
     setRegisterModal(!registerModal);
@@ -30023,13 +27802,10 @@ var Header = function Header() {
     setHelpModal(!helpModal);
   };
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
   var switchCurrencyModal = function switchCurrencyModal() {
     setCurrencyModal(!currencyModal);
   };
 
-=======
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
   var switchType = function switchType(type) {
     setType(type);
   };
@@ -30046,65 +27822,41 @@ var Header = function Header() {
     className: "w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 40
-=======
-      lineNumber: 34
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("div", {
     className: "flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 46
-=======
-      lineNumber: 40
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("div", {
     className: "m-6",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 47
-=======
-      lineNumber: 41
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("a", {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 48
-=======
-      lineNumber: 42
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 49
-=======
-      lineNumber: 43
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("span", {
     className: "sr-only",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 50
-=======
-      lineNumber: 44
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Airbnb"), __jsx("svg", {
@@ -30118,33 +27870,21 @@ var Header = function Header() {
     },
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 51
-=======
-      lineNumber: 45
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("path", {
     d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 58
-=======
-      lineNumber: 52
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }))))), __jsx("div", {
     className: "hidden lg:block",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 64
-=======
-      lineNumber: 58
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("nav", {
@@ -30154,22 +27894,14 @@ var Header = function Header() {
     className: "flex items-center justify-around flex-wrap text-white",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 65
-=======
-      lineNumber: 59
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("div", {
     className: "border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 68
-=======
-      lineNumber: 62
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("a", {
@@ -30177,11 +27909,7 @@ var Header = function Header() {
     className: "flex items-center justify-start text-sm mx-2",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 69
-=======
-      lineNumber: 63
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("svg", {
@@ -30194,39 +27922,26 @@ var Header = function Header() {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 72
-=======
-      lineNumber: 66
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("path", {
     d: "m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 77
-=======
-      lineNumber: 71
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   })), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 79
-=======
-      lineNumber: 73
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "English(CA)"))), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 82
     },
     __self: this
@@ -30238,28 +27953,13 @@ var Header = function Header() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83
-=======
-      lineNumber: 76
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "#",
-    className: "text-sm  tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "$CAD")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 89
-=======
-      lineNumber: 81
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("a", {
@@ -30267,22 +27967,14 @@ var Header = function Header() {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 90
-=======
-      lineNumber: 82
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Host a home")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 94
-=======
-      lineNumber: 86
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("a", {
@@ -30290,22 +27982,14 @@ var Header = function Header() {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 95
-=======
-      lineNumber: 87
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Host an experience")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 99
-=======
-      lineNumber: 91
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("button", {
@@ -30315,22 +27999,14 @@ var Header = function Header() {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 100
-=======
-      lineNumber: 92
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Help")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 106
-=======
-      lineNumber: 98
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("button", {
@@ -30341,22 +28017,14 @@ var Header = function Header() {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 107
-=======
-      lineNumber: 99
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Sign up")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 116
-=======
-      lineNumber: 108
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("button", {
@@ -30367,54 +28035,34 @@ var Header = function Header() {
     className: "text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 117
-=======
-      lineNumber: 109
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Log in"))))), __jsx("div", {
     className: "md:ml-20",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 129
-=======
-      lineNumber: 121
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("h3", {
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 130
-=======
-      lineNumber: 122
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Book unique places to stay and things to do."), __jsx(_functions_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["HeaderCard"], {
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 133
-=======
-      lineNumber: 125
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   })), __jsx("div", {
     className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 text-right",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 135
-=======
-      lineNumber: 127
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, __jsx("p", {
@@ -30424,21 +28072,13 @@ var Header = function Header() {
     className: "text-sm text-white",
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 136
-=======
-      lineNumber: 128
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }, "Over 300 unique places ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 139
-=======
-      lineNumber: 131
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }), "to stay in Japan")), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('hidden') : undefined, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__["RegisterModal"], {
@@ -30449,11 +28089,7 @@ var Header = function Header() {
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 147
-=======
-      lineNumber: 139
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__["RegisterModal"], {
@@ -30464,18 +28100,13 @@ var Header = function Header() {
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 155
-=======
-      lineNumber: 147
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('auto') : undefined), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_3__["HelpModal"], {
     setHelpModal: switchHelpModal,
     __source: {
       fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
       lineNumber: 167
     },
     __self: this
@@ -30484,9 +28115,6 @@ var Header = function Header() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 169
-=======
-      lineNumber: 159
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
     },
     __self: this
   }) : null);
@@ -30494,24 +28122,15 @@ var Header = function Header() {
 
 /***/ }),
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 /***/ "./src/components/modals/CurrencyModal.jsx":
 /*!*************************************************!*\
   !*** ./src/components/modals/CurrencyModal.jsx ***!
   \*************************************************/
 /*! exports provided: CurrencyModal */
-=======
-/***/ "./src/components/modals/HelpModal.tsx":
-/*!*********************************************!*\
-  !*** ./src/components/modals/HelpModal.tsx ***!
-  \*********************************************/
-/*! exports provided: HelpModal */
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CurrencyModal", function() { return CurrencyModal; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -30519,1834 +28138,939 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/Cu
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var CurrencyModal = function CurrencyModal(setCurrencyModal) {
+  var currencies = [{
+    country: 'Canada',
+    full: 'Canadian dollar',
+    abbreviation: 'CAD',
+    symbol: '$'
+  }, {
+    country: 'Brazil',
+    full: 'Brazilian real',
+    abbreviation: 'BRL',
+    symbol: 'R$'
+  }];
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, ' ', __jsx("div", {
     id: "darkOverlay",
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }), __jsx("div", {
-    id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "relative w-11/12 flex justify-center items-center my-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-center absolute left-0 z-20 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return setRegisterModal(false);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-4 h-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 47.971 47.971",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  })))))), __jsx("div", {
-    className: "w-full flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-=======
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpModal", function() { return HelpModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/HelpCard */ "./src/components/functions/HelpCard.tsx");
-/* harmony import */ var _functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/HelpAdditional */ "./src/components/functions/HelpAdditional.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/HelpModal.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
- // Components
-
-
-
-var HelpModal = function HelpModal(_ref) {
-  var setHelpModal = _ref.setHelpModal;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      word = _useState[0],
-      setWord = _useState[1];
-
-  var handleChange = function handleChange(e) {
-    return setWord(e.target.value);
-  };
-
-  var questions = [{
-    title: 'How do I create an account?',
-    answer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
-  }];
-  return __jsx("div", {
-    className: "bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "py-5 text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, "Recommended help"), __jsx("button", {
-    onClick: function onClick() {
-      return setHelpModal(false);
-    },
-    className: "absolute top-0 right-0 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "pt-6 pr-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "h-4 w-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512.001 512.001",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }))))))), __jsx("div", {
-    className: "bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 mb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, "Search by keyword"), __jsx("div", {
-    id: "helpsearch",
-    className: "flex border border-gray-300 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-1/12 relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "absolute top-0 pl-2 pt-2 h-6 w-6",
-    style: {
-      fill: '#767676'
-    },
-    viewBox: "0 0 24 24",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m10.7227 19.9083c-4.919-.706-8.336-5.266-7.63-10.185.704-4.919 5.264-8.336 10.184-7.631 4.919.706 8.336 5.265 7.632 10.185-.706 4.92-5.266 8.336-10.186 7.631m11.65 2.76-3.729-4.196c1.706-1.514 2.905-3.618 3.254-6.053.783-5.467-3.013-10.533-8.479-11.317-5.467-.784-10.534 3.013-11.316 8.48-.784 5.466 3.012 10.532 8.478 11.315 2.675.384 5.254-.329 7.283-1.798l3.762 4.233c.184.207.5.225.706.042.206-.184.225-.5.041-.706",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "w-11/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, __jsx("input", {
-    value: word,
-    onChange: handleChange,
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    type: "text",
-    className: "w-full h-8 text-sm text-gray-750 focus:outline-none",
-    placeholder: "E.g. reservation status",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  })))), __jsx("div", {
-    className: "mt-8 mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, type)))), __jsx("div", {
-    className: "w-full flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
-  })));
-=======
-    className: "uppercase text-xs text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, "Recommended Articles")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }), __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "mt-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "uppercase text-gray-750 text-xs",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: this
-  }, "Explore More Articles By Topic")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: this
-  }, __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
-    title: "Reservation requests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }), __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
-    title: "Reservation requests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "flex flex-col justify-end items-center my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 110
-    },
-    __self: this
-  }, __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "w-11/12 bg-green-850 py-2 text-white rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: this
-  }, "Visit the Help Centre"), __jsx("a", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "border-b border-green-850 text-green-850 text-sm my-1",
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: this
-  }, "Give Feedback")));
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-};
-
-/***/ }),
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/***/ "./src/components/modals/HelpModal.tsx":
-/*!*********************************************!*\
-  !*** ./src/components/modals/HelpModal.tsx ***!
-  \*********************************************/
-/*! exports provided: HelpModal */
-=======
-/***/ "./src/components/modals/RegisterModal.tsx":
-/*!*************************************************!*\
-  !*** ./src/components/modals/RegisterModal.tsx ***!
-  \*************************************************/
-/*! exports provided: RegisterModal */
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpModal", function() { return HelpModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/HelpCard */ "./src/components/functions/HelpCard.tsx");
-/* harmony import */ var _functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/HelpAdditional */ "./src/components/functions/HelpAdditional.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/HelpModal.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
- // Components
-
-
-
-var HelpModal = function HelpModal(_ref) {
-  var setHelpModal = _ref.setHelpModal;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      word = _useState[0],
-      setWord = _useState[1];
-
-  var handleChange = function handleChange(e) {
-    return setWord(e.target.value);
-  };
-
-  var questions = [{
-    title: 'How do I create an account?',
-    answer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
-  }];
-  return __jsx("div", {
-    className: "bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "py-5 text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, "Recommended help"), __jsx("button", {
-    onClick: function onClick() {
-      return setHelpModal(false);
-    },
-    className: "absolute top-0 right-0 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "pt-6 pr-5",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "h-4 w-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 512.001 512.001",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-=======
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterModal", function() { return RegisterModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/RegisterModal.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Images
-
-var facebook = __webpack_require__(/*! ../../../public/img/high/facebook.png */ "./public/img/high/facebook.png");
-
-var google = __webpack_require__(/*! ../../../public/img/high/google.png */ "./public/img/high/google.png");
-
-var RegisterModal = function RegisterModal(_ref) {
-  var setRegisterModal = _ref.setRegisterModal,
-      setType = _ref.setType,
-      type = _ref.type,
-      nottype = _ref.nottype,
-      phrase = _ref.phrase;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    id: "darkOverlay",
-    className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), __jsx("div", {
-    id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "relative w-11/12 flex justify-center items-center my-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-center absolute left-0 z-20 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return setRegisterModal(false);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-4 h-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 47.971 47.971",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-      lineNumber: 43
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }))))))), __jsx("div", {
-    className: "bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 mb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, "Search by keyword"), __jsx("div", {
-    id: "helpsearch",
-    className: "flex border border-gray-300 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-1/12 relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "absolute top-0 pl-2 pt-2 h-6 w-6",
-    style: {
-      fill: '#767676'
-    },
-    viewBox: "0 0 24 24",
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m10.7227 19.9083c-4.919-.706-8.336-5.266-7.63-10.185.704-4.919 5.264-8.336 10.184-7.631 4.919.706 8.336 5.265 7.632 10.185-.706 4.92-5.266 8.336-10.186 7.631m11.65 2.76-3.729-4.196c1.706-1.514 2.905-3.618 3.254-6.053.783-5.467-3.013-10.533-8.479-11.317-5.467-.784-10.534 3.013-11.316 8.48-.784 5.466 3.012 10.532 8.478 11.315 2.675.384 5.254-.329 7.283-1.798l3.762 4.233c.184.207.5.225.706.042.206-.184.225-.5.041-.706",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "w-11/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, __jsx("input", {
-    value: word,
-    onChange: handleChange,
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    type: "text",
-    className: "w-full h-8 text-sm text-gray-750 focus:outline-none",
-    placeholder: "E.g. reservation status",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  })))), __jsx("div", {
-    className: "mt-8 mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "uppercase text-xs text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, "Recommended Articles")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }), __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "mt-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "uppercase text-gray-750 text-xs",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: this
-  }, "Explore More Articles By Topic")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: this
-  }, __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
-    title: "Reservation requests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }), __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
-    title: "Reservation requests",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "flex flex-col justify-end items-center my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 110
-    },
-    __self: this
-  }, __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "w-11/12 bg-green-850 py-2 text-white rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: this
-  }, "Visit the Help Centre"), __jsx("a", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "border-b border-green-850 text-green-850 text-sm my-1",
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: this
-  }, "Give Feedback")));
-=======
-      lineNumber: 42
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  })))))), __jsx("div", {
-    className: "w-full flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: this
-  }, type)))), __jsx("div", {
-    className: "w-full flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-11/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "my-3 mt-10",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("form", {
-    action: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    htmlFor: "country",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "absolute text-gray-650 text-xs top-0 pl-3 pt-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, "Country/Region"), __jsx("select", {
-    name: "country",
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "appearance-none w-full border-t border-r border-l border-gray-500 py-4 rounded-b-none rounded-lg placeholder-gray-900 pl-3",
-    id: "countryinput",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, __jsx("option", {
-    value: "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  }, "Canada (+1)"), __jsx("option", {
-    value: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: this
-  }, "Japan (+81)"), __jsx("option", {
-    value: "3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  }, "United States (+1)")), __jsx("div", {
-    className: "h-full pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "fill-current h-6 w-6",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: this
-  })))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx("input", {
-    className: "appearance-none  w-full border border-gray-500 py-3 rounded-t-none rounded-lg placeholder-gray-900 pl-4",
-    type: "text",
-    name: "phone",
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    placeholder: "Phone number",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }))))), __jsx("div", {
-    className: "py-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-xs text-gray-650",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, "We'll call or text you to confirm your number. Standard message and data rates apply.")), __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "w-full bg-pink-750 py-3 rounded-lg text-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 114
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: this
-  }, "Continue")), __jsx("div", {
-    className: "pt-4 pb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: this
-  }, __jsx("p", {
-    id: "pseudo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120
-    },
-    __self: this
-  }, __jsx("span", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-xs text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 121
-    },
-    __self: this
-  }, "or"))), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "absolute left-0 ml-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-5 h-5",
-    style: {
-      fill: '#767676'
-    },
-    viewBox: "0 0 479.058 479.058",
-    xmlns: "http://www.w3.org/2000/svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }))), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 138
-    },
-    __self: this
-  }, "Continue with email")), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }, __jsx("div", {
-    style: {
-      marginLeft: 15
-    },
-    className: "absolute left-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-6 h-6",
-    src: facebook,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 146
-    },
-    __self: this
-  })), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: this
-  }, "Continue with Facebook")), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 154
-    },
-    __self: this
-  }, __jsx("div", {
-    style: {
-      marginLeft: 17
-    },
-    className: "absolute left-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 155
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-5 h-5",
-    src: google,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 156
-    },
-    __self: this
-  })), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 158
-    },
-    __self: this
-  }, "Continue with Google")), __jsx("div", {
-    className: "flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 164
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-sm text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 165
-    },
-    __self: this
-  }, phrase, " have an account?"), __jsx("button", {
-    onClick: function onClick() {
-      return setType("".concat(nottype));
-    },
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "border-b border-gray-750 text-sm ml-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 170
-    },
-    __self: this
-  }, nottype))))));
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-};
-
-/***/ }),
-
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/***/ "./src/components/modals/RegisterModal.tsx":
-/*!*************************************************!*\
-  !*** ./src/components/modals/RegisterModal.tsx ***!
-  \*************************************************/
-/*! exports provided: RegisterModal */
-=======
-/***/ "./src/components/wrapper/Section.tsx":
-/*!********************************************!*\
-  !*** ./src/components/wrapper/Section.tsx ***!
-  \********************************************/
-/*! exports provided: Section */
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterModal", function() { return RegisterModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/RegisterModal.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Images
-
-var facebook = __webpack_require__(/*! ../../../public/img/high/facebook.png */ "./public/img/high/facebook.png");
-
-var google = __webpack_require__(/*! ../../../public/img/high/google.png */ "./public/img/high/google.png");
-
-var RegisterModal = function RegisterModal(_ref) {
-  var setRegisterModal = _ref.setRegisterModal,
-      setType = _ref.setType,
-      type = _ref.type,
-      nottype = _ref.nottype,
-      phrase = _ref.phrase;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    id: "darkOverlay",
-    className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), __jsx("div", {
-    id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "relative w-11/12 flex justify-center items-center my-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex items-center absolute left-0 z-20 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return setRegisterModal(false);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-4 h-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 47.971 47.971",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  })))))), __jsx("div", {
-    className: "w-full flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: this
-  }, type)))), __jsx("div", {
-    className: "w-full flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-11/12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "my-3 mt-10",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("form", {
-    action: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, __jsx("label", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    htmlFor: "country",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "absolute text-gray-650 text-xs top-0 pl-3 pt-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, "Country/Region"), __jsx("select", {
-    name: "country",
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "appearance-none w-full border-t border-r border-l border-gray-500 py-4 rounded-b-none rounded-lg placeholder-gray-900 pl-3",
-    id: "countryinput",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, __jsx("option", {
-    value: "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  }, "Canada (+1)"), __jsx("option", {
-    value: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: this
-  }, "Japan (+81)"), __jsx("option", {
-    value: "3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  }, "United States (+1)")), __jsx("div", {
-    className: "h-full pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "fill-current h-6 w-6",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: this
-  })))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx("input", {
-    className: "appearance-none  w-full border border-gray-500 py-3 rounded-t-none rounded-lg placeholder-gray-900 pl-4",
-    type: "text",
-    name: "phone",
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    placeholder: "Phone number",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }))))), __jsx("div", {
-    className: "py-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-xs text-gray-650",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, "We'll call or text you to confirm your number. Standard message and data rates apply.")), __jsx("button", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "w-full bg-pink-750 py-3 rounded-lg text-white",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 114
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: this
-  }, "Continue")), __jsx("div", {
-    className: "pt-4 pb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: this
-  }, __jsx("p", {
-    id: "pseudo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120
-    },
-    __self: this
-  }, __jsx("span", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-xs text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 121
-    },
-    __self: this
-  }, "or"))), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "absolute left-0 ml-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-5 h-5",
-    style: {
-      fill: '#767676'
-    },
-    viewBox: "0 0 479.058 479.058",
-    xmlns: "http://www.w3.org/2000/svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }))), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 138
-    },
-    __self: this
-  }, "Continue with email")), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }, __jsx("div", {
-    style: {
-      marginLeft: 15
-    },
-    className: "absolute left-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-6 h-6",
-    src: facebook,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 146
-    },
-    __self: this
-  })), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: this
-  }, "Continue with Facebook")), __jsx("div", {
-    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 154
-    },
-    __self: this
-  }, __jsx("div", {
-    style: {
-      marginLeft: 17
-    },
-    className: "absolute left-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 155
-    },
-    __self: this
-  }, __jsx("img", {
-    className: "w-5 h-5",
-    src: google,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 156
-    },
-    __self: this
-  })), __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 158
-    },
-    __self: this
-  }, "Continue with Google")), __jsx("div", {
-    className: "flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 164
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-sm text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 165
-    },
-    __self: this
-  }, phrase, " have an account?"), __jsx("button", {
-    onClick: function onClick() {
-      return setType("".concat(nottype));
-    },
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "border-b border-gray-750 text-sm ml-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 170
-    },
-    __self: this
-  }, nottype))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/wrapper/Section.tsx":
-/*!********************************************!*\
-  !*** ./src/components/wrapper/Section.tsx ***!
-  \********************************************/
-/*! exports provided: Section */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/Section.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var Section = function Section(_ref) {
-  var title = _ref.title,
-      phrase = _ref.phrase,
-      children = _ref.children;
-
-  var renderContent = function renderContent(phrase) {
-    if (phrase) {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
-        style: {
-          fontFamily: 'airbnb-medium'
-        },
-        className: "text-2xl text-gray-850 pt-3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }, title), __jsx("p", {
-        style: {
-          fontFamily: 'airbnb-book'
-        },
-        className: "text-md mb-5 text-gray-850 pb-3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        },
-        __self: this
-      }, phrase));
-    } else {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
-        style: {
-          fontFamily: 'airbnb-medium'
-        },
-        className: "text-gray-850 text-2xl pt-3 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, title));
-    }
-  };
-
-  return __jsx("div", {
-    className: "px-4 md:px-20 xl:max-w-layout mx-auto py-5 w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, renderContent(phrase), children);
-};
-
-/***/ }),
-
-/***/ "./src/components/wrapper/SectionOverflow.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/wrapper/SectionOverflow.tsx ***!
-  \****************************************************/
-/*! exports provided: SectionOverflow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionOverflow", function() { return SectionOverflow; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/SectionOverflow.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-var SectionOverflow = function SectionOverflow(_ref) {
-  var title = _ref.title,
-      phrase = _ref.phrase,
-      children = _ref.children;
-
-  function renderPhrase(phrase) {
-    if (phrase) {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
-        style: {
-          fontFamily: 'airbnb-medium'
-        },
-        className: "scrollable text-gray-850 text-2xl pt-3 w-5/6",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
-      }, title), __jsx("p", {
-        style: {
-          fontFamily: 'airbnb-book'
-        },
-        className: "scrollable text-md mb-5 text-gray-850 pb-3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, phrase));
-    } else {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
-        style: {
-          fontFamily: 'airbnb-medium'
-        },
-        className: "scrollable text-gray-850 text-2xl py-3 w-5/6",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, title));
-    }
-  }
-
-  return __jsx("div", {
-    className: "px-4 md:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, renderPhrase(phrase), children);
-};
-
-/***/ }),
-
-/***/ "./src/pages/index.tsx":
-/*!*****************************!*\
-  !*** ./src/pages/index.tsx ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.tsx");
-/* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
-/* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
-/* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.tsx");
-/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.tsx");
-/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
-/* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
-/* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // Component
-
-
-
-
-
-
-
-
-
- // Next
-
-var Home = function Home() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_layout_Header__WEBPACK_IMPORTED_MODULE_1__["Header"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }), __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_2__["Explore"], {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }), __jsx(_components_containers_Plus__WEBPACK_IMPORTED_MODULE_3__["Plus"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }), __jsx(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_4__["Adventures"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }), __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_5__["Stay"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }), __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_6__["TopRated"], {
+  }), __jsx("div", {
+    id: "centerAbsolute",
+    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }), __jsx(_components_containers_Popular__WEBPACK_IMPORTED_MODULE_7__["Popular"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), __jsx(_components_containers_Featured__WEBPACK_IMPORTED_MODULE_8__["Featured"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_9__["Footer"], {
+  }, __jsx("div", {
+    className: "w-full mx-auto max-w-5xl border-b border-gray-300 mt-2 flex justify-center items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-=======
+  }, __jsx("div", {
+    className: "bg-green-850 relative w-full px-4 flex justify-center items-center my-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full flex items-center absolute left-0 z-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return setCurrencyModal(false);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "w-4 h-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 47.971 47.971",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  })))))))), __jsx("div", {
+    className: "w-full mx-auto max-w-5xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "w-full text-2xl py-6 text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, "Choose currency"), __jsx("div", {
+    className: "w-full flex flex-wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, currencies.map(function (currency, index) {
+    return __jsx("div", {
+      className: "w-1/5 flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, __jsx("button", {
+      className: "w-90p border border-gray-750 rounded-lg flex justify-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "w-80p py-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    }, __jsx("p", {
+      style: {
+        fontFamily: 'airbnb-book'
+      },
+      className: "text-sm",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }, currency.full)), __jsx("div", {
+      className: "flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }, __jsx("p", {
+      style: {
+        fontFamily: 'airbnb-book'
+      },
+      className: "text-sm text-gray-650",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }, currency.abbreviation, " - ", currency.symbol)))));
+  })))));
+};
+
+/***/ }),
+
+/***/ "./src/components/modals/HelpModal.tsx":
+/*!*********************************************!*\
+  !*** ./src/components/modals/HelpModal.tsx ***!
+  \*********************************************/
+/*! exports provided: HelpModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpModal", function() { return HelpModal; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/HelpCard */ "./src/components/functions/HelpCard.tsx");
+/* harmony import */ var _functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/HelpAdditional */ "./src/components/functions/HelpAdditional.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/HelpModal.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+ // Components
+
+
+
+var HelpModal = function HelpModal(_ref) {
+  var setHelpModal = _ref.setHelpModal;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      word = _useState[0],
+      setWord = _useState[1];
+
+  var handleChange = function handleChange(e) {
+    return setWord(e.target.value);
+  };
+
+  var questions = [{
+    title: 'How do I create an account?',
+    answer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
+  }];
+  return __jsx("div", {
+    className: "bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full flex justify-center items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "py-5 text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, "Recommended help"), __jsx("button", {
+    onClick: function onClick() {
+      return setHelpModal(false);
+    },
+    className: "absolute top-0 right-0 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "pt-6 pr-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "h-4 w-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512.001 512.001",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }))))))), __jsx("div", {
+    className: "bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, "Search by keyword"), __jsx("div", {
+    id: "helpsearch",
+    className: "flex border border-gray-300 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-1/12 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "absolute top-0 pl-2 pt-2 h-6 w-6",
+    style: {
+      fill: '#767676'
+    },
+    viewBox: "0 0 24 24",
+    "aria-hidden": "true",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m10.7227 19.9083c-4.919-.706-8.336-5.266-7.63-10.185.704-4.919 5.264-8.336 10.184-7.631 4.919.706 8.336 5.265 7.632 10.185-.706 4.92-5.266 8.336-10.186 7.631m11.65 2.76-3.729-4.196c1.706-1.514 2.905-3.618 3.254-6.053.783-5.467-3.013-10.533-8.479-11.317-5.467-.784-10.534 3.013-11.316 8.48-.784 5.466 3.012 10.532 8.478 11.315 2.675.384 5.254-.329 7.283-1.798l3.762 4.233c.184.207.5.225.706.042.206-.184.225-.5.041-.706",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }))), __jsx("div", {
+    className: "w-11/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, __jsx("input", {
+    value: word,
+    onChange: handleChange,
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    type: "text",
+    className: "w-full h-8 text-sm text-gray-750 focus:outline-none",
+    placeholder: "E.g. reservation status",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  })))), __jsx("div", {
+    className: "mt-8 mb-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-xs text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }, "Recommended Articles")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
+    title: questions[0].title,
+    answer: questions[0].answer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }), __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
+    title: questions[0].title,
+    answer: questions[0].answer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "mt-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-gray-750 text-xs",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, "Explore More Articles By Topic")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: this
+  }, __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
+    title: "Reservation requests",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }), __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
+    title: "Reservation requests",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  }))), __jsx("div", {
+    className: "flex flex-col justify-end items-center my-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110
+    },
+    __self: this
+  }, __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "w-11/12 bg-green-850 py-2 text-white rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: this
+  }, "Visit the Help Centre"), __jsx("a", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "border-b border-green-850 text-green-850 text-sm my-1",
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
+    },
+    __self: this
+  }, "Give Feedback")));
+};
+
+/***/ }),
+
+/***/ "./src/components/modals/RegisterModal.tsx":
+/*!*************************************************!*\
+  !*** ./src/components/modals/RegisterModal.tsx ***!
+  \*************************************************/
+/*! exports provided: RegisterModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterModal", function() { return RegisterModal; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/RegisterModal.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // Images
+
+var facebook = __webpack_require__(/*! ../../../public/img/high/facebook.png */ "./public/img/high/facebook.png");
+
+var google = __webpack_require__(/*! ../../../public/img/high/google.png */ "./public/img/high/google.png");
+
+var RegisterModal = function RegisterModal(_ref) {
+  var setRegisterModal = _ref.setRegisterModal,
+      setType = _ref.setType,
+      type = _ref.type,
+      nottype = _ref.nottype,
+      phrase = _ref.phrase;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    id: "darkOverlay",
+    className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }), __jsx("div", {
+    id: "centerAbsolute",
+    className: "relative rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "relative w-11/12 flex justify-center items-center my-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex items-center absolute left-0 z-20 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return setRegisterModal(false);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "w-4 h-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 47.971 47.971",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  })))))), __jsx("div", {
+    className: "w-full flex justify-center items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, type)))), __jsx("div", {
+    className: "w-full flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-11/12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "my-3 mt-10",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, __jsx("form", {
+    action: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, __jsx("label", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    htmlFor: "country",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "absolute text-gray-650 text-xs top-0 pl-3 pt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, "Country/Region"), __jsx("select", {
+    name: "country",
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "appearance-none w-full border-t border-r border-l border-gray-500 py-4 rounded-b-none rounded-lg placeholder-gray-900 pl-3",
+    id: "countryinput",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, __jsx("option", {
+    value: "1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, "Canada (+1)"), __jsx("option", {
+    value: "2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, "Japan (+81)"), __jsx("option", {
+    value: "3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, "United States (+1)")), __jsx("div", {
+    className: "h-full pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "fill-current h-6 w-6",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  })))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, __jsx("input", {
+    className: "appearance-none  w-full border border-gray-500 py-3 rounded-t-none rounded-lg placeholder-gray-900 pl-4",
+    type: "text",
+    name: "phone",
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    placeholder: "Phone number",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  }))))), __jsx("div", {
+    className: "py-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-xs text-gray-650",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  }, "We'll call or text you to confirm your number. Standard message and data rates apply.")), __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "w-full bg-pink-750 py-3 rounded-lg text-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 114
+    },
+    __self: this
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }, "Continue")), __jsx("div", {
+    className: "pt-4 pb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119
+    },
+    __self: this
+  }, __jsx("p", {
+    id: "pseudo",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120
+    },
+    __self: this
+  }, __jsx("span", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-xs text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121
+    },
+    __self: this
+  }, "or"))), __jsx("div", {
+    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "absolute left-0 ml-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "w-5 h-5",
+    style: {
+      fill: '#767676'
+    },
+    viewBox: "0 0 479.058 479.058",
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135
+    },
+    __self: this
+  }))), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138
+    },
+    __self: this
+  }, "Continue with email")), __jsx("div", {
+    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 144
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      marginLeft: 15
+    },
+    className: "absolute left-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "w-6 h-6",
+    src: facebook,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  })), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148
+    },
+    __self: this
+  }, "Continue with Facebook")), __jsx("div", {
+    className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      marginLeft: 17
+    },
+    className: "absolute left-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "w-5 h-5",
+    src: google,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156
+    },
+    __self: this
+  })), __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158
+    },
+    __self: this
+  }, "Continue with Google")), __jsx("div", {
+    className: "flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 164
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 165
+    },
+    __self: this
+  }, phrase, " have an account?"), __jsx("button", {
+    onClick: function onClick() {
+      return setType("".concat(nottype));
+    },
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "border-b border-gray-750 text-sm ml-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 170
+    },
+    __self: this
+  }, nottype))))));
+};
+
+/***/ }),
+
+/***/ "./src/components/wrapper/Section.tsx":
+/*!********************************************!*\
+  !*** ./src/components/wrapper/Section.tsx ***!
+  \********************************************/
+/*! exports provided: Section */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Section", function() { return Section; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -32591,7 +29315,6 @@ var Home = function Home() {
       lineNumber: 34
     },
     __self: this
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
   }));
 };
 
@@ -32599,11 +29322,7 @@ var Home = function Home() {
 
 /***/ }),
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-/***/ 1:
-=======
 /***/ 2:
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************/
@@ -32626,9 +29345,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-<<<<<<< HEAD:frontend/.next/static/development/pages/index.js
-},[[1,"static/runtime/webpack.js"]]]);
-=======
 },[[2,"static/runtime/webpack.js"]]]);
->>>>>>> 40c8b28a8dcaca4546f8fb08353a0090644ba5d1:frontend/.next/static/development/pages/adventures/[id].js
 //# sourceMappingURL=index.js.map
