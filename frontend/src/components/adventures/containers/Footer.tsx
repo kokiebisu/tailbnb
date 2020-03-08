@@ -4,123 +4,182 @@ export const Footer: React.FC<{}> = () => {
   return (
     <div className='block bg-white w-full border-t border-gray-300'>
       <div className='lg:px-20 px-5 xl:px-0 lg:max-w-6xl xl:max-w-5.5xl mx-auto py-6 sm:py-12'>
-        <div className='hidden md:flex md:flex-wrap md:items-start md:w-full md:justify-between md:pb-6 md:border-b md:border-gray-300'>
+        <div className='hidden md:flex md:flex-wrap md:items-start md:w-full md:justify-between md:pb-6 lg:pb-10 md:border-b md:border-gray-300'>
           <div className='lg:w-1/4'>
-            <h3 className='font-semibold text-gray-900 text-sm mb-2'>Airbnb</h3>
-            <ul className='leading-relaxed'>
+            <h3
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-gray-900 text-xs mb-2 uppercase'>
+              About
+            </h3>
+            <ul className='leading-9'>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  News
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Policies
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
                   Diversity & Belonging
                 </a>
               </li>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
                   Accessibility
                 </a>
               </li>
-            </ul>
-          </div>
-          <div className='lg:w-1/4'>
-            <h3 className='font-semibold text-gray-900 text-sm mb-2'>
-              Discover
-            </h3>
-            <ul className='leading-relaxed'>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Trust & Safety
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Trus & Safety
                 </a>
               </li>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Travel Credit
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
                   Airbnb Citizen
                 </a>
               </li>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Business Travel
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Things To Do
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Airbnbmag
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Newsroom
                 </a>
               </li>
             </ul>
           </div>
           <div className='lg:w-1/4'>
-            <h3 className='font-semibold text-gray-905 text-sm mb-2'>
-              Hosting
+            <h3
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-gray-900 text-xs mb-2 uppercase'>
+              Community
             </h3>
-            <ul className='leading-relaxed'>
+            <ul className='leading-9'>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Why Host
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Airbnb Magazine
                 </a>
               </li>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Hospitality
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Airbnb for Work
                 </a>
               </li>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Responsible Hosting
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Invite friends
                 </a>
               </li>
               <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Community Centre
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Host an Experience
-                </a>
-              </li>
-              <li>
-                <a className='text-gray-650 font-semibold text-sm' href=''>
-                  Open Homes
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Careers
                 </a>
               </li>
             </ul>
           </div>
           <div className='lg:w-1/4'>
-            <h3 className='font-semibold text-sm mb-2 text-gray-900'>
+            <h3
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-gray-900 text-xs mb-2 uppercase'>
+              Host
+            </h3>
+            <ul className='leading-9'>
+              <li>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Host your home
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Host an experience
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Responsible hosting
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Refer hosts
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Open homes
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Olympics
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Responsible hosting
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className='lg:w-1/4'>
+            <h3
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-gray-900 text-xs mb-2 uppercase'>
               Support
             </h3>
-            <ul className='leading-relaxed'>
+            <ul className='leading-9'>
               <li>
-                <a className='font-semibold text-sm text-gray-650' href=''>
-                  Help
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
+                  Help Centre
                 </a>
               </li>
               <li>
-                <a className='font-semibold text-sm text-gray-650' href=''>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-gray-850 text-sm'
+                  href=''>
                   Neighbourhood Support
                 </a>
               </li>
@@ -141,8 +200,41 @@ export const Footer: React.FC<{}> = () => {
             </svg>
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='pl-2 text-sm text-gray-650'>
+              className='pl-2 text-sm text-gray-750'>
               © 2020 Airbnb, Inc. All rights reserved.
+            </p>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='pl-2 text-sm text-gray-750'>
+              {' '}
+              ·{' '}
+            </p>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='pl-2 text-sm text-gray-750'>
+              Privacy
+            </p>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='pl-2 text-sm text-gray-750'>
+              {' '}
+              ·{' '}
+            </p>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='pl-2 text-sm text-gray-750'>
+              Terms
+            </p>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='pl-2 text-sm text-gray-750'>
+              {' '}
+              ·{' '}
+            </p>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='pl-2 text-sm text-gray-750'>
+              Sitemap
             </p>
             <div className='hidden md:flex md:flex-wrap md:justify-between md:items-center'>
               <p className='text-sm text-gray-650 font-semibold'>
