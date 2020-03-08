@@ -109,4 +109,6 @@ type Experience {
   imglow: String!
   street: String!
   description: String!
+  category: String
+  available: String
 }

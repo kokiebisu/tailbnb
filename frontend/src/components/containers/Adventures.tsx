@@ -47,7 +47,7 @@ export const Adventures: any = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(
-        <div className='w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 pb-5'>
+        <div className='w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5'>
           <AdventureCard
             key={i}
             id={data?.adventures[i].id}
@@ -82,23 +82,20 @@ export const Adventures: any = () => {
                 <Media
                   key={1}
                   queries={{
-                    small: '(min-width: 0px) and (max-width: 640px)'
+                    xs: '(min-width: 0px) and (max-width: 739px)'
                   }}>
                   {(matches) =>
-                    matches.small
-                      ? (setCard(1), renderContent(data, card))
-                      : null
+                    matches.xs ? (setCard(4), renderContent(data, card)) : null
                   }
                 </Media>
-
                 <Media
                   key={2}
                   queries={{
-                    large: '(min-width: 641px) and (max-width: 767px)'
+                    small: '(min-width: 740px) and (max-width: 987px)'
                   }}>
                   {(matches) =>
-                    matches.large && data.adventures
-                      ? (setCard(4), renderContent(data, card))
+                    matches.small
+                      ? (setCard(3), renderContent(data, card))
                       : null
                   }
                 </Media>
@@ -106,22 +103,32 @@ export const Adventures: any = () => {
                 <Media
                   key={3}
                   queries={{
-                    xl: '(min-width: 768px) and (max-width: 1023px)'
+                    large: '(min-width: 988px) and (max-width: 1299px)'
                   }}>
                   {(matches) =>
-                    matches.xl && data.adventures
-                      ? (setCard(4), renderContent(data, card))
+                    matches.large
+                      ? (setCard(3), renderContent(data, card))
                       : null
                   }
                 </Media>
+
                 <Media
                   key={4}
                   queries={{
-                    twoxl: '(min-width: 1024px)'
+                    xl: '(min-width: 1300px) and (max-width: 1529px)'
+                  }}>
+                  {(matches) =>
+                    matches.xl ? (setCard(4), renderContent(data, card)) : null
+                  }
+                </Media>
+                <Media
+                  key={5}
+                  queries={{
+                    twoxl: '(min-width: 1530px)'
                   }}>
                   {(matches) =>
                     matches.twoxl
-                      ? (setCard(4), renderContent(data, card))
+                      ? (setCard(6), renderContent(data, card))
                       : null
                   }
                 </Media>

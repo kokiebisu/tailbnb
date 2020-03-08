@@ -4,6 +4,9 @@ import * as React from 'react';
 import { Header } from '../components/layout/Header';
 import { Explore } from '../components/containers/Explore';
 import { Plus } from '../components/containers/Plus';
+import { Today } from '../components/containers/Today';
+import { Tomorrow } from '../components/containers/Tomorrow';
+import { NextWeek } from '../components/containers/NextWeek';
 import { Adventures } from '../components/containers/Adventures';
 import { Stay } from '../components/containers/Stay';
 import { TopRated } from '../components/containers/TopRated';
@@ -20,6 +23,9 @@ const Home: NextPage<{}> = () => {
       <Header />
       <Explore />
       <Plus />
+      <Today />
+      <Tomorrow />
+      <NextWeek />
       <Adventures />
       <Stay />
       <TopRated />

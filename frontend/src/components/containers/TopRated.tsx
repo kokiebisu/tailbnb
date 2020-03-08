@@ -49,7 +49,7 @@ export const TopRated: any = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(
-        <div className='w-1/2 md:w-1/3 lg:w-1/4 2xl:w-1/6 pb-5'>
+        <div className='w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5'>
           <TopRatedCard
             key={i}
             id={data?.experiences[i].id}
@@ -84,7 +84,7 @@ export const TopRated: any = () => {
                 <Media
                   queries={{ xs: '(min-width: 0px) and (max-width: 739px)' }}>
                   {(matches) =>
-                    matches.xs ? (setCard(1), renderContent(data, card)) : null
+                    matches.xs ? (setCard(4), renderContent(data, card)) : null
                   }
                 </Media>
                 <Media
@@ -93,7 +93,7 @@ export const TopRated: any = () => {
                   }}>
                   {(matches) =>
                     matches.small
-                      ? (setCard(1), renderContent(data, card))
+                      ? (setCard(3), renderContent(data, card))
                       : null
                   }
                 </Media>
@@ -103,7 +103,7 @@ export const TopRated: any = () => {
                   }}>
                   {(matches) =>
                     matches.large
-                      ? (setCard(4), renderContent(data, card))
+                      ? (setCard(3), renderContent(data, card))
                       : null
                   }
                 </Media>
