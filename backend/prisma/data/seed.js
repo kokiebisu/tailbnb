@@ -41,7 +41,9 @@ async function main() {
       reviews: experiences[j].reviews,
       country: experiences[j].country,
       img: experiences[j].img,
-      location: experiences[j].location
+      location: experiences[j].location,
+      category: experiences[j].category,
+      available: experiences[j].available
     });
   }
   for (let k = 0; k < adventures.length; k++) {
