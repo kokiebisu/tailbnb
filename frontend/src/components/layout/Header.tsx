@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { HeaderCard } from '../functions/HeaderCard';
 import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
+import { CurrencyModal } from '../modals/CurrencyModal';
 
 // Images
 const background = require('../../../public/img/high/airbnb-background.jpg');
@@ -12,6 +13,7 @@ const background = require('../../../public/img/high/airbnb-background.jpg');
 export const Header: React.FC<{}> = () => {
   const [registerModal, setRegisterModal] = useState<boolean>(false);
   const [helpModal, setHelpModal] = useState<boolean>(false);
+  const [currencyModal, setCurrencyModal] = useState<boolean>(false);
   const [type, setType] = useState<string>('');
 
   const switchRegisterModal = () => {
@@ -20,6 +22,10 @@ export const Header: React.FC<{}> = () => {
 
   const switchHelpModal = () => {
     setHelpModal(!helpModal);
+  };
+
+  const switchCurrencyModal = () => {
+    setCurrencyModal(!currencyModal);
   };
 
   const switchType = (type: string) => {
@@ -74,9 +80,11 @@ export const Header: React.FC<{}> = () => {
               </a>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm  tracking-wide'>
+              <button
+                onClick={() => switchCurrencyModal()}
+                className='text-sm  tracking-wide'>
                 $CAD
-              </a>
+              </button>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <a href='#' className='text-sm  tracking-wide'>
@@ -157,6 +165,9 @@ export const Header: React.FC<{}> = () => {
         <>{typeof window !== 'undefined' ? configureScroll('auto') : null}</>
       )}
       {helpModal ? <HelpModal setHelpModal={switchHelpModal} /> : null}
+      {currencyModal ? (
+        <CurrencyModal setCurrencyModal={switchCurrencyModal} />
+      ) : null}
     </header>
   );
 };

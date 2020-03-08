@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default () => {
+export const CurrencyModal = (setCurrencyModal) => {
   return (
     <>
       {' '}
