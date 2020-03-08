@@ -198,6 +198,8 @@ type Experience {
   country: String
   img: String
   location: String
+  category: String
+  available: String
 }
 
 type ExperienceConnection {
@@ -215,6 +217,8 @@ input ExperienceCreateInput {
   country: String
   img: String
   location: String
+  category: String
+  available: String
 }
 
 type ExperienceEdge {
@@ -239,6 +243,10 @@ enum ExperienceOrderByInput {
   img_DESC
   location_ASC
   location_DESC
+  category_ASC
+  category_DESC
+  available_ASC
+  available_DESC
 }
 
 type ExperiencePreviousValues {
@@ -250,6 +258,8 @@ type ExperiencePreviousValues {
   country: String
   img: String
   location: String
+  category: String
+  available: String
 }
 
 type ExperienceSubscriptionPayload {
@@ -278,6 +288,8 @@ input ExperienceUpdateInput {
   country: String
   img: String
   location: String
+  category: String
+  available: String
 }
 
 input ExperienceUpdateManyMutationInput {
@@ -288,6 +300,8 @@ input ExperienceUpdateManyMutationInput {
   country: String
   img: String
   location: String
+  category: String
+  available: String
 }
 
 input ExperienceWhereInput {
@@ -385,6 +399,34 @@ input ExperienceWhereInput {
   location_not_starts_with: String
   location_ends_with: String
   location_not_ends_with: String
+  category: String
+  category_not: String
+  category_in: [String!]
+  category_not_in: [String!]
+  category_lt: String
+  category_lte: String
+  category_gt: String
+  category_gte: String
+  category_contains: String
+  category_not_contains: String
+  category_starts_with: String
+  category_not_starts_with: String
+  category_ends_with: String
+  category_not_ends_with: String
+  available: String
+  available_not: String
+  available_in: [String!]
+  available_not_in: [String!]
+  available_lt: String
+  available_lte: String
+  available_gt: String
+  available_gte: String
+  available_contains: String
+  available_not_contains: String
+  available_starts_with: String
+  available_not_starts_with: String
+  available_ends_with: String
+  available_not_ends_with: String
   AND: [ExperienceWhereInput!]
   OR: [ExperienceWhereInput!]
   NOT: [ExperienceWhereInput!]

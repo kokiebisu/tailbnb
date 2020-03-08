@@ -24117,7 +24117,7 @@ var Adventures = function Adventures() {
 
     for (var i = 0; i < number; i++) {
       content.push(__jsx("div", {
-        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 pb-5",
+        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 50
@@ -24176,7 +24176,7 @@ var Adventures = function Adventures() {
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     key: 1,
     queries: {
-      small: '(min-width: 0px) and (max-width: 640px)'
+      xs: '(min-width: 0px) and (max-width: 739px)'
     },
     __source: {
       fileName: _jsxFileName,
@@ -24184,48 +24184,60 @@ var Adventures = function Adventures() {
     },
     __self: this
   }, function (matches) {
-    return matches.small ? (setCard(1), renderContent(data, card)) : null;
+    return matches.xs ? (setCard(4), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     key: 2,
     queries: {
-      large: '(min-width: 641px) and (max-width: 767px)'
+      small: '(min-width: 740px) and (max-width: 987px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 91
     },
     __self: this
   }, function (matches) {
-    return matches.large && data.adventures ? (setCard(4), renderContent(data, card)) : null;
+    return matches.small ? (setCard(3), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     key: 3,
     queries: {
-      xl: '(min-width: 768px) and (max-width: 1023px)'
+      large: '(min-width: 988px) and (max-width: 1299px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 103
     },
     __self: this
   }, function (matches) {
-    return matches.xl && data.adventures ? (setCard(4), renderContent(data, card)) : null;
+    return matches.large ? (setCard(3), renderContent(data, card)) : null;
   }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
     key: 4,
     queries: {
-      twoxl: '(min-width: 1024px)'
+      xl: '(min-width: 1300px) and (max-width: 1529px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 115
     },
     __self: this
   }, function (matches) {
-    return matches.twoxl ? (setCard(4), renderContent(data, card)) : null;
+    return matches.xl ? (setCard(4), renderContent(data, card)) : null;
+  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    key: 5,
+    queries: {
+      twoxl: '(min-width: 1530px)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: this
+  }, function (matches) {
+    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
   }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 140
     },
     __self: this
   })));
@@ -28377,7 +28389,7 @@ var Home = function Home() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************/
@@ -28400,5 +28412,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

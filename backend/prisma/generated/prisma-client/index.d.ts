@@ -209,7 +209,11 @@ export type ExperienceOrderByInput =
   | "img_ASC"
   | "img_DESC"
   | "location_ASC"
-  | "location_DESC";
+  | "location_DESC"
+  | "category_ASC"
+  | "category_DESC"
+  | "available_ASC"
+  | "available_DESC";
 
 export type StayOrderByInput =
   | "id_ASC"
@@ -452,6 +456,34 @@ export interface ExperienceWhereInput {
   location_not_starts_with?: Maybe<String>;
   location_ends_with?: Maybe<String>;
   location_not_ends_with?: Maybe<String>;
+  category?: Maybe<String>;
+  category_not?: Maybe<String>;
+  category_in?: Maybe<String[] | String>;
+  category_not_in?: Maybe<String[] | String>;
+  category_lt?: Maybe<String>;
+  category_lte?: Maybe<String>;
+  category_gt?: Maybe<String>;
+  category_gte?: Maybe<String>;
+  category_contains?: Maybe<String>;
+  category_not_contains?: Maybe<String>;
+  category_starts_with?: Maybe<String>;
+  category_not_starts_with?: Maybe<String>;
+  category_ends_with?: Maybe<String>;
+  category_not_ends_with?: Maybe<String>;
+  available?: Maybe<String>;
+  available_not?: Maybe<String>;
+  available_in?: Maybe<String[] | String>;
+  available_not_in?: Maybe<String[] | String>;
+  available_lt?: Maybe<String>;
+  available_lte?: Maybe<String>;
+  available_gt?: Maybe<String>;
+  available_gte?: Maybe<String>;
+  available_contains?: Maybe<String>;
+  available_not_contains?: Maybe<String>;
+  available_starts_with?: Maybe<String>;
+  available_not_starts_with?: Maybe<String>;
+  available_ends_with?: Maybe<String>;
+  available_not_ends_with?: Maybe<String>;
   AND?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
   OR?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
   NOT?: Maybe<ExperienceWhereInput[] | ExperienceWhereInput>;
@@ -838,6 +870,8 @@ export interface ExperienceCreateInput {
   country?: Maybe<String>;
   img?: Maybe<String>;
   location?: Maybe<String>;
+  category?: Maybe<String>;
+  available?: Maybe<String>;
 }
 
 export interface ExperienceUpdateInput {
@@ -848,6 +882,8 @@ export interface ExperienceUpdateInput {
   country?: Maybe<String>;
   img?: Maybe<String>;
   location?: Maybe<String>;
+  category?: Maybe<String>;
+  available?: Maybe<String>;
 }
 
 export interface ExperienceUpdateManyMutationInput {
@@ -858,6 +894,8 @@ export interface ExperienceUpdateManyMutationInput {
   country?: Maybe<String>;
   img?: Maybe<String>;
   location?: Maybe<String>;
+  category?: Maybe<String>;
+  available?: Maybe<String>;
 }
 
 export interface StayCreateInput {
@@ -1125,6 +1163,8 @@ export interface Experience {
   country?: String;
   img?: String;
   location?: String;
+  category?: String;
+  available?: String;
 }
 
 export interface ExperiencePromise extends Promise<Experience>, Fragmentable {
@@ -1136,6 +1176,8 @@ export interface ExperiencePromise extends Promise<Experience>, Fragmentable {
   country: () => Promise<String>;
   img: () => Promise<String>;
   location: () => Promise<String>;
+  category: () => Promise<String>;
+  available: () => Promise<String>;
 }
 
 export interface ExperienceSubscription
@@ -1149,6 +1191,8 @@ export interface ExperienceSubscription
   country: () => Promise<AsyncIterator<String>>;
   img: () => Promise<AsyncIterator<String>>;
   location: () => Promise<AsyncIterator<String>>;
+  category: () => Promise<AsyncIterator<String>>;
+  available: () => Promise<AsyncIterator<String>>;
 }
 
 export interface ExperienceNullablePromise
@@ -1162,6 +1206,8 @@ export interface ExperienceNullablePromise
   country: () => Promise<String>;
   img: () => Promise<String>;
   location: () => Promise<String>;
+  category: () => Promise<String>;
+  available: () => Promise<String>;
 }
 
 export interface ExperienceConnection {
@@ -1504,6 +1550,8 @@ export interface ExperiencePreviousValues {
   country?: String;
   img?: String;
   location?: String;
+  category?: String;
+  available?: String;
 }
 
 export interface ExperiencePreviousValuesPromise
@@ -1517,6 +1565,8 @@ export interface ExperiencePreviousValuesPromise
   country: () => Promise<String>;
   img: () => Promise<String>;
   location: () => Promise<String>;
+  category: () => Promise<String>;
+  available: () => Promise<String>;
 }
 
 export interface ExperiencePreviousValuesSubscription
@@ -1530,6 +1580,8 @@ export interface ExperiencePreviousValuesSubscription
   country: () => Promise<AsyncIterator<String>>;
   img: () => Promise<AsyncIterator<String>>;
   location: () => Promise<AsyncIterator<String>>;
+  category: () => Promise<AsyncIterator<String>>;
+  available: () => Promise<AsyncIterator<String>>;
 }
 
 export interface StaySubscriptionPayload {

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2209,7 +2209,7 @@ const Adventures = () => {
 
     for (let i = 0; i < number; i++) {
       content.push(__jsx("div", {
-        className: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 pb-5",
+        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 50
@@ -2268,48 +2268,58 @@ const Adventures = () => {
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     key: 1,
     queries: {
-      small: '(min-width: 0px) and (max-width: 640px)'
+      xs: '(min-width: 0px) and (max-width: 739px)'
     },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 82
     },
     __self: undefined
-  }, matches => matches.small ? (setCard(1), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.xs ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     key: 2,
     queries: {
-      large: '(min-width: 641px) and (max-width: 767px)'
+      small: '(min-width: 740px) and (max-width: 987px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 91
     },
     __self: undefined
-  }, matches => matches.large && data.adventures ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.small ? (setCard(3), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     key: 3,
     queries: {
-      xl: '(min-width: 768px) and (max-width: 1023px)'
+      large: '(min-width: 988px) and (max-width: 1299px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 103
     },
     __self: undefined
-  }, matches => matches.xl && data.adventures ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, matches => matches.large ? (setCard(3), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
     key: 4,
     queries: {
-      twoxl: '(min-width: 1024px)'
+      xl: '(min-width: 1300px) and (max-width: 1529px)'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 115
     },
     __self: undefined
-  }, matches => matches.twoxl ? (setCard(4), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, matches => matches.xl ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    key: 5,
+    queries: {
+      twoxl: '(min-width: 1530px)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: undefined
+  }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 140
     },
     __self: undefined
   })));
@@ -6413,7 +6423,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/
