@@ -1,0 +1,242 @@
+[
+  {
+    "location": "Australia",
+    "full": "Australian dollar",
+    "abbreviation": "AUD",
+    "symbol": "$"
+  },
+  {
+    "location": "Brazil",
+    "full": "Brazilian real",
+    "abbreviation": "BRL",
+    "symbol": "R$"
+  },
+  {
+    "location": "Bulgaria",
+    "full": "Bulgarian lev",
+    "abbreviation": "BGN",
+    "symbol": "лв"
+  },
+  {
+    "location": "Canada",
+    "full": "Canadian dollar",
+    "abbreviation": "CAD",
+    "symbol": "$"
+  },
+  {
+    "location": "Chile",
+    "full": "Chilean peso",
+    "abbreviation": "CLP",
+    "symbol": "$"
+  },
+  {
+    "location": "China",
+    "full": "CNY",
+    "abbreviation": "CNY",
+    "symbol": "￥"
+  },
+  {
+    "location": "Colombia",
+    "full": "Colombian peso",
+    "abbreviation": "COP",
+    "symbol": "$"
+  },
+  {
+    "location": "Costa Rican",
+    "full": "Costa Rican colon",
+    "abbreviation": "CRC",
+    "symbol": "₡"
+  },
+  {
+    "location": "Croatia",
+    "full": "Croatian kuna",
+    "abbreviation": "HRK",
+    "symbol": "kn"
+  },
+  {
+    "location": "Czech",
+    "full": "Czech koruna",
+    "abbreviation": "CZK",
+    "symbol": "Kč"
+  },
+  {
+    "location": "Denmark",
+    "full": "Danish krone",
+    "abbreviation": "DKK",
+    "symbol": "kr"
+  },
+  {
+    "location": "United Arab Emirates",
+    "full": "Emirati dirham",
+    "abbreviation": "AED",
+    "symbol": "د.إ"
+  },
+  {
+    "location": "European Union",
+    "full": "Euro",
+    "abbreviation": "EUR",
+    "symbol": "€"
+  },
+  {
+    "location": "Hong Kong",
+    "full": "Hong Kong dollar",
+    "abbreviation": "HKD",
+    "symbol": "$"
+  },
+  {
+    "location": "Hungary",
+    "full": "Fungarian forint",
+    "abbreviation": "HUF",
+    "symbol": "Ft"
+  },
+  {
+    "location": "India",
+    "full": "India rupee",
+    "abbreviation": "INR",
+    "symbol": "₹"
+  },
+  {
+    "location": "Israel",
+    "full": "Israeli new shekel",
+    "abbreviation": "ILS",
+    "symbol": "₪"
+  },
+  {
+    "location": "Japan",
+    "full": "Japanese yen",
+    "abbreviation": "JPY",
+    "symbol": "¥"
+  },
+  {
+    "location": "Malaysia",
+    "full": "Malaysian ringgit",
+    "abbreviation": "MYR",
+    "symbol": "RM"
+  },
+  {
+    "location": "Mexico",
+    "full": "Mexican peso",
+    "abbreviation": "MXN",
+    "symbol": "$"
+  },
+  {
+    "location": "Morocco",
+    "full": "Moroccan dirham",
+    "abbreviation": null,
+    "symbol": "MAD"
+  },
+  {
+    "location": "Taiwan",
+    "full": "New Taiwan dollar",
+    "abbreviation": "TWD",
+    "symbol": "$"
+  },
+  {
+    "location": "New Zealand",
+    "full": "New Zealand dollar",
+    "abbreviation": "NZD",
+    "symbol": "$"
+  },
+  {
+    "location": "Norway",
+    "full": "Norwegian krone",
+    "abbreviation": "NOK",
+    "symbol": "kr"
+  },
+  {
+    "location": "Peru",
+    "full": "Peruvian sol",
+    "abbreviation": "PEN",
+    "symbol": "S/"
+  },
+  {
+    "location": "Philippine",
+    "full": "Philippine peso",
+    "abbreviation": "PHP",
+    "symbol": "₱"
+  },
+  {
+    "location": "Poland",
+    "full": "Polish zloty",
+    "abbreviation": "PLN",
+    "symbol": "zł"
+  },
+  {
+    "location": "United Kingdom",
+    "full": "Pound sterling",
+    "abbreviation": "GBP",
+    "symbol": "£"
+  },
+  {
+    "location": "Romania",
+    "full": "Romanian leu",
+    "abbreviation": "RON",
+    "symbol": "lei"
+  },
+  {
+    "location": "Russia",
+    "full": "Russian ruble",
+    "abbreviation": "RUB",
+    "symbol": "₽"
+  },
+  {
+    "location": "Saudi Arabia",
+    "full": "Saudi Araibian riyal",
+    "abbreviation": "SAR",
+    "symbol": "SR"
+  },
+  {
+    "location": "Singapore",
+    "full": "Singapore dollar",
+    "abbreviation": "SGD",
+    "symbol": "$"
+  },
+  {
+    "location": "South Africa",
+    "full": "South African rand",
+    "abbreviation": "ZAR",
+    "symbol": "R"
+  },
+  {
+    "location": "South Korea",
+    "full": "South Korean won",
+    "abbreviation": "KRW",
+    "symbol": "₩"
+  },
+  {
+    "location": "Sweden",
+    "full": "Swedish krona",
+    "abbreviation": "SEK",
+    "symbol": "kr"
+  },
+  {
+    "location": "Switzerland",
+    "full": "Swiss franc",
+    "abbreviation": null,
+    "symbol": "CHF"
+  },
+  {
+    "location": "Thailand",
+    "full": "Thai baht",
+    "abbreviation": "THB",
+    "symbol": "฿"
+  },
+  {
+    "location": "Turkey",
+    "full": "Turkish lira",
+    "abbreviation": "TRY",
+    "symbol": "₺"
+  },
+  {
+    "location": "United States",
+    "full": "United States dollar",
+    "abbreviation": "USD",
+    "symbol": "$"
+  },
+  {
+    "location": "Uruguay",
+    "full": "Uruguayan peso",
+    "abbreviation": "UYU",
+    "symbol": "$U"
+  }
+]

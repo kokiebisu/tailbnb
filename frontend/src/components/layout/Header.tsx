@@ -14,6 +14,7 @@ export const Header: React.FC<{}> = () => {
   const [registerModal, setRegisterModal] = useState<boolean>(false);
   const [helpModal, setHelpModal] = useState<boolean>(false);
   const [currencyModal, setCurrencyModal] = useState<boolean>(false);
+  const [currency, setCurrency] = useState<string>('$ CAD');
   const [type, setType] = useState<string>('');
 
   const switchRegisterModal = () => {
@@ -30,6 +31,10 @@ export const Header: React.FC<{}> = () => {
 
   const switchType = (type: string) => {
     setType(type);
+  };
+
+  const switchCurrency = (currency: string) => {
+    setCurrency(currency);
   };
 
   const configureScroll = (name: string) => {
@@ -83,7 +88,7 @@ export const Header: React.FC<{}> = () => {
               <button
                 onClick={() => switchCurrencyModal()}
                 className='text-sm  tracking-wide'>
-                $CAD
+                {`${currency}`}
               </button>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
@@ -166,7 +171,11 @@ export const Header: React.FC<{}> = () => {
       )}
       {helpModal ? <HelpModal setHelpModal={switchHelpModal} /> : null}
       {currencyModal ? (
-        <CurrencyModal setCurrencyModal={switchCurrencyModal} />
+        <CurrencyModal
+          location='Canada'
+          setCurrencyModal={switchCurrencyModal}
+          setCurrency={switchCurrency}
+        />
       ) : null}
     </header>
   );

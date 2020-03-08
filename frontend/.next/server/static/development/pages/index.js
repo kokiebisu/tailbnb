@@ -5804,6 +5804,10 @@ const Header = () => {
     1: setCurrencyModal
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const {
+    0: currency,
+    1: setCurrency
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('$ CAD');
+  const {
     0: type,
     1: setType
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
@@ -5824,6 +5828,10 @@ const Header = () => {
     setType(type);
   };
 
+  const switchCurrency = currency => {
+    setCurrency(currency);
+  };
+
   const configureScroll = name => {
     document.body.style.overflow = name;
   };
@@ -5836,41 +5844,41 @@ const Header = () => {
     className: "w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 45
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
     className: "m-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("a", {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx("span", {
     className: "sr-only",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 55
     },
     __self: undefined
   }, "Airbnb"), __jsx("svg", {
@@ -5884,21 +5892,21 @@ const Header = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 56
     },
     __self: undefined
   }, __jsx("path", {
     d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 63
     },
     __self: undefined
   }))))), __jsx("div", {
     className: "hidden lg:block",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 69
     },
     __self: undefined
   }, __jsx("nav", {
@@ -5908,14 +5916,14 @@ const Header = () => {
     className: "flex items-center justify-around flex-wrap text-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 70
     },
     __self: undefined
   }, __jsx("div", {
     className: "border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 73
     },
     __self: undefined
   }, __jsx("a", {
@@ -5923,7 +5931,7 @@ const Header = () => {
     className: "flex items-center justify-start text-sm mx-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx("svg", {
@@ -5936,27 +5944,27 @@ const Header = () => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 77
     },
     __self: undefined
   }, __jsx("path", {
     d: "m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 82
     },
     __self: undefined
   })), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 84
     },
     __self: undefined
   }, "English(CA)"))), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 87
     },
     __self: undefined
   }, __jsx("button", {
@@ -5964,25 +5972,10 @@ const Header = () => {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 88
     },
     __self: undefined
-  }, "$CAD")), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: undefined
-  }, __jsx("a", {
-    href: "#",
-    className: "text-sm  tracking-wide",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: undefined
-  }, "Host a home")), __jsx("div", {
+  }, `${currency}`)), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
@@ -5997,11 +5990,26 @@ const Header = () => {
       lineNumber: 95
     },
     __self: undefined
-  }, "Host an experience")), __jsx("div", {
+  }, "Host a home")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 99
+    },
+    __self: undefined
+  }, __jsx("a", {
+    href: "#",
+    className: "text-sm  tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: undefined
+  }, "Host an experience")), __jsx("div", {
+    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104
     },
     __self: undefined
   }, __jsx("button", {
@@ -6009,14 +6017,14 @@ const Header = () => {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 105
     },
     __self: undefined
   }, "Help")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 111
     },
     __self: undefined
   }, __jsx("button", {
@@ -6027,14 +6035,14 @@ const Header = () => {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 112
     },
     __self: undefined
   }, "Sign up")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 121
     },
     __self: undefined
   }, __jsx("button", {
@@ -6045,34 +6053,34 @@ const Header = () => {
     className: "text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 122
     },
     __self: undefined
   }, "Log in"))))), __jsx("div", {
     className: "md:ml-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 134
     },
     __self: undefined
   }, __jsx("h3", {
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 135
     },
     __self: undefined
   }, "Book unique places to stay and things to do."), __jsx(_functions_HeaderCard__WEBPACK_IMPORTED_MODULE_1__["HeaderCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 138
     },
     __self: undefined
   })), __jsx("div", {
     className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 text-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 140
     },
     __self: undefined
   }, __jsx("p", {
@@ -6082,13 +6090,13 @@ const Header = () => {
     className: "text-sm text-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 141
     },
     __self: undefined
   }, "Over 300 unique places ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 144
     },
     __self: undefined
   }), "to stay in Japan")), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__["RegisterModal"], {
@@ -6099,7 +6107,7 @@ const Header = () => {
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 152
     },
     __self: undefined
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_2__["RegisterModal"], {
@@ -6110,21 +6118,23 @@ const Header = () => {
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 160
     },
     __self: undefined
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_3__["HelpModal"], {
     setHelpModal: switchHelpModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 172
     },
     __self: undefined
   }) : null, currencyModal ? __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_4__["CurrencyModal"], {
+    location: "Canada",
     setCurrencyModal: switchCurrencyModal,
+    setCurrency: switchCurrency,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 174
     },
     __self: undefined
   }) : null);
@@ -6144,44 +6154,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CurrencyModal", function() { return CurrencyModal; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _currency_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./currency.json */ "./src/components/modals/currency.json");
+var _currency_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./currency.json */ "./src/components/modals/currency.json", 1);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/CurrencyModal.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
-const CurrencyModal = setCurrencyModal => {
+
+
+const currencies = JSON.parse(JSON.stringify(_currency_json__WEBPACK_IMPORTED_MODULE_2___namespace));
+const CurrencyModal = ({
+  location,
+  setCurrencyModal,
+  setCurrency
+}) => {
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
+
+  const defaultCurrency = currencies.default.find(currency => currency.location == location);
   const {
     0: selectedCountry,
     1: setSelectedCountry
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
-    country: 'Canada',
-    full: 'Canadian dollar',
-    abbreviation: 'CAD',
-    symbol: '$'
-  });
-  const currencies = [{
-    country: 'Canada',
-    full: 'Canadian dollar',
-    abbreviation: 'CAD',
-    symbol: '$'
-  }, {
-    country: 'Brazil',
-    full: 'Brazilian real',
-    abbreviation: 'BRL',
-    symbol: 'R$'
-  }, {
-    country: 'Brazil',
-    full: 'Brazilian real',
-    abbreviation: 'BRL',
-    symbol: 'R$'
-  }];
-  const filteredCurrencies = currencies.filter(currency => currency != selectedCountry);
-  console.log('filtered currencies', filteredCurrencies);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(defaultCurrency);
+  const filteredCurrencies = currencies.default.filter(currency => !lodash__WEBPACK_IMPORTED_MODULE_1___default.a.isEqual(currency, selectedCountry));
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, ' ', __jsx("div", {
     id: "darkOverlay",
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 26
     },
     __self: undefined
   }), __jsx("div", {
@@ -6189,42 +6193,49 @@ const CurrencyModal = setCurrencyModal => {
     className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full mx-auto max-w-5xl border-b border-gray-300 mt-2 flex justify-center items-center",
+    className: "w-full border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 33
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-full mx-auto max-w-5xl mt-2 flex justify-center items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("div", {
     className: "bg-green-850 relative w-full px-4 flex justify-center items-center my-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex items-center absolute left-0 z-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("button", {
     onClick: () => setCurrencyModal(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx("div", {
     className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 38
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6233,27 +6244,27 @@ const CurrencyModal = setCurrencyModal => {
     viewBox: "0 0 47.971 47.971",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 44
     },
     __self: undefined
-  })))))))), __jsx("div", {
+  }))))))))), __jsx("div", {
     className: "w-full mx-auto max-w-5xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("div", {
@@ -6263,42 +6274,42 @@ const CurrencyModal = setCurrencyModal => {
     className: "w-full text-2xl py-6 text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 60
     },
     __self: undefined
   }, "Choose currency"), __jsx("div", {
     className: "w-full flex flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 65
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-1/5 flex",
+    className: "w-1/5 flex mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 66
     },
     __self: undefined
   }, __jsx("button", {
     className: "w-90p border border-gray-750 rounded-lg flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 67
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-80p py-2",
+    className: "w-85p py-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 68
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 69
     },
     __self: undefined
   }, __jsx("p", {
@@ -6308,14 +6319,14 @@ const CurrencyModal = setCurrencyModal => {
     className: "text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 70
     },
     __self: undefined
   }, selectedCountry.full)), __jsx("div", {
     className: "flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 76
     },
     __self: undefined
   }, __jsx("p", {
@@ -6325,36 +6336,41 @@ const CurrencyModal = setCurrencyModal => {
     className: "text-sm text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 77
     },
     __self: undefined
-  }, selectedCountry.abbreviation, " - ", selectedCountry.symbol))))), filteredCurrencies.map((currency, index) => {
+  }, selectedCountry.abbreviation, ' ', selectedCountry.abbreviation === null ? null : '-', ' ', selectedCountry.symbol))))), filteredCurrencies.map((currency, index) => {
     return __jsx("div", {
-      className: "w-1/5 flex",
+      className: "w-1/5 flex mb-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 90
       },
       __self: undefined
     }, __jsx("button", {
-      className: "w-90p border border-gray-750 rounded-lg flex justify-center",
+      onClick: () => {
+        setSelectedCountry(currency);
+        setCurrency(`${currency.symbol} ${currency.abbreviation}`);
+        refreshPage(); // Query to change currency
+      },
+      className: "hover:bg-gray-250 w-90p rounded-lg flex justify-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 91
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "w-85p py-1",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 101
       },
       __self: undefined
     }, __jsx("div", {
-      className: "w-80p py-2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 102
-      },
-      __self: undefined
-    }, __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 102
       },
       __self: undefined
     }, __jsx("p", {
@@ -6364,14 +6380,14 @@ const CurrencyModal = setCurrencyModal => {
       className: "text-sm",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 103
       },
       __self: undefined
     }, currency.full)), __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 109
       },
       __self: undefined
     }, __jsx("p", {
@@ -6381,10 +6397,10 @@ const CurrencyModal = setCurrencyModal => {
       className: "text-sm text-gray-650",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 110
       },
       __self: undefined
-    }, currency.abbreviation, " - ", currency.symbol)))));
+    }, currency.abbreviation, ' ', currency.abbreviation === null ? null : '-', ' ', currency.symbol)))));
   })))));
 };
 
@@ -7138,6 +7154,17 @@ const RegisterModal = ({
 
 /***/ }),
 
+/***/ "./src/components/modals/currency.json":
+/*!*********************************************!*\
+  !*** ./src/components/modals/currency.json ***!
+  \*********************************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"location\":\"Australia\",\"full\":\"Australian dollar\",\"abbreviation\":\"AUD\",\"symbol\":\"$\"},{\"location\":\"Brazil\",\"full\":\"Brazilian real\",\"abbreviation\":\"BRL\",\"symbol\":\"R$\"},{\"location\":\"Bulgaria\",\"full\":\"Bulgarian lev\",\"abbreviation\":\"BGN\",\"symbol\":\"лв\"},{\"location\":\"Canada\",\"full\":\"Canadian dollar\",\"abbreviation\":\"CAD\",\"symbol\":\"$\"},{\"location\":\"Chile\",\"full\":\"Chilean peso\",\"abbreviation\":\"CLP\",\"symbol\":\"$\"},{\"location\":\"China\",\"full\":\"CNY\",\"abbreviation\":\"CNY\",\"symbol\":\"￥\"},{\"location\":\"Colombia\",\"full\":\"Colombian peso\",\"abbreviation\":\"COP\",\"symbol\":\"$\"},{\"location\":\"Costa Rican\",\"full\":\"Costa Rican colon\",\"abbreviation\":\"CRC\",\"symbol\":\"₡\"},{\"location\":\"Croatia\",\"full\":\"Croatian kuna\",\"abbreviation\":\"HRK\",\"symbol\":\"kn\"},{\"location\":\"Czech\",\"full\":\"Czech koruna\",\"abbreviation\":\"CZK\",\"symbol\":\"Kč\"},{\"location\":\"Denmark\",\"full\":\"Danish krone\",\"abbreviation\":\"DKK\",\"symbol\":\"kr\"},{\"location\":\"United Arab Emirates\",\"full\":\"Emirati dirham\",\"abbreviation\":\"AED\",\"symbol\":\"د.إ\"},{\"location\":\"European Union\",\"full\":\"Euro\",\"abbreviation\":\"EUR\",\"symbol\":\"€\"},{\"location\":\"Hong Kong\",\"full\":\"Hong Kong dollar\",\"abbreviation\":\"HKD\",\"symbol\":\"$\"},{\"location\":\"Hungary\",\"full\":\"Fungarian forint\",\"abbreviation\":\"HUF\",\"symbol\":\"Ft\"},{\"location\":\"India\",\"full\":\"India rupee\",\"abbreviation\":\"INR\",\"symbol\":\"₹\"},{\"location\":\"Israel\",\"full\":\"Israeli new shekel\",\"abbreviation\":\"ILS\",\"symbol\":\"₪\"},{\"location\":\"Japan\",\"full\":\"Japanese yen\",\"abbreviation\":\"JPY\",\"symbol\":\"¥\"},{\"location\":\"Malaysia\",\"full\":\"Malaysian ringgit\",\"abbreviation\":\"MYR\",\"symbol\":\"RM\"},{\"location\":\"Mexico\",\"full\":\"Mexican peso\",\"abbreviation\":\"MXN\",\"symbol\":\"$\"},{\"location\":\"Morocco\",\"full\":\"Moroccan dirham\",\"abbreviation\":null,\"symbol\":\"MAD\"},{\"location\":\"Taiwan\",\"full\":\"New Taiwan dollar\",\"abbreviation\":\"TWD\",\"symbol\":\"$\"},{\"location\":\"New Zealand\",\"full\":\"New Zealand dollar\",\"abbreviation\":\"NZD\",\"symbol\":\"$\"},{\"location\":\"Norway\",\"full\":\"Norwegian krone\",\"abbreviation\":\"NOK\",\"symbol\":\"kr\"},{\"location\":\"Peru\",\"full\":\"Peruvian sol\",\"abbreviation\":\"PEN\",\"symbol\":\"S/\"},{\"location\":\"Philippine\",\"full\":\"Philippine peso\",\"abbreviation\":\"PHP\",\"symbol\":\"₱\"},{\"location\":\"Poland\",\"full\":\"Polish zloty\",\"abbreviation\":\"PLN\",\"symbol\":\"zł\"},{\"location\":\"United Kingdom\",\"full\":\"Pound sterling\",\"abbreviation\":\"GBP\",\"symbol\":\"£\"},{\"location\":\"Romania\",\"full\":\"Romanian leu\",\"abbreviation\":\"RON\",\"symbol\":\"lei\"},{\"location\":\"Russia\",\"full\":\"Russian ruble\",\"abbreviation\":\"RUB\",\"symbol\":\"₽\"},{\"location\":\"Saudi Arabia\",\"full\":\"Saudi Araibian riyal\",\"abbreviation\":\"SAR\",\"symbol\":\"SR\"},{\"location\":\"Singapore\",\"full\":\"Singapore dollar\",\"abbreviation\":\"SGD\",\"symbol\":\"$\"},{\"location\":\"South Africa\",\"full\":\"South African rand\",\"abbreviation\":\"ZAR\",\"symbol\":\"R\"},{\"location\":\"South Korea\",\"full\":\"South Korean won\",\"abbreviation\":\"KRW\",\"symbol\":\"₩\"},{\"location\":\"Sweden\",\"full\":\"Swedish krona\",\"abbreviation\":\"SEK\",\"symbol\":\"kr\"},{\"location\":\"Switzerland\",\"full\":\"Swiss franc\",\"abbreviation\":null,\"symbol\":\"CHF\"},{\"location\":\"Thailand\",\"full\":\"Thai baht\",\"abbreviation\":\"THB\",\"symbol\":\"฿\"},{\"location\":\"Turkey\",\"full\":\"Turkish lira\",\"abbreviation\":\"TRY\",\"symbol\":\"₺\"},{\"location\":\"United States\",\"full\":\"United States dollar\",\"abbreviation\":\"USD\",\"symbol\":\"$\"},{\"location\":\"Uruguay\",\"full\":\"Uruguayan peso\",\"abbreviation\":\"UYU\",\"symbol\":\"$U\"}]");
+
+/***/ }),
+
 /***/ "./src/components/wrapper/Section.tsx":
 /*!********************************************!*\
   !*** ./src/components/wrapper/Section.tsx ***!
@@ -7495,6 +7522,17 @@ module.exports = require("core-js/library/fn/weak-map");
 /***/ (function(module, exports) {
 
 module.exports = require("cuid");
+
+/***/ }),
+
+/***/ "lodash":
+/*!*************************!*\
+  !*** external "lodash" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("lodash");
 
 /***/ }),
 
