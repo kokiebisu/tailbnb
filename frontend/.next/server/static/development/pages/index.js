@@ -2655,10 +2655,6 @@ const NextWeek = () => {
     1: setCard
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
 
-  if (data) {
-    console.log(data);
-  }
-
   const renderContent = (data, number) => {
     var content = [];
 
@@ -2667,7 +2663,7 @@ const NextWeek = () => {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 61
         },
         __self: undefined
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_5__["LocationExperienceCard"], {
@@ -2681,7 +2677,7 @@ const NextWeek = () => {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 62
         },
         __self: undefined
       })));
@@ -2696,21 +2692,21 @@ const NextWeek = () => {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 85
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 87
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2718,7 +2714,7 @@ const NextWeek = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 88
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2727,7 +2723,7 @@ const NextWeek = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 93
     },
     __self: undefined
   }, matches => matches.xs ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2736,7 +2732,7 @@ const NextWeek = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 99
     },
     __self: undefined
   }, matches => matches.small ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2745,7 +2741,7 @@ const NextWeek = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 109
     },
     __self: undefined
   }, matches => matches.large ? (setCard(3), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2754,7 +2750,7 @@ const NextWeek = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 119
     },
     __self: undefined
   }, matches => matches.xl ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2763,14 +2759,14 @@ const NextWeek = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 127
     },
     __self: undefined
   }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 141
     },
     __self: undefined
   })));
@@ -3243,10 +3239,6 @@ const Today = () => {
     1: setCard
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
 
-  if (data) {
-    console.log(data);
-  }
-
   const renderContent = (data, number) => {
     var content = [];
 
@@ -3255,7 +3247,7 @@ const Today = () => {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 61
         },
         __self: undefined
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_5__["LocationExperienceCard"], {
@@ -3269,7 +3261,7 @@ const Today = () => {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 62
         },
         __self: undefined
       })));
@@ -3284,21 +3276,21 @@ const Today = () => {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 85
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 87
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -3306,7 +3298,7 @@ const Today = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 88
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3315,7 +3307,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 93
     },
     __self: undefined
   }, matches => matches.xs ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3324,7 +3316,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 99
     },
     __self: undefined
   }, matches => matches.small ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3333,7 +3325,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 109
     },
     __self: undefined
   }, matches => matches.large ? (setCard(3), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3342,7 +3334,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 119
     },
     __self: undefined
   }, matches => matches.xl ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3351,14 +3343,14 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 127
     },
     __self: undefined
   }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 141
     },
     __self: undefined
   })));
@@ -3432,10 +3424,6 @@ const Tomorrow = () => {
     1: setCard
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
 
-  if (data) {
-    console.log(data);
-  }
-
   const renderContent = (data, number) => {
     var content = [];
 
@@ -3444,7 +3432,7 @@ const Tomorrow = () => {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 61
         },
         __self: undefined
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_5__["LocationExperienceCard"], {
@@ -3458,7 +3446,7 @@ const Tomorrow = () => {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 62
         },
         __self: undefined
       })));
@@ -3473,21 +3461,21 @@ const Tomorrow = () => {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 85
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 87
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -3495,7 +3483,7 @@ const Tomorrow = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 88
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3504,7 +3492,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 93
     },
     __self: undefined
   }, matches => matches.xs ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3513,7 +3501,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 99
     },
     __self: undefined
   }, matches => matches.small ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3522,7 +3510,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 109
     },
     __self: undefined
   }, matches => matches.large ? (setCard(3), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3531,7 +3519,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 119
     },
     __self: undefined
   }, matches => matches.xl ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3540,14 +3528,14 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 127
     },
     __self: undefined
   }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 141
     },
     __self: undefined
   })));
@@ -6159,7 +6147,17 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/CurrencyModal.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
+
 const CurrencyModal = setCurrencyModal => {
+  const {
+    0: selectedCountry,
+    1: setSelectedCountry
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    country: 'Canada',
+    full: 'Canadian dollar',
+    abbreviation: 'CAD',
+    symbol: '$'
+  });
   const currencies = [{
     country: 'Canada',
     full: 'Canadian dollar',
@@ -6170,13 +6168,20 @@ const CurrencyModal = setCurrencyModal => {
     full: 'Brazilian real',
     abbreviation: 'BRL',
     symbol: 'R$'
+  }, {
+    country: 'Brazil',
+    full: 'Brazilian real',
+    abbreviation: 'BRL',
+    symbol: 'R$'
   }];
+  const filteredCurrencies = currencies.filter(currency => currency != selectedCountry);
+  console.log('filtered currencies', filteredCurrencies);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, ' ', __jsx("div", {
     id: "darkOverlay",
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 41
     },
     __self: undefined
   }), __jsx("div", {
@@ -6184,42 +6189,42 @@ const CurrencyModal = setCurrencyModal => {
     className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 45
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl border-b border-gray-300 mt-2 flex justify-center items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 48
     },
     __self: undefined
   }, __jsx("div", {
     className: "bg-green-850 relative w-full px-4 flex justify-center items-center my-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex items-center absolute left-0 z-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx("button", {
     onClick: () => setCurrencyModal(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
     className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6228,27 +6233,27 @@ const CurrencyModal = setCurrencyModal => {
     viewBox: "0 0 47.971 47.971",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 57
     },
     __self: undefined
   }, __jsx("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 58
     },
     __self: undefined
   })))))))), __jsx("div", {
     className: "w-full mx-auto max-w-5xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 71
     },
     __self: undefined
   }, __jsx("div", {
@@ -6258,43 +6263,98 @@ const CurrencyModal = setCurrencyModal => {
     className: "w-full text-2xl py-6 text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 72
     },
     __self: undefined
   }, "Choose currency"), __jsx("div", {
     className: "w-full flex flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 77
     },
     __self: undefined
-  }, currencies.map((currency, index) => {
+  }, __jsx("div", {
+    className: "w-1/5 flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: undefined
+  }, __jsx("button", {
+    className: "w-90p border border-gray-750 rounded-lg flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-80p py-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: undefined
+  }, selectedCountry.full)), __jsx("div", {
+    className: "flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm text-gray-650",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: undefined
+  }, selectedCountry.abbreviation, " - ", selectedCountry.symbol))))), filteredCurrencies.map((currency, index) => {
     return __jsx("div", {
       className: "w-1/5 flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 100
       },
       __self: undefined
     }, __jsx("button", {
       className: "w-90p border border-gray-750 rounded-lg flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 101
       },
       __self: undefined
     }, __jsx("div", {
       className: "w-80p py-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 102
       },
       __self: undefined
     }, __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 103
       },
       __self: undefined
     }, __jsx("p", {
@@ -6304,14 +6364,14 @@ const CurrencyModal = setCurrencyModal => {
       className: "text-sm",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 104
       },
       __self: undefined
     }, currency.full)), __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 110
       },
       __self: undefined
     }, __jsx("p", {
@@ -6321,7 +6381,7 @@ const CurrencyModal = setCurrencyModal => {
       className: "text-sm text-gray-650",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 111
       },
       __self: undefined
     }, currency.abbreviation, " - ", currency.symbol)))));

@@ -1,6 +1,14 @@
 import * as React from 'react';
+import { useState } from 'react';
 
 export const CurrencyModal = (setCurrencyModal) => {
+  const [selectedCountry, setSelectedCountry] = useState({
+    country: 'Canada',
+    full: 'Canadian dollar',
+    abbreviation: 'CAD',
+    symbol: '$'
+  });
+
   const currencies = [
     {
       country: 'Canada',
@@ -13,8 +21,20 @@ export const CurrencyModal = (setCurrencyModal) => {
       full: 'Brazilian real',
       abbreviation: 'BRL',
       symbol: 'R$'
+    },
+    {
+      country: 'Brazil',
+      full: 'Brazilian real',
+      abbreviation: 'BRL',
+      symbol: 'R$'
     }
   ];
+
+  const filteredCurrencies = currencies.filter(
+    (currency) => currency != selectedCountry
+  );
+
+  console.log('filtered currencies', filteredCurrencies);
   return (
     <>
       {' '}
@@ -55,7 +75,27 @@ export const CurrencyModal = (setCurrencyModal) => {
             Choose currency
           </div>
           <div className='w-full flex flex-wrap'>
-            {currencies.map((currency, index) => {
+            <div className='w-1/5 flex'>
+              <button className='w-90p border border-gray-750 rounded-lg flex justify-center'>
+                <div className='w-80p py-2'>
+                  <div className='flex'>
+                    <p
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='text-sm'>
+                      {selectedCountry.full}
+                    </p>
+                  </div>
+                  <div className='flex'>
+                    <p
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='text-sm text-gray-650'>
+                      {selectedCountry.abbreviation} - {selectedCountry.symbol}
+                    </p>
+                  </div>
+                </div>
+              </button>
+            </div>
+            {filteredCurrencies.map((currency, index) => {
               return (
                 <div className='w-1/5 flex'>
                   <button className='w-90p border border-gray-750 rounded-lg flex justify-center'>

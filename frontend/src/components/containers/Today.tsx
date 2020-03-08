@@ -53,10 +53,6 @@ export const Today: any = () => {
   );
   const [card, setCard] = useState<number>(0);
 
-  if (data) {
-    console.log(data);
-  }
-
   const renderContent = (data: ExperienceData, number: number) => {
     var content = [];
 
