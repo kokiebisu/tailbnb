@@ -46,4 +46,6 @@ type Experience {
   country: String
   img: String
   location: String
+  category: String
+  available: String
 }

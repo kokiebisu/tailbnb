@@ -77,7 +77,9 @@ const resolvers = {
         country: args.country,
         img: args.img,
         imglow: args.imglow,
-        street: args.street
+        street: args.street,
+        category: args.category,
+        available: args.available
       });
     },
     deleteExperience(root, args, context) {
