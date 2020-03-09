@@ -5,7 +5,7 @@ import { WorldwideCard } from '../functions/WorldwideCard';
 
 export const Worldwide: React.FC<{}> = () => {
   return (
-    <div className='w-full max-w-5xl mx-auto py-8'>
+    <div className='w-full max-w-5xl mx-auto pt-8 py-32'>
       <div className='flex justify-center'>
         <div
           style={{ width: 70, height: 2 }}
