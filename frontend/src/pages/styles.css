@@ -150,9 +150,14 @@ body {
 
 /* md */
 @media (min-width: 768px) {
-  #quote {
+  #quote__steps {
     position: absolute;
     top: -10px;
+  }
+
+  #quote__payment {
+    position: absolute;
+    top: 20px;
   }
 
   #quote-description {
@@ -162,7 +167,12 @@ body {
 
 /* lg */
 @media (min-width: 1024px) {
-  #quote {
+  #quote__steps {
+    position: absolute;
+    top: -40px;
+  }
+
+  #quote__payment {
     position: absolute;
     top: -40px;
   }

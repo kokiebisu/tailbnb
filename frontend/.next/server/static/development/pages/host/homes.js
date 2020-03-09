@@ -1007,7 +1007,7 @@ const SimplePaymentsCard = ({
   last
 }) => {
   return __jsx("div", {
-    className: "w-1/3",
+    className: "md:w-full lg:w-1/3 md:mb-16 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
@@ -2223,7 +2223,7 @@ const HostingSteps = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    id: "quote",
+    id: "quote__steps",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 53
@@ -2438,7 +2438,7 @@ const quote = __webpack_require__(/*! ../../../../public/img/high/host-payments-
 
 const SimplePayments = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -2480,14 +2480,14 @@ const SimplePayments = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 text-6xl tracking-tight",
+    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: undefined
   }, "Payments made simple")), __jsx("div", {
-    className: "flex",
+    className: "lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
@@ -2521,18 +2521,18 @@ const SimplePayments = () => {
       lineNumber: 38
     },
     __self: undefined
-  }))), __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-32 pb-16 flex",
+  })))), __jsx("div", {
+    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: undefined
   }, __jsx("img", {
@@ -2540,79 +2540,77 @@ const SimplePayments = () => {
     src: quote,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-1/2 relative flex items-center justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("div", {
-    className: "absolute",
-    style: {
-      top: 70
-    },
+    id: "quote__payment",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("p", {
     style: {
       fontFamily: 'circular-std-medium'
     },
-    className: "text-10xl text-yellow-850",
+    className: "md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: undefined
   }, "\u201C")), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: undefined
   }, __jsx("div", {
     className: "mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 63
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: undefined
   }, __jsx("p", {
+    id: "quote-description",
     style: {
       fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
     },
-    className: "text-3xl text-gray-750 leading-tight",
+    className: "md:text-lg lg:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: undefined
   }, "Hosting has helped me pay for the rent and other upgrades."))), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 76
     },
     __self: undefined
   }, __jsx("p", {
@@ -2622,20 +2620,20 @@ const SimplePayments = () => {
     className: "text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 77
     },
     __self: undefined
   }, "Jack hosts in Brisbane to earn extra money")), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx("div", {
     className: "py-3 px-5 border-2 border-gray-850 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 84
     },
     __self: undefined
   }, __jsx("p", {
@@ -2645,10 +2643,10 @@ const SimplePayments = () => {
     className: "text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 85
     },
     __self: undefined
-  }, "Learn how they host")))))))));
+  }, "Learn how they host"))))))));
 };
 
 /***/ }),
