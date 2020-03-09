@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const HostAbout: React.FC<{}> = () => {
   return (
-    <div className='w-full max-w-5xl mx-auto py-8'>
+    <div className='w-full max-w-5xl mx-auto pt-8 pb-32'>
       <div className='flex justify-center'>
         <div
           style={{ width: 70, height: 2 }}
