@@ -1,173 +1,363 @@
 import * as React from 'react';
 import { useState } from 'react';
+import _ from 'lodash';
 
 const suggestedLanguages = [
   {
     name: 'English',
-    country: 'United States'
+    location: 'United States'
   },
   {
     name: 'English',
-    country: 'United Kingdom'
+    location: 'United Kingdom'
   },
   {
     name: 'Français',
-    country: 'Canada'
+    location: 'Canada'
   }
 ];
 
 const languages = [
   {
     name: 'English',
-    country: 'Canada'
+    location: 'Canada'
   },
   {
     name: 'Azərbaycan dili',
-    country: 'Azərbaycan'
+    location: 'Azərbaycan'
   },
   {
     name: 'Bahasa Indonesia',
-    country: 'Indonesia'
+    location: 'Indonesia'
   },
   {
     name: 'Bosanski',
-    country: 'Bosna i Hercegovina'
+    location: 'Bosna i Hercegovina'
   },
   {
     name: 'Català',
-    country: 'Espanya'
+    location: 'Espanya'
   },
   {
     name: 'Čeština',
-    country: 'Česká republika'
+    location: 'Česká republika'
   },
   {
     name: 'Crnogorski',
-    country: 'Crna Gora'
+    location: 'Crna Gora'
   },
   {
     name: 'Dansk',
-    country: 'Danmark'
+    location: 'Danmark'
   },
   {
     name: 'Deutsch',
-    country: 'Deutschland'
+    location: 'Deutschland'
   },
   {
     name: 'Deutsch',
-    country: 'Österreich'
+    location: 'Österreich'
   },
   {
     name: 'Deutsch',
-    country: 'Schweiz'
+    location: 'Schweiz'
   },
   {
     name: 'Eesti',
-    country: 'Eesti'
+    location: 'Eesti'
   },
   {
     name: 'English',
-    country: 'Australia'
+    location: 'Australia'
   },
   {
     name: 'English',
-    country: 'Guyana'
+    location: 'Guyana'
   },
   {
     name: 'English',
-    country: 'India'
+    location: 'India'
   },
   {
     name: 'English',
-    country: 'Ireland'
+    location: 'Ireland'
   },
   {
     name: 'English',
-    country: 'New Zealand'
+    location: 'New Zealand'
   },
   {
     name: 'English',
-    country: 'Singapore'
+    location: 'Singapore'
   },
   {
     name: 'English',
-    country: 'United Arab Emirates'
+    location: 'United Arab Emirates'
   },
   {
     name: 'Español',
-    country: 'Argentina'
+    location: 'Argentina'
   },
   {
     name: 'Español',
-    country: 'Belice'
+    location: 'Belice'
   },
   {
     name: 'Español',
-    country: 'El Salvador'
+    location: 'El Salvador'
   },
   {
     name: 'Español',
-    country: 'España'
+    location: 'España'
   },
   {
     name: 'Español',
-    country: 'Estados Unidos'
+    location: 'Estados Unidos'
   },
   {
     name: 'Español',
-    country: 'Guatemala'
+    location: 'Guatemala'
   },
   {
     name: 'Español',
-    country: 'Honduras'
+    location: 'Honduras'
   },
   {
     name: 'Español',
-    country: 'Latinoamérica'
+    location: 'Latinoamérica'
   },
   {
     name: 'Español',
-    country: 'México'
+    location: 'México'
   },
   {
     name: 'Español',
-    country: 'Nicaragua'
+    location: 'Nicaragua'
   },
   {
     name: 'Español',
-    country: 'Panamá'
+    location: 'Panamá'
   },
   {
     name: 'Español',
-    country: 'Paraguay'
+    location: 'Paraguay'
   },
   {
     name: 'Español',
-    country: 'Perú'
+    location: 'Perú'
   },
   {
     name: 'Español',
-    country: 'Venezuela'
+    location: 'Venezuela'
   },
   {
     name: 'Français',
-    country: 'Belgique'
+    location: 'Belgique'
   },
   {
     name: 'Français',
-    country: 'France'
+    location: 'France'
   },
   {
     name: 'Français',
-    country: 'Suisse'
+    location: 'Suisse'
+  },
+  {
+    name: 'Gaeilge',
+    location: 'Éire'
+  },
+  {
+    name: 'Hrvatski',
+    location: 'Hrvatska'
+  },
+  {
+    name: 'isiXhosa',
+    location: 'eMzantsi Afrika'
+  },
+  {
+    name: 'isiZulu',
+    location: 'iNingizimu Afrika'
+  },
+  {
+    name: 'Íslenska',
+    location: 'Ísland'
+  },
+  {
+    name: 'Italiano',
+    location: 'Italia'
+  },
+  {
+    name: 'Italiano',
+    location: 'Svizzera'
+  },
+  {
+    name: 'Kiswahili',
+    location: 'Āfrika'
+  },
+  {
+    name: 'Latviešu',
+    location: 'Latvija'
+  },
+  {
+    name: 'Lietuvių',
+    location: 'Lietuva'
+  },
+  {
+    name: 'Magyar',
+    location: 'Magyarország'
+  },
+  {
+    name: 'Malti',
+    location: 'Malta'
+  },
+  {
+    name: 'Melayu',
+    location: 'Malaysia'
+  },
+  {
+    name: 'Nederlands',
+    location: 'België'
+  },
+  {
+    name: 'Nederlands',
+    location: 'Nederland'
+  },
+  {
+    name: 'Norsk',
+    location: 'Norge'
+  },
+  {
+    name: 'Polski',
+    location: 'Polska'
+  },
+  {
+    name: 'Português',
+    location: 'Brasil'
+  },
+  {
+    name: 'Português',
+    location: 'Portugal'
+  },
+  {
+    name: 'Română',
+    location: 'Română'
+  },
+  {
+    name: 'Shqip',
+    location: 'Shqipëri'
+  },
+  {
+    name: 'Slovenčina',
+    location: 'Slovensko'
+  },
+  {
+    name: 'Slovenščina',
+    location: 'Slovenija'
+  },
+  {
+    name: 'Srpski',
+    location: 'Srbija'
+  },
+  {
+    name: 'Suomi',
+    location: 'Suomi'
+  },
+  {
+    name: 'Svenska',
+    location: 'Sverige'
+  },
+  {
+    name: 'Tagalog',
+    location: 'Pilipinas'
+  },
+  {
+    name: 'Tiếng Việt',
+    location: 'Việt Nam'
+  },
+  {
+    name: 'Türkçe',
+    location: 'Türkiye'
+  },
+  {
+    name: 'Ελληνικά',
+    location: 'Ελλάδα'
+  },
+  {
+    name: 'Български',
+    location: 'България'
+  },
+  {
+    name: 'Македонски',
+    location: 'Северна Македонија'
+  },
+  {
+    name: 'Русский',
+    location: 'Россия'
+  },
+  {
+    name: 'Українська',
+    location: 'Україна'
+  },
+  {
+    name: 'ქართული',
+    location: 'საქართველო'
+  },
+  {
+    name: 'Հայերեն',
+    location: 'Հայաստան'
+  },
+  {
+    name: 'עברית',
+    location: 'ישראל'
+  },
+  {
+    name: 'العربية',
+    location: 'العالم'
+  },
+  {
+    name: 'हिन्दी',
+    location: 'भारत'
+  },
+  {
+    name: 'ไทย',
+    location: 'ประเทศไทย'
+  },
+  {
+    name: '한국어',
+    location: '대한민국'
+  },
+  {
+    name: '日本語',
+    location: '日本'
+  },
+  {
+    name: '简体中文',
+    location: '美国'
+  },
+  {
+    name: '繁體中文',
+    location: '美國'
+  },
+  {
+    name: '简体中文',
+    location: '中国'
+  },
+  {
+    name: '繁體中文',
+    location: '香港'
+  },
+  {
+    name: '繁體中文',
+    location: '台灣'
   }
 ];
 
-export const LanguageModal = ({ setLanguageModal }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState({
-    name: 'English',
-    country: 'Canada'
-  });
+export const LanguageModal = ({ location, setLanguageModal }) => {
+  const defaultLanguage = languages.find(
+    (language) => language.location == location
+  );
+
+  const [selectedLanguage, setSelectedLanguage] = useState(defaultLanguage);
 
   const filteredLanguages = languages.filter(
     (language) => !_.isEqual(language, selectedLanguage)
@@ -231,7 +421,7 @@ export const LanguageModal = ({ setLanguageModal }) => {
                           <p
                             style={{ fontFamily: 'airbnb-book' }}
                             className='text-sm text-gray-650'>
-                            {language.country}
+                            {language.location}
                           </p>
                         </div>
                       </div>
@@ -260,16 +450,20 @@ export const LanguageModal = ({ setLanguageModal }) => {
                       <p
                         style={{ fontFamily: 'airbnb-book' }}
                         className='text-sm text-gray-650'>
-                        {selectedLanguage.country}
+                        {selectedLanguage.location}
                       </p>
                     </div>
                   </div>
                 </button>
               </div>
-              {languages.map((language) => {
+              {filteredLanguages.map((language) => {
                 return (
                   <div className='w-1/5 flex mb-4'>
-                    <button className='w-90p hover:bg-gray-250  rounded-lg flex justify-center'>
+                    <button
+                      onClick={() => {
+                        setSelectedLanguage(language);
+                      }}
+                      className='w-90p hover:bg-gray-250  rounded-lg flex justify-center'>
                       <div className='w-85p py-1'>
                         <div className='flex'>
                           <p
@@ -282,7 +476,7 @@ export const LanguageModal = ({ setLanguageModal }) => {
                           <p
                             style={{ fontFamily: 'airbnb-book' }}
                             className='text-sm text-gray-650'>
-                            {language.country}
+                            {language.location}
                           </p>
                         </div>
                       </div>

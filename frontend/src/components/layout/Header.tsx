@@ -191,7 +191,10 @@ export const Header: React.FC<{}> = () => {
       {languageModal ? (
         <>
           {typeof window !== 'undefined' ? configureScroll('hidden') : null}
-          <LanguageModal setLanguageModal={switchLanguageModal} />
+          <LanguageModal
+            location='Canada'
+            setLanguageModal={switchLanguageModal}
+          />
         </>
       ) : null}
     </header>

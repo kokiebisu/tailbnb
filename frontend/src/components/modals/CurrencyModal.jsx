@@ -55,71 +55,72 @@ export const CurrencyModal = ({ location, setCurrencyModal, setCurrency }) => {
             </div>
           </div>
         </div>
-
-        <div className='w-full mx-auto max-w-5xl'>
-          <div
-            style={{ fontFamily: 'airbnb-medium' }}
-            className='w-full text-2xl py-6 text-gray-750'>
-            Choose currency
-          </div>
-          <div className='w-full flex flex-wrap'>
-            <div className='w-1/5 flex mb-4'>
-              <button className='w-90p border border-gray-750 rounded-lg flex justify-center'>
-                <div className='w-85p py-1'>
-                  <div className='flex'>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm'>
-                      {selectedCountry.full}
-                    </p>
-                  </div>
-                  <div className='flex'>
-                    <p
-                      style={{ fontFamily: 'airbnb-book' }}
-                      className='text-sm text-gray-650'>
-                      {selectedCountry.abbreviation}{' '}
-                      {selectedCountry.abbreviation === null ? null : '-'}{' '}
-                      {selectedCountry.symbol}
-                    </p>
-                  </div>
-                </div>
-              </button>
+        <div className='w-full h-60v overflow-y-scroll overflow-hidden'>
+          <div className='w-full mx-auto max-w-5xl'>
+            <div
+              style={{ fontFamily: 'airbnb-medium' }}
+              className='w-full text-2xl py-6 text-gray-750'>
+              Choose currency
             </div>
-            {filteredCurrencies.map((currency, index) => {
-              return (
-                <div className='w-1/5 flex mb-4'>
-                  <button
-                    onClick={() => {
-                      setSelectedCountry(currency);
-                      setCurrency(
-                        `${currency.symbol} ${currency.abbreviation}`
-                      );
-                      refreshPage();
-                      // Query to change currency
-                    }}
-                    className='hover:bg-gray-250 w-90p rounded-lg flex justify-center'>
-                    <div className='w-85p py-1'>
-                      <div className='flex'>
-                        <p
-                          style={{ fontFamily: 'airbnb-book' }}
-                          className='text-sm'>
-                          {currency.full}
-                        </p>
-                      </div>
-                      <div className='flex'>
-                        <p
-                          style={{ fontFamily: 'airbnb-book' }}
-                          className='text-sm text-gray-650'>
-                          {currency.abbreviation}{' '}
-                          {currency.abbreviation === null ? null : '-'}{' '}
-                          {currency.symbol}
-                        </p>
-                      </div>
+            <div className='w-full flex flex-wrap'>
+              <div className='w-1/5 flex mb-4'>
+                <button className='w-90p border border-gray-750 rounded-lg flex justify-center'>
+                  <div className='w-85p py-1'>
+                    <div className='flex'>
+                      <p
+                        style={{ fontFamily: 'airbnb-book' }}
+                        className='text-sm'>
+                        {selectedCountry.full}
+                      </p>
                     </div>
-                  </button>
-                </div>
-              );
-            })}
+                    <div className='flex'>
+                      <p
+                        style={{ fontFamily: 'airbnb-book' }}
+                        className='text-sm text-gray-650'>
+                        {selectedCountry.abbreviation}{' '}
+                        {selectedCountry.abbreviation === null ? null : '-'}{' '}
+                        {selectedCountry.symbol}
+                      </p>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              {filteredCurrencies.map((currency, index) => {
+                return (
+                  <div className='w-1/5 flex mb-4'>
+                    <button
+                      onClick={() => {
+                        setSelectedCountry(currency);
+                        setCurrency(
+                          `${currency.symbol} ${currency.abbreviation}`
+                        );
+                        refreshPage();
+                        // Query to change currency
+                      }}
+                      className='hover:bg-gray-250 w-90p rounded-lg flex justify-center'>
+                      <div className='w-85p py-1'>
+                        <div className='flex'>
+                          <p
+                            style={{ fontFamily: 'airbnb-book' }}
+                            className='text-sm'>
+                            {currency.full}
+                          </p>
+                        </div>
+                        <div className='flex'>
+                          <p
+                            style={{ fontFamily: 'airbnb-book' }}
+                            className='text-sm text-gray-650'>
+                            {currency.abbreviation}{' '}
+                            {currency.abbreviation === null ? null : '-'}{' '}
+                            {currency.symbol}
+                          </p>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

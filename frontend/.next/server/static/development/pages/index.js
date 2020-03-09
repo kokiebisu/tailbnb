@@ -6161,6 +6161,7 @@ const Header = () => {
     },
     __self: undefined
   })) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_5__["LanguageModal"], {
+    location: "Canada",
     setLanguageModal: switchLanguageModal,
     __source: {
       fileName: _jsxFileName,
@@ -6291,6 +6292,13 @@ const CurrencyModal = ({
     },
     __self: undefined
   }))))))))), __jsx("div", {
+    className: "w-full h-60v overflow-y-scroll overflow-hidden",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: undefined
+  }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl",
     __source: {
       fileName: _jsxFileName,
@@ -6431,7 +6439,7 @@ const CurrencyModal = ({
       },
       __self: undefined
     }, currency.abbreviation, ' ', currency.abbreviation === null ? null : '-', ' ', currency.symbol)))));
-  })))));
+  }))))));
 };
 
 /***/ }),
@@ -6740,146 +6748,289 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LanguageModal", function() { return LanguageModal; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/LanguageModal.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
+
 const suggestedLanguages = [{
   name: 'English',
-  country: 'United States'
+  location: 'United States'
 }, {
   name: 'English',
-  country: 'United Kingdom'
+  location: 'United Kingdom'
 }, {
   name: 'Français',
-  country: 'Canada'
+  location: 'Canada'
 }];
 const languages = [{
   name: 'English',
-  country: 'Canada'
+  location: 'Canada'
 }, {
   name: 'Azərbaycan dili',
-  country: 'Azərbaycan'
+  location: 'Azərbaycan'
 }, {
   name: 'Bahasa Indonesia',
-  country: 'Indonesia'
+  location: 'Indonesia'
 }, {
   name: 'Bosanski',
-  country: 'Bosna i Hercegovina'
+  location: 'Bosna i Hercegovina'
 }, {
   name: 'Català',
-  country: 'Espanya'
+  location: 'Espanya'
 }, {
   name: 'Čeština',
-  country: 'Česká republika'
+  location: 'Česká republika'
 }, {
   name: 'Crnogorski',
-  country: 'Crna Gora'
+  location: 'Crna Gora'
 }, {
   name: 'Dansk',
-  country: 'Danmark'
+  location: 'Danmark'
 }, {
   name: 'Deutsch',
-  country: 'Deutschland'
+  location: 'Deutschland'
 }, {
   name: 'Deutsch',
-  country: 'Österreich'
+  location: 'Österreich'
 }, {
   name: 'Deutsch',
-  country: 'Schweiz'
+  location: 'Schweiz'
 }, {
   name: 'Eesti',
-  country: 'Eesti'
+  location: 'Eesti'
 }, {
   name: 'English',
-  country: 'Australia'
+  location: 'Australia'
 }, {
   name: 'English',
-  country: 'Guyana'
+  location: 'Guyana'
 }, {
   name: 'English',
-  country: 'India'
+  location: 'India'
 }, {
   name: 'English',
-  country: 'Ireland'
+  location: 'Ireland'
 }, {
   name: 'English',
-  country: 'New Zealand'
+  location: 'New Zealand'
 }, {
   name: 'English',
-  country: 'Singapore'
+  location: 'Singapore'
 }, {
   name: 'English',
-  country: 'United Arab Emirates'
+  location: 'United Arab Emirates'
 }, {
   name: 'Español',
-  country: 'Argentina'
+  location: 'Argentina'
 }, {
   name: 'Español',
-  country: 'Belice'
+  location: 'Belice'
 }, {
   name: 'Español',
-  country: 'El Salvador'
+  location: 'El Salvador'
 }, {
   name: 'Español',
-  country: 'España'
+  location: 'España'
 }, {
   name: 'Español',
-  country: 'Estados Unidos'
+  location: 'Estados Unidos'
 }, {
   name: 'Español',
-  country: 'Guatemala'
+  location: 'Guatemala'
 }, {
   name: 'Español',
-  country: 'Honduras'
+  location: 'Honduras'
 }, {
   name: 'Español',
-  country: 'Latinoamérica'
+  location: 'Latinoamérica'
 }, {
   name: 'Español',
-  country: 'México'
+  location: 'México'
 }, {
   name: 'Español',
-  country: 'Nicaragua'
+  location: 'Nicaragua'
 }, {
   name: 'Español',
-  country: 'Panamá'
+  location: 'Panamá'
 }, {
   name: 'Español',
-  country: 'Paraguay'
+  location: 'Paraguay'
 }, {
   name: 'Español',
-  country: 'Perú'
+  location: 'Perú'
 }, {
   name: 'Español',
-  country: 'Venezuela'
+  location: 'Venezuela'
 }, {
   name: 'Français',
-  country: 'Belgique'
+  location: 'Belgique'
 }, {
   name: 'Français',
-  country: 'France'
+  location: 'France'
 }, {
   name: 'Français',
-  country: 'Suisse'
+  location: 'Suisse'
+}, {
+  name: 'Gaeilge',
+  location: 'Éire'
+}, {
+  name: 'Hrvatski',
+  location: 'Hrvatska'
+}, {
+  name: 'isiXhosa',
+  location: 'eMzantsi Afrika'
+}, {
+  name: 'isiZulu',
+  location: 'iNingizimu Afrika'
+}, {
+  name: 'Íslenska',
+  location: 'Ísland'
+}, {
+  name: 'Italiano',
+  location: 'Italia'
+}, {
+  name: 'Italiano',
+  location: 'Svizzera'
+}, {
+  name: 'Kiswahili',
+  location: 'Āfrika'
+}, {
+  name: 'Latviešu',
+  location: 'Latvija'
+}, {
+  name: 'Lietuvių',
+  location: 'Lietuva'
+}, {
+  name: 'Magyar',
+  location: 'Magyarország'
+}, {
+  name: 'Malti',
+  location: 'Malta'
+}, {
+  name: 'Melayu',
+  location: 'Malaysia'
+}, {
+  name: 'Nederlands',
+  location: 'België'
+}, {
+  name: 'Nederlands',
+  location: 'Nederland'
+}, {
+  name: 'Norsk',
+  location: 'Norge'
+}, {
+  name: 'Polski',
+  location: 'Polska'
+}, {
+  name: 'Português',
+  location: 'Brasil'
+}, {
+  name: 'Português',
+  location: 'Portugal'
+}, {
+  name: 'Română',
+  location: 'Română'
+}, {
+  name: 'Shqip',
+  location: 'Shqipëri'
+}, {
+  name: 'Slovenčina',
+  location: 'Slovensko'
+}, {
+  name: 'Slovenščina',
+  location: 'Slovenija'
+}, {
+  name: 'Srpski',
+  location: 'Srbija'
+}, {
+  name: 'Suomi',
+  location: 'Suomi'
+}, {
+  name: 'Svenska',
+  location: 'Sverige'
+}, {
+  name: 'Tagalog',
+  location: 'Pilipinas'
+}, {
+  name: 'Tiếng Việt',
+  location: 'Việt Nam'
+}, {
+  name: 'Türkçe',
+  location: 'Türkiye'
+}, {
+  name: 'Ελληνικά',
+  location: 'Ελλάδα'
+}, {
+  name: 'Български',
+  location: 'България'
+}, {
+  name: 'Македонски',
+  location: 'Северна Македонија'
+}, {
+  name: 'Русский',
+  location: 'Россия'
+}, {
+  name: 'Українська',
+  location: 'Україна'
+}, {
+  name: 'ქართული',
+  location: 'საქართველო'
+}, {
+  name: 'Հայերեն',
+  location: 'Հայաստան'
+}, {
+  name: 'עברית',
+  location: 'ישראל'
+}, {
+  name: 'العربية',
+  location: 'العالم'
+}, {
+  name: 'हिन्दी',
+  location: 'भारत'
+}, {
+  name: 'ไทย',
+  location: 'ประเทศไทย'
+}, {
+  name: '한국어',
+  location: '대한민국'
+}, {
+  name: '日本語',
+  location: '日本'
+}, {
+  name: '简体中文',
+  location: '美国'
+}, {
+  name: '繁體中文',
+  location: '美國'
+}, {
+  name: '简体中文',
+  location: '中国'
+}, {
+  name: '繁體中文',
+  location: '香港'
+}, {
+  name: '繁體中文',
+  location: '台灣'
 }];
 const LanguageModal = ({
+  location,
   setLanguageModal
 }) => {
+  const defaultLanguage = languages.find(language => language.location == location);
   const {
     0: selectedLanguage,
     1: setSelectedLanguage
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
-    name: 'English',
-    country: 'Canada'
-  });
-  const filteredLanguages = languages.filter(language => !_.isEqual(language, selectedLanguage));
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(defaultLanguage);
+  const filteredLanguages = languages.filter(language => !lodash__WEBPACK_IMPORTED_MODULE_1___default.a.isEqual(language, selectedLanguage));
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     id: "darkOverlay",
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 368
     },
     __self: undefined
   }), __jsx("div", {
@@ -6887,49 +7038,49 @@ const LanguageModal = ({
     className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 372
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 375
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl mt-2 flex justify-center items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 376
     },
     __self: undefined
   }, __jsx("div", {
     className: "bg-green-850 relative w-full px-4 flex justify-center items-center my-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 377
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex items-center absolute left-0 z-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 378
     },
     __self: undefined
   }, __jsx("button", {
     onClick: () => setLanguageModal(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 379
     },
     __self: undefined
   }, __jsx("div", {
     className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 380
     },
     __self: undefined
   }, __jsx("svg", {
@@ -6938,34 +7089,34 @@ const LanguageModal = ({
     viewBox: "0 0 47.971 47.971",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 381
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 385
     },
     __self: undefined
   }, __jsx("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 386
     },
     __self: undefined
   }))))))))), __jsx("div", {
     className: "w-full h-75v overflow-y-scroll overflow-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 400
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 401
     },
     __self: undefined
   }, __jsx("div", {
@@ -6975,14 +7126,14 @@ const LanguageModal = ({
     className: "w-full text-2xl py-6 text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 402
     },
     __self: undefined
   }, "Suggested languages and regions"), __jsx("div", {
     className: "w-full flex flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 407
     },
     __self: undefined
   }, suggestedLanguages.map(language => {
@@ -6990,28 +7141,28 @@ const LanguageModal = ({
       className: "w-1/5 flex mb-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 220
+        lineNumber: 410
       },
       __self: undefined
     }, __jsx("button", {
       className: "w-90p hover:bg-gray-250  rounded-lg flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 221
+        lineNumber: 411
       },
       __self: undefined
     }, __jsx("div", {
       className: "w-85p py-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 222
+        lineNumber: 412
       },
       __self: undefined
     }, __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 223
+        lineNumber: 413
       },
       __self: undefined
     }, __jsx("p", {
@@ -7021,14 +7172,14 @@ const LanguageModal = ({
       className: "text-sm",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 224
+        lineNumber: 414
       },
       __self: undefined
     }, language.name)), __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 230
+        lineNumber: 420
       },
       __self: undefined
     }, __jsx("p", {
@@ -7038,10 +7189,10 @@ const LanguageModal = ({
       className: "text-sm text-gray-650",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 231
+        lineNumber: 421
       },
       __self: undefined
-    }, language.country)))));
+    }, language.location)))));
   })), __jsx("div", {
     style: {
       fontFamily: 'airbnb-medium'
@@ -7049,42 +7200,42 @@ const LanguageModal = ({
     className: "w-full text-2xl py-6 text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 433
     },
     __self: undefined
   }, "Choose a language and region"), __jsx("div", {
     className: "w-full flex flex-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248
+      lineNumber: 438
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/5 flex mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249
+      lineNumber: 439
     },
     __self: undefined
   }, __jsx("button", {
     className: "w-90p border border-gray-750 rounded-lg flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250
+      lineNumber: 440
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-85p py-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251
+      lineNumber: 441
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252
+      lineNumber: 442
     },
     __self: undefined
   }, __jsx("p", {
@@ -7094,14 +7245,14 @@ const LanguageModal = ({
     className: "text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253
+      lineNumber: 443
     },
     __self: undefined
   }, selectedLanguage.name)), __jsx("div", {
     className: "flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 449
     },
     __self: undefined
   }, __jsx("p", {
@@ -7111,36 +7262,39 @@ const LanguageModal = ({
     className: "text-sm text-gray-650",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 450
     },
     __self: undefined
-  }, selectedLanguage.country))))), languages.map(language => {
+  }, selectedLanguage.location))))), filteredLanguages.map(language => {
     return __jsx("div", {
       className: "w-1/5 flex mb-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 271
+        lineNumber: 461
       },
       __self: undefined
     }, __jsx("button", {
+      onClick: () => {
+        setSelectedLanguage(language);
+      },
       className: "w-90p hover:bg-gray-250  rounded-lg flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 272
+        lineNumber: 462
       },
       __self: undefined
     }, __jsx("div", {
       className: "w-85p py-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 273
+        lineNumber: 467
       },
       __self: undefined
     }, __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 274
+        lineNumber: 468
       },
       __self: undefined
     }, __jsx("p", {
@@ -7150,14 +7304,14 @@ const LanguageModal = ({
       className: "text-sm",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 275
+        lineNumber: 469
       },
       __self: undefined
     }, language.name)), __jsx("div", {
       className: "flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 281
+        lineNumber: 475
       },
       __self: undefined
     }, __jsx("p", {
@@ -7167,10 +7321,10 @@ const LanguageModal = ({
       className: "text-sm text-gray-650",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282
+        lineNumber: 476
       },
       __self: undefined
-    }, language.country)))));
+    }, language.location)))));
   }))))));
 };
 
