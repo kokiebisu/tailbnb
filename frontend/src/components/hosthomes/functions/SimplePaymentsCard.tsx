@@ -14,7 +14,7 @@ export const SimplePaymentsCard: React.FC<Props> = ({
   last
 }) => {
   return (
-    <div className='w-1/3'>
+    <div className='md:w-full lg:w-1/3 md:mb-16 lg:mb-0'>
       {last ? (
         <div className='text-gray-750'>
           <div className='my-3'>
