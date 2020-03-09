@@ -629,7 +629,7 @@ const HostingStepsCard = ({
   last
 }) => {
   return __jsx("div", {
-    className: "w-1/3",
+    className: "md:w-full lg:w-1/3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
@@ -2172,7 +2172,7 @@ const HostingSteps = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full flex",
+    className: "w-full lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27

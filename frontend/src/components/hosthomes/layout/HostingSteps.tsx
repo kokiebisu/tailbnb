@@ -24,7 +24,7 @@ export const HostingSteps: React.FC<{}> = () => {
           </h3>
         </div>
         <div>
-          <div className='w-full flex'>
+          <div className='w-full lg:flex'>
             <HostingStepsCard
               title='List your space for free'
               description='Share any space without sign-up charges, from a shared living room to a second home and everything in-between.'
