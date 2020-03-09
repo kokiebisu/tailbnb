@@ -1970,7 +1970,7 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/airbnb-background-b8b3c94eb622e8a6083c338facb6c4fd.jpg";
+module.exports = "/_next/static/images/airbnb-background-f717273798e9db7afcc21e01fd4e6ec7.jpg";
 
 /***/ }),
 
