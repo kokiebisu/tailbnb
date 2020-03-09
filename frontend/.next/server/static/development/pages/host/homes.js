@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2173,14 +2173,163 @@ const homes = () => {
       lineNumber: 35
     },
     __self: undefined
-  })));
+  }), __jsx("div", {
+    className: "w-full max-w-5xl mx-auto py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      width: 70,
+      height: 2
+    },
+    className: "bg-gray-650 rounded-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "flex justify-center mb-12 mt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-850 text-6xl tracking-tight",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }, "About Airbnb")), __jsx("div", {
+    className: "flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-2xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, "What is Airbnb?")), __jsx("div", {
+    className: "w-90p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: undefined
+  }, "Airbnb connects people with places to stay and things to do around the world. The community is powered by hosts, who provide their guests with the unique opportunity to travel like a local."))), __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "pb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-2xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: undefined
+  }, "What is hosting?")), __jsx("div", {
+    className: "w-90p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, "If you have an extra room, entire home, or expertise, you can earn money by sharing it with anyone in the world. You can host your home, activity, or do both. When you host is up to you.")), __jsx("div", {
+    className: "mt-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-green-850",
+    href: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: undefined
+  }, "Learn more about experience hosting")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (homes);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!****************************************!*\
   !*** multi ./src/pages/host/homes.jsx ***!
   \****************************************/
