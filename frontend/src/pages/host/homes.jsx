@@ -9,10 +9,12 @@ import { SimplePayments } from '../../components/hosthomes/layout/SimplePayments
 import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
 import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
+import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
 
+// Images
 const background = require('../../../public/img/high/hosthome.jpg');
 
 const homes = () => {
@@ -37,6 +39,7 @@ const homes = () => {
         <Worldwide />
         <HostAbout />
         <HostQuestions />
+        <MoreHosting />
       </div>
     </>
   );
