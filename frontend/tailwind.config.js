@@ -17,14 +17,17 @@ module.exports = {
         'green-850': '#008489'
       },
       textColor: {
-        green: {
-          '850': '#008489'
-        }
+        'green-850': '#008489',
+        'yellow-850': '#FDB32B'
       },
       fontSize: {
         '2xs': '.625rem',
         '3.5xl': '2rem',
-        '4.5xl': '2.5rem'
+        '4.5xl': '2.5rem',
+        '7xl': '5rem',
+        '8xl': '6rem',
+        '9xl': '7rem',
+        '10xl': '8rem'
       },
       placeholderColor: {
         'gray-650': '#767676'

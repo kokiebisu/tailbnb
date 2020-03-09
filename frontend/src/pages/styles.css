@@ -31,6 +31,16 @@
   src: url('/fonts/AirbnbCerealMedium.woff');
 }
 
+@font-face {
+  font-family: 'circular-book';
+  src: url('/fonts/circular-book.otf');
+}
+
+@font-face {
+  font-family: 'circular-std-medium';
+  src: url('/fonts/circular-std-medium.woff');
+}
+
 body {
   @apply antialiased;
 }

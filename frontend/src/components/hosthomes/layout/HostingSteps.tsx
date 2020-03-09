@@ -19,7 +19,7 @@ export const HostingSteps: React.FC<{}> = () => {
       <div>
         <div className='w-full flex'>
           <div className='w-1/3'>
-            <div className='w-90p'>
+            <div className='w-85p'>
               <div className='h-12 w-12'>
                 <svg
                   className='h-full w-full'
@@ -46,7 +46,7 @@ export const HostingSteps: React.FC<{}> = () => {
             </div>
           </div>
           <div className='w-1/3'>
-            <div className='w-90p'>
+            <div className='w-85p'>
               <div className='h-12 w-12'>
                 <svg
                   className='h-full w-full'
@@ -59,21 +59,21 @@ export const HostingSteps: React.FC<{}> = () => {
                 <h3
                   style={{ fontFamily: 'airbnb-bold' }}
                   className='text-gray-750 text-2xl'>
-                  List your space for free
+                  Decide how you want to host
                 </h3>
               </div>
               <div>
                 <p
                   style={{ fontFamily: 'airbnb-book' }}
                   className='text-gray-750 leading-loose'>
-                  Share any space without sign-up charges, from a shared living
-                  room to a second home and everything in-between.
+                  Choose your own schedule, prices, and requirements for guests.
+                  We're there to help along the way.
                 </p>
               </div>
             </div>
           </div>
           <div className='w-1/3'>
-            <div className='w-90p'>
+            <div className='w-85p'>
               <div className='h-12 w-12'>
                 <svg
                   className='h-full w-full'
@@ -86,16 +86,24 @@ export const HostingSteps: React.FC<{}> = () => {
                 <h3
                   style={{ fontFamily: 'airbnb-bold' }}
                   className='text-gray-750 text-2xl'>
-                  List your space for free
+                  Welcome your first guest
                 </h3>
               </div>
               <div>
                 <p
                   style={{ fontFamily: 'airbnb-book' }}
                   className='text-gray-750 leading-loose'>
-                  Share any space without sign-up charges, from a shared living
-                  room to a second home and everything in-between.
+                  Once your listing is live, qualified guests can reach out. You
+                  can message them with any questions before their stay.
                 </p>
+              </div>
+              <div className='mt-4'>
+                <a
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-green-850'
+                  href=''>
+                  Learn how to start hosting
+                </a>
               </div>
             </div>
           </div>
