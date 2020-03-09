@@ -8,7 +8,7 @@ const quote = require('../../../../public/img/high/host-steps-quote.jpg');
 
 export const HostingSteps: React.FC<{}> = () => {
   return (
-    <div className='w-full max-w-5xl mx-auto pt-8 pb-16'>
+    <div className='w-full md:max-w-xl max-w-5xl mx-auto pt-8 pb-16'>
       <div className='py-8'>
         <div className='flex justify-center'>
           <div
@@ -33,7 +33,7 @@ export const HostingSteps: React.FC<{}> = () => {
             />
             <HostingStepsCard
               title='Decide how you want to host'
-              description="Choose your own schedule, prices, and requirements for guests. We\'re there to help along the way."
+              description="Choose your own schedule, prices, and requirements for guests. We're there to help along the way."
               link={false}
               last={false}
             />

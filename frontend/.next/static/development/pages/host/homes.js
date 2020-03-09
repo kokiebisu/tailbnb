@@ -568,7 +568,7 @@ var HostingStepsCard = function HostingStepsCard(_ref) {
       link = _ref.link,
       last = _ref.last;
   return __jsx("div", {
-    className: "md:w-full lg:w-1/3",
+    className: "md:w-full lg:w-1/3 md:mb-12 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
@@ -2053,7 +2053,7 @@ var quote = __webpack_require__(/*! ../../../../public/img/high/host-steps-quote
 
 var HostingSteps = function HostingSteps() {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full md:max-w-xl max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -2126,7 +2126,7 @@ var HostingSteps = function HostingSteps() {
     __self: this
   }), __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
     title: "Decide how you want to host",
-    description: "Choose your own schedule, prices, and requirements for guests. We\\'re there to help along the way.",
+    description: "Choose your own schedule, prices, and requirements for guests. We're there to help along the way.",
     link: false,
     last: false,
     __source: {
@@ -4381,7 +4381,7 @@ var homes = function homes() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fhomes&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fhomes.jsx ***!
   \***********************************************************************************************************************************************************/
@@ -4404,5 +4404,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=homes.js.map

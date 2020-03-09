@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -629,7 +629,7 @@ const HostingStepsCard = ({
   last
 }) => {
   return __jsx("div", {
-    className: "md:w-full lg:w-1/3",
+    className: "md:w-full lg:w-1/3 md:mb-12 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
@@ -2117,7 +2117,7 @@ const quote = __webpack_require__(/*! ../../../../public/img/high/host-steps-quo
 
 const HostingSteps = () => {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full md:max-w-xl max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -2190,7 +2190,7 @@ const HostingSteps = () => {
     __self: undefined
   }), __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
     title: "Decide how you want to host",
-    description: "Choose your own schedule, prices, and requirements for guests. We\\'re there to help along the way.",
+    description: "Choose your own schedule, prices, and requirements for guests. We're there to help along the way.",
     link: false,
     last: false,
     __source: {
@@ -4446,7 +4446,7 @@ const homes = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!****************************************!*\
   !*** multi ./src/pages/host/homes.jsx ***!
   \****************************************/

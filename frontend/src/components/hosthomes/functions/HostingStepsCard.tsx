@@ -14,7 +14,7 @@ export const HostingStepsCard: React.FC<Props> = ({
   last
 }) => {
   return (
-    <div className='md:w-full lg:w-1/3'>
+    <div className='md:w-full lg:w-1/3 md:mb-12 lg:mb-0'>
       {last ? (
         <div>
           <div className='h-12 w-12'>
