@@ -32,11 +32,11 @@ export const ImagePanel: React.FC<Props> = ({
 
   return (
     <>
-      <div className='w-full bg-black h-80v flex justify-center'>
+      <div className='w-full flex justify-center'>
         <div className='w-full max-w-6xl'>
           <div id='zoomwrapper' className='w-full flex justify-start h-half'>
             {loading ? (
-              <div className='w-full lg:w-1/2 h-57v relative rounded border-r-4 border-white'>
+              <div className='w-full lg:w-1/2 h-35v relative rounded border-r-4 border-white'>
                 <SSkeletonPulse1 />
               </div>
             ) : (
