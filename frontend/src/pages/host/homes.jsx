@@ -11,6 +11,7 @@ import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
 import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
 import { HostReady } from '../../components/hosthomes/layout/HostReady';
+import { FooterContent } from '../../components/layout/FooterContent';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
@@ -42,6 +43,7 @@ const homes = () => {
         <HostQuestions />
         <MoreHosting />
         <HostReady />
+        <FooterContent inducer={false} />
       </div>
     </>
   );

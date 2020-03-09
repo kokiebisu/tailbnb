@@ -15,7 +15,7 @@ export const Footer: React.FC<{}> = () => {
   return (
     <>
       {display ? (
-        <FooterContent swap={changeDisplay} />
+        <FooterContent swap={changeDisplay} inducer={true} />
       ) : (
         <FooterInducer swap={changeDisplay} />
       )}

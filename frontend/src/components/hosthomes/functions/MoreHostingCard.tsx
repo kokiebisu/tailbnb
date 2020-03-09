@@ -2,10 +2,17 @@ import * as React from 'react';
 
 interface Props {
   img: string;
+  title: string;
+  description: string;
   last: boolean;
 }
 
-export const MoreHostingCard: React.FC<Props> = ({ img, last }) => {
+export const MoreHostingCard: React.FC<Props> = ({
+  img,
+  title,
+  description,
+  last
+}) => {
   return (
     <div className='w-1/3'>
       {last ? (
@@ -19,14 +26,14 @@ export const MoreHostingCard: React.FC<Props> = ({ img, last }) => {
           </div>
           <div className='my-2'>
             <p style={{ fontFamily: 'airbnb-bold' }} className='text-gray-750'>
-              Setup
+              {title}
             </p>
           </div>
           <div className='my-1'>
             <p
               style={{ fontFamily: 'airbnb-book' }}
               className='text-gray-750 text-sm'>
-              How to start hosting
+              {description}
             </p>
           </div>
           <div>
@@ -49,14 +56,14 @@ export const MoreHostingCard: React.FC<Props> = ({ img, last }) => {
           </div>
           <div className='my-2'>
             <p style={{ fontFamily: 'airbnb-bold' }} className='text-gray-750'>
-              Setup
+              {title}
             </p>
           </div>
           <div className='my-1'>
             <p
               style={{ fontFamily: 'airbnb-book' }}
               className='text-gray-750 text-sm'>
-              How to start hosting
+              {description}
             </p>
           </div>
           <div>

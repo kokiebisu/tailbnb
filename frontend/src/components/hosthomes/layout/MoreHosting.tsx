@@ -19,9 +19,24 @@ export const MoreHosting: React.FC<{}> = () => {
         </h3>
       </div>
       <div className='flex'>
-        <MoreHostingCard img={setup} last={false} />
-        <MoreHostingCard img={safety} last={false} />
-        <MoreHostingCard img={financials} last={true} />
+        <MoreHostingCard
+          img={setup}
+          title='Setup'
+          description='How to start hosting'
+          last={false}
+        />
+        <MoreHostingCard
+          img={safety}
+          title='Safety'
+          description='How Airbnb protects hosts'
+          last={false}
+        />
+        <MoreHostingCard
+          img={financials}
+          title='Financials'
+          description='How you make money on Airbnb'
+          last={true}
+        />
       </div>
     </div>
   );
