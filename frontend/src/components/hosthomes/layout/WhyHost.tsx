@@ -11,7 +11,7 @@ export const WhyHost: React.FC<{}> = () => {
             Why host on Airbnb?
           </h3>
         </div>
-        <div className='w-80p'>
+        <div className='w-90p'>
           <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
             No matter what kind of home or room you have to share, Airbnb makes
             it simple and secure to host travellers. You’re in full control of
@@ -28,7 +28,7 @@ export const WhyHost: React.FC<{}> = () => {
             We have your back
           </h3>
         </div>
-        <div className='w-80p'>
+        <div className='w-90p'>
           <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
             To keep you, your home, and your belongings safe, we cover every
             booking with $1M USD in property damage protection and another $1M

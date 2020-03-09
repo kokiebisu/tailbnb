@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default () => {
+export const HostHomesHeader: React.FC<{}> = () => {
   return (
     <div className='bg-white w-full flex border-b border-gray-300 items-center justify-between sticky top-0 z-50'>
       <div className='flex items-center justify-start'>

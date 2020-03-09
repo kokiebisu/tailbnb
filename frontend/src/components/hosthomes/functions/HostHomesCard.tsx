@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default () => {
+export const HostHomesCard: React.FC<{}> = () => {
   return (
     <div
       style={{ top: 50, right: 50 }}
