@@ -882,17 +882,35 @@ const homes = () => {
     },
     __self: undefined
   }), __jsx("div", {
-    className: "w-full max-w-5xl mx-auto py-8 justify-center",
+    className: "w-full max-w-5xl mx-auto py-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex justify-center mb-12",
+    className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      width: 70,
+      height: 2
+    },
+    className: "bg-gray-650 rounded-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "flex justify-center mb-12 mt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx("h3", {
@@ -902,66 +920,66 @@ const homes = () => {
     className: "text-gray-850 text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 36
     },
     __self: undefined
   }, "Hosting in 3 steps")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-90p",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "h-12 w-12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
-  }, __jsx("svg", {
-    className: "h-full w-full",
-    viewBox: "0 0 32 32",
-    style: {
-      fill: '#484848'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: undefined
+  }, __jsx("div", {
+    className: "h-12 w-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    viewBox: "0 0 32 32",
+    style: {
+      fill: '#484848'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
   }))), __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx("h3", {
@@ -969,17 +987,17 @@ const homes = () => {
       fontFamily: 'airbnb-bold'
     },
     className: "text-gray-750 text-2xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: undefined
-  }, "List your space for free")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
     },
     __self: undefined
+  }, "List your space for free")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: undefined
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
@@ -987,100 +1005,28 @@ const homes = () => {
     className: "text-gray-750 leading-loose",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 62
     },
     __self: undefined
   }, "Share any space without sign-up charges, from a shared living room to a second home and everything in-between.")))), __jsx("div", {
     className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 71
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-90p",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "h-12 w-12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: undefined
-  }, __jsx("svg", {
-    className: "h-full w-full",
-    viewBox: "0 0 32 32",
-    style: {
-      fill: '#484848'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 72
     },
     __self: undefined
-  }))), __jsx("div", {
-    className: "my-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 text-2xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: undefined
-  }, "List your space for free")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 leading-loose",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: undefined
-  }, "Share any space without sign-up charges, from a shared living room to a second home and everything in-between.")))), __jsx("div", {
-    className: "w-1/3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-90p",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: undefined
   }, __jsx("div", {
     className: "h-12 w-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 73
     },
     __self: undefined
   }, __jsx("svg", {
@@ -1091,21 +1037,21 @@ const homes = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx("path", {
     d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 78
     },
     __self: undefined
   }))), __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 81
     },
     __self: undefined
   }, __jsx("h3", {
@@ -1115,13 +1061,13 @@ const homes = () => {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 82
     },
     __self: undefined
   }, "List your space for free")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 88
     },
     __self: undefined
   }, __jsx("p", {
@@ -1131,7 +1077,79 @@ const homes = () => {
     className: "text-gray-750 leading-loose",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 89
+    },
+    __self: undefined
+  }, "Share any space without sign-up charges, from a shared living room to a second home and everything in-between.")))), __jsx("div", {
+    className: "w-1/3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-90p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-12 w-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    viewBox: "0 0 32 32",
+    style: {
+      fill: '#484848'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: undefined
+  }))), __jsx("div", {
+    className: "my-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: undefined
+  }, "List your space for free")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 leading-loose",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
     },
     __self: undefined
   }, "Share any space without sign-up charges, from a shared living room to a second home and everything in-between.")))))))));

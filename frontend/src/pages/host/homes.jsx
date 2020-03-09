@@ -25,8 +25,14 @@ const homes = () => {
         </div>
         <HostHomesCard />
         <WhyHost />
-        <div className='w-full max-w-5xl mx-auto py-8 justify-center'>
-          <div className='flex justify-center mb-12'>
+        <div className='w-full max-w-5xl mx-auto py-8'>
+          <div className='flex justify-center'>
+            <div
+              style={{ width: 70, height: 2 }}
+              className='bg-gray-650 rounded-lg'></div>
+          </div>
+
+          <div className='flex justify-center mb-12 mt-2'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
               className='text-gray-850 text-6xl tracking-tight'>
