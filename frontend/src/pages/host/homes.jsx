@@ -9,16 +9,13 @@ import { SimplePayments } from '../../components/hosthomes/layout/SimplePayments
 import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
 import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
+import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
-import { MoreHostingCard } from '../../components/hosthomes/functions/MoreHostingCard';
 
 // Images
 const background = require('../../../public/img/high/hosthome.jpg');
-const setup = require('../../../public/img/high/hosting-setup.jpg');
-const safety = require('../../../public/img/high/hosting-safety.jpg');
-const financials = require('../../../public/img/high/hosting-financials.jpg');
 
 const homes = () => {
   return (
@@ -42,20 +39,7 @@ const homes = () => {
         <Worldwide />
         <HostAbout />
         <HostQuestions />
-        <div className='w-full max-w-5xl mx-auto py-8'>
-          <div className='mb-3'>
-            <h3
-              style={{ fontFamily: 'airbnb-bold' }}
-              className='text-2xl text-gray-750'>
-              More about hosting
-            </h3>
-          </div>
-          <div className='flex'>
-            <MoreHostingCard img={setup} last={false} />
-            <MoreHostingCard img={safety} last={false} />
-            <MoreHostingCard img={financials} last={true} />
-          </div>
-        </div>
+        <MoreHosting />
       </div>
     </>
   );
