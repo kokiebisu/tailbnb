@@ -143,6 +143,36 @@ body {
   border: 1.5px solid #008489;
 }
 
+/* sm
+@media (min-width: 640px) {
+  
+} */
+
+/* md */
+@media (min-width: 768px) {
+  #quote {
+    position: absolute;
+    top: -10px;
+  }
+
+  #quote-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  #quote {
+    position: absolute;
+    top: -40px;
+  }
+}
+
+/* xl
+@media (min-width: 1280px) {
+
+} */
+
 .scroller {
   overflow-x: scroll !important;
   overflow-y: auto !important;
