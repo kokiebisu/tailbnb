@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -5973,7 +5973,7 @@ const Header = () => {
     },
     __self: undefined
   }, "English(CA)"))), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
+    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 pl-1 pr-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 87
@@ -7437,7 +7437,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/

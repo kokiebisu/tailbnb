@@ -84,7 +84,7 @@ export const Header: React.FC<{}> = () => {
                 <p>English(CA)</p>
               </a>
             </div>
-            <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
+            <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 pl-1 pr-2'>
               <button
                 onClick={() => switchCurrencyModal()}
                 className='text-sm  tracking-wide'>
