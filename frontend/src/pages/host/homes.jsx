@@ -8,6 +8,7 @@ import { Covered } from '../../components/hosthomes/layout/Covered';
 import { SimplePayments } from '../../components/hosthomes/layout/SimplePayments';
 import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
+import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
@@ -35,6 +36,7 @@ const homes = () => {
         <SimplePayments />
         <Worldwide />
         <HostAbout />
+        <HostQuestions />
       </div>
     </>
   );
