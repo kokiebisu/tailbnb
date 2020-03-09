@@ -703,72 +703,92 @@ var homes = function homes() {
     },
     __self: this
   }), __jsx("div", {
-    className: "bg-red-550 w-full max-w-5xl mx-auto py-10 flex",
+    className: "w-full max-w-5xl mx-auto py-28 flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
   }, __jsx("div", {
+    className: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
   }, __jsx("div", {
-    className: "py-8",
+    className: "pb-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
   }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-2xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
   }, "Why host on Airbnb?")), __jsx("div", {
+    className: "w-80p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: this
   }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 36
     },
     __self: this
   }, "No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travellers. You\u2019re in full control of your availability, prices, house rules, and how you interact with guests."))), __jsx("div", {
+    className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 46
     },
     __self: this
   }, __jsx("div", {
-    className: "py-8",
+    className: "pb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 47
     },
     __self: this
   }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-2xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 48
     },
     __self: this
   }, "We have your back")), __jsx("div", {
+    className: "w-80p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 54
     },
     __self: this
   }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 55
     },
     __self: this
   }, "To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage protection and another $1M USD in insurance against accidents."))))));
