@@ -15,8 +15,10 @@ import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCar
 import { MoreHostingCard } from '../../components/hosthomes/functions/MoreHostingCard';
 
 // Images
-const setup = require('../../../public/img/high/host-setup.jpg');
 const background = require('../../../public/img/high/hosthome.jpg');
+const setup = require('../../../public/img/high/hosting-setup.jpg');
+const safety = require('../../../public/img/high/hosting-safety.jpg');
+const financials = require('../../../public/img/high/hosting-financials.jpg');
 
 const homes = () => {
   return (
@@ -49,7 +51,9 @@ const homes = () => {
             </h3>
           </div>
           <div className='flex'>
-            <MoreHostingCard img={setup} />
+            <MoreHostingCard img={setup} last={false} />
+            <MoreHostingCard img={safety} last={false} />
+            <MoreHostingCard img={financials} last={true} />
           </div>
         </div>
       </div>
