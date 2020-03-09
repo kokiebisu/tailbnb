@@ -48,7 +48,7 @@ export const HostingSteps: React.FC<{}> = () => {
           </div>
         </div>
       </div>
-      <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto pt-32 pb-16 flex'>
+      <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex'>
         <div className='w-1/2 relative'>
           <div id='quote'>
             <p

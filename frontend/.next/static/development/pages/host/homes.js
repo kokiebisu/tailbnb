@@ -2145,7 +2145,7 @@ var HostingSteps = function HostingSteps() {
     },
     __self: this
   }))))), __jsx("div", {
-    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto pt-32 pb-16 flex",
+    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
