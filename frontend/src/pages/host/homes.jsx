@@ -10,6 +10,7 @@ import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
 import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
+import { HostReady } from '../../components/hosthomes/layout/HostReady';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
@@ -40,6 +41,7 @@ const homes = () => {
         <HostAbout />
         <HostQuestions />
         <MoreHosting />
+        <HostReady />
       </div>
     </>
   );
