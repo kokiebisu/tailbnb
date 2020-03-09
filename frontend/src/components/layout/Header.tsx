@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 // Component
 import { HeaderCard } from '../functions/HeaderCard';
@@ -100,9 +101,9 @@ export const Header: React.FC<{}> = () => {
               </button>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm  tracking-wide'>
-                Host a home
-              </a>
+              <Link href='/host/homes'>
+                <a className='text-sm  tracking-wide'>Host a home</a>
+              </Link>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <a href='#' className='text-sm  tracking-wide'>
