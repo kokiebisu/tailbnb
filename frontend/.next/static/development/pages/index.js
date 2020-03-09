@@ -41695,7 +41695,7 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/container
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query LocationExperiences($available: String) {\n    experiences(where: { available: $available }) {\n      id\n      title\n      cost\n      ratings\n      reviews\n      location\n      img\n      available\n      category\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query LocationExperiences($available: String, $location: String) {\n    experiences(\n      where: { available: $available, location: $location }\n      first: 6\n    ) {\n      id\n      title\n      cost\n      ratings\n      reviews\n      location\n      img\n      available\n      category\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -41719,7 +41719,8 @@ var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__[
 var NextWeek = function NextWeek() {
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
-      available: 'Next Week'
+      available: 'Next Week',
+      location: 'Vancouver'
     }
   }),
       loading = _useQuery.loading,
@@ -41738,7 +41739,7 @@ var NextWeek = function NextWeek() {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 65
         },
         __self: this
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
@@ -41752,7 +41753,7 @@ var NextWeek = function NextWeek() {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 66
         },
         __self: this
       })));
@@ -41767,21 +41768,21 @@ var NextWeek = function NextWeek() {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 86
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 89
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 91
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -41789,7 +41790,7 @@ var NextWeek = function NextWeek() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 92
     },
     __self: this
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -41798,7 +41799,7 @@ var NextWeek = function NextWeek() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 97
     },
     __self: this
   }, function (matches) {
@@ -41809,7 +41810,7 @@ var NextWeek = function NextWeek() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 103
     },
     __self: this
   }, function (matches) {
@@ -41820,7 +41821,7 @@ var NextWeek = function NextWeek() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 113
     },
     __self: this
   }, function (matches) {
@@ -41831,7 +41832,7 @@ var NextWeek = function NextWeek() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 123
     },
     __self: this
   }, function (matches) {
@@ -41842,7 +41843,7 @@ var NextWeek = function NextWeek() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 131
     },
     __self: this
   }, function (matches) {
@@ -41851,7 +41852,7 @@ var NextWeek = function NextWeek() {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 145
     },
     __self: this
   })));
