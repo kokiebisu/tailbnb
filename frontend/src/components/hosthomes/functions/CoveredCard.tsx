@@ -6,7 +6,7 @@ interface Props {
 
 export const CoveredCard: React.FC<Props> = ({ description }) => {
   return (
-    <div className='w-90p mb-5'>
+    <div className='w-90p md:mb-6 lg:mb-5'>
       <div
         style={{ fontFamily: 'airbnb-book' }}
         className='flex text-gray-750 items-center'>
