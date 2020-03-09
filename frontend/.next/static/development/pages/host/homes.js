@@ -2052,25 +2052,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 var quote = __webpack_require__(/*! ../../../../public/img/high/host-steps-quote.jpg */ "./public/img/high/host-steps-quote.jpg");
 
 var HostingSteps = function HostingSteps() {
-  return __jsx("div", {
-    className: "w-full md:max-w-xl max-w-5xl mx-auto pt-8 pb-16",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "py-8",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-center",
+    className: "py-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
@@ -2081,14 +2081,14 @@ var HostingSteps = function HostingSteps() {
     className: "bg-gray-650 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   })), __jsx("div", {
     className: "flex justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, __jsx("h3", {
@@ -2098,20 +2098,20 @@ var HostingSteps = function HostingSteps() {
     className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, "Hosting in 3 steps")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }, __jsx("div", {
     className: "w-full lg:flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }, __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
@@ -2121,7 +2121,7 @@ var HostingSteps = function HostingSteps() {
     last: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }), __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
@@ -2131,7 +2131,7 @@ var HostingSteps = function HostingSteps() {
     last: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }), __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
@@ -2141,71 +2141,69 @@ var HostingSteps = function HostingSteps() {
     last: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
-  }))), __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-32 pb-16 flex",
+  }))))), __jsx("div", {
+    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 51
     },
     __self: this
   }, __jsx("div", {
     className: "w-1/2 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 52
     },
     __self: this
   }, __jsx("div", {
-    className: "absolute",
-    style: {
-      top: -40
-    },
+    id: "quote",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 53
     },
     __self: this
   }, __jsx("p", {
     style: {
       fontFamily: 'circular-std-medium'
     },
-    className: "text-10xl text-yellow-850",
+    className: "md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 54
     },
     __self: this
   }, "\u201C")), __jsx("div", {
     className: "mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 62
     },
     __self: this
   }, __jsx("div", {
     className: "w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 63
     },
     __self: this
   }, __jsx("p", {
+    id: "quote-description",
     style: {
       fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
     },
-    className: "text-4xl text-gray-750 leading-tight",
+    className: "md:text-lg md:leading-relaxed lg:text-4xl text-gray-750 lg:leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 64
     },
     __self: this
   }, "The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's damage or problems."))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 76
     },
     __self: this
   }, __jsx("p", {
@@ -2215,20 +2213,20 @@ var HostingSteps = function HostingSteps() {
     className: "text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 77
     },
     __self: this
   }, "Olivia hosts in Paris for the flexibility it provides")), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 83
     },
     __self: this
   }, __jsx("div", {
     className: "py-3 px-5 border-2 border-gray-850 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 84
     },
     __self: this
   }, __jsx("p", {
@@ -2238,14 +2236,14 @@ var HostingSteps = function HostingSteps() {
     className: "text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 85
     },
     __self: this
   }, "Learn how they host")))), __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 93
     },
     __self: this
   }, __jsx("img", {
@@ -2253,10 +2251,10 @@ var HostingSteps = function HostingSteps() {
     src: quote,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 94
     },
     __self: this
-  })))));
+  }))));
 };
 
 /***/ }),
