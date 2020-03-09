@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import _ from 'lodash';
 
 const suggestedLanguages = [
@@ -363,11 +363,20 @@ export const LanguageModal = ({ location, setLanguageModal }) => {
     (language) => !_.isEqual(language, selectedLanguage)
   );
 
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 1100) {
+        setLanguageModal(false);
+      }
+    }
+    window.addEventListener('resize', handleResize);
+  });
+
   return (
     <>
       <div
         id='darkOverlay'
-        className='fixed w-full h-full top-0 left-0 z-20 overflow-hidden'
+        className='md:block fixed w-full h-full top-0 left-0 z-20 overflow-hidden'
       />
       <div
         id='centerAbsolute'
