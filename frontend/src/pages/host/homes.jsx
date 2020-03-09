@@ -5,6 +5,7 @@ import { HostHomesHeader } from '../../components/hosthomes/layout/HostHomesHead
 import { WhyHost } from '../../components/hosthomes/layout/WhyHost';
 import { HostingSteps } from '../../components/hosthomes/layout/HostingSteps';
 import { Covered } from '../../components/hosthomes/layout/Covered';
+import { SimplePayments } from '../../components/hosthomes/layout/SimplePayments';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
@@ -29,6 +30,7 @@ const homes = () => {
         <WhyHost />
         <HostingSteps />
         <Covered />
+        <SimplePayments />
       </div>
     </>
   );

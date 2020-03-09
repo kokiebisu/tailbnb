@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-const quote = require('../../../../public/img/high/host-quote.jpg');
+// Images
+const quote = require('../../../../public/img/high/host-steps-quote.jpg');
 
 export const HostingSteps: React.FC<{}> = () => {
   return (
