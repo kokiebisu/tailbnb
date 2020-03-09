@@ -1,11 +1,20 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import _ from 'lodash';
 import * as data from './currency.json';
 
 const currencies = JSON.parse(JSON.stringify(data));
 
 export const CurrencyModal = ({ location, setCurrencyModal, setCurrency }) => {
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 1100) {
+        setCurrencyModal(false);
+      }
+    }
+    window.addEventListener('resize', handleResize);
+  });
+
   const refreshPage = () => {
     window.location.reload(false);
   };
