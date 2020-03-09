@@ -55,10 +55,6 @@ export const Today: any = () => {
       }
     }
   );
-
-  if (data) {
-    console.log('data', data);
-  }
   const [card, setCard] = useState<number>(0);
 
   const renderContent = (data: ExperienceData, number: number) => {

@@ -3238,11 +3238,6 @@ const Today = () => {
       location: 'Vancouver'
     }
   });
-
-  if (data) {
-    console.log('data', data);
-  }
-
   const {
     0: card,
     1: setCard
@@ -3256,7 +3251,7 @@ const Today = () => {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 65
         },
         __self: undefined
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_5__["LocationExperienceCard"], {
@@ -3270,7 +3265,7 @@ const Today = () => {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 66
         },
         __self: undefined
       })));
@@ -3285,21 +3280,21 @@ const Today = () => {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 86
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 89
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 91
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -3307,7 +3302,7 @@ const Today = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 92
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3316,7 +3311,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 97
     },
     __self: undefined
   }, matches => matches.xs ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3325,7 +3320,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 103
     },
     __self: undefined
   }, matches => matches.small ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3334,7 +3329,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 113
     },
     __self: undefined
   }, matches => matches.large ? (setCard(3), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3343,7 +3338,7 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 123
     },
     __self: undefined
   }, matches => matches.xl ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3352,14 +3347,14 @@ const Today = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 131
     },
     __self: undefined
   }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 145
     },
     __self: undefined
   })));
@@ -3404,8 +3399,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 const GET_LOCATION_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
-  query LocationExperiences($available: String) {
-    experiences(where: { available: $available }) {
+  query LocationExperiences($available: String, $location: String) {
+    experiences(
+      where: { available: $available, location: $location }
+      first: 6
+    ) {
       id
       title
       cost
@@ -3425,7 +3423,8 @@ const Tomorrow = () => {
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
-      available: 'Tomorrow'
+      available: 'Tomorrow',
+      location: 'Vancouver'
     }
   });
   const {
@@ -3441,7 +3440,7 @@ const Tomorrow = () => {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 65
         },
         __self: undefined
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_5__["LocationExperienceCard"], {
@@ -3455,7 +3454,7 @@ const Tomorrow = () => {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 66
         },
         __self: undefined
       })));
@@ -3470,21 +3469,21 @@ const Tomorrow = () => {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 86
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 89
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 91
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -3492,7 +3491,7 @@ const Tomorrow = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 92
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3501,7 +3500,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 97
     },
     __self: undefined
   }, matches => matches.xs ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3510,7 +3509,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 103
     },
     __self: undefined
   }, matches => matches.small ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3519,7 +3518,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 113
     },
     __self: undefined
   }, matches => matches.large ? (setCard(3), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3528,7 +3527,7 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 123
     },
     __self: undefined
   }, matches => matches.xl ? (setCard(4), renderContent(data, card)) : null), __jsx(react_media__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -3537,14 +3536,14 @@ const Tomorrow = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 131
     },
     __self: undefined
   }, matches => matches.twoxl ? (setCard(6), renderContent(data, card)) : null))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 145
     },
     __self: undefined
   })));
