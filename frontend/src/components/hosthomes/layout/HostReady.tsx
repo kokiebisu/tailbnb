@@ -6,10 +6,10 @@ const ready = require('../../../../public/img/high/host-ready.jpg');
 export const HostReady: React.FC<{}> = () => {
   return (
     <div className='w-full max-w-7xl mx-auto mt-8 mb-12 relative'>
-      <div className='w-full h-104'>
+      <div className='w-full h-112'>
         <img className='h-full w-full object-cover' src={ready} />
       </div>
-      <div style={{ top: 90, left: 100 }} className='absolute top-0 left-0'>
+      <div style={{ top: 80, left: 110 }} className='absolute top-0 left-0'>
         <div className='mb-4'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
@@ -19,7 +19,7 @@ export const HostReady: React.FC<{}> = () => {
         </div>
         <button>
           <div className='bg-white py-3 px-5 rounded'>
-            <p style={{ fontFamily: 'airbnb-bold' }} className='text-blue-400'>
+            <p style={{ fontFamily: 'airbnb-bold' }} className='text-gray-750'>
               Get started
             </p>
           </div>
