@@ -13,6 +13,8 @@ import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
 
+// Images
+const setup = require('../../../public/img/high/host-setup.jpg');
 const background = require('../../../public/img/high/hosthome.jpg');
 
 const homes = () => {
@@ -37,6 +39,46 @@ const homes = () => {
         <Worldwide />
         <HostAbout />
         <HostQuestions />
+        <div className='w-full max-w-5xl mx-auto py-8'>
+          <div className='mb-3'>
+            <h3
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-2xl text-gray-750'>
+              More about hosting
+            </h3>
+          </div>
+          <div className='flex'>
+            <div className='w-1/3'>
+              <div className='w-95p'>
+                <div>
+                  <img className='h-full w-full rounded' src={setup} alt='' />
+                </div>
+                <div className='my-2'>
+                  <p
+                    style={{ fontFamily: 'airbnb-bold' }}
+                    className='text-gray-750'>
+                    Setup
+                  </p>
+                </div>
+                <div className='my-1'>
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-gray-750 text-sm'>
+                    How to start hosting
+                  </p>
+                </div>
+                <div>
+                  <a
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-green-850 text-sm'
+                    href=''>
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

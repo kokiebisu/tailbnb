@@ -56,6 +56,17 @@ module.exports = "/_next/static/images/host-payments-quote-2c7875af3f3fb481e341a
 
 /***/ }),
 
+/***/ "./public/img/high/host-setup.jpg":
+/*!****************************************!*\
+  !*** ./public/img/high/host-setup.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/host-setup-bf17e08e7e05c5a6131e438dd414a904.jpg";
+
+/***/ }),
+
 /***/ "./public/img/high/host-steps-quote.jpg":
 /*!**********************************************!*\
   !*** ./public/img/high/host-steps-quote.jpg ***!
@@ -2402,7 +2413,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
  // Functions
 
+ // Images
 
+var setup = __webpack_require__(/*! ../../../public/img/high/host-setup.jpg */ "./public/img/high/host-setup.jpg");
 
 var background = __webpack_require__(/*! ../../../public/img/high/hosthome.jpg */ "./public/img/high/hosthome.jpg");
 
@@ -2410,20 +2423,20 @@ var homes = function homes() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_hosthomes_layout_HostHomesHeader__WEBPACK_IMPORTED_MODULE_1__["HostHomesHeader"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: this
   }), __jsx("div", {
     className: "w-full max-w-layout mx-auto relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 25
     },
     __self: this
   }, __jsx("img", {
@@ -2434,58 +2447,169 @@ var homes = function homes() {
     className: "w-full relative object-cover h-144",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   })), __jsx(_components_hosthomes_functions_HostHomesCard__WEBPACK_IMPORTED_MODULE_9__["HostHomesCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }), __jsx(_components_hosthomes_layout_WhyHost__WEBPACK_IMPORTED_MODULE_2__["WhyHost"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }), __jsx(_components_hosthomes_layout_HostingSteps__WEBPACK_IMPORTED_MODULE_3__["HostingSteps"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: this
   }), __jsx(_components_hosthomes_layout_Covered__WEBPACK_IMPORTED_MODULE_4__["Covered"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: this
   }), __jsx(_components_hosthomes_layout_SimplePayments__WEBPACK_IMPORTED_MODULE_5__["SimplePayments"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: this
   }), __jsx(_components_hosthomes_layout_Worldwide__WEBPACK_IMPORTED_MODULE_6__["Worldwide"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
   }), __jsx(_components_hosthomes_layout_HostAbout__WEBPACK_IMPORTED_MODULE_7__["HostAbout"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
     },
     __self: this
   }), __jsx(_components_hosthomes_layout_HostQuestions__WEBPACK_IMPORTED_MODULE_8__["HostQuestions"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 41
     },
     __self: this
-  })));
+  }), __jsx("div", {
+    className: "w-full max-w-5xl mx-auto py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "mb-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-2xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, "More about hosting")), __jsx("div", {
+    className: "flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-1/3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-95p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "h-full w-full rounded",
+    src: setup,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "my-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, "Setup")), __jsx("div", {
+    className: "my-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, "How to start hosting")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }, __jsx("a", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-green-850 text-sm",
+    href: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, "Learn more"))))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (homes);
