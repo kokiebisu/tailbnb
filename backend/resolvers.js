@@ -13,7 +13,7 @@ const resolvers = {
       return context.prisma.adventure({ id: args.id });
     },
     experiences(root, args, context) {
-      return context.prisma.experiences();
+      return context.prisma.experiences({ where, first: args.first });
     },
     experience(root, args, context) {
       return context.prisma.experience({ id: args.id });
