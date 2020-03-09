@@ -13,8 +13,11 @@ import { ShowAll } from '../ShowAll';
 import { Section } from '../wrapper/Section';
 
 const GET_LOCATION_EXPERIENCES = gql`
-  query LocationExperiences($available: String) {
-    experiences(where: { available: $available }) {
+  query LocationExperiences($available: String, $location: String) {
+    experiences(
+      where: { available: $available, location: $location }
+      first: 6
+    ) {
       id
       title
       cost
@@ -47,10 +50,15 @@ export const Today: any = () => {
     GET_LOCATION_EXPERIENCES,
     {
       variables: {
-        available: 'Today'
+        available: 'Today',
+        location: 'Vancouver'
       }
     }
   );
+
+  if (data) {
+    console.log('data', data);
+  }
   const [card, setCard] = useState<number>(0);
 
   const renderContent = (data: ExperienceData, number: number) => {

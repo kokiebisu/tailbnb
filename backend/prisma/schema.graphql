@@ -3,7 +3,7 @@ type Query {
   stay(id: ID!): Stay
   adventures: [Adventure!]!
   adventure(id: ID!): Adventure
-  experiences: [Experience!]!
+  experiences(first: Int): [Experience!]!
   experience(id: ID!): Experience
 }
 
