@@ -9,7 +9,7 @@ const covered = require('../../../../public/img/high/host-covered.jpg');
 export const Covered: React.FC<{}> = () => {
   return (
     <>
-      <div className='w-full max-w-5xl mx-auto pt-8 pb-16'>
+      <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto pt-8 pb-16'>
         <div className='py-8'>
           <div className='flex justify-center'>
             <div
@@ -20,15 +20,15 @@ export const Covered: React.FC<{}> = () => {
           <div className='flex justify-center mb-12 mt-2'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
-              className='text-gray-850 text-6xl tracking-tight'>
+              className='text-gray-850 md:text-4xl lg:text-6xl tracking-tight'>
               We've got you covered
             </h3>
           </div>
-          <div className='flex'>
+          <div className='lg:flex'>
             <div
-              className='w-1/2 flex items-center'
+              className='md:w-full lg:w-1/2 flex items-center'
               style={{ fontFamily: 'airbnb-book' }}>
-              <div className='w-85p'>
+              <div className='lg:w-85p'>
                 <div>
                   <p className='text-gray-750 leading-relaxed'>
                     We know it’s a priority to trust the people staying in your
@@ -40,14 +40,14 @@ export const Covered: React.FC<{}> = () => {
                     host throughout.
                   </p>
                 </div>
-                <div className='mt-4'>
+                <div className='md:mb-8 lg:mb-0 mt-4'>
                   <a className='text-green-850' href=''>
                     Learn how Airbnb protects hosts
                   </a>
                 </div>
               </div>
             </div>
-            <div className='w-1/2'>
+            <div className='md:w-full lg:w-1/2'>
               <CoveredCard description='Ability to require government ID before booking' />
               <CoveredCard description='House Rules guests must agree to' />
               <CoveredCard description='Chance to read reviews from past trips' />

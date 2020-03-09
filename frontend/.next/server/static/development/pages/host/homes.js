@@ -200,7 +200,7 @@ const CoveredCard = ({
   description
 }) => {
   return __jsx("div", {
-    className: "w-90p mb-5",
+    className: "w-90p md:mb-6 lg:mb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -1217,7 +1217,7 @@ const covered = __webpack_require__(/*! ../../../../public/img/high/host-covered
 
 const Covered = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -1259,21 +1259,21 @@ const Covered = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 text-6xl tracking-tight",
+    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: undefined
   }, "We've got you covered")), __jsx("div", {
-    className: "flex",
+    className: "lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-1/2 flex items-center",
+    className: "md:w-full lg:w-1/2 flex items-center",
     style: {
       fontFamily: 'airbnb-book'
     },
@@ -1283,7 +1283,7 @@ const Covered = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-85p",
+    className: "lg:w-85p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -1303,7 +1303,7 @@ const Covered = () => {
     },
     __self: undefined
   }, "We know it\u2019s a priority to trust the people staying in your home. Airbnb allows you to set strict requirements for who can book and to get to know guests before their stay. If something does come up, though, we have your back. With our Host Guarantee covering property damage and our Host Protection Insurance for liability, you\u2019re supported as a host throughout.")), __jsx("div", {
-    className: "mt-4",
+    className: "md:mb-8 lg:mb-0 mt-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -1318,7 +1318,7 @@ const Covered = () => {
     },
     __self: undefined
   }, "Learn how Airbnb protects hosts")))), __jsx("div", {
-    className: "w-1/2",
+    className: "md:w-full lg:w-1/2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
