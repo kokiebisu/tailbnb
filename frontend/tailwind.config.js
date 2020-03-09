@@ -12,9 +12,9 @@ module.exports = {
         '1/2': '35%'
       },
       borderColor: {
-        green: {
-          '850': '#008489'
-        }
+        'gray-350': '#F2F2F2',
+        'gray-450': '#EBEBEB',
+        'green-850': '#008489'
       },
       textColor: {
         green: {
@@ -22,13 +22,21 @@ module.exports = {
         }
       },
       fontSize: {
-        '2xs': '.625rem'
+        '2xs': '.625rem',
+        '3.5xl': '2rem',
+        '4.5xl': '2.5rem'
+      },
+      placeholderColor: {
+        'gray-650': '#767676'
       },
       backgroundColor: {
         background: '#fffcfc',
+        'gray-250': '#F7F7F7',
         'gray-350': '#F2F2F2',
         'gray-650': '#767676',
-        'gray-250': '#F7F7F7',
+        'gray-750': '#484848',
+        'gray-850': '#222222',
+        'gray-950': '#262626',
         'red-550': '#FF5A5F',
         'pink-750': '#E31956',
         'pink-850': '#E61E4D',
