@@ -723,19 +723,22 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hosthomes/layout/HostingSteps.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
+
+const quote = __webpack_require__(/*! ../../../../public/img/high/host-quote.jpg */ "./public/img/high/host-quote.jpg");
+
 const HostingSteps = () => {
   return __jsx("div", {
     className: "w-full max-w-5xl mx-auto py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 8
     },
     __self: undefined
   }, __jsx("div", {
@@ -746,14 +749,14 @@ const HostingSteps = () => {
     className: "bg-gray-650 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: undefined
   })), __jsx("div", {
     className: "flex justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: undefined
   }, __jsx("h3", {
@@ -763,41 +766,41 @@ const HostingSteps = () => {
     className: "text-gray-850 text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: undefined
   }, "Hosting in 3 steps")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-full flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-85p",
+    className: "w-full flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: undefined
   }, __jsx("div", {
-    className: "h-12 w-12",
+    className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-85p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-12 w-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("svg", {
@@ -808,21 +811,21 @@ const HostingSteps = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: undefined
   }, __jsx("path", {
     d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     },
     __self: undefined
   }))), __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("h3", {
@@ -832,13 +835,13 @@ const HostingSteps = () => {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: undefined
   }, "List your space for free")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
     },
     __self: undefined
   }, __jsx("p", {
@@ -848,28 +851,28 @@ const HostingSteps = () => {
     className: "text-gray-750 leading-loose",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 41
     },
     __self: undefined
   }, "Share any space without sign-up charges, from a shared living room to a second home and everything in-between.")))), __jsx("div", {
     className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-12 w-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("svg", {
@@ -880,21 +883,21 @@ const HostingSteps = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("path", {
     d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     },
     __self: undefined
   }))), __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: undefined
   }, __jsx("h3", {
@@ -904,13 +907,13 @@ const HostingSteps = () => {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 61
     },
     __self: undefined
   }, "Decide how you want to host")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 67
     },
     __self: undefined
   }, __jsx("p", {
@@ -920,28 +923,28 @@ const HostingSteps = () => {
     className: "text-gray-750 leading-loose",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 68
     },
     __self: undefined
   }, "Choose your own schedule, prices, and requirements for guests. We're there to help along the way.")))), __jsx("div", {
     className: "w-1/3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 77
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 78
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-12 w-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 79
     },
     __self: undefined
   }, __jsx("svg", {
@@ -952,21 +955,21 @@ const HostingSteps = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 80
     },
     __self: undefined
   }, __jsx("path", {
     d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 84
     },
     __self: undefined
   }))), __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 87
     },
     __self: undefined
   }, __jsx("h3", {
@@ -976,13 +979,13 @@ const HostingSteps = () => {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: undefined
   }, "Welcome your first guest")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 94
     },
     __self: undefined
   }, __jsx("p", {
@@ -992,14 +995,14 @@ const HostingSteps = () => {
     className: "text-gray-750 leading-loose",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 95
     },
     __self: undefined
   }, "Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.")), __jsx("div", {
     className: "mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 102
     },
     __self: undefined
   }, __jsx("a", {
@@ -1010,10 +1013,122 @@ const HostingSteps = () => {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 103
     },
     __self: undefined
-  }, "Learn how to start hosting")))))));
+  }, "Learn how to start hosting")))))), __jsx("div", {
+    className: "w-full max-w-5xl mx-auto pt-32 pb-16 flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 114
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-1/2 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "absolute",
+    style: {
+      top: -40
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'circular-std-medium'
+    },
+    className: "text-10xl text-yellow-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: undefined
+  }, "\u201C")), __jsx("div", {
+    className: "mt-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-85p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
+    },
+    className: "text-4xl text-gray-750 leading-tight",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127
+    },
+    __self: undefined
+  }, "The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's damage or problems."))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-650 my-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 139
+    },
+    __self: undefined
+  }, "Olivia hosts in Paris for the flexibility it provides")), __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "py-3 px-5 border-2 border-gray-850 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 147
+    },
+    __self: undefined
+  }, "Learn how they host")))), __jsx("div", {
+    className: "w-1/2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "h-full w-full",
+    src: quote,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 156
+    },
+    __self: undefined
+  }))));
 };
 
 /***/ }),
@@ -1155,32 +1270,30 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const background = __webpack_require__(/*! ../../../public/img/high/hosthome.jpg */ "./public/img/high/hosthome.jpg");
 
-const quote = __webpack_require__(/*! ../../../public/img/high/host-quote.jpg */ "./public/img/high/host-quote.jpg");
-
 const homes = () => {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx(_components_hosthomes_layout_HostHomesHeader__WEBPACK_IMPORTED_MODULE_1__["HostHomesHeader"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 16
     },
     __self: undefined
   }), __jsx("div", {
     className: "w-full max-w-layout mx-auto relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx("img", {
@@ -1191,140 +1304,28 @@ const homes = () => {
     className: "w-full relative object-cover h-144",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 19
     },
     __self: undefined
   })), __jsx(_components_hosthomes_functions_HostHomesCard__WEBPACK_IMPORTED_MODULE_4__["HostHomesCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 27
     },
     __self: undefined
   }), __jsx(_components_hosthomes_layout_WhyHost__WEBPACK_IMPORTED_MODULE_2__["WhyHost"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: undefined
   }), __jsx(_components_hosthomes_layout_HostingSteps__WEBPACK_IMPORTED_MODULE_3__["HostingSteps"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: undefined
-  }), __jsx("div", {
-    className: "w-full max-w-5xl mx-auto py-8 flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-1/2 relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "absolute",
-    style: {
-      top: -40
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'circular-std-medium'
-    },
-    className: "text-10xl text-yellow-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, "\u201C")), __jsx("div", {
-    className: "mt-12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-85p",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
-    },
-    className: "text-4xl text-gray-750 leading-tight",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }, "The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's damage or problems."))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-650 my-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: undefined
-  }, "Olivia hosts in Paris for the flexibility it provides")), __jsx("button", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "py-3 px-5 border-2 border-gray-850 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: undefined
-  }, "Learn how they host")))), __jsx("div", {
-    className: "w-1/2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-full w-full",
-    src: quote,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
-  })))));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (homes);
