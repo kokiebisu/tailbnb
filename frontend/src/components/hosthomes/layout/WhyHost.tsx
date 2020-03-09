@@ -2,8 +2,8 @@ import * as React from 'react';
 
 export const WhyHost: React.FC<{}> = () => {
   return (
-    <div className='w-full max-w-5xl mx-auto py-28 flex'>
-      <div className=''>
+    <div className='w-full md:max-w-xl lg:max-w-5xl mx-auto py-28 lg:flex'>
+      <div className='w-full lg:w-1/2 md:mb-8 lg:mb-0'>
         <div className='pb-8'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
@@ -20,7 +20,7 @@ export const WhyHost: React.FC<{}> = () => {
           </p>
         </div>
       </div>
-      <div className=''>
+      <div className='w-full lg:w-1/2 md:mb-8 lg:mb-0'>
         <div className='pb-8'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}

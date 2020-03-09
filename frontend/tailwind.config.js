@@ -18,7 +18,8 @@ module.exports = {
       },
       textColor: {
         'green-850': '#008489',
-        'yellow-850': '#FDB32B'
+        'yellow-850': '#FDB32B',
+        'gray-550': '#B8B8B8'
       },
       fontSize: {
         '2xs': '.625rem',
