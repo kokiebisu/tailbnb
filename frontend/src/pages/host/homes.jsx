@@ -8,6 +8,7 @@ import { Covered } from '../../components/hosthomes/layout/Covered';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
+import { SimplePaymentsCard } from '../../components/hosthomes/functions/SimplePaymentsCard';
 
 const background = require('../../../public/img/high/hosthome.jpg');
 
@@ -29,7 +30,7 @@ const homes = () => {
         <WhyHost />
         <HostingSteps />
         <Covered />
-        <div className='bg-red-550 w-full max-w-5xl mx-auto py-8'>
+        <div className='w-full max-w-5xl mx-auto py-8'>
           <div className='flex justify-center'>
             <div
               style={{ width: 70, height: 2 }}
@@ -44,23 +45,22 @@ const homes = () => {
             </h3>
           </div>
           <div className='flex'>
-            <div className='w-1/3'>
-              <div className='w-85p text-gray-750'>
-                <div className='my-3'>
-                  <h3
-                    style={{ fontFamily: 'airbnb-bold' }}
-                    className='text-2xl'>
-                    Charge what you want
-                  </h3>
-                </div>
-                <div>
-                  <p style={{ fontFamily: 'airbnb-book' }}>
-                    You always get to pick your price. Need help? We have tools
-                    to help you match demand in your area.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <SimplePaymentsCard
+              title='Charge what you want'
+              description='You always get to pick your price. Need help? We have tools to help you match demand in your area.'
+              last={false}
+            />
+            <SimplePaymentsCard
+              title='Pay low fees'
+              description='There’s no cost to sign up. Airbnb generally charges hosts a flat 3% per reservation, among the lowest fees in the industry.'
+              last={false}
+            />
+            <SimplePaymentsCard
+              title='Get paid quickly'
+              description='Once a guest checks in, we can send your money by Paypal, direct deposit, or other available methods.'
+              links='Learn how to make money on Airbnb'
+              last={true}
+            />
           </div>
         </div>
       </div>
