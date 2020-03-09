@@ -12,6 +12,8 @@ import { SimplePaymentsCard } from '../../components/hosthomes/functions/SimpleP
 
 const background = require('../../../public/img/high/hosthome.jpg');
 
+const quote = require('../../../public/img/high/host-covered-quote.jpg');
+
 const homes = () => {
   return (
     <>
@@ -61,6 +63,54 @@ const homes = () => {
               links='Learn how to make money on Airbnb'
               last={true}
             />
+          </div>
+        </div>
+        <div className='w-full max-w-5xl mx-auto pt-32 pb-16 flex'>
+          <div className='w-1/2'>
+            <img className='h-full w-full' src={quote} />
+          </div>
+          <div className='w-1/2 relative flex items-center justify-end'>
+            <div className='w-85p'>
+              <div className='absolute' style={{ top: 70 }}>
+                <p
+                  style={{
+                    fontFamily: 'circular-std-medium'
+                  }}
+                  className='text-10xl text-yellow-850'>
+                  “
+                </p>
+              </div>
+              <div className=''>
+                <div className='mt-12'>
+                  <div className='w-85p'>
+                    <p
+                      style={{
+                        fontFamily:
+                          'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
+                      }}
+                      className='text-3xl text-gray-750 leading-tight'>
+                      Hosting has helped me pay for the rent and other upgrades.
+                    </p>
+                  </div>
+                </div>
+                <div className=''>
+                  <p
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-gray-650 my-4'>
+                    Jack hosts in Brisbane to earn extra money
+                  </p>
+                </div>
+                <button>
+                  <div className='py-3 px-5 border-2 border-gray-850 rounded'>
+                    <p
+                      style={{ fontFamily: 'airbnb-bold' }}
+                      className='text-gray-850'>
+                      Learn how they host
+                    </p>
+                  </div>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
