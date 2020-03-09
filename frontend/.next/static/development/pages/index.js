@@ -42343,10 +42343,6 @@ var Today = function Today() {
       error = _useQuery.error,
       data = _useQuery.data;
 
-  if (data) {
-    console.log('data', data);
-  }
-
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
       card = _useState[0],
       setCard = _useState[1];
@@ -42359,7 +42355,7 @@ var Today = function Today() {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 65
         },
         __self: this
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
@@ -42373,7 +42369,7 @@ var Today = function Today() {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 66
         },
         __self: this
       })));
@@ -42388,21 +42384,21 @@ var Today = function Today() {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 86
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 89
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 91
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -42410,7 +42406,7 @@ var Today = function Today() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 92
     },
     __self: this
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -42419,7 +42415,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 97
     },
     __self: this
   }, function (matches) {
@@ -42430,7 +42426,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 103
     },
     __self: this
   }, function (matches) {
@@ -42441,7 +42437,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 113
     },
     __self: this
   }, function (matches) {
@@ -42452,7 +42448,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 123
     },
     __self: this
   }, function (matches) {
@@ -42463,7 +42459,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 131
     },
     __self: this
   }, function (matches) {
@@ -42472,7 +42468,7 @@ var Today = function Today() {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 145
     },
     __self: this
   })));
@@ -42506,7 +42502,7 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/container
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query LocationExperiences($available: String) {\n    experiences(where: { available: $available }) {\n      id\n      title\n      cost\n      ratings\n      reviews\n      location\n      img\n      available\n      category\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query LocationExperiences($available: String, $location: String) {\n    experiences(\n      where: { available: $available, location: $location }\n      first: 6\n    ) {\n      id\n      title\n      cost\n      ratings\n      reviews\n      location\n      img\n      available\n      category\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -42530,7 +42526,8 @@ var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__[
 var Tomorrow = function Tomorrow() {
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
-      available: 'Tomorrow'
+      available: 'Tomorrow',
+      location: 'Vancouver'
     }
   }),
       loading = _useQuery.loading,
@@ -42549,7 +42546,7 @@ var Tomorrow = function Tomorrow() {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 65
         },
         __self: this
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
@@ -42563,7 +42560,7 @@ var Tomorrow = function Tomorrow() {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 66
         },
         __self: this
       })));
@@ -42578,21 +42575,21 @@ var Tomorrow = function Tomorrow() {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 86
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 89
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 91
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -42600,7 +42597,7 @@ var Tomorrow = function Tomorrow() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 92
     },
     __self: this
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -42609,7 +42606,7 @@ var Tomorrow = function Tomorrow() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 97
     },
     __self: this
   }, function (matches) {
@@ -42620,7 +42617,7 @@ var Tomorrow = function Tomorrow() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 103
     },
     __self: this
   }, function (matches) {
@@ -42631,7 +42628,7 @@ var Tomorrow = function Tomorrow() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 113
     },
     __self: this
   }, function (matches) {
@@ -42642,7 +42639,7 @@ var Tomorrow = function Tomorrow() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 123
     },
     __self: this
   }, function (matches) {
@@ -42653,7 +42650,7 @@ var Tomorrow = function Tomorrow() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 131
     },
     __self: this
   }, function (matches) {
@@ -42662,7 +42659,7 @@ var Tomorrow = function Tomorrow() {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 145
     },
     __self: this
   })));

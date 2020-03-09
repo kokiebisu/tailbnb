@@ -58,10 +58,6 @@ var Today = function Today() {
       error = _useQuery.error,
       data = _useQuery.data;
 
-  if (data) {
-    console.log('data', data);
-  }
-
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
       card = _useState[0],
       setCard = _useState[1];
@@ -74,7 +70,7 @@ var Today = function Today() {
         className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 65
         },
         __self: this
       }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
@@ -88,7 +84,7 @@ var Today = function Today() {
         category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 66
         },
         __self: this
       })));
@@ -103,21 +99,21 @@ var Today = function Today() {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 86
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 89
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 91
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -125,7 +121,7 @@ var Today = function Today() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 92
     },
     __self: this
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -134,7 +130,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 97
     },
     __self: this
   }, function (matches) {
@@ -145,7 +141,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 103
     },
     __self: this
   }, function (matches) {
@@ -156,7 +152,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 113
     },
     __self: this
   }, function (matches) {
@@ -167,7 +163,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 123
     },
     __self: this
   }, function (matches) {
@@ -178,7 +174,7 @@ var Today = function Today() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 131
     },
     __self: this
   }, function (matches) {
@@ -187,7 +183,7 @@ var Today = function Today() {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 145
     },
     __self: this
   })));
@@ -196,4 +192,4 @@ var Today = function Today() {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.1a3596067e7c7d93596f.hot-update.js.map
+//# sourceMappingURL=index.js.f8784cbc27d75058faf8.hot-update.js.map
