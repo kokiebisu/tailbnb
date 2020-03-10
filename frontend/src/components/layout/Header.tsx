@@ -8,23 +8,21 @@ import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
 import { CurrencyModal } from '../modals/CurrencyModal';
 import { LanguageModal } from '../modals/LanguageModal';
-import { MenuModal } from '../modals/MenuModal';
 
 // Images
 const background = require('../../../public/img/high/airbnb-background.jpg');
 
-export const Header: React.FC<{}> = () => {
-  const [menuModal, setMenuModal] = useState<boolean>(true);
+interface Props {
+  switchMenuModal: () => void;
+}
+
+export const Header: React.FC<Props> = ({ switchMenuModal }) => {
   const [languageModal, setLanguageModal] = useState<boolean>(false);
   const [registerModal, setRegisterModal] = useState<boolean>(false);
   const [helpModal, setHelpModal] = useState<boolean>(false);
   const [currencyModal, setCurrencyModal] = useState<boolean>(false);
   const [currency, setCurrency] = useState<string>('$ CAD');
   const [type, setType] = useState<string>('');
-
-  const switchMenuModal = () => {
-    setMenuModal(!menuModal);
-  };
 
   const switchLanguageModal = () => {
     setLanguageModal(!languageModal);
@@ -193,11 +191,6 @@ export const Header: React.FC<{}> = () => {
           to stay in Japan
         </p>
       </div>
-      {menuModal ? (
-        <>
-          <MenuModal switchMenuModal={switchMenuModal} />
-        </>
-      ) : null}
       {registerModal ? (
         <>
           {typeof window !== 'undefined' ? configureScroll('hidden') : null}
