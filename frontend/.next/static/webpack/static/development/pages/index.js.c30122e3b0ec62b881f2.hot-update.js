@@ -217,6 +217,7 @@ var MenuModal = function MenuModal(_ref) {
     },
     __self: this
   }, __jsx("p", {
+    className: "text-sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70
@@ -315,7 +316,7 @@ var MenuModal = function MenuModal(_ref) {
     },
     __self: this
   }, "List your place")), __jsx("div", {
-    className: "flex",
+    className: "flex text-sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 99
@@ -333,13 +334,16 @@ var MenuModal = function MenuModal(_ref) {
       lineNumber: 101
     },
     __self: this
-  }, "Earn up to")), __jsx("div", {
+  }, "Earn up to\xA0")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 103
     },
     __self: this
   }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
@@ -442,7 +446,7 @@ var MenuModal = function MenuModal(_ref) {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "mx-6 py-3 border-b border-gray-300 text-gray-750",
+    className: "mx-6 pt-3 pb-12 border-b border-gray-300 text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 134
@@ -493,4 +497,4 @@ var MenuModal = function MenuModal(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.41f43083e4c0f0f588c3.hot-update.js.map
+//# sourceMappingURL=index.js.c30122e3b0ec62b881f2.hot-update.js.map

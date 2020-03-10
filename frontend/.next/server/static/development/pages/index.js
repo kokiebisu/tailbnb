@@ -8587,7 +8587,7 @@ const MenuModal = ({
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "mx-6 py-3 border-b border-gray-300 text-gray-750",
+    className: "mx-6 pt-3 pb-10 border-b border-gray-300 text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 134
