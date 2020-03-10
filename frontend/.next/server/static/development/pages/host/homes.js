@@ -827,28 +827,28 @@ const MoreHostingCard = ({
   last
 }) => {
   return __jsx("div", {
-    className: "w-1/3",
+    className: "w-full md:w-1/3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: undefined
   }, last ? __jsx("div", {
-    className: "w-full md:border lg:border-none md:rounded lg:rounded-none border-gray-300 md:shadow-md lg:shadow-none",
+    className: "w-full border lg:border-none rounded lg:rounded-none border-gray-300 shadow-md lg:shadow-none flex md:flex-col",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full md:h-32 lg:h-48",
+    className: "w-20 h-20 md:w-full md:h-32 lg:h-48 rounded",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: undefined
   }, __jsx("img", {
-    className: "h-full w-full md:rounded-bottom-none lg:rounded object-cover",
+    className: "h-full w-full rounded rounded-r-none md:rounded-tr md:rounded-b-none lg:rounded object-cover",
     src: img,
     alt: "",
     __source: {
@@ -857,27 +857,33 @@ const MoreHostingCard = ({
     },
     __self: undefined
   })), __jsx("div", {
-    className: "md:mx-4 lg:ml-0 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mx-4 lg:ml-0 my-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-750",
+    className: "text-sm md:text-base text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: undefined
   }, title)), __jsx("div", {
-    className: "md:mx-4 lg:ml-0 my-1",
+    className: "mx-4 lg:ml-0 my-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx("p", {
@@ -887,14 +893,14 @@ const MoreHostingCard = ({
     className: "text-gray-750 text-sm truncate",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 36
     },
     __self: undefined
   }, description)), __jsx("div", {
-    className: "md:hidden lg:block",
+    className: "hidden lg:block",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx("a", {
@@ -905,51 +911,40 @@ const MoreHostingCard = ({
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 43
     },
     __self: undefined
-  }, "Learn more"))) : __jsx("div", {
-    className: "w-95p md:border lg:border-none md:rounded lg:rounded-none border-gray-300 md:shadow-md lg:shadow-none",
+  }, "Learn more")))) : __jsx("div", {
+    className: "md:w-95p border lg:border-none rounded g:rounded-none border-gray-300 shadow-md lg:shadow-none flex md:flex-col mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full md:h-32 lg:h-48",
+    className: "w-20 h-20 md:w-full md:h-32 lg:h-48 rounded ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx("img", {
-    className: "h-full w-full md:rounded md:rounded-b-none lg:rounded object-cover",
+    className: "h-full w-full rounded rounded-r-none md:rounded-tr md:rounded-b-none lg:rounded object-cover",
     src: img,
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: undefined
   })), __jsx("div", {
-    className: "md:mx-4 my-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: undefined
-  }, title)), __jsx("div", {
-    className: "md:mx-4 my-1",
+  }, __jsx("div", {
+    className: "mx-4 lg:ml-0 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
@@ -957,19 +952,36 @@ const MoreHostingCard = ({
     __self: undefined
   }, __jsx("p", {
     style: {
-      fontFamily: 'airbnb-book'
+      fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-750 text-sm truncate",
+    className: "text-sm md:text-base text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
     },
     __self: undefined
-  }, description)), __jsx("div", {
-    className: "md:hidden lg:block",
+  }, title)), __jsx("div", {
+    className: "mx-4 lg:ml-0 my-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 69
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm truncate",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: undefined
+  }, description)), __jsx("div", {
+    className: "hidden lg:block",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
     },
     __self: undefined
   }, __jsx("a", {
@@ -980,10 +992,10 @@ const MoreHostingCard = ({
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 77
     },
     __self: undefined
-  }, "Learn more"))));
+  }, "Learn more")))));
 };
 
 /***/ }),
@@ -3241,7 +3253,7 @@ const financials = __webpack_require__(/*! ../../../../public/img/high/hosting-f
 
 const MoreHosting = () => {
   return __jsx("div", {
-    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto py-8",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto py-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -3265,7 +3277,7 @@ const MoreHosting = () => {
     },
     __self: undefined
   }, "More about hosting")), __jsx("div", {
-    className: "flex",
+    className: "md:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
