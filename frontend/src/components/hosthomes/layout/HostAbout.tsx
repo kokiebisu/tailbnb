@@ -2,23 +2,23 @@ import * as React from 'react';
 
 export const HostAbout: React.FC<{}> = () => {
   return (
-    <div className='w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-32'>
-      <div className='flex justify-center'>
+    <div className='w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto py-8 md:pb-32 md:pt-8 md:py-0'>
+      <div className='flex md:justify-center'>
         <div
           style={{ width: 70, height: 2 }}
           className='bg-gray-650 rounded-lg'></div>
       </div>
 
-      <div className='flex justify-center mb-12 mt-2'>
+      <div className='flex md:justify-center mb-12 mt-2'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
-          className='text-gray-850 md:text-4xl lg:text-6xl tracking-tight'>
+          className='text-gray-750 text-4xl lg:text-6xl tracking-tight'>
           About Airbnb
         </h3>
       </div>
 
       <div className='lg:flex'>
-        <div className='md:mb-12 lg:mb-0'>
+        <div className='mb-12 lg:mb-0'>
           <div className='pb-6'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
@@ -49,7 +49,7 @@ export const HostAbout: React.FC<{}> = () => {
               home, activity, or do both. When you host is up to you.
             </p>
           </div>
-          <div className='md:mt-5 lg:mt-4'>
+          <div className='mt-5 lg:mt-4'>
             <a
               style={{ fontFamily: 'airbnb-book' }}
               className='text-green-850'

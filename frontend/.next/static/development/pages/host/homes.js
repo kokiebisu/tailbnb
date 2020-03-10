@@ -2238,14 +2238,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var HostAbout = function HostAbout() {
   return __jsx("div", {
-    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-32",
+    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto py-8 md:pb-32 md:pt-8 md:py-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-center",
+    className: "flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -2263,7 +2263,7 @@ var HostAbout = function HostAbout() {
     },
     __self: this
   })), __jsx("div", {
-    className: "flex justify-center mb-12 mt-2",
+    className: "flex md:justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -2273,7 +2273,7 @@ var HostAbout = function HostAbout() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -2287,7 +2287,7 @@ var HostAbout = function HostAbout() {
     },
     __self: this
   }, __jsx("div", {
-    className: "md:mb-12 lg:mb-0",
+    className: "mb-12 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -2369,7 +2369,7 @@ var HostAbout = function HostAbout() {
     },
     __self: this
   }, "If you have an extra room, entire home, or expertise, you can earn money by sharing it with anyone in the world. You can host your home, activity, or do both. When you host is up to you.")), __jsx("div", {
-    className: "md:mt-5 lg:mt-4",
+    className: "mt-5 lg:mt-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
@@ -3608,7 +3608,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var Worldwide = function Worldwide() {
   return __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto py-8 md:py-32",
+    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto py-8 md:py-32 md:pt-8 md:py-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
