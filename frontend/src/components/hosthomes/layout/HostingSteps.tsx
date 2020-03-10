@@ -48,19 +48,19 @@ export const HostingSteps: React.FC<{}> = () => {
           </div>
         </div>
       </div>
-      <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex'>
-        <div className='w-1/2 relative'>
+      <div className='w-full px-6 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex flex-col-reverse md:flex-row'>
+        <div className='w-full md:w-1/2 relative'>
           <div id='quote__steps'>
             <p
               style={{
                 fontFamily: 'circular-std-medium'
               }}
-              className='md:text-7xl lg:text-10xl text-yellow-850'>
+              className='text-6xl md:text-7xl lg:text-10xl text-yellow-850'>
               “
             </p>
           </div>
           <div className='mt-12'>
-            <div className='w-85p'>
+            <div className='md:w-85p'>
               <p
                 id='quote-description'
                 style={{
@@ -76,7 +76,7 @@ export const HostingSteps: React.FC<{}> = () => {
           <div>
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='text-gray-650 my-4'>
+              className='text-sm md:text-base text-gray-650 my-4'>
               Olivia hosts in Paris for the flexibility it provides
             </p>
           </div>
@@ -90,7 +90,7 @@ export const HostingSteps: React.FC<{}> = () => {
             </div>
           </button>
         </div>
-        <div className='w-1/2'>
+        <div className='w-full md:w-1/2'>
           <img className='h-full w-full' src={quote} />
         </div>
       </div>
