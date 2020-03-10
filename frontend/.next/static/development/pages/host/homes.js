@@ -772,20 +772,21 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     },
     __self: this
   }, last ? __jsx("div", {
+    className: "w-full md:border lg:border-none md:rounded lg:rounded-none border-gray-300 md:shadow-md lg:shadow-none",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full h-48",
+    className: "w-full md:h-32 lg:h-48",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
   }, __jsx("img", {
-    className: "h-full w-full rounded object-cover",
+    className: "h-full w-full md:rounded-bottom-none lg:rounded object-cover",
     src: img,
     alt: "",
     __source: {
@@ -794,7 +795,7 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     },
     __self: this
   })), __jsx("div", {
-    className: "my-2",
+    className: "md:mx-4 lg:ml-0 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
@@ -811,7 +812,7 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     },
     __self: this
   }, title)), __jsx("div", {
-    className: "my-1",
+    className: "md:mx-4 lg:ml-0 my-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
@@ -821,13 +822,14 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-750 text-sm",
+    className: "text-gray-750 text-sm truncate",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, description)), __jsx("div", {
+    className: "md:hidden lg:block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -845,21 +847,21 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     },
     __self: this
   }, "Learn more"))) : __jsx("div", {
-    className: "w-95p",
+    className: "w-95p md:border lg:border-none md:rounded lg:rounded-none border-gray-300 md:shadow-md lg:shadow-none",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full h-48",
+    className: "w-full md:h-32 lg:h-48",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
     },
     __self: this
   }, __jsx("img", {
-    className: "h-full w-full rounded object-cover",
+    className: "h-full w-full md:rounded md:rounded-b-none lg:rounded object-cover",
     src: img,
     alt: "",
     __source: {
@@ -868,7 +870,7 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     },
     __self: this
   })), __jsx("div", {
-    className: "my-2",
+    className: "md:mx-4 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 57
@@ -885,7 +887,7 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     },
     __self: this
   }, title)), __jsx("div", {
-    className: "my-1",
+    className: "md:mx-4 my-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
@@ -895,13 +897,14 @@ var MoreHostingCard = function MoreHostingCard(_ref) {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-750 text-sm",
+    className: "text-gray-750 text-sm truncate",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
     },
     __self: this
   }, description)), __jsx("div", {
+    className: "md:hidden lg:block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 69
@@ -2287,7 +2290,7 @@ var financials = __webpack_require__(/*! ../../../../public/img/high/hosting-fin
 
 var MoreHosting = function MoreHosting() {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto py-8",
+    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto py-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
