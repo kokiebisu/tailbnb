@@ -1412,7 +1412,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const HostAbout = () => {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-8 pb-32",
+    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -1447,28 +1447,28 @@ const HostAbout = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 text-6xl tracking-tight",
+    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: undefined
   }, "About Airbnb")), __jsx("div", {
-    className: "flex",
+    className: "lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: undefined
   }, __jsx("div", {
-    className: "",
+    className: "md:mb-12 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: undefined
   }, __jsx("div", {
-    className: "pb-8",
+    className: "pb-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
@@ -1485,7 +1485,7 @@ const HostAbout = () => {
     },
     __self: undefined
   }, "What is Airbnb?")), __jsx("div", {
-    className: "w-90p",
+    className: "lg:w-90p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -1509,7 +1509,7 @@ const HostAbout = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "pb-8",
+    className: "pb-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -1526,7 +1526,7 @@ const HostAbout = () => {
     },
     __self: undefined
   }, "What is hosting?")), __jsx("div", {
-    className: "w-90p",
+    className: "lg:w-90p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
@@ -1543,7 +1543,7 @@ const HostAbout = () => {
     },
     __self: undefined
   }, "If you have an extra room, entire home, or expertise, you can earn money by sharing it with anyone in the world. You can host your home, activity, or do both. When you host is up to you.")), __jsx("div", {
-    className: "mt-4",
+    className: "md:mt-5 lg:mt-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
