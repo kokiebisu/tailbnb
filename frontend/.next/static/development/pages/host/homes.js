@@ -1106,23 +1106,24 @@ var WorldwideCard = function WorldwideCard(_ref) {
     },
     __self: this
   }, __jsx("h3", {
-    className: "text-6xl text-gray-850",
+    className: "md:text-4xl md:text-gray-750 lg:text-6xl text-gray-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
   }, title)), __jsx("div", {
+    className: "w-80p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, __jsx("p", {
-    className: "text-gray-750",
+    className: "md:text-sm lg:text-base text-gray-750 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, description)));
@@ -2717,7 +2718,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var Worldwide = function Worldwide() {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto pt-8 py-32",
+    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 py-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -2752,7 +2753,7 @@ var Worldwide = function Worldwide() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 text-6xl tracking-tight",
+    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
