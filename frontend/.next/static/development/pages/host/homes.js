@@ -140,7 +140,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 var CoveredCard = function CoveredCard(_ref) {
   var description = _ref.description;
   return __jsx("div", {
-    className: "w-90p md:mb-6 lg:mb-5",
+    className: "md:w-90p mb-6 lg:mb-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -1157,21 +1157,21 @@ var covered = __webpack_require__(/*! ../../../../public/img/high/host-covered.j
 
 var Covered = function Covered() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto pt-4 pb-4 md:pb-16 md:pt-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
-    className: "py-8",
+    className: "my-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-center",
+    className: "mb-4 md:mb-0 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -1189,7 +1189,7 @@ var Covered = function Covered() {
     },
     __self: this
   })), __jsx("div", {
-    className: "flex justify-center mb-12 mt-2",
+    className: "flex md:justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -1199,7 +1199,7 @@ var Covered = function Covered() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -1243,7 +1243,7 @@ var Covered = function Covered() {
     },
     __self: this
   }, "We know it\u2019s a priority to trust the people staying in your home. Airbnb allows you to set strict requirements for who can book and to get to know guests before their stay. If something does come up, though, we have your back. With our Host Guarantee covering property damage and our Host Protection Insurance for liability, you\u2019re supported as a host throughout.")), __jsx("div", {
-    className: "md:mb-8 lg:mb-0 mt-4",
+    className: "mb-8 lg:mb-0 mt-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -1307,7 +1307,7 @@ var Covered = function Covered() {
     },
     __self: this
   })))), __jsx("div", {
-    className: "w-full max-w-5xl mx-auto py-16",
+    className: "w-full max-w-5xl mx-auto py-4 md:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
@@ -3036,7 +3036,7 @@ var HostingSteps = function HostingSteps() {
     },
     __self: this
   }))))), __jsx("div", {
-    className: "w-full px-6 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex flex-col-reverse md:flex-row",
+    className: "w-full px-6 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col-reverse md:flex-row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51

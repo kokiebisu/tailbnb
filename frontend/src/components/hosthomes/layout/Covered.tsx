@@ -9,18 +9,18 @@ const covered = require('../../../../public/img/high/host-covered.jpg');
 export const Covered: React.FC<{}> = () => {
   return (
     <>
-      <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto pt-8 pb-16'>
-        <div className='py-8'>
-          <div className='flex justify-center'>
+      <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto pt-4 pb-4 md:pb-16 md:pt-8'>
+        <div className='my-8'>
+          <div className='mb-4 md:mb-0 flex md:justify-center'>
             <div
               style={{ width: 70, height: 2 }}
               className='bg-gray-650 rounded-lg'></div>
           </div>
 
-          <div className='flex justify-center mb-12 mt-2'>
+          <div className='flex md:justify-center mb-12 mt-2'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
-              className='text-gray-850 md:text-4xl lg:text-6xl tracking-tight'>
+              className='text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9'>
               We've got you covered
             </h3>
           </div>
@@ -40,7 +40,7 @@ export const Covered: React.FC<{}> = () => {
                     host throughout.
                   </p>
                 </div>
-                <div className='md:mb-8 lg:mb-0 mt-4'>
+                <div className='mb-8 lg:mb-0 mt-4'>
                   <a className='text-green-850' href=''>
                     Learn how Airbnb protects hosts
                   </a>
@@ -57,7 +57,7 @@ export const Covered: React.FC<{}> = () => {
             </div>
           </div>
         </div>
-        <div className='w-full max-w-5xl mx-auto py-16'>
+        <div className='w-full max-w-5xl mx-auto py-4 md:py-16'>
           <div className='w-full'>
             <img className='h-full w-full' src={covered} alt='' />
           </div>
