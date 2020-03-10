@@ -5,7 +5,7 @@ const ready = require('../../../../public/img/high/host-ready.jpg');
 
 export const HostReady: React.FC<{}> = () => {
   return (
-    <div className='w-full max-w-7xl mx-auto mt-8 mb-12 relative'>
+    <div className='w-full md:max-w-4xl lg:max-w-7xl mx-auto mt-8 mb-12 relative'>
       <div className='w-full h-112'>
         <img className='h-full w-full object-cover' src={ready} />
       </div>
