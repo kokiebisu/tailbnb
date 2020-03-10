@@ -201,6 +201,10 @@ body {
 
 /* md */
 @media (min-width: 768px) {
+  #card {
+    position: static;
+  }
+
   #quote__steps {
     position: absolute;
     top: -10px;
@@ -229,6 +233,12 @@ body {
 
 /* lg */
 @media (min-width: 1024px) {
+  #card {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
   #quote__steps {
     position: absolute;
     top: -40px;

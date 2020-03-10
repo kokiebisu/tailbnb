@@ -24,15 +24,23 @@ const homes = () => {
     <>
       <HostHomesHeader />
       <div className='w-full max-w-layout mx-auto relative'>
-        <div>
+        <div className='w-full h-60 md:h-72 lg:h-144 relative flex justify-center'>
           <img
             src={background}
             style={{
               maxHeight: '60rem'
             }}
-            className='w-full relative object-cover h-144'
+            className='object-cover w-full h-full'
           />
+          <div className='lg:hidden px-6 md:px-0 md:max-w-2.5xl w-full absolute bottom-0 py-6 leading-none tracking-tighter'>
+            <h3
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-4xl text-white'>
+              Earn money as an Airbnb host
+            </h3>
+          </div>
         </div>
+
         <HostHomesCard />
         <WhyHost />
         <HostingSteps />
