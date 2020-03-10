@@ -3495,14 +3495,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var WhyHost = function WhyHost() {
   return __jsx("div", {
-    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto py-28 lg:flex",
+    className: "w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto py-8 md:py-28 lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full lg:w-1/2 md:mb-8 lg:mb-0",
+    className: "w-full lg:w-1/2 mb-8 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -3526,7 +3526,7 @@ var WhyHost = function WhyHost() {
     },
     __self: this
   }, "Why host on Airbnb?")), __jsx("div", {
-    className: "w-90p",
+    className: "md:w-90p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -3567,7 +3567,7 @@ var WhyHost = function WhyHost() {
     },
     __self: this
   }, "We have your back")), __jsx("div", {
-    className: "w-90p",
+    className: "md:w-90p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -3832,7 +3832,7 @@ var homes = function homes() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fhomes&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fhomes.jsx ***!
   \***********************************************************************************************************************************************************/
@@ -3855,5 +3855,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=homes.js.map

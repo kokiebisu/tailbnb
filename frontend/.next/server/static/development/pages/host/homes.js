@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3559,14 +3559,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const WhyHost = () => {
   return __jsx("div", {
-    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto py-28 lg:flex",
+    className: "w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto py-8 md:py-28 lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full lg:w-1/2 md:mb-8 lg:mb-0",
+    className: "w-full lg:w-1/2 mb-8 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -3590,7 +3590,7 @@ const WhyHost = () => {
     },
     __self: undefined
   }, "Why host on Airbnb?")), __jsx("div", {
-    className: "w-90p",
+    className: "md:w-90p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -3631,7 +3631,7 @@ const WhyHost = () => {
     },
     __self: undefined
   }, "We have your back")), __jsx("div", {
-    className: "w-90p",
+    className: "md:w-90p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -3896,7 +3896,7 @@ const homes = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!****************************************!*\
   !*** multi ./src/pages/host/homes.jsx ***!
   \****************************************/
