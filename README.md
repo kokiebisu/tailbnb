@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://www.underconsideration.com/brandnew/archives/airbnb_logo_detail.png" alt="airbnb"/>
+  <img src="https://www.underconsideration.com/brandnew/archives/airbnb_icon_detail_animation.gif" alt="airbnb"/>
 </p>
 
 # 🏠 Nextbnb
