@@ -1096,7 +1096,7 @@ var WorldwideCard = function WorldwideCard(_ref) {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-1/3 flex flex-col items-center",
+    className: "w-full md:w-1/3 flex flex-col md:items-center mb-8 md:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -1109,7 +1109,7 @@ var WorldwideCard = function WorldwideCard(_ref) {
     },
     __self: this
   }, __jsx("h3", {
-    className: "md:text-4xl md:text-gray-750 lg:text-6xl text-gray-850",
+    className: "text-4xl text-gray-750 lg:text-6xl text-gray-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -1123,7 +1123,7 @@ var WorldwideCard = function WorldwideCard(_ref) {
     },
     __self: this
   }, __jsx("p", {
-    className: "md:text-sm lg:text-base text-gray-750 text-center",
+    className: "text-sm lg:text-base text-gray-750 md:text-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -3608,14 +3608,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var Worldwide = function Worldwide() {
   return __jsx("div", {
-    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 py-32",
+    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto py-8 md:py-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-center",
+    className: "mb-4 md:mb-0 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -3643,14 +3643,14 @@ var Worldwide = function Worldwide() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
   }, "Hosts like you, worldwide")), __jsx("div", {
-    className: "flex",
+    className: "md:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
