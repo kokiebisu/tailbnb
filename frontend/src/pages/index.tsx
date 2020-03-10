@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 
 // Component
 import { Header } from '../components/layout/Header';
@@ -16,22 +17,34 @@ import { Footer } from '../components/layout/Footer';
 
 // Next
 import { NextPage } from 'next';
+import { MenuModal } from '../components/modals/MenuModal';
 
 const Home: NextPage<{}> = () => {
+  const [menuModal, setMenuModal] = useState<boolean>(true);
+
+  const switchMenuModal = () => {
+    setMenuModal(!menuModal);
+  };
   return (
     <>
-      <Header />
-      <Explore />
-      <Plus />
-      <Today />
-      <Tomorrow />
-      <NextWeek />
-      <Adventures />
-      <Stay />
-      <TopRated />
-      <Popular />
-      <Featured />
-      <Footer />
+      {menuModal ? (
+        <MenuModal switchMenuModal={switchMenuModal} />
+      ) : (
+        <>
+          <Header switchMenuModal={switchMenuModal} />
+          <Explore />
+          <Plus />
+          <Today />
+          <Tomorrow />
+          <NextWeek />
+          <Adventures />
+          <Stay />
+          <TopRated />
+          <Popular />
+          <Featured />
+          <Footer />
+        </>
+      )}
     </>
   );
 };
