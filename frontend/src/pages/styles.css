@@ -143,10 +143,39 @@ body {
   border: 1.5px solid #008489;
 }
 
-/* sm
+/* xs */
+@media (min-width: 290px) {
+  #quote__steps {
+    position: absolute;
+    top: 0px;
+  }
+
+  #quote__payment {
+    position: absolute;
+    top: 20px;
+  }
+
+  #quote-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* sm */
 @media (min-width: 640px) {
-  
-} */
+  #quote__steps {
+    position: absolute;
+    top: -10px;
+  }
+
+  #quote__payment {
+    position: absolute;
+    top: 20px;
+  }
+
+  #quote-description {
+    font-family: 'airbnb-book';
+  }
+}
 
 /* md */
 @media (min-width: 768px) {

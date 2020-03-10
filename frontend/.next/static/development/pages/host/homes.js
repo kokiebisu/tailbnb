@@ -3036,14 +3036,14 @@ var HostingSteps = function HostingSteps() {
     },
     __self: this
   }))))), __jsx("div", {
-    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex",
+    className: "w-full px-6 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex flex-col-reverse md:flex-row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: this
   }, __jsx("div", {
-    className: "w-1/2 relative",
+    className: "w-full md:w-1/2 relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
@@ -3060,7 +3060,7 @@ var HostingSteps = function HostingSteps() {
     style: {
       fontFamily: 'circular-std-medium'
     },
-    className: "md:text-7xl lg:text-10xl text-yellow-850",
+    className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -3074,7 +3074,7 @@ var HostingSteps = function HostingSteps() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-85p",
+    className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
@@ -3101,7 +3101,7 @@ var HostingSteps = function HostingSteps() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-650 my-4",
+    className: "text-sm md:text-base text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
@@ -3131,7 +3131,7 @@ var HostingSteps = function HostingSteps() {
     },
     __self: this
   }, "Learn how they host")))), __jsx("div", {
-    className: "w-1/2",
+    className: "w-full md:w-1/2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 93
