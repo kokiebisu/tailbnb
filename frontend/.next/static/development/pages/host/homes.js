@@ -1763,7 +1763,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var HostQuestions = function HostQuestions() {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto py-8",
+    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto py-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -1798,14 +1798,14 @@ var HostQuestions = function HostQuestions() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 text-6xl tracking-tight",
+    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   }, "Frequently asked questions")), __jsx("div", {
-    className: "flex",
+    className: "lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -1815,14 +1815,14 @@ var HostQuestions = function HostQuestions() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-1/2 text-green-850 text-lg flex justify-end",
+    className: "md:w-full lg:w-1/2 text-green-850 text-lg flex lg:justify-end",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
   }, __jsx("div", {
-    className: "w-95p",
+    className: "lg:w-95p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
@@ -1857,7 +1857,7 @@ var HostQuestions = function HostQuestions() {
     },
     __self: this
   }, "What is required of guests before booking?")), __jsx("div", {
-    className: "my-10",
+    className: "md:mt-10 lg:my-10",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -1874,21 +1874,21 @@ var HostQuestions = function HostQuestions() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-1/2 text-green-850 text-lg flex justify-end",
+    className: "md:w-full lg:w-1/2 text-green-850 text-lg flex lg:justify-end",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
   }, __jsx("div", {
-    className: "w-95p",
+    className: "lg:w-95p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: this
   }, __jsx("div", {
-    className: "my-10",
+    className: "md:mt-10 lg:my-10",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
