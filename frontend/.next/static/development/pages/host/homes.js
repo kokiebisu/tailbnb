@@ -568,7 +568,7 @@ var HostingStepsCard = function HostingStepsCard(_ref) {
       link = _ref.link,
       last = _ref.last;
   return __jsx("div", {
-    className: "md:w-full lg:w-1/3 md:mb-12 lg:mb-0",
+    className: "md:w-full lg:w-1/3 mb-12 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
@@ -632,7 +632,7 @@ var HostingStepsCard = function HostingStepsCard(_ref) {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-750 leading-loose",
+    className: "text-gray-750 md:leading-loose",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
@@ -657,7 +657,7 @@ var HostingStepsCard = function HostingStepsCard(_ref) {
     },
     __self: this
   }, "Learn how to start hosting")) : null) : __jsx("div", {
-    className: "w-85p",
+    className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -715,7 +715,7 @@ var HostingStepsCard = function HostingStepsCard(_ref) {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-750 leading-loose",
+    className: "text-gray-750 md:leading-loose",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71
@@ -2944,21 +2944,21 @@ var quote = __webpack_require__(/*! ../../../../public/img/high/host-steps-quote
 
 var HostingSteps = function HostingSteps() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
-    className: "py-8",
+    className: "my-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-center",
+    className: "mb-4 md:mb-0 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -2976,7 +2976,7 @@ var HostingSteps = function HostingSteps() {
     },
     __self: this
   })), __jsx("div", {
-    className: "flex justify-center mb-12 mt-2",
+    className: "flex md:justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -2986,7 +2986,7 @@ var HostingSteps = function HostingSteps() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -3832,7 +3832,7 @@ var homes = function homes() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fhomes&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fhomes.jsx ***!
   \***********************************************************************************************************************************************************/
@@ -3855,5 +3855,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=homes.js.map
