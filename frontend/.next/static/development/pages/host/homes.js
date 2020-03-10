@@ -1012,7 +1012,7 @@ var SimplePaymentsCard = function SimplePaymentsCard(_ref) {
     },
     __self: this
   }, links)) : null) : __jsx("div", {
-    className: "w-85p text-gray-750",
+    className: "mb-10 md:mb-0 md:w-85p text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
@@ -3036,7 +3036,7 @@ var HostingSteps = function HostingSteps() {
     },
     __self: this
   }))))), __jsx("div", {
-    className: "w-full px-6 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col-reverse md:flex-row",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col-reverse md:flex-row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
@@ -3265,21 +3265,21 @@ var quote = __webpack_require__(/*! ../../../../public/img/high/host-payments-qu
 
 var SimplePayments = function SimplePayments() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full px-6 px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
-    className: "py-8",
+    className: "my-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-center",
+    className: "mb-4 md:mb-0 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -3297,7 +3297,7 @@ var SimplePayments = function SimplePayments() {
     },
     __self: this
   })), __jsx("div", {
-    className: "flex justify-center mb-12 mt-2",
+    className: "flex md:justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -3307,7 +3307,7 @@ var SimplePayments = function SimplePayments() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -3349,14 +3349,14 @@ var SimplePayments = function SimplePayments() {
     },
     __self: this
   })))), __jsx("div", {
-    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-16 flex",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col md:flex-row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
     },
     __self: this
   }, __jsx("div", {
-    className: "w-1/2",
+    className: "w-full md:w-1/2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48
@@ -3371,14 +3371,14 @@ var SimplePayments = function SimplePayments() {
     },
     __self: this
   })), __jsx("div", {
-    className: "w-1/2 relative flex items-center justify-end",
+    className: "w-full md:w-1/2 relative flex items-center md:justify-end",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: this
   }, __jsx("div", {
-    className: "w-85p",
+    className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
@@ -3395,7 +3395,7 @@ var SimplePayments = function SimplePayments() {
     style: {
       fontFamily: 'circular-std-medium'
     },
-    className: "md:text-7xl lg:text-10xl text-yellow-850",
+    className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -3416,7 +3416,7 @@ var SimplePayments = function SimplePayments() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-85p",
+    className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
@@ -3427,7 +3427,7 @@ var SimplePayments = function SimplePayments() {
     style: {
       fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
     },
-    className: "md:text-lg lg:text-3xl text-gray-750 leading-tight",
+    className: "text-lg lg:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 65
@@ -3444,7 +3444,7 @@ var SimplePayments = function SimplePayments() {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-650 my-4",
+    className: "text-sm md:text-base text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
