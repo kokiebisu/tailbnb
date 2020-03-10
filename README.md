@@ -55,7 +55,7 @@ This project uses Heroku for deployment. Create it via Prismacloud
 
 ## Authors
 
-* **Kokoaj** - [kokoaj](https://github.com/kokiebisu)
+* **kokoaj** - [kokoaj](https://github.com/kokiebisu)
 
 ## License
 
