@@ -164,6 +164,11 @@ body {
     top: 60px;
     left: 40px;
   }
+
+  #monthly-potential {
+    position: relative;
+    bottom: 0;
+  }
 }
 
 /* sm */
@@ -186,6 +191,11 @@ body {
     position: absolute;
     top: 60px;
     left: 40px;
+  }
+
+  #monthly-potential {
+    position: relative;
+    bottom: 0px;
   }
 }
 
@@ -210,6 +220,11 @@ body {
     top: 80px;
     left: 110px;
   }
+
+  #monthly-potential {
+    position: relative;
+    bottom: 3px;
+  }
 }
 
 /* lg */
@@ -228,6 +243,11 @@ body {
     position: absolute;
     top: 80px;
     left: 110px;
+  }
+
+  #monthly-potential {
+    position: relative;
+    bottom: 3px;
   }
 }
 
