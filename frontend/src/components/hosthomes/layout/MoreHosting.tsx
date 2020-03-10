@@ -10,15 +10,15 @@ const financials = require('../../../../public/img/high/hosting-financials.jpg')
 
 export const MoreHosting: React.FC<{}> = () => {
   return (
-    <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto py-8'>
-      <div className='mb-3'>
+    <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto pt-8 pb-12 md:pt-0 pb-0 md:py-8'>
+      <div className='mb-4 md:mb-3'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
           className='text-2xl text-gray-750'>
           More about hosting
         </h3>
       </div>
-      <div className='flex'>
+      <div className='md:flex'>
         <MoreHostingCard
           img={setup}
           title='Setup'
