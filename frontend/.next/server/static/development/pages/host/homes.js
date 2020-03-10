@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -629,7 +629,7 @@ const HostingStepsCard = ({
   last
 }) => {
   return __jsx("div", {
-    className: "md:w-full lg:w-1/3 md:mb-12 lg:mb-0",
+    className: "md:w-full lg:w-1/3 mb-12 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
@@ -693,7 +693,7 @@ const HostingStepsCard = ({
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-750 leading-loose",
+    className: "text-gray-750 md:leading-loose",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
@@ -718,7 +718,7 @@ const HostingStepsCard = ({
     },
     __self: undefined
   }, "Learn how to start hosting")) : null) : __jsx("div", {
-    className: "w-85p",
+    className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -776,7 +776,7 @@ const HostingStepsCard = ({
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-gray-750 leading-loose",
+    className: "text-gray-750 md:leading-loose",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71
@@ -3008,21 +3008,21 @@ const quote = __webpack_require__(/*! ../../../../public/img/high/host-steps-quo
 
 const HostingSteps = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
+    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: undefined
   }, __jsx("div", {
-    className: "py-8",
+    className: "my-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex justify-center",
+    className: "mb-4 md:mb-0 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -3040,7 +3040,7 @@ const HostingSteps = () => {
     },
     __self: undefined
   })), __jsx("div", {
-    className: "flex justify-center mb-12 mt-2",
+    className: "flex md:justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -3050,7 +3050,7 @@ const HostingSteps = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-850 md:text-4xl lg:text-6xl tracking-tight",
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -3896,7 +3896,7 @@ const homes = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!****************************************!*\
   !*** multi ./src/pages/host/homes.jsx ***!
   \****************************************/

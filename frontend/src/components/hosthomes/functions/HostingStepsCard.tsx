@@ -14,7 +14,7 @@ export const HostingStepsCard: React.FC<Props> = ({
   last
 }) => {
   return (
-    <div className='md:w-full lg:w-1/3 md:mb-12 lg:mb-0'>
+    <div className='md:w-full lg:w-1/3 mb-12 lg:mb-0'>
       {last ? (
         <div>
           <div className='h-12 w-12'>
@@ -35,7 +35,7 @@ export const HostingStepsCard: React.FC<Props> = ({
           <div>
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='text-gray-750 leading-loose'>
+              className='text-gray-750 md:leading-loose'>
               {description}
             </p>
           </div>
@@ -51,7 +51,7 @@ export const HostingStepsCard: React.FC<Props> = ({
           ) : null}
         </div>
       ) : (
-        <div className='w-85p'>
+        <div className='md:w-85p'>
           <div className='h-12 w-12'>
             <svg
               className='h-full w-full'
@@ -70,7 +70,7 @@ export const HostingStepsCard: React.FC<Props> = ({
           <div>
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='text-gray-750 leading-loose'>
+              className='text-gray-750 md:leading-loose'>
               {description}
             </p>
           </div>
