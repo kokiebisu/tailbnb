@@ -3,10 +3,10 @@ import * as React from 'react';
 export const HostHomesCard: React.FC<{}> = () => {
   return (
     <div
-      style={{ top: 50, right: 50 }}
-      className='hidden lg:block bg-white absolute top-0 right-0 rounded'>
-      <div className='w-104 m-8'>
-        <div className='mb-6'>
+      id='card'
+      className='bg-white rounded flex justify-center lg:justify-start'>
+      <div className='w-full m-6 md:max-w-2.5xl lg:w-104 md:m-8'>
+        <div className='hidden lg:block mb-6'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
             className='text-gray-850 text-4.5xl leading-none'>

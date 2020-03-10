@@ -50,6 +50,7 @@ module.exports = {
       height: {
         '14': '3.5rem',
         '28': '7rem',
+        '60': '15rem',
         '72': '18rem',
         '80': '20rem',
         '88': '22rem',
@@ -149,6 +150,7 @@ module.exports = {
       maxWidth: {
         '100': '27.4rem',
         layout: '100rem',
+        '2.5xl': '45rem',
         '3.5xl': '52rem',
         '4.5xl': '60rem',
         '5.5xl': '68rem',
