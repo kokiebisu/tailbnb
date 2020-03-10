@@ -158,6 +158,12 @@ body {
   #quote-description {
     font-family: 'airbnb-book';
   }
+
+  #ready {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+  }
 }
 
 /* sm */
@@ -174,6 +180,12 @@ body {
 
   #quote-description {
     font-family: 'airbnb-book';
+  }
+
+  #ready {
+    position: absolute;
+    top: 60px;
+    left: 40px;
   }
 }
 
@@ -192,6 +204,12 @@ body {
   #quote-description {
     font-family: 'airbnb-book';
   }
+
+  #ready {
+    position: absolute;
+    top: 80px;
+    left: 110px;
+  }
 }
 
 /* lg */
@@ -204,6 +222,12 @@ body {
   #quote__payment {
     position: absolute;
     top: -40px;
+  }
+
+  #ready {
+    position: absolute;
+    top: 80px;
+    left: 110px;
   }
 }
 
