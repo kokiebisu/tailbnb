@@ -41,7 +41,7 @@ export const SimplePaymentsCard: React.FC<Props> = ({
           ) : null}
         </div>
       ) : (
-        <div className='w-85p text-gray-750'>
+        <div className='mb-10 md:mb-0 md:w-85p text-gray-750'>
           <div className='my-3'>
             <h3 style={{ fontFamily: 'airbnb-bold' }} className='text-2xl'>
               {title}
