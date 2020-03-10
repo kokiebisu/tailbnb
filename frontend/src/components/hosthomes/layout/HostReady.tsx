@@ -6,14 +6,14 @@ const ready = require('../../../../public/img/high/host-ready.jpg');
 export const HostReady: React.FC<{}> = () => {
   return (
     <div className='w-full md:max-w-4xl lg:max-w-7xl mx-auto mt-8 mb-12 relative'>
-      <div className='w-full h-112'>
+      <div className='w-full h-96 md:h-112'>
         <img className='h-full w-full object-cover' src={ready} />
       </div>
-      <div style={{ top: 80, left: 110 }} className='absolute top-0 left-0'>
+      <div id='ready'>
         <div className='mb-4'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
-            className='text-white text-6xl tracking-tighter'>
+            className='text-white text-4xl md:text-6xl tracking-tighter'>
             Ready to earn?
           </h3>
         </div>

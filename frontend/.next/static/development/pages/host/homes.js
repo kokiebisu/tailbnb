@@ -2863,7 +2863,7 @@ var HostReady = function HostReady() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full h-112",
+    className: "w-full h-96 md:h-112",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -2878,11 +2878,7 @@ var HostReady = function HostReady() {
     },
     __self: this
   })), __jsx("div", {
-    style: {
-      top: 80,
-      left: 110
-    },
-    className: "absolute top-0 left-0",
+    id: "ready",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -2899,7 +2895,7 @@ var HostReady = function HostReady() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-white text-6xl tracking-tighter",
+    className: "text-white text-4xl md:text-6xl tracking-tighter",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -3189,14 +3185,14 @@ var financials = __webpack_require__(/*! ../../../../public/img/high/hosting-fin
 
 var MoreHosting = function MoreHosting() {
   return __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto py-8",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto pt-8 pb-12 md:pt-0 pb-0 md:py-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
-    className: "mb-3",
+    className: "mb-4 md:mb-3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
