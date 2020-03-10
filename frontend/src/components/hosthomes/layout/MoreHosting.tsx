@@ -10,7 +10,7 @@ const financials = require('../../../../public/img/high/hosting-financials.jpg')
 
 export const MoreHosting: React.FC<{}> = () => {
   return (
-    <div className='w-full max-w-5xl mx-auto py-8'>
+    <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto py-8'>
       <div className='mb-3'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
