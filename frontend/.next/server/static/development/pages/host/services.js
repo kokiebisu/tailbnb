@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -101,17 +101,6 @@ module.exports =
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/findteam-quote-fb64bae420ce56c0ce112355a2613254.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/host-covered.jpg":
-/*!******************************************!*\
-  !*** ./public/img/high/host-covered.jpg ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/host-covered-04f7c8cc6b5aeb57e461fb6fc942b0b1.jpg";
 
 /***/ }),
 
@@ -1024,9 +1013,9 @@ const NewFooter = () => {
 
 /***/ }),
 
-/***/ "./src/components/hostservices/functions/FindTeamCard.jsx":
+/***/ "./src/components/hostservices/functions/FindTeamCard.tsx":
 /*!****************************************************************!*\
-  !*** ./src/components/hostservices/functions/FindTeamCard.jsx ***!
+  !*** ./src/components/hostservices/functions/FindTeamCard.tsx ***!
   \****************************************************************/
 /*! exports provided: FindTeamCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1036,11 +1025,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindTeamCard", function() { return FindTeamCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/functions/FindTeamCard.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/functions/FindTeamCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
- // interface Props {
-//   description: string;
-// }
 
 const FindTeamCard = ({
   description
@@ -1480,9 +1466,9 @@ const PeaceOfMindCard = ({
 
 /***/ }),
 
-/***/ "./src/components/hostservices/layout/FindTeam.jsx":
+/***/ "./src/components/hostservices/layout/FindTeam.tsx":
 /*!*********************************************************!*\
-  !*** ./src/components/hostservices/layout/FindTeam.jsx ***!
+  !*** ./src/components/hostservices/layout/FindTeam.tsx ***!
   \*********************************************************/
 /*! exports provided: FindTeam */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1492,15 +1478,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindTeam", function() { return FindTeam; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/FindTeamCard */ "./src/components/hostservices/functions/FindTeamCard.jsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/layout/FindTeam.jsx";
+/* harmony import */ var _functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/FindTeamCard */ "./src/components/hostservices/functions/FindTeamCard.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/layout/FindTeam.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Functions
 
  // Images
-
-const covered = __webpack_require__(/*! ../../../../public/img/high/host-covered.jpg */ "./public/img/high/host-covered.jpg"); // Images
-
 
 const quote = __webpack_require__(/*! ../../../../public/img/high/findteam-quote.jpg */ "./public/img/high/findteam-quote.jpg");
 
@@ -1509,21 +1492,21 @@ const FindTeam = () => {
     className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto pt-4 pb-4 md:pb-16 lg:pb-0 md:pt-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx("div", {
     className: "my-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 13
     },
     __self: undefined
   }, __jsx("div", {
     className: "mb-4 md:mb-10 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 14
     },
     __self: undefined
   }, __jsx("div", {
@@ -1534,14 +1517,14 @@ const FindTeam = () => {
     className: "bg-gray-650 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 15
     },
     __self: undefined
   })), __jsx("div", {
     className: "flex md:justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("h3", {
@@ -1551,14 +1534,14 @@ const FindTeam = () => {
     className: "text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 21
     },
     __self: undefined
   }, "Find a local hosting team")), __jsx("div", {
     className: "lg:flex lg:mt-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("div", {
@@ -1568,130 +1551,130 @@ const FindTeam = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx("div", {
     className: "lg:w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("div", {
     className: "text-gray-750 leading-relaxed",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 32
     },
     __self: undefined
   }, __jsx("div", {
     className: "my-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
     },
     __self: undefined
   }, "Now you can provide high-quality hospitality and earn money with help from a hosting team.")), __jsx("div", {
     className: "my-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 40
     },
     __self: undefined
   }, "Hosting teams are separate businesses that provide professional hosting services to help you manage your listing. If you qualify, we\u2019ll match you with a hosting team in your area.")), __jsx("div", {
     className: "my-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 47
     },
     __self: undefined
   }, __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 48
     },
     __self: undefined
   }, "For a fee\u2014generally around 20% per booking\u2014hosting teams will manage everything from setup and booking to checkout and cleaning."))))), __jsx("div", {
     className: "md:w-full lg:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 57
     },
     __self: undefined
   }, __jsx(_functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__["FindTeamCard"], {
     description: "Guest check-in and checkout",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 58
     },
     __self: undefined
   }), __jsx(_functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__["FindTeamCard"], {
     description: "Housekeeping and maintenance between stays",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 59
     },
     __self: undefined
   }), __jsx(_functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__["FindTeamCard"], {
     description: "Laundering and replacing linens",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 60
     },
     __self: undefined
   }), __jsx(_functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__["FindTeamCard"], {
     description: "24/7 guest support",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 61
     },
     __self: undefined
   }), __jsx(_functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__["FindTeamCard"], {
     description: "Listing creation with competitive pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 62
     },
     __self: undefined
   }), __jsx(_functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__["FindTeamCard"], {
     description: "Booking request management",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 63
     },
     __self: undefined
   }), __jsx(_functions_FindTeamCard__WEBPACK_IMPORTED_MODULE_1__["FindTeamCard"], {
     description: "Professional photography",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 64
     },
     __self: undefined
   }))))), __jsx("div", {
     className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col md:flex-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 69
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full md:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 70
     },
     __self: undefined
   }, __jsx("img", {
@@ -1699,28 +1682,28 @@ const FindTeam = () => {
     src: quote,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 71
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-full md:w-1/2 relative flex items-center md:justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 73
     },
     __self: undefined
   }, __jsx("div", {
     className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx("div", {
     id: "quote__findteam",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 75
     },
     __self: undefined
   }, __jsx("p", {
@@ -1730,28 +1713,28 @@ const FindTeam = () => {
     className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 76
     },
     __self: undefined
   }, "\u201C")), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 84
     },
     __self: undefined
   }, __jsx("div", {
     className: "mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 85
     },
     __self: undefined
   }, __jsx("div", {
     className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 86
     },
     __self: undefined
   }, __jsx("p", {
@@ -1762,14 +1745,14 @@ const FindTeam = () => {
     className: "text-lg lg:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 87
     },
     __self: undefined
   }, "We probably wouldn't host on Airbnb if we didn't have a hosting team."))), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 99
     },
     __self: undefined
   }, __jsx("p", {
@@ -1779,20 +1762,20 @@ const FindTeam = () => {
     className: "text-sm md:text-base text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 100
     },
     __self: undefined
   }, "Sophie and Mason host in New York to earn extra income")), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 106
     },
     __self: undefined
   }, __jsx("div", {
     className: "py-3 px-5 border-2 border-gray-850 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 107
     },
     __self: undefined
   }, __jsx("p", {
@@ -1802,7 +1785,7 @@ const FindTeam = () => {
     className: "text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 108
     },
     __self: undefined
   }, "Learn more"))))))));
@@ -1810,9 +1793,9 @@ const FindTeam = () => {
 
 /***/ }),
 
-/***/ "./src/components/hostservices/layout/GetStarted.jsx":
+/***/ "./src/components/hostservices/layout/GetStarted.tsx":
 /*!***********************************************************!*\
-  !*** ./src/components/hostservices/layout/GetStarted.jsx ***!
+  !*** ./src/components/hostservices/layout/GetStarted.tsx ***!
   \***********************************************************/
 /*! exports provided: GetStarted */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1823,7 +1806,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _functions_GetStartedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/GetStartedCard */ "./src/components/hostservices/functions/GetStartedCard.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/layout/GetStarted.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/layout/GetStarted.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Functions
 
@@ -1926,9 +1909,9 @@ const GetStarted = () => {
 
 /***/ }),
 
-/***/ "./src/components/hostservices/layout/HostServicesBanner.jsx":
+/***/ "./src/components/hostservices/layout/HostServicesBanner.tsx":
 /*!*******************************************************************!*\
-  !*** ./src/components/hostservices/layout/HostServicesBanner.jsx ***!
+  !*** ./src/components/hostservices/layout/HostServicesBanner.tsx ***!
   \*******************************************************************/
 /*! exports provided: HostServicesBanner */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1938,7 +1921,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostServicesBanner", function() { return HostServicesBanner; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/layout/HostServicesBanner.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostservices/layout/HostServicesBanner.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const HostServicesBanner = () => {
@@ -2036,7 +2019,6 @@ const HostServicesBanner = () => {
     },
     __self: undefined
   }, __jsx("video", {
-    type: "video/mp4",
     autoPlay: true,
     loop: true,
     className: "h-full w-full",
@@ -2705,9 +2687,9 @@ const ReadyConnect = () => {
 
 /***/ }),
 
-/***/ "./src/pages/host/services.jsx":
+/***/ "./src/pages/host/services.tsx":
 /*!*************************************!*\
-  !*** ./src/pages/host/services.jsx ***!
+  !*** ./src/pages/host/services.tsx ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2717,14 +2699,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_hostservices_layout_HostServicesHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/hostservices/layout/HostServicesHeader */ "./src/components/hostservices/layout/HostServicesHeader.tsx");
-/* harmony import */ var _components_hostservices_layout_HostServicesBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/hostservices/layout/HostServicesBanner */ "./src/components/hostservices/layout/HostServicesBanner.jsx");
-/* harmony import */ var _components_hostservices_layout_FindTeam__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/hostservices/layout/FindTeam */ "./src/components/hostservices/layout/FindTeam.jsx");
-/* harmony import */ var _components_hostservices_layout_GetStarted__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/hostservices/layout/GetStarted */ "./src/components/hostservices/layout/GetStarted.jsx");
+/* harmony import */ var _components_hostservices_layout_HostServicesBanner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/hostservices/layout/HostServicesBanner */ "./src/components/hostservices/layout/HostServicesBanner.tsx");
+/* harmony import */ var _components_hostservices_layout_FindTeam__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/hostservices/layout/FindTeam */ "./src/components/hostservices/layout/FindTeam.tsx");
+/* harmony import */ var _components_hostservices_layout_GetStarted__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/hostservices/layout/GetStarted */ "./src/components/hostservices/layout/GetStarted.tsx");
 /* harmony import */ var _components_hostservices_layout_PeaceOfMind__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/hostservices/layout/PeaceOfMind */ "./src/components/hostservices/layout/PeaceOfMind.tsx");
 /* harmony import */ var _components_hostservices_layout_QuestionsAnswered__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/hostservices/layout/QuestionsAnswered */ "./src/components/hostservices/layout/QuestionsAnswered.tsx");
 /* harmony import */ var _components_hostservices_layout_ReadyConnect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/hostservices/layout/ReadyConnect */ "./src/components/hostservices/layout/ReadyConnect.tsx");
 /* harmony import */ var _components_functions_NewFooter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/functions/NewFooter */ "./src/components/functions/NewFooter.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/services.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/services.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
@@ -2792,14 +2774,14 @@ const services = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*******************************************!*\
-  !*** multi ./src/pages/host/services.jsx ***!
+  !*** multi ./src/pages/host/services.tsx ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/host/services.jsx */"./src/pages/host/services.jsx");
+module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/host/services.tsx */"./src/pages/host/services.tsx");
 
 
 /***/ }),
