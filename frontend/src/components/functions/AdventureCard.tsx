@@ -33,7 +33,7 @@ export const AdventureCard: React.FC<Prop> = ({
           className='text-sm md:text-base'
           style={{ fontFamily: 'airbnb-book' }}>
           <div className='my-1'>
-            <p className='leading-4'>{title}</p>
+            <p className='leading-4 truncate'>{title}</p>
           </div>
           <div>
             <p>

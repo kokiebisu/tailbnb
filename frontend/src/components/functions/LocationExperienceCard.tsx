@@ -35,12 +35,12 @@ export const LocationExperienceCard: React.FC<Props> = ({
           className='text-sm md:text-base'
           style={{ fontFamily: 'airbnb-book' }}>
           <div className='my-1'>
-            <p className='leading-4'>{title}</p>
+            <p className='truncate'>{title}</p>
           </div>
           <div>
             <p>From ${cost}/person</p>
           </div>
-          <div className='flex items-center justify-start flex-wrap'>
+          <div className='flex items-center'>
             <div className='h-2 w-2 md:h-3 md:w-3'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
