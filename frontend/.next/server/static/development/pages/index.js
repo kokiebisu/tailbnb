@@ -4376,27 +4376,46 @@ const Location = ({
   price
 }) => {
   return __jsx("div", {
-    className: "w-30/31 py-3 my-2",
+    className: "w-90p py-3 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
-  }, __jsx("h3", {
-    className: "font-semibold",
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: undefined
-  }, location), __jsx("p", {
-    className: "text-xs font-normal text-gray-650 text-sm",
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: undefined
-  }, "$", price, "/night average"));
+  }, location)), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "text-xs text-gray-650 md:text-sm whitespace-normal",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "$", price, "/night average")));
 };
 
 /***/ }),
@@ -4891,7 +4910,7 @@ const TopRatedCard = ({
     },
     __self: undefined
   })), __jsx("div", {
-    className: "mt-2 mb-1",
+    className: "mt-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -4899,7 +4918,7 @@ const TopRatedCard = ({
     __self: undefined
   }, __jsx("p", {
     id: "card_category",
-    className: "uppercase text-xs",
+    className: "uppercase text-2xs md:text-xs",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30

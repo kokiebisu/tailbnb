@@ -26,8 +26,8 @@ export const TopRatedCard: React.FC<Props> = ({
         <div>
           <img className='w-full h-full rounded-lg' src={img} />
         </div>
-        <div className='mt-2 mb-1'>
-          <p id='card_category' className='uppercase text-xs'>
+        <div className='mt-2'>
+          <p id='card_category' className='uppercase text-2xs md:text-xs'>
             {location}
           </p>
         </div>
