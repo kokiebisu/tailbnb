@@ -1,7 +1,5 @@
 
-<p align="center">
-  <img width="200" style="https://cdn.dribbble.com/users/385247/screenshots/3623803/01_06_2017_airbnb_800x600.gif" alt="airbnb"/>
-</p>
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/43525282/76377394-03088680-6308-11ea-9ea6-d43d8f0642be.gif)
 
 
 # 🏠 Nextbnb
