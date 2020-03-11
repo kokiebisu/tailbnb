@@ -21,7 +21,7 @@ export const HostHomesHeader: React.FC<{}> = () => {
           </a>
         </div>
       </div>
-      <div className='px-4 md:px-0 flex bg-white w-full border-b border-gray-300 items-center justify-end lg:justify-between fixed bottom-0 border-t border-gray-300 lg:border-none lg:sticky lg:top-0 z-50'>
+      <div className='px-4 md:px-0 flex bg-white w-full lg:border-b border-gray-300 items-center justify-end lg:justify-between fixed bottom-0 border-t border-gray-300 lg:sticky lg:top-0 z-50'>
         <div className='hidden lg:flex items-center justify-start'>
           <div className='ml-6 mr-3'>
             <a href='/'>

@@ -171,6 +171,8 @@ body {
   }
 }
 
+/* Host Homes Section */
+
 /* sm */
 @media (min-width: 640px) {
   #quote__steps {
@@ -258,6 +260,24 @@ body {
   #monthly-potential {
     position: relative;
     bottom: 3px;
+  }
+}
+
+/* Host Services Section */
+
+/* sm */
+@media (min-width: 640px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  #quote__findteam {
+    position: absolute;
+    top: 70px;
   }
 }
 
