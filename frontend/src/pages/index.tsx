@@ -10,7 +10,7 @@ import Tomorrow from '../components/containers/Tomorrow';
 import NextWeek from '../components/containers/NextWeek';
 import Adventures from '../components/containers/Adventures';
 import Stay from '../components/containers/Stay';
-import { TopRated } from '../components/containers/TopRated';
+import TopRated from '../components/containers/TopRated';
 import { Popular } from '../components/containers/Popular';
 import { Featured } from '../components/containers/Featured';
 import { Footer } from '../components/layout/Footer';

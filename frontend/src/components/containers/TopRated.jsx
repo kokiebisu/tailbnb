@@ -5,18 +5,15 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import withSizes from 'react-sizes';
 
 // Components
-import { LocationExperienceCard } from '../functions/LocationExperienceCard';
+import { TopRatedCard } from '../functions/TopRatedCard';
 import { ShowAll } from '../ShowAll';
 
 // Wrapper
 import { Section } from '../wrapper/Section';
 
-const GET_LOCATION_EXPERIENCES = gql`
-  query LocationExperiences($available: String, $location: String) {
-    experiences(
-      where: { available: $available, location: $location }
-      first: 6
-    ) {
+const GET_EXPERIENCES = gql`
+  query {
+    experiences {
       id
       title
       cost
@@ -24,8 +21,6 @@ const GET_LOCATION_EXPERIENCES = gql`
       reviews
       location
       img
-      available
-      category
     }
   }
 `;
@@ -44,7 +39,7 @@ const renderContent = (data, number) => {
   for (let i = 0; i < number; i++) {
     content.push(
       <div className='w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5'>
-        <LocationExperienceCard
+        <TopRatedCard
           key={i}
           id={data?.experiences[i].id}
           img={data?.experiences[i].img}
@@ -52,7 +47,7 @@ const renderContent = (data, number) => {
           cost={data?.experiences[i].cost}
           ratings={data?.experiences[i].ratings}
           reviews={data?.experiences[i].reviews}
-          category={data?.experiences[i].category}
+          location={data?.experiences[i].location}
         />
       </div>
     );
@@ -66,7 +61,7 @@ const renderContent = (data, number) => {
 //   cost: number;
 //   ratings: number;
 //   reviews: number;
-//   category: string;
+//   location: string;
 //   img: string;
 // }
 
@@ -74,20 +69,21 @@ const renderContent = (data, number) => {
 //   experiences: Experience[];
 // }
 
-const Today = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
-  const { loading, error, data } = useQuery(GET_LOCATION_EXPERIENCES, {
-    variables: {
-      available: 'Today',
-      location: 'Vancouver'
-    }
-  });
+export const TopRated = ({
+  isMobile,
+  isTablet,
+  isLaptop,
+  isDesktop,
+  isLargeDesktop
+}) => {
+  const { loading, error, data } = useQuery(GET_EXPERIENCES);
 
   if (error) return `Error! ${error.message}`;
 
   return (
     <>
       <Section
-        title='Today in Vancouver'
+        title='Top-rated experiences'
         phrase='Book activities led by local hosts on your next trip.'>
         <div className='flex items-start justify-start flex-wrap w-full'>
           {loading ? (
@@ -112,4 +108,4 @@ const Today = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
   );
 };
 
-export default withSizes(mapSizesToProps)(Today);
+export default withSizes(mapSizesToProps)(TopRated);
