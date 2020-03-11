@@ -19,44 +19,69 @@ export const HelpModal = ({ setHelpModal }) => {
   const questions = [
     {
       title: 'How do I create an account?',
-      answer:
+      abbranswer:
         "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
+    },
+    {
+      title: 'How do I reset or change my password?',
+      abbranswer:
+        "If you've forgotten your password, or you're having trouble logging in to your Airbnb account, go to the..."
+    },
+    {
+      title:
+        'What should I do if someone asks me to pay outside of the Airbnb website?',
+      abbranswer:
+        "Don't send them money, and let us know. We'll never ask you to pay anything outside of our side,..."
+    },
+    {
+      title: 'Why should I pay and communicate through Airbnb directly?',
+      abbranswer:
+        "Paying and communicating through Airbnb helps ensure that you're protected under our Terms of..."
+    },
+    {
+      title: 'What is the Airbnb cancellation policy for stays?',
+      abbranswer:
+        'On Airbnb, hosts set the cancellation policies that guests can book with. The terms vary depending on...'
     }
   ];
 
   return (
     <div className='bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl'>
-      <div className='relative bg-white fixed top-0 w-full h-16 flex justify-center items-center border-b border-gray-300'>
-        <div style={{ top: 20 }} className='absolute top-0'>
-          <h3 style={{ fontFamily: 'airbnb-medium' }} className='text-gray-750'>
-            Recommended help
-          </h3>
-        </div>
-        <button
-          onClick={() => setHelpModal(false)}
-          className='absolute top-0 right-0 '>
-          <div className='pt-6 pr-5'>
-            <svg
-              className='h-4 w-4'
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 512.001 512.001'>
-              <g>
+      <div className='relative h-16 border-b border-gray-300'>
+        <div className='absolute bg-white fixed top-0 w-full flex justify-center items-center'>
+          <div style={{ top: 20 }} className='absolute top-0'>
+            <h3
+              style={{ fontFamily: 'airbnb-medium' }}
+              className='text-gray-750'>
+              Recommended help
+            </h3>
+          </div>
+          <button
+            onClick={() => setHelpModal(false)}
+            className='absolute top-0 right-0 '>
+            <div className='pt-6 pr-5'>
+              <svg
+                className='h-4 w-4'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 512.001 512.001'>
                 <g>
-                  <path
-                    d='M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+                  <g>
+                    <path
+                      d='M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
 L284.286,256.002z'
-                  />
+                    />
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </div>
-        </button>
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
-      <div className='relative'>
-        <div className='top-0 absolute h-156 mx-8 overflow-hidden overflow-y-auto'>
+      <div className='relative h-160'>
+        <div className='top-0 absolute h-full px-8 overflow-hidden overflow-y-scroll'>
           <div className='mt-5'>
             <p
               style={{ fontFamily: 'airbnb-bold' }}
@@ -96,23 +121,23 @@ L284.286,256.002z'
             <div>
               <HelpCard
                 title={questions[0].title}
-                answer={questions[0].answer}
+                answer={questions[0].abbranswer}
               />
               <HelpCard
-                title={questions[0].title}
-                answer={questions[0].answer}
+                title={questions[1].title}
+                answer={questions[1].abbranswer}
               />
               <HelpCard
-                title={questions[0].title}
-                answer={questions[0].answer}
+                title={questions[2].title}
+                answer={questions[2].abbranswer}
               />
               <HelpCard
-                title={questions[0].title}
-                answer={questions[0].answer}
+                title={questions[3].title}
+                answer={questions[3].abbranswer}
               />
               <HelpCard
-                title={questions[0].title}
-                answer={questions[0].answer}
+                title={questions[4].title}
+                answer={questions[4].abbranswer}
               />
             </div>
             <div className='mt-6'>
@@ -122,15 +147,37 @@ L284.286,256.002z'
                 Explore More Articles By Topic
               </p>
             </div>
-            <div className='mb-8'>
-              <HelpAdditional title='Reservation requests' />
-              <HelpAdditional title='Contacting hosts' />
-              <HelpAdditional title='prices & fees' />
+            <div className='mb-6'>
+              <HelpAdditional title='Reservation requests' last={false} />
+              <HelpAdditional title='Contacting hosts' last={false} />
+              <HelpAdditional title='Prices & fees' last={true} />
             </div>
           </div>
         </div>
       </div>
-      <div className='w-full fixed bottom-0 bg-red-550 h-28'>what </div>
+      <div className='absolute h-24 fixed bottom-0'>
+        <div className='w-full bg-white fixed bottom-0 h-24 flex flex-col items-center border-t border-gray-300'>
+          <div style={{ left: 50, top: 10 }} className='w-80 absolute top-0'>
+            <button
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='w-9/12 bg-green-850 py-3 text-white rounded'>
+              <p>Visit the Help Centre</p>
+            </button>
+          </div>
+          <div
+            style={{ left: 160, bottom: 5 }}
+            className='w-80 absolute left-0 bottom-0 my-1'>
+            <div className=''>
+              <a
+                style={{ fontFamily: 'airbnb-book' }}
+                className='underline text-green-850 text-sm'
+                href='#'>
+                Give Feedback
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -159,16 +206,7 @@ L284.286,256.002z'
 
 </div>
 <div className='flex flex-col justify-end items-center my-2'>
-<button
-  style={{ fontFamily: 'airbnb-bold' }}
-  className='w-11/12 bg-green-850 py-2 text-white rounded'>
-  Visit the Help Centre
-</button>
-<a
-  style={{ fontFamily: 'airbnb-book' }}
-  className='border-b border-green-850 text-green-850 text-sm my-1'
-  href='#'>
-  Give Feedback
-</a>
+
+
 </div> */
 }

@@ -4213,20 +4213,20 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const HelpAdditional = ({
-  title
+  title,
+  last
 }) => {
-  return __jsx("div", {
-    className: "border-b border-gray-300",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, last ? __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-between py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 13
     },
     __self: undefined
   }, __jsx("h3", {
@@ -4236,13 +4236,13 @@ const HelpAdditional = ({
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: undefined
   }, title), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("svg", {
@@ -4254,29 +4254,90 @@ const HelpAdditional = ({
     viewBox: "0 0 512.011 512.011",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("path", {
     d: "M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0 s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667 C514.096,145.416,514.096,131.933,505.755,123.592z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 25
     },
     __self: undefined
-  })))))));
+  }))))))) : __jsx("div", {
+    className: "border-b border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "flex items-center justify-between py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, title), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    style: {
+      fill: '#000000'
+    },
+    className: "w-2 h-2",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512.011 512.011",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0 s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667 C514.096,145.416,514.096,131.933,505.755,123.592z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }))))))));
 };
 
 /***/ }),
@@ -7283,20 +7344,39 @@ const HelpModal = ({
 
   const questions = [{
     title: 'How do I create an account?',
-    answer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
+    abbranswer: "If you don't have an Airbnb account yet, go to airbnb.com and click Sign Up. You can sign up using your email address, Facebook account, Google account, or Apple ID. Signing up and creating an Airbnb account is free. <br>After you sign up, be sure to complete your account before booking a reservation. "
+  }, {
+    title: 'How do I reset or change my password?',
+    abbranswer: "If you've forgotten your password, or you're having trouble logging in to your Airbnb account, go to the..."
+  }, {
+    title: 'What should I do if someone asks me to pay outside of the Airbnb website?',
+    abbranswer: "Don't send them money, and let us know. We'll never ask you to pay anything outside of our side,..."
+  }, {
+    title: 'Why should I pay and communicate through Airbnb directly?',
+    abbranswer: "Paying and communicating through Airbnb helps ensure that you're protected under our Terms of..."
+  }, {
+    title: 'What is the Airbnb cancellation policy for stays?',
+    abbranswer: 'On Airbnb, hosts set the cancellation policies that guests can book with. The terms vary depending on...'
   }];
   return __jsx("div", {
     className: "bg-white z-100 md:block fixed top-0 right-0 h-screen w-104 shadow-xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx("div", {
-    className: "relative bg-white fixed top-0 w-full h-16 flex justify-center items-center border-b border-gray-300",
+    className: "relative h-16 border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 50
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "absolute bg-white fixed top-0 w-full flex justify-center items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("div", {
@@ -7306,7 +7386,7 @@ const HelpModal = ({
     className: "absolute top-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("h3", {
@@ -7316,7 +7396,7 @@ const HelpModal = ({
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 53
     },
     __self: undefined
   }, "Recommended help")), __jsx("button", {
@@ -7324,14 +7404,14 @@ const HelpModal = ({
     className: "absolute top-0 right-0 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("div", {
     className: "pt-6 pr-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 62
     },
     __self: undefined
   }, __jsx("svg", {
@@ -7340,47 +7420,47 @@ const HelpModal = ({
     viewBox: "0 0 512.001 512.001",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 63
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 67
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 68
     },
     __self: undefined
   }, __jsx("path", {
     d: "M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717\nL34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859\nc-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287\nl221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285\nL284.286,256.002z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 69
     },
     __self: undefined
-  }))))))), __jsx("div", {
-    className: "relative",
+  })))))))), __jsx("div", {
+    className: "relative h-160",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx("div", {
-    className: "top-0 absolute h-156 mx-8 overflow-hidden overflow-y-auto",
+    className: "top-0 absolute h-full px-8 overflow-hidden overflow-y-scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 84
     },
     __self: undefined
   }, __jsx("div", {
     className: "mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 85
     },
     __self: undefined
   }, __jsx("p", {
@@ -7390,7 +7470,7 @@ const HelpModal = ({
     className: "text-gray-750 mb-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 86
     },
     __self: undefined
   }, "Search by keyword")), __jsx("div", {
@@ -7398,14 +7478,14 @@ const HelpModal = ({
     className: "flex border border-gray-300 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 92
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/12 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 93
     },
     __self: undefined
   }, __jsx("svg", {
@@ -7417,21 +7497,21 @@ const HelpModal = ({
     "aria-hidden": "true",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 94
     },
     __self: undefined
   }, __jsx("path", {
     d: "m10.7227 19.9083c-4.919-.706-8.336-5.266-7.63-10.185.704-4.919 5.264-8.336 10.184-7.631 4.919.706 8.336 5.265 7.632 10.185-.706 4.92-5.266 8.336-10.186 7.631m11.65 2.76-3.729-4.196c1.706-1.514 2.905-3.618 3.254-6.053.783-5.467-3.013-10.533-8.479-11.317-5.467-.784-10.534 3.013-11.316 8.48-.784 5.466 3.012 10.532 8.478 11.315 2.675.384 5.254-.329 7.283-1.798l3.762 4.233c.184.207.5.225.706.042.206-.184.225-.5.041-.706",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 99
     },
     __self: undefined
   }))), __jsx("div", {
     className: "w-11/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 102
     },
     __self: undefined
   }, __jsx("input", {
@@ -7445,21 +7525,21 @@ const HelpModal = ({
     placeholder: "E.g. reservation status",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 103
     },
     __self: undefined
   }))), __jsx("div", {
     className: "mt-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 113
     },
     __self: undefined
   }, __jsx("div", {
     className: "mb-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 114
     },
     __self: undefined
   }, __jsx("p", {
@@ -7469,60 +7549,60 @@ const HelpModal = ({
     className: "uppercase text-gray-750 text-xs",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 115
     },
     __self: undefined
   }, "Recommended Articles")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 121
     },
     __self: undefined
   }, __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
     title: questions[0].title,
-    answer: questions[0].answer,
+    answer: questions[0].abbranswer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 122
     },
     __self: undefined
   }), __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
+    title: questions[1].title,
+    answer: questions[1].abbranswer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 126
     },
     __self: undefined
   }), __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
+    title: questions[2].title,
+    answer: questions[2].abbranswer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 130
     },
     __self: undefined
   }), __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
+    title: questions[3].title,
+    answer: questions[3].abbranswer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 134
     },
     __self: undefined
   }), __jsx(_functions_HelpCard__WEBPACK_IMPORTED_MODULE_1__["HelpCard"], {
-    title: questions[0].title,
-    answer: questions[0].answer,
+    title: questions[4].title,
+    answer: questions[4].abbranswer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 138
     },
     __self: undefined
   })), __jsx("div", {
     className: "mt-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 143
     },
     __self: undefined
   }, __jsx("p", {
@@ -7532,45 +7612,111 @@ const HelpModal = ({
     className: "uppercase text-gray-750 text-xs",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 144
     },
     __self: undefined
   }, "Explore More Articles By Topic")), __jsx("div", {
-    className: "mb-8",
+    className: "mb-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 150
     },
     __self: undefined
   }, __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
     title: "Reservation requests",
+    last: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 151
     },
     __self: undefined
   }), __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
     title: "Contacting hosts",
+    last: false,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 152
     },
     __self: undefined
   }), __jsx(_functions_HelpAdditional__WEBPACK_IMPORTED_MODULE_2__["HelpAdditional"], {
-    title: "prices & fees",
+    title: "Prices & fees",
+    last: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 153
     },
     __self: undefined
   }))))), __jsx("div", {
-    className: "w-full fixed bottom-0 bg-red-550 h-28",
+    className: "absolute h-24 fixed bottom-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 158
     },
     __self: undefined
-  }, "what "));
+  }, __jsx("div", {
+    className: "w-full bg-white fixed bottom-0 h-24 flex flex-col items-center border-t border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 159
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      left: 50,
+      top: 10
+    },
+    className: "w-80 absolute top-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 160
+    },
+    __self: undefined
+  }, __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "w-9/12 bg-green-850 py-3 text-white rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 161
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 164
+    },
+    __self: undefined
+  }, "Visit the Help Centre"))), __jsx("div", {
+    style: {
+      left: 160,
+      bottom: 5
+    },
+    className: "w-80 absolute left-0 bottom-0 my-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 167
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 170
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "underline text-green-850 text-sm",
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 171
+    },
+    __self: undefined
+  }, "Give Feedback"))))));
 };
 {
   /* <div className='w-full flex justify-center items-center'>
@@ -7591,17 +7737,6 @@ const HelpModal = ({
   </div>
   </div>
   <div className='flex flex-col justify-end items-center my-2'>
-  <button
-  style={{ fontFamily: 'airbnb-bold' }}
-  className='w-11/12 bg-green-850 py-2 text-white rounded'>
-  Visit the Help Centre
-  </button>
-  <a
-  style={{ fontFamily: 'airbnb-book' }}
-  className='border-b border-green-850 text-green-850 text-sm my-1'
-  href='#'>
-  Give Feedback
-  </a>
   </div> */
 }
 
