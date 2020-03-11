@@ -28,6 +28,7 @@
     "**/*.tsx",
     "src/components/containers/Stay.js",
     "src/components/layout/Header.tsx",
-    "src/components/modals/MenuModal.jsx"
+    "src/components/modals/MenuModal.jsx",
+    "src/components/modals/HelpModal.jsx"
   ]
 }
