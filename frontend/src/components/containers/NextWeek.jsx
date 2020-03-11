@@ -30,28 +30,6 @@ const GET_LOCATION_EXPERIENCES = gql`
   }
 `;
 
-const mapSizesToProps = ({ width }) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-});
-
-// interface Experience {
-//   id: string;
-//   title: string;
-//   cost: number;
-//   ratings: number;
-//   reviews: number;
-//   category: string;
-//   img: string;
-// }
-
-// interface ExperienceData {
-//   experiences: Experience[];
-// }
-
 const renderContent = (data, number) => {
   var content = [];
 
@@ -74,7 +52,29 @@ const renderContent = (data, number) => {
   return content;
 };
 
-const Tomorrow = ({
+const mapSizesToProps = ({ width }) => ({
+  isMobile: width < 767,
+  isTablet: width > 767 && width < 1023,
+  isLaptop: width > 1023 && width < 1279,
+  isDesktop: width > 1279 && width < 1529,
+  isLargeDesktop: width > 1529
+});
+
+// interface Experience {
+//   id: string;
+//   title: string;
+//   cost: number;
+//   ratings: number;
+//   reviews: number;
+//   category: string;
+//   img: string;
+// }
+
+// interface ExperienceData {
+//   experiences: Experience[];
+// }
+
+const NextWeek = ({
   isMobile,
   isTablet,
   isLaptop,
@@ -83,7 +83,7 @@ const Tomorrow = ({
 }) => {
   const { loading, error, data } = useQuery(GET_LOCATION_EXPERIENCES, {
     variables: {
-      available: 'Tomorrow',
+      available: 'Next Week',
       location: 'Vancouver'
     }
   });
@@ -93,7 +93,7 @@ const Tomorrow = ({
   return (
     <>
       <Section
-        title='Tomorrow in Vancouver'
+        title='Next Week in Vancouver'
         phrase='Book activities led by local hosts on your next trip.'>
         <div className='flex items-start justify-start flex-wrap w-full'>
           {loading ? (
@@ -118,4 +118,4 @@ const Tomorrow = ({
   );
 };
 
-export default withSizes(mapSizesToProps)(Tomorrow);
+export default withSizes(mapSizesToProps)(NextWeek);
