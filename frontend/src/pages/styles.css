@@ -145,29 +145,29 @@ body {
 
 /* xs */
 @media (min-width: 290px) {
-  #quote__steps {
-    position: absolute;
-    top: 0px;
+  #card_category {
+    font-family: 'airbnb-bold';
   }
+}
 
-  #quote__payment {
-    position: absolute;
-    top: 0px;
+/* Landing Section */
+@media (min-width: 640px) {
+  #card_category {
+    font-family: 'airbnb-medium';
   }
+}
 
-  #quote-description {
-    font-family: 'airbnb-book';
+/* md */
+@media (min-width: 768px) {
+  #card_category {
+    font-family: 'airbnb-medium';
   }
+}
 
-  #ready {
-    position: absolute;
-    top: 60px;
-    left: 40px;
-  }
-
-  #monthly-potential {
-    position: relative;
-    bottom: 0;
+/* lg */
+@media (min-width: 1024px) {
+  #card_category {
+    font-family: 'airbnb-medium';
   }
 }
 

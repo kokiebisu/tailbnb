@@ -21,15 +21,28 @@ export const AdventureCard: React.FC<Prop> = ({
   return (
     <Link href='/adventures/[id]' as={`/adventures/${id}`}>
       <div className='w-30/31 cursor-pointer'>
-        <img className='w-full rounded-lg' src={img} />
-
-        <p className='uppercase text-xs my-2 font-semibold'>{country}</p>
-        <p className='my-1 w-5/6'>{title}</p>
-        <p>
-          From ${cost} / person
-          <span> · </span>
-          {period} days
-        </p>
+        <div>
+          <img className='w-full h-full rounded-lg' src={img} />
+        </div>
+        <div className='mt-2 mb-1 md:mb-2'>
+          <p id='card_category' className='uppercase text-2xs md:text-xs'>
+            {country}
+          </p>
+        </div>
+        <div
+          className='text-sm md:text-base'
+          style={{ fontFamily: 'airbnb-book' }}>
+          <div className='my-1'>
+            <p className='leading-4 truncate'>{title}</p>
+          </div>
+          <div>
+            <p>
+              From ${cost} / person
+              <span> · </span>
+              {period} days
+            </p>
+          </div>
+        </div>
       </div>
     </Link>
   );
