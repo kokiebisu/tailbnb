@@ -9,6 +9,7 @@ import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
 import { CurrencyModal } from '../modals/CurrencyModal';
 import { LanguageModal } from '../modals/LanguageModal';
+import { MenuModal } from '../modals/MenuModal';
 
 // Images
 const background = require('../../../public/img/high/airbnb-background.jpg');
@@ -19,6 +20,7 @@ const background = require('../../../public/img/high/airbnb-background.jpg');
 
 export const Header = ({ switchMenuModal }) => {
   let arrow = useRef(null);
+
   const [languageModal, setLanguageModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
   const [helpModal, setHelpModal] = useState(false);
@@ -26,13 +28,13 @@ export const Header = ({ switchMenuModal }) => {
   const [currency, setCurrency] = useState('$ CAD');
   const [type, setType] = useState('');
 
-  useEffect(() => {
-    TweenMax.from(arrow, 1, {
-      rotation: '180_cw',
-      opacity: 0.3,
-      ease: Power3.easeOut
-    });
-  });
+  // useEffect(() => {
+  //   TweenMax.from(arrow, 1, {
+  //     rotation: '180_cw',
+  //     opacity: 0.3,
+  //     ease: Power3.easeOut
+  //   });
+  // });
 
   const switchLanguageModal = () => {
     setLanguageModal(!languageModal);
