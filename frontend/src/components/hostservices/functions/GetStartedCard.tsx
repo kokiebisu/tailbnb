@@ -1,30 +1,56 @@
 import * as React from 'react';
 
 interface Props {
+  icon: string;
   title: string;
   description: string;
-  link: boolean;
   last: boolean;
 }
 
 export const GetStartedCard: React.FC<Props> = ({
+  icon,
   title,
   description,
-  link,
   last
 }) => {
+  const renderIcon: (type: string) => React.ReactNode = (type) => {
+    switch (type) {
+      case 'connected':
+        return (
+          <img
+            className='w-full h-full'
+            src='https://a0.muscache.com/pictures/b611b345-a32a-48af-a3db-13ac0ad47d95.jpg'
+          />
+        );
+
+      case 'handshake':
+        return (
+          <img
+            className='w-full h-full'
+            src='https://a0.muscache.com/pictures/7834e234-3a9f-46a6-8e22-f521312f715f.jpg'
+          />
+        );
+
+      case 'money':
+        return (
+          <img
+            className='w-full h-full'
+            src='https://a0.muscache.com/pictures/0fca42d5-7287-449d-9c24-2f76864ee5d2.jpg'
+          />
+        );
+    }
+  };
+
   return (
     <div className='md:w-full lg:w-1/3 mb-12 lg:mb-0'>
       {last ? (
         <div>
-          <div className='h-12 w-12'>
-            <svg
-              className='h-full w-full'
-              viewBox='0 0 32 32'
-              style={{ fill: '#484848' }}>
-              <path d='m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0'></path>
-            </svg>
-          </div>
+          {icon === 'handshake' ? (
+            <div className='h-12 w-24'>{renderIcon(icon)}</div>
+          ) : (
+            <div className='h-12 w-12'>{renderIcon(icon)}</div>
+          )}
+
           <div className='my-4'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
@@ -39,27 +65,14 @@ export const GetStartedCard: React.FC<Props> = ({
               {description}
             </p>
           </div>
-          {link ? (
-            <div className='mt-4'>
-              <a
-                style={{ fontFamily: 'airbnb-book' }}
-                className='text-green-850'
-                href=''>
-                Learn how to start hosting
-              </a>
-            </div>
-          ) : null}
         </div>
       ) : (
-        <div className='md:w-85p'>
-          <div className='h-12 w-12'>
-            <svg
-              className='h-full w-full'
-              viewBox='0 0 32 32'
-              style={{ fill: '#484848' }}>
-              <path d='m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0'></path>
-            </svg>
-          </div>
+        <div className='md:w-85p lg:w-90p'>
+          {icon === 'handshake' ? (
+            <div className='h-12 w-16'>{renderIcon(icon)}</div>
+          ) : (
+            <div className='h-12 w-12'>{renderIcon(icon)}</div>
+          )}
           <div className='my-4'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
@@ -70,20 +83,10 @@ export const GetStartedCard: React.FC<Props> = ({
           <div>
             <p
               style={{ fontFamily: 'airbnb-book' }}
-              className='text-gray-750 md:leading-loose'>
+              className='text-gray-750 md:leading-loose lg:leading-7'>
               {description}
             </p>
           </div>
-          {link ? (
-            <div className='mt-4'>
-              <a
-                style={{ fontFamily: 'airbnb-book' }}
-                className='text-green-850'
-                href=''>
-                Learn how to start hosting
-              </a>
-            </div>
-          ) : null}
         </div>
       )}
     </div>
