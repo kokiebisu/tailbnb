@@ -42,7 +42,9 @@ cd frontend && npm run test
 
 ## Deployment
 
-This project uses Heroku for deployment. Create it via Prismacloud
+This project uses two deployment platforms.
+Client - Now
+Server - Heroku
 
 ## Built With
 
@@ -50,6 +52,7 @@ This project uses Heroku for deployment. Create it via Prismacloud
 * [Nextjs](https://nextjs.org/) - Web framework
 * [TailwindCSS](https://tailwindcss.com/) - Utility based CSS framework
 * [Prisma](https://www.prisma.io/) - Object-relational mapping framework
+* [PostgreSQL](https://www.postgresql.org/) - Database
 * [Graphql-Yoga](https://github.com/prisma-labs/graphql-yoga/) - Graphql server
 
 ## Authors
@@ -62,5 +65,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Airbnb for the inspiration
+* [airbnb](https://airbnb.com) - inspiration
 * [studiopic](https://dribbble.com/studio-pic) - dribbble
