@@ -29,6 +29,8 @@
     "src/components/containers/Stay.js",
     "src/components/layout/Header.tsx",
     "src/components/modals/MenuModal.jsx",
+    "src/components/containers/Stay.jsx",
+    "src/components/containers/Adventures.jsx",
     "src/components/containers/NextWeek.jsx",
     "src/components/containers/Tomorrow.jsx",
     "src/components/containers/Today.jsx",
