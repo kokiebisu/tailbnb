@@ -4,9 +4,9 @@
 </p>
 
 
-# 🏠 Nextbnb
+# Nextbnb
 
-A Personal Project that replicates Airbnb using Nextjs
+A Project that replicates Airbnb using Nextjs
 
 ## Getting Started
 
@@ -67,5 +67,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* [airbnb](https://airbnb.com) - inspiration
+* [airbnb](https://airbnb.com) - inspiration & images
 * [unsplash](https://unsplash.com/) - images
