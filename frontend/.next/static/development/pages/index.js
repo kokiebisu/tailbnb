@@ -1153,101 +1153,6 @@ module.exports = _typeof;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _assertThisInitialized; });
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inheritsLoose; });
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/inheritsLoose.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
@@ -21881,128 +21786,6 @@ var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bin
 
 module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
-
-/***/ }),
-
-/***/ "./node_modules/invariant/browser.js":
-/*!*******************************************!*\
-  !*** ./node_modules/invariant/browser.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var invariant = function(condition, format, a, b, c, d, e, f) {
-  if (true) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  }
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error(
-        'Minified exception occurred; use the non-minified dev environment ' +
-        'for the full error message and additional helpful warnings.'
-      );
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(
-        format.replace(/%s/g, function() { return args[argIndex++]; })
-      );
-      error.name = 'Invariant Violation';
-    }
-
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
-  }
-};
-
-module.exports = invariant;
-
-
-/***/ }),
-
-/***/ "./node_modules/json2mq/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/json2mq/index.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var camel2hyphen = __webpack_require__(/*! string-convert/camel2hyphen */ "./node_modules/string-convert/camel2hyphen.js");
-
-var isDimension = function (feature) {
-  var re = /[height|width]$/;
-  return re.test(feature);
-};
-
-var obj2mq = function (obj) {
-  var mq = '';
-  var features = Object.keys(obj);
-  features.forEach(function (feature, index) {
-    var value = obj[feature];
-    feature = camel2hyphen(feature);
-    // Add px to dimension features
-    if (isDimension(feature) && typeof value === 'number') {
-      value = value + 'px';
-    }
-    if (value === true) {
-      mq += feature;
-    } else if (value === false) {
-      mq += 'not ' + feature;
-    } else {
-      mq += '(' + feature + ': ' + value + ')';
-    }
-    if (index < features.length-1) {
-      mq += ' and '
-    }
-  });
-  return mq;
-};
-
-var json2mq = function (query) {
-  var mq = '';
-  if (typeof query === 'string') {
-    return query;
-  }
-  // Handling array of media queries
-  if (query instanceof Array) {
-    query.forEach(function (q, index) {
-      mq += obj2mq(q);
-      if (index < query.length-1) {
-        mq += ', '
-      }
-    });
-    return mq;
-  }
-  // Handling single media query
-  return obj2mq(query);
-};
-
-module.exports = json2mq;
 
 /***/ }),
 
@@ -43309,253 +43092,16 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react-media/esm/react-media.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/react-media/esm/react-media.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/react-sizes/dist/react-sizes.min.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-sizes/dist/react-sizes.min.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var invariant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
-/* harmony import */ var invariant__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(invariant__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var json2mq__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! json2mq */ "./node_modules/json2mq/index.js");
-/* harmony import */ var json2mq__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(json2mq__WEBPACK_IMPORTED_MODULE_7__);
+/* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports,__webpack_require__(/*! react */ "./node_modules/react/index.js")):undefined}(this,function(e,t){"use strict";var n="default"in t?t.default:t;function r(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function i(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function o(){return(o=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}function a(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){i(e,t,n[t])})}return e}function u(e){return(u=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function c(e,t){return(c=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function f(e,t){if(null==e)return{};var n,r,i=function(e,t){if(null==e)return{};var n,r,i={},o=Object.keys(e);for(r=0;r<o.length;r++)n=o[r],t.indexOf(n)>=0||(i[n]=e[n]);return i}(e,t);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);for(r=0;r<o.length;r++)n=o[r],t.indexOf(n)>=0||Object.prototype.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function l(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}var s="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{},p="Expected a function",d=NaN,b="[object Symbol]",h=/^\s+|\s+$/g,v=/^[-+]0x[0-9a-f]+$/i,y=/^0b[01]+$/i,g=/^0o[0-7]+$/i,m=parseInt,w="object"==typeof s&&s&&s.Object===Object&&s,O="object"==typeof self&&self&&self.Object===Object&&self,j=w||O||Function("return this")(),P=Object.prototype.toString,k=Math.max,S=Math.min,T=function(){return j.Date.now()};function z(e,t,n){var r,i,o,a,u,c,f=0,l=!1,s=!1,d=!0;if("function"!=typeof e)throw new TypeError(p);function b(t){var n=r,o=i;return r=i=void 0,f=t,a=e.apply(o,n)}function h(e){var n=e-c;return void 0===c||n>=t||n<0||s&&e-f>=o}function v(){var e=T();if(h(e))return y(e);u=setTimeout(v,function(e){var n=t-(e-c);return s?S(n,o-(e-f)):n}(e))}function y(e){return u=void 0,d&&r?b(e):(r=i=void 0,a)}function g(){var e=T(),n=h(e);if(r=arguments,i=this,c=e,n){if(void 0===u)return function(e){return f=e,u=setTimeout(v,t),l?b(e):a}(c);if(s)return u=setTimeout(v,t),b(c)}return void 0===u&&(u=setTimeout(v,t)),a}return t=E(t)||0,x(n)&&(l=!!n.leading,o=(s="maxWait"in n)?k(E(n.maxWait)||0,t):o,d="trailing"in n?!!n.trailing:d),g.cancel=function(){void 0!==u&&clearTimeout(u),f=0,r=c=i=u=void 0},g.flush=function(){return void 0===u?a:y(T())},g}function x(e){var t=typeof e;return!!e&&("object"==t||"function"==t)}function E(e){if("number"==typeof e)return e;if(function(e){return"symbol"==typeof e||function(e){return!!e&&"object"==typeof e}(e)&&P.call(e)==b}(e))return d;if(x(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=x(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(h,"");var n=y.test(e);return n||g.test(e)?m(e.slice(2),n?2:8):v.test(e)?d:+e}var D=function(e,t,n){var r=!0,i=!0;if("function"!=typeof e)throw new TypeError(p);return x(n)&&(r="leading"in n?!!n.leading:r,i="trailing"in n?!!n.trailing:i),z(e,t,{leading:r,maxWait:t,trailing:i})},W=function(e,t){for(var n in e)if(!(n in t))return!0;for(var r in t)if(e[r]!==t[r])return!0;return!1},_=n.createContext({fallbackWidth:null,fallbackHeight:null,forceFallback:!1,throttle:200});_.displayName="SizesContext";var F=function(e){return e.width<480},H=function(e){return e.width>=1024},M=function(e){return!H(e)},C=Object.freeze({isMobile:F,isTablet:function(e){var t=e.width;return t>=480&&t<1024},isDesktop:H,isGtMobile:function(e){return!F(e)},isGtTablet:function(e){return H(e)},isStTablet:function(e){return F(e)},isStDesktop:M,isTabletAndGreater:function(e){return!F(e)},isTabletAndSmaller:function(e){return!M(e)}}),N=function(e){return function(e){var t=e.fallbackWidth,n=void 0===t?null:t,r=e.fallbackHeight,i=void 0===r?null:r,o=e.forceFallback,a=void 0!==o&&o,u="undefined"!=typeof window;return{width:u&&!a?window.innerWidth:n,height:u&&!a?window.innerHeight:i,canUseDOM:u}}({fallbackHeight:e.fallbackHeight,fallbackWidth:e.fallbackWidth,forceFallback:e.forceFallback})},A=Object.assign(function(){for(var e=arguments.length,s=new Array(e),p=0;p<e;p++)s[p]=arguments[p];return function(e){var p,d=function(e,t){return s.map(function(n){return n(e,t)}).reduce(function(e,t){return a({},e,t)},{})},b=function(a){function s(e){var t,n,r;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),n=this,r=u(s).call(this,e),t=!r||"object"!=typeof r&&"function"!=typeof r?l(n):r,i(l(l(t)),"dispatchSizes",function(){var e=t.getPropsToPass();W(e,t.state.propsToPass)&&t.setState({propsToPass:e})}),i(l(l(t)),"throttledDispatchSizes",D(t.dispatchSizes,t.props.throttle)),t.getPropsToPass=function(){return d(N(t.props),t.props)},t.state={propsToPass:t.getPropsToPass()},t}var p,b,h;return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&c(e,t)}(s,t.PureComponent),p=s,h=[{key:"getDerivedStateFromProps",value:function(e,t){var n=d(N(e),e);return W(n,t.propsToPass)?{propsToPass:n}:null}}],(b=[{key:"componentDidMount",value:function(){window.addEventListener("resize",this.throttledDispatchSizes),this.dispatchSizes()}},{key:"componentWillUnmount",value:function(){this.throttledDispatchSizes.cancel(),window.removeEventListener("resize",this.throttledDispatchSizes)}},{key:"render",value:function(){var t=this.props,r=(t.fallbackHeight,t.fallbackWidth,t.forceFallback,f(t,["fallbackHeight","fallbackWidth","forceFallback"]));return n.createElement(e,o({},r,this.state.propsToPass))}}])&&r(p.prototype,b),h&&r(p,h),s}();return i(b,"displayName","withSizes(".concat((p=e).displayName||p.name||("string"==typeof p&&p.length>0?p:"Unknown"),")")),function(e){return n.createElement(_.Consumer,null,function(t){return n.createElement(b,o({},t,e))})}}},a({},C)),$=function(e){var t=e.children,n=e.render,r=f(e,["children","render"]),i=t||n;return i?i(r):null};e.withSizes=A,e.SizesProvider=function(e){var t=e.config,r=e.children;return n.createElement(_.Provider,{value:t},r)},e.createSizedComponent=function(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n];return A(t)($)},e.presets=C,e.default=A,Object.defineProperty(e,"__esModule",{value:!0})});
 
-
-
-
-
-
-
-
-
-var MediaQueryListener =
-/*#__PURE__*/
-function () {
-  function MediaQueryListener(targetWindow, query, listener) {
-    var _this = this;
-
-    this.nativeMediaQueryList = targetWindow.matchMedia(query);
-    this.active = true; // Safari doesn't clear up listener with removeListener
-    // when the listener is already waiting in the event queue.
-    // Having an active flag to make sure the listener is not called
-    // after we removeListener.
-
-    this.cancellableListener = function () {
-      _this.matches = _this.nativeMediaQueryList.matches;
-
-      if (_this.active) {
-        listener.apply(void 0, arguments);
-      }
-    };
-
-    this.nativeMediaQueryList.addListener(this.cancellableListener);
-    this.matches = this.nativeMediaQueryList.matches;
-  }
-
-  var _proto = MediaQueryListener.prototype;
-
-  _proto.cancel = function cancel() {
-    this.active = false;
-    this.nativeMediaQueryList.removeListener(this.cancellableListener);
-  };
-
-  return MediaQueryListener;
-}();
-
-var queryType = prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object.isRequired)]);
-/**
- * Conditionally renders based on whether or not a media query matches.
- */
-
-var Media =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(Media, _React$Component);
-
-  function Media(props) {
-    var _this;
-
-    _this = _React$Component.call(this, props) || this;
-
-    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)), "queries", []);
-
-    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)), "getMatches", function () {
-      var result = _this.queries.reduce(function (acc, _ref) {
-        var _extends2;
-
-        var name = _ref.name,
-            mqListener = _ref.mqListener;
-        return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, acc, (_extends2 = {}, _extends2[name] = mqListener.matches, _extends2));
-      }, {}); // return result;
-
-
-      return unwrapSingleQuery(result);
-    });
-
-    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)), "updateMatches", function () {
-      var newMatches = _this.getMatches();
-
-      _this.setState(function () {
-        return {
-          matches: newMatches
-        };
-      }, _this.onChange);
-    });
-
-    !(!(!props.query && !props.queries) || props.query && props.queries) ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, '<Media> must be supplied with either "query" or "queries"') : undefined : void 0;
-    !(props.defaultMatches === undefined || !props.query || typeof props.defaultMatches === "boolean") ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, "<Media> when query is set, defaultMatches must be a boolean, received " + typeof props.defaultMatches) : undefined : void 0;
-    !(props.defaultMatches === undefined || !props.queries || typeof props.defaultMatches === "object") ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, "<Media> when queries is set, defaultMatches must be a object of booleans, received " + typeof props.defaultMatches) : undefined : void 0;
-
-    if (typeof window !== "object") {
-      // In case we're rendering on the server, apply the default matches
-      var matches;
-
-      if (props.defaultMatches !== undefined) {
-        matches = props.defaultMatches;
-      } else if (props.query) {
-        matches = true;
-      }
-      /* if (props.queries) */
-      else {
-          matches = Object.keys(_this.props.queries).reduce(function (acc, key) {
-            var _extends3;
-
-            return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, acc, (_extends3 = {}, _extends3[key] = true, _extends3));
-          }, {});
-        }
-
-      _this.state = {
-        matches: matches
-      };
-      return Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this);
-    }
-
-    _this.initialize(); // Instead of calling this.updateMatches, we manually set the initial state to prevent
-    // calling setState, which could trigger an unnecessary second render
-
-
-    _this.state = {
-      matches: _this.props.defaultMatches !== undefined ? _this.props.defaultMatches : _this.getMatches()
-    };
-
-    _this.onChange();
-
-    return _this;
-  }
-
-  var _proto = Media.prototype;
-
-  _proto.initialize = function initialize() {
-    var _this2 = this;
-
-    var targetWindow = this.props.targetWindow || window;
-    !(typeof targetWindow.matchMedia === "function") ?  true ? invariant__WEBPACK_IMPORTED_MODULE_6___default()(false, "<Media targetWindow> does not support `matchMedia`.") : undefined : void 0;
-    var queries = this.props.queries || wrapInQueryObject(this.props.query);
-    this.queries = Object.keys(queries).map(function (name) {
-      var query = queries[name];
-      var qs = typeof query !== "string" ? json2mq__WEBPACK_IMPORTED_MODULE_7___default()(query) : query;
-      var mqListener = new MediaQueryListener(targetWindow, qs, _this2.updateMatches);
-      return {
-        name: name,
-        mqListener: mqListener
-      };
-    });
-  };
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.initialize(); // If props.defaultMatches has been set, ensure we trigger a two-pass render.
-    // This is useful for SSR with mismatching defaultMatches vs actual matches from window.matchMedia
-    // Details: https://github.com/ReactTraining/react-media/issues/81
-
-    if (this.props.defaultMatches !== undefined) {
-      this.updateMatches();
-    }
-  };
-
-  _proto.onChange = function onChange() {
-    var onChange = this.props.onChange;
-
-    if (onChange) {
-      onChange(this.state.matches);
-    }
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.queries.forEach(function (_ref2) {
-      var mqListener = _ref2.mqListener;
-      return mqListener.cancel();
-    });
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        children = _this$props.children,
-        render = _this$props.render;
-    var matches = this.state.matches;
-    var isAnyMatches = typeof matches === "object" ? Object.keys(matches).some(function (key) {
-      return matches[key];
-    }) : matches;
-    return render ? isAnyMatches ? render(matches) : null : children ? typeof children === "function" ? children(matches) : !Array.isArray(children) || children.length // Preact defaults to empty children array
-    ? isAnyMatches ? // We have to check whether child is a composite component or not to decide should we
-    // provide `matches` as a prop or not
-    react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children) && typeof react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children).type === "string" ? react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children) : react__WEBPACK_IMPORTED_MODULE_4___default.a.cloneElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children), {
-      matches: matches
-    }) : null : null : null;
-  };
-
-  return Media;
-}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
-/**
- * Wraps a single query in an object. This is used to provide backward compatibility with
- * the old `query` prop (as opposed to `queries`). If only a single query is passed, the object
- * will be unpacked down the line, but this allows our internals to assume an object of queries
- * at all times.
- */
-
-
-Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(Media, "propTypes", {
-  defaultMatches: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.objectOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool)]),
-  query: queryType,
-  queries: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.objectOf(queryType),
-  render: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.node, prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func]),
-  targetWindow: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  onChange: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func
-});
-
-function wrapInQueryObject(query) {
-  return {
-    __DEFAULT__: query
-  };
-}
-/**
- * Unwraps an object of queries, if it was originally passed as a single query.
- */
-
-
-function unwrapSingleQuery(queryObject) {
-  var queryNames = Object.keys(queryObject);
-
-  if (queryNames.length === 1 && queryNames[0] === "__DEFAULT__") {
-    return queryObject.__DEFAULT__;
-  }
-
-  return queryObject;
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Media);
-
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -44568,25 +44114,6 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-
-/***/ }),
-
-/***/ "./node_modules/string-convert/camel2hyphen.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/string-convert/camel2hyphen.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var camel2hyphen = function (str) {
-  return str
-          .replace(/[A-Z]/g, function (match) {
-            return '-' + match.toLowerCase();
-          })
-          .toLowerCase();
-};
-
-module.exports = camel2hyphen;
 
 /***/ }),
 
@@ -46677,16 +46204,15 @@ var ShowAll = function ShowAll(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/containers/Adventures.tsx":
+/***/ "./src/components/containers/Adventures.jsx":
 /*!**************************************************!*\
-  !*** ./src/components/containers/Adventures.tsx ***!
+  !*** ./src/components/containers/Adventures.jsx ***!
   \**************************************************/
-/*! exports provided: Adventures */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Adventures", function() { return Adventures; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -46694,12 +46220,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _functions_AdventureCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/AdventureCard */ "./src/components/functions/AdventureCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
@@ -46724,45 +46251,70 @@ function _templateObject() {
 
 
 var GET_ADVENTURES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var Adventures = function Adventures() {
+
+var mapSizesToProps = function mapSizesToProps(_ref) {
+  var width = _ref.width;
+  return {
+    isMobile: width < 767,
+    isTablet: width > 767 && width < 1023,
+    isLaptop: width > 1023 && width < 1279,
+    isDesktop: width > 1279 && width < 1529,
+    isLargeDesktop: width > 1529
+  };
+};
+
+var renderContent = function renderContent(data, number) {
+  var content = [];
+
+  for (var i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx(_functions_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["AdventureCard"], {
+      key: i,
+      id: data === null || data === void 0 ? void 0 : data.adventures[i].id,
+      img: data === null || data === void 0 ? void 0 : data.adventures[i].img,
+      country: data === null || data === void 0 ? void 0 : data.adventures[i].country,
+      title: data === null || data === void 0 ? void 0 : data.adventures[i].title,
+      cost: data === null || data === void 0 ? void 0 : data.adventures[i].cost,
+      period: data === null || data === void 0 ? void 0 : data.adventures[i].period,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    })));
+  }
+
+  return content;
+}; // interface Adventure {
+//   id: string;
+//   title: string;
+//   period: number;
+//   cost: number;
+//   country: string;
+//   img: string;
+// }
+// interface AdventureData {
+//   adventures: Adventure[];
+// }
+
+
+var Adventures = function Adventures(_ref2) {
+  var isMobile = _ref2.isMobile,
+      isTablet = _ref2.isTablet,
+      isLaptop = _ref2.isLaptop,
+      isDesktop = _ref2.isDesktop,
+      isLargeDesktop = _ref2.isLargeDesktop;
+
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_ADVENTURES),
       loading = _useQuery.loading,
       error = _useQuery.error,
       data = _useQuery.data;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }, __jsx(_functions_AdventureCard__WEBPACK_IMPORTED_MODULE_6__["AdventureCard"], {
-        key: i,
-        id: data === null || data === void 0 ? void 0 : data.adventures[i].id,
-        img: data === null || data === void 0 ? void 0 : data.adventures[i].img,
-        country: data === null || data === void 0 ? void 0 : data.adventures[i].country,
-        title: data === null || data === void 0 ? void 0 : data.adventures[i].title,
-        cost: data === null || data === void 0 ? void 0 : data.adventures[i].cost,
-        period: data === null || data === void 0 ? void 0 : data.adventures[i].period,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
 
   if (error) return "Error! ".concat(error.message);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
@@ -46770,21 +46322,21 @@ var Adventures = function Adventures() {
     phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 83
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 87
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 89
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -46792,78 +46344,20 @@ var Adventures = function Adventures() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 90
     },
     __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 1,
-    queries: {
-      xs: '(min-width: 0px) and (max-width: 739px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xs ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 2,
-    queries: {
-      small: '(min-width: 740px) and (max-width: 987px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(3), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 3,
-    queries: {
-      large: '(min-width: 988px) and (max-width: 1299px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 4,
-    queries: {
-      xl: '(min-width: 1300px) and (max-width: 1529px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 115
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    key: 5,
-    queries: {
-      twoxl: '(min-width: 1530px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 124
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 105
     },
     __self: this
   })));
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(Adventures));
 
 /***/ }),
 
@@ -47148,16 +46642,15 @@ var Featured = function Featured() {
 
 /***/ }),
 
-/***/ "./src/components/containers/NextWeek.tsx":
+/***/ "./src/components/containers/NextWeek.jsx":
 /*!************************************************!*\
-  !*** ./src/components/containers/NextWeek.tsx ***!
+  !*** ./src/components/containers/NextWeek.jsx ***!
   \************************************************/
-/*! exports provided: NextWeek */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NextWeek", function() { return NextWeek; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -47165,12 +46658,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/NextWeek.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/NextWeek.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
@@ -47187,7 +46681,6 @@ function _templateObject() {
 
 
 
-
  // Components
 
 
@@ -47195,7 +46688,68 @@ function _templateObject() {
 
 
 var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var NextWeek = function NextWeek() {
+
+var renderContent = function renderContent(data, number) {
+  var content = [];
+
+  for (var i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
+      key: i,
+      id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
+      img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
+      title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
+      cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
+      ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
+      reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
+      category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    })));
+  }
+
+  return content;
+};
+
+var mapSizesToProps = function mapSizesToProps(_ref) {
+  var width = _ref.width;
+  return {
+    isMobile: width < 767,
+    isTablet: width > 767 && width < 1023,
+    isLaptop: width > 1023 && width < 1279,
+    isDesktop: width > 1279 && width < 1529,
+    isLargeDesktop: width > 1529
+  };
+}; // interface Experience {
+//   id: string;
+//   title: string;
+//   cost: number;
+//   ratings: number;
+//   reviews: number;
+//   category: string;
+//   img: string;
+// }
+// interface ExperienceData {
+//   experiences: Experience[];
+// }
+
+
+var NextWeek = function NextWeek(_ref2) {
+  var isMobile = _ref2.isMobile,
+      isTablet = _ref2.isTablet,
+      isLaptop = _ref2.isLaptop,
+      isDesktop = _ref2.isDesktop,
+      isLargeDesktop = _ref2.isLargeDesktop;
+
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Next Week',
@@ -47206,62 +46760,27 @@ var NextWeek = function NextWeek() {
       error = _useQuery.error,
       data = _useQuery.data;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
-        key: i,
-        id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
-        img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
-        title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
-        cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
-        ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
-        reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
-        category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
-
   if (error) return "Error! ".concat(error.message);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
     title: "Next Week in Vancouver",
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 95
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 98
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 100
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -47269,73 +46788,20 @@ var NextWeek = function NextWeek() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 101
     },
     __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xs: '(min-width: 0px) and (max-width: 739px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xs ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      small: '(min-width: 740px) and (max-width: 987px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      large: '(min-width: 988px) and (max-width: 1299px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xl: '(min-width: 1300px) and (max-width: 1529px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 123
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      twoxl: '(min-width: 1530px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 131
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 115
     },
     __self: this
   })));
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(NextWeek));
 
 /***/ }),
 
@@ -47542,16 +47008,15 @@ var Popular = function Popular() {
 
 /***/ }),
 
-/***/ "./src/components/containers/Stay.tsx":
+/***/ "./src/components/containers/Stay.jsx":
 /*!********************************************!*\
-  !*** ./src/components/containers/Stay.tsx ***!
+  !*** ./src/components/containers/Stay.jsx ***!
   \********************************************/
-/*! exports provided: Stay */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Stay", function() { return Stay; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -47559,14 +47024,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 /* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
 /* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_9__);
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
@@ -47583,7 +47049,6 @@ function _templateObject() {
 
 
 
-
  // Component
 
 
@@ -47591,68 +47056,93 @@ function _templateObject() {
 
 
 
-var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var Stay = function Stay() {
+var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject()); // interface StayData {
+//   stays: Stay[];
+// }
+// interface Stay {
+//   id: string;
+//   host_is_superhost: string;
+//   country: string;
+//   name: string;
+//   price: number;
+//   reviews_per_month: number;
+//   picture_url: string;
+// }
+
+var mapSizesToProps = function mapSizesToProps(_ref) {
+  var width = _ref.width;
+  return {
+    isMobile: width < 767,
+    isTablet: width > 767 && width < 1023,
+    isLaptop: width > 1023 && width < 1279,
+    isDesktop: width > 1279 && width < 1529,
+    isLargeDesktop: width > 1529
+  };
+};
+
+var renderContent = function renderContent(data, number) {
+  var content = [];
+
+  for (var i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_6__["StayCard"], {
+      key: i,
+      id: data === null || data === void 0 ? void 0 : data.stays[i].id,
+      host_is_superhost: data === null || data === void 0 ? void 0 : data.stays[i].host_is_superhost,
+      country: data === null || data === void 0 ? void 0 : data.stays[i].country,
+      name: data === null || data === void 0 ? void 0 : data.stays[i].name,
+      price: data === null || data === void 0 ? void 0 : data.stays[i].price,
+      reviews_per_month: data === null || data === void 0 ? void 0 : data.stays[i].reviews_per_month,
+      picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    })));
+  }
+
+  return content;
+};
+
+var Stay = function Stay(_ref2) {
+  var isMobile = _ref2.isMobile,
+      isTablet = _ref2.isTablet,
+      isLaptop = _ref2.isLaptop,
+      isDesktop = _ref2.isDesktop,
+      isLargeDesktop = _ref2.isLargeDesktop;
+
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAYS),
       loading = _useQuery.loading,
       error = _useQuery.error,
       data = _useQuery.data;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_6__["StayCard"], {
-        key: i,
-        id: data === null || data === void 0 ? void 0 : data.stays[i].id,
-        host_is_superhost: data === null || data === void 0 ? void 0 : data.stays[i].host_is_superhost,
-        country: data === null || data === void 0 ? void 0 : data.stays[i].country,
-        name: data === null || data === void 0 ? void 0 : data.stays[i].name,
-        price: data === null || data === void 0 ? void 0 : data.stays[i].price,
-        reviews_per_month: data === null || data === void 0 ? void 0 : data.stays[i].reviews_per_month,
-        picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
 
   if (error) return "Error! ".concat(error.message);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 80
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 81
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 83
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -47660,121 +47150,32 @@ var Stay = function Stay() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: this
-  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xs: '(min-width: 0px) and (max-width: 739px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 84
     },
     __self: this
-  }, function (matches) {
-    return matches.xs ? (setCard(1), renderContent(data, card)) : null;
-  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: this
-  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      small: '(min-width: 740px) and (max-width: 987px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(1), renderContent(data, card)) : null;
-  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: this
-  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      large: '(min-width: 988px) and (max-width: 1299px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large ? (setCard(8), renderContent(data, card)) : null;
-  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: this
-  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xl: '(min-width: 1300px) and (max-width: 1529px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 118
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl ? (setCard(8), renderContent(data, card)) : null;
-  })), __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-    key: cuid__WEBPACK_IMPORTED_MODULE_9___default()(),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: this
-  }, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      twoxl: '(min-width: 1530px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(8), renderContent(data, card)) : null;
-  })))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 4) : null, isLaptop ? renderContent(data, 6) : null, isDesktop ? renderContent(data, 8) : null, isLargeDesktop ? renderContent(data, 8) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 99
     },
     __self: this
   })));
 };
 
+/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(Stay));
+
 /***/ }),
 
-/***/ "./src/components/containers/Today.tsx":
+/***/ "./src/components/containers/Today.jsx":
 /*!*********************************************!*\
-  !*** ./src/components/containers/Today.tsx ***!
+  !*** ./src/components/containers/Today.jsx ***!
   \*********************************************/
-/*! exports provided: Today */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Today", function() { return Today; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -47782,12 +47183,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Today.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Today.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
@@ -47804,7 +47206,6 @@ function _templateObject() {
 
 
 
-
  // Components
 
 
@@ -47812,7 +47213,68 @@ function _templateObject() {
 
 
 var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var Today = function Today() {
+
+var mapSizesToProps = function mapSizesToProps(_ref) {
+  var width = _ref.width;
+  return {
+    isMobile: width < 767,
+    isTablet: width > 767 && width < 1023,
+    isLaptop: width > 1023 && width < 1279,
+    isDesktop: width > 1279 && width < 1529,
+    isLargeDesktop: width > 1529
+  };
+};
+
+var renderContent = function renderContent(data, number) {
+  var content = [];
+
+  for (var i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
+      key: i,
+      id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
+      img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
+      title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
+      cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
+      ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
+      reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
+      category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    })));
+  }
+
+  return content;
+}; // interface Experience {
+//   id: string;
+//   title: string;
+//   cost: number;
+//   ratings: number;
+//   reviews: number;
+//   category: string;
+//   img: string;
+// }
+// interface ExperienceData {
+//   experiences: Experience[];
+// }
+
+
+var Today = function Today(_ref2) {
+  var isMobile = _ref2.isMobile,
+      isTablet = _ref2.isTablet,
+      isLaptop = _ref2.isLaptop,
+      isDesktop = _ref2.isDesktop,
+      isLargeDesktop = _ref2.isLargeDesktop;
+
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Today',
@@ -47823,62 +47285,27 @@ var Today = function Today() {
       error = _useQuery.error,
       data = _useQuery.data;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
-        key: i,
-        id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
-        img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
-        title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
-        cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
-        ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
-        reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
-        category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
-
   if (error) return "Error! ".concat(error.message);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
     title: "Today in Vancouver",
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 89
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 92
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 94
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -47886,86 +47313,32 @@ var Today = function Today() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 95
     },
     __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xs: '(min-width: 0px) and (max-width: 739px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xs ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      small: '(min-width: 740px) and (max-width: 987px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      large: '(min-width: 988px) and (max-width: 1299px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xl: '(min-width: 1300px) and (max-width: 1529px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 123
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      twoxl: '(min-width: 1530px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 131
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 109
     },
     __self: this
   })));
 };
 
+/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(Today));
+
 /***/ }),
 
-/***/ "./src/components/containers/Tomorrow.tsx":
+/***/ "./src/components/containers/Tomorrow.jsx":
 /*!************************************************!*\
-  !*** ./src/components/containers/Tomorrow.tsx ***!
+  !*** ./src/components/containers/Tomorrow.jsx ***!
   \************************************************/
-/*! exports provided: Tomorrow */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tomorrow", function() { return Tomorrow; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -47973,12 +47346,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Tomorrow.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Tomorrow.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
@@ -47995,7 +47369,6 @@ function _templateObject() {
 
 
 
-
  // Components
 
 
@@ -48003,7 +47376,68 @@ function _templateObject() {
 
 
 var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var Tomorrow = function Tomorrow() {
+
+var mapSizesToProps = function mapSizesToProps(_ref) {
+  var width = _ref.width;
+  return {
+    isMobile: width < 767,
+    isTablet: width > 767 && width < 1023,
+    isLaptop: width > 1023 && width < 1279,
+    isDesktop: width > 1279 && width < 1529,
+    isLargeDesktop: width > 1529
+  };
+}; // interface Experience {
+//   id: string;
+//   title: string;
+//   cost: number;
+//   ratings: number;
+//   reviews: number;
+//   category: string;
+//   img: string;
+// }
+// interface ExperienceData {
+//   experiences: Experience[];
+// }
+
+
+var renderContent = function renderContent(data, number) {
+  var content = [];
+
+  for (var i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
+      key: i,
+      id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
+      img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
+      title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
+      cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
+      ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
+      reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
+      category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    })));
+  }
+
+  return content;
+};
+
+var Tomorrow = function Tomorrow(_ref2) {
+  var isMobile = _ref2.isMobile,
+      isTablet = _ref2.isTablet,
+      isLaptop = _ref2.isLaptop,
+      isDesktop = _ref2.isDesktop,
+      isLargeDesktop = _ref2.isLargeDesktop;
+
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Tomorrow',
@@ -48014,62 +47448,27 @@ var Tomorrow = function Tomorrow() {
       error = _useQuery.error,
       data = _useQuery.data;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
-        key: i,
-        id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
-        img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
-        title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
-        cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
-        ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
-        reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
-        category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
-
   if (error) return "Error! ".concat(error.message);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
     title: "Tomorrow in Vancouver",
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 95
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 98
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 100
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -48077,81 +47476,28 @@ var Tomorrow = function Tomorrow() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 101
     },
     __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xs: '(min-width: 0px) and (max-width: 739px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xs ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      small: '(min-width: 740px) and (max-width: 987px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      large: '(min-width: 988px) and (max-width: 1299px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xl: '(min-width: 1300px) and (max-width: 1529px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 123
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      twoxl: '(min-width: 1530px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 131
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 115
     },
     __self: this
   })));
 };
 
+/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(Tomorrow));
+
 /***/ }),
 
-/***/ "./src/components/containers/TopRated.tsx":
+/***/ "./src/components/containers/TopRated.jsx":
 /*!************************************************!*\
-  !*** ./src/components/containers/TopRated.tsx ***!
+  !*** ./src/components/containers/TopRated.jsx ***!
   \************************************************/
-/*! exports provided: TopRated */
+/*! exports provided: TopRated, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48164,12 +47510,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-media */ "./node_modules/react-media/esm/react-media.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
+/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/TopRatedCard */ "./src/components/functions/TopRatedCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/TopRated.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/TopRated.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
@@ -48186,7 +47533,6 @@ function _templateObject() {
 
 
 
-
  // Components
 
 
@@ -48194,46 +47540,72 @@ function _templateObject() {
 
 
 var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-var TopRated = function TopRated() {
+
+var mapSizesToProps = function mapSizesToProps(_ref) {
+  var width = _ref.width;
+  return {
+    isMobile: width < 767,
+    isTablet: width > 767 && width < 1023,
+    isLaptop: width > 1023 && width < 1279,
+    isDesktop: width > 1279 && width < 1529,
+    isLargeDesktop: width > 1529
+  };
+};
+
+var renderContent = function renderContent(data, number) {
+  var content = [];
+
+  for (var i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx(_functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__["TopRatedCard"], {
+      key: i,
+      id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
+      img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
+      title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
+      cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
+      ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
+      reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
+      location: data === null || data === void 0 ? void 0 : data.experiences[i].location,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    })));
+  }
+
+  return content;
+}; // interface Experience {
+//   id: string;
+//   title: string;
+//   cost: number;
+//   ratings: number;
+//   reviews: number;
+//   location: string;
+//   img: string;
+// }
+// interface ExperienceData {
+//   experiences: Experience[];
+// }
+
+
+var TopRated = function TopRated(_ref2) {
+  var isMobile = _ref2.isMobile,
+      isTablet = _ref2.isTablet,
+      isLaptop = _ref2.isLaptop,
+      isDesktop = _ref2.isDesktop,
+      isLargeDesktop = _ref2.isLargeDesktop;
+
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_EXPERIENCES),
       loading = _useQuery.loading,
       error = _useQuery.error,
       data = _useQuery.data;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0),
-      card = _useState[0],
-      setCard = _useState[1];
-
-  var renderContent = function renderContent(data, number) {
-    var content = [];
-
-    for (var i = 0; i < number; i++) {
-      content.push(__jsx("div", {
-        className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }, __jsx(_functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__["TopRatedCard"], {
-        key: i,
-        id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
-        img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
-        title: data === null || data === void 0 ? void 0 : data.experiences[i].title,
-        cost: data === null || data === void 0 ? void 0 : data.experiences[i].cost,
-        ratings: data === null || data === void 0 ? void 0 : data.experiences[i].ratings,
-        reviews: data === null || data === void 0 ? void 0 : data.experiences[i].reviews,
-        location: data === null || data === void 0 ? void 0 : data.experiences[i].location,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      })));
-    }
-
-    return content;
-  };
 
   if (error) return "Error! ".concat(error.message);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
@@ -48241,21 +47613,21 @@ var TopRated = function TopRated() {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 85
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-start justify-start flex-wrap w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 88
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 90
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -48263,73 +47635,19 @@ var TopRated = function TopRated() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 91
     },
     __self: this
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xs: '(min-width: 0px) and (max-width: 739px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xs ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      small: '(min-width: 740px) and (max-width: 987px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: this
-  }, function (matches) {
-    return matches.small ? (setCard(3), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      large: '(min-width: 988px) and (max-width: 1299px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 100
-    },
-    __self: this
-  }, function (matches) {
-    return matches.large ? (setCard(3), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      xl: '(min-width: 1300px) and (max-width: 1529px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 110
-    },
-    __self: this
-  }, function (matches) {
-    return matches.xl ? (setCard(4), renderContent(data, card)) : null;
-  }), __jsx(react_media__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    queries: {
-      twoxl: '(min-width: 1530px)'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 118
-    },
-    __self: this
-  }, function (matches) {
-    return matches.twoxl ? (setCard(6), renderContent(data, card)) : null;
-  }))), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 105
     },
     __self: this
   })));
 };
+/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(TopRated));
 
 /***/ }),
 
@@ -52321,27 +51639,6 @@ var HelpModal = function HelpModal(_ref) {
     __self: this
   }, "Give Feedback"))))));
 };
-{
-  /* <div className='w-full flex justify-center items-center'>
-  </div>
-  <div className='bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto'>
-  <div className=''>
-   
-  </div>
-  <div className='mt-8 mb-4'>
-  <h3
-    style={{ fontFamily: 'airbnb-bold' }}
-    className='uppercase text-xs text-gray-750'>
-    Recommended Articles
-  </h3>
-  </div>
-  <div>
-   <HelpCard title={questions[0].title} answer={questions[0].answer} />
-  </div>
-  </div>
-  <div className='flex flex-col justify-end items-center my-2'>
-  </div> */
-}
 
 /***/ }),
 
@@ -54098,7 +53395,7 @@ var Section = function Section(_ref) {
   };
 
   return __jsx("div", {
-    className: "px-6 md:px-20 xl:max-w-layout mx-auto py-5 w-full",
+    className: "px-6 md:px-20 lg:px-10 xl:max-w-layout mx-auto py-5 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -54168,7 +53465,7 @@ var SectionOverflow = function SectionOverflow(_ref) {
   }
 
   return __jsx("div", {
-    className: "px-6 md:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
+    className: "px-6 md:px-20 lg:px-10 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -54193,12 +53490,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.tsx");
 /* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
 /* harmony import */ var _components_containers_Plus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/containers/Plus */ "./src/components/containers/Plus.tsx");
-/* harmony import */ var _components_containers_Today__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Today */ "./src/components/containers/Today.tsx");
-/* harmony import */ var _components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Tomorrow */ "./src/components/containers/Tomorrow.tsx");
-/* harmony import */ var _components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/NextWeek */ "./src/components/containers/NextWeek.tsx");
-/* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.tsx");
-/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.tsx");
-/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.tsx");
+/* harmony import */ var _components_containers_Today__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Today */ "./src/components/containers/Today.jsx");
+/* harmony import */ var _components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Tomorrow */ "./src/components/containers/Tomorrow.jsx");
+/* harmony import */ var _components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/NextWeek */ "./src/components/containers/NextWeek.jsx");
+/* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.jsx");
+/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.jsx");
+/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.jsx");
 /* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
 /* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
 /* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
@@ -54257,37 +53554,37 @@ var Home = function Home() {
       lineNumber: 38
     },
     __self: this
-  }), __jsx(_components_containers_Today__WEBPACK_IMPORTED_MODULE_4__["Today"], {
+  }), __jsx(_components_containers_Today__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
     },
     __self: this
-  }), __jsx(_components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__["Tomorrow"], {
+  }), __jsx(_components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
-  }), __jsx(_components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__["NextWeek"], {
+  }), __jsx(_components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
     },
     __self: this
-  }), __jsx(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_7__["Adventures"], {
+  }), __jsx(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: this
-  }), __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_8__["Stay"], {
+  }), __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
     },
     __self: this
-  }), __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_9__["TopRated"], {
+  }), __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
