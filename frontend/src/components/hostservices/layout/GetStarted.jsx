@@ -26,21 +26,24 @@ export const HostingSteps = () => {
           </div>
           <div>
             <div className='w-full lg:flex'>
-              <HostingStepsCard
-                title='List your space for free'
-                description='Share any space without sign-up charges, from a shared living room to a second home and everything in-between.'
+              <GetStartedCard
+                icon='connected'
+                title='Get connected'
+                description='Tell us a little about your needs and we’ll see if we can match you with a hosting team in your area. Then your local team will reach out to gather info about your space, determine the right plan for you, and go over pricing.'
                 link={false}
                 last={false}
               />
-              <HostingStepsCard
-                title='Decide how you want to host'
-                description="Choose your own schedule, prices, and requirements for guests. We're there to help along the way."
+              <GetStartedCard
+                icon='handshake'
+                title='Let a specialist do the work'
+                description='Your dedicated hosting team will usually take care of everything—from creating your listing to communicating with guests and ensuring that your place is cleaned between rentals.'
                 link={false}
                 last={false}
               />
-              <HostingStepsCard
-                title='Welcome your first guest'
-                description='Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.'
+              <GetStartedCard
+                icon='money'
+                title='Start earning money'
+                description='With the hosting logistics taken care of, all that’s left is to collect the earnings from your space. Talk to your hosting team about easy payout options.'
                 link={true}
                 last={true}
               />
