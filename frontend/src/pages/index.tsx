@@ -20,7 +20,7 @@ import { NextPage } from 'next';
 import { MenuModal } from '../components/modals/MenuModal';
 
 const Home: NextPage<{}> = () => {
-  const [menuModal, setMenuModal] = useState<boolean>(true);
+  const [menuModal, setMenuModal] = useState<boolean>(false);
 
   const switchMenuModal = () => {
     setMenuModal(!menuModal);
