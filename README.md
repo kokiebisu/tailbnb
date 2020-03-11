@@ -43,8 +43,8 @@ cd frontend && npm run test
 ## Deployment
 
 This project uses two deployment platforms.
-Client - Now
-Server - Heroku
+Client - [Now](https://zeit.co)
+Server - [Heroku](https://www.heroku.com)
 
 ## Built With
 
