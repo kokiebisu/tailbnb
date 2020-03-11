@@ -1,5 +1,7 @@
 
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/43525282/76377394-03088680-6308-11ea-9ea6-d43d8f0642be.gif)
+<p align="center">
+  <img width="200" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/09/airbnb_icon_detail_animation.gif"/>
+</p>
 
 
 # 🏠 Nextbnb
@@ -43,8 +45,8 @@ cd frontend && npm run test
 ## Deployment
 
 This project uses two deployment platforms.
-Client - [Now](https://zeit.co)
-Server - [Heroku](https://www.heroku.com)
+* Client - [Now](https://zeit.co)
+* Server - [Heroku](https://www.heroku.com)
 
 ## Built With
 
@@ -66,4 +68,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * [airbnb](https://airbnb.com) - inspiration
-* [studiopic](https://dribbble.com/studio-pic) - dribbble
+* [unsplash](https://unsplash.com/) - images
