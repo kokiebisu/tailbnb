@@ -26,6 +26,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/containers/Stay.js"
+    "src/components/containers/Stay.js",
+    "src/components/layout/Header.jsx"
   ]
 }
