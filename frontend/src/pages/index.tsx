@@ -6,7 +6,7 @@ import { Header } from '../components/layout/Header';
 import { Explore } from '../components/containers/Explore';
 import { Plus } from '../components/containers/Plus';
 import Today from '../components/containers/Today';
-import { Tomorrow } from '../components/containers/Tomorrow';
+import Tomorrow from '../components/containers/Tomorrow';
 import { NextWeek } from '../components/containers/NextWeek';
 import { Adventures } from '../components/containers/Adventures';
 import { Stay } from '../components/containers/Stay';
@@ -36,11 +36,7 @@ const Home: NextPage<{}> = () => {
       ) : null}
       <Explore />
       <Plus />
-      <Today
-        mobileBreakpoint={480}
-        tabletBreakpoint={1024}
-        laptopBreakpoint={1440}
-      />
+      <Today />
       <Tomorrow />
       <NextWeek />
       <Adventures />
