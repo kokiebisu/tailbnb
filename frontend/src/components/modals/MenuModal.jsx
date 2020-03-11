@@ -3,6 +3,10 @@ import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { TweenMax, Power3 } from 'gsap';
 
+// interface Props {
+//   switchMenuModal: (boolean: boolean) => void;
+// }
+
 export const MenuModal = ({ switchMenuModal }) => {
   let arrow = useRef(null);
   let menu = useRef(null);
@@ -35,10 +39,6 @@ export const MenuModal = ({ switchMenuModal }) => {
       opacity: 0.3,
       ease: Power3.easeIn
     });
-  };
-
-  const delay = () => {
-    TimeRanges.sl;
   };
 
   const closeMenu = () => {
