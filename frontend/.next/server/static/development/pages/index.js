@@ -2384,19 +2384,45 @@ const Explore = () => {
   }, explores.map(({
     img,
     title
-  }) => {
+  }, index) => {
+    if (index == explores.length - 1) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        key: cuid__WEBPACK_IMPORTED_MODULE_1___default()(),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: undefined
+      }, __jsx("div", {
+        className: "w-32 sm:w-1/3 cursor-pointer",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: undefined
+      }, __jsx(_functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__["ExploreCard"], {
+        img: img,
+        title: title,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: undefined
+      })));
+    }
+
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
       key: cuid__WEBPACK_IMPORTED_MODULE_1___default()(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 57
       },
       __self: undefined
     }, __jsx("div", {
-      className: "w-32 mr-4 sm:w-1/3 cursor-pointer",
+      className: "w-32 mr-5 sm:w-1/3 cursor-pointer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 58
       },
       __self: undefined
     }, __jsx(_functions_ExploreCard__WEBPACK_IMPORTED_MODULE_2__["ExploreCard"], {
@@ -2404,7 +2430,7 @@ const Explore = () => {
       title: title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 59
       },
       __self: undefined
     })));
@@ -3608,41 +3634,78 @@ const AdventureCard = ({
       lineNumber: 23
     },
     __self: undefined
-  }, __jsx("img", {
-    className: "w-full rounded-lg",
-    src: img,
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: undefined
-  }), __jsx("p", {
-    className: "uppercase text-xs my-2 font-semibold",
+  }, __jsx("img", {
+    className: "w-full h-full rounded-lg",
+    src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     },
     __self: undefined
-  }, country), __jsx("p", {
-    className: "my-1 w-5/6",
+  })), __jsx("div", {
+    className: "mt-2 mb-1 md:mb-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  }, title), __jsx("p", {
+  }, __jsx("p", {
+    id: "card_category",
+    className: "uppercase text-2xs md:text-xs",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: undefined
+  }, country)), __jsx("div", {
+    className: "text-sm md:text-base",
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "my-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "leading-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, title)), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
   }, "From $", cost, " / person", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 41
     },
     __self: undefined
-  }, " \xB7 "), period, " days")));
+  }, " \xB7 "), period, " days")))));
 };
 
 /***/ }),
@@ -3669,11 +3732,10 @@ const ExploreCard = ({
   img,
   title
 }) => {
-  return __jsx("div", {
-    className: "w-30/31",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -3681,14 +3743,14 @@ const ExploreCard = ({
     as: `/${title.toLowerCase()}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: undefined
   }, __jsx("img", {
@@ -3696,17 +3758,17 @@ const ExploreCard = ({
     className: "h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: undefined
   }), __jsx("p", {
     className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750 font-semibold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: undefined
-  }, title))));
+  }, title)))));
 };
 
 /***/ }),
@@ -4378,81 +4440,135 @@ const LocationExperienceCard = ({
       lineNumber: 25
     },
     __self: undefined
-  }, __jsx("img", {
-    className: "w-full rounded-lg",
-    src: img,
+  }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: undefined
-  }), __jsx("p", {
-    className: "uppercase text-xs my-2 font-semibold",
+  }, __jsx("img", {
+    className: "w-full h-full rounded-lg",
+    src: img,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  }, category), __jsx("p", {
-    className: "my-1 w-5/6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: undefined
-  }, title), __jsx("p", {
+  })), __jsx("div", {
+    className: "mt-2 mb-1 md:mb-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
-  }, "From $", cost, "/person"), __jsx("div", {
-    className: "flex items-center justify-start flex-wrap",
+  }, __jsx("p", {
+    id: "card_category",
+    className: "uppercase text-2xs md:text-xs",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: undefined
+  }, category)), __jsx("div", {
+    className: "text-sm md:text-base",
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "my-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "leading-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, title)), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: undefined
+  }, "From $", cost, "/person")), __jsx("div", {
+    className: "flex items-center justify-start flex-wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-2 w-2 md:h-3 md:w-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
   }, __jsx("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    x: "0px",
-    y: "0px",
-    width: "13",
-    height: "13",
+    className: "w-full h-full",
     viewBox: "0 0 37.286 37.287",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 45
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  }))), __jsx("p", {
-    className: "pl-1 text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: undefined
-  }, ratings), __jsx("p", {
-    className: "text-gray-650 text-sm",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 50
     },
     __self: undefined
-  }, "\xA0 (", reviews, ")"))));
+  })))), __jsx("div", {
+    className: "pl-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "text-xs md:text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: undefined
+  }, ratings)), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: undefined
+  }, __jsx("p", {
+    className: "text-gray-650 text-xs md:text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: undefined
+  }, "\xA0 (", reviews, ")"))))));
 };
 
 /***/ }),
@@ -9272,7 +9388,7 @@ const Section = ({
   };
 
   return __jsx("div", {
-    className: "px-6 md:px-20 lg:px-10 xl:max-w-layout mx-auto py-5 w-full",
+    className: "px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto py-5 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -9342,7 +9458,7 @@ const SectionOverflow = ({
   }
 
   return __jsx("div", {
-    className: "px-6 md:px-20 lg:px-10 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
+    className: "px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
