@@ -7,6 +7,9 @@ module.exports = {
       '90': '50rem'
     },
     extend: {
+      screens: {
+        '2xl': '1529px'
+      },
       lineHeight: {
         '11': '2.75rem',
         '12': '3rem',

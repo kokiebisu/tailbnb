@@ -181,32 +181,3 @@ L284.286,256.002z'
     </div>
   );
 };
-
-{
-  /* <div className='w-full flex justify-center items-center'>
-
-
-</div>
-<div className='bg-red-500 border-b border-t border-gray-300 p-8 relative h-full overflow-auto'>
-<div className=''>
-
-  
-</div>
-<div className='mt-8 mb-4'>
-  <h3
-    style={{ fontFamily: 'airbnb-bold' }}
-    className='uppercase text-xs text-gray-750'>
-    Recommended Articles
-  </h3>
-</div>
-<div>
-
-  <HelpCard title={questions[0].title} answer={questions[0].answer} />
-</div>
-
-</div>
-<div className='flex flex-col justify-end items-center my-2'>
-
-
-</div> */
-}
