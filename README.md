@@ -2,7 +2,7 @@
 <p align="center">
   <img width="200" style="https://i.pinimg.com/originals/b3/2a/f4/b32af410be8257b815d16d9ef0f01aa7.gif" alt="airbnb"/>
 </p>
-Credit to [studiopic](https://dribbble.com/studio-pic) - dribbble
+
 
 # 🏠 Nextbnb
 
