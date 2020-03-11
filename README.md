@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="200" style="https://i.pinimg.com/originals/b3/2a/f4/b32af410be8257b815d16d9ef0f01aa7.gif" alt="airbnb"/>
+  <img width="200" style="https://cdn.dribbble.com/users/385247/screenshots/3623803/01_06_2017_airbnb_800x600.gif" alt="airbnb"/>
 </p>
 
 
@@ -65,4 +65,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Airbnb for the inspiration
-
+* [studiopic](https://dribbble.com/studio-pic) - dribbble
