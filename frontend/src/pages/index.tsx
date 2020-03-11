@@ -14,37 +14,37 @@ import { TopRated } from '../components/containers/TopRated';
 import { Popular } from '../components/containers/Popular';
 import { Featured } from '../components/containers/Featured';
 import { Footer } from '../components/layout/Footer';
+import { MenuModal } from '../components/modals/MenuModal';
 
 // Next
 import { NextPage } from 'next';
-import { MenuModal } from '../components/modals/MenuModal';
 
 const Home: NextPage<{}> = () => {
-  const [menuModal, setMenuModal] = useState<boolean>(false);
+  const [menuModal, setMenuModal] = useState(false);
 
   const switchMenuModal = () => {
     setMenuModal(!menuModal);
   };
+
   return (
     <>
+      <Header switchMenuModal={switchMenuModal} />
       {menuModal ? (
-        <MenuModal switchMenuModal={switchMenuModal} />
-      ) : (
         <>
-          <Header switchMenuModal={switchMenuModal} />
-          <Explore />
-          <Plus />
-          <Today />
-          <Tomorrow />
-          <NextWeek />
-          <Adventures />
-          <Stay />
-          <TopRated />
-          <Popular />
-          <Featured />
-          <Footer />
+          <MenuModal switchMenuModal={switchMenuModal} />
         </>
-      )}
+      ) : null}
+      <Explore />
+      <Plus />
+      <Today />
+      <Tomorrow />
+      <NextWeek />
+      <Adventures />
+      <Stay />
+      <TopRated />
+      <Popular />
+      <Featured />
+      <Footer />
     </>
   );
 };
