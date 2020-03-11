@@ -1,12 +1,9 @@
 import * as React from 'react';
 
 // Functions
-// import { HostingStepsCard } from '../functions/HostingStepsCard';
+import { GetStartedCard } from '../functions/GetStartedCard';
 
-// Images
-const quote = require('../../../../public/img/high/host-steps-quote.jpg');
-
-export const HostingSteps = () => {
+export const GetStarted = () => {
   return (
     <>
       <div className='w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16'>
@@ -21,27 +18,27 @@ export const HostingSteps = () => {
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
               className='text-gray-750 text-4xl lg:text-6xl tracking-tight'>
-              Hosting in 3 steps
+              How to get started
             </h3>
           </div>
           <div>
             <div className='w-full lg:flex'>
-              <HostingStepsCard
-                title='List your space for free'
-                description='Share any space without sign-up charges, from a shared living room to a second home and everything in-between.'
-                link={false}
+              <GetStartedCard
+                icon='connected'
+                title='Get connected'
+                description='Tell us a little about your needs and we’ll see if we can match you with a hosting team in your area. Then your local team will reach out to gather info about your space, determine the right plan for you, and go over pricing.'
                 last={false}
               />
-              <HostingStepsCard
-                title='Decide how you want to host'
-                description="Choose your own schedule, prices, and requirements for guests. We're there to help along the way."
-                link={false}
+              <GetStartedCard
+                icon='handshake'
+                title='Let a specialist do the work'
+                description='Your dedicated hosting team will usually take care of everything—from creating your listing to communicating with guests and ensuring that your place is cleaned between rentals.'
                 last={false}
               />
-              <HostingStepsCard
-                title='Welcome your first guest'
-                description='Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.'
-                link={true}
+              <GetStartedCard
+                icon='money'
+                title='Start earning money'
+                description='With the hosting logistics taken care of, all that’s left is to collect the earnings from your space. Talk to your hosting team about easy payout options.'
                 last={true}
               />
             </div>
