@@ -28,14 +28,6 @@ export const Header = ({ switchMenuModal }) => {
   const [currency, setCurrency] = useState('$ CAD');
   const [type, setType] = useState('');
 
-  // useEffect(() => {
-  //   TweenMax.from(arrow, 1, {
-  //     rotation: '180_cw',
-  //     opacity: 0.3,
-  //     ease: Power3.easeOut
-  //   });
-  // });
-
   const switchLanguageModal = () => {
     setLanguageModal(!languageModal);
   };
