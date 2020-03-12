@@ -6,12 +6,12 @@
 
 # Nextbnb
 
-Replicates Airbnb using Nextjs
+## Demo
 
-## Notice
+https://nextbnb.kokiebisu.now.sh
 
 ``` diff
-- The hosted demo may not load in the first try. When it doesn't, try reloading!!
+! The hosted demo may not load in the first try. When it doesn't, try reloading!!
 ```
 
 ## Getting Started
