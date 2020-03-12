@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2900,69 +2900,76 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const FindOutCard = () => {
   return __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16 rounded-lg shadow-lg border border-gray-300",
+    className: "w-full px-6 md:px-8 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto py-4 lg:pt-8 lg:pb-16 rounded-lg md:shadow-lg md:border border-gray-300",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: undefined
   }, __jsx("div", {
-    className: "py-16",
+    className: "md:mx-2 py-8 lg:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: undefined
   }, __jsx("div", {
-    className: "mb-8 flex justify-center",
+    className: "mb-2 lg:mb-8 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "md:w-80p lg:w-full flex md:justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
     },
     __self: undefined
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-3.5xl text-gray-750",
+    className: "text-xl md:text-2xl lg:text-3.5xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: undefined
-  }, "Find out how much you can earn from your space")), __jsx("div", {
+  }, "Find out how much you can earn from your space"))), __jsx("div", {
     className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-72",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: undefined
   }, __jsx("div", {
-    className: "mb-2",
+    className: "w-full md:mx-16 lg:mx-0 lg:flex lg:w-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: undefined
   }, __jsx("div", {
-    className: "border border-gray-350 rounded",
+    className: "w-full lg:w-72",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "border border-gray-350 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx("input", {
@@ -2970,100 +2977,131 @@ const FindOutCard = () => {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "placeholder-black my-3 ml-3",
+    className: "placeholder-black my-1 md:my-3 ml-3 text-sm md:text-base",
     placeholder: "Vancouver",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: undefined
   }))), __jsx("div", {
-    className: "mb-2",
+    className: "flex flex-col md:flex-row lg:flex-col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 29
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mb-2 md:w-2/3 lg:w-auto md:mr-2 lg:mr-0 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("select", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "appearance-none pl-2 w-full border border-gray-450 py-3 rounded placeholder-gray-900 tracking-wide text-gray-750",
+    className: "appearance-none pl-2 w-full border border-gray-450 py-1 md:py-3 rounded placeholder-gray-900 tracking-wide text-gray-750 text-sm md:text-base",
     id: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 32
     },
     __self: undefined
   }, __jsx("option", {
     value: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 36
     },
     __self: undefined
   }, "Entire place"), __jsx("option", {
     value: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 37
     },
     __self: undefined
   }, "Private room"), __jsx("option", {
     value: "3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 38
     },
     __self: undefined
-  }, "Shared room")))), __jsx("div", {
+  }, "Shared room"))), __jsx("div", {
+    className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 41
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "fill-current h-4 w-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: undefined
+  })))), __jsx("div", {
+    className: "md:w-1/3 lg:w-auto md:ml-2 lg:ml-0 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 51
     },
     __self: undefined
   }, __jsx("select", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "appearance-none pl-2 w-full border border-gray-450 py-3 rounded placeholder-gray-900 tracking-wide text-gray-750",
+    className: "appearance-none pl-2 w-full border border-gray-450 py-1 md:py-3 rounded placeholder-gray-900 tracking-wide text-gray-750 text-sm md:text-base",
     id: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx("option", {
     value: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 56
     },
     __self: undefined
   }, "1 guest"), __jsx("option", {
     value: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 57
     },
     __self: undefined
   }, "2 guests"), __jsx("option", {
     value: "3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 58
     },
     __self: undefined
   }, "3 guests"), __jsx("option", {
@@ -3071,73 +3109,105 @@ const FindOutCard = () => {
     value: "4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 59
     },
     __self: undefined
   }, "4 guests"), __jsx("option", {
     value: "5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 62
     },
     __self: undefined
   }, "5 guests"), __jsx("option", {
     value: "6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 63
     },
     __self: undefined
-  }, "6 guests"))))), __jsx("div", {
+  }, "6 guests"))), __jsx("div", {
+    className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "fill-current h-4 w-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: undefined
+  })))))), __jsx("div", {
     style: {
       width: 1
     },
-    className: "bg-gray-650 mx-16",
+    className: "hidden lg:block bg-gray-650 mx-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 77
     },
     __self: undefined
   }), __jsx("div", {
+    className: "mt-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 80
     },
     __self: undefined
   }, __jsx("div", {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 81
     },
     __self: undefined
   }, __jsx("div", {
+    className: "flex lg:flex-col items-end lg:items-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 82
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "my-2 md:my-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-6xl",
+    className: "text-4xl lg:text-6xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 84
     },
     __self: undefined
   }, "$1,169")), __jsx("div", {
-    className: "flex mb-2",
+    className: "flex mb-4 ml-1 md:ml-0 md:mb-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 90
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 91
     },
     __self: undefined
   }, __jsx("p", {
@@ -3147,14 +3217,14 @@ const FindOutCard = () => {
     className: "text-xs",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 92
     },
     __self: undefined
   }, "per month")), __jsx("div", {
     className: "h-3 w-3 mx-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 98
     },
     __self: undefined
   }, __jsx("svg", {
@@ -3166,30 +3236,30 @@ const FindOutCard = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 99
     },
     __self: undefined
   }, __jsx("path", {
     d: "m12 0c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12-5.37-12-12-12zm0 23c-6.07 0-11-4.92-11-11s4.93-11 11-11 11 4.93 11 11-4.93 11-11 11zm4.75-14c0 1.8-.82 2.93-2.35 3.89-.23.14-1 .59-1.14.67-.4.25-.51.38-.51.44v2a .75.75 0 0 1 -1.5 0v-2c0-.74.42-1.22 1.22-1.72.17-.11.94-.55 1.14-.67 1.13-.71 1.64-1.41 1.64-2.61a3.25 3.25 0 0 0 -6.5 0 .75.75 0 0 1 -1.5 0 4.75 4.75 0 0 1 9.5 0zm-3.75 10a1 1 0 1 1 -2 0 1 1 0 0 1 2 0z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 103
     },
     __self: undefined
-  }))))), __jsx("div", {
+  })))))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 109
     },
     __self: undefined
   }, __jsx("button", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "bg-red-550 text-white rounded px-12 py-3",
+    className: "bg-red-550 text-white rounded px-12 py-3 w-full lg:w-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 110
     },
     __self: undefined
   }, "Check availability")))))));
@@ -5282,7 +5352,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hostservices_layout_QuestionsAnswered__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/hostservices/layout/QuestionsAnswered */ "./src/components/hostservices/layout/QuestionsAnswered.tsx");
 /* harmony import */ var _components_hostservices_layout_ReadyConnect__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/hostservices/layout/ReadyConnect */ "./src/components/hostservices/layout/ReadyConnect.tsx");
 /* harmony import */ var _components_functions_NewFooter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/functions/NewFooter */ "./src/components/functions/NewFooter.tsx");
-/* harmony import */ var _components_hostservices_functions_FindOutCard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/hostservices/functions/FindOutCard */ "./src/components/hostservices/functions/FindOutCard.jsx");
+/* harmony import */ var _components_hostservices_functions_FindOutCard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/hostservices/functions/FindOutCard */ "./src/components/hostservices/functions/FindOutCard.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/services.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -5343,7 +5413,7 @@ const services = () => {
       lineNumber: 33
     },
     __self: undefined
-  }), __jsx(_components_hostservices_functions_FindOutCard__WEBPACK_IMPORTED_MODULE_11__["FindOutCard"], {
+  }), __jsx(_components_hostservices_functions_FindOutCard__WEBPACK_IMPORTED_MODULE_10__["FindOutCard"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
@@ -5380,7 +5450,7 @@ const services = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*******************************************!*\
   !*** multi ./src/pages/host/services.jsx ***!
   \*******************************************/

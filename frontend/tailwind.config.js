@@ -168,6 +168,7 @@ module.exports = {
       maxWidth: {
         '100': '27.4rem',
         layout: '100rem',
+        '1.5xl': '39rem',
         '2.5xl': '45rem',
         '3.5xl': '52rem',
         '4.5xl': '60rem',
