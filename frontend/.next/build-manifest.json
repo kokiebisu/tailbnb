@@ -20,10 +20,6 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/host/services": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/host/setup": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { HostHeader } from '../../components/layout/HostHeader';
 import { HowToStart } from '../../components/hostsetup/layout/HowToStart';
 import { ControlHosting } from '../../components/hostsetup/layout/ControlHosting';
+import { AdvertiseMillions } from '../../components/hostsetup/layout/AdvertiseMillions';
 
 import { NewFooter } from '../../components/layout/NewFooter';
 
@@ -28,6 +29,7 @@ const setup = () => {
       {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
       <HowToStart />
       <ControlHosting />
+      <AdvertiseMillions />
       <NewFooter />
     </>
   );
