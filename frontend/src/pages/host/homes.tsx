@@ -1,4 +1,8 @@
 import * as React from 'react';
+import { useState } from 'react';
+
+// Modals
+import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
 import { HostHomesHeader } from '../../components/hosthomes/layout/HostHomesHeader';
@@ -20,9 +24,15 @@ import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCar
 const background = require('../../../public/img/high/hosthome.jpg');
 
 const homes: React.FC<{}> = () => {
+  const [menuModal, setMenuModal] = useState(false);
+
+  const changeMenuModal = () => {
+    setMenuModal(!menuModal);
+  };
+
   return (
     <>
-      <HostHomesHeader />
+      <HostHomesHeader switchMenuModal={changeMenuModal} />
       <div className='w-full max-w-layout mx-auto relative'>
         <div className='w-full h-60 md:h-72 lg:h-144 relative flex justify-center'>
           <img
@@ -40,6 +50,7 @@ const homes: React.FC<{}> = () => {
             </h3>
           </div>
         </div>
+        {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
         <HostHomesCard />
         <WhyHost />
         <HostingSteps />
