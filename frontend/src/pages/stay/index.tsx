@@ -6,7 +6,7 @@ import { ExploreHeader } from '../../components/layout/ExploreHeader';
 
 // Component
 import { Travel } from '../../components/functions/Travel';
-import { TopRated } from '../../components/containers/TopRated';
+import TopRated from '../../components/containers/TopRated';
 import { THundredPlus } from '../../components/containers/THundredPlus';
 
 // Next

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 
 export const HostHomesHeader: React.FC<{}> = () => {
   return (
@@ -55,7 +56,9 @@ export const HostHomesHeader: React.FC<{}> = () => {
               <a href=''>Financials</a>
             </div>
             <div className='mx-4 py-8'>
-              <a href=''>Hosting services</a>
+              <Link href='/services'>
+                <a>Hosting services</a>
+              </Link>
             </div>
           </div>
         </div>

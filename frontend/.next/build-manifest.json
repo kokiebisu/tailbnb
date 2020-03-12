@@ -17,11 +17,11 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/host/homes": [
+    "/host/experiences": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/host/services": [
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
