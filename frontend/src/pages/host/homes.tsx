@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
-import { HostHomesHeader } from '../../components/hosthomes/layout/HostHomesHeader';
+import { HostHeader } from '../../components/layout/HostHeader';
 import { WhyHost } from '../../components/hosthomes/layout/WhyHost';
 import { HostingSteps } from '../../components/hosthomes/layout/HostingSteps';
 import { Covered } from '../../components/hosthomes/layout/Covered';
@@ -15,7 +15,7 @@ import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
 import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
 import { HostReady } from '../../components/hosthomes/layout/HostReady';
-import { NewFooter } from '../../components/functions/NewFooter';
+import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
 import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
@@ -32,7 +32,11 @@ const homes: React.FC<{}> = () => {
 
   return (
     <>
-      <HostHomesHeader switchMenuModal={changeMenuModal} />
+      <HostHeader
+        color='#ffffff'
+        section='overview'
+        switchMenuModal={changeMenuModal}
+      />
       <div className='w-full max-w-layout mx-auto relative'>
         <div className='w-full h-60 md:h-72 lg:h-144 relative flex justify-center'>
           <img
