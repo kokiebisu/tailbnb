@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const HostServicesBanner = () => {
   return (
-    <div className='w-full px-6 lg:px-0 lg:max-w-5xl xl:max-w-7xl mx-auto'>
+    <div className='md:mt-32 lg:mt-0 w-full px-6 lg:px-0 lg:max-w-5xl xl:max-w-7xl mx-auto'>
       <div className='w-full lg:mt-16 lg:mb-10 flex flex-col-reverse md:flex-row justify-between'>
         <div className='w-full md:w-1/2 flex flex-col justify-center items-start text-gray-750'>
           <div className='w-90p'>
