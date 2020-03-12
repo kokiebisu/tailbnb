@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -4693,15 +4693,15 @@ const HostHeader = ({
       lineNumber: 76
     },
     __self: undefined
-  }, section === 'overviews' ? __jsx("div", {
+  }, section === 'overview' ? __jsx("div", {
     className: "mx-4 py-8 border-green-850 border-b-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 80
     },
     __self: undefined
-  }, __jsx("a", {
-    href: "",
+  }, __jsx("p", {
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 81
@@ -4734,8 +4734,8 @@ const HostHeader = ({
       lineNumber: 92
     },
     __self: undefined
-  }, __jsx("a", {
-    href: "",
+  }, __jsx("p", {
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 93
@@ -4769,7 +4769,7 @@ const HostHeader = ({
     },
     __self: undefined
   }, __jsx("p", {
-    href: "",
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
@@ -4783,7 +4783,7 @@ const HostHeader = ({
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/services",
+    href: "/host/safety",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 108
@@ -4803,7 +4803,7 @@ const HostHeader = ({
     },
     __self: undefined
   }, __jsx("p", {
-    href: "",
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 116
@@ -4817,7 +4817,7 @@ const HostHeader = ({
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/financials",
+    href: "/host/financials",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 120
@@ -4837,6 +4837,7 @@ const HostHeader = ({
     },
     __self: undefined
   }, __jsx("p", {
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 128
@@ -4850,7 +4851,7 @@ const HostHeader = ({
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/services",
+    href: "/host/services",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 132
@@ -6234,7 +6235,7 @@ const homes = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!****************************************!*\
   !*** multi ./src/pages/host/homes.tsx ***!
   \****************************************/

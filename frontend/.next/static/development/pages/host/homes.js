@@ -12206,15 +12206,15 @@ var HostHeader = function HostHeader(_ref) {
       lineNumber: 76
     },
     __self: this
-  }, section === 'overviews' ? __jsx("div", {
+  }, section === 'overview' ? __jsx("div", {
     className: "mx-4 py-8 border-green-850 border-b-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 80
     },
     __self: this
-  }, __jsx("a", {
-    href: "",
+  }, __jsx("p", {
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 81
@@ -12247,8 +12247,8 @@ var HostHeader = function HostHeader(_ref) {
       lineNumber: 92
     },
     __self: this
-  }, __jsx("a", {
-    href: "",
+  }, __jsx("p", {
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 93
@@ -12282,7 +12282,7 @@ var HostHeader = function HostHeader(_ref) {
     },
     __self: this
   }, __jsx("p", {
-    href: "",
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
@@ -12296,7 +12296,7 @@ var HostHeader = function HostHeader(_ref) {
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/services",
+    href: "/host/safety",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 108
@@ -12316,7 +12316,7 @@ var HostHeader = function HostHeader(_ref) {
     },
     __self: this
   }, __jsx("p", {
-    href: "",
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 116
@@ -12330,7 +12330,7 @@ var HostHeader = function HostHeader(_ref) {
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/financials",
+    href: "/host/financials",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 120
@@ -12350,6 +12350,7 @@ var HostHeader = function HostHeader(_ref) {
     },
     __self: this
   }, __jsx("p", {
+    className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 128
@@ -12363,7 +12364,7 @@ var HostHeader = function HostHeader(_ref) {
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/services",
+    href: "/host/services",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 132
@@ -13769,7 +13770,7 @@ var homes = function homes() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fhomes&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fhomes.tsx ***!
   \***********************************************************************************************************************************************************/
@@ -13792,5 +13793,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=homes.js.map
