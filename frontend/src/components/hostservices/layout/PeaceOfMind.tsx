@@ -42,8 +42,8 @@ export const PeaceOfMind: React.FC<{}> = () => {
           </div>
         </div>
       </div>
-      <div className='w-full max-w-5xl mx-auto py-4 md:py-16'>
-        <div className='w-full lg:h-112'>
+      <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto py-4 md:py-16'>
+        <div className='w-full md:h-96 lg:h-112'>
           <img
             className='h-full w-full object-cover'
             src={peaceofmind}

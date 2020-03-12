@@ -264,19 +264,62 @@ body {
 }
 
 /* Host Services Section */
+#ready {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+#quote__findteam {
+  position: absolute;
+}
+
+/* xs */
+@media (max-width: 640px) {
+  #ready {
+    top: 20px;
+  }
+
+  #quote__findteam {
+    top: 5px;
+  }
+}
 
 /* sm */
 @media (min-width: 640px) {
+  #ready {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  #quote__findteam {
+    top: 5px;
+  }
 }
 
 /* md */
 @media (min-width: 768px) {
+  #ready {
+    position: absolute;
+    top: 80px;
+    left: 110px;
+  }
+
+  #quote__findteam {
+    top: 5px;
+  }
 }
 
 /* lg */
 @media (min-width: 1024px) {
-  #quote__findteam {
+  #ready {
     position: absolute;
+    top: 80px;
+    left: 110px;
+  }
+
+  #quote__findteam {
     top: 70px;
   }
 }
