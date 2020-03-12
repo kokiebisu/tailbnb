@@ -6,7 +6,11 @@
 
 # Nextbnb
 
-A Project that replicates Airbnb using Nextjs
+Replicates Airbnb using Nextjs
+
+## Notice
+
+The hosted demo may not load in the first try. When it doesn't, try reloading!!
 
 ## Getting Started
 
