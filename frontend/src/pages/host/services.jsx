@@ -14,6 +14,9 @@ import { QuestionsAnswered } from '../../components/hostservices/layout/Question
 import { ReadyConnect } from '../../components/hostservices/layout/ReadyConnect';
 import { NewFooter } from '../../components/functions/NewFooter';
 
+// Functions
+import { FindOutCard } from '../../components/hostservices/functions/FindOutCard';
+
 const services = () => {
   const [menuModal, setMenuModal] = useState(false);
 
@@ -28,6 +31,7 @@ const services = () => {
       <HostServicesBanner />
       <FindTeam />
       <GetStarted />
+      <FindOutCard />
       <PeaceOfMind />
       <QuestionsAnswered />
       <ReadyConnect />
