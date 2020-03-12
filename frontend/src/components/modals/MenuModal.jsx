@@ -190,7 +190,9 @@ export const MenuModal = ({ switchMenuModal }) => {
               </Link>
             </div>
             <div className='py-3'>
-              <p>No time to host?</p>
+              <Link href='/host/services'>
+                <a>No time to host?</a>
+              </Link>
             </div>
             <div className='py-3'>
               <div>

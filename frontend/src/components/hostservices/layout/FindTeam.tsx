@@ -71,7 +71,7 @@ export const FindTeam: React.FC<{}> = () => {
           <img className='h-full w-full' src={quote} />
         </div>
         <div className='w-full md:w-1/2 relative flex items-center md:justify-end'>
-          <div className='md:w-85p'>
+          <div className='md:w-85p flex-col justify-center'>
             <div id='quote__findteam'>
               <p
                 style={{
@@ -85,7 +85,7 @@ export const FindTeam: React.FC<{}> = () => {
               <div className='mt-12'>
                 <div className='md:w-85p'>
                   <p
-                    id='quote-description'
+                    id='quote__description'
                     style={{
                       fontFamily:
                         'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'

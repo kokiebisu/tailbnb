@@ -19,7 +19,7 @@ export const QuestionsAnswered: React.FC<{}> = () => {
       <div className='lg:flex'>
         <div
           style={{ fontFamily: 'airbnb-book' }}
-          className='md:w-full lg:w-1/2 text-green-850 md:text-lg flex lg:justify-end'>
+          className='md:w-full lg:w-1/2 text-green-850 lg:text-lg flex lg:justify-end'>
           <div className='lg:w-95p'>
             <div className='my-10'>
               <a href=''>Who will my hosting team be?</a>
@@ -34,7 +34,7 @@ export const QuestionsAnswered: React.FC<{}> = () => {
         </div>
         <div
           style={{ fontFamily: 'airbnb-book' }}
-          className='md:w-full lg:w-1/2 text-green-850 md:text-lg flex lg:justify-end'>
+          className='md:w-full lg:w-1/2 text-green-850 lg:text-lg flex lg:justify-end'>
           <div className='lg:w-95p'>
             <div className='mt-10 lg:my-10'>
               <a href=''>What do I do with my personal belongings?</a>
