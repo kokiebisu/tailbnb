@@ -76,9 +76,9 @@ export const HostHeader = ({ color, section, switchMenuModal }) => {
           <div
             style={{ fontFamily: 'airbnb-medium' }}
             className='flex text-sm text-gray-750'>
-            {section === 'overviews' ? (
+            {section === 'overview' ? (
               <div className='mx-4 py-8 border-green-850 border-b-2'>
-                <a href=''>Overview</a>
+                <p className='text-green-850'>Overview</p>
               </div>
             ) : (
               <div className='mx-4 py-8'>
@@ -90,7 +90,7 @@ export const HostHeader = ({ color, section, switchMenuModal }) => {
 
             {section === 'setup' ? (
               <div className='mx-4 py-8 border-green-850 border-b-2'>
-                <a href=''>Setup</a>
+                <p className='text-green-850'>Setup</p>
               </div>
             ) : (
               <div className='mx-4 py-8'>
@@ -101,11 +101,11 @@ export const HostHeader = ({ color, section, switchMenuModal }) => {
             )}
             {section === 'safety' ? (
               <div className='mx-4 py-8 border-b-2 border-green-850'>
-                <p href=''>Safety</p>
+                <p className='text-green-850'>Safety</p>
               </div>
             ) : (
               <div className='mx-4 py-8'>
-                <Link href='/services'>
+                <Link href='/host/safety'>
                   <a>Safety</a>
                 </Link>
               </div>
@@ -113,11 +113,11 @@ export const HostHeader = ({ color, section, switchMenuModal }) => {
 
             {section === 'financials' ? (
               <div className='mx-4 py-8 border-b-2 border-green-850'>
-                <p href=''>Financials</p>
+                <p className='text-green-850'>Financials</p>
               </div>
             ) : (
               <div className='mx-4 py-8'>
-                <Link href='/financials'>
+                <Link href='/host/financials'>
                   <a>Financials</a>
                 </Link>
               </div>
@@ -125,11 +125,11 @@ export const HostHeader = ({ color, section, switchMenuModal }) => {
 
             {section === 'hosting services' ? (
               <div className='mx-4 py-8 border-b-2 border-green-850'>
-                <p>Hosting services</p>
+                <p className='text-green-850'>Hosting services</p>
               </div>
             ) : (
               <div className='mx-4 py-8'>
-                <Link href='/services'>
+                <Link href='/host/services'>
                   <a>Hosting services</a>
                 </Link>
               </div>

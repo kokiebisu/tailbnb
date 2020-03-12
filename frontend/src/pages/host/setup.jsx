@@ -3,9 +3,11 @@ import { useState } from 'react';
 
 // Layout
 import { HostHeader } from '../../components/layout/HostHeader';
+import { NewFooter } from '../../components/layout/NewFooter';
 
 // Modals
 import { HostMenuModal } from '../../components/modals/HostMenuModal';
+import { HowToStart } from '../../components/hostsetup/layout/HowToStart';
 
 const setup = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -16,8 +18,14 @@ const setup = () => {
 
   return (
     <>
-      <HostHeader section='setup' switchMenuModal={changeMenuModal} />
+      <HostHeader
+        color='#008489'
+        section='setup'
+        switchMenuModal={changeMenuModal}
+      />
       {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
+      <HowToStart />
+      <NewFooter />
     </>
   );
 };

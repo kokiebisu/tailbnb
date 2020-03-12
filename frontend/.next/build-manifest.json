@@ -19,6 +19,7 @@
     "/_polyfills": [
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
+<<<<<<< Updated upstream
     ],
     "/host/homes": [
       "static/runtime/webpack.js",
@@ -31,6 +32,8 @@
     "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+=======
+>>>>>>> Stashed changes
     ]
   }
 }

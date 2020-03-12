@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
-import { HostServicesHeader } from '../../components/hostservices/layout/HostServicesHeader';
+import { HostHeader } from '../../components/layout/HostHeader';
 import { HostServicesBanner } from '../../components/hostservices/layout/HostServicesBanner';
 import { FindTeam } from '../../components/hostservices/layout/FindTeam';
 import { GetStarted } from '../../components/hostservices/layout/GetStarted';
@@ -26,7 +26,11 @@ const services = () => {
 
   return (
     <>
-      <HostServicesHeader switchMenuModal={changeMenuModal} />
+      <HostHeader
+        color='#008489'
+        section='hosting services'
+        switchMenuModal={changeMenuModal}
+      />
       {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
       <HostServicesBanner />
       <FindTeam />
