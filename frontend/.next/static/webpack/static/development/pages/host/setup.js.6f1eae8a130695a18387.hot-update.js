@@ -16,17 +16,17 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostsetup
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var ControlHosting = function ControlHosting() {
-  return __jsx("div", {
-    className: "bg-red-550",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    className: "bg-red-550 w-full lg:max-w-5xl mx-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 6
     },
     __self: this
-  }, "Control Hosting");
+  }, "hello"));
 };
 
 /***/ })
 
 })
-//# sourceMappingURL=setup.js.cd1dff4e79e2df17aeae.hot-update.js.map
+//# sourceMappingURL=setup.js.6f1eae8a130695a18387.hot-update.js.map
