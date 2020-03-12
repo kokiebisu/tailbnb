@@ -34,6 +34,7 @@ export const HostServicesBanner = () => {
         </div>
         <div className='w-full md:w-1/2'>
           <video
+            playsInline
             autoPlay
             loop
             className='h-full w-full'
