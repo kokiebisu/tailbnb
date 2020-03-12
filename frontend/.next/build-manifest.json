@@ -3,11 +3,14 @@
     "static/development/dll/dll_d6a88dbe3071bd165157.js",
     "static/development/dll/dll_d6a88dbe3071bd165157.js.map"
   ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
+  ],
   "pages": {
     "/_app": [
       "static/runtime/webpack.js",
-      "static/runtime/main.js",
-      "static/development/_buildManifest.js"
+      "static/runtime/main.js"
     ],
     "/_error": [
       "static/runtime/webpack.js",
@@ -17,11 +20,15 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/host/services": [
+    "/host/homes": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/host/setup": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

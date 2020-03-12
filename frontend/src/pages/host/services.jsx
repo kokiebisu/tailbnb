@@ -12,7 +12,7 @@ import { GetStarted } from '../../components/hostservices/layout/GetStarted';
 import { PeaceOfMind } from '../../components/hostservices/layout/PeaceOfMind';
 import { QuestionsAnswered } from '../../components/hostservices/layout/QuestionsAnswered';
 import { ReadyConnect } from '../../components/hostservices/layout/ReadyConnect';
-import { NewFooter } from '../../components/functions/NewFooter';
+import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
 import { FindOutCard } from '../../components/hostservices/functions/FindOutCard';

@@ -88,184 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/define-property */ "core-js/library/fn/object/define-property");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "core-js/library/fn/symbol");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/weak-map.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/weak-map.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/weak-map */ "core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Object$getOwnPropertyDescriptor = __webpack_require__(/*! ../core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
-
-var _Object$defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js");
-
-var _WeakMap = __webpack_require__(/*! ../core-js/weak-map */ "./node_modules/@babel/runtime-corejs2/core-js/weak-map.js");
-
-function _getRequireWildcardCache() {
-  if (typeof _WeakMap !== "function") return null;
-  var cache = new _WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = _Object$defineProperty && _Object$getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? _Object$getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        _Object$defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/typeof.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/typeof.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _Symbol$iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js");
-
-var _Symbol = __webpack_require__(/*! ../core-js/symbol */ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js");
-
-function _typeof2(obj) { if (typeof _Symbol === "function" && typeof _Symbol$iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof _Symbol === "function" && obj.constructor === _Symbol && obj !== _Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof _Symbol === "function" && _typeof2(_Symbol$iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof _Symbol === "function" && obj.constructor === _Symbol && obj !== _Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
 
 /***/ "./node_modules/next/dist/client/link.js":
 /*!***********************************************!*\
@@ -295,20 +121,20 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
 exports.__esModule = true;
 exports["default"] = void 0;
 
-var _url = __webpack_require__(/*! url */ "url");
-
 var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
 
-var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
+var _url = __webpack_require__(/*! url */ "url");
 
 var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+
+var _router = _interopRequireDefault(__webpack_require__(/*! ./router */ "./node_modules/next/dist/client/router.js"));
 
 function isLocal(href) {
   var url = (0, _url.parse)(href, false, true);
@@ -415,7 +241,6 @@ function (_react$Component) {
     });
 
     _this.linkClicked = function (e) {
-      // @ts-ignore target exists on currentTarget
       var _e$currentTarget = e.currentTarget,
           nodeName = _e$currentTarget.nodeName,
           target = _e$currentTarget.target;
@@ -474,24 +299,26 @@ function (_react$Component) {
       this.cleanUpListeners();
     }
   }, {
-    key: "getHref",
-    value: function getHref() {
+    key: "getPaths",
+    value: function getPaths() {
       var pathname = window.location.pathname;
 
       var _this$formatUrls2 = this.formatUrls(this.props.href, this.props.as),
-          parsedHref = _this$formatUrls2.href;
+          parsedHref = _this$formatUrls2.href,
+          parsedAs = _this$formatUrls2.as;
 
-      return (0, _url.resolve)(pathname, parsedHref);
+      var resolvedHref = (0, _url.resolve)(pathname, parsedHref);
+      return [resolvedHref, parsedAs ? (0, _url.resolve)(pathname, parsedAs) : resolvedHref];
     }
   }, {
     key: "handleRef",
     value: function handleRef(ref) {
       var _this2 = this;
 
-      var isPrefetched = prefetched[this.getHref()];
-
       if (this.p && IntersectionObserver && ref && ref.tagName) {
         this.cleanUpListeners();
+        var isPrefetched = prefetched[this.getPaths().join( // Join on an invalid URI character
+        '%')];
 
         if (!isPrefetched) {
           this.cleanUpListeners = listenToIntersections(ref, function () {
@@ -504,14 +331,26 @@ function (_react$Component) {
 
   }, {
     key: "prefetch",
-    value: function prefetch() {
+    value: function prefetch(options) {
       if (!this.p || true) return; // Prefetch the JSON page if asked (only in the client)
 
-      var href = this.getHref();
+      var paths = this.getPaths(); // We need to handle a prefetch error here since we may be
+      // loading with priority which can reject but we don't
+      // want to force navigation since this is only a prefetch
 
-      _router["default"].prefetch(href);
+      _router["default"].prefetch(paths[
+      /* href */
+      0], paths[
+      /* asPath */
+      1], options)["catch"](function (err) {
+        if (true) {
+          // rethrow to show invalid URL errors
+          throw err;
+        }
+      });
 
-      prefetched[href] = true;
+      prefetched[paths.join( // Join on an invalid URI character
+      '%')] = true;
     }
   }, {
     key: "render",
@@ -547,7 +386,9 @@ function (_react$Component) {
             child.props.onMouseEnter(e);
           }
 
-          _this3.prefetch();
+          _this3.prefetch({
+            priority: true
+          });
         },
         onClick: function onClick(e) {
           if (child.props && typeof child.props.onClick === 'function') {
@@ -627,9 +468,9 @@ function _construct(Parent, args, Class) { if (isNativeReflectConstruct()) { _co
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports.useRouter = useRouter;
@@ -661,7 +502,7 @@ var singletonRouter = {
   }
 }; // Create public properties and methods of the router in the singletonRouter
 
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components'];
+var urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback'];
 var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
 var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
@@ -807,7 +648,7 @@ function makePublicRouterInstance(router) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports["default"] = withRouter;
@@ -972,13 +813,66 @@ var route_matcher_1 = __webpack_require__(/*! ./utils/route-matcher */ "./node_m
 var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modules/next/dist/next-server/lib/router/utils/route-regex.js");
 
 function addBasePath(path) {
-  // @ts-ignore variable is always a string
+  // variable is always a string
   var p = "";
   return path.indexOf(p) !== 0 ? p + path : path;
 }
 
 function toRoute(path) {
   return path.replace(/\/$/, '') || '/';
+}
+
+var prepareRoute = function prepareRoute(path) {
+  return toRoute(!path || path === '/' ? '/index' : path);
+};
+
+function fetchNextData(pathname, query, isServerRender, cb) {
+  var attempts = isServerRender ? 3 : 1;
+
+  function getResponse() {
+    return fetch(utils_1.formatWithValidation({
+      // @ts-ignore __NEXT_DATA__
+      pathname: "/_next/data/".concat(__NEXT_DATA__.buildId).concat(pathname, ".json"),
+      query: query
+    }), {
+      // Cookies are required to be present for Next.js' SSG "Preview Mode".
+      // Cookies may also be required for `getServerSideProps`.
+      //
+      // > `fetch` won’t send cookies, unless you set the credentials init
+      // > option.
+      // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+      //
+      // > For maximum browser compatibility when it comes to sending &
+      // > receiving cookies, always supply the `credentials: 'same-origin'`
+      // > option instead of relying on the default.
+      // https://github.com/github/fetch#caveats
+      credentials: 'same-origin'
+    }).then(function (res) {
+      if (!res.ok) {
+        if (--attempts > 0 && res.status >= 500) {
+          return getResponse();
+        }
+
+        throw new Error("Failed to load static props");
+      }
+
+      return res.json();
+    });
+  }
+
+  return getResponse().then(function (data) {
+    return cb ? cb(data) : data;
+  })["catch"](function (err) {
+    // We should only trigger a server-side transition if this was caused
+    // on a client-side transition. Otherwise, we'd get into an infinite
+    // loop.
+    if (!isServerRender) {
+      ;
+      err.code = 'PAGE_LOAD_ERROR';
+    }
+
+    throw err;
+  });
 }
 
 var Router =
@@ -993,7 +887,8 @@ function () {
         wrapApp = _ref.wrapApp,
         Component = _ref.Component,
         err = _ref.err,
-        subscription = _ref.subscription;
+        subscription = _ref.subscription,
+        isFallback = _ref.isFallback;
 
     _classCallCheck(this, Router);
 
@@ -1024,7 +919,7 @@ function () {
       // can be caused by navigating back from an external site
 
 
-      if (e.state && _this.isSsr && e.state.url === _this.pathname && e.state.as === _this.asPath) {
+      if (e.state && _this.isSsr && e.state.as === _this.asPath && url_1.parse(e.state.url).pathname === _this.pathname) {
         return;
       } // If the downstream application returns falsy, return.
       // They will then be responsible for handling the event.
@@ -1048,24 +943,20 @@ function () {
       _this.replace(url, as, options);
     };
 
-    this._getStaticData = function (asPath, _cachedData) {
-      var pathname = url_1.parse(asPath).pathname;
-      pathname = toRoute(!pathname || pathname === '/' ? '/index' : pathname);
-      return  false ? undefined : fetch( // @ts-ignore __NEXT_DATA__
-      "/_next/data/".concat(__NEXT_DATA__.buildId).concat(pathname, ".json")).then(function (res) {
-        if (!res.ok) {
-          throw new Error("Failed to load static props");
-        }
-
-        return res.json();
-      }).then(function (data) {
-        _this.sdc[pathname] = data;
-        return data;
-      })["catch"](function (err) {
-        ;
-        err.code = 'PAGE_LOAD_ERROR';
-        throw err;
+    this._getStaticData = function (asPath) {
+      var pathname = prepareRoute(url_1.parse(asPath).pathname);
+      return  false ? undefined : fetchNextData(pathname, null, _this.isSsr, function (data) {
+        return _this.sdc[pathname] = data;
       });
+    };
+
+    this._getServerData = function (asPath) {
+      var _url_1$parse = url_1.parse(asPath, true),
+          pathname = _url_1$parse.pathname,
+          query = _url_1$parse.query;
+
+      pathname = prepareRoute(pathname);
+      return fetchNextData(pathname, query, _this.isSsr);
     }; // represents the current component key
 
 
@@ -1079,7 +970,9 @@ function () {
       this.components[this.route] = {
         Component: Component,
         props: initialProps,
-        err: err
+        err: err,
+        __N_SSG: initialProps && initialProps.__N_SSG,
+        __N_SSP: initialProps && initialProps.__N_SSP
       };
     }
 
@@ -1087,7 +980,6 @@ function () {
       Component: App
     }; // Backwards compat for Router.router.events
     // TODO: Should be remove the following major version as it was never documented
-    // @ts-ignore backwards compatibility
 
     this.events = Router.events;
     this.pageLoader = pageLoader;
@@ -1103,6 +995,7 @@ function () {
     // back from external site
 
     this.isSsr = true;
+    this.isFallback = isFallback;
 
     if (false) {}
   } // @deprecated backwards compatibility even though it's a private method.
@@ -1119,7 +1012,9 @@ function () {
       }
 
       var newData = Object.assign(Object.assign({}, data), {
-        Component: Component
+        Component: Component,
+        __N_SSG: mod.__N_SSG,
+        __N_SSP: mod.__N_SSP
       });
       this.components[route] = newData; // pages/_app.js updated
 
@@ -1216,10 +1111,10 @@ function () {
           return resolve(true);
         }
 
-        var _url_1$parse = url_1.parse(url, true),
-            pathname = _url_1$parse.pathname,
-            query = _url_1$parse.query,
-            protocol = _url_1$parse.protocol;
+        var _url_1$parse2 = url_1.parse(url, true),
+            pathname = _url_1$parse2.pathname,
+            query = _url_1$parse2.query,
+            protocol = _url_1$parse2.protocol;
 
         if (!pathname || protocol) {
           if (true) {
@@ -1236,16 +1131,15 @@ function () {
 
         if (!_this2.urlIsNew(as)) {
           method = 'replaceState';
-        } // @ts-ignore pathname is always a string
-
+        }
 
         var route = toRoute(pathname);
         var _options$shallow = options.shallow,
             shallow = _options$shallow === void 0 ? false : _options$shallow;
 
         if (is_dynamic_1.isDynamicRoute(route)) {
-          var _url_1$parse2 = url_1.parse(as),
-              asPathname = _url_1$parse2.pathname;
+          var _url_1$parse3 = url_1.parse(as),
+              asPathname = _url_1$parse3.pathname;
 
           var routeRegex = route_regex_1.getRouteRegex(route);
           var routeMatch = route_matcher_1.getRouteMatcher(routeRegex)(asPathname);
@@ -1269,7 +1163,6 @@ function () {
         }
 
         Router.events.emit('routeChangeStart', as); // If shallow is true and the route exists in the router cache we reuse the previous result
-        // @ts-ignore pathname is always a string
 
         _this2.getRouteInfo(route, pathname, query, as, shallow).then(function (routeInfo) {
           var error = routeInfo.error;
@@ -1282,17 +1175,12 @@ function () {
 
           _this2.changeState(method, url, addBasePath(as), options);
 
-          var hash = window.location.hash.substring(1);
-
           if (true) {
             var appComp = _this2.components['/_app'].Component;
             window.next.isPrerendered = appComp.getInitialProps === appComp.origGetInitialProps && !routeInfo.Component.getInitialProps;
-          } // @ts-ignore pathname is always defined
+          }
 
-
-          _this2.set(route, pathname, query, as, Object.assign(Object.assign({}, routeInfo), {
-            hash: hash
-          }));
+          _this2.set(route, pathname, query, as, routeInfo);
 
           if (error) {
             Router.events.emit('routeChangeError', error, as);
@@ -1313,8 +1201,7 @@ function () {
         if (typeof window.history === 'undefined') {
           console.error("Warning: window.history is not available.");
           return;
-        } // @ts-ignore method should always exist on history
-
+        }
 
         if (typeof window.history[method] === 'undefined') {
           console.error("Warning: window.history.".concat(method, " is not available"));
@@ -1323,12 +1210,14 @@ function () {
       }
 
       if (method !== 'pushState' || utils_1.getURL() !== as) {
-        // @ts-ignore method should always exist on history
         window.history[method]({
           url: url,
           as: as,
           options: options
-        }, null, as);
+        }, // Most browsers currently ignores this parameter, although they may use it in the future.
+        // Passing the empty string here should be safe against future changes to the method.
+        // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
+        '', as);
       }
     }
   }, {
@@ -1344,43 +1233,9 @@ function () {
         return Promise.resolve(cachedRouteInfo);
       }
 
-      return new Promise(function (resolve, reject) {
-        if (cachedRouteInfo) {
-          return resolve(cachedRouteInfo);
-        }
-
-        _this3.fetchComponent(route).then(function (Component) {
-          return resolve({
-            Component: Component
-          });
-        }, reject);
-      }).then(function (routeInfo) {
-        var Component = routeInfo.Component;
-
-        if (true) {
-          var _require = __webpack_require__(/*! react-is */ "react-is"),
-              isValidElementType = _require.isValidElementType;
-
-          if (!isValidElementType(Component)) {
-            throw new Error("The default export is not a React Component in page: \"".concat(pathname, "\""));
-          }
-        }
-
-        return _this3._getData(function () {
-          return Component.__N_SSG ? _this3._getStaticData(as) : _this3.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
-          {
-            pathname: pathname,
-            query: query,
-            asPath: as
-          });
-        }).then(function (props) {
-          routeInfo.props = props;
-          _this3.components[route] = routeInfo;
-          return routeInfo;
-        });
-      })["catch"](function (err) {
+      var handleError = function handleError(err, loadErrorFail) {
         return new Promise(function (resolve) {
-          if (err.code === 'PAGE_LOAD_ERROR') {
+          if (err.code === 'PAGE_LOAD_ERROR' || loadErrorFail) {
             // If we can't load the page it could be one of following reasons
             //  1. Page doesn't exists
             //  2. Page does exist in a different zone
@@ -1403,7 +1258,8 @@ function () {
             });
           }
 
-          resolve(_this3.fetchComponent('/_error').then(function (Component) {
+          resolve(_this3.fetchComponent('/_error').then(function (res) {
+            var Component = res.page;
             var routeInfo = {
               Component: Component,
               err: err
@@ -1424,13 +1280,56 @@ function () {
                 resolve(routeInfo);
               });
             });
+          })["catch"](function (err) {
+            return handleError(err, true);
           }));
         });
-      });
+      };
+
+      return new Promise(function (resolve, reject) {
+        if (cachedRouteInfo) {
+          return resolve(cachedRouteInfo);
+        }
+
+        _this3.fetchComponent(route).then(function (res) {
+          return resolve({
+            Component: res.page,
+            __N_SSG: res.mod.__N_SSG,
+            __N_SSP: res.mod.__N_SSP
+          });
+        }, reject);
+      }).then(function (routeInfo) {
+        var Component = routeInfo.Component,
+            __N_SSG = routeInfo.__N_SSG,
+            __N_SSP = routeInfo.__N_SSP;
+
+        if (true) {
+          var _require = __webpack_require__(/*! react-is */ "react-is"),
+              isValidElementType = _require.isValidElementType;
+
+          if (!isValidElementType(Component)) {
+            throw new Error("The default export is not a React Component in page: \"".concat(pathname, "\""));
+          }
+        }
+
+        return _this3._getData(function () {
+          return __N_SSG ? _this3._getStaticData(as) : __N_SSP ? _this3._getServerData(as) : _this3.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
+          {
+            pathname: pathname,
+            query: query,
+            asPath: as
+          });
+        }).then(function (props) {
+          routeInfo.props = props;
+          _this3.components[route] = routeInfo;
+          return routeInfo;
+        });
+      })["catch"](handleError);
     }
   }, {
     key: "set",
     value: function set(route, pathname, query, as, data) {
+      this.isFallback = false;
       this.route = route;
       this.pathname = pathname;
       this.query = query;
@@ -1513,9 +1412,10 @@ function () {
       return this.asPath !== asPath;
     }
     /**
-     * Prefetch `page` code, you may wait for the data during `page` rendering.
+     * Prefetch page code, you may wait for the data during page rendering.
      * This feature only works in production!
-     * @param url of prefetched `page`
+     * @param url the href of prefetched page
+     * @param asPath the as path of the prefetched page
      */
 
   }, {
@@ -1523,10 +1423,12 @@ function () {
     value: function prefetch(url) {
       var _this4 = this;
 
+      var asPath = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : url;
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
       return new Promise(function (resolve, reject) {
-        var _url_1$parse3 = url_1.parse(url),
-            pathname = _url_1$parse3.pathname,
-            protocol = _url_1$parse3.protocol;
+        var _url_1$parse4 = url_1.parse(url),
+            pathname = _url_1$parse4.pathname,
+            protocol = _url_1$parse4.protocol;
 
         if (!pathname || protocol) {
           if (true) {
@@ -1539,18 +1441,17 @@ function () {
 
         if (true) {
           return;
-        } // @ts-ignore pathname is always defined
+        }
 
-
-        var route = toRoute(pathname);
-
-        _this4.pageLoader.prefetch(route).then(resolve, reject);
+        Promise.all([_this4.pageLoader.prefetchData(url, asPath), _this4.pageLoader[options.priority ? 'loadPage' : 'prefetch'](toRoute(pathname))]).then(function () {
+          return resolve();
+        }, reject);
       });
     }
   }, {
     key: "fetchComponent",
     value: function fetchComponent(route) {
-      var cancelled, cancel, Component, error;
+      var cancelled, cancel, componentResult, error;
       return regeneratorRuntime.async(function fetchComponent$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -1565,7 +1466,7 @@ function () {
               return regeneratorRuntime.awrap(this.pageLoader.loadPage(route));
 
             case 4:
-              Component = _context.sent;
+              componentResult = _context.sent;
 
               if (!cancelled) {
                 _context.next = 9;
@@ -1581,14 +1482,14 @@ function () {
                 this.clc = null;
               }
 
-              return _context.abrupt("return", Component);
+              return _context.abrupt("return", componentResult);
 
             case 11:
             case "end":
               return _context.stop();
           }
         }
-      }, null, this);
+      }, null, this, null, Promise);
     }
   }, {
     key: "_getData",
@@ -1925,7 +1826,7 @@ function loadGetInitialProps(App, ctx) {
           return _context.stop();
       }
     }
-  });
+  }, null, null, null, Promise);
 }
 
 exports.loadGetInitialProps = loadGetInitialProps;
@@ -1963,6 +1864,115 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/next/node_modules/@babel/runtime/helpers/typeof.js");
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function _getRequireWildcardCache() {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
+    return {
+      "default": obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj["default"] = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+module.exports = _interopRequireWildcard;
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/typeof.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/next/node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return _typeof2(obj);
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+
+/***/ }),
+
 /***/ "./src/components/layout/HostHeader.jsx":
 /*!**********************************************!*\
   !*** ./src/components/layout/HostHeader.jsx ***!
@@ -1985,6 +1995,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 // }
 
 const HostHeader = ({
+  color,
   section,
   switchMenuModal
 }) => {
@@ -2034,7 +2045,7 @@ const HostHeader = ({
     focusable: "false",
     className: "block",
     style: {
-      fill: '#008489'
+      fill: `${color}`
     },
     __source: {
       fileName: _jsxFileName,
@@ -2058,7 +2069,7 @@ const HostHeader = ({
   }, __jsx("svg", {
     className: "h-full w-full",
     style: {
-      fill: '#484848'
+      fill: `${color}`
     },
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 491.996 491.996",
@@ -2673,7 +2684,7 @@ const setup = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!****************************************!*\
   !*** multi ./src/pages/host/setup.jsx ***!
   \****************************************/
@@ -2682,61 +2693,6 @@ const setup = () => {
 
 module.exports = __webpack_require__(/*! /Users/ken/Desktop/nextbnb/frontend/src/pages/host/setup.jsx */"./src/pages/host/setup.jsx");
 
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/define-property":
-/*!************************************************************!*\
-  !*** external "core-js/library/fn/object/define-property" ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/define-property");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/get-own-property-descriptor":
-/*!************************************************************************!*\
-  !*** external "core-js/library/fn/object/get-own-property-descriptor" ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "core-js/library/fn/symbol":
-/*!********************************************!*\
-  !*** external "core-js/library/fn/symbol" ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/symbol");
-
-/***/ }),
-
-/***/ "core-js/library/fn/symbol/iterator":
-/*!*****************************************************!*\
-  !*** external "core-js/library/fn/symbol/iterator" ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "core-js/library/fn/weak-map":
-/*!**********************************************!*\
-  !*** external "core-js/library/fn/weak-map" ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/weak-map");
 
 /***/ }),
 
