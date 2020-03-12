@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
+import { RegisterModal } from '../../components/modals/RegisterModal';
+import { HelpModal } from '../../components/modals/HelpModal';
+import { CurrencyModal } from '../../components/modals/CurrencyModal';
+import { LanguageModal } from '../../components/modals/LanguageModal';
 
 export default () => {
   const [languageModal, setLanguageModal] = useState(false);
