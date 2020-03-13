@@ -8,6 +8,7 @@ import { HostMenuModal } from '../../components/modals/HostMenuModal';
 import { HostHeader } from '../../components/layout/HostHeader';
 import { How } from '../../components/host/containers/How';
 import { GreatGuests } from '../../components/hostsafety/containers/GreatGuests';
+import { HostConfidence } from '../../components/hostsafety/containers/HostConfidence';
 
 const safety = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -30,6 +31,7 @@ const safety = () => {
         description="We've taken extensive measures to help keep you, your home, and your guests safe."
       />
       <GreatGuests />
+      <HostConfidence />
     </>
   );
 };
