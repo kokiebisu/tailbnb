@@ -143,78 +143,92 @@ body {
   border: 1.5px solid #008489;
 }
 
-#tableShadowTop {
-  position: relative;
-  box-shadow: 0px 5px 15px -13px inset;
+@media (max-width: 600px) {
+  #tableSmallScreen {
+    display: block;
+    box-shadow: rgba(219, 219, 219, 0.4) 8px 0px 8px -4px,
+      rgb(255, 255, 255) -16px 0px 8px -4px inset;
+  }
 }
 
-#tableShadowTop::before {
-  box-shadow: -7px 0 11px -13px inset;
-  content: ' ';
-  height: 100%;
-  left: -15px;
-  position: absolute;
-  top: 0;
-  width: 15px;
-}
+@media (min-width: 601px) {
+  #tableSmallScreen {
+    display: none;
+  }
 
-#tableShadowTop::after {
-  box-shadow: 7px 0 11px -13px inset;
-  content: ' ';
-  height: 100%;
-  right: -15px;
-  position: absolute;
-  top: 0;
-  width: 15px;
-}
+  #tableShadowTop {
+    position: relative;
+    box-shadow: 0px 5px 15px -13px inset;
+  }
 
-#tableShadowMiddle {
-  position: relative;
-}
+  #tableShadowTop::before {
+    box-shadow: -7px 0 11px -13px inset;
+    content: ' ';
+    height: 100%;
+    left: -15px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+  }
 
-#tableShadowMiddle::before {
-  box-shadow: -7px 0 11px -13px inset;
-  content: ' ';
-  height: 100%;
-  left: -15px;
-  position: absolute;
-  top: 0;
-  width: 15px;
-}
+  #tableShadowTop::after {
+    box-shadow: 7px 0 11px -13px inset;
+    content: ' ';
+    height: 100%;
+    right: -15px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+  }
 
-#tableShadowMiddle::after {
-  box-shadow: 7px 0 11px -13px inset;
-  content: ' ';
-  height: 100%;
-  right: -15px;
-  position: absolute;
-  top: 0;
-  width: 15px;
-}
+  #tableShadowMiddle {
+    position: relative;
+  }
 
-#tableShadowBottom {
-  position: relative;
-  box-shadow: 0px -5px 15px -13px inset;
-}
+  #tableShadowMiddle::before {
+    box-shadow: -7px 0 11px -13px inset;
+    content: ' ';
+    height: 100%;
+    left: -15px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+  }
 
-#tableShadowBottom::before {
-  box-shadow: -7px 0 11px -13px inset;
-  content: ' ';
-  height: 100%;
-  left: -15px;
-  position: absolute;
-  top: 0;
-  width: 15px;
-}
+  #tableShadowMiddle::after {
+    box-shadow: 7px 0 11px -13px inset;
+    content: ' ';
+    height: 100%;
+    right: -15px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+  }
 
-#tableShadowBottom::after {
-  box-shadow: 7px 0 11px -13px inset;
-  content: ' ';
-  height: 100%;
-  right: -15px;
-  position: absolute;
-  top: 0;
-  width: 15px;
+  #tableShadowBottom {
+    position: relative;
+    box-shadow: 0px -5px 15px -13px inset;
+  }
+
+  #tableShadowBottom::before {
+    box-shadow: -7px 0 11px -13px inset;
+    content: ' ';
+    height: 100%;
+    left: -15px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+  }
+
+  #tableShadowBottom::after {
+    box-shadow: 7px 0 11px -13px inset;
+    content: ' ';
+    height: 100%;
+    right: -15px;
+    position: absolute;
+    top: 0;
+    width: 15px;
+  }
 }
 
 /* xs */
