@@ -2247,14 +2247,17 @@ const How = ({
     },
     __self: undefined
   }, __jsx("div", {
-    className: "bg-gray-100",
+    style: {
+      bottom: 30
+    },
+    className: "bg-gray-100 relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: undefined
   }, __jsx("div", {
-    className: "mt-8 md:mt-0 w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl mx-auto pt-8 pb-16",
+    className: "mt-8 md:mt-0 w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl mx-auto pt-16 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -3064,7 +3067,7 @@ const HostConfidenceCheckCard = ({
   title
 }) => {
   return __jsx("div", {
-    className: "lg:w-1/3 flex items-center md:mb-12",
+    className: "lg:w-1/3 flex items-center mb-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -4690,11 +4693,7 @@ const HostHeader = ({
   };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx("div", {
-    style: {
-      top: 30,
-      left: 0
-    },
-    className: "lg:hidden flex items-center justify-start absolute z-50 top-0 left-0",
+    className: "pt-8 lg:hidden flex items-center justify-start absolute z-50 top-0 left-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
@@ -4704,7 +4703,7 @@ const HostHeader = ({
     className: "ml-6 mr-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("button", {
@@ -4714,14 +4713,14 @@ const HostHeader = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-8 h-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 23
     },
     __self: undefined
   }, __jsx("svg", {
@@ -4735,21 +4734,21 @@ const HostHeader = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("path", {
     d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 31
     },
     __self: undefined
   }))), __jsx("div", {
     className: "h-2 w-2 ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx("svg", {
@@ -4761,47 +4760,47 @@ const HostHeader = ({
     viewBox: "0 0 491.996 491.996",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 41
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx("path", {
     d: "M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 43
     },
     __self: undefined
   })))))))), __jsx("div", {
     className: "px-4 md:px-0 flex bg-white w-full lg:border-b border-gray-300 items-center justify-end lg:justify-between fixed bottom-0 border-t border-gray-300 lg:sticky lg:top-0 z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 57
     },
     __self: undefined
   }, __jsx("div", {
     className: "hidden lg:flex items-center justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 58
     },
     __self: undefined
   }, __jsx("div", {
     className: "ml-6 mr-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("a", {
@@ -4809,14 +4808,14 @@ const HostHeader = ({
     className: "flex items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 60
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-8 w-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 61
     },
     __self: undefined
   }, __jsx("svg", {
@@ -4830,14 +4829,14 @@ const HostHeader = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 62
     },
     __self: undefined
   }, __jsx("path", {
     d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 69
     },
     __self: undefined
   }))))), __jsx("div", {
@@ -4847,177 +4846,177 @@ const HostHeader = ({
     className: "flex text-sm text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 74
     },
     __self: undefined
   }, section === 'overview' ? __jsx("div", {
     className: "mx-4 py-8 border-green-850 border-b-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 78
     },
     __self: undefined
   }, __jsx("p", {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 79
     },
     __self: undefined
   }, "Overview")) : __jsx("div", {
     className: "mx-4 py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/homes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 84
     },
     __self: undefined
   }, "Overview"))), section === 'setup' ? __jsx("div", {
     className: "mx-4 py-8 border-green-850 border-b-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 90
     },
     __self: undefined
   }, __jsx("p", {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 91
     },
     __self: undefined
   }, "Setup")) : __jsx("div", {
     className: "mx-4 py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 94
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/setup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 95
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 96
     },
     __self: undefined
   }, "Setup"))), section === 'safety' ? __jsx("div", {
     className: "mx-4 py-8 border-b-2 border-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 101
     },
     __self: undefined
   }, __jsx("p", {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 102
     },
     __self: undefined
   }, "Safety")) : __jsx("div", {
     className: "mx-4 py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 105
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/safety",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 106
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 107
     },
     __self: undefined
   }, "Safety"))), section === 'financials' ? __jsx("div", {
     className: "mx-4 py-8 border-b-2 border-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 113
     },
     __self: undefined
   }, __jsx("p", {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 114
     },
     __self: undefined
   }, "Financials")) : __jsx("div", {
     className: "mx-4 py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 117
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/financials",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 118
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 119
     },
     __self: undefined
   }, "Financials"))), section === 'hosting services' ? __jsx("div", {
     className: "mx-4 py-8 border-b-2 border-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 125
     },
     __self: undefined
   }, __jsx("p", {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 126
     },
     __self: undefined
   }, "Hosting services")) : __jsx("div", {
     className: "mx-4 py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 129
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/services",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 130
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 131
     },
     __self: undefined
   }, "Hosting services")))))));

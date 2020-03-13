@@ -3,12 +3,12 @@ import { useState } from 'react';
 
 // Layout
 import { HostHeader } from '../../components/layout/HostHeader';
-import { How } from '../../components/host/containers/How';
+import { How } from '../../components/host/layout/How';
 import { ControlHosting } from '../../components/hostsetup/layout/ControlHosting';
 import { AdvertiseMillions } from '../../components/hostsetup/layout/AdvertiseMillions';
 import { HostingSupport } from '../../components/hostsetup/layout/HostingSupport';
 import { PeopleHost } from '../../components/hostsetup/layout/PeopleHost';
-import { QuestionsAnswered } from '../../components/hostservices/layout/QuestionsAnswered';
+import { QuestionsAnswered } from '../../components/host/layout/QuestionsAnswered';
 import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
