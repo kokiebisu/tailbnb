@@ -3,6 +3,7 @@ import * as React from 'react';
 // Images
 const overview = require('../../../../public/img/high/ready-earn-overview.jpg');
 const setup = require('../../../../public/img/high/ready-earn-setup.jpg');
+const safety = require('../../../../public/img/high/ready-earn-safety.jpg');
 
 interface Props {
   page: string;
@@ -14,6 +15,8 @@ const renderImg = (page: string) => {
       return <img className='h-full w-full object-cover' src={overview} />;
     case 'setup':
       return <img className='h-full w-full object-cover' src={setup} />;
+    case 'safety':
+      return <img className='w-full h-full object-cover' src={safety} />;
     default:
       return (
         <img
