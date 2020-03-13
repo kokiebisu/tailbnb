@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const CharacteristicCard = ({ children, title, description }) => {
+export const CharacteristicCard = ({ children, title, description, link }) => {
   return (
     <>
       <div className='mb-8 lg:mb-0 my-16'>
@@ -22,6 +22,15 @@ export const CharacteristicCard = ({ children, title, description }) => {
               {description}
             </p>
           </div>
+          {link && (
+            <div className='my-3'>
+              <p
+                style={{ fontFamily: 'airbnb-book' }}
+                className='text-green-850'>
+                {link}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </>

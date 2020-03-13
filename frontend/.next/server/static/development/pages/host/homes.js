@@ -2091,7 +2091,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 const CharacteristicCard = ({
   children,
   title,
-  description
+  description,
+  link
 }) => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     className: "mb-8 lg:mb-0 my-16",
@@ -2153,7 +2154,24 @@ const CharacteristicCard = ({
       lineNumber: 21
     },
     __self: undefined
-  }, description)))));
+  }, description)), link && __jsx("div", {
+    className: "my-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }, link)))));
 };
 
 /***/ }),
@@ -2293,6 +2311,213 @@ const HostReady = ({
     },
     __self: undefined
   }, "Get started")))));
+};
+
+/***/ }),
+
+/***/ "./src/components/host/layout/QuoteLeft.jsx":
+/*!**************************************************!*\
+  !*** ./src/components/host/layout/QuoteLeft.jsx ***!
+  \**************************************************/
+/*! exports provided: QuoteLeft */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuoteLeft", function() { return QuoteLeft; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/QuoteLeft.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+
+const quote = __webpack_require__(/*! ../../../../public/img/high/host-steps-quote.jpg */ "./public/img/high/host-steps-quote.jpg");
+
+const QuoteLeft = () => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    className: "flex flex-col-reverse md:flex-row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-full md:w-1/2 relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("div", {
+    id: "quote__steps",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'circular-std-medium'
+    },
+    className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, "\u201C")), __jsx("div", {
+    className: "mt-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "md:w-85p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx("p", {
+    id: "quote-description",
+    style: {
+      fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
+    },
+    className: "md:text-lg md:leading-relaxed lg:text-4xl text-gray-750 lg:leading-tight",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, "The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's damage or problems."))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm md:text-base text-gray-650 my-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, "Olivia hosts in Paris for the flexibility it provides")), __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "py-3 px-5 border-2 border-gray-850 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  }, "Learn how they host")))), __jsx("div", {
+    className: "w-full md:w-1/2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "h-full w-full",
+    src: quote,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
+  }))));
+};
+
+/***/ }),
+
+/***/ "./src/components/host/wrapper/HostSection.jsx":
+/*!*****************************************************!*\
+  !*** ./src/components/host/wrapper/HostSection.jsx ***!
+  \*****************************************************/
+/*! exports provided: HostSection */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostSection", function() { return HostSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/wrapper/HostSection.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+const HostSection = ({
+  children,
+  title
+}) => {
+  return __jsx("div", {
+    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "my-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mb-4 md:mb-0 flex md:justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      width: 70,
+      height: 2
+    },
+    className: "bg-gray-650 rounded-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "flex md:justify-center mb-12 mt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, title)), children));
 };
 
 /***/ }),
@@ -2716,204 +2941,6 @@ const HostHomesCard = () => {
     },
     __self: undefined
   }, "Get started")))));
-};
-
-/***/ }),
-
-/***/ "./src/components/hosthomes/functions/HostingStepsCard.tsx":
-/*!*****************************************************************!*\
-  !*** ./src/components/hosthomes/functions/HostingStepsCard.tsx ***!
-  \*****************************************************************/
-/*! exports provided: HostingStepsCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostingStepsCard", function() { return HostingStepsCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hosthomes/functions/HostingStepsCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-const HostingStepsCard = ({
-  title,
-  description,
-  link,
-  last
-}) => {
-  return __jsx("div", {
-    className: "md:w-full lg:w-1/3 mb-12 lg:mb-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: undefined
-  }, last ? __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "h-12 w-12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, __jsx("svg", {
-    className: "h-full w-full",
-    viewBox: "0 0 32 32",
-    style: {
-      fill: '#484848'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    className: "my-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 text-2xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: undefined
-  }, title)), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 md:leading-loose",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }, description)), link ? __jsx("div", {
-    className: "mt-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }, __jsx("a", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-green-850",
-    href: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }, "Learn how to start hosting")) : null) : __jsx("div", {
-    className: "md:w-85p",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "h-12 w-12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: undefined
-  }, __jsx("svg", {
-    className: "h-full w-full",
-    viewBox: "0 0 32 32",
-    style: {
-      fill: '#484848'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: undefined
-  }))), __jsx("div", {
-    className: "my-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 text-2xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
-  }, title)), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 md:leading-loose",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: undefined
-  }, description)), link ? __jsx("div", {
-    className: "mt-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: undefined
-  }, __jsx("a", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-green-850",
-    href: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: undefined
-  }, "Learn how to start hosting")) : null));
 };
 
 /***/ }),
@@ -3893,216 +3920,148 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostingSteps", function() { return HostingSteps; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/HostingStepsCard */ "./src/components/hosthomes/functions/HostingStepsCard.tsx");
+/* harmony import */ var _host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../host/wrapper/HostSection */ "./src/components/host/wrapper/HostSection.jsx");
+/* harmony import */ var _host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../host/functions/CharacteristicCard */ "./src/components/host/functions/CharacteristicCard.jsx");
+/* harmony import */ var _host_layout_QuoteLeft__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../host/layout/QuoteLeft */ "./src/components/host/layout/QuoteLeft.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hosthomes/layout/HostingSteps.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // Wrapper
+
  // Functions
 
- // Images
+ // Layout
 
-const quote = __webpack_require__(/*! ../../../../public/img/high/host-steps-quote.jpg */ "./public/img/high/host-steps-quote.jpg");
+ // Images
+// const quote = require('../../../../public/img/high/host-steps-quote.jpg');
 
 const HostingSteps = () => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__["HostSection"], {
+    title: "Hosting in 3 steps",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "my-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "mb-4 md:mb-0 flex md:justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
-  }, __jsx("div", {
-    style: {
-      width: 70,
-      height: 2
-    },
-    className: "bg-gray-650 rounded-lg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "flex md:justify-center mb-12 mt-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  }, "Hosting in 3 steps")), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full lg:flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 19
     },
     __self: undefined
-  }, __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
+  }, __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
     title: "List your space for free",
     description: "Share any space without sign-up charges, from a shared living room to a second home and everything in-between.",
-    link: false,
-    last: false,
+    link: null,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-12 w-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    viewBox: "0 0 32 32",
+    style: {
+      fill: '#484848'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
-  }), __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
+  })))), __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
     title: "Decide how you want to host",
     description: "Choose your own schedule, prices, and requirements for guests. We're there to help along the way.",
-    link: false,
-    last: false,
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 33
     },
     __self: undefined
-  }), __jsx(_functions_HostingStepsCard__WEBPACK_IMPORTED_MODULE_1__["HostingStepsCard"], {
+  }, __jsx("div", {
+    className: "h-12 w-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    viewBox: "0 0 32 32",
+    style: {
+      fill: '#484848'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  })))), __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
     title: "Welcome your first guest",
     description: "Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.",
-    link: true,
-    last: true,
+    link: "Learn how to start hosting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 46
     },
     __self: undefined
-  }))))), __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col-reverse md:flex-row",
+  }, __jsx("div", {
+    className: "h-12 w-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    viewBox: "0 0 32 32",
+    style: {
+      fill: '#484848'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "w-full md:w-1/2 relative",
+  }, __jsx("path", {
+    d: "m16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15m0-31c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16m5.71 12.29c.39.39.39 1.02 0 1.41l-6 6c-.39.39-1.02.39-1.41 0l-3-3c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l2.29 2.29 5.29-5.29c.39-.39 1.02-.39 1.41 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 55
     },
     __self: undefined
-  }, __jsx("div", {
-    id: "quote__steps",
+  }))))), __jsx("div", {
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 60
     },
     __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'circular-std-medium'
-    },
-    className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
+  }, __jsx(_host_layout_QuoteLeft__WEBPACK_IMPORTED_MODULE_3__["QuoteLeft"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: undefined
-  }, "\u201C")), __jsx("div", {
-    className: "mt-12",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "md:w-85p",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
-  }, __jsx("p", {
-    id: "quote-description",
-    style: {
-      fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
-    },
-    className: "md:text-lg md:leading-relaxed lg:text-4xl text-gray-750 lg:leading-tight",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
-  }, "The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's damage or problems."))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-sm md:text-base text-gray-650 my-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: undefined
-  }, "Olivia hosts in Paris for the flexibility it provides")), __jsx("button", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "py-3 px-5 border-2 border-gray-850 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: undefined
-  }, "Learn how they host")))), __jsx("div", {
-    className: "w-full md:w-1/2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-full w-full",
-    src: quote,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 61
     },
     __self: undefined
   }))));
@@ -4457,7 +4416,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const WhyHost = () => {
   return __jsx("div", {
-    className: "w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto py-8 lg:flex",
+    className: "w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto lg:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -4467,6 +4426,7 @@ const WhyHost = () => {
     children: null,
     title: "Why host on Airbnb?",
     description: "No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travellers. You\u2019re in full control of your availability, prices, house rules, and how you interact with guests.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -4476,9 +4436,10 @@ const WhyHost = () => {
     children: null,
     title: "We have your back",
     description: "To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage protection and another $1M USD in insurance against accidents.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: undefined
   }));
