@@ -17,7 +17,7 @@ export const GreatGuests = () => {
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
               className='text-gray-750 text-4xl lg:text-6xl tracking-tighter'>
-              Control how you host
+              Host great guests
             </h3>
           </div>
           <div>
