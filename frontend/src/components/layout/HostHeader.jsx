@@ -13,9 +13,7 @@ export const HostHeader = ({ color, section, switchMenuModal }) => {
   return (
     <>
       {typeof window !== 'undefined' ? configureScroll('auto') : null}
-      <div
-        style={{ top: 30, left: 0 }}
-        className='lg:hidden flex items-center justify-start absolute z-50 top-0 left-0'>
+      <div className='pt-8 lg:hidden flex items-center justify-start absolute z-50 top-0 left-0'>
         <div className='ml-6 mr-3'>
           <button
             className='flex items-center'

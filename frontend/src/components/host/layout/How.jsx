@@ -4,8 +4,8 @@ import * as React from 'react';
 const howSetup = require('../../../../public/img/high/how-setup.jpg');
 const howSafety = require('../../../../public/img/high/how-safety.jpg');
 
-const renderImg = (page) => {
-  switch (page) {
+const renderImg = (img) => {
+  switch (img) {
     case 'setup':
       return <img className='w-full h-full object-cover' src={howSetup} />;
     case 'safety':
@@ -13,12 +13,12 @@ const renderImg = (page) => {
   }
 };
 
-export const How = ({ page, title, description }) => {
+export const How = ({ page, title, description, img }) => {
   return (
     <div>
-      <div className='bg-gray-100'>
-        <div className='mt-8 md:mt-0 w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl mx-auto pt-8 pb-16'>
-          <div className='w-full lg:max-w-3xl mx-auto md:mt-12 lg:mt-0'>
+      <div style={{ bottom: 30 }} className='bg-gray-100 relative'>
+        <div className='mt-8 md:mt-0 w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl mx-auto pt-16 pb-16'>
+          <div className='w-full lg:max-w-4xl mx-auto md:mt-12 lg:mt-0'>
             <div className='flex flex-col items-start md:items-center'>
               <div className='my-4'>
                 <p
@@ -34,7 +34,7 @@ export const How = ({ page, title, description }) => {
                   {title}
                 </h3>
               </div>
-              <div className='w-95p'>
+              <div className='w-85p'>
                 <p
                   style={{ fontFamily: 'airbnb-book' }}
                   className='text-lg lg:text-2xl text-gray-750 leading-7 md:text-center'>
@@ -52,16 +52,17 @@ export const How = ({ page, title, description }) => {
           </div>
         </div>
       </div>
-
-      <div
-        style={{ bottom: 120 }}
-        className='w-full max-w-2xl lg:max-w-5xl mx-auto relative'>
-        <div className='flex justify-center'>
-          <div className='mx-6 md:mx-0 w-full md:h-80 lg:h-112'>
-            {renderImg(page)}
+      {img && (
+        <div
+          style={{ bottom: 120 }}
+          className='w-full max-w-2xl lg:max-w-5xl mx-auto relative'>
+          <div className='flex justify-center'>
+            <div className='mx-6 md:mx-0 w-full md:h-80 lg:h-112'>
+              {renderImg(page)}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

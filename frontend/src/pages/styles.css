@@ -421,36 +421,36 @@ body {
 
 /* xs */
 @media (max-width: 640px) {
-  #quote__control {
+  #quote__right {
     position: absolute;
     top: 0px;
   }
 
-  #quote__control-description {
+  #quote__right-description {
     font-family: 'airbnb-book';
   }
 }
 
 /* sm */
 @media (min-width: 640px) {
-  #quote__control {
+  #quote__right {
     position: absolute;
     top: 0px;
   }
 
-  #quote__control-description {
+  #quote__right-description {
     font-family: 'airbnb-book';
   }
 }
 
 /* md */
 @media (min-width: 768px) {
-  #quote__control {
+  #quote__right {
     position: absolute;
     top: 50px;
   }
 
-  #quote__control-description {
+  #quote__right-description {
     font-family: 'airbnb-book';
   }
 }
