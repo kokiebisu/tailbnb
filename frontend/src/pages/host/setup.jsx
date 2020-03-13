@@ -9,7 +9,7 @@ import { AdvertiseMillions } from '../../components/hostsetup/layout/AdvertiseMi
 import { HostingSupport } from '../../components/hostsetup/layout/HostingSupport';
 import { PeopleHost } from '../../components/hostsetup/layout/PeopleHost';
 import { QuestionsAnswered } from '../../components/hostservices/layout/QuestionsAnswered';
-import { HostReady } from '../../components/hosthomes/layout/HostReady';
+import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
 // Modals
@@ -36,7 +36,7 @@ const setup = () => {
       <HostingSupport />
       <PeopleHost />
       <QuestionsAnswered />
-      <HostReady />
+      <HostReady page='setup' />
       <NewFooter />
     </>
   );

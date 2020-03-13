@@ -1973,6 +1973,17 @@ module.exports = _typeof;
 
 /***/ }),
 
+/***/ "./public/img/high/advertise-millions.jpg":
+/*!************************************************!*\
+  !*** ./public/img/high/advertise-millions.jpg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/advertise-millions-2e0b4b61f186ea5df7868445e4ac7709.jpg";
+
+/***/ }),
+
 /***/ "./public/img/high/control-hosting-quote.jpg":
 /*!***************************************************!*\
   !*** ./public/img/high/control-hosting-quote.jpg ***!
@@ -1984,21 +1995,65 @@ module.exports = "/_next/static/images/control-hosting-quote-0076840f1586d9c3975
 
 /***/ }),
 
-/***/ "./public/img/high/host-ready.jpg":
-/*!****************************************!*\
-  !*** ./public/img/high/host-ready.jpg ***!
-  \****************************************/
+/***/ "./public/img/high/hosting-support1.jpg":
+/*!**********************************************!*\
+  !*** ./public/img/high/hosting-support1.jpg ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/host-ready-69305a4bf648fb9c78783d43e01813d9.jpg";
+module.exports = "/_next/static/images/hosting-support1-81ba2348b7007238e5e4a80684b58edd.jpg";
 
 /***/ }),
 
-/***/ "./src/components/hosthomes/layout/HostReady.tsx":
-/*!*******************************************************!*\
-  !*** ./src/components/hosthomes/layout/HostReady.tsx ***!
-  \*******************************************************/
+/***/ "./public/img/high/hosting-support2.jpg":
+/*!**********************************************!*\
+  !*** ./public/img/high/hosting-support2.jpg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/hosting-support2-f5728401c0dce04cf5d81c44c0da1854.jpg";
+
+/***/ }),
+
+/***/ "./public/img/high/how-to-start.jpg":
+/*!******************************************!*\
+  !*** ./public/img/high/how-to-start.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/how-to-start-93d00e42e21ac95c085a18cad481365c.jpg";
+
+/***/ }),
+
+/***/ "./public/img/high/ready-earn-overview.jpg":
+/*!*************************************************!*\
+  !*** ./public/img/high/ready-earn-overview.jpg ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/ready-earn-overview-69305a4bf648fb9c78783d43e01813d9.jpg";
+
+/***/ }),
+
+/***/ "./public/img/high/ready-earn-setup.jpg":
+/*!**********************************************!*\
+  !*** ./public/img/high/ready-earn-setup.jpg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/ready-earn-setup-d6b9785c1c09fbc7684375d6b3314148.jpg";
+
+/***/ }),
+
+/***/ "./src/components/host/functions/HostReady.tsx":
+/*!*****************************************************!*\
+  !*** ./src/components/host/functions/HostReady.tsx ***!
+  \*****************************************************/
 /*! exports provided: HostReady */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2007,47 +2062,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostReady", function() { return HostReady; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hosthomes/layout/HostReady.tsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/HostReady.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Images
 
-const ready = __webpack_require__(/*! ../../../../public/img/high/host-ready.jpg */ "./public/img/high/host-ready.jpg");
+const overview = __webpack_require__(/*! ../../../../public/img/high/ready-earn-overview.jpg */ "./public/img/high/ready-earn-overview.jpg");
 
-const HostReady = () => {
+const setup = __webpack_require__(/*! ../../../../public/img/high/ready-earn-setup.jpg */ "./public/img/high/ready-earn-setup.jpg");
+
+const renderImg = page => {
+  switch (page) {
+    case 'overview':
+      return __jsx("img", {
+        className: "h-full w-full object-cover",
+        src: overview,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: undefined
+      });
+
+    case 'setup':
+      return __jsx("img", {
+        className: "h-full w-full object-cover",
+        src: setup,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: undefined
+      });
+
+    default:
+      return __jsx("img", {
+        className: "h-full w-full object-cover",
+        src: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: undefined
+      });
+  }
+};
+
+const HostReady = ({
+  page
+}) => {
   return __jsx("div", {
     className: "w-full md:max-w-4xl lg:max-w-7xl mx-auto mt-8 mb-12 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full h-96 md:h-112",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 30
     },
     __self: undefined
-  }, __jsx("img", {
-    className: "h-full w-full object-cover",
-    src: ready,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  })), __jsx("div", {
+  }, renderImg(page)), __jsx("div", {
     id: "ready",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("div", {
     className: "mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 32
     },
     __self: undefined
   }, __jsx("h3", {
@@ -2057,20 +2145,20 @@ const HostReady = () => {
     className: "text-white text-4xl md:text-6xl tracking-tighter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 33
     },
     __self: undefined
   }, "Ready to earn?")), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx("div", {
     className: "bg-white py-3 px-5 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 40
     },
     __self: undefined
   }, __jsx("p", {
@@ -2080,7 +2168,7 @@ const HostReady = () => {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 41
     },
     __self: undefined
   }, "Get started")))));
@@ -2583,7 +2671,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
  // Images
 
-const howToStart = __webpack_require__(/*! ../../../../public/img/high/host-ready.jpg */ "./public/img/high/host-ready.jpg");
+const advertisemillions = __webpack_require__(/*! ../../../../public/img/high/advertise-millions.jpg */ "./public/img/high/advertise-millions.jpg");
 
 const AdvertiseMillions = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
@@ -2649,7 +2737,7 @@ const AdvertiseMillions = () => {
     },
     __self: undefined
   }, __jsx("img", {
-    src: howToStart,
+    src: advertisemillions,
     className: "w-full h-full",
     __source: {
       fileName: _jsxFileName,
@@ -2984,9 +3072,9 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostsetup
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Images
 
-const support1 = __webpack_require__(/*! ../../../../public/img/high/control-hosting-quote.jpg */ "./public/img/high/control-hosting-quote.jpg");
+const support1 = __webpack_require__(/*! ../../../../public/img/high/hosting-support1.jpg */ "./public/img/high/hosting-support1.jpg");
 
-const support2 = __webpack_require__(/*! ../../../../public/img/high/control-hosting-quote.jpg */ "./public/img/high/control-hosting-quote.jpg");
+const support2 = __webpack_require__(/*! ../../../../public/img/high/hosting-support2.jpg */ "./public/img/high/hosting-support2.jpg");
 
 const HostingSupport = () => {
   return __jsx("div", {
@@ -3201,7 +3289,7 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostsetup
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Images
 
-const howToStart = __webpack_require__(/*! ../../../../public/img/high/host-ready.jpg */ "./public/img/high/host-ready.jpg");
+const howToStart = __webpack_require__(/*! ../../../../public/img/high/how-to-start.jpg */ "./public/img/high/how-to-start.jpg");
 
 const HowToStart = () => {
   return __jsx("div", {
@@ -4976,7 +5064,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hostsetup_layout_HostingSupport__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/hostsetup/layout/HostingSupport */ "./src/components/hostsetup/layout/HostingSupport.jsx");
 /* harmony import */ var _components_hostsetup_layout_PeopleHost__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/hostsetup/layout/PeopleHost */ "./src/components/hostsetup/layout/PeopleHost.jsx");
 /* harmony import */ var _components_hostservices_layout_QuestionsAnswered__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/hostservices/layout/QuestionsAnswered */ "./src/components/hostservices/layout/QuestionsAnswered.tsx");
-/* harmony import */ var _components_hosthomes_layout_HostReady__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/hosthomes/layout/HostReady */ "./src/components/hosthomes/layout/HostReady.tsx");
+/* harmony import */ var _components_host_functions_HostReady__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/host/functions/HostReady */ "./src/components/host/functions/HostReady.tsx");
 /* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
 /* harmony import */ var _components_modals_HostMenuModal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/modals/HostMenuModal */ "./src/components/modals/HostMenuModal.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/setup.jsx";
@@ -5058,7 +5146,8 @@ const setup = () => {
       lineNumber: 38
     },
     __self: undefined
-  }), __jsx(_components_hosthomes_layout_HostReady__WEBPACK_IMPORTED_MODULE_8__["HostReady"], {
+  }), __jsx(_components_host_functions_HostReady__WEBPACK_IMPORTED_MODULE_8__["HostReady"], {
+    page: "setup",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39

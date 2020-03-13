@@ -14,7 +14,7 @@ import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
 import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
-import { HostReady } from '../../components/hosthomes/layout/HostReady';
+import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
@@ -64,7 +64,7 @@ const homes: React.FC<{}> = () => {
         <HostAbout />
         <HostQuestions />
         <MoreHosting />
-        <HostReady />
+        <HostReady page='overview' />
         <NewFooter />
       </div>
     </>

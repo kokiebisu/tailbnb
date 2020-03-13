@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Images
-const howToStart = require('../../../../public/img/high/host-ready.jpg');
+const howToStart = require('../../../../public/img/high/how-to-start.jpg');
 
 export const HowToStart = () => {
   return (

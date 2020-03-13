@@ -2,7 +2,7 @@ import * as React from 'react';
 import { AdvertiseMillionsCard } from '../functions/AdvertiseMillionsCard';
 
 // Images
-const howToStart = require('../../../../public/img/high/host-ready.jpg');
+const advertisemillions = require('../../../../public/img/high/advertise-millions.jpg');
 
 export const AdvertiseMillions = () => {
   return (
@@ -25,7 +25,7 @@ export const AdvertiseMillions = () => {
       </div>
       <div className='w-full md:max-w-2xl lg:max-w-5xl mx-auto'>
         <div className='w-full md:h-104 lg:h-112 px-6 md:px-0'>
-          <img src={howToStart} className='w-full h-full' />
+          <img src={advertisemillions} className='w-full h-full' />
         </div>
       </div>
       <div className='my-10 w-full md:max-w-xl lg:max-w-5xl mx-auto'>
