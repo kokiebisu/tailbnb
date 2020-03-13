@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2228,7 +2228,7 @@ const QuestionsAnswered = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight",
+    className: "text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -3078,7 +3078,7 @@ const support2 = __webpack_require__(/*! ../../../../public/img/high/hosting-sup
 
 const HostingSupport = () => {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto my-16",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto my-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -3120,14 +3120,14 @@ const HostingSupport = () => {
     },
     __self: undefined
   }, "Get hosting support")), __jsx("div", {
-    className: "flex pb-8",
+    className: "flex flex-col md:flex-row pb-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-2/5",
+    className: "md:w-2/5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
@@ -3148,14 +3148,14 @@ const HostingSupport = () => {
     },
     __self: undefined
   }))), __jsx("div", {
-    className: "w-3/5 flex items-center justify-center",
+    className: "md:w-3/5 flex items-center md:justify-center mt-6 md:mt-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-70p text-gray-750",
+    className: "md:w-70p text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -3195,21 +3195,21 @@ const HostingSupport = () => {
     },
     __self: undefined
   }, "As a host, the Airbnb community always has your back. For helpful tips and suggestions, you\u2019ll find a robust Help Centre, 375,000 hosts in our Community Centre, and a number of hosting tool kits."))))), __jsx("div", {
-    className: "flex pb-32",
+    className: "flex flex-col-reverse md:flex-row md:pb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-3/5 flex items-center justify-center",
+    className: "md:w-3/5 flex items-center md:justify-center mt-6 md:mt-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-70p text-gray-750",
+    className: "md:w-70p text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
@@ -3248,7 +3248,7 @@ const HostingSupport = () => {
     },
     __self: undefined
   }, "Our global team is standing by 24/7 to support you by phone, email, and live chat. The team can help you with everything from issues creating your listing to concerns about guests.")))), __jsx("div", {
-    className: "w-2/5",
+    className: "md:w-2/5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
@@ -3306,7 +3306,7 @@ const HowToStart = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl mx-auto pt-8 pb-16",
+    className: "mt-8 md:mt-0 w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -3320,7 +3320,7 @@ const HowToStart = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex flex-col items-center",
+    className: "flex flex-col items-start md:items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -3354,7 +3354,7 @@ const HowToStart = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-gray-750 md:text-5xl lg:text-6xl tracking-tighter",
+    className: "text-gray-750 text-4xl md:text-5xl lg:text-6xl tracking-tighter",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -3371,7 +3371,7 @@ const HowToStart = () => {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "text-lg lg:text-2xl text-gray-750 leading-7 text-center",
+    className: "text-lg lg:text-2xl text-gray-750 leading-7 md:text-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -3412,7 +3412,7 @@ const HowToStart = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-full h-80 lg:h-112",
+    className: "mx-6 md:mx-0 w-full md:h-80 lg:h-112",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
@@ -3448,21 +3448,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const PeopleHost = () => {
   return __jsx("div", {
-    className: "w-full max-w-5xl mx-auto flex justify-center border-t border-b border-gray-300 mb-32",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto flex justify-center border-t border-b border-gray-300 mb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: undefined
   }, __jsx("div", {
-    className: "pt-24 pb-12 flex flex-col items-center",
+    className: "pt-12 pb-6 md:pt-24 md:pb-12 flex flex-col md:items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-80p",
+    className: "md:w-70p lg:w-80p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -3472,7 +3472,7 @@ const PeopleHost = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-3xl text-gray-750 text-center",
+    className: "text-2xl md:text-3xl text-gray-750 md:text-center leading-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -5166,7 +5166,7 @@ const setup = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!****************************************!*\
   !*** multi ./src/pages/host/setup.jsx ***!
   \****************************************/

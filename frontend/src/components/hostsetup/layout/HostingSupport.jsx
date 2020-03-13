@@ -6,7 +6,7 @@ const support2 = require('../../../../public/img/high/hosting-support2.jpg');
 
 export const HostingSupport = () => {
   return (
-    <div className='w-full max-w-5xl mx-auto my-16'>
+    <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto my-16'>
       <div className='mb-4 md:mb-0 flex md:justify-center'>
         <div
           style={{ width: 70, height: 2 }}
@@ -20,14 +20,14 @@ export const HostingSupport = () => {
           Get hosting support
         </h3>
       </div>
-      <div className='flex pb-8'>
-        <div className='w-2/5'>
+      <div className='flex flex-col md:flex-row pb-8'>
+        <div className='md:w-2/5'>
           <div>
             <img className='w-full h-full' src={support1} />
           </div>
         </div>
-        <div className='w-3/5 flex items-center justify-center'>
-          <div className='w-70p text-gray-750'>
+        <div className='md:w-3/5 flex items-center md:justify-center mt-6 md:mt-0'>
+          <div className='md:w-70p text-gray-750'>
             <div className='my-2'>
               <h3 style={{ fontFamily: 'airbnb-bold' }} className='text-2xl '>
                 Resources throughout
@@ -44,9 +44,9 @@ export const HostingSupport = () => {
           </div>
         </div>
       </div>
-      <div className='flex pb-32'>
-        <div className='w-3/5 flex items-center justify-center'>
-          <div className='w-70p text-gray-750'>
+      <div className='flex flex-col-reverse md:flex-row md:pb-32'>
+        <div className='md:w-3/5 flex items-center md:justify-center mt-6 md:mt-0'>
+          <div className='md:w-70p text-gray-750'>
             <div className='my-2'>
               <h3 style={{ fontFamily: 'airbnb-bold' }} className='text-2xl '>
                 We're here for you 24/7
@@ -61,7 +61,7 @@ export const HostingSupport = () => {
             </div>
           </div>
         </div>
-        <div className='w-2/5'>
+        <div className='md:w-2/5'>
           <div>
             <img className='w-full h-full' src={support2} />
           </div>

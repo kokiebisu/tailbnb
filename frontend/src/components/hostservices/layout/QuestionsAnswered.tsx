@@ -12,7 +12,7 @@ export const QuestionsAnswered: React.FC<{}> = () => {
       <div className='flex md:justify-center md:mb-12 mt-2'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
-          className='text-gray-750 text-4xl lg:text-6xl tracking-tight'>
+          className='text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9'>
           Your questions answered
         </h3>
       </div>

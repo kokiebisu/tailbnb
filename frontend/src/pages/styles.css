@@ -277,7 +277,7 @@ body {
 /* xs */
 @media (max-width: 640px) {
   #ready {
-    top: 20px;
+    top: 70px;
   }
 
   #quote__findteam {
