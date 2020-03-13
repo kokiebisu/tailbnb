@@ -2,10 +2,49 @@ import * as React from 'react';
 
 // Functions
 import { GreatGuestsCard } from '../functions/GreatGuestsCard';
+import { Table } from '../../host/functions/Table';
 
 const greatguest = require('../../../../public/img/high/great-guest.jpg');
 
 export const GreatGuests = () => {
+  const table = [
+    {
+      column1: 'What can you require from all guests?',
+      column2: 'Airbnb',
+      column3: 'HomeAray',
+      column4: 'Booking.com'
+    },
+    {
+      column1: 'Verified phone number',
+      column2: true,
+      column3: false,
+      column4: true
+    },
+    {
+      column1: 'Agreement to your House Rules',
+      column2: true,
+      column3: true,
+      column4: true
+    },
+    {
+      column1: 'Government ID',
+      column2: true,
+      column3: true,
+      column4: false
+    },
+    {
+      column1: 'Positively reviewed by another host',
+      column2: true,
+      column3: false,
+      column4: false
+    },
+    {
+      column1: 'A message from the guest',
+      column2: true,
+      column3: false,
+      column4: false
+    }
+  ];
   return (
     <>
       <div className='w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto'>
@@ -54,315 +93,7 @@ export const GreatGuests = () => {
           </div>
         </div>
       </div>
-      <div className='w-full px-6 md:max-w-2.5xl lg:max-w-5xl mx-auto relative'>
-        <div
-          style={{ top: 32 }}
-          id='tableSmallScreen'
-          className='w-48 absolute bg-white w-40 z-50'>
-          <div className='py-5'>
-            <h3
-              style={{ fontFamily: 'airbnb-bold' }}
-              className='text-gray-750 text-2xl'>
-              What can you require from all guests?
-            </h3>
-          </div>
-          <div style={{ height: 97 }} className='flex items-center'>
-            <div>
-              <p
-                style={{ fontFamily: 'airbnb-book' }}
-                className='text-gray-750 text-sm py-3'>
-                Agreement to your House Rules
-              </p>
-            </div>
-          </div>
-          <div style={{ height: 105 }} className='flex items-center'>
-            <div>
-              <p
-                style={{ fontFamily: 'airbnb-book' }}
-                className='text-gray-750 text-sm py-3'>
-                Verified phone number
-              </p>
-            </div>
-          </div>
-
-          <div style={{ height: 97 }} className='flex items-center'>
-            <div>
-              <p
-                style={{ fontFamily: 'airbnb-book' }}
-                className='text-gray-750 text-sm py-3'>
-                Government ID
-              </p>
-            </div>
-          </div>
-          <div style={{ height: 97 }} className='flex items-center'>
-            <div>
-              <p
-                style={{ fontFamily: 'airbnb-book' }}
-                className='text-gray-750 text-sm py-3'>
-                Positively reviewed by another host
-              </p>
-            </div>
-          </div>
-          <div style={{ height: 97 }} className='flex items-center'>
-            <div>
-              <p
-                style={{ fontFamily: 'airbnb-book' }}
-                className='text-gray-750 text-sm py-3'>
-                A message from guest
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className='overflow-x-scroll'>
-          <table
-            style={{ fontFamily: 'airbnb-book' }}
-            className='relative z-0 w-full table-fixed text-gray-750 my-8 top-0'>
-            <tbody>
-              <tr>
-                <td
-                  className='w-48 md:w-2/5 pr-4 py-5 text-2xl text-left border-b border-gray-300'
-                  style={{ fontFamily: 'airbnb-bold' }}>
-                  What can you require from all guests?
-                </td>
-                <td
-                  id='tableShadowTop'
-                  className='w-32  md:w-1/5 border-b border-gray-300 text-center text-sm'>
-                  Airbnb
-                </td>
-                <td className='w-32 md:w-1/5 border-b border-gray-300 text-center text-sm'>
-                  HomeAray
-                </td>
-                <td className='w-32 md:w-1/5 border-b border-gray-300 text-center text-sm'>
-                  Booking.com
-                </td>
-              </tr>
-              <tr>
-                <td className='h-24 md:py-8 text-sm border-b border-gray-300 text-left'>
-                  Verified phone number
-                </td>
-                <td
-                  id='tableShadowMiddle'
-                  className='h-24 md:py-8 text-sm border-b border-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b border-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        viewBox='0 0 24 24'
-                        style={{ fill: '#484848' }}
-                        className='w-full h-full'>
-                        <path d='m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b border-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className='py-8 text-sm border-b bordery-gray-300 text-left'>
-                  Agreement to your House Rules
-                </td>
-                <td
-                  id='tableShadowMiddle'
-                  className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b border-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-left'>
-                  Government ID
-                </td>
-                <td
-                  id='tableShadowMiddle'
-                  className='py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        viewBox='0 0 24 24'
-                        style={{ fill: '#484848' }}
-                        className='w-full h-full'>
-                        <path d='m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-left'>
-                  Positively reviewed by another host
-                </td>
-                <td
-                  id='tableShadowMiddle'
-                  className='py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        viewBox='0 0 24 24'
-                        style={{ fill: '#484848' }}
-                        className='w-full h-full'>
-                        <path d='m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        viewBox='0 0 24 24'
-                        style={{ fill: '#484848' }}
-                        className='w-full h-full'>
-                        <path d='m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className='h-24 md:py-8 text-sm md:border-b bordery-gray-300 text-left'>
-                  A message from the guest
-                </td>
-                <td
-                  id='tableShadowBottom'
-                  className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center'>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        style={{ fill: '#008489' }}
-                        className='w-full h-full'
-                        viewBox='0 0 24 24'>
-                        <path d='m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center '>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        viewBox='0 0 24 24'
-                        style={{ fill: '#484848' }}
-                        className='w-full h-full'>
-                        <path d='m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-                <td className='h-24 md:py-8 text-sm border-b bordery-gray-300 text-center '>
-                  <div className='flex justify-center'>
-                    <div className='h-4 w-4'>
-                      <svg
-                        viewBox='0 0 24 24'
-                        style={{ fill: '#484848' }}
-                        className='w-full h-full'>
-                        <path d='m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22'></path>
-                      </svg>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className='mt-3 mb-32 lg:my-3'>
-          <p
-            style={{ fontFamily: 'airbnb-book' }}
-            className='text-gray-650 text-sm'>
-            Last updated June 2018
-          </p>
-        </div>
-      </div>
+      <Table row1={table[0]} row2={table[1]} row3={table[2]} row4={table[3]} />
       <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-32 flex flex-col md:flex-row'>
         <div className='w-full md:w-1/2'>
           <img className='h-full w-full' src={greatguest} />

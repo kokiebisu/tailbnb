@@ -15,7 +15,7 @@ import { ReadyConnect } from '../../components/hostservices/layout/ReadyConnect'
 import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
-import { FindOutCard } from '../../components/hostservices/functions/FindOutCard';
+import { FindOutCard } from '../../components/host/functions/FindOutCard';
 
 const services = () => {
   const [menuModal, setMenuModal] = useState(false);
