@@ -6,8 +6,14 @@ import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
 import { HostHeader } from '../../components/layout/HostHeader';
-import { How } from '../../components/host/containers/How';
-import { GreatGuests } from '../../components/hostsafety/containers/GreatGuests';
+import { How } from '../../components/host/layout/How';
+import { GreatGuests } from '../../components/hostsafety/layout/GreatGuests';
+import { HostConfidence } from '../../components/hostsafety/layout/HostConfidence';
+import { HereAlways } from '../../components/hostsafety/layout/HereAlways';
+import { TravellerTrips } from '../../components/hostsafety/layout/TravellerTrips';
+import { QuestionsAnswered } from '../../components/host/layout/QuestionsAnswered';
+import { HostReady } from '../../components/host/functions/HostReady';
+import { NewFooter } from '../../components/layout/NewFooter';
 
 const safety = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -30,6 +36,12 @@ const safety = () => {
         description="We've taken extensive measures to help keep you, your home, and your guests safe."
       />
       <GreatGuests />
+      <HostConfidence />
+      <HereAlways />
+      <TravellerTrips />
+      <QuestionsAnswered />
+      <HostReady page='safety' />
+      <NewFooter />
     </>
   );
 };
