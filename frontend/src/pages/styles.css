@@ -143,6 +143,80 @@ body {
   border: 1.5px solid #008489;
 }
 
+#tableShadowTop {
+  position: relative;
+  box-shadow: 0px 5px 15px -13px inset;
+}
+
+#tableShadowTop::before {
+  box-shadow: -7px 0 11px -13px inset;
+  content: ' ';
+  height: 100%;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+#tableShadowTop::after {
+  box-shadow: 7px 0 11px -13px inset;
+  content: ' ';
+  height: 100%;
+  right: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+#tableShadowMiddle {
+  position: relative;
+}
+
+#tableShadowMiddle::before {
+  box-shadow: -7px 0 11px -13px inset;
+  content: ' ';
+  height: 100%;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+#tableShadowMiddle::after {
+  box-shadow: 7px 0 11px -13px inset;
+  content: ' ';
+  height: 100%;
+  right: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+#tableShadowBottom {
+  position: relative;
+  box-shadow: 0px -5px 15px -13px inset;
+}
+
+#tableShadowBottom::before {
+  box-shadow: -7px 0 11px -13px inset;
+  content: ' ';
+  height: 100%;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+#tableShadowBottom::after {
+  box-shadow: 7px 0 11px -13px inset;
+  content: ' ';
+  height: 100%;
+  right: -15px;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
 /* xs */
 @media (min-width: 290px) {
   #card_category {
@@ -378,6 +452,56 @@ body {
   scrollbar-width: thin;
   padding-bottom: 30px !important;
   margin-bottom: -30px !important;
+}
+
+/* Host Safety Section */
+
+/* xs */
+@media (max-width: 640px) {
+  #quote__greatguest {
+    position: absolute;
+    top: 50px;
+  }
+
+  #quote__greatguest-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  #quote__greatguest {
+    position: absolute;
+    top: 50px;
+  }
+
+  #quote__greatguest-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  #quote__greatguest {
+    position: absolute;
+    top: 50px;
+  }
+
+  #quote__greatguest-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  #quote__greatguest {
+    position: absolute;
+    top: 50px;
+  }
+
+  #quote__greatguest-description {
+    font-family: 'airbnb-book';
+  }
 }
 
 .scrollable {
