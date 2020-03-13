@@ -3,7 +3,7 @@ import * as React from 'react';
 export const CharacteristicCard = ({ children, title, description }) => {
   return (
     <>
-      <div className='mb-8 lg:mb-0 my-32'>
+      <div className='mb-8 lg:mb-0 my-16'>
         <div className='w-90p'>
           {children && (
             <div>
