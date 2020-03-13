@@ -3064,7 +3064,7 @@ const HostConfidenceCheckCard = ({
   title
 }) => {
   return __jsx("div", {
-    className: "lg:w-1/3 flex items-center",
+    className: "lg:w-1/3 flex items-center md:mb-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -3262,7 +3262,7 @@ const GreatGuests = () => {
     },
     __self: undefined
   })))))), __jsx("div", {
-    className: "w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto",
+    className: "w-full px-6 md:max-w-2.5xl lg:max-w-5xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 57
@@ -3291,7 +3291,7 @@ const GreatGuests = () => {
     },
     __self: undefined
   }, __jsx("td", {
-    className: "py-5 text-2xl text-left border-b border-gray-300",
+    className: "w-2/5 pr-4 py-5 text-2xl text-left border-b border-gray-300",
     style: {
       fontFamily: 'airbnb-bold'
     },
@@ -3302,21 +3302,21 @@ const GreatGuests = () => {
     __self: undefined
   }, "What can you require from all guests?"), __jsx("td", {
     id: "tableShadowTop",
-    className: "w-1/6 border-b border-gray-300 text-center text-sm",
+    className: "w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 68
     },
     __self: undefined
   }, "Airbnb"), __jsx("td", {
-    className: "w-1/6 border-b border-gray-300 text-center text-sm",
+    className: "w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73
     },
     __self: undefined
   }, "HomeAray"), __jsx("td", {
-    className: "w-1/6 border-b border-gray-300 text-center text-sm",
+    className: "w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
@@ -3978,7 +3978,7 @@ const GreatGuests = () => {
     },
     __self: undefined
   })))))))), __jsx("div", {
-    className: "my-3",
+    className: "mt-3 mb-32 lg:my-3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 297
@@ -3994,18 +3994,18 @@ const GreatGuests = () => {
       lineNumber: 298
     },
     __self: undefined
-  }, "Last updated June 2018")), __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col md:flex-row",
+  }, "Last updated June 2018"))), __jsx("div", {
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-32 flex flex-col md:flex-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 305
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full md:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 306
     },
     __self: undefined
   }, __jsx("img", {
@@ -4013,28 +4013,28 @@ const GreatGuests = () => {
     src: greatguest,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 307
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-full md:w-1/2 relative flex items-center md:justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 309
     },
     __self: undefined
   }, __jsx("div", {
     className: "md:w-85p flex-col justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 310
     },
     __self: undefined
   }, __jsx("div", {
     id: "quote__greatguest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 311
     },
     __self: undefined
   }, __jsx("p", {
@@ -4044,28 +4044,28 @@ const GreatGuests = () => {
     className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311
+      lineNumber: 312
     },
     __self: undefined
   }, "\u201C")), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 320
     },
     __self: undefined
   }, __jsx("div", {
     className: "mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 321
     },
     __self: undefined
   }, __jsx("div", {
     className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 322
     },
     __self: undefined
   }, __jsx("p", {
@@ -4076,14 +4076,14 @@ const GreatGuests = () => {
     className: "text-lg lg:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 323
     },
     __self: undefined
   }, "I have learned that people are good. I can trust people."))), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333
+      lineNumber: 334
     },
     __self: undefined
   }, __jsx("p", {
@@ -4093,20 +4093,20 @@ const GreatGuests = () => {
     className: "text-sm lg:text-base text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334
+      lineNumber: 335
     },
     __self: undefined
   }, "Milaida hosts in Puerto Rico to earn extra money.")), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 341
     },
     __self: undefined
   }, __jsx("div", {
     className: "py-3 px-5 border-2 border-gray-750 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341
+      lineNumber: 342
     },
     __self: undefined
   }, __jsx("p", {
@@ -4116,10 +4116,10 @@ const GreatGuests = () => {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342
+      lineNumber: 343
     },
     __self: undefined
-  }, "Learn how they host")))))))));
+  }, "Learn how they host"))))))));
 };
 
 /***/ }),
@@ -4218,14 +4218,14 @@ const HereAlways = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-1/2",
+    className: "lg:w-1/2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-95p",
+    className: "lg:w-95p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -4249,7 +4249,7 @@ const HereAlways = () => {
     },
     __self: undefined
   }, "What our team can do for you")), __jsx("div", {
-    className: "w-80p ",
+    className: "lg:w-80p ",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -4266,7 +4266,7 @@ const HereAlways = () => {
     },
     __self: undefined
   }, "Our global team is tanding by 24/7 to support you and your guests by phone, email, and live chat.")))), __jsx("div", {
-    className: "w-1/2 mb-28",
+    className: "lg:w-1/2 mb-28 md:mt-12 md:mt-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48
@@ -4459,14 +4459,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const TravellerTrips = () => {
   return __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto flex justify-center border-t border-b border-gray-300 mb-32",
+    className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto flex justify-center mb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: undefined
   }, __jsx("div", {
-    className: "pt-12 pb-6 md:pt-24 md:pb-24 flex flex-col md:items-center",
+    className: "pt-12 pb-6 md:pt-24 md:pb-24 flex flex-col md:items-center border-t border-b border-gray-300",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6

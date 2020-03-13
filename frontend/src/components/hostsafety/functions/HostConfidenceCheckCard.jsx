@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const HostConfidenceCheckCard = ({ title }) => {
   return (
-    <div className='lg:w-1/3 flex items-center'>
+    <div className='lg:w-1/3 flex items-center md:mb-12'>
       <div>
         <div className='w-12 h-12'>
           <svg

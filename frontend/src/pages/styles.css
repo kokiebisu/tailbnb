@@ -460,7 +460,7 @@ body {
 @media (max-width: 640px) {
   #quote__greatguest {
     position: absolute;
-    top: 50px;
+    top: 0px;
   }
 
   #quote__greatguest-description {

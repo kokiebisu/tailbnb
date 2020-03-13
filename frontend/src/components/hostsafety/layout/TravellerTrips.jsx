@@ -2,8 +2,8 @@ import * as React from 'react';
 
 export const TravellerTrips = () => {
   return (
-    <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto flex justify-center border-t border-b border-gray-300 mb-32'>
-      <div className='pt-12 pb-6 md:pt-24 md:pb-24 flex flex-col md:items-center'>
+    <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto flex justify-center mb-32'>
+      <div className='pt-12 pb-6 md:pt-24 md:pb-24 flex flex-col md:items-center border-t border-b border-gray-300'>
         <div className='md:w-70p lg:w-75p'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}

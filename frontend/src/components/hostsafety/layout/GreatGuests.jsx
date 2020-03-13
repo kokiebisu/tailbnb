@@ -54,26 +54,26 @@ export const GreatGuests = () => {
           </div>
         </div>
       </div>
-      <div className='w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto'>
+      <div className='w-full px-6 md:max-w-2.5xl lg:max-w-5xl mx-auto'>
         <table
           style={{ fontFamily: 'airbnb-book' }}
           className='w-full table-fixed text-gray-750 my-8'>
           <tbody>
             <tr>
               <td
-                className='py-5 text-2xl text-left border-b border-gray-300'
+                className='w-2/5 pr-4 py-5 text-2xl text-left border-b border-gray-300'
                 style={{ fontFamily: 'airbnb-bold' }}>
                 What can you require from all guests?
               </td>
               <td
                 id='tableShadowTop'
-                className='w-1/6 border-b border-gray-300 text-center text-sm'>
+                className='w-1/5 border-b border-gray-300 text-center text-sm'>
                 Airbnb
               </td>
-              <td className='w-1/6 border-b border-gray-300 text-center text-sm'>
+              <td className='w-1/5 border-b border-gray-300 text-center text-sm'>
                 HomeAray
               </td>
-              <td className='w-1/6 border-b border-gray-300 text-center text-sm'>
+              <td className='w-1/5 border-b border-gray-300 text-center text-sm'>
                 Booking.com
               </td>
             </tr>
@@ -294,59 +294,59 @@ export const GreatGuests = () => {
             </tr>
           </tbody>
         </table>
-        <div className='my-3'>
+        <div className='mt-3 mb-32 lg:my-3'>
           <p
             style={{ fontFamily: 'airbnb-book' }}
             className='text-gray-650 text-sm'>
             Last updated June 2018
           </p>
         </div>
-        <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col md:flex-row'>
-          <div className='w-full md:w-1/2'>
-            <img className='h-full w-full' src={greatguest} />
-          </div>
-          <div className='w-full md:w-1/2 relative flex items-center md:justify-end'>
-            <div className='md:w-85p flex-col justify-center'>
-              <div id='quote__greatguest'>
-                <p
-                  style={{
-                    fontFamily: 'circular-std-medium'
-                  }}
-                  className='text-6xl md:text-7xl lg:text-10xl text-yellow-850'>
-                  “
-                </p>
-              </div>
-              <div className=''>
-                <div className='mt-12'>
-                  <div className='md:w-85p'>
-                    <p
-                      id='quote__greatguest-description'
-                      style={{
-                        fontFamily:
-                          'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
-                      }}
-                      className='text-lg lg:text-3xl text-gray-750 leading-tight'>
-                      I have learned that people are good. I can trust people.
-                    </p>
-                  </div>
-                </div>
-                <div className=''>
+      </div>
+      <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-32 flex flex-col md:flex-row'>
+        <div className='w-full md:w-1/2'>
+          <img className='h-full w-full' src={greatguest} />
+        </div>
+        <div className='w-full md:w-1/2 relative flex items-center md:justify-end'>
+          <div className='md:w-85p flex-col justify-center'>
+            <div id='quote__greatguest'>
+              <p
+                style={{
+                  fontFamily: 'circular-std-medium'
+                }}
+                className='text-6xl md:text-7xl lg:text-10xl text-yellow-850'>
+                “
+              </p>
+            </div>
+            <div className=''>
+              <div className='mt-12'>
+                <div className='md:w-85p'>
                   <p
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='text-sm lg:text-base text-gray-650 my-4'>
-                    Milaida hosts in Puerto Rico to earn extra money.
+                    id='quote__greatguest-description'
+                    style={{
+                      fontFamily:
+                        'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
+                    }}
+                    className='text-lg lg:text-3xl text-gray-750 leading-tight'>
+                    I have learned that people are good. I can trust people.
                   </p>
                 </div>
-                <button>
-                  <div className='py-3 px-5 border-2 border-gray-750 rounded'>
-                    <p
-                      style={{ fontFamily: 'airbnb-bold' }}
-                      className='text-gray-750'>
-                      Learn how they host
-                    </p>
-                  </div>
-                </button>
               </div>
+              <div className=''>
+                <p
+                  style={{ fontFamily: 'airbnb-book' }}
+                  className='text-sm lg:text-base text-gray-650 my-4'>
+                  Milaida hosts in Puerto Rico to earn extra money.
+                </p>
+              </div>
+              <button>
+                <div className='py-3 px-5 border-2 border-gray-750 rounded'>
+                  <p
+                    style={{ fontFamily: 'airbnb-bold' }}
+                    className='text-gray-750'>
+                    Learn how they host
+                  </p>
+                </div>
+              </button>
             </div>
           </div>
         </div>

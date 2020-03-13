@@ -26,8 +26,8 @@ export const HereAlways = () => {
         </div>
       </div>
       <div className='lg:flex'>
-        <div className='w-1/2'>
-          <div className='w-95p'>
+        <div className='lg:w-1/2'>
+          <div className='lg:w-95p'>
             <div className='mt-3 mb-5'>
               <h3
                 style={{ fontFamily: 'airbnb-bold' }}
@@ -35,7 +35,7 @@ export const HereAlways = () => {
                 What our team can do for you
               </h3>
             </div>
-            <div className='w-80p '>
+            <div className='lg:w-80p '>
               <p
                 style={{ fontFamily: 'airbnb-book' }}
                 className='text-gray-750'>
@@ -45,7 +45,7 @@ export const HereAlways = () => {
             </div>
           </div>
         </div>
-        <div className='w-1/2 mb-28'>
+        <div className='lg:w-1/2 mb-28 md:mt-12 md:mt-0'>
           <div className='lg:w-90p'>
             <HereAlwaysCheck title='Rebooking assistance' />
             <HereAlwaysCheck title='Refunds' />
