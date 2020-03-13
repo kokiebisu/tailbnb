@@ -3,11 +3,13 @@ import * as React from 'react';
 export const CharacteristicCard = ({ children, title, description }) => {
   return (
     <>
-      <div className='mb-8 lg:mb-0'>
+      <div className='mb-8 lg:mb-0 my-32'>
         <div className='w-90p'>
-          <div>
-            <div className='h-12 w-12'>{children}</div>
-          </div>
+          {children && (
+            <div>
+              <div className='h-12 w-12'>{children}</div>
+            </div>
+          )}
           <div className='my-4'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}

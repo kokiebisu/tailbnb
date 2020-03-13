@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ControlHostingCard } from '../functions/ControlHostingCard';
-
-const controlhosting = require('../../../../public/img/high/control-hosting-quote.jpg');
+import { QuoteRight } from '../../host/layout/QuoteRight';
 
 export const ControlHosting = () => {
   return (
@@ -57,54 +56,11 @@ export const ControlHosting = () => {
           </div>
         </div>
       </div>
-      <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col md:flex-row'>
-        <div className='w-full md:w-1/2'>
-          <img className='h-full w-full' src={controlhosting} />
-        </div>
-        <div className='w-full md:w-1/2 relative flex items-center md:justify-end'>
-          <div className='md:w-85p flex-col justify-center'>
-            <div id='quote__control'>
-              <p
-                style={{
-                  fontFamily: 'circular-std-medium'
-                }}
-                className='text-6xl md:text-7xl lg:text-10xl text-yellow-850'>
-                “
-              </p>
-            </div>
-            <div className=''>
-              <div className='mt-12'>
-                <div className='md:w-85p'>
-                  <p
-                    id='quote__control-description'
-                    style={{
-                      fontFamily:
-                        'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'
-                    }}
-                    className='text-lg lg:text-3xl text-gray-750 leading-tight'>
-                    Getting started was much easier than I anticipated.
-                  </p>
-                </div>
-              </div>
-              <div className=''>
-                <p
-                  style={{ fontFamily: 'airbnb-book' }}
-                  className='text-sm lg:text-base text-gray-650 my-4'>
-                  Mia and Lucas host in Rome to earn extra money for retirement.
-                </p>
-              </div>
-              <button>
-                <div className='py-3 px-5 border-2 border-gray-750 rounded'>
-                  <p
-                    style={{ fontFamily: 'airbnb-bold' }}
-                    className='text-gray-750'>
-                    Learn how they host
-                  </p>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
+      <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16'>
+        <QuoteRight
+          title='Getting started was much easier than I anticipated.'
+          description='Mia and Lucas host in Rome to earn extra money for retirement.'
+        />
       </div>
     </>
   );
