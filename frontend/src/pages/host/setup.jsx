@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 // Layout
 import { HostHeader } from '../../components/layout/HostHeader';
-import { HowToStart } from '../../components/hostsetup/layout/HowToStart';
+import { How } from '../../components/host/containers/How';
 import { ControlHosting } from '../../components/hostsetup/layout/ControlHosting';
 import { AdvertiseMillions } from '../../components/hostsetup/layout/AdvertiseMillions';
 import { HostingSupport } from '../../components/hostsetup/layout/HostingSupport';
@@ -30,7 +30,11 @@ const setup = () => {
         switchMenuModal={changeMenuModal}
       />
       {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
-      <HowToStart />
+      <How
+        page='setup'
+        title='How to start hosting'
+        description='Listing a home on Airbnb has never been easier or more customizable. You’re just a few steps away from earning money and reaching millions of global travellers.'
+      />
       <ControlHosting />
       <AdvertiseMillions />
       <HostingSupport />

@@ -121,13 +121,19 @@ export const HostMenuModal = ({ switchMenuModal }) => {
             style={{ fontFamily: 'airbnb-medium' }}
             className='mx-6 py-4 text-gray-750 text-sm'>
             <div className='py-4'>
-              <p>Setup</p>
+              <Link href='/host/setup'>
+                <a>Setup</a>
+              </Link>
             </div>
             <div className='py-4'>
-              <p>Safety</p>
+              <Link href='/host/safety'>
+                <a>Safety</a>
+              </Link>
             </div>
             <div className='py-4'>
-              <p>Financials</p>
+              <Link href='/host/financials'>
+                <a>Financial</a>
+              </Link>
             </div>
             <div className='py-4'>
               <Link href='/host/services'>
