@@ -51,7 +51,7 @@ const renderIcon = (icon) => {
   }
 };
 
-export const ControlHostingCard = ({ icon, title, description }) => {
+export const ControlHostingCard = ({ icon, title, description, link }) => {
   return (
     <div className='w-full lg:w-1/2 mb-16'>
       <div className='w-85p'>
