@@ -10774,99 +10774,264 @@ var GreatGuests = function GreatGuests() {
     },
     __self: this
   })))))), __jsx("div", {
-    className: "w-full px-6 md:max-w-2.5xl lg:max-w-5xl mx-auto",
+    className: "w-full px-6 md:max-w-2.5xl lg:max-w-5xl mx-auto relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 57
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      top: 32
+    },
+    id: "tableSmallScreen",
+    className: "w-48 absolute bg-white w-40 z-50",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "py-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, "What can you require from all guests?")), __jsx("div", {
+    style: {
+      height: 97
+    },
+    className: "flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm py-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, "Agreement to your House Rules"))), __jsx("div", {
+    style: {
+      height: 105
+    },
+    className: "flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm py-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, "Verified phone number"))), __jsx("div", {
+    style: {
+      height: 97
+    },
+    className: "flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm py-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, "Government ID"))), __jsx("div", {
+    style: {
+      height: 97
+    },
+    className: "flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm py-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, "Positively reviewed by another host"))), __jsx("div", {
+    style: {
+      height: 97
+    },
+    className: "flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm py-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: this
+  }, "A message from guest")))), __jsx("div", {
+    className: "overflow-x-scroll",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
     },
     __self: this
   }, __jsx("table", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "w-full table-fixed text-gray-750 my-8",
+    className: "relative z-0 w-full table-fixed text-gray-750 my-8 top-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 117
     },
     __self: this
   }, __jsx("tbody", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 120
     },
     __self: this
   }, __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 121
     },
     __self: this
   }, __jsx("td", {
-    className: "w-2/5 pr-4 py-5 text-2xl text-left border-b border-gray-300",
+    className: "w-48 md:w-2/5 pr-4 py-5 text-2xl text-left border-b border-gray-300",
     style: {
       fontFamily: 'airbnb-bold'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 122
     },
     __self: this
   }, "What can you require from all guests?"), __jsx("td", {
     id: "tableShadowTop",
-    className: "w-1/5 border-b border-gray-300 text-center text-sm",
+    className: "w-32  md:w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 127
     },
     __self: this
   }, "Airbnb"), __jsx("td", {
-    className: "w-1/5 border-b border-gray-300 text-center text-sm",
+    className: "w-32 md:w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 132
     },
     __self: this
   }, "HomeAray"), __jsx("td", {
-    className: "w-1/5 border-b border-gray-300 text-center text-sm",
+    className: "w-32 md:w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 135
     },
     __self: this
   }, "Booking.com")), __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 139
     },
     __self: this
   }, __jsx("td", {
-    className: "py-8 text-sm border-b border-gray-300 text-left",
+    className: "h-24 md:py-8 text-sm border-b border-gray-300 text-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 140
     },
     __self: this
   }, "Verified phone number"), __jsx("td", {
     id: "tableShadowMiddle",
-    className: "py-8 text-sm border-b border-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b border-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 143
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 146
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 147
     },
     __self: this
   }, __jsx("svg", {
@@ -10877,35 +11042,35 @@ var GreatGuests = function GreatGuests() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 148
     },
     __self: this
   }, __jsx("path", {
     d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 152
     },
     __self: this
   }))))), __jsx("td", {
-    className: "py-8 text-sm border-b border-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b border-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 157
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 158
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 159
     },
     __self: this
   }, __jsx("svg", {
@@ -10916,35 +11081,35 @@ var GreatGuests = function GreatGuests() {
     className: "w-full h-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 160
     },
     __self: this
   }, __jsx("path", {
     d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 164
     },
     __self: this
   }))))), __jsx("td", {
-    className: "py-8 text-sm border-b border-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b border-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 169
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 170
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 171
     },
     __self: this
   }, __jsx("svg", {
@@ -10955,49 +11120,49 @@ var GreatGuests = function GreatGuests() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 172
     },
     __self: this
   }, __jsx("path", {
     d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 176
     },
     __self: this
   })))))), __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 182
     },
     __self: this
   }, __jsx("td", {
     className: "py-8 text-sm border-b bordery-gray-300 text-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 183
     },
     __self: this
   }, "Agreement to your House Rules"), __jsx("td", {
     id: "tableShadowMiddle",
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 186
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 189
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 190
     },
     __self: this
   }, __jsx("svg", {
@@ -11008,35 +11173,35 @@ var GreatGuests = function GreatGuests() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 191
     },
     __self: this
   }, __jsx("path", {
     d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 195
     },
     __self: this
   }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b border-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 200
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 201
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 202
     },
     __self: this
   }, __jsx("svg", {
@@ -11047,35 +11212,35 @@ var GreatGuests = function GreatGuests() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 203
     },
     __self: this
   }, __jsx("path", {
     d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 207
     },
     __self: this
   }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 212
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 213
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 214
     },
     __self: this
   }, __jsx("svg", {
@@ -11086,27 +11251,27 @@ var GreatGuests = function GreatGuests() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 215
     },
     __self: this
   }, __jsx("path", {
     d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 219
     },
     __self: this
   })))))), __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 225
     },
     __self: this
   }, __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-left",
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 226
     },
     __self: this
   }, "Government ID"), __jsx("td", {
@@ -11114,21 +11279,21 @@ var GreatGuests = function GreatGuests() {
     className: "py-8 text-sm border-b bordery-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 229
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 232
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 233
     },
     __self: this
   }, __jsx("svg", {
@@ -11139,35 +11304,35 @@ var GreatGuests = function GreatGuests() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 234
     },
     __self: this
   }, __jsx("path", {
     d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 238
     },
     __self: this
   }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 243
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 244
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 245
     },
     __self: this
   }, __jsx("svg", {
@@ -11178,35 +11343,35 @@ var GreatGuests = function GreatGuests() {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 246
     },
     __self: this
   }, __jsx("path", {
     d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 250
     },
     __self: this
   }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 255
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 256
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 257
     },
     __self: this
   }, __jsx("svg", {
@@ -11217,27 +11382,27 @@ var GreatGuests = function GreatGuests() {
     className: "w-full h-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 258
     },
     __self: this
   }, __jsx("path", {
     d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 262
     },
     __self: this
   })))))), __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 268
     },
     __self: this
   }, __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-left",
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 269
     },
     __self: this
   }, "Positively reviewed by another host"), __jsx("td", {
@@ -11245,230 +11410,60 @@ var GreatGuests = function GreatGuests() {
     className: "py-8 text-sm border-b bordery-gray-300 text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 216
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-4 w-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 217
-    },
-    __self: this
-  }, __jsx("svg", {
-    style: {
-      fill: '#008489'
-    },
-    className: "w-full h-full",
-    viewBox: "0 0 24 24",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 218
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 222
-    },
-    __self: this
-  }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 227
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 228
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-4 w-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 229
-    },
-    __self: this
-  }, __jsx("svg", {
-    viewBox: "0 0 24 24",
-    style: {
-      fill: '#484848'
-    },
-    className: "w-full h-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 230
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 234
-    },
-    __self: this
-  }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 239
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 240
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-4 w-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 241
-    },
-    __self: this
-  }, __jsx("svg", {
-    viewBox: "0 0 24 24",
-    style: {
-      fill: '#484848'
-    },
-    className: "w-full h-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 242
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 246
-    },
-    __self: this
-  })))))), __jsx("tr", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 252
-    },
-    __self: this
-  }, __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 253
-    },
-    __self: this
-  }, "A message from the guest"), __jsx("td", {
-    id: "tableShadowBottom",
-    className: "py-8 text-sm border-b bordery-gray-300 text-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 256
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 259
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-4 w-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 260
-    },
-    __self: this
-  }, __jsx("svg", {
-    style: {
-      fill: '#008489'
-    },
-    className: "w-full h-full",
-    viewBox: "0 0 24 24",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 261
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 265
-    },
-    __self: this
-  }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 270
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 271
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-4 w-4",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 272
     },
     __self: this
-  }, __jsx("svg", {
-    viewBox: "0 0 24 24",
-    style: {
-      fill: '#484848'
-    },
-    className: "w-full h-full",
+  }, __jsx("div", {
+    className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273
+      lineNumber: 275
     },
     __self: this
-  }, __jsx("path", {
-    d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
+  }, __jsx("div", {
+    className: "h-4 w-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 276
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#008489'
+    },
+    className: "w-full h-full",
+    viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 277
     },
     __self: this
-  }))))), __jsx("td", {
-    className: "py-8 text-sm border-b bordery-gray-300 text-center ",
+  }, __jsx("path", {
+    d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282
+      lineNumber: 281
+    },
+    __self: this
+  }))))), __jsx("td", {
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 286
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283
+      lineNumber: 287
     },
     __self: this
   }, __jsx("div", {
     className: "h-4 w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284
+      lineNumber: 288
     },
     __self: this
   }, __jsx("svg", {
@@ -11479,21 +11474,191 @@ var GreatGuests = function GreatGuests() {
     className: "w-full h-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285
+      lineNumber: 289
     },
     __self: this
   }, __jsx("path", {
     d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289
+      lineNumber: 293
     },
     __self: this
-  })))))))), __jsx("div", {
+  }))))), __jsx("td", {
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 298
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 299
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-4 w-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 300
+    },
+    __self: this
+  }, __jsx("svg", {
+    viewBox: "0 0 24 24",
+    style: {
+      fill: '#484848'
+    },
+    className: "w-full h-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 301
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 305
+    },
+    __self: this
+  })))))), __jsx("tr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 311
+    },
+    __self: this
+  }, __jsx("td", {
+    className: "h-24 md:py-8 text-sm md:border-b bordery-gray-300 text-left",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 312
+    },
+    __self: this
+  }, "A message from the guest"), __jsx("td", {
+    id: "tableShadowBottom",
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 315
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 318
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-4 w-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 319
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#008489'
+    },
+    className: "w-full h-full",
+    viewBox: "0 0 24 24",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 320
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 324
+    },
+    __self: this
+  }))))), __jsx("td", {
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 329
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 330
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-4 w-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 331
+    },
+    __self: this
+  }, __jsx("svg", {
+    viewBox: "0 0 24 24",
+    style: {
+      fill: '#484848'
+    },
+    className: "w-full h-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 332
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 336
+    },
+    __self: this
+  }))))), __jsx("td", {
+    className: "h-24 md:py-8 text-sm border-b bordery-gray-300 text-center ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 341
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 342
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-4 w-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 343
+    },
+    __self: this
+  }, __jsx("svg", {
+    viewBox: "0 0 24 24",
+    style: {
+      fill: '#484848'
+    },
+    className: "w-full h-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 344
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 348
+    },
+    __self: this
+  }))))))))), __jsx("div", {
     className: "mt-3 mb-32 lg:my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
+      lineNumber: 358
     },
     __self: this
   }, __jsx("p", {
@@ -11503,21 +11668,21 @@ var GreatGuests = function GreatGuests() {
     className: "text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 359
     },
     __self: this
   }, "Last updated June 2018"))), __jsx("div", {
     className: "w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-32 flex flex-col md:flex-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 366
     },
     __self: this
   }, __jsx("div", {
     className: "w-full md:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 367
     },
     __self: this
   }, __jsx("img", {
@@ -11525,28 +11690,28 @@ var GreatGuests = function GreatGuests() {
     src: greatguest,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307
+      lineNumber: 368
     },
     __self: this
   })), __jsx("div", {
     className: "w-full md:w-1/2 relative flex items-center md:justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 370
     },
     __self: this
   }, __jsx("div", {
     className: "md:w-85p flex-col justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 371
     },
     __self: this
   }, __jsx("div", {
     id: "quote__greatguest",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311
+      lineNumber: 372
     },
     __self: this
   }, __jsx("p", {
@@ -11556,28 +11721,28 @@ var GreatGuests = function GreatGuests() {
     className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 312
+      lineNumber: 373
     },
     __self: this
   }, "\u201C")), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 381
     },
     __self: this
   }, __jsx("div", {
     className: "mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 382
     },
     __self: this
   }, __jsx("div", {
     className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 383
     },
     __self: this
   }, __jsx("p", {
@@ -11588,14 +11753,14 @@ var GreatGuests = function GreatGuests() {
     className: "text-lg lg:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323
+      lineNumber: 384
     },
     __self: this
   }, "I have learned that people are good. I can trust people."))), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334
+      lineNumber: 395
     },
     __self: this
   }, __jsx("p", {
@@ -11605,20 +11770,20 @@ var GreatGuests = function GreatGuests() {
     className: "text-sm lg:text-base text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 335
+      lineNumber: 396
     },
     __self: this
   }, "Milaida hosts in Puerto Rico to earn extra money.")), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341
+      lineNumber: 402
     },
     __self: this
   }, __jsx("div", {
     className: "py-3 px-5 border-2 border-gray-750 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342
+      lineNumber: 403
     },
     __self: this
   }, __jsx("p", {
@@ -11628,7 +11793,7 @@ var GreatGuests = function GreatGuests() {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 343
+      lineNumber: 404
     },
     __self: this
   }, "Learn how they host"))))))));
