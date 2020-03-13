@@ -6,6 +6,7 @@ import { HostHeader } from '../../components/layout/HostHeader';
 import { HowToStart } from '../../components/hostsetup/layout/HowToStart';
 import { ControlHosting } from '../../components/hostsetup/layout/ControlHosting';
 import { AdvertiseMillions } from '../../components/hostsetup/layout/AdvertiseMillions';
+import { HostingSupport } from '../../components/hostsetup/layout/hos';
 
 import { NewFooter } from '../../components/layout/NewFooter';
 
@@ -30,6 +31,7 @@ const setup = () => {
       <HowToStart />
       <ControlHosting />
       <AdvertiseMillions />
+      <HostingSupport />
       <NewFooter />
     </>
   );
