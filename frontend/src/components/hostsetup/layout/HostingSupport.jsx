@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 // Images
-const support1 = require('../../../../public/img/high/control-hosting-quote.jpg');
-const support2 = require('../../../../public/img/high/control-hosting-quote.jpg');
+const support1 = require('../../../../public/img/high/hosting-support1.jpg');
+const support2 = require('../../../../public/img/high/hosting-support2.jpg');
 
 export const HostingSupport = () => {
   return (
