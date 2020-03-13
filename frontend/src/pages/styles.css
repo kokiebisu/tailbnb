@@ -329,6 +329,48 @@ body {
 
 } */
 
+/* Hosting Setup Section */
+
+/* xs */
+@media (max-width: 640px) {
+  #quote__control {
+    position: absolute;
+    top: 0px;
+  }
+
+  #quote__control-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  #quote__control {
+    position: absolute;
+    top: 0px;
+  }
+
+  #quote__control-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  #quote__control {
+    position: absolute;
+    top: 50px;
+  }
+
+  #quote__control-description {
+    font-family: 'airbnb-book';
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+}
+
 .scroller {
   overflow-x: scroll !important;
   overflow-y: auto !important;
