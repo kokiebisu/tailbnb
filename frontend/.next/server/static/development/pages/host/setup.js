@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2769,96 +2769,6 @@ const HostSection = ({
 
 /***/ }),
 
-/***/ "./src/components/hostsetup/functions/AdvertiseMillionsCard.jsx":
-/*!**********************************************************************!*\
-  !*** ./src/components/hostsetup/functions/AdvertiseMillionsCard.jsx ***!
-  \**********************************************************************/
-/*! exports provided: AdvertiseMillionsCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvertiseMillionsCard", function() { return AdvertiseMillionsCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostsetup/functions/AdvertiseMillionsCard.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-const AdvertiseMillionsCard = ({
-  title,
-  description,
-  link
-}) => {
-  return __jsx("div", {
-    className: "w-full lg:w-1/3 mb-8 lg:mb-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-90p lg:w-80p",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "mt-2 mb-3 lg:my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-gray-750 text-2xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, title)), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-gray-750 text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
-  }, description)), link ? __jsx("div", {
-    className: "my-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: undefined
-  }, __jsx("a", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-green-850",
-    href: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: undefined
-  }, link)) : null));
-};
-
-/***/ }),
-
 /***/ "./src/components/hostsetup/layout/AdvertiseMillions.jsx":
 /*!***************************************************************!*\
   !*** ./src/components/hostsetup/layout/AdvertiseMillions.jsx ***!
@@ -2871,75 +2781,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvertiseMillions", function() { return AdvertiseMillions; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_AdvertiseMillionsCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/AdvertiseMillionsCard */ "./src/components/hostsetup/functions/AdvertiseMillionsCard.jsx");
+/* harmony import */ var _host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../host/wrapper/HostSection */ "./src/components/host/wrapper/HostSection.jsx");
+/* harmony import */ var _host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../host/functions/CharacteristicCard */ "./src/components/host/functions/CharacteristicCard.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostsetup/layout/AdvertiseMillions.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // Wrapper
+
+ // Functions
 
  // Images
 
 const advertisemillions = __webpack_require__(/*! ../../../../public/img/high/advertise-millions.jpg */ "./public/img/high/advertise-millions.jpg");
 
 const AdvertiseMillions = () => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "w-full px-6 md:px-0 md:max-w-3xl lg:max-w-5xl mx-auto pt-8 pb-16",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__["HostSection"], {
+    title: "Advertise to millions",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex flex-col items-start md:items-center",
+    className: "w-full md:h-104 lg:h-112",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "my-4 md:my-4 lg:my-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: undefined
-  }, __jsx("div", {
-    style: {
-      width: 70,
-      height: 2
-    },
-    className: "bg-gray-650 rounded-lg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
-  })), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "text-4xl md:text-5xl lg:text-6xl tracking-tighter text-gray-750 leading-9",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
-  }, "Advertise to millions")))), __jsx("div", {
-    className: "w-full md:max-w-2xl lg:max-w-5xl mx-auto",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-full md:h-104 lg:h-112 px-6 md:px-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 16
     },
     __self: undefined
   }, __jsx("img", {
@@ -2947,49 +2813,53 @@ const AdvertiseMillions = () => {
     className: "w-full h-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 17
     },
     __self: undefined
-  }))), __jsx("div", {
-    className: "my-10 w-full md:max-w-xl lg:max-w-5xl mx-auto",
+  })), __jsx("div", {
+    className: "mt-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 19
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex flex-col lg:flex-row mx-6 md:mx-0",
+    className: "flex flex-col lg:flex-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 20
     },
     __self: undefined
-  }, __jsx(_functions_AdvertiseMillionsCard__WEBPACK_IMPORTED_MODULE_1__["AdvertiseMillionsCard"], {
+  }, __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
+    children: null,
     title: "Guidance to get you set up",
     description: " As you\u2019re creating your listing, we\u2019ll ask you the questions that guests want to know about when booking. You\u2019ll describe your home, providing details like what\u2019s special about the space, including any quirks they can expect.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 21
     },
     __self: undefined
-  }), __jsx(_functions_AdvertiseMillionsCard__WEBPACK_IMPORTED_MODULE_1__["AdvertiseMillionsCard"], {
+  }), __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
+    children: null,
     title: "Tips along the way",
     description: "If you\u2019re having any trouble getting booked, we\u2019ll provide you with advice on prices, settings, and other updates that can help you get reservations faster. And experienced hosts in our Community Centre can pitch in, too.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 30
     },
     __self: undefined
-  }), __jsx(_functions_AdvertiseMillionsCard__WEBPACK_IMPORTED_MODULE_1__["AdvertiseMillionsCard"], {
+  }), __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
     title: "Millions of global guests",
     description: "Once you\u2019ve completed your listing, guests from all over can find your home in search results. There are nearly 2 million Airbnb guests each night and we have tools to help you get reservations that work for you.",
     link: "Learn how Airbnb helps you get great guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 36
     },
     __self: undefined
-  }))));
+  })))));
 };
 
 /***/ }),
@@ -5131,7 +5001,7 @@ const setup = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!****************************************!*\
   !*** multi ./src/pages/host/setup.jsx ***!
   \****************************************/
