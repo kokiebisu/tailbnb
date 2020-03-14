@@ -15,7 +15,7 @@ import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
 import { FindOutCard } from '../../components/host/functions/FindOutCard';
-import { HostReady } from '../../components/host/functions/HostReady';
+import { HostReady } from '../../components/host/layout/HostReady';
 
 // Images
 const readyServices = require('../../../public/img/high/ready-earn-services.jpg');

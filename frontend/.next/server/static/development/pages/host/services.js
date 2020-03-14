@@ -2565,10 +2565,41 @@ const FindOutCard = () => {
 
 /***/ }),
 
-/***/ "./src/components/host/functions/HostReady.jsx":
-/*!*****************************************************!*\
-  !*** ./src/components/host/functions/HostReady.jsx ***!
-  \*****************************************************/
+/***/ "./src/components/host/functions/QuestionCard.jsx":
+/*!********************************************************!*\
+  !*** ./src/components/host/functions/QuestionCard.jsx ***!
+  \********************************************************/
+/*! exports provided: QuestionCard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionCard", function() { return QuestionCard; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/QuestionCard.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+const QuestionCard = ({
+  title
+}) => {
+  return __jsx("a", {
+    className: "text-green-850 md:text-lg",
+    href: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, title);
+};
+
+/***/ }),
+
+/***/ "./src/components/host/layout/HostReady.jsx":
+/*!**************************************************!*\
+  !*** ./src/components/host/layout/HostReady.jsx ***!
+  \**************************************************/
 /*! exports provided: HostReady */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2577,7 +2608,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostReady", function() { return HostReady; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/HostReady.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/HostReady.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const HostReady = ({
@@ -2654,37 +2685,6 @@ const HostReady = ({
     },
     __self: undefined
   }, "Get started")))));
-};
-
-/***/ }),
-
-/***/ "./src/components/host/functions/QuestionCard.jsx":
-/*!********************************************************!*\
-  !*** ./src/components/host/functions/QuestionCard.jsx ***!
-  \********************************************************/
-/*! exports provided: QuestionCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionCard", function() { return QuestionCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/QuestionCard.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-const QuestionCard = ({
-  title
-}) => {
-  return __jsx("a", {
-    className: "text-green-850 md:text-lg",
-    href: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
-  }, title);
 };
 
 /***/ }),
@@ -5263,7 +5263,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_host_layout_Questions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/host/layout/Questions */ "./src/components/host/layout/Questions.tsx");
 /* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
 /* harmony import */ var _components_host_functions_FindOutCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/host/functions/FindOutCard */ "./src/components/host/functions/FindOutCard.jsx");
-/* harmony import */ var _components_host_functions_HostReady__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/host/functions/HostReady */ "./src/components/host/functions/HostReady.jsx");
+/* harmony import */ var _components_host_layout_HostReady__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/host/layout/HostReady */ "./src/components/host/layout/HostReady.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/services.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -5366,7 +5366,7 @@ const services = () => {
       lineNumber: 56
     },
     __self: undefined
-  }), __jsx(_components_host_functions_HostReady__WEBPACK_IMPORTED_MODULE_10__["HostReady"], {
+  }), __jsx(_components_host_layout_HostReady__WEBPACK_IMPORTED_MODULE_10__["HostReady"], {
     title: "Ready to connect with a hosting team?",
     img: readyServices,
     __source: {
