@@ -14,7 +14,7 @@ import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
 import { Questions } from '../../components/host/layout/Questions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
-import { HostReady } from '../../components/host/functions/HostReady';
+import { HostReady } from '../../components/host/layout/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
