@@ -37,6 +37,6 @@
     "src/components/modals/HelpModal.jsx",
     "src/components/hosthomes/layout/HostHomesHeader.jsx",
     "src/pages/host/services.jsx",
-    "src/components/host/layout/HostReady.jsx"
+    "src/components/host/layout/HostReady.tsx"
   ]
 }

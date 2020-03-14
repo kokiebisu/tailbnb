@@ -9513,9 +9513,9 @@ module.exports = "/_next/static/images/ready-earn-setup-d6b9785c1c09fbc7684375d6
 
 /***/ }),
 
-/***/ "./src/components/host/functions/CharacteristicCard.jsx":
+/***/ "./src/components/host/functions/CharacteristicCard.tsx":
 /*!**************************************************************!*\
-  !*** ./src/components/host/functions/CharacteristicCard.jsx ***!
+  !*** ./src/components/host/functions/CharacteristicCard.tsx ***!
   \**************************************************************/
 /*! exports provided: CharacteristicCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -9525,7 +9525,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CharacteristicCard", function() { return CharacteristicCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/CharacteristicCard.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/CharacteristicCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var CharacteristicCard = function CharacteristicCard(_ref) {
@@ -9537,28 +9537,28 @@ var CharacteristicCard = function CharacteristicCard(_ref) {
     className: "mb-4 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 18
     },
     __self: this
   }, __jsx("div", {
     className: "w-95p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 19
     },
     __self: this
   }, children && __jsx("div", {
     className: "mb-4 mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 20
     },
     __self: this
   }, children), __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 21
     },
     __self: this
   }, __jsx("h3", {
@@ -9568,13 +9568,13 @@ var CharacteristicCard = function CharacteristicCard(_ref) {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 22
     },
     __self: this
   }, title)), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 28
     },
     __self: this
   }, __jsx("p", {
@@ -9584,14 +9584,14 @@ var CharacteristicCard = function CharacteristicCard(_ref) {
     className: "leading-8 text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 29
     },
     __self: this
   }, description)), link && __jsx("div", {
     className: "my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 36
     },
     __self: this
   }, __jsx("p", {
@@ -9601,7 +9601,7 @@ var CharacteristicCard = function CharacteristicCard(_ref) {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 37
     },
     __self: this
   }, link)))));
@@ -9609,9 +9609,9 @@ var CharacteristicCard = function CharacteristicCard(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/host/functions/FindOutCard.jsx":
+/***/ "./src/components/host/functions/FindOutCard.tsx":
 /*!*******************************************************!*\
-  !*** ./src/components/host/functions/FindOutCard.jsx ***!
+  !*** ./src/components/host/functions/FindOutCard.tsx ***!
   \*******************************************************/
 /*! exports provided: FindOutCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -9621,36 +9621,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FindOutCard", function() { return FindOutCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/FindOutCard.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/FindOutCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // interface HTMLSelectElement {
+//   selected: HTMLSelectElement;
+// }
 
 var FindOutCard = function FindOutCard() {
   return __jsx("div", {
     className: "w-full px-6 md:px-8 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto py-4 lg:pt-8 lg:pb-16 rounded-lg md:shadow-lg md:border border-gray-300 z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 9
     },
     __self: this
   }, __jsx("div", {
     className: "md:mx-2 py-8 lg:py-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     },
     __self: this
   }, __jsx("div", {
     className: "mb-2 lg:mb-8 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 11
     },
     __self: this
   }, __jsx("div", {
     className: "md:w-80p lg:w-full flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 12
     },
     __self: this
   }, __jsx("h3", {
@@ -9660,42 +9663,42 @@ var FindOutCard = function FindOutCard() {
     className: "text-xl md:text-2xl lg:text-3.5xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 13
     },
     __self: this
   }, "Find out how much you can earn from your space"))), __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 20
     },
     __self: this
   }, __jsx("div", {
     className: "w-full md:mx-16 lg:mx-0 lg:flex lg:w-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }, __jsx("div", {
     className: "w-full lg:w-72",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 22
     },
     __self: this
   }, __jsx("div", {
     className: "mb-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 23
     },
     __self: this
   }, __jsx("div", {
     className: "border border-gray-350 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: this
   }, __jsx("input", {
@@ -9707,27 +9710,27 @@ var FindOutCard = function FindOutCard() {
     placeholder: "Vancouver",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
   }))), __jsx("div", {
     className: "flex flex-col md:flex-row lg:flex-col",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 33
     },
     __self: this
   }, __jsx("div", {
     className: "mb-2 md:w-2/3 lg:w-auto md:mr-2 lg:mr-0 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 34
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 35
     },
     __self: this
   }, __jsx("select", {
@@ -9738,35 +9741,35 @@ var FindOutCard = function FindOutCard() {
     id: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 36
     },
     __self: this
   }, __jsx("option", {
     value: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 40
     },
     __self: this
   }, "Entire place"), __jsx("option", {
     value: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 41
     },
     __self: this
   }, "Private room"), __jsx("option", {
     value: "3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 42
     },
     __self: this
   }, "Shared room"))), __jsx("div", {
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 45
     },
     __self: this
   }, __jsx("svg", {
@@ -9775,27 +9778,27 @@ var FindOutCard = function FindOutCard() {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 46
     },
     __self: this
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   })))), __jsx("div", {
     className: "md:w-1/3 lg:w-auto md:ml-2 lg:ml-0 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 54
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: this
   }, __jsx("select", {
@@ -9806,57 +9809,57 @@ var FindOutCard = function FindOutCard() {
     id: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: this
   }, __jsx("option", {
     value: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }, "1 guest"), __jsx("option", {
     value: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }, "2 guests"), __jsx("option", {
     value: "3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }, "3 guests"), __jsx("option", {
-    selected: "selected",
+    selected: true,
     value: "4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, "4 guests"), __jsx("option", {
     value: "5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 66
     },
     __self: this
   }, "5 guests"), __jsx("option", {
     value: "6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 67
     },
     __self: this
   }, "6 guests"))), __jsx("div", {
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 70
     },
     __self: this
   }, __jsx("svg", {
@@ -9865,14 +9868,14 @@ var FindOutCard = function FindOutCard() {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 71
     },
     __self: this
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 75
     },
     __self: this
   })))))), __jsx("div", {
@@ -9882,35 +9885,35 @@ var FindOutCard = function FindOutCard() {
     className: "hidden lg:block bg-gray-650 mx-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 81
     },
     __self: this
   }), __jsx("div", {
     className: "mt-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 84
     },
     __self: this
   }, __jsx("div", {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 85
     },
     __self: this
   }, __jsx("div", {
     className: "flex lg:flex-col items-end lg:items-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 86
     },
     __self: this
   }, __jsx("div", {
     className: "my-2 md:my-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 87
     },
     __self: this
   }, __jsx("h3", {
@@ -9920,20 +9923,20 @@ var FindOutCard = function FindOutCard() {
     className: "text-4xl lg:text-6xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 88
     },
     __self: this
   }, "$1,169")), __jsx("div", {
     className: "flex mb-4 ml-1 md:ml-0 md:mb-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 94
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 95
     },
     __self: this
   }, __jsx("p", {
@@ -9943,14 +9946,14 @@ var FindOutCard = function FindOutCard() {
     className: "text-xs",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 96
     },
     __self: this
   }, "per month")), __jsx("div", {
     className: "h-3 w-3 mx-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 102
     },
     __self: this
   }, __jsx("svg", {
@@ -9962,20 +9965,20 @@ var FindOutCard = function FindOutCard() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 103
     },
     __self: this
   }, __jsx("path", {
     d: "m12 0c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12-5.37-12-12-12zm0 23c-6.07 0-11-4.92-11-11s4.93-11 11-11 11 4.93 11 11-4.93 11-11 11zm4.75-14c0 1.8-.82 2.93-2.35 3.89-.23.14-1 .59-1.14.67-.4.25-.51.38-.51.44v2a .75.75 0 0 1 -1.5 0v-2c0-.74.42-1.22 1.22-1.72.17-.11.94-.55 1.14-.67 1.13-.71 1.64-1.41 1.64-2.61a3.25 3.25 0 0 0 -6.5 0 .75.75 0 0 1 -1.5 0 4.75 4.75 0 0 1 9.5 0zm-3.75 10a1 1 0 1 1 -2 0 1 1 0 0 1 2 0z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 107
     },
     __self: this
   })))))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 113
     },
     __self: this
   }, __jsx("button", {
@@ -9985,7 +9988,7 @@ var FindOutCard = function FindOutCard() {
     className: "bg-red-550 text-white rounded px-12 py-3 w-full lg:w-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 114
     },
     __self: this
   }, "Check availability")))))));
@@ -9993,9 +9996,9 @@ var FindOutCard = function FindOutCard() {
 
 /***/ }),
 
-/***/ "./src/components/host/functions/QuestionCard.jsx":
+/***/ "./src/components/host/functions/QuestionCard.tsx":
 /*!********************************************************!*\
-  !*** ./src/components/host/functions/QuestionCard.jsx ***!
+  !*** ./src/components/host/functions/QuestionCard.tsx ***!
   \********************************************************/
 /*! exports provided: QuestionCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10005,7 +10008,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuestionCard", function() { return QuestionCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/QuestionCard.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/functions/QuestionCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var QuestionCard = function QuestionCard(_ref) {
@@ -10015,7 +10018,7 @@ var QuestionCard = function QuestionCard(_ref) {
     href: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 9
     },
     __self: this
   }, title);
@@ -10114,7 +10117,7 @@ var Table = function Table(_ref) {
     className: "w-full mx-auto relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 43
     },
     __self: this
   }, __jsx("div", {
@@ -10125,14 +10128,14 @@ var Table = function Table(_ref) {
     className: "w-48 absolute bg-white w-40 z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 44
     },
     __self: this
   }, __jsx("div", {
     className: "py-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 48
     },
     __self: this
   }, __jsx("h3", {
@@ -10142,7 +10145,7 @@ var Table = function Table(_ref) {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 49
     },
     __self: this
   }, head.column1)), body.map(function (row) {
@@ -10153,13 +10156,13 @@ var Table = function Table(_ref) {
       className: "flex items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 57
       },
       __self: this
     }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 58
       },
       __self: this
     }, __jsx("p", {
@@ -10169,7 +10172,7 @@ var Table = function Table(_ref) {
       className: "text-gray-750 text-sm py-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 59
       },
       __self: this
     }, row.column1)));
@@ -10177,7 +10180,7 @@ var Table = function Table(_ref) {
     className: "overflow-x-scroll",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 69
     },
     __self: this
   }, __jsx("table", {
@@ -10187,19 +10190,19 @@ var Table = function Table(_ref) {
     className: "relative z-0 w-full table-fixed text-gray-750 my-8 top-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 70
     },
     __self: this
   }, __jsx("tbody", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 73
     },
     __self: this
   }, __jsx("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 74
     },
     __self: this
   }, __jsx("td", {
@@ -10209,7 +10212,7 @@ var Table = function Table(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 75
     },
     __self: this
   }, head.column1), __jsx("td", {
@@ -10217,35 +10220,35 @@ var Table = function Table(_ref) {
     className: "w-32  md:w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 80
     },
     __self: this
   }, head.column2), __jsx("td", {
     className: "w-32 md:w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 85
     },
     __self: this
   }, head.column3), __jsx("td", {
     className: "w-32 md:w-1/5 border-b border-gray-300 text-center text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 88
     },
     __self: this
   }, head.column4)), body.map(function (row) {
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 96
       },
       __self: this
     }, __jsx("td", {
       className: "h-24 md:py-8 text-sm border-b border-gray-300 text-left",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 97
       },
       __self: this
     }, row.column1), __jsx("td", {
@@ -10253,42 +10256,42 @@ var Table = function Table(_ref) {
       className: "h-24 md:py-8 text-sm border-b border-gray-300 text-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 100
       },
       __self: this
     }, __jsx("div", {
       className: "flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 103
       },
       __self: this
     }, typeof row.column2 === 'string' ? renderString(row.column2) : renderBoolean(row.column2))), __jsx("td", {
       className: "h-24 md:py-8 text-sm border-b border-gray-300 text-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 109
       },
       __self: this
     }, __jsx("div", {
       className: "flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 110
       },
       __self: this
     }, typeof row.column3 === 'string' ? renderString(row.column3) : renderBoolean(row.column3))), __jsx("td", {
       className: "h-24 md:py-8 text-sm border-b border-gray-300 text-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 118
+        lineNumber: 116
       },
       __self: this
     }, __jsx("div", {
       className: "flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 117
       },
       __self: this
     }, typeof row.column4 === 'string' ? renderString(row.column4) : renderBoolean(row.column4)))));
@@ -10296,7 +10299,7 @@ var Table = function Table(_ref) {
     className: "mt-3 mb-32 lg:my-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 131
     },
     __self: this
   }, __jsx("p", {
@@ -10306,7 +10309,7 @@ var Table = function Table(_ref) {
     className: "text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 132
     },
     __self: this
   }, "Last updated June 2018")));
@@ -10314,9 +10317,368 @@ var Table = function Table(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/host/layout/HostReady.jsx":
+/***/ "./src/components/host/layout/HostHeader.tsx":
+/*!***************************************************!*\
+  !*** ./src/components/host/layout/HostHeader.tsx ***!
+  \***************************************************/
+/*! exports provided: HostHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostHeader", function() { return HostHeader; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/HostHeader.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+
+var HostHeader = function HostHeader(_ref) {
+  var color = _ref.color,
+      section = _ref.section,
+      switchMenuModal = _ref.switchMenuModal;
+
+  var configureScroll = function configureScroll(name) {
+    document.body.style.overflow = name;
+  };
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('auto') : undefined, __jsx("div", {
+    className: "pt-8 lg:hidden flex items-center justify-start absolute z-50 top-0 left-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "ml-6 mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("button", {
+    className: "flex items-center",
+    onClick: function onClick() {
+      switchMenuModal();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-8 h-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx("svg", {
+    viewBox: "0 0 1000 1000",
+    role: "presentation",
+    "aria-hidden": "true",
+    focusable: "false",
+    className: "block",
+    style: {
+      fill: "".concat(color)
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }))), __jsx("div", {
+    className: "h-2 w-2 ml-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    style: {
+      fill: "".concat(color)
+    },
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 491.996 491.996",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  })))))))), __jsx("div", {
+    className: "px-4 md:px-0 flex bg-white w-full lg:border-b border-gray-300 items-center justify-end lg:justify-between fixed bottom-0 border-t border-gray-300 lg:sticky lg:top-0 z-50",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "hidden lg:flex items-center justify-start",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "ml-6 mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "/",
+    className: "flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "h-8 w-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
+  }, __jsx("svg", {
+    viewBox: "0 0 1000 1000",
+    role: "presentation",
+    "aria-hidden": "true",
+    focusable: "false",
+    className: "block",
+    style: {
+      fill: '#008489'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }))))), __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "flex text-sm text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, section === 'overview' ? __jsx("div", {
+    className: "mx-4 py-8 border-green-850 border-b-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  }, "Overview")) : __jsx("div", {
+    className: "mx-4 py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/host/homes",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, "Overview"))), section === 'setup' ? __jsx("div", {
+    className: "mx-4 py-8 border-green-850 border-b-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, "Setup")) : __jsx("div", {
+    className: "mx-4 py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/host/setup",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, "Setup"))), section === 'safety' ? __jsx("div", {
+    className: "mx-4 py-8 border-b-2 border-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: this
+  }, "Safety")) : __jsx("div", {
+    className: "mx-4 py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/host/safety",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113
+    },
+    __self: this
+  }, "Safety"))), section === 'financials' ? __jsx("div", {
+    className: "mx-4 py-8 border-b-2 border-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120
+    },
+    __self: this
+  }, "Financials")) : __jsx("div", {
+    className: "mx-4 py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 123
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/host/financials",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125
+    },
+    __self: this
+  }, "Financials"))), section === 'hosting services' ? __jsx("div", {
+    className: "mx-4 py-8 border-b-2 border-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 131
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132
+    },
+    __self: this
+  }, "Hosting services")) : __jsx("div", {
+    className: "mx-4 py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/host/services",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137
+    },
+    __self: this
+  }, "Hosting services")))))));
+};
+
+/***/ }),
+
+/***/ "./src/components/host/layout/HostReady.tsx":
 /*!**************************************************!*\
-  !*** ./src/components/host/layout/HostReady.jsx ***!
+  !*** ./src/components/host/layout/HostReady.tsx ***!
   \**************************************************/
 /*! exports provided: HostReady */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10326,7 +10688,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostReady", function() { return HostReady; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/HostReady.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/HostReady.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var HostReady = function HostReady(_ref) {
@@ -10336,14 +10698,14 @@ var HostReady = function HostReady(_ref) {
     className: "w-full md:max-w-4xl lg:max-w-7xl mx-auto mt-8 mb-12 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 10
     },
     __self: this
   }, __jsx("div", {
     className: "w-full h-96 md:h-112",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 11
     },
     __self: this
   }, __jsx("img", {
@@ -10351,21 +10713,21 @@ var HostReady = function HostReady(_ref) {
     src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 12
     },
     __self: this
   })), __jsx("div", {
     id: "ready",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
     className: "mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 15
     },
     __self: this
   }, __jsx("h3", {
@@ -10375,20 +10737,20 @@ var HostReady = function HostReady(_ref) {
     className: "text-white text-4xl md:text-6xl tracking-tighter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 16
     },
     __self: this
   }, title)), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 22
     },
     __self: this
   }, __jsx("div", {
     className: "bg-white py-3 px-5 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 23
     },
     __self: this
   }, __jsx("p", {
@@ -10398,7 +10760,7 @@ var HostReady = function HostReady(_ref) {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 24
     },
     __self: this
   }, "Get started")))));
@@ -10406,9 +10768,9 @@ var HostReady = function HostReady(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/host/layout/How.jsx":
+/***/ "./src/components/host/layout/How.tsx":
 /*!********************************************!*\
-  !*** ./src/components/host/layout/How.jsx ***!
+  !*** ./src/components/host/layout/How.tsx ***!
   \********************************************/
 /*! exports provided: How */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10418,7 +10780,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "How", function() { return How; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/How.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/How.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var How = function How(_ref) {
@@ -10429,7 +10791,7 @@ var How = function How(_ref) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
@@ -10439,35 +10801,35 @@ var How = function How(_ref) {
     className: "bg-gray-100 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
     className: "mt-8 md:mt-0 w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl mx-auto pt-16 pb-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
     className: "w-full lg:max-w-4xl mx-auto md:mt-12 lg:mt-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 15
     },
     __self: this
   }, __jsx("div", {
     className: "flex flex-col items-start md:items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 16
     },
     __self: this
   }, __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 17
     },
     __self: this
   }, __jsx("p", {
@@ -10477,14 +10839,14 @@ var How = function How(_ref) {
     className: "text-gray-750 uppercase text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 18
     },
     __self: this
   }, page)), __jsx("div", {
     className: "mb-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 24
     },
     __self: this
   }, __jsx("h3", {
@@ -10494,14 +10856,14 @@ var How = function How(_ref) {
     className: "text-gray-750 text-4xl md:text-5xl lg:text-6xl tracking-tighter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 25
     },
     __self: this
   }, title)), __jsx("div", {
     className: "w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 31
     },
     __self: this
   }, __jsx("p", {
@@ -10511,14 +10873,14 @@ var How = function How(_ref) {
     className: "text-lg lg:text-2xl text-gray-750 leading-7 md:text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 32
     },
     __self: this
   }, description)), __jsx("div", {
     className: "mt-12 lg:mt-16 mb-28",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 38
     },
     __self: this
   }, __jsx("button", {
@@ -10528,7 +10890,7 @@ var How = function How(_ref) {
     className: "bg-red-550 px-5 py-3 text-white rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 39
     },
     __self: this
   }, "Get started")))))), img && __jsx("div", {
@@ -10538,21 +10900,21 @@ var How = function How(_ref) {
     className: "w-full max-w-2xl lg:max-w-5xl mx-auto relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 50
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 53
     },
     __self: this
   }, __jsx("div", {
     className: "mx-6 md:mx-0 w-full md:h-80 lg:h-112",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 54
     },
     __self: this
   }, __jsx("img", {
@@ -10560,7 +10922,7 @@ var How = function How(_ref) {
     src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 55
     },
     __self: this
   })))));
@@ -10580,8 +10942,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Questions", function() { return Questions; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../wrapper/HostSection */ "./src/components/host/wrapper/HostSection.jsx");
-/* harmony import */ var _functions_QuestionCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/QuestionCard */ "./src/components/host/functions/QuestionCard.jsx");
+/* harmony import */ var _wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../wrapper/HostSection */ "./src/components/host/wrapper/HostSection.tsx");
+/* harmony import */ var _functions_QuestionCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/QuestionCard */ "./src/components/host/functions/QuestionCard.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/Questions.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
@@ -10729,9 +11091,9 @@ var Questions = function Questions(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/host/layout/QuoteRight.jsx":
+/***/ "./src/components/host/layout/QuoteRight.tsx":
 /*!***************************************************!*\
-  !*** ./src/components/host/layout/QuoteRight.jsx ***!
+  !*** ./src/components/host/layout/QuoteRight.tsx ***!
   \***************************************************/
 /*! exports provided: QuoteRight */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10741,7 +11103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuoteRight", function() { return QuoteRight; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/QuoteRight.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/layout/QuoteRight.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var QuoteRight = function QuoteRight(_ref) {
@@ -10752,14 +11114,14 @@ var QuoteRight = function QuoteRight(_ref) {
     className: "flex flex-col md:flex-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 11
     },
     __self: this
   }, __jsx("div", {
     className: "w-full md:w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 12
     },
     __self: this
   }, __jsx("img", {
@@ -10767,28 +11129,28 @@ var QuoteRight = function QuoteRight(_ref) {
     src: img,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 13
     },
     __self: this
   })), __jsx("div", {
     className: "w-full md:w-1/2 relative flex items-center md:justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 15
     },
     __self: this
   }, __jsx("div", {
     className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 16
     },
     __self: this
   }, __jsx("div", {
     id: "quote__right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 17
     },
     __self: this
   }, __jsx("p", {
@@ -10798,28 +11160,28 @@ var QuoteRight = function QuoteRight(_ref) {
     className: "text-6xl md:text-7xl lg:text-10xl text-yellow-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 18
     },
     __self: this
   }, "\u201C")), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 26
     },
     __self: this
   }, __jsx("div", {
     className: "mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 27
     },
     __self: this
   }, __jsx("div", {
     className: "md:w-85p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 28
     },
     __self: this
   }, __jsx("p", {
@@ -10830,14 +11192,14 @@ var QuoteRight = function QuoteRight(_ref) {
     className: "text-lg lg:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 29
     },
     __self: this
   }, title))), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 40
     },
     __self: this
   }, __jsx("p", {
@@ -10847,20 +11209,20 @@ var QuoteRight = function QuoteRight(_ref) {
     className: "text-sm md:text-base text-gray-650 my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 41
     },
     __self: this
-  }, "Jack hosts in Brisbane to earn extra money")), __jsx("button", {
+  }, description)), __jsx("button", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 47
     },
     __self: this
   }, __jsx("div", {
     className: "py-3 px-5 border-2 border-gray-850 rounded",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 48
     },
     __self: this
   }, __jsx("p", {
@@ -10870,7 +11232,7 @@ var QuoteRight = function QuoteRight(_ref) {
     className: "text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 49
     },
     __self: this
   }, "Learn how they host")))))));
@@ -10878,9 +11240,9 @@ var QuoteRight = function QuoteRight(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/host/wrapper/HostSection.jsx":
+/***/ "./src/components/host/wrapper/HostSection.tsx":
 /*!*****************************************************!*\
-  !*** ./src/components/host/wrapper/HostSection.jsx ***!
+  !*** ./src/components/host/wrapper/HostSection.tsx ***!
   \*****************************************************/
 /*! exports provided: HostSection */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10890,7 +11252,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostSection", function() { return HostSection; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/wrapper/HostSection.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/host/wrapper/HostSection.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var HostSection = function HostSection(_ref) {
@@ -10900,21 +11262,21 @@ var HostSection = function HostSection(_ref) {
     className: "w-full px-6 md:px-0 md:max-w-xl lg:max-w-5xl mx-auto pt-8 pb-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 10
     },
     __self: this
   }, __jsx("div", {
     className: "my-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 11
     },
     __self: this
   }, __jsx("div", {
     className: "mb-4 md:mb-0 flex md:justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
@@ -10925,14 +11287,14 @@ var HostSection = function HostSection(_ref) {
     className: "bg-gray-650 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 13
     },
     __self: this
   })), __jsx("div", {
     className: "flex md:justify-center mb-12 mt-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 18
     },
     __self: this
   }, __jsx("h3", {
@@ -10942,7 +11304,7 @@ var HostSection = function HostSection(_ref) {
     className: "text-gray-750 text-4xl lg:text-6xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 19
     },
     __self: this
   }, title)), children));
@@ -10950,9 +11312,9 @@ var HostSection = function HostSection(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/hostfinancials/layout/GreatPrice.jsx":
+/***/ "./src/components/hostfinancials/layout/GreatPrice.tsx":
 /*!*************************************************************!*\
-  !*** ./src/components/hostfinancials/layout/GreatPrice.jsx ***!
+  !*** ./src/components/hostfinancials/layout/GreatPrice.tsx ***!
   \*************************************************************/
 /*! exports provided: GreatPrice */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10962,9 +11324,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GreatPrice", function() { return GreatPrice; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../host/wrapper/HostSection */ "./src/components/host/wrapper/HostSection.jsx");
-/* harmony import */ var _host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../host/functions/CharacteristicCard */ "./src/components/host/functions/CharacteristicCard.jsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostfinancials/layout/GreatPrice.jsx";
+/* harmony import */ var _host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../host/wrapper/HostSection */ "./src/components/host/wrapper/HostSection.tsx");
+/* harmony import */ var _host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../host/functions/CharacteristicCard */ "./src/components/host/functions/CharacteristicCard.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostfinancials/layout/GreatPrice.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
 
@@ -10994,8 +11356,10 @@ var GreatPrice = function GreatPrice() {
     },
     __self: this
   }, __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
+    children: null,
     title: "Trusted pricing advice",
     description: "What you charge is always up to you. If you want some help, we have tools that match your prices with demand, ensuring a great price for every night.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -11005,7 +11369,7 @@ var GreatPrice = function GreatPrice() {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
   }, __jsx("img", {
@@ -11013,29 +11377,30 @@ var GreatPrice = function GreatPrice() {
     src: "https://a0.muscache.com/pictures/459f10c1-164a-4c8e-ac14-69b6d39c1229.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: this
   }))), __jsx("div", {
     className: "lg:flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 29
     },
     __self: this
   }, __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
     title: "Extra money for services",
     description: "You can require additional fees upfront for things like extra guests or house cleaning. And if you want to provide other services, such as equipment rental or a tour, guests can pay you through the app for those after they book.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 30
     },
     __self: this
   }, __jsx("div", {
     className: "w-12 h-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 34
     },
     __self: this
   }, __jsx("svg", {
@@ -11046,7 +11411,7 @@ var GreatPrice = function GreatPrice() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 35
     },
     __self: this
   }, __jsx("path", {
@@ -11056,29 +11421,30 @@ var GreatPrice = function GreatPrice() {
     d: "m22 21.5c0 1.033-.562 1.5-1.5 1.5h-8c-.948 0-1.5-.459-1.5-1.5v-6c0-.515.273-1.062.854-1.647l3-2.999c.093-.094.146-.22.146-.352.002-.679.004-1.358.004-2.002h2.996v2c0 .133.053.26.146.354l3 3c.581.584.854 1.131.854 1.646zm-12-18.5c-.517 0-1-.363-1-1 0-.65.416-1 1-1zm11.854 10.147-2.854-2.854v-2.793c0-.276-.224-.5-.5-.5s-.5.224-.5.5h-2.995c0-.799-.002-1.497-.005-2.003-.007-1.203-1.741-2.497-3-2.497h-1v-2h7.5c1.159 0 2.013.897 2.013 2.005 0 1.088-.871 1.995-2.013 1.995-.276 0-.5.224-.5.5s.224.5.5.5c1.703 0 3.013-1.364 3.013-2.995 0-1.65-1.29-3.005-3.013-3.005h-8.5c-1.102 0-2 .755-2 2 0 1.256.976 1.994 1.988 2-.078 1.673-.551 3.253-1.421 4.749-.201.346.067.777.467.75 1.104-.075 2.043-.45 2.799-1.126.722-.644 1.265-1.368 1.622-2.169.113-.252 0-.548-.252-.66-.252-.113-.548 0-.66.252-.299.668-.756 1.277-1.376 1.831-.361.322-.776.557-1.25.703.65-1.375 1.008-2.82 1.072-4.33h1.011c.761 0 1.996.922 2 1.503.006 1.043.007 2.906.001 4.789l-2.855 2.854c-.753.76-1.146 1.545-1.146 2.354v6c0 1.639 1.037 2.5 2.5 2.5h8c1.454 0 2.5-.869 2.5-2.5v-6c0-.809-.393-1.594-1.146-2.353z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 39
     },
     __self: this
   }), __jsx("path", {
     d: "m18.1738 14.4844c.544-.096.907-.614.811-1.158s-.615-.907-1.159-.811-.907.615-.81 1.158c.096.544.614.908 1.158.811m.326 1.516c-1.507 0-2-1-4.002-1s-2.498 1.336-2.498 2v3.5c0 1.503.624 1.5 1.5 1.5h6c1.024 0 1.5-.101 1.5-1.5v-4c0-2.331-.993-.5-2.5-.5m-14.756-12.241c-1.085 0-1.488-.931-1.488-1.519 0-.133-.114-.24-.256-.24-.141 0-.256.107-.256.24 0 .588-.403 1.519-1.488 1.519-.142 0-.256.108-.256.241 0 .132.114.24.256.24 1.085 0 1.488.931 1.488 1.519 0 .133.115.241.256.241.142 0 .256-.108.256-.241 0-.588.403-1.519 1.488-1.519.142 0 .256-.108.256-.24 0-.133-.114-.241-.256-.241m1.582 2.256c-.544.096-.907.615-.81 1.158.095.544.614.908 1.158.811.544-.096.907-.614.811-1.158s-.615-.907-1.159-.811m-.818-3.428c-.048-.272.133-.532.405-.58.272-.047.532.133.579.406.048.271-.132.531-.405.579-.271.048-.531-.133-.579-.405",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 42
     },
     __self: this
   })))), __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_2__["CharacteristicCard"], {
     title: "Custom to your needs",
     description: "You can set custom prices for seasons, weekends, and any other nights where you want to control what you charge. You can also provide weekly and monthly discounts for people who are looking to stay a while.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 46
     },
     __self: this
   }, __jsx("div", {
     className: "w-12 h-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   }, __jsx("svg", {
@@ -11089,14 +11455,14 @@ var GreatPrice = function GreatPrice() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }, __jsx("path", {
     d: "m21 7.51v2.73a.51.51 0 0 1 -.5.51h-9.18a1.88 1.88 0 0 1 0-3.75h9.19a.5.5 0 0 1 .5.51zm-7.83 5.74h-7.78a.5.5 0 0 0 -.5.47 22.46 22.46 0 0 1 -.38 2.68.5.5 0 0 0 .48.6h8.18a1.88 1.88 0 0 0 0-3.75z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: this
   }), __jsx("path", {
@@ -11106,7 +11472,7 @@ var GreatPrice = function GreatPrice() {
     d: "m23 5v17.5a.5.5 0 0 1 -.5.5h-17a .5.5 0 0 1 -.5-.5v-1a .5.5 0 0 1 1 0v .5h16v-16.5h-.5a.5.5 0 0 1 0-1h1a .5.5 0 0 1 .5.5zm-6.26 15h-13.44a1.66 1.66 0 0 1 -1.36-.67 1.33 1.33 0 0 1 -.18-1.22 27.09 27.09 0 0 0 1.24-8.73v-6.88a.5.5 0 0 1 .5-.5h3.5v-1a .5.5 0 0 1 1 0v1h7v-1a .5.5 0 0 1 1 0v1h3.5a.5.5 0 0 1 .5.5v6.88c0 4.6-.65 8.03-1.87 9.91a1.63 1.63 0 0 1 -1.39.71zm-13.44-1h13.44a.66.66 0 0 0 .55-.25c.78-1.2 1.71-3.8 1.71-9.37v-6.38h-3v1.5a.5.5 0 0 1 -1 0v-1.5h-7v1.5a.5.5 0 0 1 -1 0v-1.5h-3v6.38a27.86 27.86 0 0 1 -1.3 9.06.33.33 0 0 0 .05.31.67.67 0 0 0 .55.25z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: this
   }))))));
@@ -11114,9 +11480,9 @@ var GreatPrice = function GreatPrice() {
 
 /***/ }),
 
-/***/ "./src/components/hostfinancials/layout/SeamlessPayments.jsx":
+/***/ "./src/components/hostfinancials/layout/SeamlessPayments.tsx":
 /*!*******************************************************************!*\
-  !*** ./src/components/hostfinancials/layout/SeamlessPayments.jsx ***!
+  !*** ./src/components/hostfinancials/layout/SeamlessPayments.tsx ***!
   \*******************************************************************/
 /*! exports provided: SeamlessPayments */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11126,11 +11492,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SeamlessPayments", function() { return SeamlessPayments; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../host/wrapper/HostSection */ "./src/components/host/wrapper/HostSection.jsx");
-/* harmony import */ var _host_layout_QuoteRight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../host/layout/QuoteRight */ "./src/components/host/layout/QuoteRight.jsx");
-/* harmony import */ var _host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../host/functions/CharacteristicCard */ "./src/components/host/functions/CharacteristicCard.jsx");
+/* harmony import */ var _host_wrapper_HostSection__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../host/wrapper/HostSection */ "./src/components/host/wrapper/HostSection.tsx");
+/* harmony import */ var _host_layout_QuoteRight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../host/layout/QuoteRight */ "./src/components/host/layout/QuoteRight.tsx");
+/* harmony import */ var _host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../host/functions/CharacteristicCard */ "./src/components/host/functions/CharacteristicCard.tsx");
 /* harmony import */ var _host_functions_Table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../host/functions/Table */ "./src/components/host/functions/Table.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostfinancials/layout/SeamlessPayments.jsx";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostfinancials/layout/SeamlessPayments.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
 
@@ -11188,6 +11554,7 @@ var SeamlessPayments = function SeamlessPayments() {
   }, __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_3__["CharacteristicCard"], {
     title: "List your space for free",
     description: "You can advertise your home to millions of travellers with no strings attached\u2014no sign-up charges or membership fees.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
@@ -11197,7 +11564,7 @@ var SeamlessPayments = function SeamlessPayments() {
     className: "w-12 h-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 59
     },
     __self: this
   }, __jsx("img", {
@@ -11205,22 +11572,23 @@ var SeamlessPayments = function SeamlessPayments() {
     src: "https://a0.muscache.com/pictures/0d55adf2-c050-4778-b462-2b2e40bc2dfc.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }))), __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_3__["CharacteristicCard"], {
     title: "Receive a booking",
     description: "Airbnb charges each guest before arrival to ensure you\u2019ll always get paid on time when you host. You never have to handle money directly.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: this
   }, __jsx("div", {
     className: "w-12 h-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 70
     },
     __self: this
   }, __jsx("img", {
@@ -11228,22 +11596,23 @@ var SeamlessPayments = function SeamlessPayments() {
     src: "https://a0.muscache.com/pictures/a12fd9da-c6d6-41f9-a040-282114d0cb87.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: this
   }))), __jsx(_host_functions_CharacteristicCard__WEBPACK_IMPORTED_MODULE_3__["CharacteristicCard"], {
     title: "Get paid after check-in",
     description: "Airbnb typically releases your money about 24 hours after the guest is scheduled to arrive to make sure check-in goes smoothly.",
+    link: null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 77
     },
     __self: this
   }, __jsx("div", {
     className: "w-12 h-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 81
     },
     __self: this
   }, __jsx("img", {
@@ -11251,14 +11620,14 @@ var SeamlessPayments = function SeamlessPayments() {
     src: "https://a0.muscache.com/pictures/120e5167-72a2-40e6-bce6-e6ad1964cabe.jpg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 82
     },
     __self: this
   })))), __jsx("div", {
     className: "my-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 89
     },
     __self: this
   }, __jsx(_host_functions_Table__WEBPACK_IMPORTED_MODULE_4__["Table"], {
@@ -11266,14 +11635,14 @@ var SeamlessPayments = function SeamlessPayments() {
     body: tableBody,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 90
     },
     __self: this
   })), __jsx("div", {
     className: "lg:pt-32 pb-8 md:pb-16",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 92
     },
     __self: this
   }, __jsx(_host_layout_QuoteRight__WEBPACK_IMPORTED_MODULE_2__["QuoteRight"], {
@@ -11282,372 +11651,10 @@ var SeamlessPayments = function SeamlessPayments() {
     img: seamlesspaymentsQuote,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 93
     },
     __self: this
   }))));
-};
-
-/***/ }),
-
-/***/ "./src/components/layout/HostHeader.jsx":
-/*!**********************************************!*\
-  !*** ./src/components/layout/HostHeader.jsx ***!
-  \**********************************************/
-/*! exports provided: HostHeader */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostHeader", function() { return HostHeader; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/HostHeader.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
- // interface Props {
-//   switchMenuModal: any;
-// }
-
-var HostHeader = function HostHeader(_ref) {
-  var color = _ref.color,
-      section = _ref.section,
-      switchMenuModal = _ref.switchMenuModal;
-
-  var configureScroll = function configureScroll(name) {
-    document.body.style.overflow = name;
-  };
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('auto') : undefined, __jsx("div", {
-    className: "pt-8 lg:hidden flex items-center justify-start absolute z-50 top-0 left-0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "ml-6 mr-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx("button", {
-    className: "flex items-center",
-    onClick: function onClick() {
-      switchMenuModal();
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-8 h-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("svg", {
-    viewBox: "0 0 1000 1000",
-    role: "presentation",
-    "aria-hidden": "true",
-    focusable: "false",
-    className: "block",
-    style: {
-      fill: "".concat(color)
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }))), __jsx("div", {
-    className: "h-2 w-2 ml-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "h-full w-full",
-    style: {
-      fill: "".concat(color)
-    },
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 491.996 491.996",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  })))))))), __jsx("div", {
-    className: "px-4 md:px-0 flex bg-white w-full lg:border-b border-gray-300 items-center justify-end lg:justify-between fixed bottom-0 border-t border-gray-300 lg:sticky lg:top-0 z-50",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "hidden lg:flex items-center justify-start",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "ml-6 mr-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("a", {
-    href: "/",
-    className: "flex items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "h-8 w-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, __jsx("svg", {
-    viewBox: "0 0 1000 1000",
-    role: "presentation",
-    "aria-hidden": "true",
-    focusable: "false",
-    className: "block",
-    style: {
-      fill: '#008489'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }))))), __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "flex text-sm text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, section === 'overview' ? __jsx("div", {
-    className: "mx-4 py-8 border-green-850 border-b-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "text-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  }, "Overview")) : __jsx("div", {
-    className: "mx-4 py-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/host/homes",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, "Overview"))), section === 'setup' ? __jsx("div", {
-    className: "mx-4 py-8 border-green-850 border-b-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "text-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, "Setup")) : __jsx("div", {
-    className: "mx-4 py-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/host/setup",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  }, "Setup"))), section === 'safety' ? __jsx("div", {
-    className: "mx-4 py-8 border-b-2 border-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 101
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "text-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 102
-    },
-    __self: this
-  }, "Safety")) : __jsx("div", {
-    className: "mx-4 py-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/host/safety",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, "Safety"))), section === 'financials' ? __jsx("div", {
-    className: "mx-4 py-8 border-b-2 border-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "text-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 114
-    },
-    __self: this
-  }, "Financials")) : __jsx("div", {
-    className: "mx-4 py-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/host/financials",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 118
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: this
-  }, "Financials"))), section === 'hosting services' ? __jsx("div", {
-    className: "mx-4 py-8 border-b-2 border-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 125
-    },
-    __self: this
-  }, __jsx("p", {
-    className: "text-green-850",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 126
-    },
-    __self: this
-  }, "Hosting services")) : __jsx("div", {
-    className: "mx-4 py-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/host/services",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 131
-    },
-    __self: this
-  }, "Hosting services")))))));
 };
 
 /***/ }),
@@ -12000,13 +12007,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_modals_HostMenuModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/modals/HostMenuModal */ "./src/components/modals/HostMenuModal.jsx");
-/* harmony import */ var _components_host_layout_How__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/host/layout/How */ "./src/components/host/layout/How.jsx");
-/* harmony import */ var _components_layout_HostHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/layout/HostHeader */ "./src/components/layout/HostHeader.jsx");
-/* harmony import */ var _components_hostfinancials_layout_SeamlessPayments__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/hostfinancials/layout/SeamlessPayments */ "./src/components/hostfinancials/layout/SeamlessPayments.jsx");
-/* harmony import */ var _components_hostfinancials_layout_GreatPrice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/hostfinancials/layout/GreatPrice */ "./src/components/hostfinancials/layout/GreatPrice.jsx");
+/* harmony import */ var _components_host_layout_How__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/host/layout/How */ "./src/components/host/layout/How.tsx");
+/* harmony import */ var _components_host_layout_HostHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/host/layout/HostHeader */ "./src/components/host/layout/HostHeader.tsx");
+/* harmony import */ var _components_hostfinancials_layout_SeamlessPayments__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/hostfinancials/layout/SeamlessPayments */ "./src/components/hostfinancials/layout/SeamlessPayments.tsx");
+/* harmony import */ var _components_hostfinancials_layout_GreatPrice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/hostfinancials/layout/GreatPrice */ "./src/components/hostfinancials/layout/GreatPrice.tsx");
 /* harmony import */ var _components_host_layout_Questions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/host/layout/Questions */ "./src/components/host/layout/Questions.tsx");
-/* harmony import */ var _components_host_layout_HostReady__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/host/layout/HostReady */ "./src/components/host/layout/HostReady.jsx");
-/* harmony import */ var _components_host_functions_FindOutCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/host/functions/FindOutCard */ "./src/components/host/functions/FindOutCard.jsx");
+/* harmony import */ var _components_host_layout_HostReady__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/host/layout/HostReady */ "./src/components/host/layout/HostReady.tsx");
+/* harmony import */ var _components_host_functions_FindOutCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/host/functions/FindOutCard */ "./src/components/host/functions/FindOutCard.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/financials.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -12047,9 +12054,9 @@ var financials = function financials() {
   }, {
     question: 'How do taxes work for hosts?'
   }];
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_layout_HostHeader__WEBPACK_IMPORTED_MODULE_3__["HostHeader"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_host_layout_HostHeader__WEBPACK_IMPORTED_MODULE_3__["HostHeader"], {
     color: "#008489",
-    section: "safety",
+    section: "financials",
     switchMenuModal: changeMenuModal,
     __source: {
       fileName: _jsxFileName,
@@ -12120,7 +12127,7 @@ var financials = function financials() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!*********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Ffinancials&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Ffinancials.jsx ***!
   \*********************************************************************************************************************************************************************/
@@ -12143,5 +12150,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=financials.js.map

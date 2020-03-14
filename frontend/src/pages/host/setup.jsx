@@ -2,13 +2,13 @@ import * as React from 'react';
 import { useState } from 'react';
 
 // Layout
-import { HostHeader } from '../../components/layout/HostHeader';
+import { HostHeader } from '../../components/host/layout/HostHeader';
 import { How } from '../../components/host/layout/How';
 import { ControlHosting } from '../../components/hostsetup/layout/ControlHosting';
 import { AdvertiseMillions } from '../../components/hostsetup/layout/AdvertiseMillions';
 import { HostingSupport } from '../../components/hostsetup/layout/HostingSupport';
 import { OnePhrase } from '../../components/host/layout/OnePhrase';
-import { HostReady } from '../../components/host/functions/HostReady';
+import { HostReady } from '../../components/host/layout/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 import { Questions } from '../../components/host/layout/Questions';
 

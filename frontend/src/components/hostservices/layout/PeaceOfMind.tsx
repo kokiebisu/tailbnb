@@ -19,7 +19,7 @@ export const PeaceOfMind: React.FC<{}> = () => {
               <CharacteristicCard
                 title='Stay in control'
                 description='Whether you’re a few doors down or a continent away, using a hosting team can help you stay informed and list your space confidently. Your hosting team will usually be on call to provide you with information, updates, and assistance when you need it.'
-                link={false}>
+                link={null}>
                 <div className='w-12 h-12'>
                   <svg
                     className='h-full w-full'

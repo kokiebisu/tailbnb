@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
-import { HostHeader } from '../../components/layout/HostHeader';
+import { HostHeader } from '../../components/host/layout/HostHeader';
 import { WhyHost } from '../../components/hosthomes/layout/WhyHost';
 import { HostingSteps } from '../../components/hosthomes/layout/HostingSteps';
 import { Covered } from '../../components/hosthomes/layout/Covered';

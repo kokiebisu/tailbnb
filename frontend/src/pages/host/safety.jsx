@@ -5,14 +5,14 @@ import { useState } from 'react';
 import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
-import { HostHeader } from '../../components/layout/HostHeader';
+import { HostHeader } from '../../components/host/layout/HostHeader';
 import { How } from '../../components/host/layout/How';
 import { GreatGuests } from '../../components/hostsafety/layout/GreatGuests';
 import { HostConfidence } from '../../components/hostsafety/layout/HostConfidence';
 import { HereAlways } from '../../components/hostsafety/layout/HereAlways';
 import { OnePhrase } from '../../components/host/layout/OnePhrase';
 import { Questions } from '../../components/host/layout/Questions';
-import { HostReady } from '../../components/host/functions/HostReady';
+import { HostReady } from '../../components/host/layout/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
 // Images
