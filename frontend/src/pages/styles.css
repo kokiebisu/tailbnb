@@ -430,6 +430,23 @@ body {
   margin-bottom: -30px !important;
 }
 
+#react-player {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+#host__experience {
+}
+
+#host__experience::after {
+  content: '';
+  bottom: 1px;
+  z-index: -1;
+  transform: scale(0.9);
+  box-shadow: 0 60px 80px -15px rgba(0, 0, 0, 0.8);
+}
+
 /* Host Safety Section */
 
 /* xs */

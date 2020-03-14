@@ -2272,14 +2272,34 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexper
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const ExperienceBanner = () => {
-  return __jsx("div", {
-    className: "w-full h-75v bg-red-500 ",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    id: "host__experience",
+    className: "w-full h-156 bg-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 6
     },
     __self: undefined
-  });
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, "h"))), __jsx("div", {
+    className: "w-full h-160 bg-trasparent",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }));
 };
 
 /***/ }),
@@ -2366,7 +2386,7 @@ const ExperiencesHeader = () => {
   };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "fixed top-0 absolute bg-white w-screen flex flex-wrap items-center justify-between z-50",
+    className: "bg-white flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
@@ -4485,29 +4505,53 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "relative w-screen z-0 fixed top-0",
+    className: "relative top-0 bg-white w-screen z-50",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx(_components_hostexperiences_layout_ExperiencesHeader__WEBPACK_IMPORTED_MODULE_2__["ExperiencesHeader"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  })), __jsx("div", {
+    style: {
+      top: 150
+    },
+    className: "w-screen fixed top-0 left-0 h-screen",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
     width: "100%",
     height: "100%",
     playing: true,
+    loop: true,
     url: "https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 18
     },
     __self: undefined
-  })), __jsx(_components_hostexperiences_layout_ExperiencesHeader__WEBPACK_IMPORTED_MODULE_2__["ExperiencesHeader"], {
+  })), __jsx("div", {
+    className: "relative z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 26
     },
     __self: undefined
-  }));
+  }, __jsx(_components_hostexperiences_layout_ExperiencesBanner__WEBPACK_IMPORTED_MODULE_3__["ExperienceBanner"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  })));
 });
 
 /***/ }),

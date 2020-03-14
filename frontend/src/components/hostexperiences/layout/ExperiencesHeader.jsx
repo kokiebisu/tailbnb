@@ -44,7 +44,7 @@ export const ExperiencesHeader = () => {
   };
   return (
     <>
-      <div className='fixed top-0 absolute bg-white w-screen flex flex-wrap items-center justify-between z-50'>
+      <div className='bg-white flex flex-wrap items-center justify-between'>
         <div className='hidden lg:block h-8 w-8 ml-6 mt-2 flex items-center'>
           <a href='/'>
             <svg
