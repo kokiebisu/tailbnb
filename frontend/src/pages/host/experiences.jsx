@@ -7,6 +7,7 @@ import { ExperienceBanner } from '../../components/hostexperiences/layout/Experi
 import { WhatsAnExperience } from '../../components/hostexperiences/layout/WhatsAnExperience';
 import { ShowWhatYouKnow } from '../../components/hostexperiences/layout/ShowWhatYouKnow';
 import { ExperienceCategory } from '../../components/hostexperiences/layout/ExperienceCategory';
+import { JoinCommunity } from '../../components/hostexperiences/layout/JoinCommunity';
 
 export default () => {
   return (
@@ -29,6 +30,7 @@ export default () => {
         <WhatsAnExperience />
         <ShowWhatYouKnow />
         <ExperienceCategory />
+        <JoinCommunity />
       </div>
     </>
   );
