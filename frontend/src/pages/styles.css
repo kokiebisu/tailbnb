@@ -436,15 +436,31 @@ body {
   left: 0px;
 }
 
-#host__experience {
+#hostexperience {
 }
 
-#host__experience::after {
+#hostexperience__banner::after {
   content: '';
   bottom: 1px;
   z-index: -1;
   transform: scale(0.9);
   box-shadow: 0 60px 80px -15px rgba(0, 0, 0, 0.8);
+}
+
+#hostexperience__banner-title {
+  background: rgba(0, 0, 0, 0) -moz-linear-gradient(
+      left,
+      rgb(0, 132, 137),
+      rgb(166, 29, 85),
+      rgb(255, 180, 0)
+    ) repeat scroll 0% 0% / 400% 400% padding-box text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#hostexperience__what-bottom {
+  background: rgba(0, 0, 0, 0)
+    linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%) repeat scroll 0% 0% !important;
 }
 
 /* Host Safety Section */
