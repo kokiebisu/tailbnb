@@ -12,7 +12,7 @@ import { Covered } from '../../components/hosthomes/layout/Covered';
 import { SimplePayments } from '../../components/hosthomes/layout/SimplePayments';
 import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
-import { HomesQuestions } from '../../components/hosthomes/layout/HomesQuestions';
+import { Questions } from '../../components/host/layout/Questions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
 import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
@@ -22,7 +22,7 @@ import { HostHomesCard } from '../../components/host/functions/HostHomesCard';
 
 // Images
 const background = require('../../../public/img/high/hosthome.jpg');
-const overview = require('../../../public/img/high/ready-earn-overview.jpg');
+const readyOverview = require('../../../public/img/high/ready-earn-overview.jpg');
 
 const homes: React.FC<{}> = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -30,6 +30,15 @@ const homes: React.FC<{}> = () => {
   const changeMenuModal = () => {
     setMenuModal(!menuModal);
   };
+
+  const questions = [
+    { question: 'Who can be an Airbnb host?' },
+    { question: 'What is required of guests before booking?' },
+    { question: 'How much does it cost to list my space?' },
+    { question: 'What protection do I have against property damage?' },
+    { question: "How should I choose my listing's price?" },
+    { question: 'How can Airbnb help me with setting prices?' }
+  ];
 
   return (
     <>
@@ -63,11 +72,9 @@ const homes: React.FC<{}> = () => {
         <SimplePayments />
         <Worldwide />
         <HostAbout />
-        <HomesQuestions />
+        <Questions title='Frequently asked questions' questions={questions} />
         <MoreHosting />
-        <HostReady title='Ready to earn?'>
-          <img className='h-full w-full object-cover' src={overview} />
-        </HostReady>
+        <HostReady img={readyOverview} title='Ready to earn?' />>
         <NewFooter />
       </div>
     </>

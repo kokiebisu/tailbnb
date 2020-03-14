@@ -10,7 +10,7 @@ import { HostServicesBanner } from '../../components/hostservices/layout/HostSer
 import { FindTeam } from '../../components/hostservices/layout/FindTeam';
 import { GetStarted } from '../../components/hostservices/layout/GetStarted';
 import { PeaceOfMind } from '../../components/hostservices/layout/PeaceOfMind';
-import { QuestionsAnswered } from '../../components/host/layout/QuestionsAnswered';
+import { Questions } from '../../components/host/layout/Questions';
 import { ReadyConnect } from '../../components/hostservices/layout/ReadyConnect';
 import { NewFooter } from '../../components/layout/NewFooter';
 
@@ -37,7 +37,7 @@ const services = () => {
       <GetStarted />
       <FindOutCard />
       <PeaceOfMind />
-      <QuestionsAnswered />
+      <Questions />
       <ReadyConnect />
       <NewFooter />
     </>
