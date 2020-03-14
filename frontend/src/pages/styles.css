@@ -260,20 +260,29 @@ body {
 }
 
 /* Host Homes Section */
+#quote__left {
+  position: absolute;
+  top: 0px;
+}
+
+#quote__right {
+  position: absolute;
+  top: 0px;
+}
 
 /* sm */
 @media (min-width: 640px) {
-  #quote__steps {
+  #quote__left {
     position: absolute;
     top: -10px;
   }
 
-  #quote__payment {
+  #quote__right {
     position: absolute;
     top: 20px;
   }
 
-  #quote-description {
+  #quote__description {
     font-family: 'airbnb-book';
   }
 
@@ -295,17 +304,17 @@ body {
     position: static;
   }
 
-  #quote__steps {
+  #quote__left {
     position: absolute;
     top: -10px;
   }
 
-  #quote__payment {
+  #quote__right {
     position: absolute;
-    top: 20px;
+    top: 10px;
   }
 
-  #quote-description {
+  #quote__description {
     font-family: 'airbnb-book';
   }
 
@@ -329,14 +338,14 @@ body {
     right: 50px;
   }
 
-  #quote__steps {
+  #quote__left {
     position: absolute;
     top: -40px;
   }
 
-  #quote__payment {
+  #quote__right {
     position: absolute;
-    top: -40px;
+    top: 70px;
   }
 
   #ready {
@@ -410,53 +419,6 @@ body {
   #quote__findteam {
     top: 70px;
   }
-}
-
-/* xl
-@media (min-width: 1280px) {
-
-} */
-
-/* Hosting Setup Section */
-
-/* xs */
-@media (max-width: 640px) {
-  #quote__right {
-    position: absolute;
-    top: 0px;
-  }
-
-  #quote__right-description {
-    font-family: 'airbnb-book';
-  }
-}
-
-/* sm */
-@media (min-width: 640px) {
-  #quote__right {
-    position: absolute;
-    top: 0px;
-  }
-
-  #quote__right-description {
-    font-family: 'airbnb-book';
-  }
-}
-
-/* md */
-@media (min-width: 768px) {
-  #quote__right {
-    position: absolute;
-    top: 50px;
-  }
-
-  #quote__right-description {
-    font-family: 'airbnb-book';
-  }
-}
-
-/* lg */
-@media (min-width: 1024px) {
 }
 
 .scroller {
