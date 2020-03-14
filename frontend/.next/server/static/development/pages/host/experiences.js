@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2360,6 +2360,112 @@ const ExperienceCategoryCard = ({
 
 /***/ }),
 
+/***/ "./src/components/hostexperiences/functions/JoinCommunityCard.jsx":
+/*!************************************************************************!*\
+  !*** ./src/components/hostexperiences/functions/JoinCommunityCard.jsx ***!
+  \************************************************************************/
+/*! exports provided: JoinCommunityCard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JoinCommunityCard", function() { return JoinCommunityCard; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/functions/JoinCommunityCard.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+const JoinCommunityCard = ({
+  img,
+  title,
+  description,
+  color
+}) => {
+  return __jsx("div", {
+    style: {
+      backgroundColor: color
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "p-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "w-full h-full",
+    src: img,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "mt-10 mb-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-2xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, title)), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, description)), __jsx("div", {
+    className: "pt-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, "View experience"))));
+};
+
+/***/ }),
+
 /***/ "./src/components/hostexperiences/layout/ExperienceAspect.jsx":
 /*!********************************************************************!*\
   !*** ./src/components/hostexperiences/layout/ExperienceAspect.jsx ***!
@@ -2586,7 +2692,7 @@ const foodDrink = 'https://a0.muscache.com/im/pictures/eca85a07-8fad-4648-a4a4-b
 const natureOutdoor = 'https://a0.muscache.com/im/pictures/1ecf2c03-5b86-4af3-a194-c18764eafbb3.jpg?aki_policy=x_large';
 const ExperienceCategory = () => {
   return __jsx("div", {
-    className: "relative w-screen bg-gray-100 py-8",
+    className: "relative w-screen bg-gray-200 py-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -3119,6 +3225,114 @@ const ExperiencesHeader = () => {
     },
     __self: undefined
   })) : null);
+};
+
+/***/ }),
+
+/***/ "./src/components/hostexperiences/layout/JoinCommunity.jsx":
+/*!*****************************************************************!*\
+  !*** ./src/components/hostexperiences/layout/JoinCommunity.jsx ***!
+  \*****************************************************************/
+/*! exports provided: JoinCommunity */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JoinCommunity", function() { return JoinCommunity; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions_JoinCommunityCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/JoinCommunityCard */ "./src/components/hostexperiences/functions/JoinCommunityCard.jsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/layout/JoinCommunity.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // Functions
+
+ // Images
+
+const joincommunity1 = 'https://a0.muscache.com/im/pictures/b7f0cbdb-2251-4513-b3cc-b93546606c7c.jpg?aki_policy=x_large';
+const joincommunity2 = 'https://a0.muscache.com/im/pictures/ff8d1952-e25c-4df8-889f-a846f7b34897.jpg?aki_policy=x_large';
+const JoinCommunity = () => {
+  return __jsx("div", {
+    className: "relative w-screen bg-gray-100 py-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "lg:max-w-5xl mx-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "grid grid-cols-2 items-center my-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-1/2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, "Join a growing community of curious people")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, "Hosts are chefs, artists, DJs, and other experts in their fields. They make people from around the world feel connected, and give access to unique places and activities that can\u2019t be found anywhere else."))), __jsx("div", {
+    className: "grid grid-cols-2 gap-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx(_functions_JoinCommunityCard__WEBPACK_IMPORTED_MODULE_1__["JoinCommunityCard"], {
+    img: joincommunity1,
+    title: "DJ Jig\xFCe",
+    description: "DJ Jig\xFCe is dedicated to sharing his passion for Afro-Cuban music. Some of the guests he\u2019s exposed to Cuba\u2019s complex musical history even went to see him play a show in Austin, Texas.",
+    color: "#dbb9c4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }), __jsx(_functions_JoinCommunityCard__WEBPACK_IMPORTED_MODULE_1__["JoinCommunityCard"], {
+    img: joincommunity2,
+    title: "Cici",
+    description: "Shanghai resident and culinary host Cici believes cooking can bring happiness. She welcomes guests into her kitchen to learn how to make classic Chinese dumplings in a fun way.",
+    color: "#d3e5e7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  }))));
 };
 
 /***/ }),
@@ -5138,10 +5352,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hostexperiences_layout_WhatsAnExperience__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/hostexperiences/layout/WhatsAnExperience */ "./src/components/hostexperiences/layout/WhatsAnExperience.jsx");
 /* harmony import */ var _components_hostexperiences_layout_ShowWhatYouKnow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/hostexperiences/layout/ShowWhatYouKnow */ "./src/components/hostexperiences/layout/ShowWhatYouKnow.jsx");
 /* harmony import */ var _components_hostexperiences_layout_ExperienceCategory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/hostexperiences/layout/ExperienceCategory */ "./src/components/hostexperiences/layout/ExperienceCategory.jsx");
+/* harmony import */ var _components_hostexperiences_layout_JoinCommunity__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/hostexperiences/layout/JoinCommunity */ "./src/components/hostexperiences/layout/JoinCommunity.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/experiences.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
  // Layout
+
 
 
 
@@ -5153,13 +5369,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     className: "relative top-0 bg-white w-screen z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx(_components_hostexperiences_layout_ExperiencesHeader__WEBPACK_IMPORTED_MODULE_2__["ExperiencesHeader"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: undefined
   })), __jsx("div", {
@@ -5169,7 +5385,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     className: "w-screen fixed top-0 left-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: undefined
   }, __jsx(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -5180,38 +5396,44 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     url: "https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: undefined
   })), __jsx("div", {
     className: "relative z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx(_components_hostexperiences_layout_ExperiencesBanner__WEBPACK_IMPORTED_MODULE_3__["ExperienceBanner"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: undefined
   }), __jsx(_components_hostexperiences_layout_WhatsAnExperience__WEBPACK_IMPORTED_MODULE_4__["WhatsAnExperience"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: undefined
   }), __jsx(_components_hostexperiences_layout_ShowWhatYouKnow__WEBPACK_IMPORTED_MODULE_5__["ShowWhatYouKnow"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: undefined
   }), __jsx(_components_hostexperiences_layout_ExperienceCategory__WEBPACK_IMPORTED_MODULE_6__["ExperienceCategory"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
+    },
+    __self: undefined
+  }), __jsx(_components_hostexperiences_layout_JoinCommunity__WEBPACK_IMPORTED_MODULE_7__["JoinCommunity"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     },
     __self: undefined
   })));
@@ -5219,7 +5441,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!**********************************************!*\
   !*** multi ./src/pages/host/experiences.jsx ***!
   \**********************************************/

@@ -11,7 +11,7 @@ const natureOutdoor =
 
 export const ExperienceCategory = () => {
   return (
-    <div className='relative w-screen bg-gray-100 py-8'>
+    <div className='relative w-screen bg-gray-200 py-8'>
       <div className='lg:max-w-5xl mx-auto'>
         <div className='grid grid-cols-3 gap-8'>
           <ExperienceCategoryCard
