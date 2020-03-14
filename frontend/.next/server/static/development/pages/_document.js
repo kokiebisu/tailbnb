@@ -180,6 +180,8 @@ exports.ROUTE_NAME_REGEX = /^static[/\\][^/\\]+[/\\]pages[/\\](.*)\.js$/;
 exports.SERVERLESS_ROUTE_NAME_REGEX = /^pages[/\\](.*)\.js$/;
 exports.TEMPORARY_REDIRECT_STATUS = 307;
 exports.PERMANENT_REDIRECT_STATUS = 308;
+exports.STATIC_PROPS_ID = '__N_SSG';
+exports.SERVER_PROPS_ID = '__N_SSP';
 
 /***/ }),
 
@@ -367,7 +369,7 @@ function loadGetInitialProps(App, ctx) {
           return _context.stop();
       }
     }
-  });
+  }, null, null, null, Promise);
 }
 
 exports.loadGetInitialProps = loadGetInitialProps;
@@ -554,7 +556,7 @@ function middleware(_ref) {
           return _context.stop();
       }
     }
-  });
+  }, null, null, null, Promise);
 }
 
 function dedupe(bundles) {
@@ -593,10 +595,6 @@ function getOptionalModernScriptVariant(path) {
   if (false) {}
 
   return path;
-}
-
-function isLowPriority(file) {
-  return file.includes('_buildManifest');
 }
 /**
 * `Document` component handles the initial `document` markup and renders only on the server side.
@@ -735,7 +733,7 @@ function (_react$Component) {
               return _context2.stop();
           }
         }
-      });
+      }, null, null, null, Promise);
     }
   }, {
     key: "renderDocument",
@@ -838,6 +836,7 @@ function (_react$Component3) {
       var _this$context$_docume2 = this.context._documentProps,
           assetPrefix = _this$context$_docume2.assetPrefix,
           files = _this$context$_docume2.files;
+      var _devOnlyInvalidateCacheQueryString = this.context._devOnlyInvalidateCacheQueryString;
       var cssFiles = files && files.length ? files.filter(function (f) {
         return /\.css$/.test(f);
       }) : [];
@@ -847,14 +846,14 @@ function (_react$Component3) {
           key: "".concat(file, "-preload"),
           nonce: _this3.props.nonce,
           rel: "preload",
-          href: "".concat(assetPrefix, "/_next/").concat(encodeURI(file)),
+          href: "".concat(assetPrefix, "/_next/").concat(encodeURI(file)).concat(_devOnlyInvalidateCacheQueryString),
           as: "style",
           crossOrigin: _this3.props.crossOrigin || undefined
         }), _react["default"].createElement("link", {
           key: file,
           nonce: _this3.props.nonce,
           rel: "stylesheet",
-          href: "".concat(assetPrefix, "/_next/").concat(encodeURI(file)),
+          href: "".concat(assetPrefix, "/_next/").concat(encodeURI(file)).concat(_devOnlyInvalidateCacheQueryString),
           crossOrigin: _this3.props.crossOrigin || undefined
         }));
       });
@@ -901,10 +900,7 @@ function (_react$Component3) {
         // `dynamicImports` will contain both `.js` and `.module.js` when
         // the feature is enabled. This clause will filter down to the
         // modern variants only.
-        //
-        // Also filter out low priority files because they should not be
-        // preloaded for performance reasons.
-        return file.endsWith(getOptionalModernScriptVariant('.js')) && !isLowPriority(file);
+        return file.endsWith(getOptionalModernScriptVariant('.js'));
       }) : [];
       return preloadFiles.length === 0 ? null : preloadFiles.map(function (file) {
         return _react["default"].createElement("link", {
@@ -1191,18 +1187,14 @@ function (_react$Component5) {
 
       var _this$context$_docume8 = this.context._documentProps,
           assetPrefix = _this$context$_docume8.assetPrefix,
-          files = _this$context$_docume8.files;
-
-      if (!files || files.length === 0) {
-        return null;
-      }
-
+          files = _this$context$_docume8.files,
+          lowPriorityFiles = _this$context$_docume8.lowPriorityFiles;
       var _devOnlyInvalidateCacheQueryString = this.context._devOnlyInvalidateCacheQueryString;
-      var normalScripts = files.filter(function (file) {
-        return file.endsWith('.js') && !isLowPriority(file);
+      var normalScripts = files === null || files === void 0 ? void 0 : files.filter(function (file) {
+        return file.endsWith('.js');
       });
-      var lowPriorityScripts = files.filter(function (file) {
-        return file.endsWith('.js') && isLowPriority(file);
+      var lowPriorityScripts = lowPriorityFiles === null || lowPriorityFiles === void 0 ? void 0 : lowPriorityFiles.filter(function (file) {
+        return file.endsWith('.js');
       });
       return [].concat(_toConsumableArray(normalScripts), _toConsumableArray(lowPriorityScripts)).map(function (file) {
         var modernProps = {};

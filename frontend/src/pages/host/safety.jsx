@@ -10,12 +10,13 @@ import { How } from '../../components/host/layout/How';
 import { GreatGuests } from '../../components/hostsafety/layout/GreatGuests';
 import { HostConfidence } from '../../components/hostsafety/layout/HostConfidence';
 import { HereAlways } from '../../components/hostsafety/layout/HereAlways';
-import { TravellerTrips } from '../../components/hostsafety/layout/TravellerTrips';
-import { QuestionsAnswered } from '../../components/host/layout/QuestionsAnswered';
+import { OnePhrase } from '../../components/host/layout/OnePhrase';
+import { Questions } from '../../components/host/layout/Questions';
 import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
 const howSafety = require('../../../public/img/high/how-safety.jpg');
+const readySafety = require('../../../public/img/high/ready-earn-safety.jpg');
 
 const safety = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -24,6 +25,17 @@ const safety = () => {
     setMenuModal(!menuModal);
   };
 
+  const questions = [
+    { question: 'What is required of guests before booking?' },
+    { question: 'How do reviews work?' },
+    { question: 'What do I do if a guest breaks something in my place' },
+    { question: "What should I do if I'm uncomfortable hosting someone" },
+    {
+      question:
+        "What's the difference between Airbnb's Host Guarantee and Host Protection Insurance"
+    }
+  ];
+
   return (
     <>
       <HostHeader
@@ -31,7 +43,7 @@ const safety = () => {
         section='safety'
         switchMenuModal={changeMenuModal}
       />
-      {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
+      {/* {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null} */}
       <How
         page='safety'
         title='How Airbnb protects hosts'
@@ -41,9 +53,12 @@ const safety = () => {
       <GreatGuests />
       <HostConfidence />
       <HereAlways />
-      <TravellerTrips />
-      <QuestionsAnswered />
-      <HostReady page='safety' />
+      <OnePhrase
+        title='Travellers took 49 million trips with Airbnb in 2017. Only 1 in 25,000 resulted in a significant property damage claim.'
+        link={null}
+      />
+      <Questions title='Your questions answered' questions={questions} />
+      <HostReady img={readySafety} title='Ready to start hosting?' />
       <NewFooter />
     </>
   );
