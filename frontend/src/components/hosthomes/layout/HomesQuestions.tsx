@@ -38,21 +38,5 @@ export const HomesQuestions: React.FC<{}> = () => {
         </div>
       </div>
     </HostSection>
-    // <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto py-8'>
-    //   <div className='flex md:justify-center'>
-    //     <div
-    //       style={{ width: 70, height: 2 }}
-    //       className='bg-gray-650 rounded-lg'></div>
-    //   </div>
-
-    //   <div className='flex md:justify-center md:mb-12 mt-2'>
-    //     <h3
-    //       style={{ fontFamily: 'airbnb-bold' }}
-    //       className='text-gray-750 text-4xl lg:text-6xl tracking-tight'>
-    //       Frequently asked questions
-    //     </h3>
-    //   </div>
-
-    // </div>
   );
 };
