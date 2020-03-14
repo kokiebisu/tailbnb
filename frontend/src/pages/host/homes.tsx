@@ -12,7 +12,7 @@ import { Covered } from '../../components/hosthomes/layout/Covered';
 import { SimplePayments } from '../../components/hosthomes/layout/SimplePayments';
 import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
-import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
+import { HomesQuestions } from '../../components/hosthomes/layout/HomesQuestions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
 import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
@@ -62,7 +62,7 @@ const homes: React.FC<{}> = () => {
         <SimplePayments />
         <Worldwide />
         <HostAbout />
-        <HostQuestions />
+        <HomesQuestions />
         <MoreHosting />
         <HostReady page='overview' />
         <NewFooter />
