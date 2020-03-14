@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
-import { HostHeader } from '../../components/layout/HostHeader';
+import { HostHeader } from '../../components/host/layout/HostHeader';
 import { HostServicesBanner } from '../../components/hostservices/layout/HostServicesBanner';
 import { FindTeam } from '../../components/hostservices/layout/FindTeam';
 import { GetStarted } from '../../components/hostservices/layout/GetStarted';
@@ -46,7 +46,9 @@ const services = () => {
         switchMenuModal={changeMenuModal}
       />
       {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
-      <HostServicesBanner />
+      <div className='mt-16 md:mt-32 lg:mt-0'>
+        <HostServicesBanner />
+      </div>
       <FindTeam />
       <GetStarted />
       <div className='my-16'>

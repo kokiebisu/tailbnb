@@ -24,7 +24,19 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/host/homes": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/host/safety": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/host/services": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/host/setup": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

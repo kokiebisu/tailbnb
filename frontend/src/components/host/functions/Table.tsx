@@ -32,12 +32,10 @@ const renderBoolean = (truefalse: boolean) => {
 
 interface Props {
   head: { column1: string; column2: string; column3: string; column4: string };
-  body: {
-    column1: string;
-    column2: boolean;
-    column3: boolean;
-    column4: boolean;
-  }[];
+  body: (
+    | { column1: string; column2: string; column3: string; column4: string }
+    | { column1: string; column2: boolean; column3: boolean; column4: boolean }
+  )[];
 }
 
 export const Table: React.FC<Props> = ({ head, body }) => {

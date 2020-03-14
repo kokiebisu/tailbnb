@@ -6,7 +6,7 @@ import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
 import { How } from '../../components/host/layout/How';
-import { HostHeader } from '../../components/layout/HostHeader';
+import { HostHeader } from '../../components/host/layout/HostHeader';
 import { SeamlessPayments } from '../../components/hostfinancials/layout/SeamlessPayments';
 import { GreatPrice } from '../../components/hostfinancials/layout/GreatPrice';
 import { Questions } from '../../components/host/layout/Questions';
@@ -37,7 +37,7 @@ const financials = () => {
     <>
       <HostHeader
         color='#008489'
-        section='safety'
+        section='financials'
         switchMenuModal={changeMenuModal}
       />
       {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
