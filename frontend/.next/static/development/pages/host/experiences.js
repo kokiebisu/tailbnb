@@ -25391,6 +25391,109 @@ var HelpCard = function HelpCard(_ref) {
 
 /***/ }),
 
+/***/ "./src/components/hostexperiences/functions/ExperienceCategoryCard.jsx":
+/*!*****************************************************************************!*\
+  !*** ./src/components/hostexperiences/functions/ExperienceCategoryCard.jsx ***!
+  \*****************************************************************************/
+/*! exports provided: ExperienceCategoryCard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceCategoryCard", function() { return ExperienceCategoryCard; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/functions/ExperienceCategoryCard.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+var ExperienceCategoryCard = function ExperienceCategoryCard(_ref) {
+  var img = _ref.img,
+      title = _ref.title,
+      description = _ref.description,
+      color = _ref.color;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    className: "bg-white shadow-xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "w-full h-full",
+    src: img,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  })), __jsx("div", {
+    className: "px-6 pt-8 pb-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, title)), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, description)), __jsx("div", {
+    className: "my-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold',
+      color: color
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Explore")))));
+};
+
+/***/ }),
+
 /***/ "./src/components/hostexperiences/layout/ExperienceAspect.jsx":
 /*!********************************************************************!*\
   !*** ./src/components/hostexperiences/layout/ExperienceAspect.jsx ***!
@@ -25589,6 +25692,84 @@ var ExperienceAspect = function ExperienceAspect(_ref) {
     },
     __self: this
   }, renderByPosition(img, position, title, description)));
+};
+
+/***/ }),
+
+/***/ "./src/components/hostexperiences/layout/ExperienceCategory.jsx":
+/*!**********************************************************************!*\
+  !*** ./src/components/hostexperiences/layout/ExperienceCategory.jsx ***!
+  \**********************************************************************/
+/*! exports provided: ExperienceCategory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceCategory", function() { return ExperienceCategory; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions_ExperienceCategoryCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/ExperienceCategoryCard */ "./src/components/hostexperiences/functions/ExperienceCategoryCard.jsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/layout/ExperienceCategory.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+ // Images
+
+var cultureHistory = 'https://a0.muscache.com/im/pictures/36ad251f-02c2-486a-965f-1d473e25e509.jpg?aki_policy=x_large';
+var foodDrink = 'https://a0.muscache.com/im/pictures/eca85a07-8fad-4648-a4a4-b4c9283fdd65.jpg?aki_policy=x_large';
+var natureOutdoor = 'https://a0.muscache.com/im/pictures/1ecf2c03-5b86-4af3-a194-c18764eafbb3.jpg?aki_policy=x_large';
+var ExperienceCategory = function ExperienceCategory() {
+  return __jsx("div", {
+    className: "relative w-screen bg-gray-100 py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "lg:max-w-5xl mx-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "grid grid-cols-3 gap-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx(_functions_ExperienceCategoryCard__WEBPACK_IMPORTED_MODULE_1__["ExperienceCategoryCard"], {
+    img: cultureHistory,
+    title: "Culture & History",
+    description: "Share the story behind famous landmarks in your city.",
+    color: "#ea3546",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }), __jsx(_functions_ExperienceCategoryCard__WEBPACK_IMPORTED_MODULE_1__["ExperienceCategoryCard"], {
+    img: foodDrink,
+    title: "Food & Drink",
+    description: "Host a food tour, cooking class, dining experience, and more.",
+    color: "#662e9b",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }), __jsx(_functions_ExperienceCategoryCard__WEBPACK_IMPORTED_MODULE_1__["ExperienceCategoryCard"], {
+    img: natureOutdoor,
+    title: "Nature & Outdoor",
+    description: "Lead nature hikes, water sports, mountain activities, and more.",
+    color: "#43bccd",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }))));
 };
 
 /***/ }),
@@ -26104,7 +26285,7 @@ var ShowWhatYouKnow = function ShowWhatYouKnow() {
     },
     __self: this
   }, __jsx("div", {
-    className: "lg:max-w-5.5xl py-28 mx-auto",
+    className: "lg:max-w-5xl py-28 mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -28110,10 +28291,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hostexperiences_layout_ExperiencesBanner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/hostexperiences/layout/ExperiencesBanner */ "./src/components/hostexperiences/layout/ExperiencesBanner.jsx");
 /* harmony import */ var _components_hostexperiences_layout_WhatsAnExperience__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/hostexperiences/layout/WhatsAnExperience */ "./src/components/hostexperiences/layout/WhatsAnExperience.jsx");
 /* harmony import */ var _components_hostexperiences_layout_ShowWhatYouKnow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/hostexperiences/layout/ShowWhatYouKnow */ "./src/components/hostexperiences/layout/ShowWhatYouKnow.jsx");
+/* harmony import */ var _components_hostexperiences_layout_ExperienceCategory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/hostexperiences/layout/ExperienceCategory */ "./src/components/hostexperiences/layout/ExperienceCategory.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/experiences.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
  // Layout
+
 
 
 
@@ -28124,13 +28307,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     className: "relative top-0 bg-white w-screen z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
   }, __jsx(_components_hostexperiences_layout_ExperiencesHeader__WEBPACK_IMPORTED_MODULE_2__["ExperiencesHeader"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   })), __jsx("div", {
@@ -28140,7 +28323,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     className: "w-screen fixed top-0 left-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, __jsx(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -28151,32 +28334,38 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     url: "https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
   })), __jsx("div", {
     className: "relative z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }, __jsx(_components_hostexperiences_layout_ExperiencesBanner__WEBPACK_IMPORTED_MODULE_3__["ExperienceBanner"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_WhatsAnExperience__WEBPACK_IMPORTED_MODULE_4__["WhatsAnExperience"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_ShowWhatYouKnow__WEBPACK_IMPORTED_MODULE_5__["ShowWhatYouKnow"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
+    },
+    __self: this
+  }), __jsx(_components_hostexperiences_layout_ExperienceCategory__WEBPACK_IMPORTED_MODULE_6__["ExperienceCategory"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
     },
     __self: this
   })));

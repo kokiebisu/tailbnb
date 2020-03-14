@@ -4,7 +4,7 @@ export const ShowWhatYouKnow = () => {
   return (
     <>
       <div className='relative w-screen bg-white '>
-        <div className='lg:max-w-5.5xl py-28 mx-auto'>
+        <div className='lg:max-w-5xl py-28 mx-auto'>
           <div className='flex'>
             <div className='w-1/2'>
               <h3
