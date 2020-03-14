@@ -5,11 +5,7 @@ export const CharacteristicCard = ({ children, title, description, link }) => {
     <>
       <div className='mb-4 lg:mb-0'>
         <div className='w-95p'>
-          {children && (
-            <div className='my-8'>
-              <div className='h-12 w-12'>{children}</div>
-            </div>
-          )}
+          {children && <div className='mb-4 mt-12'>{children}</div>}
           <div className='my-4'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}

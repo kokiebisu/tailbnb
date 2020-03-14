@@ -1,30 +1,23 @@
 import * as React from 'react';
 
+// Wrappers
+import { HostSection } from '../../host/wrapper/HostSection';
+
+// Layouts
+import { QuoteRight } from '../../host/layout/QuoteRight';
+
 // Functions
-import { FindTeamCard } from '../functions/FindTeamCard';
+import { CheckCard } from '../../host/functions/CheckCard';
 
 // Images
-const quote = require('../../../../public/img/high/findteam-quote.jpg');
+const findteamQuote = require('../../../../public/img/high/findteam-quote.jpg');
 
 export const FindTeam: React.FC<{}> = () => {
   return (
     <>
-      <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto pt-4 pb-4 md:pb-16 lg:pb-0 md:pt-8'>
-        <div className='my-8'>
-          <div className='mb-4 md:mb-10 flex md:justify-center'>
-            <div
-              style={{ width: 70, height: 2 }}
-              className='bg-gray-650 rounded-lg'></div>
-          </div>
-
-          <div className='flex md:justify-center mb-12 mt-2'>
-            <h3
-              style={{ fontFamily: 'airbnb-bold' }}
-              className='text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9'>
-              Find a local hosting team
-            </h3>
-          </div>
-          <div className='lg:flex lg:mt-16'>
+      <HostSection title='Find a local hosting team'>
+        <div className=''>
+          <div className='lg:flex items-center'>
             <div
               className='md:w-full lg:w-1/2 flex items-center'
               style={{ fontFamily: 'airbnb-book' }}>
@@ -55,15 +48,40 @@ export const FindTeam: React.FC<{}> = () => {
               </div>
             </div>
             <div className='md:w-full lg:w-1/2'>
-              <FindTeamCard description='Guest check-in and checkout' />
-              <FindTeamCard description='Housekeeping and maintenance between stays' />
-              <FindTeamCard description='Laundering and replacing linens' />
-              <FindTeamCard description='24/7 guest support' />
-              <FindTeamCard description='Listing creation with competitive pricing' />
-              <FindTeamCard description='Booking request management' />
-              <FindTeamCard description='Professional photography' />
+              <CheckCard description='Guest check-in and checkout' />
+              <CheckCard description='Housekeeping and maintenance between stays' />
+              <CheckCard description='Laundering and replacing linens' />
+              <CheckCard description='24/7 guest support' />
+              <CheckCard description='Listing creation with competitive pricing' />
+              <CheckCard description='Booking request management' />
+              <CheckCard description='Professional photography' />
             </div>
           </div>
+        </div>
+        <div>
+          <QuoteRight
+            title='We probably wouldn’t host on Airbnb if we didn’t have a hosting team. '
+            description='Bernie and Deborah host in Toronto to earn extra income'
+            img={findteamQuote}
+          />
+        </div>
+      </HostSection>
+      {/* <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto pt-4 pb-4 md:pb-16 lg:pb-0 md:pt-8'>
+        <div className='my-8'>
+          <div className='mb-4 md:mb-10 flex md:justify-center'>
+            <div
+              style={{ width: 70, height: 2 }}
+              className='bg-gray-650 rounded-lg'></div>
+          </div>
+
+          <div className='flex md:justify-center mb-12 mt-2'>
+            <h3
+              style={{ fontFamily: 'airbnb-bold' }}
+              className='text-gray-750 text-4xl lg:text-6xl tracking-tight leading-9'>
+              Find a local hosting team
+            </h3>
+          </div>
+       
         </div>
       </div>
       <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto lg:pt-32 pb-8 md:pb-16 flex flex-col md:flex-row'>
@@ -115,7 +133,7 @@ export const FindTeam: React.FC<{}> = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

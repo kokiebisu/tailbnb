@@ -1,13 +1,10 @@
 import * as React from 'react';
 
-// Images
-const quote = require('../../../../public/img/high/host-payments-quote.jpg');
-
-export const QuoteRight = ({ title, description }) => {
+export const QuoteRight = ({ title, description, img }) => {
   return (
     <div className='flex flex-col md:flex-row'>
       <div className='w-full md:w-1/2'>
-        <img className='h-full w-full' src={quote} />
+        <img className='h-full w-full' src={img} />
       </div>
       <div className='w-full md:w-1/2 relative flex items-center md:justify-end'>
         <div className='md:w-85p'>
