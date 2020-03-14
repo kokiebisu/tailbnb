@@ -15,6 +15,8 @@ import { QuestionsAnswered } from '../../components/host/layout/QuestionsAnswere
 import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
+const howSafety = require('../../../public/img/high/how-safety.jpg');
+
 const safety = () => {
   const [menuModal, setMenuModal] = useState(false);
 
@@ -34,6 +36,7 @@ const safety = () => {
         page='safety'
         title='How Airbnb protects hosts'
         description="We've taken extensive measures to help keep you, your home, and your guests safe."
+        img={howSafety}
       />
       <GreatGuests />
       <HostConfidence />

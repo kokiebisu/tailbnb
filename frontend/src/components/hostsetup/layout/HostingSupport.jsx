@@ -1,25 +1,15 @@
 import * as React from 'react';
 
+// Wrappers
+import { HostSection } from '../../host/wrapper/HostSection';
+
 // Images
 const support1 = require('../../../../public/img/high/hosting-support1.jpg');
 const support2 = require('../../../../public/img/high/hosting-support2.jpg');
 
 export const HostingSupport = () => {
   return (
-    <div className='w-full px-6 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto my-16'>
-      <div className='mb-4 md:mb-0 flex md:justify-center'>
-        <div
-          style={{ width: 70, height: 2 }}
-          className='bg-gray-650 rounded-lg'></div>
-      </div>
-
-      <div className='flex md:justify-center mb-12 mt-2'>
-        <h3
-          style={{ fontFamily: 'airbnb-bold' }}
-          className='text-gray-750 text-4xl lg:text-6xl tracking-tight'>
-          Get hosting support
-        </h3>
-      </div>
+    <HostSection title='Get hosting support'>
       <div className='flex flex-col md:flex-row pb-8'>
         <div className='md:w-2/5'>
           <div>
@@ -67,6 +57,6 @@ export const HostingSupport = () => {
           </div>
         </div>
       </div>
-    </div>
+    </HostSection>
   );
 };
