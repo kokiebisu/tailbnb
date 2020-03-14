@@ -9,6 +9,9 @@ import { QuoteRight } from '../../host/layout/QuoteRight';
 // Functions
 import { CharacteristicCard } from '../../host/functions/CharacteristicCard';
 
+// Images
+const simplepaymentsQuote = require('../../../../public/img/high/host-payments-quote.jpg');
+
 export const SimplePayments: React.FC<{}> = () => {
   return (
     <>
@@ -37,6 +40,7 @@ export const SimplePayments: React.FC<{}> = () => {
           <QuoteRight
             title='Hosting has helped me pay for new kitchen and other upgrades.'
             description='Jack hosts in London to earn extra money'
+            img={simplepaymentsQuote}
           />
         </div>
       </HostSection>

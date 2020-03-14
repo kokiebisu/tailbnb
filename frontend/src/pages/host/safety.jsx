@@ -15,6 +15,7 @@ import { Questions } from '../../components/host/layout/Questions';
 import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
+// Images
 const howSafety = require('../../../public/img/high/how-safety.jpg');
 const readySafety = require('../../../public/img/high/ready-earn-safety.jpg');
 
@@ -43,7 +44,7 @@ const safety = () => {
         section='safety'
         switchMenuModal={changeMenuModal}
       />
-      {/* {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null} */}
+      {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
       <How
         page='safety'
         title='How Airbnb protects hosts'

@@ -11,11 +11,14 @@ import { FindTeam } from '../../components/hostservices/layout/FindTeam';
 import { GetStarted } from '../../components/hostservices/layout/GetStarted';
 import { PeaceOfMind } from '../../components/hostservices/layout/PeaceOfMind';
 import { Questions } from '../../components/host/layout/Questions';
-import { ReadyConnect } from '../../components/hostservices/layout/ReadyConnect';
 import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
 import { FindOutCard } from '../../components/host/functions/FindOutCard';
+import { HostReady } from '../../components/host/functions/HostReady';
+
+// Images
+const readyServices = require('../../../public/img/high/ready-earn-services.jpg');
 
 const services = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -23,6 +26,17 @@ const services = () => {
   const changeMenuModal = () => {
     setMenuModal(!menuModal);
   };
+
+  const questions = [
+    { question: 'Who will my hosting team be?' },
+    { question: 'Am I covered if something goes wrong?' },
+    { question: 'Am I eligible for hosting services?' },
+    { question: 'What do I do with my personal belongings?' },
+    {
+      question:
+        'I run a hosting team. Can I offer hosting services through Airbnb?'
+    }
+  ];
 
   return (
     <>
@@ -35,10 +49,15 @@ const services = () => {
       <HostServicesBanner />
       <FindTeam />
       <GetStarted />
-      <FindOutCard />
+      <div className='my-16'>
+        <FindOutCard />
+      </div>
       <PeaceOfMind />
-      <Questions />
-      <ReadyConnect />
+      <Questions title='Your questions answered' questions={questions} />
+      <HostReady
+        title='Ready to connect with a hosting team?'
+        img={readyServices}
+      />
       <NewFooter />
     </>
   );
