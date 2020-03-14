@@ -4,7 +4,7 @@ interface Props {
   description: string;
 }
 
-export const CoveredCard: React.FC<Props> = ({ description }) => {
+export const CheckCard: React.FC<Props> = ({ description }) => {
   return (
     <div className='md:w-90p mb-6 lg:mb-5'>
       <div

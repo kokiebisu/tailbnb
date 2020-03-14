@@ -7,7 +7,7 @@ export const QuoteLeft = () => {
     <>
       <div className='flex flex-col-reverse md:flex-row'>
         <div className='w-full md:w-1/2 relative'>
-          <div id='quote__steps'>
+          <div id='quote__left'>
             <p
               style={{
                 fontFamily: 'circular-std-medium'
@@ -19,7 +19,7 @@ export const QuoteLeft = () => {
           <div className='mt-12'>
             <div className='md:w-85p'>
               <p
-                id='quote-description'
+                id='quote__description'
                 style={{
                   fontFamily:
                     'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important'

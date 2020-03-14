@@ -12,16 +12,17 @@ import { Covered } from '../../components/hosthomes/layout/Covered';
 import { SimplePayments } from '../../components/hosthomes/layout/SimplePayments';
 import { Worldwide } from '../../components/hosthomes/layout/Worldwide';
 import { HostAbout } from '../../components/hosthomes/layout/HostAbout';
-import { HostQuestions } from '../../components/hosthomes/layout/HostQuestions';
+import { HomesQuestions } from '../../components/hosthomes/layout/HomesQuestions';
 import { MoreHosting } from '../../components/hosthomes/layout/MoreHosting';
 import { HostReady } from '../../components/host/functions/HostReady';
 import { NewFooter } from '../../components/layout/NewFooter';
 
 // Functions
-import { HostHomesCard } from '../../components/hosthomes/functions/HostHomesCard';
+import { HostHomesCard } from '../../components/host/functions/HostHomesCard';
 
 // Images
 const background = require('../../../public/img/high/hosthome.jpg');
+const overview = require('../../../public/img/high/ready-earn-overview.jpg');
 
 const homes: React.FC<{}> = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -62,9 +63,11 @@ const homes: React.FC<{}> = () => {
         <SimplePayments />
         <Worldwide />
         <HostAbout />
-        <HostQuestions />
+        <HomesQuestions />
         <MoreHosting />
-        <HostReady page='overview' />
+        <HostReady title='Ready to earn?'>
+          <img className='h-full w-full object-cover' src={overview} />
+        </HostReady>
         <NewFooter />
       </div>
     </>

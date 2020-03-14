@@ -3,7 +3,7 @@ import { CharacteristicCard } from '../../host/functions/CharacteristicCard';
 
 export const WhyHost: React.FC<{}> = () => {
   return (
-    <div className='w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto lg:flex'>
+    <div className='w-full px-6 md:max-w-xl lg:max-w-5xl mx-auto lg:flex my-16'>
       <CharacteristicCard
         children={null}
         title='Why host on Airbnb?'
