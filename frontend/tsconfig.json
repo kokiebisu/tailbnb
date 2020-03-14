@@ -37,6 +37,7 @@
     "src/components/containers/Today.jsx",
     "src/components/modals/HelpModal.jsx",
     "src/components/hosthomes/layout/HostHomesHeader.jsx",
-    "src/pages/host/services.jsx"
+    "src/pages/host/services.jsx",
+    "src/components/host/functions/HostReady.jsx"
   ]
 }

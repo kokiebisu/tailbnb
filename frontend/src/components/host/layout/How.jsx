@@ -1,18 +1,5 @@
 import * as React from 'react';
 
-// Images
-const howSetup = require('../../../../public/img/high/how-setup.jpg');
-const howSafety = require('../../../../public/img/high/how-safety.jpg');
-
-const renderImg = (img) => {
-  switch (img) {
-    case 'setup':
-      return <img className='w-full h-full object-cover' src={howSetup} />;
-    case 'safety':
-      return <img className='w-full h-full object-cover' src={howSafety} />;
-  }
-};
-
 export const How = ({ page, title, description, img }) => {
   return (
     <div>
@@ -58,7 +45,7 @@ export const How = ({ page, title, description, img }) => {
           className='w-full max-w-2xl lg:max-w-5xl mx-auto relative'>
           <div className='flex justify-center'>
             <div className='mx-6 md:mx-0 w-full md:h-80 lg:h-112'>
-              {renderImg(page)}
+              <img className='w-full h-full object-cover' src={img} />
             </div>
           </div>
         </div>

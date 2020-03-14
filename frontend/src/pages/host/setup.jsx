@@ -15,6 +15,9 @@ import { NewFooter } from '../../components/layout/NewFooter';
 // Modals
 import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
+// Images
+const howSetup = require('../../../public/img/high/how-setup.jpg');
+
 const setup = () => {
   const [menuModal, setMenuModal] = useState(false);
 
@@ -34,6 +37,7 @@ const setup = () => {
         page='setup'
         title='How to start hosting'
         description='Listing a home on Airbnb has never been easier or more customizable. You’re just a few steps away from earning money and reaching millions of global travellers.'
+        img={howSetup}
       />
       <ControlHosting />
       <AdvertiseMillions />
