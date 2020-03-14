@@ -2268,18 +2268,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExperienceBanner", function() { return ExperienceBanner; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/layout/ExperiencesBanner.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const ExperienceBanner = () => {
-  return __jsx("div", {
-    className: "w-full h-75v bg-red-500 ",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: undefined
-  });
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null);
 };
 
 /***/ }),
@@ -2366,7 +2358,7 @@ const ExperiencesHeader = () => {
   };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "fixed top-0 absolute bg-white w-screen flex flex-wrap items-center justify-between z-50",
+    className: "bg-white flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
@@ -4485,29 +4477,152 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "relative w-screen z-0 fixed top-0",
+    className: "relative top-0 bg-white w-screen z-50",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx(_components_hostexperiences_layout_ExperiencesHeader__WEBPACK_IMPORTED_MODULE_2__["ExperiencesHeader"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  })), __jsx("div", {
+    style: {
+      top: 150
+    },
+    className: "w-screen fixed top-0 left-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
     width: "100%",
     height: "100%",
     playing: true,
+    loop: true,
     url: "https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 16
     },
     __self: undefined
-  })), __jsx(_components_hostexperiences_layout_ExperiencesHeader__WEBPACK_IMPORTED_MODULE_2__["ExperiencesHeader"], {
+  })), __jsx("div", {
+    className: "relative z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 24
     },
     __self: undefined
-  }));
+  }, __jsx("div", {
+    id: "hostexperience__banner",
+    className: "w-full h-156 bg-white flex items-center justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "lg:max-w-5.5xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "my-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-sm text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, "Host an experience on Airbnb")), __jsx("div", {
+    className: "my-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    id: "hostexperience__banner-title",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-7xl tracking-tighter leading-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, "Earn money leading people on activities you love.")))), __jsx("div", {
+    id: "hostexperience__what-bottom",
+    className: "relative w-screen h-screen bg-transparent",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-full absolute bottom-0 flex items-center justify-center h-48",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "my-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-white text-5xl tracking-tight",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, "What's an experience?")), __jsx("div", {
+    className: "w-80p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-white text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: undefined
+  }, "It\u2019s an activity that goes beyond the typical tour or class, designed and led by locals all over the world. Show off your city, craft, cause, or culture by hosting an experience.")))))));
 });
 
 /***/ }),
