@@ -51,6 +51,7 @@ module.exports = {
       },
       backgroundColor: {
         background: '#fffcfc',
+        'gray-150': '#f2f2f2',
         'gray-250': '#F7F7F7',
         'gray-350': '#F2F2F2',
         'gray-650': '#767676',
@@ -178,7 +179,11 @@ module.exports = {
         '90%': '90vw'
       },
       borderRadius: {
-        xl: '0.8rem'
+        xl: '0.625rem',
+        '2xl': '0.75rem',
+        '3xl': '0.825rem',
+        '4xl': '1rem',
+        '5xl': '1.125rem'
       },
       boxShadow: {
         focus: '0 0 0 3px rgba(66,153,225,0.5)',

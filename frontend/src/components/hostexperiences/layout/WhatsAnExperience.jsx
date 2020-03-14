@@ -38,7 +38,7 @@ export const WhatsAnExperience = () => {
           </div>
         </div>
       </div>
-      <div classsName='relative w-screen'>
+      <div className='relative w-screen'>
         <div className='bg-black pt-48 pb-16'>
           <div className='mb-16'>
             <ExperienceAspect

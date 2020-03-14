@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1995,6 +1995,17 @@ module.exports = "/_next/static/images/google-8b201685859c6b291fb39019e19896fd.p
 
 /***/ }),
 
+/***/ "./public/img/high/guidance.jpg":
+/*!**************************************!*\
+  !*** ./public/img/high/guidance.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/guidance-14efb6cd9cc2a7e4fde79f5de1348294.jpg";
+
+/***/ }),
+
 /***/ "./src/components/functions/HelpAdditional.tsx":
 /*!*****************************************************!*\
   !*** ./src/components/functions/HelpAdditional.tsx ***!
@@ -2360,6 +2371,81 @@ const ExperienceCategoryCard = ({
 
 /***/ }),
 
+/***/ "./src/components/hostexperiences/functions/GuidanceCard.jsx":
+/*!*******************************************************************!*\
+  !*** ./src/components/hostexperiences/functions/GuidanceCard.jsx ***!
+  \*******************************************************************/
+/*! exports provided: GuidanceCard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GuidanceCard", function() { return GuidanceCard; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/functions/GuidanceCard.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+const GuidanceCard = ({
+  img,
+  title,
+  color
+}) => {
+  return __jsx("div", {
+    className: "relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "w-full h-full rounded-3xl",
+    src: img,
+    alt: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  })), __jsx("div", {
+    style: {
+      backgroundColor: color
+    },
+    className: "w-full h-full absolute top-0 opacity-50 rounded-3xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "absolute bottom-0 p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, title)));
+};
+
+/***/ }),
+
 /***/ "./src/components/hostexperiences/functions/JoinCommunityCard.jsx":
 /*!************************************************************************!*\
   !*** ./src/components/hostexperiences/functions/JoinCommunityCard.jsx ***!
@@ -2462,6 +2548,180 @@ const JoinCommunityCard = ({
     },
     __self: undefined
   }, "View experience"))));
+};
+
+/***/ }),
+
+/***/ "./src/components/hostexperiences/functions/Tag.jsx":
+/*!**********************************************************!*\
+  !*** ./src/components/hostexperiences/functions/Tag.jsx ***!
+  \**********************************************************/
+/*! exports provided: Tag */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tag", function() { return Tag; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/functions/Tag.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+const Tag = () => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    className: "flex bg-white rounded-lg ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "p-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "w-full h-full",
+    src: "https://a0.muscache.com/airbnb/static/packages/insurance@2x.e06aa9c7.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }))), __jsx("div", {
+    style: {
+      width: 5,
+      backgroundColor: '#c9cba3'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }), __jsx("div", {
+    style: {
+      backgroundColor: '#9b6429'
+    },
+    className: "rounded-lg rounded-l-none flex items-center justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-70p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "py-2 px-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-white text-center leading-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, "Up to $1 million USD insurance coverage for most activities"))))));
+};
+
+/***/ }),
+
+/***/ "./src/components/hostexperiences/functions/ToolCard.jsx":
+/*!***************************************************************!*\
+  !*** ./src/components/hostexperiences/functions/ToolCard.jsx ***!
+  \***************************************************************/
+/*! exports provided: ToolCard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToolCard", function() { return ToolCard; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/functions/ToolCard.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+const ToolCard = ({
+  gif,
+  title,
+  color
+}) => {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      borderColor: color
+    },
+    className: "py-8 rounded-5xl bg-white flex justify-center items-center border-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-14 w-14",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "w-full h-full",
+    src: gif,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }))), __jsx("div", {
+    className: "flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "my-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold',
+      color: color
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, title))));
 };
 
 /***/ }),
@@ -3229,6 +3489,362 @@ const ExperiencesHeader = () => {
 
 /***/ }),
 
+/***/ "./src/components/hostexperiences/layout/GotYourBack.jsx":
+/*!***************************************************************!*\
+  !*** ./src/components/hostexperiences/layout/GotYourBack.jsx ***!
+  \***************************************************************/
+/*! exports provided: GotYourBack */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GotYourBack", function() { return GotYourBack; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/ToolCard */ "./src/components/hostexperiences/functions/ToolCard.jsx");
+/* harmony import */ var _functions_Tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/Tag */ "./src/components/hostexperiences/functions/Tag.jsx");
+/* harmony import */ var _functions_GuidanceCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../functions/GuidanceCard */ "./src/components/hostexperiences/functions/GuidanceCard.jsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/hostexperiences/layout/GotYourBack.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+ // Functions
+
+
+
+
+const taskGif = 'https://a0.muscache.com/airbnb/static/packages/icon-uc-alarm.e0a2b02f.gif';
+const schedulingGif = 'https://a0.muscache.com/airbnb/static/packages/icon-uc-calendar.ace59291.gif';
+const paymentsGif = 'https://a0.muscache.com/airbnb/static/packages/icon-uc-money-saved.0d988c4e.gif';
+const insightGif = 'https://a0.muscache.com/airbnb/static/packages/icon-uc-graph.3f8bd411.gif'; // Guidance Card
+
+const guidance1 = __webpack_require__(/*! ../../../../public/img/high/guidance.jpg */ "./public/img/high/guidance.jpg");
+
+const GotYourBack = () => {
+  return __jsx("div", {
+    className: "relative w-screen pt-32 pb-16 bg-white",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "lg:max-w-5xl mx-auto mb-32",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "grid grid-cols-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-70p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-3xl text-gray-750 leading-9",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, "We've got your back, every step of the way")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }, "Resources like articles and insights dedicated to your hosting needs, 24/7 customer support for you and your guests, exposure for your experience, and much more.")))), __jsx("div", {
+    className: "lg:max-w-5xl mx-auto mb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "py-16 bg-gray-150 rounded px-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "grid grid-cols-2 gap-5 flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "grid grid-cols-4 gap-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: undefined
+  }, __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
+    gif: taskGif,
+    title: "Tasks",
+    color: "#f03e41",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }), __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
+    gif: schedulingGif,
+    title: "Scheduling",
+    color: "#3c6a93",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: undefined
+  }), __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
+    gif: paymentsGif,
+    title: "Payments",
+    color: "#f18805",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }), __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
+    gif: insightGif,
+    title: "Insights",
+    color: "#6ecb68",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "flex justify-end",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-95p ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: undefined
+  }, "Tools tailored to you")), __jsx("div", {
+    className: "mt-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: undefined
+  }, "A dashboard to give you insights, feedback on how to improve, visibility to guests from all over the world through search and filters, seamless payments, and much more."))))))), __jsx("div", {
+    className: "lg:max-w-5xl mx-auto mb-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "grid grid-cols-2 gap-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "bg-gray-150 pt-16 pb-8 px-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: undefined
+  }, __jsx(_functions_Tag__WEBPACK_IMPORTED_MODULE_2__["Tag"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "mt-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750 text-2xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: undefined
+  }, "Keep peace of mind")), __jsx("div", {
+    className: "mt-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: undefined
+  }, "For most experiences, you\u2019ll be insured up to $1 million USD. Plus, you'll have access to 24/7 customer support so you can focus on pursuing your passion.", __jsx("span", {
+    className: "text-green-850",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: undefined
+  }, "\xA0Learn more")))), __jsx("div", {
+    className: "bg-gray-150 pt-8 pb-8 px-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "grid grid-cols-3 gap-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: undefined
+  }, __jsx(_functions_GuidanceCard__WEBPACK_IMPORTED_MODULE_3__["GuidanceCard"], {
+    img: guidance1,
+    title: "News",
+    color: "#cc5500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: undefined
+  }), __jsx(_functions_GuidanceCard__WEBPACK_IMPORTED_MODULE_3__["GuidanceCard"], {
+    img: guidance1,
+    title: "Perks",
+    color: "#ea9a1b",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: undefined
+  }), __jsx(_functions_GuidanceCard__WEBPACK_IMPORTED_MODULE_3__["GuidanceCard"], {
+    img: guidance1,
+    title: "Events",
+    color: "#5a7d7c",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: undefined
+  })), __jsx("div", {
+    className: "bg-gray-150 mt-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-2xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112
+    },
+    __self: undefined
+  }, "Guidance to help you grow")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119
+    },
+    __self: undefined
+  }, "Weekly newsletters, articles, and resources are dedicated to help you succeed on every step of your hosting journey.")))))));
+};
+
+/***/ }),
+
 /***/ "./src/components/hostexperiences/layout/JoinCommunity.jsx":
 /*!*****************************************************************!*\
   !*** ./src/components/hostexperiences/layout/JoinCommunity.jsx ***!
@@ -3499,7 +4115,7 @@ const WhatsAnExperience = () => {
     },
     __self: undefined
   }, "It\u2019s an activity that goes beyond the typical tour or class, designed and led by locals all over the world. Show off your city, craft, cause, or culture by hosting an experience."))))), __jsx("div", {
-    classsName: "relative w-screen",
+    className: "relative w-screen",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
@@ -5353,10 +5969,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hostexperiences_layout_ShowWhatYouKnow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/hostexperiences/layout/ShowWhatYouKnow */ "./src/components/hostexperiences/layout/ShowWhatYouKnow.jsx");
 /* harmony import */ var _components_hostexperiences_layout_ExperienceCategory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/hostexperiences/layout/ExperienceCategory */ "./src/components/hostexperiences/layout/ExperienceCategory.jsx");
 /* harmony import */ var _components_hostexperiences_layout_JoinCommunity__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/hostexperiences/layout/JoinCommunity */ "./src/components/hostexperiences/layout/JoinCommunity.jsx");
+/* harmony import */ var _components_hostexperiences_layout_GotYourBack__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/hostexperiences/layout/GotYourBack */ "./src/components/hostexperiences/layout/GotYourBack.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/host/experiences.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
  // Layout
+
 
 
 
@@ -5369,13 +5987,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     className: "relative top-0 bg-white w-screen z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: undefined
   }, __jsx(_components_hostexperiences_layout_ExperiencesHeader__WEBPACK_IMPORTED_MODULE_2__["ExperiencesHeader"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: undefined
   })), __jsx("div", {
@@ -5385,7 +6003,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     className: "w-screen fixed top-0 left-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: undefined
   }, __jsx(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -5396,44 +6014,50 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     url: "https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: undefined
   })), __jsx("div", {
     className: "relative z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx(_components_hostexperiences_layout_ExperiencesBanner__WEBPACK_IMPORTED_MODULE_3__["ExperienceBanner"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: undefined
   }), __jsx(_components_hostexperiences_layout_WhatsAnExperience__WEBPACK_IMPORTED_MODULE_4__["WhatsAnExperience"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: undefined
   }), __jsx(_components_hostexperiences_layout_ShowWhatYouKnow__WEBPACK_IMPORTED_MODULE_5__["ShowWhatYouKnow"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: undefined
   }), __jsx(_components_hostexperiences_layout_ExperienceCategory__WEBPACK_IMPORTED_MODULE_6__["ExperienceCategory"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: undefined
   }), __jsx(_components_hostexperiences_layout_JoinCommunity__WEBPACK_IMPORTED_MODULE_7__["JoinCommunity"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
+    },
+    __self: undefined
+  }), __jsx(_components_hostexperiences_layout_GotYourBack__WEBPACK_IMPORTED_MODULE_8__["GotYourBack"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
     },
     __self: undefined
   })));
@@ -5441,7 +6065,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!**********************************************!*\
   !*** multi ./src/pages/host/experiences.jsx ***!
   \**********************************************/
