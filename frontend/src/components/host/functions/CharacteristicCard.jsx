@@ -3,10 +3,10 @@ import * as React from 'react';
 export const CharacteristicCard = ({ children, title, description, link }) => {
   return (
     <>
-      <div className='mb-8 lg:mb-0 my-16'>
+      <div className='mb-8 lg:mb-0'>
         <div className='w-90p'>
           {children && (
-            <div>
+            <div className='my-16'>
               <div className='h-12 w-12'>{children}</div>
             </div>
           )}
@@ -18,7 +18,9 @@ export const CharacteristicCard = ({ children, title, description, link }) => {
             </h3>
           </div>
           <div>
-            <p style={{ fontFamily: 'airbnb-book' }} className='text-gray-750'>
+            <p
+              style={{ fontFamily: 'airbnb-book' }}
+              className='leading-8 text-gray-750'>
               {description}
             </p>
           </div>
