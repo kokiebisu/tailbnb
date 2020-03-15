@@ -2289,7 +2289,7 @@ const ExperienceCategoryCard = ({
   color
 }) => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-    className: "bg-white shadow-xl",
+    className: "bg-white shadow-xl mb-4 lg:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -3135,21 +3135,21 @@ const foodDrink = 'https://a0.muscache.com/im/pictures/eca85a07-8fad-4648-a4a4-b
 const natureOutdoor = 'https://a0.muscache.com/im/pictures/1ecf2c03-5b86-4af3-a194-c18764eafbb3.jpg?aki_policy=x_large';
 const ExperienceCategory = () => {
   return __jsx("div", {
-    className: "relative w-screen bg-gray-200 py-8",
+    className: "relative w-screen bg-gray-200 py-10",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: undefined
   }, __jsx("div", {
-    className: "lg:max-w-5xl mx-auto",
+    className: "px-12 md:px-0 md:max-w-2xl lg:max-w-5xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: undefined
   }, __jsx("div", {
-    className: "grid grid-cols-3 gap-8",
+    className: "lg:grid grid-cols-3 gap-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
@@ -4447,21 +4447,21 @@ const ShowWhatYouKnow = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "lg:max-w-5xl py-28 mx-auto",
+    className: "px-6 md:px-0 md:max-w-3xl lg:max-w-5xl py-10 md:py-28 mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex",
+    className: "md:flex",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: undefined
   }, __jsx("div", {
-    className: "w-1/2",
+    className: "md:w-1/2 mb-4 md:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -4478,7 +4478,7 @@ const ShowWhatYouKnow = () => {
     },
     __self: undefined
   }, "Show what you know")), __jsx("div", {
-    className: "w-1/2",
+    className: "md:w-1/2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
