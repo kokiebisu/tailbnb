@@ -1,5 +1,8 @@
 import * as React from 'react';
-import ReactPlayer from 'react-player';
+import { useState } from 'react';
+
+// Modals
+import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
 import { ExperiencesHeader } from '../../components/hostexperiences/layout/ExperiencesHeader';
@@ -14,12 +17,18 @@ import { ExperiencesQuestions } from '../../components/hostexperiences/layout/Ex
 import { NewFooter } from '../../components/layout/NewFooter';
 
 export default () => {
+  const [menuModal, setMenuModal] = useState(false);
+
+  const changeMenuModal = () => {
+    setMenuModal(!menuModal);
+  };
+
   return (
     <>
       <div className='relative top-0 bg-white w-screen z-50'>
-        <ExperiencesHeader />
+        <ExperiencesHeader switchMenuModal={changeMenuModal} />
       </div>
-
+      {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
       <div
         id='experiences__video'
         className='h-screen lg:w-screen fixed top-0 left-0'>

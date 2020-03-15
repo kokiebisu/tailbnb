@@ -5,12 +5,12 @@ import { QuestionCard } from '../functions/QuestionCard';
 
 export const ExperiencesQuestions = () => {
   return (
-    <div className='relative w-screen pt-32 pb-16 bg-white'>
-      <div className='max-w-5xl mx-auto'>
-        <div className='mb-12'>
+    <div className='relative w-screen pt-16 md:pt-32 pb-16 bg-white'>
+      <div className='px-6 md:max-w-1.5xl lg:max-w-5xl mx-auto'>
+        <div className='md:mb-6 lg:mb-12'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
-            className='text-gray-750 text-3xl'>
+            className='text-gray-750 text-2xl md:text-3xl'>
             Frequently asked questions
           </h3>
         </div>

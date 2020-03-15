@@ -6,9 +6,9 @@ import { HowToStartCard } from '../functions/HowToStartCard';
 export const HowToGetStarted = () => {
   return (
     <div className='relative w-screen lg:pt-32 pb-16 bg-white'>
-      <div className='md:max-w-1.5xl lg:max-w-5xl mx-auto'>
+      <div className='px-6 md:max-w-1.5xl lg:max-w-5xl mx-auto'>
         <div className='mb-16'>
-          <div className='grid grid-cols-2 flex items-center'>
+          <div className='grid md:grid-cols-2 flex items-center'>
             <div className=''>
               <h3
                 style={{ fontFamily: 'airbnb-bold' }}
@@ -48,7 +48,7 @@ export const HowToGetStarted = () => {
           <div className='flex items-center justify-center'>
             <button
               style={{ fontFamily: 'airbnb-medium' }}
-              className='bg-green-850 text-white px-6 py-3 rounded'>
+              className='bg-green-850 text-white w-full md:px-6 py-3 rounded'>
               Let's go
             </button>
           </div>
