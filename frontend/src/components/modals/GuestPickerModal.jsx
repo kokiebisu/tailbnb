@@ -16,29 +16,47 @@ const renderCategory = (category, info, number, decrement, increment) => {
         )}
       </div>
       <div className='flex items-center'>
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            increment();
-          }}>
-          <div className='w-7 h-7'>
-            <svg
-              className='w-full h-full'
-              viewBox='0 0 512 512'
-              style={{ fill: '#008489' }}
-              xmlns='http://www.w3.org/2000/svg'>
-              <path d='m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0' />
-              <path d='m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0' />
-            </svg>
-          </div>
-        </button>
-        <div className='px-3'>
-          <p
-            style={{ fontFamily: 'airbnb-medium' }}
-            className='text-lg text-gray-750'>
-            {number}+
+        {number === 0 ? (
+          <p>
+            <div className='w-7 h-7'>
+              <svg
+                className='w-full h-full'
+                viewBox='0 0 512 512'
+                style={{ fill: '#c1e1e2' }}
+                xmlns='http://www.w3.org/2000/svg'>
+                <path d='m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0' />
+                <path d='m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0' />
+              </svg>
+            </div>
           </p>
+        ) : (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              increment();
+            }}>
+            <div className='w-7 h-7'>
+              <svg
+                className='w-full h-full'
+                viewBox='0 0 512 512'
+                style={{ fill: '#008489' }}
+                xmlns='http://www.w3.org/2000/svg'>
+                <path d='m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0' />
+                <path d='m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0' />
+              </svg>
+            </div>
+          </button>
+        )}
+        <div className='w-10 flex justify-center'>
+          <div className=''>
+            <p
+              style={{ fontFamily: 'airbnb-medium' }}
+              className='text-lg text-gray-750'>
+              {number}+
+            </p>
+          </div>
         </div>
+
         <button
           onClick={(e) => {
             e.preventDefault();
@@ -86,7 +104,9 @@ export const GuestPickerModal = ({
   decrementInfant,
   adult,
   children,
-  infant
+  infant,
+  resetNumber,
+  switchModal
 }) => {
   return (
     <div className='absolute z-50 bg-white w-full px-6 shadow-xl'>
@@ -114,6 +134,7 @@ export const GuestPickerModal = ({
         {adult + children > 0 ? (
           <div className='absolute'>
             <button
+              onClick={() => resetNumber()}
               style={{ fontFamily: 'airbnb-medium' }}
               className='text-gray-750 text-sm'>
               Clear
@@ -122,6 +143,7 @@ export const GuestPickerModal = ({
         ) : null}
         <div className='flex justify-end'>
           <button
+            onClick={switchModal}
             style={{ fontFamily: 'airbnb-medium' }}
             className='text-green-850 text-sm'>
             Save
