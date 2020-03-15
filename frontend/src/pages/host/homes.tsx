@@ -24,7 +24,10 @@ import { HostHomesCard } from '../../components/host/functions/HostHomesCard';
 const background = require('../../../public/img/high/hosthome.jpg');
 const readyOverview = require('../../../public/img/high/ready-earn-overview.jpg');
 
-const homes: React.FC<{}> = () => {
+// Next
+import { NextPage } from 'next';
+
+const homes: NextPage<{}> = () => {
   const [menuModal, setMenuModal] = useState(false);
 
   const changeMenuModal = () => {

@@ -4,7 +4,7 @@ interface Props {
   page: string;
   title: string;
   description: string;
-  img: string;
+  img: string | null;
 }
 
 export const How: React.FC<Props> = ({ page, title, description, img }) => {
