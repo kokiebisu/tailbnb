@@ -25599,7 +25599,7 @@ var HowToStartCard = function HowToStartCard(_ref) {
       title = _ref.title,
       description = _ref.description;
   return __jsx("div", {
-    className: "bg-gray-150 px-6 pt-8 pb-16",
+    className: "bg-gray-150 px-6 pt-8 pb-8 lg:pb-16 mb-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -27340,14 +27340,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var HowToGetStarted = function HowToGetStarted() {
   return __jsx("div", {
-    className: "relative w-screen pt-32 pb-16 bg-white",
+    className: "relative w-screen lg:pt-32 pb-16 bg-white",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }, __jsx("div", {
-    className: "max-w-5xl mx-auto",
+    className: "md:max-w-1.5xl lg:max-w-5xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -27401,7 +27401,7 @@ var HowToGetStarted = function HowToGetStarted() {
     },
     __self: this
   }, "Here\u2019s a quick overview of the process, from start to finish.")))), __jsx("div", {
-    className: "grid grid-cols-3 gap-6",
+    className: "lg:grid grid-cols-3 gap-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -27435,7 +27435,7 @@ var HowToGetStarted = function HowToGetStarted() {
     },
     __self: this
   })), __jsx("div", {
-    className: "my-32",
+    className: "my-16 lg:my-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
@@ -30630,7 +30630,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fexperiences&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fexperiences.jsx ***!
   \***********************************************************************************************************************************************************************/
@@ -30653,5 +30653,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=experiences.js.map

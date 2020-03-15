@@ -5,8 +5,8 @@ import { HowToStartCard } from '../functions/HowToStartCard';
 
 export const HowToGetStarted = () => {
   return (
-    <div className='relative w-screen pt-32 pb-16 bg-white'>
-      <div className='max-w-5xl mx-auto'>
+    <div className='relative w-screen lg:pt-32 pb-16 bg-white'>
+      <div className='md:max-w-1.5xl lg:max-w-5xl mx-auto'>
         <div className='mb-16'>
           <div className='grid grid-cols-2 flex items-center'>
             <div className=''>
@@ -26,7 +26,7 @@ export const HowToGetStarted = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-3 gap-6'>
+        <div className='lg:grid grid-cols-3 gap-6'>
           <HowToStartCard
             number={1}
             title='Learn the quality standards'
@@ -44,7 +44,7 @@ export const HowToGetStarted = () => {
           />
         </div>
 
-        <div className='my-32'>
+        <div className='my-16 lg:my-32'>
           <div className='flex items-center justify-center'>
             <button
               style={{ fontFamily: 'airbnb-medium' }}

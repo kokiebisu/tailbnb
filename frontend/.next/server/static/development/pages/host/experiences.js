@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2467,7 +2467,7 @@ const HowToStartCard = ({
   description
 }) => {
   return __jsx("div", {
-    className: "bg-gray-150 px-6 pt-8 pb-16",
+    className: "bg-gray-150 px-6 pt-8 pb-8 lg:pb-16 mb-1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -4207,14 +4207,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const HowToGetStarted = () => {
   return __jsx("div", {
-    className: "relative w-screen pt-32 pb-16 bg-white",
+    className: "relative w-screen lg:pt-32 pb-16 bg-white",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: undefined
   }, __jsx("div", {
-    className: "max-w-5xl mx-auto",
+    className: "md:max-w-1.5xl lg:max-w-5xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -4268,7 +4268,7 @@ const HowToGetStarted = () => {
     },
     __self: undefined
   }, "Here\u2019s a quick overview of the process, from start to finish.")))), __jsx("div", {
-    className: "grid grid-cols-3 gap-6",
+    className: "lg:grid grid-cols-3 gap-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -4302,7 +4302,7 @@ const HowToGetStarted = () => {
     },
     __self: undefined
   })), __jsx("div", {
-    className: "my-32",
+    className: "my-16 lg:my-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
@@ -7481,7 +7481,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************************!*\
   !*** multi ./src/pages/host/experiences.jsx ***!
   \**********************************************/
