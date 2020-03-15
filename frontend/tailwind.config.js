@@ -51,6 +51,7 @@ module.exports = {
       },
       backgroundColor: {
         background: '#fffcfc',
+        'gray-50': '#fefefe',
         'gray-150': '#f2f2f2',
         'gray-250': '#F7F7F7',
         'gray-350': '#F2F2F2',
