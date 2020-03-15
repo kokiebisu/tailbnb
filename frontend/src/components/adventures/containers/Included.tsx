@@ -2,6 +2,7 @@ import * as React from 'react';
 
 // Function
 import { IncludedCard } from '../functions/IncludedCard';
+import { DetailSectionOverflow } from '../../wrapper/DetailSectionOverflow';
 
 export const Included: React.FC<{}> = () => {
   return (
@@ -14,10 +15,7 @@ export const Included: React.FC<{}> = () => {
             What's included
           </p>
         </div>
-        <div
-          style={{ fontFamily: 'airbnb-book' }}
-          className='w-full md:w-8/12 md:px-4 text-gray-750 flex overflow-x-hidden overflow-y-hidden md:overflow-x-visible md:overflow-y-vidi
-          '>
+        <DetailSectionOverflow title={null}>
           <div className='overflow-y-hidden'>
             <div className='w-full h-full overflow-y-hidden'>
               <div className='h-full scroller'>
@@ -32,7 +30,7 @@ export const Included: React.FC<{}> = () => {
               </div>
             </div>
           </div>
-        </div>
+        </DetailSectionOverflow>
       </div>
     </div>
   );

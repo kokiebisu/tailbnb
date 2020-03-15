@@ -464,12 +464,7 @@ body {
 }
 
 #hostexperience__banner-title {
-  background: rgba(0, 0, 0, 0) -moz-linear-gradient(
-      left,
-      rgb(0, 132, 137),
-      rgb(166, 29, 85),
-      rgb(255, 180, 0)
-    ) repeat scroll 0% 0% / 400% 400% padding-box text;
+  background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
