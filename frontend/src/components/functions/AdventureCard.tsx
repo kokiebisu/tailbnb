@@ -20,7 +20,7 @@ export const AdventureCard: React.FC<Prop> = ({
 }) => {
   return (
     <Link href='/adventures/[id]' as={`/adventures/${id}`}>
-      <div className='w-30/31 cursor-pointer'>
+      <div className='cursor-pointer'>
         <div>
           <img className='w-full h-full rounded-lg' src={img} />
         </div>

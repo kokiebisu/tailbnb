@@ -53,7 +53,7 @@ const renderContent = (data, number) => {
 
   for (let i = 0; i < number; i++) {
     content.push(
-      <div className='w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 pb-5'>
+      <div className='pb-5'>
         <StayCard
           key={i}
           id={data?.stays[i].id}
@@ -78,7 +78,7 @@ const Stay = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
   return (
     <>
       <Section title='Places to stay around the world'>
-        <div className='flex items-start justify-start flex-wrap w-full'>
+        <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full'>
           {loading ? (
             <div className='flex justify-center items-center w-full py-20'>
               <PulseLoader size={10} color={'#008489'} />

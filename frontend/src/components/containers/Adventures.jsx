@@ -38,7 +38,7 @@ const renderContent = (data, number) => {
 
   for (let i = 0; i < number; i++) {
     content.push(
-      <div className='w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5'>
+      <div className='pb-5'>
         <AdventureCard
           key={i}
           id={data?.adventures[i].id}
@@ -84,7 +84,7 @@ const Adventures = ({
         title='Introducing Airbnb Adventures'
         phrase='Multi-day trips led by local experts—activities, meals, and stays
         included'>
-        <div className='flex items-start justify-start flex-wrap w-full'>
+        <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
           {loading ? (
             <div className='flex justify-center items-center w-full py-20'>
               <PulseLoader size={10} color={'#008489'} />

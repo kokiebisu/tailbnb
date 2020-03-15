@@ -195,9 +195,9 @@ export const MenuModal = ({ switchMenuModal }) => {
               </Link>
             </div>
             <div className='py-3'>
-              <div>
-                <p>Host an experience</p>
-              </div>
+              <Link href='/host/experiences'>
+                <a>Host an experience</a>
+              </Link>
               <div>
                 <p className='text-sm'>Earn money doing what you love</p>
               </div>
