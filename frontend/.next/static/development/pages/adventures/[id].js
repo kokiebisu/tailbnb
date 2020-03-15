@@ -20400,7 +20400,7 @@ var id = function id() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!*****************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fadventures%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fadventures%2F%5Bid%5D.tsx ***!
   \*****************************************************************************************************************************************************************************/
@@ -20423,5 +20423,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
