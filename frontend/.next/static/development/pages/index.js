@@ -43644,6 +43644,14 @@ var HeaderCard = function HeaderCard() {
     adult: adultNumber,
     children: childrenNumber,
     infant: infantNumber,
+    resetNumber: function resetNumber() {
+      setAdultNumber(0);
+      setChildrenNumber(0);
+      setInfantNumber(0);
+    },
+    switchModal: function switchModal() {
+      return setGuestModal(false);
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 121
@@ -43653,14 +43661,14 @@ var HeaderCard = function HeaderCard() {
     className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 141
     },
     __self: this
   }, __jsx("button", {
     className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-550 rounded text-white font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 142
     },
     __self: this
   }, "Search"))));
@@ -47038,21 +47046,60 @@ var renderCategory = function renderCategory(category, info, number, decrement, 
       lineNumber: 18
     },
     __self: this
-  }, __jsx("button", {
-    onClick: function onClick(e) {
-      e.preventDefault();
-      increment();
-    },
+  }, number === 0 ? __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, __jsx("div", {
     className: "w-7 h-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 21
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "w-full h-full",
+    viewBox: "0 0 512 512",
+    style: {
+      fill: '#c1e1e2'
+    },
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), __jsx("path", {
+    d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  })))) : __jsx("button", {
+    onClick: function onClick(e) {
+      e.preventDefault();
+      increment();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-7 h-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: this
   }, __jsx("svg", {
@@ -47064,28 +47111,35 @@ var renderCategory = function renderCategory(category, info, number, decrement, 
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 39
     },
     __self: this
   }, __jsx("path", {
     d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 44
     },
     __self: this
   }), __jsx("path", {
     d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 45
     },
     __self: this
   })))), __jsx("div", {
-    className: "px-3",
+    className: "w-10 flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 50
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
     },
     __self: this
   }, __jsx("p", {
@@ -47095,24 +47149,24 @@ var renderCategory = function renderCategory(category, info, number, decrement, 
     className: "text-lg text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 52
     },
     __self: this
-  }, number, "+")), __jsx("button", {
+  }, number, "+"))), __jsx("button", {
     onClick: function onClick(e) {
       e.preventDefault();
       decrement();
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 60
     },
     __self: this
   }, __jsx("div", {
     className: "h-7 w-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 65
     },
     __self: this
   }, __jsx("svg", {
@@ -47124,28 +47178,28 @@ var renderCategory = function renderCategory(category, info, number, decrement, 
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 66
     },
     __self: this
   }, __jsx("path", {
     d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 71
     },
     __self: this
   }), __jsx("path", {
     d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 72
     },
     __self: this
   }), __jsx("path", {
     d: "m256 384c-8.832031 0-16-7.167969-16-16v-224c0-8.832031 7.167969-16 16-16s16 7.167969 16 16v224c0 8.832031-7.167969 16-16 16zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 73
     },
     __self: this
   }))))));
@@ -47161,14 +47215,14 @@ var GuestPickerSection = function GuestPickerSection(_ref) {
     className: "py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 90
     },
     __self: this
   }, __jsx("div", {
     className: "flex justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 91
     },
     __self: this
   }, renderCategory(category, info, number, increment, decrement)));
@@ -47183,19 +47237,21 @@ var GuestPickerModal = function GuestPickerModal(_ref2) {
       decrementInfant = _ref2.decrementInfant,
       adult = _ref2.adult,
       children = _ref2.children,
-      infant = _ref2.infant;
+      infant = _ref2.infant,
+      resetNumber = _ref2.resetNumber,
+      switchModal = _ref2.switchModal;
   return __jsx("div", {
     className: "absolute z-50 bg-white w-full px-6 shadow-xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 112
     },
     __self: this
   }, __jsx("div", {
     className: "relative py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 113
     },
     __self: this
   }, __jsx(GuestPickerSection, {
@@ -47205,7 +47261,7 @@ var GuestPickerModal = function GuestPickerModal(_ref2) {
     increment: incrementAdult,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 114
     },
     __self: this
   }), __jsx(GuestPickerSection, {
@@ -47216,7 +47272,7 @@ var GuestPickerModal = function GuestPickerModal(_ref2) {
     increment: incrementChildren,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 120
     },
     __self: this
   }), __jsx(GuestPickerSection, {
@@ -47227,41 +47283,45 @@ var GuestPickerModal = function GuestPickerModal(_ref2) {
     increment: incrementInfant,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 127
     },
     __self: this
   }), adult + children > 0 ? __jsx("div", {
     className: "absolute",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 135
     },
     __self: this
   }, __jsx("button", {
+    onClick: function onClick() {
+      return resetNumber();
+    },
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 136
     },
     __self: this
   }, "Clear")) : null, __jsx("div", {
     className: "flex justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 144
     },
     __self: this
   }, __jsx("button", {
+    onClick: switchModal,
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-green-850 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 145
     },
     __self: this
   }, "Save"))));

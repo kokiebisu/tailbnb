@@ -128,6 +128,12 @@ export const HeaderCard = () => {
                 adult={adultNumber}
                 children={childrenNumber}
                 infant={infantNumber}
+                resetNumber={() => {
+                  setAdultNumber(0);
+                  setChildrenNumber(0);
+                  setInfantNumber(0);
+                }}
+                switchModal={() => setGuestModal(false)}
               />
             ) : null}
           </div>
