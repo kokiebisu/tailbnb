@@ -5,21 +5,21 @@ const renderByPosition = (img, position, title, description) => {
     case 'left':
       return (
         <>
-          <div className='w-2/5'>
+          <div className='md:w-2/5'>
             <img src={img} className='w-full h-full' />
           </div>
-          <div className='w-3/5'>
-            <div className='flex flex-col justify-center items-center h-full'>
-              <div className='w-70p'>
-                <div>
+          <div className='md:w-3/5 '>
+            <div className='flex flex-col justify-center md:items-end lg:items-center h-full'>
+              <div className='w-80p md:w-70p'>
+                <div className='mt-6 mb-2 md:mt-0 md:mb-0'>
                   <h3
                     style={{ fontFamily: 'airbnb-bold' }}
-                    className='text-5xl tracking-tight leading-12 text-white'>
+                    className='text-4xl md:text-5xl tracking-tight leading-12 text-white'>
                     {title}
                   </h3>
                 </div>
                 <div className='flex justify-end mt-8'>
-                  <div className='w-80p'>
+                  <div className='lg:w-80p'>
                     <p
                       style={{ fontFamily: 'airbnb-medium' }}
                       className='text-lg text-white'>
@@ -35,17 +35,17 @@ const renderByPosition = (img, position, title, description) => {
     case 'right':
       return (
         <>
-          <div className='w-3/5'>
+          <div className='md:w-3/5'>
             <div className='flex flex-col justify-center items-start h-full'>
-              <div className='w-70p'>
-                <div>
+              <div className='lg:w-70p'>
+                <div className='mt-6 mb-2 md:mt-0 md:mb-0'>
                   <h3
                     style={{ fontFamily: 'airbnb-bold' }}
-                    className='text-5xl tracking-tight leading-12 text-white'>
+                    className='text-4xl md:text-5xl tracking-tight leading-12 text-white'>
                     {title}
                   </h3>
                 </div>
-                <div className='flex justify-end mt-8'>
+                <div className='flex lg:justify-end mt-8'>
                   <div className='w-80p'>
                     <p
                       style={{ fontFamily: 'airbnb-medium' }}
@@ -57,7 +57,7 @@ const renderByPosition = (img, position, title, description) => {
               </div>
             </div>
           </div>
-          <div className='w-2/5'>
+          <div className='md:w-2/5'>
             <img src={img} className='w-full h-full' />
           </div>
         </>
@@ -67,10 +67,16 @@ const renderByPosition = (img, position, title, description) => {
 
 export const ExperienceAspect = ({ img, position, title, description }) => {
   return (
-    <div className='lg:max-w-5.5xl mx-auto flex items-center'>
-      <div className='flex justify-center'>
-        {renderByPosition(img, position, title, description)}
-      </div>
+    <div className='px-12 md:px-0 md:max-w-xl lg:max-w-5.5xl mx-auto flex items-center'>
+      {position === 'left' ? (
+        <div className='md:flex justify-center'>
+          {renderByPosition(img, position, title, description)}
+        </div>
+      ) : (
+        <div className='flex flex-col-reverse md:flex-row justify-center'>
+          {renderByPosition(img, position, title, description)}
+        </div>
+      )}
     </div>
   );
 };

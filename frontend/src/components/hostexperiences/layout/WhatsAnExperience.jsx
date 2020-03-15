@@ -16,17 +16,17 @@ export const WhatsAnExperience = () => {
     <>
       <div
         id='hostexperience__what-bottom'
-        className='relative w-screen h-screen bg-transparent'>
-        <div className='w-full absolute bottom-0 flex items-center justify-center h-48'>
+        className='relative w-screen h-screen bg-transparent flex justify-center'>
+        <div className='px-6 md:px-0 md:max-w-3xl lg:max-w-5xl mx-auto absolute bottom-0 flex items-center justify-center h-48'>
           <div>
             <div className='my-2'>
               <h3
                 style={{ fontFamily: 'airbnb-bold' }}
-                className='text-white text-5xl tracking-tight'>
+                className='text-white text-4xl lg:text-5xl tracking-tight'>
                 What's an experience?
               </h3>
             </div>
-            <div className='w-80p'>
+            <div className='lg:w-80p'>
               <p
                 style={{ fontFamily: 'airbnb-book' }}
                 className='text-white text-sm'>
@@ -40,7 +40,7 @@ export const WhatsAnExperience = () => {
       </div>
       <div className='relative w-screen'>
         <div className='bg-black pt-48 pb-16'>
-          <div className='mb-16'>
+          <div className='mb-32 lg:mb-16'>
             <ExperienceAspect
               img={experience1}
               position='left'
@@ -48,7 +48,7 @@ export const WhatsAnExperience = () => {
               description='Food tour by bike, light photography at night, tapas on a boat, or yoga (with goats). Create and curate a unique activity people want to try.'
             />
           </div>
-          <div className='mb-16'>
+          <div className='my-32 lg:mb-16'>
             <ExperienceAspect
               img={experience2}
               position='right'

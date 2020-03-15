@@ -26049,7 +26049,7 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
   switch (position) {
     case 'left':
       return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-        className: "w-2/5",
+        className: "md:w-2/5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 8
@@ -26064,27 +26064,28 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
         },
         __self: this
       })), __jsx("div", {
-        className: "w-3/5",
+        className: "md:w-3/5 ",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
         },
         __self: this
       }, __jsx("div", {
-        className: "flex flex-col justify-center items-center h-full",
+        className: "flex flex-col justify-center md:items-end lg:items-center h-full",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         },
         __self: this
       }, __jsx("div", {
-        className: "w-70p",
+        className: "w-80p md:w-70p",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
         },
         __self: this
       }, __jsx("div", {
+        className: "mt-6 mb-2 md:mt-0 md:mb-0",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
@@ -26094,7 +26095,7 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
         style: {
           fontFamily: 'airbnb-bold'
         },
-        className: "text-5xl tracking-tight leading-12 text-white",
+        className: "text-4xl md:text-5xl tracking-tight leading-12 text-white",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
@@ -26108,7 +26109,7 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
         },
         __self: this
       }, __jsx("div", {
-        className: "w-80p",
+        className: "lg:w-80p",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 22
@@ -26128,7 +26129,7 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
 
     case 'right':
       return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
-        className: "w-3/5",
+        className: "md:w-3/5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
@@ -26142,13 +26143,14 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
         },
         __self: this
       }, __jsx("div", {
-        className: "w-70p",
+        className: "lg:w-70p",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40
         },
         __self: this
       }, __jsx("div", {
+        className: "mt-6 mb-2 md:mt-0 md:mb-0",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41
@@ -26158,14 +26160,14 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
         style: {
           fontFamily: 'airbnb-bold'
         },
-        className: "text-5xl tracking-tight leading-12 text-white",
+        className: "text-4xl md:text-5xl tracking-tight leading-12 text-white",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 42
         },
         __self: this
       }, title)), __jsx("div", {
-        className: "flex justify-end mt-8",
+        className: "flex lg:justify-end mt-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 48
@@ -26189,7 +26191,7 @@ var renderByPosition = function renderByPosition(img, position, title, descripti
         },
         __self: this
       }, description)))))), __jsx("div", {
-        className: "w-2/5",
+        className: "md:w-2/5",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 60
@@ -26213,17 +26215,24 @@ var ExperienceAspect = function ExperienceAspect(_ref) {
       title = _ref.title,
       description = _ref.description;
   return __jsx("div", {
-    className: "lg:max-w-5.5xl mx-auto flex items-center",
+    className: "px-12 md:px-0 md:max-w-xl lg:max-w-5.5xl mx-auto flex items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70
     },
     __self: this
-  }, __jsx("div", {
-    className: "flex justify-center",
+  }, position === 'left' ? __jsx("div", {
+    className: "md:flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
+    },
+    __self: this
+  }, renderByPosition(img, position, title, description)) : __jsx("div", {
+    className: "flex flex-col-reverse md:flex-row justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
     },
     __self: this
   }, renderByPosition(img, position, title, description)));
@@ -27655,14 +27664,14 @@ var experience3 = 'https://a0.muscache.com/im/pictures/d1d720a0-7253-4f89-b9b4-5
 var WhatsAnExperience = function WhatsAnExperience() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     id: "hostexperience__what-bottom",
-    className: "relative w-screen h-screen bg-transparent",
+    className: "relative w-screen h-screen bg-transparent flex justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full absolute bottom-0 flex items-center justify-center h-48",
+    className: "px-6 md:px-0 md:max-w-3xl lg:max-w-5xl mx-auto absolute bottom-0 flex items-center justify-center h-48",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -27685,14 +27694,14 @@ var WhatsAnExperience = function WhatsAnExperience() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-white text-5xl tracking-tight",
+    className: "text-white text-4xl lg:text-5xl tracking-tight",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
   }, "What's an experience?")), __jsx("div", {
-    className: "w-80p",
+    className: "lg:w-80p",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
@@ -27723,7 +27732,7 @@ var WhatsAnExperience = function WhatsAnExperience() {
     },
     __self: this
   }, __jsx("div", {
-    className: "mb-16",
+    className: "mb-32 lg:mb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -27740,7 +27749,7 @@ var WhatsAnExperience = function WhatsAnExperience() {
     },
     __self: this
   })), __jsx("div", {
-    className: "mb-16",
+    className: "my-32 lg:mb-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
@@ -30584,7 +30593,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!***********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fexperiences&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fexperiences.jsx ***!
   \***********************************************************************************************************************************************************************/
@@ -30607,5 +30616,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=experiences.js.map
