@@ -9,7 +9,9 @@ import { ShowWhatYouKnow } from '../../components/hostexperiences/layout/ShowWha
 import { ExperienceCategory } from '../../components/hostexperiences/layout/ExperienceCategory';
 import { JoinCommunity } from '../../components/hostexperiences/layout/JoinCommunity';
 import { GotYourBack } from '../../components/hostexperiences/layout/GotYourBack';
-import {HowToGetStarted} from '../../components/hostexperiences/layout/HowToGetStarted'
+import { HowToGetStarted } from '../../components/hostexperiences/layout/HowToGetStarted';
+import { ExperiencesQuestions } from '../../components/hostexperiences/layout/ExperiencesQuestions';
+import { NewFooter } from '../../components/layout/NewFooter';
 
 export default () => {
   return (
@@ -35,6 +37,8 @@ export default () => {
         <JoinCommunity />
         <GotYourBack />
         <HowToGetStarted />
+        <ExperiencesQuestions />
+        <NewFooter />
       </div>
     </>
   );

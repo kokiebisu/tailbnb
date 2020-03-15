@@ -19,7 +19,7 @@ const guidance1 = require('../../../../public/img/high/guidance.jpg');
 
 export const GotYourBack = () => {
   return (
-    <div className='relative w-screen pt-32 pb-16 bg-white'>
+    <div className='relative w-screen pt-32 pb-16 bg-gray-50'>
       <div className='lg:max-w-5xl mx-auto mb-32'>
         <div className='grid grid-cols-2'>
           <div className='w-70p'>
