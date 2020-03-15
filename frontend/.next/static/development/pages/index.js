@@ -41579,6 +41579,36 @@ module.exports = "/_next/static/images/plus-1-1cd90d428ed098d36d4099a3514aa633.j
 
 /***/ }),
 
+/***/ "./src/animations/arrow.ts":
+/*!*********************************!*\
+  !*** ./src/animations/arrow.ts ***!
+  \*********************************/
+/*! exports provided: rotateArrow, backRotateArrow */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rotateArrow", function() { return rotateArrow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "backRotateArrow", function() { return backRotateArrow; });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+var rotateArrow = function rotateArrow(arrow) {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].to(arrow, 0.4, {
+    rotation: '360_cw',
+    opacity: 0.3,
+    ease: gsap__WEBPACK_IMPORTED_MODULE_0__["Power3"].easeOut
+  });
+};
+var backRotateArrow = function backRotateArrow(arrow) {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].to(arrow, 0.4, {
+    rotation: '180_cw',
+    opacity: 0.3,
+    ease: gsap__WEBPACK_IMPORTED_MODULE_0__["Power3"].easeOut
+  });
+};
+
+/***/ }),
+
 /***/ "./src/components/ShowAll.tsx":
 /*!************************************!*\
   !*** ./src/components/ShowAll.tsx ***!
@@ -41646,36 +41676,6 @@ var ShowAll = function ShowAll(_ref) {
     },
     __self: this
   })))));
-};
-
-/***/ }),
-
-/***/ "./src/components/animations/arrow.ts":
-/*!********************************************!*\
-  !*** ./src/components/animations/arrow.ts ***!
-  \********************************************/
-/*! exports provided: rotateArrow, backRotateArrow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rotateArrow", function() { return rotateArrow; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "backRotateArrow", function() { return backRotateArrow; });
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-
-var rotateArrow = function rotateArrow(arrow) {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].to(arrow, 0.4, {
-    rotation: '360_cw',
-    opacity: 0.3,
-    ease: gsap__WEBPACK_IMPORTED_MODULE_0__["Power3"].easeOut
-  });
-};
-var backRotateArrow = function backRotateArrow(arrow) {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].to(arrow, 0.4, {
-    rotation: '180_cw',
-    opacity: 0.3,
-    ease: gsap__WEBPACK_IMPORTED_MODULE_0__["Power3"].easeOut
-  });
 };
 
 /***/ }),
@@ -43411,7 +43411,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var _util_GuestModalFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/GuestModalFunctions */ "./src/util/GuestModalFunctions.js");
-/* harmony import */ var _animations_arrow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../animations/arrow */ "./src/components/animations/arrow.ts");
+/* harmony import */ var _animations_arrow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../animations/arrow */ "./src/animations/arrow.ts");
 /* harmony import */ var _modals_CalendarModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modals/CalendarModal */ "./src/components/modals/CalendarModal.jsx");
 /* harmony import */ var _modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modals/GuestPickerModal */ "./src/components/modals/GuestPickerModal.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/HeaderCard.jsx";
@@ -46816,9 +46816,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarModal", function() { return CalendarModal; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/CalendarModalFunctions */ "./src/util/CalendarModalFunctions.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/CalendarModal.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
+
+var date = new Date();
+var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var today = new Date();
 var CalendarModal = function CalendarModal() {
   return __jsx("div", {
     style: {
@@ -46827,28 +46833,28 @@ var CalendarModal = function CalendarModal() {
     className: "absolute z-50 bg-white w-64 p-6 shadow-xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 43
     },
     __self: this
   }, __jsx("div", {
     className: "flex items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 46
     },
     __self: this
   }, __jsx("div", {
     className: "border py-2 px-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 47
     },
     __self: this
   }, __jsx("div", {
     className: "w-3 h-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 48
     },
     __self: this
   }, __jsx("svg", {
@@ -46860,39 +46866,39 @@ var CalendarModal = function CalendarModal() {
     viewBox: "0 0 492 492",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 49
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 54
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 55
     },
     __self: this
   }, __jsx("path", {
     d: "M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124 c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844 L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412 c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008 c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788 C492,219.198,479.172,207.418,464.344,207.418z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 56
     },
     __self: this
   })))))), __jsx("div", {
     className: "px-4 flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 69
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 70
     },
     __self: this
   }, __jsx("h3", {
@@ -46902,21 +46908,21 @@ var CalendarModal = function CalendarModal() {
     className: "text-gray-750 text-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 71
     },
     __self: this
-  }, "March 2020"))), __jsx("div", {
+  }, month[date.getMonth()], " ", date.getFullYear()))), __jsx("div", {
     className: "border py-2 px-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 78
     },
     __self: this
   }, __jsx("div", {
     className: "h-3 w-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 79
     },
     __self: this
   }, __jsx("svg", {
@@ -46928,33 +46934,33 @@ var CalendarModal = function CalendarModal() {
     viewBox: "0 0 492.004 492.004",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 80
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 85
     },
     __self: this
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 86
     },
     __self: this
   }, __jsx("path", {
     d: "M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136 c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002 v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864 c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872 l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 87
     },
     __self: this
   }))))))), __jsx("div", {
     className: "mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 100
     },
     __self: this
   }, __jsx("div", {
@@ -46964,143 +46970,48 @@ var CalendarModal = function CalendarModal() {
     className: "grid grid-cols-7 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 101
+    },
+    __self: this
+  }, days.map(function (day) {
+    return __jsx("div", {
+      className: "flex justify-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 106
+      },
+      __self: this
+    }, __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: this
+    }, __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108
+      },
+      __self: this
+    }, day.slice(0, 2))));
+  }))), __jsx("div", {
+    className: "mt-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
     },
     __self: this
   }, __jsx("div", {
-    className: "flex justify-center",
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "grid grid-cols-7 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 116
     },
     __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, "Su"))), __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }, "Mo"))), __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  }, "Tu"))), __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: this
-  }, "We"))), __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, "Th"))), __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: this
-  }, "Fr"))), __jsx("div", {
-    className: "flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: this
-  }, "Sa"))))));
+  }, Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateUnexistingDays"])(Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["getStartingDay"])(today.getMonth(), today.getFullYear())), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateUnavailableDays"])(1, today.getDate()), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateAvailableDays"])(today.getDate(), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["getEndingDate"])(today.getMonth(), today.getFullYear()).getDate()))));
 };
 
 /***/ }),
@@ -50131,6 +50042,130 @@ var Home = function Home() {
 
 /***/ }),
 
+/***/ "./src/util/CalendarModalFunctions.jsx":
+/*!*********************************************!*\
+  !*** ./src/util/CalendarModalFunctions.jsx ***!
+  \*********************************************/
+/*! exports provided: getStartingDay, getEndingDate, getDaysInMonth, generateUnexistingDays, generateUnavailableDays, generateAvailableDays */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStartingDay", function() { return getStartingDay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getEndingDate", function() { return getEndingDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDaysInMonth", function() { return getDaysInMonth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUnexistingDays", function() { return generateUnexistingDays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateUnavailableDays", function() { return generateUnavailableDays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateAvailableDays", function() { return generateAvailableDays; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/util/CalendarModalFunctions.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var getStartingDay = function getStartingDay(specifiedMonth, specifedYear) {
+  return new Date(specifedYear, specifiedMonth).getDay();
+};
+var getEndingDate = function getEndingDate(specifiedMonth, specifiedYear) {
+  return new Date(specifiedYear, specifiedMonth + 1, 0);
+};
+var getDaysInMonth = function getDaysInMonth(specifiedMonth, specifiedYear) {
+  return 32 - new Date(specifedYear, specifiedMonth, 32).getDate();
+};
+var generateUnexistingDays = function generateUnexistingDays(firstday) {
+  var result = [];
+  var numberOfDays = firstday;
+
+  for (var i = 0; i < numberOfDays; i++) {
+    result.push(__jsx("div", {
+      className: "border border-white flex justify-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "text-white py-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, __jsx("p", {
+      className: "text-white",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "N"))));
+  }
+
+  return result;
+};
+var generateUnavailableDays = function generateUnavailableDays(firstday, today) {
+  var result = [];
+  var numberOfDays = today - firstday;
+
+  for (var i = firstday; i <= numberOfDays; i++) {
+    result.push(__jsx("div", {
+      className: "flex justify-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "py-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, __jsx("p", {
+      className: "text-gray-400",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, i))));
+  }
+
+  return result;
+};
+var generateAvailableDays = function generateAvailableDays(today, lastday) {
+  var result = [];
+
+  for (var i = today; i <= lastday; i++) {
+    result.push(__jsx("div", {
+      className: "flex justify-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "text-white py-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, __jsx("p", {
+      className: "text-gray-650",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }, i))));
+  }
+
+  return result;
+};
+
+/***/ }),
+
 /***/ "./src/util/GuestModalFunctions.js":
 /*!*****************************************!*\
   !*** ./src/util/GuestModalFunctions.js ***!
@@ -50163,7 +50198,7 @@ var calculateInfants = function calculateInfants(adultNumber, infantNumber) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************/
@@ -50186,5 +50221,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

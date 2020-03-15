@@ -5,7 +5,7 @@ import {
   calculateGuests,
   calculateInfants
 } from '../../util/GuestModalFunctions';
-import { rotateArrow, backRotateArrow } from '../animations/arrow';
+import { rotateArrow, backRotateArrow } from '../../animations/arrow';
 
 // Modals
 import { CalendarModal } from '../modals/CalendarModal';

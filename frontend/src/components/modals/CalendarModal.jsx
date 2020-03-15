@@ -1,4 +1,42 @@
 import * as React from 'react';
+import {
+  getStartingDay,
+  getEndingDay,
+  getDaysInMonth,
+  generateUnexistingDays,
+  generateUnavailableDays,
+  generateAvailableDays,
+  getEndingDate
+} from '../../util/CalendarModalFunctions';
+
+let date = new Date();
+
+const month = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
+const days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday'
+];
+
+const today = new Date();
 
 export const CalendarModal = () => {
   return (
@@ -33,7 +71,7 @@ export const CalendarModal = () => {
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
               className='text-gray-750 text-lg'>
-              March 2020
+              {month[date.getMonth()]} {date.getFullYear()}
             </h3>
           </div>
         </div>
@@ -63,82 +101,31 @@ export const CalendarModal = () => {
         <div
           style={{ fontFamily: 'airbnb-book' }}
           className='grid grid-cols-7 text-gray-650 text-sm'>
-          <div className='flex justify-center'>
-            <div>
-              <p>Su</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Mo</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Tu</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>We</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Th</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Fr</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Sa</p>
-            </div>
-          </div>
+          {days.map((day) => {
+            return (
+              <div className='flex justify-center'>
+                <div>
+                  <p>{day.slice(0, 2)}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className='mt-4'>
         <div
           style={{ fontFamily: 'airbnb-book' }}
           className='grid grid-cols-7 text-gray-650 text-sm'>
-          <div className='flex justify-center'>
-            <div>
-              <p>Su</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Mo</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Tu</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>We</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Th</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Fr</p>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <div>
-              <p>Sa</p>
-            </div>
-          </div>
+          {generateUnexistingDays(
+            getStartingDay(today.getMonth(), today.getFullYear())
+          )}
+
+          {generateUnavailableDays(1, today.getDate())}
+
+          {generateAvailableDays(
+            today.getDate(),
+            getEndingDate(today.getMonth(), today.getFullYear()).getDate()
+          )}
         </div>
       </div>
     </div>

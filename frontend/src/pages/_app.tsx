@@ -1,5 +1,4 @@
 import * as React from 'react';
-import 'react-dates/initialize';
 import Head from 'next/head';
 import './styles.css';
 import '@babel/polyfill';
