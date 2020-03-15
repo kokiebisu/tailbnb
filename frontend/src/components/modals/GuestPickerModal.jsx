@@ -4,13 +4,17 @@ const renderCategory = (category, info, number, decrement, increment) => {
   return (
     <>
       <div>
-        <div className='text-gray-750'>
-          <h3 style={{ fontFamily: 'airbnb-bold' }}>{category}</h3>
+        <div className='text-gray-850'>
+          <h3 style={{ fontFamily: 'airbnb-medium' }}>{category}</h3>
         </div>
         {info && (
           <>
             <div>
-              <p>{info}</p>
+              <p
+                style={{ fontFamily: 'airbnb-book' }}
+                className='text-gray-750 text-sm'>
+                {info}
+              </p>
             </div>
           </>
         )}

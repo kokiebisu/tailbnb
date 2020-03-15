@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { TweenLite, Power3 } from 'gsap';
 
 // Modals
 import { GuestPickerModal } from '../modals/GuestPickerModal';
@@ -10,6 +11,9 @@ export const HeaderCard = () => {
   const [adultNumber, setAdultNumber] = useState(0);
   const [childrenNumber, setChildrenNumber] = useState(0);
   const [infantNumber, setInfantNumber] = useState(0);
+
+  let guestArrow1 = useRef(null);
+  let guestArrow2 = useRef(null);
 
   const calculateGuests = (adultNumber, childrenNumber) => {
     if (adultNumber === 0 && childrenNumber === 0) {
@@ -29,6 +33,22 @@ export const HeaderCard = () => {
     } else if (infantNumber > 0) {
       return `${infantNumber} infants`;
     }
+  };
+
+  const rotateArrow = () => {
+    TweenLite.to(guestArrow1, 0.4, {
+      rotation: '360_cw',
+      opacity: 0.3,
+      ease: Power3.easeOut
+    });
+  };
+
+  const backRotateArrow = () => {
+    TweenLite.to(guestArrow2, 0.4, {
+      rotation: '180_cw',
+      opacity: 0.3,
+      ease: Power3.easeOut
+    });
   };
 
   return (
@@ -96,26 +116,61 @@ export const HeaderCard = () => {
               Guests
             </label>
             <div className='inline-block relative w-full'>
-              <button
-                style={{ fontFamily: 'airbnb-book' }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setGuestModal(!guestModal);
-                }}
-                className='appearance-none pl-2 w-full border border-gray-300 py-3 text-left rounded placeholder-gray-900 tracking-wide'>
-                {calculateGuests(adultNumber, childrenNumber)}
-                {adultNumber > 0 && infantNumber > 0
-                  ? `, ${calculateInfant(adultNumber, infantNumber)}`
-                  : null}
-              </button>
-              <div className='pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
-                <svg
-                  className='fill-current h-4 w-4'
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 20 20'>
-                  <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
-                </svg>
-              </div>
+              {guestModal ? (
+                <button
+                  style={{ fontFamily: 'airbnb-book' }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    rotateArrow();
+                    setGuestModal(!guestModal);
+                  }}
+                  className='appearance-none pl-2 w-full border border-green-850 py-3 text-left rounded placeholder-gray-900 tracking-wide'>
+                  {calculateGuests(adultNumber, childrenNumber)}
+                  {adultNumber > 0 && infantNumber > 0
+                    ? `, ${calculateInfant(adultNumber, infantNumber)}`
+                    : null}
+                </button>
+              ) : (
+                <button
+                  style={{ fontFamily: 'airbnb-book' }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    backRotateArrow();
+                    setGuestModal(!guestModal);
+                  }}
+                  className='appearance-none pl-2 w-full border border-gray-300 py-3 text-left rounded placeholder-gray-900 tracking-wide'>
+                  {calculateGuests(adultNumber, childrenNumber)}
+                  {adultNumber > 0 && infantNumber > 0
+                    ? `, ${calculateInfant(adultNumber, infantNumber)}`
+                    : null}
+                </button>
+              )}
+              {guestModal ? (
+                <div
+                  ref={(el) => (guestArrow1 = el)}
+                  style={{}}
+                  className='pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
+                  <svg
+                    style={{ fill: '#222222' }}
+                    className='h-4 w-4'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 20 20'>
+                    <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
+                  </svg>
+                </div>
+              ) : (
+                <div
+                  ref={(el) => (guestArrow2 = el)}
+                  style={{}}
+                  className='pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black'>
+                  <svg
+                    className='h-4 w-4'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 20 20'>
+                    <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
+                  </svg>
+                </div>
+              )}
             </div>
             {guestModal ? (
               <GuestPickerModal

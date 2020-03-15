@@ -3867,9 +3867,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderCard", function() { return HeaderCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modals/GuestPickerModal */ "./src/components/modals/GuestPickerModal.jsx");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "gsap");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gsap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modals/GuestPickerModal */ "./src/components/modals/GuestPickerModal.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/HeaderCard.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
 
  // Modals
 
@@ -3892,6 +3895,8 @@ const HeaderCard = () => {
     0: infantNumber,
     1: setInfantNumber
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  let guestArrow1 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  let guestArrow2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
   const calculateGuests = (adultNumber, childrenNumber) => {
     if (adultNumber === 0 && childrenNumber === 0) {
@@ -3913,18 +3918,34 @@ const HeaderCard = () => {
     }
   };
 
+  const rotateArrow = () => {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(guestArrow1, 0.4, {
+      rotation: '360_cw',
+      opacity: 0.3,
+      ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeOut
+    });
+  };
+
+  const backRotateArrow = () => {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(guestArrow2, 0.4, {
+      rotation: '180_cw',
+      opacity: 0.3,
+      ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeOut
+    });
+  };
+
   return __jsx("div", {
     className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 55
     },
     __self: undefined
   }, __jsx("div", {
     className: "mx-6 md:mx-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 56
     },
     __self: undefined
   }, __jsx("h3", {
@@ -3934,26 +3955,26 @@ const HeaderCard = () => {
     className: "hidden md:inline-block md:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 57
     },
     __self: undefined
   }, "Book unique places to ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 60
     },
     __self: undefined
   }), "stay and things to do."), __jsx("form", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 63
     },
     __self: undefined
   }, __jsx("div", {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 64
     },
     __self: undefined
   }, __jsx("label", {
@@ -3964,7 +3985,7 @@ const HeaderCard = () => {
     htmlFor: "where",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 65
     },
     __self: undefined
   }, "Where"), __jsx("input", {
@@ -3977,21 +3998,21 @@ const HeaderCard = () => {
     placeholder: "Anywhere",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 71
     },
     __self: undefined
   })), __jsx("div", {
     className: "flex flex-wrap items-stretch justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 79
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 80
     },
     __self: undefined
   }, __jsx("label", {
@@ -4002,7 +4023,7 @@ const HeaderCard = () => {
     htmlFor: "checkin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 81
     },
     __self: undefined
   }, "Check-In"), __jsx("input", {
@@ -4015,14 +4036,14 @@ const HeaderCard = () => {
     placeholder: "dd-mm-yyyy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 87
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 95
     },
     __self: undefined
   }, __jsx("label", {
@@ -4033,7 +4054,7 @@ const HeaderCard = () => {
     htmlFor: "checkout",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 96
     },
     __self: undefined
   }, "Check-Out"), __jsx("input", {
@@ -4046,14 +4067,14 @@ const HeaderCard = () => {
     placeholder: "dd-mm-yyyy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 102
     },
     __self: undefined
   }))), __jsx("div", {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 111
     },
     __self: undefined
   }, __jsx("label", {
@@ -4064,54 +4085,100 @@ const HeaderCard = () => {
     htmlFor: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 112
     },
     __self: undefined
   }, "Guests"), __jsx("div", {
     className: "inline-block relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 118
     },
     __self: undefined
-  }, __jsx("button", {
+  }, guestModal ? __jsx("button", {
     style: {
       fontFamily: 'airbnb-book'
     },
     onClick: e => {
       e.preventDefault();
+      rotateArrow();
+      setGuestModal(!guestModal);
+    },
+    className: "appearance-none pl-2 w-full border border-green-850 py-3 text-left rounded placeholder-gray-900 tracking-wide",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120
+    },
+    __self: undefined
+  }, calculateGuests(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? `, ${calculateInfant(adultNumber, infantNumber)}` : null) : __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    onClick: e => {
+      e.preventDefault();
+      backRotateArrow();
       setGuestModal(!guestModal);
     },
     className: "appearance-none pl-2 w-full border border-gray-300 py-3 text-left rounded placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 134
     },
     __self: undefined
-  }, calculateGuests(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? `, ${calculateInfant(adultNumber, infantNumber)}` : null), __jsx("div", {
+  }, calculateGuests(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? `, ${calculateInfant(adultNumber, infantNumber)}` : null), guestModal ? __jsx("div", {
+    ref: el => guestArrow1 = el,
+    style: {},
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 149
     },
     __self: undefined
   }, __jsx("svg", {
-    className: "fill-current h-4 w-4",
+    style: {
+      fill: '#222222'
+    },
+    className: "h-4 w-4",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 153
     },
     __self: undefined
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 158
     },
     __self: undefined
-  })))), guestModal ? __jsx(_modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_1__["GuestPickerModal"], {
+  }))) : __jsx("div", {
+    ref: el => guestArrow2 = el,
+    style: {},
+    className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 162
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "h-4 w-4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 166
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 170
+    },
+    __self: undefined
+  })))), guestModal ? __jsx(_modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_2__["GuestPickerModal"], {
     incrementAdult: () => setAdultNumber(adultNumber + 1),
     decrementAdult: () => setAdultNumber(adultNumber - 1),
     incrementChildren: () => setChildrenNumber(childrenNumber + 1),
@@ -4129,21 +4196,21 @@ const HeaderCard = () => {
     switchModal: () => setGuestModal(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 176
     },
     __self: undefined
   }) : null)), __jsx("div", {
     className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 196
     },
     __self: undefined
   }, __jsx("button", {
     className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-550 rounded text-white font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 197
     },
     __self: undefined
   }, "Search"))));
@@ -7484,7 +7551,7 @@ const renderCategory = (category, info, number, decrement, increment) => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "text-gray-750",
+    className: "text-gray-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -7492,7 +7559,7 @@ const renderCategory = (category, info, number, decrement, increment) => {
     __self: undefined
   }, __jsx("h3", {
     style: {
-      fontFamily: 'airbnb-bold'
+      fontFamily: 'airbnb-medium'
     },
     __source: {
       fileName: _jsxFileName,
@@ -7506,6 +7573,10 @@ const renderCategory = (category, info, number, decrement, increment) => {
     },
     __self: undefined
   }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-gray-750 text-sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -7515,20 +7586,20 @@ const renderCategory = (category, info, number, decrement, increment) => {
     className: "flex items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 22
     },
     __self: undefined
   }, number === 0 ? __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-7 h-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("svg", {
@@ -7540,21 +7611,21 @@ const renderCategory = (category, info, number, decrement, increment) => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     },
     __self: undefined
   }, __jsx("path", {
     d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 31
     },
     __self: undefined
   }), __jsx("path", {
     d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 32
     },
     __self: undefined
   })))) : __jsx("button", {
@@ -7564,14 +7635,14 @@ const renderCategory = (category, info, number, decrement, increment) => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-7 h-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 42
     },
     __self: undefined
   }, __jsx("svg", {
@@ -7583,35 +7654,35 @@ const renderCategory = (category, info, number, decrement, increment) => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("path", {
     d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 48
     },
     __self: undefined
   }), __jsx("path", {
     d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 49
     },
     __self: undefined
   })))), __jsx("div", {
     className: "w-10 flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 54
     },
     __self: undefined
   }, __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: undefined
   }, __jsx("p", {
@@ -7621,7 +7692,7 @@ const renderCategory = (category, info, number, decrement, increment) => {
     className: "text-lg text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: undefined
   }, number, "+"))), __jsx("button", {
@@ -7631,14 +7702,14 @@ const renderCategory = (category, info, number, decrement, increment) => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 64
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-7 w-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 69
     },
     __self: undefined
   }, __jsx("svg", {
@@ -7650,28 +7721,28 @@ const renderCategory = (category, info, number, decrement, increment) => {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 70
     },
     __self: undefined
   }, __jsx("path", {
     d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 75
     },
     __self: undefined
   }), __jsx("path", {
     d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 76
     },
     __self: undefined
   }), __jsx("path", {
     d: "m256 384c-8.832031 0-16-7.167969-16-16v-224c0-8.832031 7.167969-16 16-16s16 7.167969 16 16v224c0 8.832031-7.167969 16-16 16zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 77
     },
     __self: undefined
   }))))));
@@ -7688,14 +7759,14 @@ const GuestPickerSection = ({
     className: "py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 94
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 95
     },
     __self: undefined
   }, renderCategory(category, info, number, increment, decrement)));
@@ -7718,14 +7789,14 @@ const GuestPickerModal = ({
     className: "absolute z-50 bg-white w-full px-6 shadow-xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 116
     },
     __self: undefined
   }, __jsx("div", {
     className: "relative py-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 117
     },
     __self: undefined
   }, __jsx(GuestPickerSection, {
@@ -7735,7 +7806,7 @@ const GuestPickerModal = ({
     increment: incrementAdult,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 118
     },
     __self: undefined
   }), __jsx(GuestPickerSection, {
@@ -7746,7 +7817,7 @@ const GuestPickerModal = ({
     increment: incrementChildren,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 124
     },
     __self: undefined
   }), __jsx(GuestPickerSection, {
@@ -7757,14 +7828,14 @@ const GuestPickerModal = ({
     increment: incrementInfant,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 131
     },
     __self: undefined
   }), adult + children > 0 ? __jsx("div", {
     className: "absolute",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 139
     },
     __self: undefined
   }, __jsx("button", {
@@ -7775,14 +7846,14 @@ const GuestPickerModal = ({
     className: "text-gray-750 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 140
     },
     __self: undefined
   }, "Clear")) : null, __jsx("div", {
     className: "flex justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 148
     },
     __self: undefined
   }, __jsx("button", {
@@ -7793,7 +7864,7 @@ const GuestPickerModal = ({
     className: "text-green-850 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 149
     },
     __self: undefined
   }, "Save"))));
