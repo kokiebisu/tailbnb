@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const GuidanceCard = ({ img, title, color }) => {
   return (
-    <div className='relative'>
+    <div className='relative shadow-xl'>
       <div className=''>
         <img className='w-full h-full rounded-3xl' src={img} alt='' />
       </div>

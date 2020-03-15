@@ -19,15 +19,17 @@ const guidance1 = require('../../../../public/img/high/guidance.jpg');
 
 export const GotYourBack = () => {
   return (
-    <div className='relative w-screen pt-32 pb-16 bg-gray-50'>
-      <div className='lg:max-w-5xl mx-auto mb-32'>
-        <div className='grid grid-cols-2'>
-          <div className='w-70p'>
-            <h3
-              style={{ fontFamily: 'airbnb-bold' }}
-              className='text-3xl text-gray-750 leading-9'>
-              We've got your back, every step of the way
-            </h3>
+    <div className='relative w-screen py-8 md:pt-32 md:pb-16 bg-gray-50'>
+      <div className='px-6 md:max-w-1.5xl lg:max-w-5xl mx-auto py-16 md:mb-32'>
+        <div className='md:grid grid-cols-2'>
+          <div className='mb-4 md:mb-0'>
+            <div className='md:w-80p lg:w-70p'>
+              <h3
+                style={{ fontFamily: 'airbnb-bold' }}
+                className='text-3xl text-gray-750 leading-9'>
+                We've got your back, every step of the way
+              </h3>
+            </div>
           </div>
           <div>
             <p
@@ -40,10 +42,10 @@ export const GotYourBack = () => {
           </div>
         </div>
       </div>
-      <div className='lg:max-w-5xl mx-auto mb-8'>
+      <div className='md:max-w-1.5xl lg:max-w-5xl mx-auto mb-1 lg:mb-8'>
         <div className='py-16 bg-gray-150 rounded px-6'>
-          <div className='grid grid-cols-2 gap-5 flex items-center'>
-            <div className='grid grid-cols-4 gap-4'>
+          <div className='lg:grid grid-cols-2 gap-5 lg:flex items-center'>
+            <div className='grid grid-cols-2 md:grid-cols-4 md:gap-4'>
               <ToolCard gif={taskGif} title='Tasks' color='#f03e41' />
               <ToolCard
                 gif={schedulingGif}
@@ -53,8 +55,8 @@ export const GotYourBack = () => {
               <ToolCard gif={paymentsGif} title='Payments' color='#f18805' />
               <ToolCard gif={insightGif} title='Insights' color='#6ecb68' />
             </div>
-            <div className='flex justify-end'>
-              <div className='w-95p '>
+            <div className='mt-8 lg:mt-0 flex justify-end'>
+              <div className='lg:w-95p'>
                 <div>
                   <h3
                     style={{ fontFamily: 'airbnb-bold' }}
@@ -77,10 +79,10 @@ export const GotYourBack = () => {
           </div>
         </div>
       </div>
-      <div className='lg:max-w-5xl mx-auto mb-8'>
+      <div className='md:max-w-1.5xl lg:max-w-5xl mx-auto mb-8'>
         <div className='rounded'>
-          <div className='grid grid-cols-2 gap-6'>
-            <div className='bg-gray-150 pt-16 pb-8 px-8'>
+          <div className='lg:grid grid-cols-2 gap-6'>
+            <div className='bg-gray-150 pt-16 mb-1 lg:mb-0 pb-8 px-8'>
               <div className=''>
                 <Tag />
               </div>

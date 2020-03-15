@@ -25525,7 +25525,7 @@ var GuidanceCard = function GuidanceCard(_ref) {
       title = _ref.title,
       color = _ref.color;
   return __jsx("div", {
-    className: "relative",
+    className: "relative shadow-xl",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -25970,26 +25970,34 @@ var ToolCard = function ToolCard(_ref) {
       title = _ref.title,
       color = _ref.color;
   return __jsx("div", {
+    className: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, __jsx("div", {
-    style: {
-      borderColor: color
-    },
-    className: "py-8 rounded-5xl bg-white flex justify-center items-center border-2",
+    className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
   }, __jsx("div", {
+    style: {
+      borderColor: color
+    },
+    className: "px-3 py-3 md:px-8 md:py-8 lg:px-5 rounded-5xl bg-white flex justify-center items-center border-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("div", {
     className: "h-14 w-14",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }, __jsx("img", {
@@ -25997,21 +26005,21 @@ var ToolCard = function ToolCard(_ref) {
     src: gif,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
-  }))), __jsx("div", {
+  })))), __jsx("div", {
     className: "flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, __jsx("div", {
     className: "my-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }, __jsx("p", {
@@ -26021,7 +26029,7 @@ var ToolCard = function ToolCard(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, title))));
@@ -26980,31 +26988,38 @@ var guidance1 = __webpack_require__(/*! ../../../../public/img/high/guidance.jpg
 
 var GotYourBack = function GotYourBack() {
   return __jsx("div", {
-    className: "relative w-screen pt-32 pb-16 bg-gray-50",
+    className: "relative w-screen py-8 md:pt-32 md:pb-16 bg-gray-50",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
   }, __jsx("div", {
-    className: "lg:max-w-5xl mx-auto mb-32",
+    className: "px-6 md:max-w-1.5xl lg:max-w-5xl mx-auto py-16 md:mb-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
   }, __jsx("div", {
-    className: "grid grid-cols-2",
+    className: "md:grid grid-cols-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
   }, __jsx("div", {
-    className: "w-70p",
+    className: "mb-4 md:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "md:w-80p lg:w-70p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
     },
     __self: this
   }, __jsx("h3", {
@@ -27014,13 +27029,13 @@ var GotYourBack = function GotYourBack() {
     className: "text-3xl text-gray-750 leading-9",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
-  }, "We've got your back, every step of the way")), __jsx("div", {
+  }, "We've got your back, every step of the way"))), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, __jsx("p", {
@@ -27030,35 +27045,35 @@ var GotYourBack = function GotYourBack() {
     className: "text-gray-750 text-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }, "Resources like articles and insights dedicated to your hosting needs, 24/7 customer support for you and your guests, exposure for your experience, and much more.")))), __jsx("div", {
-    className: "lg:max-w-5xl mx-auto mb-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "py-16 bg-gray-150 rounded px-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "grid grid-cols-2 gap-5 flex items-center",
+    className: "md:max-w-1.5xl lg:max-w-5xl mx-auto mb-1 lg:mb-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: this
   }, __jsx("div", {
-    className: "grid grid-cols-4 gap-4",
+    className: "py-16 bg-gray-150 rounded px-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "lg:grid grid-cols-2 gap-5 lg:flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "grid grid-cols-2 md:grid-cols-4 md:gap-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
     },
     __self: this
   }, __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
@@ -27067,7 +27082,7 @@ var GotYourBack = function GotYourBack() {
     color: "#f03e41",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: this
   }), __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
@@ -27076,7 +27091,7 @@ var GotYourBack = function GotYourBack() {
     color: "#3c6a93",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: this
   }), __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
@@ -27085,7 +27100,7 @@ var GotYourBack = function GotYourBack() {
     color: "#f18805",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
   }), __jsx(_functions_ToolCard__WEBPACK_IMPORTED_MODULE_1__["ToolCard"], {
@@ -27094,27 +27109,27 @@ var GotYourBack = function GotYourBack() {
     color: "#6ecb68",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
-  })), __jsx("div", {
-    className: "flex justify-end",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 56
     },
     __self: this
-  }, __jsx("div", {
-    className: "w-95p ",
+  })), __jsx("div", {
+    className: "mt-8 lg:mt-0 flex justify-end",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "lg:w-95p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: this
   }, __jsx("h3", {
@@ -27124,14 +27139,14 @@ var GotYourBack = function GotYourBack() {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 61
     },
     __self: this
   }, "Tools tailored to you")), __jsx("div", {
     className: "mt-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 67
     },
     __self: this
   }, __jsx("p", {
@@ -27141,55 +27156,55 @@ var GotYourBack = function GotYourBack() {
     className: "text-gray-750 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 68
     },
     __self: this
   }, "A dashboard to give you insights, feedback on how to improve, visibility to guests from all over the world through search and filters, seamless payments, and much more."))))))), __jsx("div", {
-    className: "lg:max-w-5xl mx-auto mb-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "grid grid-cols-2 gap-6",
+    className: "md:max-w-1.5xl lg:max-w-5xl mx-auto mb-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 82
     },
     __self: this
   }, __jsx("div", {
-    className: "bg-gray-150 pt-16 pb-8 px-8",
+    className: "rounded",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83
     },
     __self: this
   }, __jsx("div", {
-    className: "",
+    className: "lg:grid grid-cols-2 gap-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 84
     },
     __self: this
-  }, __jsx(_functions_Tag__WEBPACK_IMPORTED_MODULE_2__["Tag"], {
+  }, __jsx("div", {
+    className: "bg-gray-150 pt-16 mb-1 lg:mb-0 pb-8 px-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 85
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }, __jsx(_functions_Tag__WEBPACK_IMPORTED_MODULE_2__["Tag"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
     },
     __self: this
   })), __jsx("div", {
     className: "mt-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 89
     },
     __self: this
   }, __jsx("h3", {
@@ -27199,14 +27214,14 @@ var GotYourBack = function GotYourBack() {
     className: "text-gray-750 text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 90
     },
     __self: this
   }, "Keep peace of mind")), __jsx("div", {
     className: "mt-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 96
     },
     __self: this
   }, __jsx("p", {
@@ -27216,28 +27231,28 @@ var GotYourBack = function GotYourBack() {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 97
     },
     __self: this
   }, "For most experiences, you\u2019ll be insured up to $1 million USD. Plus, you'll have access to 24/7 customer support so you can focus on pursuing your passion.", __jsx("span", {
     className: "text-green-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 103
     },
     __self: this
   }, "\xA0Learn more")))), __jsx("div", {
     className: "bg-gray-150 pt-8 pb-8 px-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 107
     },
     __self: this
   }, __jsx("div", {
     className: "grid grid-cols-3 gap-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 108
     },
     __self: this
   }, __jsx(_functions_GuidanceCard__WEBPACK_IMPORTED_MODULE_3__["GuidanceCard"], {
@@ -27246,7 +27261,7 @@ var GotYourBack = function GotYourBack() {
     color: "#cc5500",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 109
     },
     __self: this
   }), __jsx(_functions_GuidanceCard__WEBPACK_IMPORTED_MODULE_3__["GuidanceCard"], {
@@ -27255,7 +27270,7 @@ var GotYourBack = function GotYourBack() {
     color: "#ea9a1b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 110
     },
     __self: this
   }), __jsx(_functions_GuidanceCard__WEBPACK_IMPORTED_MODULE_3__["GuidanceCard"], {
@@ -27264,14 +27279,14 @@ var GotYourBack = function GotYourBack() {
     color: "#5a7d7c",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 111
     },
     __self: this
   })), __jsx("div", {
     className: "bg-gray-150 mt-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 113
     },
     __self: this
   }, __jsx("h3", {
@@ -27281,13 +27296,13 @@ var GotYourBack = function GotYourBack() {
     className: "text-2xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 114
     },
     __self: this
   }, "Guidance to help you grow")), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 120
     },
     __self: this
   }, __jsx("p", {
@@ -27297,7 +27312,7 @@ var GotYourBack = function GotYourBack() {
     className: "text-gray-750",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 121
     },
     __self: this
   }, "Weekly newsletters, articles, and resources are dedicated to help you succeed on every step of your hosting journey.")))))));
@@ -27471,47 +27486,55 @@ var joincommunity1 = 'https://a0.muscache.com/im/pictures/b7f0cbdb-2251-4513-b3c
 var joincommunity2 = 'https://a0.muscache.com/im/pictures/ff8d1952-e25c-4df8-889f-a846f7b34897.jpg?aki_policy=x_large';
 var JoinCommunity = function JoinCommunity() {
   return __jsx("div", {
-    className: "relative w-screen bg-gray-100 py-16",
+    className: "relative w-screen bg-gray-100 pt-2 md:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
-    className: "lg:max-w-5xl mx-auto",
+    className: "px-6 md:max-w-2xl lg:max-w-5xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
   }, __jsx("div", {
-    className: "grid grid-cols-2 items-center my-16",
+    className: "md:grid grid-cols-2 lg:items-center my-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
   }, __jsx("div", {
-    className: "w-1/2",
+    className: "mb-4 md:mb-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-80p lg:w-1/2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
     },
     __self: this
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-3xl text-gray-750",
+    className: "text-3xl text-gray-750 md:leading-9",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
-  }, "Join a growing community of curious people")), __jsx("div", {
+  }, "Join a growing community of curious people"))), __jsx("div", {
+    className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   }, __jsx("p", {
@@ -27521,14 +27544,21 @@ var JoinCommunity = function JoinCommunity() {
     className: "text-gray-750 text-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: this
   }, "Hosts are chefs, artists, DJs, and other experts in their fields. They make people from around the world feel connected, and give access to unique places and activities that can\u2019t be found anywhere else."))), __jsx("div", {
-    className: "grid grid-cols-2 gap-6",
+    className: "md:grid grid-cols-2 gap-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "pb-4 md:mb-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: this
   }, __jsx(_functions_JoinCommunityCard__WEBPACK_IMPORTED_MODULE_1__["JoinCommunityCard"], {
@@ -27538,20 +27568,27 @@ var JoinCommunity = function JoinCommunity() {
     color: "#dbb9c4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 39
     },
     __self: this
-  }), __jsx(_functions_JoinCommunityCard__WEBPACK_IMPORTED_MODULE_1__["JoinCommunityCard"], {
+  })), __jsx("div", {
+    className: "pb-4 md:mb-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, __jsx(_functions_JoinCommunityCard__WEBPACK_IMPORTED_MODULE_1__["JoinCommunityCard"], {
     img: joincommunity2,
     title: "Cici",
     description: "Shanghai resident and culinary host Cici believes cooking can bring happiness. She welcomes guests into her kitchen to learn how to make classic Chinese dumplings in a fun way.",
     color: "#d3e5e7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 47
     },
     __self: this
-  }))));
+  })))));
 };
 
 /***/ }),
@@ -30593,7 +30630,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fexperiences&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fexperiences.jsx ***!
   \***********************************************************************************************************************************************************************/
@@ -30616,5 +30653,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=experiences.js.map
