@@ -132,9 +132,9 @@ export const ExperiencesHeader: React.FC<Props> = ({ switchMenuModal }) => {
               </Link>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
-              <a href='#' className='text-sm  tracking-wide'>
-                Host an experience
-              </a>
+              <Link href='/host/experiences'>
+                <a className='text-sm tracking-wide'>Host an experience</a>
+              </Link>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <button

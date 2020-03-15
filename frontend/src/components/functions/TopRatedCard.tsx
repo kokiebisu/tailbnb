@@ -22,7 +22,7 @@ export const TopRatedCard: React.FC<Props> = ({
 }) => {
   return (
     <Link href='/experiences/[id]' as={`/experiences/${id}`}>
-      <div className='w-30/31 cursor-pointer'>
+      <div className='cursor-pointer'>
         <div>
           <img className='w-full h-full rounded-lg' src={img} />
         </div>

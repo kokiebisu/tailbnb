@@ -68,7 +68,7 @@ export const StayCard: React.FC<Prop> = ({
 
   return (
     <Link href='/stays/[id]' as={`/stays/${id}`}>
-      <div className='w-30/31 cursor-pointer'>
+      <div className='cursor-pointer'>
         <div>
           <img className='w-full h-full rounded' src={picture_url} />
         </div>

@@ -41714,7 +41714,7 @@ var renderContent = function renderContent(data, number) {
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      className: "pb-5",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41
@@ -41772,7 +41772,7 @@ var Adventures = function Adventures(_ref2) {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 87
@@ -42164,7 +42164,7 @@ var renderContent = function renderContent(data, number) {
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      className: "pb-5",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 38
@@ -42240,7 +42240,7 @@ var NextWeek = function NextWeek(_ref2) {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 98
@@ -42552,7 +42552,7 @@ var renderContent = function renderContent(data, number) {
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 pb-5",
+      className: "pb-5",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 56
@@ -42599,7 +42599,7 @@ var Stay = function Stay(_ref2) {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 81
@@ -42697,7 +42697,7 @@ var renderContent = function renderContent(data, number) {
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      className: "pb-5",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 46
@@ -42762,7 +42762,7 @@ var Today = function Today(_ref2) {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 92
@@ -42872,7 +42872,7 @@ var renderContent = function renderContent(data, number) {
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      className: "pb-5",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 60
@@ -42925,7 +42925,7 @@ var Tomorrow = function Tomorrow(_ref2) {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 98
@@ -43024,7 +43024,7 @@ var renderContent = function renderContent(data, number) {
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 pb-5",
+      className: "pb-5",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 41
@@ -43084,7 +43084,7 @@ var TopRated = function TopRated(_ref2) {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex items-start justify-start flex-wrap w-full",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 88
@@ -43152,7 +43152,7 @@ var AdventureCard = function AdventureCard(_ref) {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-30/31 cursor-pointer",
+    className: "cursor-pointer",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
@@ -43975,7 +43975,7 @@ var LocationExperienceCard = function LocationExperienceCard(_ref) {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-30/31 cursor-pointer",
+    className: "cursor-pointer",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -44280,7 +44280,7 @@ var StayCard = function StayCard(_ref) {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-30/31 cursor-pointer",
+    className: "cursor-pointer",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71
@@ -44406,7 +44406,7 @@ var TopRatedCard = function TopRatedCard(_ref) {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-30/31 cursor-pointer",
+    className: "cursor-pointer",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -48494,13 +48494,14 @@ var MenuModal = function MenuModal(_ref) {
       lineNumber: 197
     },
     __self: this
-  }, __jsx("div", {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/host/experiences",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 198
     },
     __self: this
-  }, __jsx("p", {
+  }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 199
