@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3855,9 +3855,9 @@ const FeaturedCard = ({
 
 /***/ }),
 
-/***/ "./src/components/functions/HeaderCard.tsx":
+/***/ "./src/components/functions/HeaderCard.jsx":
 /*!*************************************************!*\
-  !*** ./src/components/functions/HeaderCard.tsx ***!
+  !*** ./src/components/functions/HeaderCard.jsx ***!
   \*************************************************/
 /*! exports provided: HeaderCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -3867,22 +3867,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderCard", function() { return HeaderCard; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/HeaderCard.tsx";
+/* harmony import */ var _modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modals/GuestPickerModal */ "./src/components/modals/GuestPickerModal.jsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/HeaderCard.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
+ // Modals
+
+
 const HeaderCard = () => {
+  // Guest
+  const {
+    0: guestModal,
+    1: setGuestModal
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: adultNumber,
+    1: setAdultNumber
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const {
+    0: childrenNumber,
+    1: setChildrenNumber
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const {
+    0: infantNumber,
+    1: setInfantNumber
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+
+  const calculateGuests = (adultNumber, childrenNumber) => {
+    if (adultNumber === 0 && childrenNumber === 0) {
+      return 'Guest';
+    } else if (adultNumber + childrenNumber == 1) {
+      return `${adultNumber + childrenNumber} guest`;
+    } else if (adultNumber + childrenNumber > 1) {
+      return `${adultNumber + childrenNumber} guests`;
+    }
+  };
+
+  const calculateInfant = (adultNumber, infantNumber) => {
+    if (adultNumber == 0 || infantNumber === 0) {
+      return '';
+    } else if (infantNumber === 0) {
+      return `${infantNumber} infant`;
+    } else if (infantNumber > 0) {
+      return `${infantNumber} infants`;
+    }
+  };
+
   return __jsx("div", {
     className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx("div", {
     className: "mx-6 md:mx-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("h3", {
@@ -3892,26 +3934,26 @@ const HeaderCard = () => {
     className: "hidden md:inline-block md:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 37
     },
     __self: undefined
   }, "Book unique places to ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 40
     },
     __self: undefined
   }), "stay and things to do."), __jsx("form", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("div", {
-    className: "",
+    className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx("label", {
@@ -3922,7 +3964,7 @@ const HeaderCard = () => {
     htmlFor: "where",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 45
     },
     __self: undefined
   }, "Where"), __jsx("input", {
@@ -3935,21 +3977,21 @@ const HeaderCard = () => {
     placeholder: "Anywhere",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 51
     },
     __self: undefined
   })), __jsx("div", {
     className: "flex flex-wrap items-stretch justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 59
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 60
     },
     __self: undefined
   }, __jsx("label", {
@@ -3960,7 +4002,7 @@ const HeaderCard = () => {
     htmlFor: "checkin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 61
     },
     __self: undefined
   }, "Check-In"), __jsx("input", {
@@ -3973,14 +4015,14 @@ const HeaderCard = () => {
     placeholder: "dd-mm-yyyy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 67
     },
     __self: undefined
   })), __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 75
     },
     __self: undefined
   }, __jsx("label", {
@@ -3991,7 +4033,7 @@ const HeaderCard = () => {
     htmlFor: "checkout",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 76
     },
     __self: undefined
   }, "Check-Out"), __jsx("input", {
@@ -4004,13 +4046,14 @@ const HeaderCard = () => {
     placeholder: "dd-mm-yyyy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 82
     },
     __self: undefined
   }))), __jsx("div", {
+    className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 91
     },
     __self: undefined
   }, __jsx("label", {
@@ -4021,53 +4064,35 @@ const HeaderCard = () => {
     htmlFor: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 92
     },
     __self: undefined
   }, "Guests"), __jsx("div", {
     className: "inline-block relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 98
     },
     __self: undefined
-  }, __jsx("select", {
+  }, __jsx("button", {
     style: {
       fontFamily: 'airbnb-book'
     },
-    className: "appearance-none pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
-    id: "guests",
+    onClick: e => {
+      e.preventDefault();
+      setGuestModal(!guestModal);
+    },
+    className: "appearance-none pl-2 w-full border border-gray-300 py-3 text-left rounded placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 99
     },
     __self: undefined
-  }, __jsx("option", {
-    value: "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
-  }, "2 Guests"), __jsx("option", {
-    value: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
-  }, "3 Guests"), __jsx("option", {
-    value: "3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: undefined
-  }, "4 Guests")), __jsx("div", {
+  }, calculateGuests(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? `, ${calculateInfant(adultNumber, infantNumber)}` : null), __jsx("div", {
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 111
     },
     __self: undefined
   }, __jsx("svg", {
@@ -4076,28 +4101,43 @@ const HeaderCard = () => {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 112
     },
     __self: undefined
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 116
     },
     __self: undefined
-  })))))), __jsx("div", {
+  })))), guestModal ? __jsx(_modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_1__["GuestPickerModal"], {
+    incrementAdult: () => setAdultNumber(adultNumber + 1),
+    decrementAdult: () => setAdultNumber(adultNumber - 1),
+    incrementChildren: () => setChildrenNumber(childrenNumber + 1),
+    decrementChildren: () => setChildrenNumber(childrenNumber - 1),
+    incrementInfant: () => setInfantNumber(infantNumber + 1),
+    decrementInfant: () => setInfantNumber(infantNumber - 1),
+    adult: adultNumber,
+    children: childrenNumber,
+    infant: infantNumber,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121
+    },
+    __self: undefined
+  }) : null)), __jsx("div", {
     className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 135
     },
     __self: undefined
   }, __jsx("button", {
     className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-550 rounded text-white font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 136
     },
     __self: undefined
   }, "Search"))));
@@ -6668,7 +6708,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _functions_HeaderCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/HeaderCard */ "./src/components/functions/HeaderCard.tsx");
+/* harmony import */ var _functions_HeaderCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/HeaderCard */ "./src/components/functions/HeaderCard.jsx");
 /* harmony import */ var _modals_RegisterModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modals/RegisterModal */ "./src/components/modals/RegisterModal.tsx");
 /* harmony import */ var _modals_HelpModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modals/HelpModal */ "./src/components/modals/HelpModal.jsx");
 /* harmony import */ var _modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modals/CurrencyModal */ "./src/components/modals/CurrencyModal.tsx");
@@ -7410,6 +7450,297 @@ const CurrencyModal = ({
       __self: undefined
     }, currency.abbreviation, ' ', currency.abbreviation === null ? null : '-', ' ', currency.symbol)))));
   }))))));
+};
+
+/***/ }),
+
+/***/ "./src/components/modals/GuestPickerModal.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/modals/GuestPickerModal.jsx ***!
+  \****************************************************/
+/*! exports provided: GuestPickerModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GuestPickerModal", function() { return GuestPickerModal; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/GuestPickerModal.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+
+const renderCategory = (category, info, number, decrement, increment) => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, category)), info && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, info)))), __jsx("div", {
+    className: "flex items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("button", {
+    onClick: e => {
+      e.preventDefault();
+      increment();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-7 h-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    className: "w-full h-full",
+    viewBox: "0 0 512 512",
+    style: {
+      fill: '#008489'
+    },
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }), __jsx("path", {
+    d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  })))), __jsx("div", {
+    className: "px-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-lg text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, number, "+")), __jsx("button", {
+    onClick: e => {
+      e.preventDefault();
+      decrement();
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "h-7 w-7",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    style: {
+      fill: '#008489'
+    },
+    className: "w-full h-full",
+    viewBox: "0 0 512 512",
+    xmlns: "http://www.w3.org/2000/svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "m256 512c-141.164062 0-256-114.835938-256-256s114.835938-256 256-256 256 114.835938 256 256-114.835938 256-256 256zm0-480c-123.519531 0-224 100.480469-224 224s100.480469 224 224 224 224-100.480469 224-224-100.480469-224-224-224zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }), __jsx("path", {
+    d: "m368 272h-224c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h224c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }), __jsx("path", {
+    d: "m256 384c-8.832031 0-16-7.167969-16-16v-224c0-8.832031 7.167969-16 16-16s16 7.167969 16 16v224c0 8.832031-7.167969 16-16 16zm0 0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: undefined
+  }))))));
+};
+
+const GuestPickerSection = ({
+  category,
+  info,
+  number,
+  increment,
+  decrement
+}) => {
+  return __jsx("div", {
+    className: "py-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "flex justify-between",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: undefined
+  }, renderCategory(category, info, number, increment, decrement)));
+};
+
+const GuestPickerModal = ({
+  incrementAdult,
+  decrementAdult,
+  incrementChildren,
+  decrementChildren,
+  incrementInfant,
+  decrementInfant,
+  adult,
+  children,
+  infant
+}) => {
+  return __jsx("div", {
+    className: "absolute z-50 bg-white w-full px-6 shadow-xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "relative py-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: undefined
+  }, __jsx(GuestPickerSection, {
+    category: "Adults",
+    number: adult,
+    decrement: decrementAdult,
+    increment: incrementAdult,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: undefined
+  }), __jsx(GuestPickerSection, {
+    category: "Children",
+    info: "Ages 2 - 12",
+    number: children,
+    decrement: decrementChildren,
+    increment: incrementChildren,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: undefined
+  }), __jsx(GuestPickerSection, {
+    category: "Infants",
+    info: "Under 2",
+    number: infant,
+    decrement: decrementInfant,
+    increment: incrementInfant,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: undefined
+  }), adult + children > 0 ? __jsx("div", {
+    className: "absolute",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
+    },
+    __self: undefined
+  }, __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-gray-750 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
+    },
+    __self: undefined
+  }, "Clear")) : null, __jsx("div", {
+    className: "flex justify-end",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 123
+    },
+    __self: undefined
+  }, __jsx("button", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-green-850 text-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
+    },
+    __self: undefined
+  }, "Save"))));
 };
 
 /***/ }),
@@ -9776,7 +10107,7 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/
