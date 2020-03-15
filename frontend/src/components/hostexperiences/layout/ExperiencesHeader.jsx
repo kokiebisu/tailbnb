@@ -7,7 +7,7 @@ import { HelpModal } from '../../../components/modals/HelpModal';
 import { CurrencyModal } from '../../../components/modals/CurrencyModal';
 import { LanguageModal } from '../../../components/modals/LanguageModal';
 
-export const ExperiencesHeader = () => {
+export const ExperiencesHeader = ({ switchMenuModal }) => {
   const [languageModal, setLanguageModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
   const [helpModal, setHelpModal] = useState(false);

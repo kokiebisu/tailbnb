@@ -3,7 +3,7 @@ import * as React from 'react';
 export const ExperienceCategoryCard = ({ img, title, description, color }) => {
   return (
     <>
-      <div className='bg-white shadow-xl'>
+      <div className='bg-white shadow-xl mb-4 lg:mb-0'>
         <div className='w-full'>
           <img className='w-full h-full' src={img} />
         </div>

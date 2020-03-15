@@ -1,5 +1,8 @@
 import * as React from 'react';
-import ReactPlayer from 'react-player';
+import { useState } from 'react';
+
+// Modals
+import { HostMenuModal } from '../../components/modals/HostMenuModal';
 
 // Layout
 import { ExperiencesHeader } from '../../components/hostexperiences/layout/ExperiencesHeader';
@@ -14,20 +17,27 @@ import { ExperiencesQuestions } from '../../components/hostexperiences/layout/Ex
 import { NewFooter } from '../../components/layout/NewFooter';
 
 export default () => {
+  const [menuModal, setMenuModal] = useState(false);
+
+  const changeMenuModal = () => {
+    setMenuModal(!menuModal);
+  };
+
   return (
     <>
       <div className='relative top-0 bg-white w-screen z-50'>
-        <ExperiencesHeader />
+        <ExperiencesHeader switchMenuModal={changeMenuModal} />
       </div>
-
-      <div style={{ top: 150 }} className='w-screen fixed top-0 left-0'>
-        <ReactPlayer
-          width='100%'
-          height='100%'
-          playing
+      {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}
+      <div
+        id='experiences__video'
+        className='h-screen lg:w-screen fixed top-0 left-0'>
+        <video
+          playsInline
+          autoPlay
           loop
-          url='https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4'
-        />
+          className='w-full h-full object-cover'
+          src='https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4'></video>
       </div>
       <div className='relative z-50'>
         <ExperienceBanner />

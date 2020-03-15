@@ -431,9 +431,25 @@ body {
 }
 
 #react-player {
-  position: fixed;
-  top: 0px;
-  left: 0px;
+  object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  #experiences__video {
+    top: 150;
+  }
+}
+
+@media (min-width: 768px) {
+  #experiences__video {
+    top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #experiences__video {
+    top: 30px;
+  }
 }
 
 #hostexperience {
