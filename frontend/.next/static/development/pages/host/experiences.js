@@ -26334,7 +26334,7 @@ var ExperienceBanner = function ExperienceBanner() {
     },
     __self: this
   }, __jsx("div", {
-    className: "lg:max-w-5.5xl",
+    className: "mx-6 md:px-0 md:max-w-2xl lg:max-w-5.5xl",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -26369,7 +26369,7 @@ var ExperienceBanner = function ExperienceBanner() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "text-7xl tracking-tighter leading-20",
+    className: "text-4xl md:text-7xl tracking-tighter leading-11 md:leading-20",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
@@ -30500,85 +30500,83 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
     },
     __self: this
   })), __jsx("div", {
-    style: {
-      top: 150
-    },
-    className: "w-screen fixed top-0 left-0",
+    id: "experiences__video",
+    className: "h-screen lg:w-screen fixed top-0 left-0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, __jsx(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    width: "100%",
-    height: "100%",
-    playing: true,
+  }, __jsx("video", {
+    playsInline: true,
+    autoPlay: true,
     loop: true,
-    url: "https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4",
+    className: "w-full h-full object-cover",
+    src: "https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   })), __jsx("div", {
     className: "relative z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }, __jsx(_components_hostexperiences_layout_ExperiencesBanner__WEBPACK_IMPORTED_MODULE_3__["ExperienceBanner"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_WhatsAnExperience__WEBPACK_IMPORTED_MODULE_4__["WhatsAnExperience"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_ShowWhatYouKnow__WEBPACK_IMPORTED_MODULE_5__["ShowWhatYouKnow"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_ExperienceCategory__WEBPACK_IMPORTED_MODULE_6__["ExperienceCategory"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_JoinCommunity__WEBPACK_IMPORTED_MODULE_7__["JoinCommunity"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_GotYourBack__WEBPACK_IMPORTED_MODULE_8__["GotYourBack"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_HowToGetStarted__WEBPACK_IMPORTED_MODULE_9__["HowToGetStarted"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: this
   }), __jsx(_components_hostexperiences_layout_ExperiencesQuestions__WEBPACK_IMPORTED_MODULE_10__["ExperiencesQuestions"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   }), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_11__["NewFooter"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   })));
@@ -30586,7 +30584,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhost%2Fexperiences&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fhost%2Fexperiences.jsx ***!
   \***********************************************************************************************************************************************************************/
@@ -30609,5 +30607,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=experiences.js.map
