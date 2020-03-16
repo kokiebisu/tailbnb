@@ -19134,8 +19134,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _functions_Location__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../functions/Location */ "./src/components/functions/Location.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_5__);
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
@@ -19144,7 +19142,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
  // Components
 
  // Wrapper
-
 
 
 var Popular = function Popular() {
@@ -19213,14 +19210,14 @@ var Popular = function Popular() {
     title: "Popular destinations in the United States",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -19228,31 +19225,23 @@ var Popular = function Popular() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: this
   })) : __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full",
+    className: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 flex flex-wrap items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 75
     },
     __self: this
   }, locations.map(function (_ref, index) {
     var location = _ref.location,
         price = _ref.price;
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-      key: cuid__WEBPACK_IMPORTED_MODULE_5___default()(),
+    return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 78
       },
       __self: this
     }, __jsx(_functions_Location__WEBPACK_IMPORTED_MODULE_3__["Location"], {
@@ -19261,10 +19250,10 @@ var Popular = function Popular() {
       price: price,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 79
       },
       __self: this
-    })));
+    }));
   }))));
 };
 
@@ -19878,7 +19867,7 @@ var Location = function Location(_ref) {
   var location = _ref.location,
       price = _ref.price;
   return __jsx("div", {
-    className: "w-90p py-3 my-2",
+    className: "py-3 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -19894,7 +19883,7 @@ var Location = function Location(_ref) {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-gray-750",
+    className: "text-gray-850 text-lg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -19907,14 +19896,14 @@ var Location = function Location(_ref) {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, __jsx("p", {
     className: "text-xs text-gray-650 md:text-sm whitespace-normal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, "$", price, "/night average")));
@@ -22020,7 +22009,7 @@ var two = function two() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.js ***!
   \******************************************************************************************************************************************************/
@@ -22043,5 +22032,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=two.js.map

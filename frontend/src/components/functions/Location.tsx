@@ -7,9 +7,11 @@ interface Prop {
 
 export const Location: React.FC<Prop> = ({ location, price }) => {
   return (
-    <div className='w-90p py-3 my-2'>
+    <div className='py-3 my-2'>
       <div>
-        <h3 style={{ fontFamily: 'airbnb-medium' }} className='text-gray-750'>
+        <h3
+          style={{ fontFamily: 'airbnb-medium' }}
+          className='text-gray-850 text-lg'>
           {location}
         </h3>
       </div>

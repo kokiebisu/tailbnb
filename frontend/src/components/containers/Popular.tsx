@@ -7,7 +7,6 @@ import { Location } from '../functions/Location';
 
 // Wrapper
 import { Section } from '../wrapper/Section';
-import cuid from 'cuid';
 
 interface Location {
   location: string;
@@ -73,14 +72,12 @@ export const Popular: React.FC<{}> = () => {
             <PulseLoader size={10} color={'#008489'} />
           </div>
         ) : (
-          <div className='flex flex-wrap items-center justify-start w-full'>
+          <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 flex flex-wrap items-center'>
             {locations.map(({ location, price }, index) => {
               return (
-                <React.Fragment key={cuid()}>
-                  <div className='text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5'>
-                    <Location key={index} location={location} price={price} />
-                  </div>
-                </React.Fragment>
+                <div>
+                  <Location key={index} location={location} price={price} />
+                </div>
               );
             })}
           </div>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2248,8 +2248,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _functions_Location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/Location */ "./src/components/functions/Location.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cuid */ "cuid");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -2257,7 +2255,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Components
 
  // Wrapper
-
 
 
 const Popular = () => {
@@ -2311,14 +2308,14 @@ const Popular = () => {
     title: "Popular destinations in the United States",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -2326,32 +2323,24 @@ const Popular = () => {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: undefined
   })) : __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full",
+    className: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 flex flex-wrap items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 75
     },
     __self: undefined
   }, locations.map(({
     location,
     price
   }, index) => {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-      key: cuid__WEBPACK_IMPORTED_MODULE_4___default()(),
+    return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 78
       },
       __self: undefined
     }, __jsx(_functions_Location__WEBPACK_IMPORTED_MODULE_2__["Location"], {
@@ -2360,10 +2349,10 @@ const Popular = () => {
       price: price,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 79
       },
       __self: undefined
-    })));
+    }));
   }))));
 };
 
@@ -2981,7 +2970,7 @@ const Location = ({
   price
 }) => {
   return __jsx("div", {
-    className: "w-90p py-3 my-2",
+    className: "py-3 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -2997,7 +2986,7 @@ const Location = ({
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-gray-750",
+    className: "text-gray-850 text-lg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -3010,14 +2999,14 @@ const Location = ({
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx("p", {
     className: "text-xs text-gray-650 md:text-sm whitespace-normal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: undefined
   }, "$", price, "/night average")));
@@ -5126,7 +5115,7 @@ const two = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*************************************!*\
   !*** multi ./src/pages/page/two.js ***!
   \*************************************/
