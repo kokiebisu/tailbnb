@@ -6,7 +6,6 @@ import {
   getDaysInMonth,
   generateUnexistingDays,
   generateUnavailableDays,
-  generateAvailableDays,
   getEndingDate
 } from '../../util/CalendarModalFunctions';
 
@@ -35,7 +34,7 @@ const days = [
   'Saturday'
 ];
 
-export const CalendarModal = () => {
+export const CalendarModal = ({ setCheckDate }) => {
   // Info
   const today = new Date();
   const currentDate = today.getDate();
@@ -47,14 +46,20 @@ export const CalendarModal = () => {
   const [displayedMonth, setDisplayedMonth] = useState(currentMonth);
   const [displayedYear, setDisplayedYear] = useState(currentYear);
 
+  // Selected
+  const [selectedDate, setSelectedDate] = useState(null);
+
   useEffect(() => {
-    console.log('month', displayedMonth);
     if (displayedMonth !== currentMonth) {
       setDisplayedDate(null);
     } else {
       setDisplayedDate(currentDate);
     }
   }, [displayedMonth]);
+
+  useEffect(() => {
+    setCheckDate([selectedDate, displayedMonth + 1, displayedYear]);
+  }, [selectedDate]);
 
   return (
     <div
@@ -161,10 +166,30 @@ export const CalendarModal = () => {
 
           {generateAvailableDays(
             displayedDate,
-            getEndingDate(displayedMonth, displayedYear).getDate()
+            getEndingDate(displayedMonth, displayedYear).getDate(),
+            setSelectedDate
           )}
         </div>
       </div>
     </div>
   );
+};
+
+const generateAvailableDays = (today, lastday, setSelectedDate) => {
+  var result = [];
+  for (let i = today; i <= lastday; i++) {
+    result.push(
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          setSelectedDate(i);
+        }}
+        className='flex justify-center'>
+        <div className='text-white py-1'>
+          <p className='text-gray-900'>{i}</p>
+        </div>
+      </button>
+    );
+  }
+  return result;
 };

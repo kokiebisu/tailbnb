@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { TweenLite, Power3 } from 'gsap';
 import {
   calculateGuests,
@@ -12,8 +12,13 @@ import { CalendarModal } from '../modals/CalendarModal';
 import { GuestPickerModal } from '../modals/GuestPickerModal';
 
 export const HeaderCard = () => {
-  // Date
+  // Check in
   const [checkInModal, setCheckInModal] = useState(false);
+  const [checkInDate, setCheckInDate] = useState(['dd', 'mm', 'yy']);
+
+  // Check out
+  const [checkOutModal, setCheckOutModal] = useState(false);
+  const [checkOutDate, setCheckOutDate] = useState(['dd', 'mm', 'yy']);
 
   // Guest
   const [guestModal, setGuestModal] = useState(false);
@@ -23,6 +28,10 @@ export const HeaderCard = () => {
 
   let guestArrow1 = useRef(null);
   let guestArrow2 = useRef(null);
+
+  useEffect(() => {
+    console.log('checin', checkInDate);
+  }, [checkInDate]);
 
   return (
     <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
@@ -57,29 +66,33 @@ export const HeaderCard = () => {
                 htmlFor='checkin'>
                 Check-In
               </label>
-              <div className='inline-block relative w-full'>
+              <div className='relative w-full'>
+                <div className='w-full flex justify-start'>
+                  {checkInModal ? (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCheckInModal(!checkInModal);
+                      }}
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
+                      dd-mm-yy
+                    </button>
+                  ) : (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCheckInModal(!checkInModal);
+                      }}
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='pr-16 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
+                      {`${checkInDate[0]}/${checkInDate[1]}/${checkInDate[2]}`}
+                    </button>
+                  )}
+                </div>
                 {checkInModal ? (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setCheckInModal(!checkInModal);
-                    }}
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='pl-2 w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
-                    dd-mm-yyyy
-                  </button>
-                ) : (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setCheckInModal(!checkInModal);
-                    }}
-                    style={{ fontFamily: 'airbnb-book' }}
-                    className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
-                    dd-mm-yyyy
-                  </button>
-                )}
-                {checkInModal ? <CalendarModal /> : null}
+                  <CalendarModal setCheckDate={setCheckInDate} />
+                ) : null}
               </div>
             </div>
             <div className='w-1/2'>
@@ -89,13 +102,38 @@ export const HeaderCard = () => {
                 htmlFor='checkout'>
                 Check-Out
               </label>
-              <input
-                style={{ fontFamily: 'airbnb-book' }}
-                className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'
-                type='text'
-                id='checkout'
-                placeholder='dd-mm-yyyy'
-              />
+              <div className='relative w-full'>
+                <div className='w-full flex justify-start'>
+                  {checkOutModal && !checkInModal ? (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCheckOutModal(!checkOutModal);
+                      }}
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
+                      dd-mm-yy
+                    </button>
+                  ) : (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setCheckOutModal(!checkOutModal);
+                      }}
+                      style={{ fontFamily: 'airbnb-book' }}
+                      className='pr-16 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
+                      {`${checkOutDate[0]}/${checkOutDate[1]}/${checkOutDate[2]}`}
+                    </button>
+                  )}
+                </div>
+                {checkOutModal && !checkInModal ? (
+                  <div
+                    style={{ top: -50, right: 115 }}
+                    className='bg-red-550 relative'>
+                    <CalendarModal setCheckDate={setCheckOutDate} />
+                  </div>
+                ) : null}
+              </div>
             </div>
           </div>
           <div className='relative'>
