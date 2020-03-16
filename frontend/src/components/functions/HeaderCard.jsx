@@ -29,10 +29,6 @@ export const HeaderCard = () => {
   let guestArrow1 = useRef(null);
   let guestArrow2 = useRef(null);
 
-  useEffect(() => {
-    console.log('checin', checkInDate);
-  }, [checkInDate]);
-
   return (
     <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
       <div className='mx-6 md:mx-8'>
