@@ -88,39 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./node_modules/@babel/runtime/helpers/extends.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/extends.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _extends() {
-  module.exports = _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
-
-/***/ }),
 
 /***/ "./node_modules/next/dist/client/link.js":
 /*!***********************************************!*\
@@ -2182,162 +2153,6 @@ const ShowAll = ({
 
 /***/ }),
 
-/***/ "./src/components/containers/Adventures.jsx":
-/*!**************************************************!*\
-  !*** ./src/components/containers/Adventures.jsx ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _functions_AdventureCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/AdventureCard */ "./src/components/functions/AdventureCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Adventures.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
-
-
-
- // Component
-
-
- // Wrapper
-
-
-const GET_ADVENTURES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
-  query {
-    adventures {
-      id
-      title
-      period
-      cost
-      country
-      img
-    }
-  }
-`;
-
-const mapSizesToProps = ({
-  width
-}) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-});
-
-const renderContent = (data, number) => {
-  var content = [];
-
-  for (let i = 0; i < number; i++) {
-    content.push(__jsx("div", {
-      className: "pb-5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: undefined
-    }, __jsx(_functions_AdventureCard__WEBPACK_IMPORTED_MODULE_5__["AdventureCard"], {
-      key: i,
-      id: data === null || data === void 0 ? void 0 : data.adventures[i].id,
-      img: data === null || data === void 0 ? void 0 : data.adventures[i].img,
-      country: data === null || data === void 0 ? void 0 : data.adventures[i].country,
-      title: data === null || data === void 0 ? void 0 : data.adventures[i].title,
-      cost: data === null || data === void 0 ? void 0 : data.adventures[i].cost,
-      period: data === null || data === void 0 ? void 0 : data.adventures[i].period,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: undefined
-    })));
-  }
-
-  return content;
-}; // interface Adventure {
-//   id: string;
-//   title: string;
-//   period: number;
-//   cost: number;
-//   country: string;
-//   img: string;
-// }
-// interface AdventureData {
-//   adventures: Adventure[];
-// }
-
-
-const Adventures = ({
-  isMobile,
-  isTablet,
-  isLaptop,
-  isDesktop,
-  isLargeDesktop
-}) => {
-  const {
-    loading,
-    error,
-    data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES);
-  if (error) return `Error! ${error.message}`;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_7__["Section"], {
-    title: "Introducing Airbnb Adventures",
-    phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: undefined
-  }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: undefined
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: undefined
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
-    title: "Show all adventures",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: undefined
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_4___default()(mapSizesToProps)(Adventures));
-
-/***/ }),
-
 /***/ "./src/components/containers/Explore.tsx":
 /*!***********************************************!*\
   !*** ./src/components/containers/Explore.tsx ***!
@@ -2472,153 +2287,6 @@ const Explore = () => {
       __self: undefined
     })));
   }))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Featured.tsx":
-/*!************************************************!*\
-  !*** ./src/components/containers/Featured.tsx ***!
-  \************************************************/
-/*! exports provided: Featured */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Featured", function() { return Featured; });
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/FeaturedCard */ "./src/components/functions/FeaturedCard.tsx");
-/* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
-
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Featured.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
- // Components
-
- // Wrapper
-
-
-const Featured = () => {
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  const setSleep = async seconds => {
-    await sleep(seconds);
-  };
-
-  const featureds = [{
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/e8afe40c-86e0-4064-8f98-7a742728f266.jpg',
-    location: 'Cape Town',
-    verified: 940,
-    description: 'Find dockside lofts, sunny studios, and more verified places to stay in a city that stuns from sky to sea.',
-    type: 1,
-    color: '#268cff'
-  }, {
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/afd64fec-14ea-4dbe-9f20-a5b8ee660535.jpg',
-    location: 'Sydney',
-    verified: 390,
-    description: 'Browse verified places to stay with artful style, in a city that wows from beach to bushland.',
-    type: 2,
-    color: '#fa7921'
-  }, {
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/7ed333a6-a2a3-4d02-bd86-022291fd3be4.jpg',
-    location: 'Chicago',
-    verified: 210,
-    description: "Explore Chicago's stunning architecture from the inside-in homes verified for quality and design.",
-    type: 3,
-    color: '#fe9920'
-  }, {
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/2e5b5fcf-df39-4486-a6a7-c1fc0c5790bc.jpg',
-    location: 'San Francisco',
-    verified: 290,
-    description: 'Discover Victorian flats, SoMa lofts,, and more verified places to stay in a city where invention meets counterculture.',
-    type: 4,
-    color: '#50c878'
-  }, {
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/f8dd8070-c548-4a2b-bdb1-2b191395f8fa.jpg',
-    location: 'Austin',
-    verified: 400,
-    description: 'Come for the music, stay for the BBQ, and rest easy in places to stay verified for quality and comfort.',
-    type: 5,
-    color: '#47315b'
-  }, {
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/17c76104-0a61-4e32-b9e4-dcf99f1f9237.jpg',
-    location: 'Melbourne',
-    verified: 440,
-    description: 'Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffee and street art.',
-    type: 6,
-    color: '#c64971'
-  }, {
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/316c7597-08da-4d77-9243-13292e282050.jpg',
-    location: 'London',
-    verified: 550,
-    description: 'Explore London from secluded garden flats and luminous lofts—all verified for quality and design.',
-    type: 7,
-    color: '#2b3651'
-  }, {
-    img: 'https://a0.muscache.com/4ea/air/v2/pictures/d82b445b-b7ce-4277-9131-3aab48633e9d.jpg',
-    location: 'Los Angeles',
-    verified: 930,
-    description: 'Find beachside bungalows, mid-century modern cottages, and more verified places to stay in the City of Angels.',
-    type: 8,
-    color: '#dd5337'
-  }];
-  setSleep(3000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_3__["SectionOverflow"], {
-    title: "Featured Airbnb Plus destinations",
-    phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 114
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-full h-full overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 115
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "h-full scroller",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "grid grid-cols-8 gap-4 not-sr-only flex scrollable sm:inset-x-0 flex items-start justify-start py-2 min-w-512 rounded-xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: undefined
-  }, featureds.map(featured => {
-    return __jsx("div", {
-      className: "",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 120
-      },
-      __self: undefined
-    }, __jsx(_functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__["FeaturedCard"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, featured, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 121
-      },
-      __self: undefined
-    })));
-  })))))));
 };
 
 /***/ }),
@@ -2833,143 +2501,6 @@ const Plus = () => {
     },
     __self: undefined
   })));
-};
-
-/***/ }),
-
-/***/ "./src/components/containers/Popular.tsx":
-/*!***********************************************!*\
-  !*** ./src/components/containers/Popular.tsx ***!
-  \***********************************************/
-/*! exports provided: Popular */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Popular", function() { return Popular; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _functions_Location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/Location */ "./src/components/functions/Location.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cuid */ "cuid");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
- // Components
-
- // Wrapper
-
-
-
-const Popular = () => {
-  const {
-    0: loading,
-    1: setLoading
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  const setSleep = async seconds => {
-    await sleep(seconds);
-    setLoading(false);
-  };
-
-  const locations = [{
-    location: 'San Francisco',
-    price: 216
-  }, {
-    location: 'Los Angeles',
-    price: 213
-  }, {
-    location: 'New York',
-    price: 159
-  }, {
-    location: 'Seattle',
-    price: 134
-  }, {
-    location: 'Denver',
-    price: 128
-  }, {
-    location: 'Washington DC',
-    price: 166
-  }, {
-    location: 'Phoenix',
-    price: 232
-  }, {
-    location: 'Austin',
-    price: 242
-  }, {
-    location: 'Houston',
-    price: 351
-  }, {
-    location: 'New Orleans',
-    price: 210
-  }];
-  setSleep(5000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_3__["Section"], {
-    title: "Popular destinations in the United States",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: undefined
-  }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: undefined
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
-  })) : __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: undefined
-  }, locations.map(({
-    location,
-    price
-  }, index) => {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-      key: cuid__WEBPACK_IMPORTED_MODULE_4___default()(),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
-      },
-      __self: undefined
-    }, __jsx(_functions_Location__WEBPACK_IMPORTED_MODULE_2__["Location"], {
-      key: index,
-      location: location,
-      price: price,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 81
-      },
-      __self: undefined
-    })));
-  }))));
 };
 
 /***/ }),
@@ -3627,123 +3158,6 @@ const TopRated = ({
 
 /***/ }),
 
-/***/ "./src/components/functions/AdventureCard.tsx":
-/*!****************************************************!*\
-  !*** ./src/components/functions/AdventureCard.tsx ***!
-  \****************************************************/
-/*! exports provided: AdventureCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdventureCard", function() { return AdventureCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/AdventureCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
-const AdventureCard = ({
-  id,
-  img,
-  country,
-  title,
-  cost,
-  period
-}) => {
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/adventures/[id]",
-    as: `/adventures/${id}`,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "cursor-pointer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: undefined
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "w-full h-full rounded-lg",
-    src: img,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "mt-2 mb-1 md:mb-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
-  }, __jsx("p", {
-    id: "card_category",
-    className: "uppercase text-2xs md:text-xs",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: undefined
-  }, country)), __jsx("div", {
-    className: "text-sm md:text-base",
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "my-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, __jsx("p", {
-    className: "leading-4 truncate",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }, title)), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  }, "From $", cost, " / person", __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
-  }, " \xB7 "), period, " days")))));
-};
-
-/***/ }),
-
 /***/ "./src/components/functions/ExploreCard.tsx":
 /*!**************************************************!*\
   !*** ./src/components/functions/ExploreCard.tsx ***!
@@ -3806,352 +3220,6 @@ const ExploreCard = ({
     },
     __self: undefined
   }, title)))));
-};
-
-/***/ }),
-
-/***/ "./src/components/functions/FeaturedCard.tsx":
-/*!***************************************************!*\
-  !*** ./src/components/functions/FeaturedCard.tsx ***!
-  \***************************************************/
-/*! exports provided: FeaturedCard */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturedCard", function() { return FeaturedCard; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/FeaturedCard.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
-const renderPattern = (type, color) => {
-  switch (type) {
-    case 1:
-      return __jsx("svg", {
-        viewBox: "0 0 92 5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M81.863 3.149c.924.04.935 1.473.005 1.44-5.877-.213-11.757-.396-17.636-.543a1197.883 1197.883 0 0 0-62.48.07c-.937.026-.938-1.43-.005-1.457a1197.297 1197.297 0 0 1 48.817-.357c10.436.137 20.87.403 31.299.847zM90.766.405c.868.02.876 1.367.005 1.354-6.632-.1-13.265-.186-19.897-.256a2549.99 2549.99 0 0 0-35.023-.15c-11.763.038-23.525.166-35.286.382C-.187 1.749-.188.58.56.563a2308.829 2308.829 0 0 1 54.92-.56c11.763.02 23.525.139 35.286.402z",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        },
-        __self: undefined
-      }));
-
-    case 2:
-      return __jsx("svg", {
-        viewBox: "0 0 77 6",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M76.223 1.027c-9.794.058-19.587.024-29.38-.074C37.049.856 27.257.686 17.466.446 11.952.311 6.439.141.926 0-.317-.03-.302 1.765.933 1.81c9.786.362 19.58.54 29.372.672 3.622.048 7.245.083 10.868.108a937.013 937.013 0 0 0-27.007 2.077c-.893.082-.901 1.41.005 1.33a936.8 936.8 0 0 1 24.14-1.854 890.681 890.681 0 0 1 24.285-1.21c4.544-.164 9.088-.296 13.633-.395 1.03-.022 1.028-1.517-.006-1.51",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: undefined
-      }));
-
-    case 3:
-      return __jsx("svg", {
-        viewBox: "0 0 132 10",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M12.794 25.962c.166-.054.334-.106.5-.161-.083.03-.244.084-.513.168l.013-.007M131.946.954c-.248-.748-1.15-1.071-1.943-.916-.385.075-.774.123-1.163.176-.116.011-.232.025-.348.037-.287.03-.574.056-.862.082-1.376.124-2.755.215-4.135.293-3.69.21-7.385.339-11.079.448-8.249.245-16.502.375-24.755.47-7.757.092-15.514.157-23.27.228-9.215.084-18.43.129-27.647.093-10.137-.04-20.275-.12-30.413-.151-1.748-.006-3.495 0-5.242.048-1.465.04-1.442 1.864.009 1.931 5.371.25 10.763.271 16.145.34-3.689.563-7.376 1.175-11.012 1.942-1.28.27-3.437.499-4.225 1.587-.58.8.227 1.998 1.3 1.887 5.935-.613 11.88-1.223 17.843-1.582 5.288-.32 10.63-.445 15.908.074a46 46 0 0 1 7.44 1.355c1.9.511 2.756-2.002.826-2.554-4.66-1.331-9.644-1.717-14.51-1.784a115.74 115.74 0 0 0-5.024.045c.68-.116 1.36-.23 2.04-.347.827-.143 1.679-.262 2.51-.44l3.43.037c8.904.097 17.807.127 26.712.107 8.294-.02 16.59-.07 24.884-.153 8.078-.08 16.156-.194 24.231-.4 3.92-.1 7.841-.22 11.759-.406 2.792-.133 5.6-.266 8.37-.634.378-.05.754-.109 1.128-.182.787-.153 1.324-.932 1.093-1.63",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: undefined
-      }));
-
-    case 4:
-      return __jsx("svg", {
-        viewBox: "0 0 104 10",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M102.966 1.64a1297.23 1297.23 0 0 0-39.92-1.2 1336.657 1336.657 0 0 0-39.998.024c-3.724.056-7.45.129-11.178.218C8.221.768 4.551.892.894 1.995c-.838.252-.81 2.226.003 2.28a1927.937 1927.937 0 0 1 38.026 2.897l-.962.234c-.414.1-.74.825-.687 1.49.06.753.497 1.017.906.95 3.277-.536 6.558-1.265 9.835-1.913.904-.179.839-2.35-.004-2.42-11.117-.93-22.234-1.845-33.363-2.635a1196.296 1196.296 0 0 1 26.087-.357 1275.817 1275.817 0 0 1 62.044 1.32c.894.04 1.086-2.16.187-2.2",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        },
-        __self: undefined
-      }));
-
-    case 5:
-      return __jsx("svg", {
-        viewBox: "0 0 67 17",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M66.422 3.471c-3.874-1.387-8.03-1.944-12.153-2.313A286.65 286.65 0 0 0 41.283.312 299.882 299.882 0 0 0 15.42.315C10.544.522 5.675.837.82 1.25c-.767.065-.494 1.049.256.984C18.04.767 35.242.832 52.276 2.214c4.267.347 8.548.796 12.613 2.06-.714.38-1.659.45-2.49.508-1.681.118-3.368.193-5.054.254-3.323.118-6.651.157-9.979.175-6.586.036-13.177-.005-19.75.308-3.727.177-7.443.477-11.126.965-.512.068-.866.607-.584 1.02.507.741 1.333 1.13 2.273 1.33 1.17.25 2.375.404 3.563.562 2.625.349 5.264.583 7.9.853 4.758.487 9.528 1.124 14.026 2.68 2.43.842 4.631 2.024 6.759 3.348.606.377 1.446-.345.887-.838-3.091-2.724-7.517-4.264-11.687-5.201-4.773-1.073-9.682-1.428-14.55-1.935a119.4 119.4 0 0 1-4.363-.52c-.452-.064-.908-.125-1.36-.199 12.723-1.453 25.652-.78 38.463-1.334 1.827-.08 3.675-.133 5.489-.325 1.347-.142 2.72-.5 3.496-1.527.267-.355.053-.772-.38-.927",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 49
-        },
-        __self: undefined
-      }));
-
-    case 6:
-      return __jsx("svg", {
-        viewBox: "0 0 87 5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M85.84 2.324a660.672 660.672 0 0 0-13.71-.092 9.425 9.425 0 0 1 1.648.585c.374.174.685.63.57 1.252-.114.612-.53.734-.91.553-2.173-1.04-4.4-1.053-6.596-1.092l-7.08-.125c-4.72-.082-9.44-.16-14.16-.24-6.202-.103-12.405-.214-18.607-.318-1.889.043-3.777.087-5.665.132-6.029.146-12.054.352-18.084.483-.392.008-.574-.599-.453-.972l-1.684-.024C.658 2.459.548 1.45 1.006 1.454c5.186.04 10.372.077 15.557.111 6.243-.241 12.49-.418 18.738-.576C46.039.716 56.784.539 67.536.452 73.569.404 79.609.447 85.64.384c.35-.004.72.328.78.903.053.523-.23 1.044-.581 1.037",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        },
-        __self: undefined
-      }));
-
-    case 7:
-      return __jsx("svg", {
-        viewBox: "0 0 85 12",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 64
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M83.055.448c-10.69.449-21.379.944-32.078 1.206-10.64.261-21.29.33-31.93-.038A360.72 360.72 0 0 1 1.075.563c-1.213-.102-1.22 1.58-.023 1.688 10.645.96 21.335 1.394 32.025 1.505 4.548.047 9.096.033 13.644-.024-2.866.373-5.728.777-8.585 1.216-4.21.648-8.405 1.373-12.583 2.181-.65.126-1.103.79-.923 1.402.195.666.924.931 1.583.825 9.302-1.503 18.884-.864 28.132.712 2.346.4 4.676.882 6.985 1.448 1.424.35 2.116-1.608.651-2.004-5.919-1.597-12.033-2.656-18.185-3.088 8.824-1.246 17.698-2.184 26.59-2.893 4.21-.336 8.424-.623 12.64-.875.635-.038 1.25-.425 1.26-1.087.007-.604-.593-1.148-1.23-1.12",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: undefined
-      }));
-
-    case 8:
-      return __jsx("svg", {
-        viewBox: "0 0 152 10",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: undefined
-      }, __jsx("path", {
-        style: {
-          fill: color
-        },
-        d: "M150.033.736c.76.01 1.43.832 1.342 1.626-.1.89-.87 1.332-1.64 1.324-10.863-.103-21.725-.22-32.588-.341-19.165-.212-38.332-.382-57.5-.51-19.296-.13-38.594-.191-57.893-.203C.168 2.63.441.182 2.003.18 12.868.17 23.733.172 34.599.188c19.178.028 38.354.037 57.53.117 19.303.081 38.605.187 57.904.431zm-47.79 6.114c1.613.033 1.344 2.53-.252 2.493l-14.539-.336-50.884-1.174c-1.5-.035-1.246-2.353.235-2.323l14.542.298 50.898 1.042z",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: undefined
-      }));
-  }
-};
-
-const FeaturedCard = ({
-  img,
-  location,
-  verified,
-  description,
-  type,
-  color
-}) => {
-  return __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: undefined
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "w-full h-full rounded-xl",
-    src: img,
-    alt: "adventure1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: undefined
-  })), __jsx("div", {
-    style: {
-      top: 70,
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
-    },
-    className: "absolute mx-auto flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 100
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: undefined
-  }, __jsx("svg", {
-    className: "w-full h-full",
-    viewBox: "0 0 470 239",
-    style: {
-      fill: '#3C3C41'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 104
-    },
-    __self: undefined
-  }, __jsx("path", {
-    d: "M104.707 148.464c-.512-1.438-1.109-2.83-1.677-4.118a386.734 386.734 0 0 0-2.678-5.889l-.07-.152a1318.773 1318.773 0 0 0-25.22-51.674l-.374-.728c-.9-1.75-1.832-3.56-2.787-5.337-1.116-2.076-2.352-4.275-4.1-6.322-3.766-4.412-8.966-6.842-14.645-6.842s-10.88 2.431-14.648 6.845c-1.746 2.048-2.981 4.245-4.098 6.321a341.749 341.749 0 0 0-2.812 5.387l-.348.676a1319.873 1319.873 0 0 0-25.22 51.673l-.114.25a388.09 388.09 0 0 0-2.632 5.791c-.569 1.288-1.166 2.678-1.678 4.12-1.497 4.213-1.941 8.24-1.359 12.308 1.219 8.513 6.924 15.809 14.89 19.041a24.699 24.699 0 0 0 9.335 1.81c.995 0 2.007-.06 3.007-.176 3.833-.445 7.695-1.75 11.48-3.88 4.629-2.606 9.202-6.425 14.197-11.883 4.996 5.458 9.569 9.277 14.199 11.883 3.784 2.13 7.646 3.435 11.478 3.88 1 .116 2.013.175 3.008.175a24.69 24.69 0 0 0 9.334-1.809c7.965-3.231 13.671-10.528 14.891-19.041.582-4.067.137-8.093-1.36-12.31zm-51.55 6.352c-6.213-7.89-10.2-15.216-11.599-21.358-.587-2.578-.721-4.947-.398-7.041.278-1.812.9-3.431 1.848-4.815 2.145-3.127 5.938-4.994 10.15-4.994 4.209 0 8.002 1.867 10.147 4.996.949 1.383 1.57 3.003 1.849 4.815.322 2.097.187 4.466-.4 7.044-1.401 6.141-5.387 13.465-11.598 21.353zm45.897 5.35a17.098 17.098 0 0 1-10.46 13.375c-2.745 1.114-5.746 1.506-8.796 1.153-2.919-.34-5.792-1.322-8.783-3.005-4.14-2.33-8.331-5.908-13.048-11.157 7.508-9.275 12.197-17.824 13.933-25.439.794-3.481.962-6.774.5-9.788-.448-2.908-1.474-5.548-3.05-7.846-3.511-5.123-9.565-8.182-16.195-8.182-6.627 0-12.68 3.058-16.192 8.18-1.576 2.298-2.601 4.938-3.048 7.845-.464 3.01-.297 6.302.496 9.784 1.735 7.618 6.424 16.169 13.934 25.447-4.716 5.248-8.907 8.825-13.048 11.156-2.99 1.683-5.863 2.666-8.782 3.005-3.049.353-6.052-.039-8.797-1.153a17.095 17.095 0 0 1-10.46-13.376c-.418-2.923-.095-5.742 1.018-8.872.41-1.154.889-2.286 1.483-3.632.84-1.903 1.732-3.838 2.595-5.709l.116-.251a1318.605 1318.605 0 0 1 25.196-51.625l.35-.682a336.93 336.93 0 0 1 2.765-5.295c.972-1.808 1.95-3.555 3.236-5.063 2.403-2.815 5.563-4.303 9.14-4.303 3.575 0 6.734 1.487 9.137 4.302 1.287 1.508 2.265 3.255 3.236 5.061a333.39 333.39 0 0 1 2.74 5.247l.377.734a1317.39 1317.39 0 0 1 25.196 51.625l.071.155a379.704 379.704 0 0 1 2.64 5.805c.595 1.347 1.075 2.48 1.484 3.63 1.111 3.132 1.434 5.951 1.016 8.873zm194.117-43.622c0-33.068 4.234-63.313 11.695-83.88 5.04-14.316 11.492-25.002 19.961-25.002 7.46 0 11.694 8.67 11.694 22.583 0 17.744-6.049 38.713-15.928 59.482-7.26 15.323-16.736 30.244-27.02 43.754-.2-5.242-.402-10.888-.402-16.937zm-43.352 65.732c12.704-7.057 25.608-17.946 37.504-31.252 3.63 22.985 11.292 30.446 20.365 30.446 10.082 0 19.76-9.276 28.229-26.01v3.225c0 17.34 7.863 22.785 14.92 22.785 10.485 0 20.769-11.695 29.036-30.85-.202 3.428-.202 5.04-.202 7.259 0 17.542 6.452 22.784 13.912 22.784 6.856 0 12.502-4.84 18.55-14.921 1.412-2.419-.402-5.646-3.225-5.646-1.412 0-2.823.807-3.428 2.017-3.63 6.452-7.057 10.888-11.291 10.888-5.848 0-6.452-8.47-6.452-15.122 0-9.679 1.225-25.472 3.024-34.883.48-2.515-1.412-4.637-3.831-4.637-2.017 0-3.63 1.41-4.033 3.024-7.662 27.826-19.558 52.425-30.85 52.425-5.645 0-8.065-6.654-8.065-15.324 0-9.88 2.017-21.777 5.645-35.085.606-2.42-1.209-4.839-3.83-4.839-1.613 0-3.428 1.009-3.832 2.621-9.072 30.245-21.776 52.627-33.269 52.627-8.267 0-12.5-11.292-14.315-29.237 13.105-15.526 24.8-33.471 33.47-51.619 10.284-21.977 16.736-44.157 16.736-62.707C344.587 6.654 334.505 0 325.23 0c-10.888 0-20.97 10.283-28.027 29.842-7.46 21.373-12.098 52.424-12.098 86.702 0 9.275.404 17.34 1.008 24.397-12.5 14.316-26.212 26.616-39.923 34.48-1.814 1.008-2.62 3.428-1.613 5.242 1.008 1.815 3.427 2.621 5.242 1.613zm-68.353 56.054c2.218 0 4.235-1.815 4.235-4.033 0-17.743.806-35.487 2.62-52.827 36.698-3.226 78.839-38.31 78.839-74.806 0-25.204-18.147-39.52-42.141-39.52-23.39 0-53.03 14.719-77.63 39.117-1.612 1.41-1.612 4.032 0 5.645 1.413 1.613 4.034 1.613 5.647 0 22.986-22.38 50.207-36.697 71.781-36.697 19.357 0 33.874 11.493 33.874 31.455 0 32.26-36.899 63.11-69.563 66.539 3.024-25.608 7.864-50.408 14.518-72.185.604-2.016-.807-4.436-2.823-5.042-2.218-.603-4.637.606-5.243 2.622-6.654 22.583-11.694 48.19-14.921 75.008-7.863-.403-14.719-2.42-22.38-6.855-2.017-1.009-4.436-.202-5.647 1.613-1.008 2.016-.2 4.436 1.614 5.645 9.073 4.637 16.937 7.057 25.607 7.662-1.613 17.34-2.622 35.084-2.622 52.626 0 2.218 2.017 4.033 4.235 4.033zm274.22-110.697c1.614 1.21 4.235 1.008 5.444-.604 5.444-6.855 8.671-14.115 8.671-20.365 0-9.275-6.251-15.122-17.743-15.122-22.18 0-43.554 22.582-43.554 39.923 0 11.09 7.662 18.55 22.987 21.373l9.476 1.613c9.88 1.613 16.534 5.04 16.534 11.896 0 7.461-8.267 11.493-16.937 11.493-6.452 0-12.099-2.218-16.534-5.242-1.613-1.21-4.032-.807-5.242.806s-.807 4.033.806 5.242c5.646 4.235 12.905 6.856 20.97 6.856 14.315 0 25.003-8.065 25.003-19.558 0-9.275-7.058-16.333-23.39-19.155l-9.477-1.614c-9.678-1.613-16.13-5.846-16.13-13.912 0-13.913 17.744-32.06 35.285-32.06 6.05 0 9.88 2.622 9.88 8.066 0 4.234-2.42 9.679-6.653 14.92-1.21 1.614-1.009 4.033.604 5.444z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 108
-    },
-    __self: undefined
-  })))), __jsx("div", {
-    style: {
-      top: 120,
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
-    },
-    className: "absolute mx-auto",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 112
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "relative",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119
-    },
-    __self: undefined
-  }, __jsx("div", {
-    style: {
-      left: 40
-    },
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 121
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "uppercase text-3xl text-gray-850 whitespace-no-wrap",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 122
-    },
-    __self: undefined
-  }, location)), renderPattern(type, color))))), __jsx("div", {
-    className: "mt-2 mb-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 134
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "uppercase text-xs text-pink-800",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: undefined
-  }, verified, "+ Verified Stays")), __jsx("div", {
-    className: "flex flex-wrap items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 141
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "whitespace-normal text-sm tracking-wide text-gray-750 leading-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 142
-    },
-    __self: undefined
-  }, description))));
 };
 
 /***/ }),
@@ -4846,70 +3914,6 @@ const HelpCard = ({
     },
     __self: undefined
   }))))));
-};
-
-/***/ }),
-
-/***/ "./src/components/functions/Location.tsx":
-/*!***********************************************!*\
-  !*** ./src/components/functions/Location.tsx ***!
-  \***********************************************/
-/*! exports provided: Location */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Location", function() { return Location; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/Location.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-const Location = ({
-  location,
-  price
-}) => {
-  return __jsx("div", {
-    className: "w-90p py-3 my-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: undefined
-  }, __jsx("h3", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: undefined
-  }, location)), __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }, __jsx("p", {
-    className: "text-xs text-gray-650 md:text-sm whitespace-normal",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: undefined
-  }, "$", price, "/night average")));
 };
 
 /***/ }),
@@ -7613,6 +6617,246 @@ const Header = ({
     },
     __self: undefined
   })) : null);
+};
+
+/***/ }),
+
+/***/ "./src/components/layout/MovePage.jsx":
+/*!********************************************!*\
+  !*** ./src/components/layout/MovePage.jsx ***!
+  \********************************************/
+/*! exports provided: MovePage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovePage", function() { return MovePage; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/MovePage.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+
+const MovePage = ({
+  page,
+  previousPage,
+  nextPage,
+  first,
+  last
+}) => {
+  return __jsx("div", {
+    className: "lg:max-w-4xl mx-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "flex justify-between",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, first ? __jsx("div", {
+    className: "p-4 bg-white border border-gray-300 rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    style: {
+      fill: '#F2F2F2'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492 492",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  })))))) : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: `/page/${nextPage}`,
+    as: `/page/${page - 1}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "p-4 bg-white border border-gray-300 shadow-md rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    style: {
+      fill: '#484848'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492 492",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }))))))), last ? __jsx("div", {
+    className: "p-4 bg-white border border-gray-300 shadow-md rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    style: {
+      fill: '#F2F2F2'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492.004 492.004",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: undefined
+  })))))) : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: `/page/${nextPage}`,
+    as: `/page/${page + 1}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: undefined
+  }, __jsx("a", {
+    className: "p-4 bg-white border border-gray-300 shadow-md rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: undefined
+  }, __jsx("svg", {
+    style: {
+      fill: '#484848'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492.004 492.004",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: undefined
+  }, __jsx("path", {
+    d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: undefined
+  })))))))));
 };
 
 /***/ }),
@@ -10783,19 +10027,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_containers_Today__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Today */ "./src/components/containers/Today.jsx");
 /* harmony import */ var _components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/containers/Tomorrow */ "./src/components/containers/Tomorrow.jsx");
 /* harmony import */ var _components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/containers/NextWeek */ "./src/components/containers/NextWeek.jsx");
-/* harmony import */ var _components_containers_Adventures__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Adventures */ "./src/components/containers/Adventures.jsx");
-/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.jsx");
-/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.jsx");
-/* harmony import */ var _components_containers_Popular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/containers/Popular */ "./src/components/containers/Popular.tsx");
-/* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/containers/Featured */ "./src/components/containers/Featured.tsx");
-/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
-/* harmony import */ var _components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/modals/MenuModal */ "./src/components/modals/MenuModal.jsx");
+/* harmony import */ var _components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/containers/Stay */ "./src/components/containers/Stay.jsx");
+/* harmony import */ var _components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/containers/TopRated */ "./src/components/containers/TopRated.jsx");
+/* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/layout/Footer */ "./src/components/layout/Footer.tsx");
+/* harmony import */ var _components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/modals/MenuModal */ "./src/components/modals/MenuModal.jsx");
+/* harmony import */ var _components_layout_MovePage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/layout/MovePage */ "./src/components/layout/MovePage.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
  // Component
-
-
 
 
 
@@ -10823,80 +10063,80 @@ const Home = () => {
     switchMenuModal: switchMenuModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: undefined
-  }), menuModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_13__["MenuModal"], {
+  }), menuModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_10__["MenuModal"], {
     switchMenuModal: switchMenuModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 32
     },
     __self: undefined
   })) : null, __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_2__["Explore"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: undefined
   }), __jsx(_components_containers_Plus__WEBPACK_IMPORTED_MODULE_3__["Plus"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 36
     },
     __self: undefined
   }), __jsx(_components_containers_Today__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 37
     },
     __self: undefined
   }), __jsx(_components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 38
     },
     __self: undefined
   }), __jsx(_components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }), __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }), __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 41
     },
     __self: undefined
-  }), __jsx(_components_containers_Adventures__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), __jsx("div", {
+    className: "py-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: undefined
-  }), __jsx(_components_containers_Stay__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, __jsx(_components_layout_MovePage__WEBPACK_IMPORTED_MODULE_11__["MovePage"], {
+    first: true,
+    last: false,
+    previousPage: null,
+    page: 1,
+    nextPage: "two",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
     },
     __self: undefined
-  }), __jsx(_components_containers_TopRated__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  })), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_9__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }), __jsx(_components_containers_Popular__WEBPACK_IMPORTED_MODULE_10__["Popular"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
-  }), __jsx(_components_containers_Featured__WEBPACK_IMPORTED_MODULE_11__["Featured"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
-  }), __jsx(_components_layout_Footer__WEBPACK_IMPORTED_MODULE_12__["Footer"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: undefined
   }));
@@ -11031,7 +10271,7 @@ const calculateInfants = (adultNumber, infantNumber) => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/

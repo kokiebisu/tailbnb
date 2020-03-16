@@ -8,13 +8,11 @@ import { Plus } from '../components/containers/Plus';
 import Today from '../components/containers/Today';
 import Tomorrow from '../components/containers/Tomorrow';
 import NextWeek from '../components/containers/NextWeek';
-import Adventures from '../components/containers/Adventures';
 import Stay from '../components/containers/Stay';
 import TopRated from '../components/containers/TopRated';
-import { Popular } from '../components/containers/Popular';
-import { Featured } from '../components/containers/Featured';
 import { Footer } from '../components/layout/Footer';
 import { MenuModal } from '../components/modals/MenuModal';
+import { MovePage } from '../components/layout/MovePage';
 
 // Next
 import { NextPage } from 'next';
@@ -39,11 +37,17 @@ const Home: NextPage<{}> = () => {
       <Today />
       <Tomorrow />
       <NextWeek />
-      <Adventures />
-      <Stay />
       <TopRated />
-      <Popular />
-      <Featured />
+      <Stay />
+      <div className='py-32'>
+        <MovePage
+          first={true}
+          last={false}
+          previousPage={null}
+          page={1}
+          nextPage='two'
+        />
+      </div>
       <Footer />
     </>
   );

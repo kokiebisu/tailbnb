@@ -28,6 +28,26 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/page/five": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/page/four": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/page/six": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/page/three": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/page/two": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

@@ -13665,20 +13665,20 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.js!./":
-/*!**************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.js ***!
-  \**************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.jsx!./":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.jsx ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/page/two", function() {
-      var mod = __webpack_require__(/*! ./src/pages/page/two.js */ "./src/pages/page/two.js")
+      var mod = __webpack_require__(/*! ./src/pages/page/two.jsx */ "./src/pages/page/two.jsx")
       if(true) {
-        module.hot.accept(/*! ./src/pages/page/two.js */ "./src/pages/page/two.js", function() {
+        module.hot.accept(/*! ./src/pages/page/two.jsx */ "./src/pages/page/two.jsx", function() {
           if(!next.router.components["/page/two"]) return
-          var updatedPage = __webpack_require__(/*! ./src/pages/page/two.js */ "./src/pages/page/two.js")
+          var updatedPage = __webpack_require__(/*! ./src/pages/page/two.jsx */ "./src/pages/page/two.jsx")
           next.router.update("/page/two", updatedPage)
         })
       }
@@ -19134,8 +19134,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _functions_Location__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../functions/Location */ "./src/components/functions/Location.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_5__);
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Popular.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
@@ -19144,7 +19142,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
  // Components
 
  // Wrapper
-
 
 
 var Popular = function Popular() {
@@ -19213,14 +19210,14 @@ var Popular = function Popular() {
     title: "Popular destinations in the United States",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: this
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: this
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -19228,31 +19225,23 @@ var Popular = function Popular() {
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: this
   })) : __jsx("div", {
-    className: "flex flex-wrap items-center justify-start w-full",
+    className: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 flex flex-wrap items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 75
     },
     __self: this
   }, locations.map(function (_ref, index) {
     var location = _ref.location,
         price = _ref.price;
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-      key: cuid__WEBPACK_IMPORTED_MODULE_5___default()(),
+    return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "text-gray-750 sm:w-1/2 lg:w-1/4 xl:w-1/5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 78
       },
       __self: this
     }, __jsx(_functions_Location__WEBPACK_IMPORTED_MODULE_3__["Location"], {
@@ -19261,10 +19250,10 @@ var Popular = function Popular() {
       price: price,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 79
       },
       __self: this
-    })));
+    }));
   }))));
 };
 
@@ -19776,7 +19765,7 @@ var FeaturedCard = function FeaturedCard(_ref) {
     __self: this
   })))), __jsx("div", {
     style: {
-      top: 120,
+      top: 130,
       left: '50%',
       transform: 'translate(-50%, -50%)'
     },
@@ -19797,7 +19786,7 @@ var FeaturedCard = function FeaturedCard(_ref) {
     style: {
       left: 40
     },
-    className: "",
+    className: "flex flex-col items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 120
@@ -19878,7 +19867,7 @@ var Location = function Location(_ref) {
   var location = _ref.location,
       price = _ref.price;
   return __jsx("div", {
-    className: "w-90p py-3 my-2",
+    className: "py-3 my-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -19894,7 +19883,7 @@ var Location = function Location(_ref) {
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-gray-750",
+    className: "text-gray-850 text-lg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -19907,14 +19896,14 @@ var Location = function Location(_ref) {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, __jsx("p", {
     className: "text-xs text-gray-650 md:text-sm whitespace-normal",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, "$", price, "/night average")));
@@ -20860,6 +20849,245 @@ var HeaderCategory = function HeaderCategory(_ref) {
     },
     __self: this
   }, "More filters") : null));
+};
+
+/***/ }),
+
+/***/ "./src/components/layout/MovePage.jsx":
+/*!********************************************!*\
+  !*** ./src/components/layout/MovePage.jsx ***!
+  \********************************************/
+/*! exports provided: MovePage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovePage", function() { return MovePage; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/MovePage.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+
+var MovePage = function MovePage(_ref) {
+  var page = _ref.page,
+      previousPage = _ref.previousPage,
+      nextPage = _ref.nextPage,
+      first = _ref.first,
+      last = _ref.last;
+  return __jsx("div", {
+    className: "lg:max-w-4xl mx-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex justify-between",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, first ? __jsx("div", {
+    className: "p-4 bg-white border border-gray-300 rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#F2F2F2'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492 492",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  })))))) : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/page/".concat(nextPage),
+    as: "/page/".concat(page - 1),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "p-4 bg-white border border-gray-300 shadow-md rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#484848'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492 492",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }))))))), last ? __jsx("div", {
+    className: "p-4 bg-white border border-gray-300 shadow-md rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#F2F2F2'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492.004 492.004",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  })))))) : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/page/".concat(nextPage),
+    as: "/page/".concat(page + 1),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, __jsx("a", {
+    className: "p-4 bg-white border border-gray-300 shadow-md rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-3 h-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, __jsx("svg", {
+    style: {
+      fill: '#484848'
+    },
+    className: "w-full h-full",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 492.004 492.004",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
+    },
+    __self: this
+  })))))))));
 };
 
 /***/ }),
@@ -21891,10 +22119,10 @@ var SectionOverflow = function SectionOverflow(_ref) {
 
 /***/ }),
 
-/***/ "./src/pages/page/two.js":
-/*!*******************************!*\
-  !*** ./src/pages/page/two.js ***!
-  \*******************************/
+/***/ "./src/pages/page/two.jsx":
+/*!********************************!*\
+  !*** ./src/pages/page/two.jsx ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -21908,8 +22136,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_containers_Featured__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/containers/Featured */ "./src/components/containers/Featured.tsx");
 /* harmony import */ var _components_containers_StayWithSuperhost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/containers/StayWithSuperhost */ "./src/components/containers/StayWithSuperhost.jsx");
 /* harmony import */ var _components_containers_ThreeColumn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/containers/ThreeColumn */ "./src/components/containers/ThreeColumn.jsx");
-/* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/page/two.js";
+/* harmony import */ var _components_layout_MovePage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/layout/MovePage */ "./src/components/layout/MovePage.jsx");
+/* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/page/two.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Layout
 
@@ -21919,6 +22148,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
  // Layout
+
 
 
 var uniqueplacesContent = [{
@@ -21960,7 +22190,7 @@ var two = function two() {
     placeholder: "Try \"Barcelona\"",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: this
   }), __jsx(_components_layout_HeaderCategory__WEBPACK_IMPORTED_MODULE_2__["HeaderCategory"], {
@@ -21968,25 +22198,25 @@ var two = function two() {
     guests: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
     },
     __self: this
   }), __jsx(_components_containers_Popular__WEBPACK_IMPORTED_MODULE_3__["Popular"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   }), __jsx(_components_containers_StayWithSuperhost__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
   }), __jsx(_components_containers_Featured__WEBPACK_IMPORTED_MODULE_4__["Featured"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }), __jsx(_components_containers_ThreeColumn__WEBPACK_IMPORTED_MODULE_6__["ThreeColumn"], {
@@ -21995,7 +22225,7 @@ var two = function two() {
     contents: uniqueplacesContent,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 76
     },
     __self: this
   }), __jsx(_components_containers_ThreeColumn__WEBPACK_IMPORTED_MODULE_6__["ThreeColumn"], {
@@ -22004,13 +22234,31 @@ var two = function two() {
     contents: newyorkContent,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
-  }), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_7__["NewFooter"], {
+  }), __jsx("div", {
+    className: "py-32",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 86
+    },
+    __self: this
+  }, __jsx(_components_layout_MovePage__WEBPACK_IMPORTED_MODULE_7__["MovePage"], {
+    page: 2,
+    previousPage: 0,
+    nextPage: "three",
+    first: false,
+    last: false,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  })), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_8__["NewFooter"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
     },
     __self: this
   }));
@@ -22020,14 +22268,14 @@ var two = function two() {
 
 /***/ }),
 
-/***/ 1:
-/*!******************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.js ***!
-  \******************************************************************************************************************************************************/
+/***/ 5:
+/*!*******************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.jsx ***!
+  \*******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.jsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.jsx!./");
 
 
 /***/ }),
@@ -22043,5 +22291,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[5,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=two.js.map
