@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -7296,40 +7296,76 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/Ca
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
-let date = new Date();
+
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const today = new Date();
 const CalendarModal = () => {
+  // Info
+  const today = new Date();
+  const currentDate = today.getDate();
+  const currentMonth = today.getMonth();
+  const currentYear = today.getFullYear(); // Display
+
+  const {
+    0: displayedDate,
+    1: setDisplayedDate
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(currentDate);
+  const {
+    0: displayedMonth,
+    1: setDisplayedMonth
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(currentMonth);
+  const {
+    0: displayedYear,
+    1: setDisplayedYear
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(currentYear);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    console.log('month', displayedMonth);
+
+    if (displayedMonth !== currentMonth) {
+      setDisplayedDate(null);
+    } else {
+      setDisplayedDate(currentDate);
+    }
+  }, [displayedMonth]);
   return __jsx("div", {
     style: {
       top: 55
     },
-    className: "absolute z-50 bg-white w-64 p-6 shadow-xl",
+    className: "absolute z-50 bg-white w-76 p-6 shadow-xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 60
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 63
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "border py-2 px-3",
+  }, __jsx("button", {
+    onClick: e => {
+      e.preventDefault();
+
+      if (displayedMonth === 0) {
+        setDisplayedMonth(11);
+        setDisplayedYear(displayedYear - 1);
+      } else {
+        setDisplayedMonth(displayedMonth - 1);
+      }
+    },
+    className: "py-2 px-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 64
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-3 h-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 75
     },
     __self: undefined
   }, __jsx("svg", {
@@ -7341,39 +7377,39 @@ const CalendarModal = () => {
     viewBox: "0 0 492 492",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 76
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 81
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx("path", {
     d: "M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124 c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844 L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412 c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008 c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788 C492,219.198,479.172,207.418,464.344,207.418z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 83
     },
     __self: undefined
   })))))), __jsx("div", {
     className: "px-4 flex justify-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 96
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 97
     },
     __self: undefined
   }, __jsx("h3", {
@@ -7383,21 +7419,31 @@ const CalendarModal = () => {
     className: "text-gray-750 text-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 98
     },
     __self: undefined
-  }, month[date.getMonth()], " ", date.getFullYear()))), __jsx("div", {
-    className: "border py-2 px-3",
+  }, month[displayedMonth], " ", displayedYear))), __jsx("button", {
+    onClick: e => {
+      e.preventDefault();
+
+      if (displayedMonth === 11) {
+        setDisplayedMonth(0);
+        setDisplayedYear(displayedYear + 1);
+      } else {
+        setDisplayedMonth(displayedMonth + 1);
+      }
+    },
+    className: "py-2 px-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 105
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-3 w-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 116
     },
     __self: undefined
   }, __jsx("svg", {
@@ -7409,33 +7455,33 @@ const CalendarModal = () => {
     viewBox: "0 0 492.004 492.004",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 117
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 122
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 123
     },
     __self: undefined
   }, __jsx("path", {
     d: "M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136 c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002 v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864 c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872 l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 124
     },
     __self: undefined
   }))))))), __jsx("div", {
     className: "mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 137
     },
     __self: undefined
   }, __jsx("div", {
@@ -7445,7 +7491,7 @@ const CalendarModal = () => {
     className: "grid grid-cols-7 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 138
     },
     __self: undefined
   }, days.map(day => {
@@ -7453,19 +7499,19 @@ const CalendarModal = () => {
       className: "flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 143
       },
       __self: undefined
     }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 144
       },
       __self: undefined
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 145
       },
       __self: undefined
     }, day.slice(0, 2))));
@@ -7473,7 +7519,7 @@ const CalendarModal = () => {
     className: "mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 152
     },
     __self: undefined
   }, __jsx("div", {
@@ -7483,10 +7529,10 @@ const CalendarModal = () => {
     className: "grid grid-cols-7 text-gray-650 text-sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 153
     },
     __self: undefined
-  }, Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateUnexistingDays"])(Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["getStartingDay"])(today.getMonth(), today.getFullYear())), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateUnavailableDays"])(1, today.getDate()), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateAvailableDays"])(today.getDate(), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["getEndingDate"])(today.getMonth(), today.getFullYear()).getDate()))));
+  }, Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateUnexistingDays"])(Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["getStartingDay"])(displayedMonth, displayedYear)), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateUnavailableDays"])(1, displayedDate), Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["generateAvailableDays"])(displayedDate, Object(_util_CalendarModalFunctions__WEBPACK_IMPORTED_MODULE_1__["getEndingDate"])(displayedMonth, displayedYear).getDate()))));
 };
 
 /***/ }),
@@ -10512,7 +10558,7 @@ const generateUnexistingDays = firstday => {
   var result = [];
   const numberOfDays = firstday;
 
-  for (var i = 0; i < numberOfDays; i++) {
+  for (var i = 0; i < numberOfDays - 1; i++) {
     result.push(__jsx("div", {
       className: "border border-white flex justify-center",
       __source: {
@@ -10571,6 +10617,7 @@ const generateUnavailableDays = (firstday, today) => {
   return result;
 };
 const generateAvailableDays = (today, lastday) => {
+  console.log('today', today);
   var result = [];
 
   for (var i = today; i <= lastday; i++) {
@@ -10578,21 +10625,21 @@ const generateAvailableDays = (today, lastday) => {
       className: "flex justify-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 48
       },
       __self: undefined
     }, __jsx("div", {
       className: "text-white py-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 49
       },
       __self: undefined
     }, __jsx("p", {
-      className: "text-gray-650",
+      className: "text-gray-900",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 50
       },
       __self: undefined
     }, i))));
@@ -10635,7 +10682,7 @@ const calculateInfants = (adultNumber, infantNumber) => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/

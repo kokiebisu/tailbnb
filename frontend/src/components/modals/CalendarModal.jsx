@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import {
   getStartingDay,
   getEndingDay,
@@ -8,8 +9,6 @@ import {
   generateAvailableDays,
   getEndingDate
 } from '../../util/CalendarModalFunctions';
-
-let date = new Date();
 
 const month = [
   'January',
@@ -36,15 +35,43 @@ const days = [
   'Saturday'
 ];
 
-const today = new Date();
-
 export const CalendarModal = () => {
+  // Info
+  const today = new Date();
+  const currentDate = today.getDate();
+  const currentMonth = today.getMonth();
+  const currentYear = today.getFullYear();
+
+  // Display
+  const [displayedDate, setDisplayedDate] = useState(currentDate);
+  const [displayedMonth, setDisplayedMonth] = useState(currentMonth);
+  const [displayedYear, setDisplayedYear] = useState(currentYear);
+
+  useEffect(() => {
+    console.log('month', displayedMonth);
+    if (displayedMonth !== currentMonth) {
+      setDisplayedDate(null);
+    } else {
+      setDisplayedDate(currentDate);
+    }
+  }, [displayedMonth]);
+
   return (
     <div
       style={{ top: 55 }}
-      className='absolute z-50 bg-white w-64 p-6 shadow-xl'>
+      className='absolute z-50 bg-white w-76 p-6 shadow-xl'>
       <div className='flex items-center justify-between'>
-        <div className='border py-2 px-3'>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            if (displayedMonth === 0) {
+              setDisplayedMonth(11);
+              setDisplayedYear(displayedYear - 1);
+            } else {
+              setDisplayedMonth(displayedMonth - 1);
+            }
+          }}
+          className='py-2 px-3'>
           <div className='w-3 h-3'>
             <svg
               style={{ fill: '#484848' }}
@@ -65,17 +92,27 @@ export const CalendarModal = () => {
               </g>
             </svg>
           </div>
-        </div>
+        </button>
         <div className='px-4 flex justify-center'>
           <div>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
               className='text-gray-750 text-lg'>
-              {month[date.getMonth()]} {date.getFullYear()}
+              {month[displayedMonth]} {displayedYear}
             </h3>
           </div>
         </div>
-        <div className='border py-2 px-3'>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            if (displayedMonth === 11) {
+              setDisplayedMonth(0);
+              setDisplayedYear(displayedYear + 1);
+            } else {
+              setDisplayedMonth(displayedMonth + 1);
+            }
+          }}
+          className='py-2 px-3'>
           <div className='h-3 w-3'>
             <svg
               style={{ fill: '#484848' }}
@@ -95,7 +132,7 @@ export const CalendarModal = () => {
               </g>
             </svg>
           </div>
-        </div>
+        </button>
       </div>
       <div className='mt-4'>
         <div
@@ -117,14 +154,14 @@ export const CalendarModal = () => {
           style={{ fontFamily: 'airbnb-book' }}
           className='grid grid-cols-7 text-gray-650 text-sm'>
           {generateUnexistingDays(
-            getStartingDay(today.getMonth(), today.getFullYear())
+            getStartingDay(displayedMonth, displayedYear)
           )}
 
-          {generateUnavailableDays(1, today.getDate())}
+          {generateUnavailableDays(1, displayedDate)}
 
           {generateAvailableDays(
-            today.getDate(),
-            getEndingDate(today.getMonth(), today.getFullYear()).getDate()
+            displayedDate,
+            getEndingDate(displayedMonth, displayedYear).getDate()
           )}
         </div>
       </div>

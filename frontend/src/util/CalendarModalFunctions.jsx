@@ -13,7 +13,7 @@ export const getDaysInMonth = (specifiedMonth, specifiedYear) => {
 export const generateUnexistingDays = (firstday) => {
   var result = [];
   const numberOfDays = firstday;
-  for (var i = 0; i < numberOfDays; i++) {
+  for (var i = 0; i < numberOfDays - 1; i++) {
     result.push(
       <div className='border border-white flex justify-center'>
         <div className='text-white py-1'>
@@ -41,12 +41,13 @@ export const generateUnavailableDays = (firstday, today) => {
 };
 
 export const generateAvailableDays = (today, lastday) => {
+  console.log('today', today);
   var result = [];
   for (var i = today; i <= lastday; i++) {
     result.push(
       <div className='flex justify-center'>
         <div className='text-white py-1'>
-          <p className='text-gray-650'>{i}</p>
+          <p className='text-gray-900'>{i}</p>
         </div>
       </div>
     );
