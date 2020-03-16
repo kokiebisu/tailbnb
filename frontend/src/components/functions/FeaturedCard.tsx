@@ -111,13 +111,13 @@ export const FeaturedCard: React.FC<Prop> = ({
           </div>
           <div
             style={{
-              top: 120,
+              top: 130,
               left: '50%',
               transform: 'translate(-50%, -50%)'
             }}
             className='absolute mx-auto'>
             <div className='relative'>
-              <div style={{ left: 40 }} className=''>
+              <div style={{ left: 40 }} className='flex flex-col items-center'>
                 <div className=''>
                   <p
                     style={{ fontFamily: 'airbnb-bold' }}
