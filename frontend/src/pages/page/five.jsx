@@ -72,7 +72,7 @@ const four = () => {
       <LocationExperiences location='San Fransisco' />
       <LocationStays location='San Fransisco' />
       <LocationExperiences location='Sydney' />
-      <div className='py-32'>
+      <div className='py-16 md:py-24 lg:py-32'>
         <MovePage
           page={5}
           previousPage='four'

@@ -71,7 +71,7 @@ const three = () => {
       <LocationExperiences location='New York' />
       <LocationStays location='New York' />
       <LocationStays location='Barcelona' />
-      <div className='py-32'>
+      <div className='py-16 md:py-24 lg:py-32'>
         <MovePage
           page={3}
           previousPage='two'
