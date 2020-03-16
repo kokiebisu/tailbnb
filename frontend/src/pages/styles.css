@@ -557,6 +557,13 @@ body {
   appearance: none;
 }
 
+#line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -905,6 +905,36 @@ var RenderPromises = (function () {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js ***!
@@ -41524,39 +41554,6 @@ module.exports = "/_next/static/images/facebook-8f5ce27564945d2c9a10ef827549a78c
 
 /***/ }),
 
-/***/ "./public/img/high/featured1.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured1.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured1-61cfa1ad94e59dfb8a0aa9025d12eda4.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured2.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured2.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured2-f194738a33c75d7529e437a24fce67e0.jpg";
-
-/***/ }),
-
-/***/ "./public/img/high/featured3.jpg":
-/*!***************************************!*\
-  !*** ./public/img/high/featured3.jpg ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/featured3-8b63bad827adf3b1fab9832d1f1dbd41.jpg";
-
-/***/ }),
-
 /***/ "./public/img/high/google.png":
 /*!************************************!*\
   !*** ./public/img/high/google.png ***!
@@ -41985,39 +41982,23 @@ var Explore = function Explore() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Featured", function() { return Featured; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../functions/FeaturedCard */ "./src/components/functions/FeaturedCard.tsx");
 /* harmony import */ var _wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../wrapper/SectionOverflow */ "./src/components/wrapper/SectionOverflow.tsx");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! cuid */ "./node_modules/cuid/index.js");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_5__);
+
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Featured.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
  // Components
 
  // Wrapper
 
 
- // Images
-// High Resolution
-
-var featured1 = __webpack_require__(/*! ../../../public/img/high/featured1.jpg */ "./public/img/high/featured1.jpg");
-
-var featured2 = __webpack_require__(/*! ../../../public/img/high/featured2.jpg */ "./public/img/high/featured2.jpg");
-
-var featured3 = __webpack_require__(/*! ../../../public/img/high/featured3.jpg */ "./public/img/high/featured3.jpg");
-
 var Featured = function Featured() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(true),
-      loading = _useState[0],
-      setLoading = _useState[1];
-
   function sleep(ms) {
     return new Promise(function (resolve) {
       return setTimeout(resolve, ms);
@@ -42025,17 +42006,14 @@ var Featured = function Featured() {
   }
 
   var setSleep = function setSleep(seconds) {
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function setSleep$(_context) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function setSleep$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(sleep(seconds));
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(sleep(seconds));
 
           case 2:
-            setLoading(false);
-
-          case 3:
           case "end":
             return _context.stop();
         }
@@ -42044,96 +42022,111 @@ var Featured = function Featured() {
   };
 
   var featureds = [{
-    img: featured1,
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/e8afe40c-86e0-4064-8f98-7a742728f266.jpg',
+    location: 'Cape Town',
     verified: 940,
-    description: 'Find beachside bungalows, mid-century modern cottages, and more verified placed to stay in the City of Angels'
+    description: 'Find dockside lofts, sunny studios, and more verified places to stay in a city that stuns from sky to sea.',
+    type: 1,
+    color: '#268cff'
   }, {
-    img: featured2,
-    verified: 300,
-    description: 'Discover Victorian flats, SoMa lofts, and more verified places stay in a city where invention meets counterculture.'
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/afd64fec-14ea-4dbe-9f20-a5b8ee660535.jpg',
+    location: 'Sydney',
+    verified: 390,
+    description: 'Browse verified places to stay with artful style, in a city that wows from beach to bushland.',
+    type: 2,
+    color: '#fa7921'
   }, {
-    img: featured3,
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/7ed333a6-a2a3-4d02-bd86-022291fd3be4.jpg',
+    location: 'Chicago',
+    verified: 210,
+    description: "Explore Chicago's stunning architecture from the inside-in homes verified for quality and design.",
+    type: 3,
+    color: '#fe9920'
+  }, {
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/2e5b5fcf-df39-4486-a6a7-c1fc0c5790bc.jpg',
+    location: 'San Francisco',
     verified: 290,
-    description: 'Take in soaring views and Edwardian details from Toronto places to stay verified for quality and design'
+    description: 'Discover Victorian flats, SoMa lofts,, and more verified places to stay in a city where invention meets counterculture.',
+    type: 4,
+    color: '#50c878'
+  }, {
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/f8dd8070-c548-4a2b-bdb1-2b191395f8fa.jpg',
+    location: 'Austin',
+    verified: 400,
+    description: 'Come for the music, stay for the BBQ, and rest easy in places to stay verified for quality and comfort.',
+    type: 5,
+    color: '#47315b'
+  }, {
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/17c76104-0a61-4e32-b9e4-dcf99f1f9237.jpg',
+    location: 'Melbourne',
+    verified: 440,
+    description: 'Book sunny lofts, beachfront flats, and more verified places to stay in a city with world-class coffee and street art.',
+    type: 6,
+    color: '#c64971'
+  }, {
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/316c7597-08da-4d77-9243-13292e282050.jpg',
+    location: 'London',
+    verified: 550,
+    description: 'Explore London from secluded garden flats and luminous lofts—all verified for quality and design.',
+    type: 7,
+    color: '#2b3651'
+  }, {
+    img: 'https://a0.muscache.com/4ea/air/v2/pictures/d82b445b-b7ce-4277-9131-3aab48633e9d.jpg',
+    location: 'Los Angeles',
+    verified: 930,
+    description: 'Find beachside bungalows, mid-century modern cottages, and more verified places to stay in the City of Angels.',
+    type: 8,
+    color: '#dd5337'
   }];
   setSleep(3000);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_4__["SectionOverflow"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(_wrapper_SectionOverflow__WEBPACK_IMPORTED_MODULE_4__["SectionOverflow"], {
     title: "Featured Airbnb Plus destinations",
     phrase: "Browse beautiful places to stay with all the comforts of home, plus more",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 111
     },
     __self: this
-  }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    size: 10,
-    color: '#008489',
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  })) : __jsx("div", {
+  }, __jsx("div", {
     className: "overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 114
     },
     __self: this
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 115
     },
     __self: this
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 116
     },
     __self: this
   }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-featured md:w-full",
+    className: "grid grid-cols-8 gap-4 not-sr-only flex scrollable sm:inset-x-0 flex items-start justify-start py-2 min-w-512 rounded-xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 117
     },
     __self: this
-  }, featureds.map(function (_ref, index) {
-    var img = _ref.img,
-        verified = _ref.verified,
-        description = _ref.description;
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
-      key: cuid__WEBPACK_IMPORTED_MODULE_5___default()(),
+  }, featureds.map(function (featured) {
+    return __jsx("div", {
+      className: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 120
       },
       __self: this
-    }, __jsx("div", {
-      className: "w-80 lg:w-1/3 pb-5 mr-2",
+    }, __jsx(_functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_3__["FeaturedCard"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, featured, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }, __jsx(_functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_3__["FeaturedCard"], {
-      key: index,
-      img: img,
-      verified: verified,
-      description: description,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
+        lineNumber: 121
       },
       __self: this
     })));
@@ -43344,55 +43337,332 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/FeaturedCard.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
+
+var renderPattern = function renderPattern(type, color) {
+  switch (type) {
+    case 1:
+      return __jsx("svg", {
+        viewBox: "0 0 92 5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M81.863 3.149c.924.04.935 1.473.005 1.44-5.877-.213-11.757-.396-17.636-.543a1197.883 1197.883 0 0 0-62.48.07c-.937.026-.938-1.43-.005-1.457a1197.297 1197.297 0 0 1 48.817-.357c10.436.137 20.87.403 31.299.847zM90.766.405c.868.02.876 1.367.005 1.354-6.632-.1-13.265-.186-19.897-.256a2549.99 2549.99 0 0 0-35.023-.15c-11.763.038-23.525.166-35.286.382C-.187 1.749-.188.58.56.563a2308.829 2308.829 0 0 1 54.92-.56c11.763.02 23.525.139 35.286.402z",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }));
+
+    case 2:
+      return __jsx("svg", {
+        viewBox: "0 0 77 6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M76.223 1.027c-9.794.058-19.587.024-29.38-.074C37.049.856 27.257.686 17.466.446 11.952.311 6.439.141.926 0-.317-.03-.302 1.765.933 1.81c9.786.362 19.58.54 29.372.672 3.622.048 7.245.083 10.868.108a937.013 937.013 0 0 0-27.007 2.077c-.893.082-.901 1.41.005 1.33a936.8 936.8 0 0 1 24.14-1.854 890.681 890.681 0 0 1 24.285-1.21c4.544-.164 9.088-.296 13.633-.395 1.03-.022 1.028-1.517-.006-1.51",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }));
+
+    case 3:
+      return __jsx("svg", {
+        viewBox: "0 0 132 10",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M12.794 25.962c.166-.054.334-.106.5-.161-.083.03-.244.084-.513.168l.013-.007M131.946.954c-.248-.748-1.15-1.071-1.943-.916-.385.075-.774.123-1.163.176-.116.011-.232.025-.348.037-.287.03-.574.056-.862.082-1.376.124-2.755.215-4.135.293-3.69.21-7.385.339-11.079.448-8.249.245-16.502.375-24.755.47-7.757.092-15.514.157-23.27.228-9.215.084-18.43.129-27.647.093-10.137-.04-20.275-.12-30.413-.151-1.748-.006-3.495 0-5.242.048-1.465.04-1.442 1.864.009 1.931 5.371.25 10.763.271 16.145.34-3.689.563-7.376 1.175-11.012 1.942-1.28.27-3.437.499-4.225 1.587-.58.8.227 1.998 1.3 1.887 5.935-.613 11.88-1.223 17.843-1.582 5.288-.32 10.63-.445 15.908.074a46 46 0 0 1 7.44 1.355c1.9.511 2.756-2.002.826-2.554-4.66-1.331-9.644-1.717-14.51-1.784a115.74 115.74 0 0 0-5.024.045c.68-.116 1.36-.23 2.04-.347.827-.143 1.679-.262 2.51-.44l3.43.037c8.904.097 17.807.127 26.712.107 8.294-.02 16.59-.07 24.884-.153 8.078-.08 16.156-.194 24.231-.4 3.92-.1 7.841-.22 11.759-.406 2.792-.133 5.6-.266 8.37-.634.378-.05.754-.109 1.128-.182.787-.153 1.324-.932 1.093-1.63",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }));
+
+    case 4:
+      return __jsx("svg", {
+        viewBox: "0 0 104 10",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M102.966 1.64a1297.23 1297.23 0 0 0-39.92-1.2 1336.657 1336.657 0 0 0-39.998.024c-3.724.056-7.45.129-11.178.218C8.221.768 4.551.892.894 1.995c-.838.252-.81 2.226.003 2.28a1927.937 1927.937 0 0 1 38.026 2.897l-.962.234c-.414.1-.74.825-.687 1.49.06.753.497 1.017.906.95 3.277-.536 6.558-1.265 9.835-1.913.904-.179.839-2.35-.004-2.42-11.117-.93-22.234-1.845-33.363-2.635a1196.296 1196.296 0 0 1 26.087-.357 1275.817 1275.817 0 0 1 62.044 1.32c.894.04 1.086-2.16.187-2.2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }));
+
+    case 5:
+      return __jsx("svg", {
+        viewBox: "0 0 67 17",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M66.422 3.471c-3.874-1.387-8.03-1.944-12.153-2.313A286.65 286.65 0 0 0 41.283.312 299.882 299.882 0 0 0 15.42.315C10.544.522 5.675.837.82 1.25c-.767.065-.494 1.049.256.984C18.04.767 35.242.832 52.276 2.214c4.267.347 8.548.796 12.613 2.06-.714.38-1.659.45-2.49.508-1.681.118-3.368.193-5.054.254-3.323.118-6.651.157-9.979.175-6.586.036-13.177-.005-19.75.308-3.727.177-7.443.477-11.126.965-.512.068-.866.607-.584 1.02.507.741 1.333 1.13 2.273 1.33 1.17.25 2.375.404 3.563.562 2.625.349 5.264.583 7.9.853 4.758.487 9.528 1.124 14.026 2.68 2.43.842 4.631 2.024 6.759 3.348.606.377 1.446-.345.887-.838-3.091-2.724-7.517-4.264-11.687-5.201-4.773-1.073-9.682-1.428-14.55-1.935a119.4 119.4 0 0 1-4.363-.52c-.452-.064-.908-.125-1.36-.199 12.723-1.453 25.652-.78 38.463-1.334 1.827-.08 3.675-.133 5.489-.325 1.347-.142 2.72-.5 3.496-1.527.267-.355.053-.772-.38-.927",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }));
+
+    case 6:
+      return __jsx("svg", {
+        viewBox: "0 0 87 5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M85.84 2.324a660.672 660.672 0 0 0-13.71-.092 9.425 9.425 0 0 1 1.648.585c.374.174.685.63.57 1.252-.114.612-.53.734-.91.553-2.173-1.04-4.4-1.053-6.596-1.092l-7.08-.125c-4.72-.082-9.44-.16-14.16-.24-6.202-.103-12.405-.214-18.607-.318-1.889.043-3.777.087-5.665.132-6.029.146-12.054.352-18.084.483-.392.008-.574-.599-.453-.972l-1.684-.024C.658 2.459.548 1.45 1.006 1.454c5.186.04 10.372.077 15.557.111 6.243-.241 12.49-.418 18.738-.576C46.039.716 56.784.539 67.536.452 73.569.404 79.609.447 85.64.384c.35-.004.72.328.78.903.053.523-.23 1.044-.581 1.037",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }));
+
+    case 7:
+      return __jsx("svg", {
+        viewBox: "0 0 85 12",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M83.055.448c-10.69.449-21.379.944-32.078 1.206-10.64.261-21.29.33-31.93-.038A360.72 360.72 0 0 1 1.075.563c-1.213-.102-1.22 1.58-.023 1.688 10.645.96 21.335 1.394 32.025 1.505 4.548.047 9.096.033 13.644-.024-2.866.373-5.728.777-8.585 1.216-4.21.648-8.405 1.373-12.583 2.181-.65.126-1.103.79-.923 1.402.195.666.924.931 1.583.825 9.302-1.503 18.884-.864 28.132.712 2.346.4 4.676.882 6.985 1.448 1.424.35 2.116-1.608.651-2.004-5.919-1.597-12.033-2.656-18.185-3.088 8.824-1.246 17.698-2.184 26.59-2.893 4.21-.336 8.424-.623 12.64-.875.635-.038 1.25-.425 1.26-1.087.007-.604-.593-1.148-1.23-1.12",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }));
+
+    case 8:
+      return __jsx("svg", {
+        viewBox: "0 0 152 10",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      }, __jsx("path", {
+        style: {
+          fill: color
+        },
+        d: "M150.033.736c.76.01 1.43.832 1.342 1.626-.1.89-.87 1.332-1.64 1.324-10.863-.103-21.725-.22-32.588-.341-19.165-.212-38.332-.382-57.5-.51-19.296-.13-38.594-.191-57.893-.203C.168 2.63.441.182 2.003.18 12.868.17 23.733.172 34.599.188c19.178.028 38.354.037 57.53.117 19.303.081 38.605.187 57.904.431zm-47.79 6.114c1.613.033 1.344 2.53-.252 2.493l-14.539-.336-50.884-1.174c-1.5-.035-1.246-2.353.235-2.323l14.542.298 50.898 1.042z",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }));
+  }
+};
+
 var FeaturedCard = function FeaturedCard(_ref) {
   var img = _ref.img,
+      location = _ref.location,
       verified = _ref.verified,
-      description = _ref.description;
+      description = _ref.description,
+      type = _ref.type,
+      color = _ref.color;
   return __jsx("div", {
-    className: "w-30/31",
+    className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 90
     },
     __self: this
   }, __jsx("div", {
-    className: "h-full w-64 sm:w-full bg-white",
+    className: "w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 91
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
     },
     __self: this
   }, __jsx("img", {
-    className: "w-full rounded-xl",
+    className: "w-full h-full rounded-xl",
     src: img,
     alt: "adventure1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 94
     },
     __self: this
-  }), __jsx("div", {
-    className: "flex flex-wrap items-center justify-start",
+  })), __jsx("div", {
+    style: {
+      top: 70,
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+    },
+    className: "absolute mx-auto flex",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 100
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "w-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 103
+    },
+    __self: this
+  }, __jsx("svg", {
+    className: "w-full h-full",
+    viewBox: "0 0 470 239",
+    style: {
+      fill: '#3C3C41'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M104.707 148.464c-.512-1.438-1.109-2.83-1.677-4.118a386.734 386.734 0 0 0-2.678-5.889l-.07-.152a1318.773 1318.773 0 0 0-25.22-51.674l-.374-.728c-.9-1.75-1.832-3.56-2.787-5.337-1.116-2.076-2.352-4.275-4.1-6.322-3.766-4.412-8.966-6.842-14.645-6.842s-10.88 2.431-14.648 6.845c-1.746 2.048-2.981 4.245-4.098 6.321a341.749 341.749 0 0 0-2.812 5.387l-.348.676a1319.873 1319.873 0 0 0-25.22 51.673l-.114.25a388.09 388.09 0 0 0-2.632 5.791c-.569 1.288-1.166 2.678-1.678 4.12-1.497 4.213-1.941 8.24-1.359 12.308 1.219 8.513 6.924 15.809 14.89 19.041a24.699 24.699 0 0 0 9.335 1.81c.995 0 2.007-.06 3.007-.176 3.833-.445 7.695-1.75 11.48-3.88 4.629-2.606 9.202-6.425 14.197-11.883 4.996 5.458 9.569 9.277 14.199 11.883 3.784 2.13 7.646 3.435 11.478 3.88 1 .116 2.013.175 3.008.175a24.69 24.69 0 0 0 9.334-1.809c7.965-3.231 13.671-10.528 14.891-19.041.582-4.067.137-8.093-1.36-12.31zm-51.55 6.352c-6.213-7.89-10.2-15.216-11.599-21.358-.587-2.578-.721-4.947-.398-7.041.278-1.812.9-3.431 1.848-4.815 2.145-3.127 5.938-4.994 10.15-4.994 4.209 0 8.002 1.867 10.147 4.996.949 1.383 1.57 3.003 1.849 4.815.322 2.097.187 4.466-.4 7.044-1.401 6.141-5.387 13.465-11.598 21.353zm45.897 5.35a17.098 17.098 0 0 1-10.46 13.375c-2.745 1.114-5.746 1.506-8.796 1.153-2.919-.34-5.792-1.322-8.783-3.005-4.14-2.33-8.331-5.908-13.048-11.157 7.508-9.275 12.197-17.824 13.933-25.439.794-3.481.962-6.774.5-9.788-.448-2.908-1.474-5.548-3.05-7.846-3.511-5.123-9.565-8.182-16.195-8.182-6.627 0-12.68 3.058-16.192 8.18-1.576 2.298-2.601 4.938-3.048 7.845-.464 3.01-.297 6.302.496 9.784 1.735 7.618 6.424 16.169 13.934 25.447-4.716 5.248-8.907 8.825-13.048 11.156-2.99 1.683-5.863 2.666-8.782 3.005-3.049.353-6.052-.039-8.797-1.153a17.095 17.095 0 0 1-10.46-13.376c-.418-2.923-.095-5.742 1.018-8.872.41-1.154.889-2.286 1.483-3.632.84-1.903 1.732-3.838 2.595-5.709l.116-.251a1318.605 1318.605 0 0 1 25.196-51.625l.35-.682a336.93 336.93 0 0 1 2.765-5.295c.972-1.808 1.95-3.555 3.236-5.063 2.403-2.815 5.563-4.303 9.14-4.303 3.575 0 6.734 1.487 9.137 4.302 1.287 1.508 2.265 3.255 3.236 5.061a333.39 333.39 0 0 1 2.74 5.247l.377.734a1317.39 1317.39 0 0 1 25.196 51.625l.071.155a379.704 379.704 0 0 1 2.64 5.805c.595 1.347 1.075 2.48 1.484 3.63 1.111 3.132 1.434 5.951 1.016 8.873zm194.117-43.622c0-33.068 4.234-63.313 11.695-83.88 5.04-14.316 11.492-25.002 19.961-25.002 7.46 0 11.694 8.67 11.694 22.583 0 17.744-6.049 38.713-15.928 59.482-7.26 15.323-16.736 30.244-27.02 43.754-.2-5.242-.402-10.888-.402-16.937zm-43.352 65.732c12.704-7.057 25.608-17.946 37.504-31.252 3.63 22.985 11.292 30.446 20.365 30.446 10.082 0 19.76-9.276 28.229-26.01v3.225c0 17.34 7.863 22.785 14.92 22.785 10.485 0 20.769-11.695 29.036-30.85-.202 3.428-.202 5.04-.202 7.259 0 17.542 6.452 22.784 13.912 22.784 6.856 0 12.502-4.84 18.55-14.921 1.412-2.419-.402-5.646-3.225-5.646-1.412 0-2.823.807-3.428 2.017-3.63 6.452-7.057 10.888-11.291 10.888-5.848 0-6.452-8.47-6.452-15.122 0-9.679 1.225-25.472 3.024-34.883.48-2.515-1.412-4.637-3.831-4.637-2.017 0-3.63 1.41-4.033 3.024-7.662 27.826-19.558 52.425-30.85 52.425-5.645 0-8.065-6.654-8.065-15.324 0-9.88 2.017-21.777 5.645-35.085.606-2.42-1.209-4.839-3.83-4.839-1.613 0-3.428 1.009-3.832 2.621-9.072 30.245-21.776 52.627-33.269 52.627-8.267 0-12.5-11.292-14.315-29.237 13.105-15.526 24.8-33.471 33.47-51.619 10.284-21.977 16.736-44.157 16.736-62.707C344.587 6.654 334.505 0 325.23 0c-10.888 0-20.97 10.283-28.027 29.842-7.46 21.373-12.098 52.424-12.098 86.702 0 9.275.404 17.34 1.008 24.397-12.5 14.316-26.212 26.616-39.923 34.48-1.814 1.008-2.62 3.428-1.613 5.242 1.008 1.815 3.427 2.621 5.242 1.613zm-68.353 56.054c2.218 0 4.235-1.815 4.235-4.033 0-17.743.806-35.487 2.62-52.827 36.698-3.226 78.839-38.31 78.839-74.806 0-25.204-18.147-39.52-42.141-39.52-23.39 0-53.03 14.719-77.63 39.117-1.612 1.41-1.612 4.032 0 5.645 1.413 1.613 4.034 1.613 5.647 0 22.986-22.38 50.207-36.697 71.781-36.697 19.357 0 33.874 11.493 33.874 31.455 0 32.26-36.899 63.11-69.563 66.539 3.024-25.608 7.864-50.408 14.518-72.185.604-2.016-.807-4.436-2.823-5.042-2.218-.603-4.637.606-5.243 2.622-6.654 22.583-11.694 48.19-14.921 75.008-7.863-.403-14.719-2.42-22.38-6.855-2.017-1.009-4.436-.202-5.647 1.613-1.008 2.016-.2 4.436 1.614 5.645 9.073 4.637 16.937 7.057 25.607 7.662-1.613 17.34-2.622 35.084-2.622 52.626 0 2.218 2.017 4.033 4.235 4.033zm274.22-110.697c1.614 1.21 4.235 1.008 5.444-.604 5.444-6.855 8.671-14.115 8.671-20.365 0-9.275-6.251-15.122-17.743-15.122-22.18 0-43.554 22.582-43.554 39.923 0 11.09 7.662 18.55 22.987 21.373l9.476 1.613c9.88 1.613 16.534 5.04 16.534 11.896 0 7.461-8.267 11.493-16.937 11.493-6.452 0-12.099-2.218-16.534-5.242-1.613-1.21-4.032-.807-5.242.806s-.807 4.033.806 5.242c5.646 4.235 12.905 6.856 20.97 6.856 14.315 0 25.003-8.065 25.003-19.558 0-9.275-7.058-16.333-23.39-19.155l-9.477-1.614c-9.678-1.613-16.13-5.846-16.13-13.912 0-13.913 17.744-32.06 35.285-32.06 6.05 0 9.88 2.622 9.88 8.066 0 4.234-2.42 9.679-6.653 14.92-1.21 1.614-1.009 4.033.604 5.444z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: this
+  })))), __jsx("div", {
+    style: {
+      top: 120,
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+    },
+    className: "absolute mx-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "relative",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119
+    },
+    __self: this
+  }, __jsx("div", {
+    style: {
+      left: 40
+    },
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121
     },
     __self: this
   }, __jsx("p", {
-    className: "uppercase text-xs my-2 font-bold text-pink-700",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-3xl text-gray-850 whitespace-no-wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 122
     },
     __self: this
-  }, verified, "+ Verified Stays")), __jsx("p", {
-    className: "whitespace-normal my-1 text-sm tracking-wide",
+  }, location)), renderPattern(type, color))))), __jsx("div", {
+    className: "mt-2 mb-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 134
     },
     __self: this
-  }, description)));
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "uppercase text-xs text-pink-800",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135
+    },
+    __self: this
+  }, verified, "+ Verified Stays")), __jsx("div", {
+    className: "flex flex-wrap items-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 141
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "whitespace-normal text-sm tracking-wide text-gray-750 leading-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142
+    },
+    __self: this
+  }, description))));
 };
 
 /***/ }),
@@ -43462,21 +43732,18 @@ var HeaderCard = function HeaderCard() {
 
   var guestArrow1 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   var guestArrow2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    console.log('checin', checkInDate);
-  }, [checkInDate]);
   return __jsx("div", {
     className: "sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 33
     },
     __self: this
   }, __jsx("div", {
     className: "mx-6 md:mx-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 34
     },
     __self: this
   }, __jsx("h3", {
@@ -43486,26 +43753,26 @@ var HeaderCard = function HeaderCard() {
     className: "hidden md:inline-block md:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 35
     },
     __self: this
   }, "Book unique places to ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 38
     },
     __self: this
   }), "stay and things to do."), __jsx("form", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 41
     },
     __self: this
   }, __jsx("div", {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 42
     },
     __self: this
   }, __jsx("label", {
@@ -43516,7 +43783,7 @@ var HeaderCard = function HeaderCard() {
     htmlFor: "where",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 43
     },
     __self: this
   }, "Where"), __jsx("input", {
@@ -43529,21 +43796,21 @@ var HeaderCard = function HeaderCard() {
     placeholder: "Anywhere",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 49
     },
     __self: this
   })), __jsx("div", {
     className: "flex flex-wrap items-stretch justify-start relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 57
     },
     __self: this
   }, __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 58
     },
     __self: this
   }, __jsx("label", {
@@ -43554,21 +43821,21 @@ var HeaderCard = function HeaderCard() {
     htmlFor: "checkin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 59
     },
     __self: this
   }, "Check-In"), __jsx("div", {
     className: "relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 65
     },
     __self: this
   }, __jsx("div", {
     className: "w-full flex justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 66
     },
     __self: this
   }, checkInModal ? __jsx("button", {
@@ -43582,7 +43849,7 @@ var HeaderCard = function HeaderCard() {
     className: "w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 68
     },
     __self: this
   }, "dd-mm-yy") : __jsx("button", {
@@ -43596,21 +43863,21 @@ var HeaderCard = function HeaderCard() {
     className: "pr-16 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 78
     },
     __self: this
   }, "".concat(checkInDate[0], "/").concat(checkInDate[1], "/").concat(checkInDate[2]))), checkInModal ? __jsx(_modals_CalendarModal__WEBPACK_IMPORTED_MODULE_4__["CalendarModal"], {
     setCheckDate: setCheckInDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 90
     },
     __self: this
   }) : null)), __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 94
     },
     __self: this
   }, __jsx("label", {
@@ -43621,21 +43888,21 @@ var HeaderCard = function HeaderCard() {
     htmlFor: "checkout",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 95
     },
     __self: this
   }, "Check-Out"), __jsx("div", {
     className: "relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 101
     },
     __self: this
   }, __jsx("div", {
     className: "w-full flex justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 102
     },
     __self: this
   }, checkOutModal && !checkInModal ? __jsx("button", {
@@ -43649,7 +43916,7 @@ var HeaderCard = function HeaderCard() {
     className: "w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 104
     },
     __self: this
   }, "dd-mm-yy") : __jsx("button", {
@@ -43663,7 +43930,7 @@ var HeaderCard = function HeaderCard() {
     className: "pr-16 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 114
     },
     __self: this
   }, "".concat(checkOutDate[0], "/").concat(checkOutDate[1], "/").concat(checkOutDate[2]))), checkOutModal && !checkInModal ? __jsx("div", {
@@ -43674,21 +43941,21 @@ var HeaderCard = function HeaderCard() {
     className: "bg-red-550 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 126
     },
     __self: this
   }, __jsx(_modals_CalendarModal__WEBPACK_IMPORTED_MODULE_4__["CalendarModal"], {
     setCheckDate: setCheckOutDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 129
     },
     __self: this
   })) : null))), __jsx("div", {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 135
     },
     __self: this
   }, __jsx("label", {
@@ -43699,14 +43966,14 @@ var HeaderCard = function HeaderCard() {
     htmlFor: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 136
     },
     __self: this
   }, "Guests"), __jsx("div", {
     className: "inline-block relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 142
     },
     __self: this
   }, guestModal ? __jsx("button", {
@@ -43721,7 +43988,7 @@ var HeaderCard = function HeaderCard() {
     className: "appearance-none pl-2 w-full border border-green-850 py-3 text-left rounded placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 144
     },
     __self: this
   }, Object(_util_GuestModalFunctions__WEBPACK_IMPORTED_MODULE_2__["calculateGuests"])(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? ", ".concat(calculateInfant(adultNumber, infantNumber)) : null) : __jsx("button", {
@@ -43736,7 +44003,7 @@ var HeaderCard = function HeaderCard() {
     className: "appearance-none pl-2 w-full border border-gray-300 py-3 text-left rounded placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 158
     },
     __self: this
   }, Object(_util_GuestModalFunctions__WEBPACK_IMPORTED_MODULE_2__["calculateGuests"])(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? ", ".concat(calculateInfant(adultNumber, infantNumber)) : null), guestModal ? __jsx("div", {
@@ -43747,7 +44014,7 @@ var HeaderCard = function HeaderCard() {
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 173
     },
     __self: this
   }, __jsx("svg", {
@@ -43759,14 +44026,14 @@ var HeaderCard = function HeaderCard() {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 177
     },
     __self: this
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 182
     },
     __self: this
   }))) : __jsx("div", {
@@ -43777,7 +44044,7 @@ var HeaderCard = function HeaderCard() {
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 186
     },
     __self: this
   }, __jsx("svg", {
@@ -43786,14 +44053,14 @@ var HeaderCard = function HeaderCard() {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 190
     },
     __self: this
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 194
     },
     __self: this
   })))), guestModal ? __jsx(_modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_5__["GuestPickerModal"], {
@@ -43828,21 +44095,21 @@ var HeaderCard = function HeaderCard() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 200
     },
     __self: this
   }) : null)), __jsx("div", {
     className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 220
     },
     __self: this
   }, __jsx("button", {
     className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-550 rounded text-white font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225
+      lineNumber: 221
     },
     __self: this
   }, "Search"))));
@@ -50022,7 +50289,7 @@ var SectionOverflow = function SectionOverflow(_ref) {
         style: {
           fontFamily: 'airbnb-medium'
         },
-        className: "scrollable text-gray-850 text-2xl pt-3 w-5/6",
+        className: "scrollable text-gray-850 text-2xl pt-3 w-5/6 leading-7 mb-2",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18
@@ -50032,7 +50299,7 @@ var SectionOverflow = function SectionOverflow(_ref) {
         style: {
           fontFamily: 'airbnb-book'
         },
-        className: "scrollable text-md mb-5 text-gray-850 pb-3",
+        className: "text-sm md:text-base scrollable text-md mb-5 text-gray-750 pb-3 leading-4",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
@@ -50330,7 +50597,7 @@ var calculateInfants = function calculateInfants(adultNumber, infantNumber) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************/
@@ -50353,5 +50620,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

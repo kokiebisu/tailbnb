@@ -17,12 +17,12 @@ export const SectionOverflow: React.FC<Prop> = ({
         <>
           <h3
             style={{ fontFamily: 'airbnb-medium' }}
-            className='scrollable text-gray-850 text-2xl pt-3 w-5/6'>
+            className='scrollable text-gray-850 text-2xl pt-3 w-5/6 leading-7 mb-2'>
             {title}
           </h3>
           <p
             style={{ fontFamily: 'airbnb-book' }}
-            className='scrollable text-md mb-5 text-gray-850 pb-3'>
+            className='text-sm md:text-base scrollable text-md mb-5 text-gray-750 pb-3 leading-4'>
             {phrase}
           </p>
         </>
