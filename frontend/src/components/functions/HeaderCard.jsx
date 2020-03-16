@@ -1,11 +1,20 @@
 import * as React from 'react';
 import { useState, useRef } from 'react';
 import { TweenLite, Power3 } from 'gsap';
+import {
+  calculateGuests,
+  calculateInfants
+} from '../../util/GuestModalFunctions';
+import { rotateArrow, backRotateArrow } from '../../animations/arrow';
 
 // Modals
+import { CalendarModal } from '../modals/CalendarModal';
 import { GuestPickerModal } from '../modals/GuestPickerModal';
 
 export const HeaderCard = () => {
+  // Date
+  const [checkInModal, setCheckInModal] = useState(false);
+
   // Guest
   const [guestModal, setGuestModal] = useState(false);
   const [adultNumber, setAdultNumber] = useState(0);
@@ -14,42 +23,6 @@ export const HeaderCard = () => {
 
   let guestArrow1 = useRef(null);
   let guestArrow2 = useRef(null);
-
-  const calculateGuests = (adultNumber, childrenNumber) => {
-    if (adultNumber === 0 && childrenNumber === 0) {
-      return 'Guest';
-    } else if (adultNumber + childrenNumber == 1) {
-      return `${adultNumber + childrenNumber} guest`;
-    } else if (adultNumber + childrenNumber > 1) {
-      return `${adultNumber + childrenNumber} guests`;
-    }
-  };
-
-  const calculateInfant = (adultNumber, infantNumber) => {
-    if (adultNumber == 0 || infantNumber === 0) {
-      return '';
-    } else if (infantNumber === 0) {
-      return `${infantNumber} infant`;
-    } else if (infantNumber > 0) {
-      return `${infantNumber} infants`;
-    }
-  };
-
-  const rotateArrow = () => {
-    TweenLite.to(guestArrow1, 0.4, {
-      rotation: '360_cw',
-      opacity: 0.3,
-      ease: Power3.easeOut
-    });
-  };
-
-  const backRotateArrow = () => {
-    TweenLite.to(guestArrow2, 0.4, {
-      rotation: '180_cw',
-      opacity: 0.3,
-      ease: Power3.easeOut
-    });
-  };
 
   return (
     <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
@@ -76,7 +49,7 @@ export const HeaderCard = () => {
               placeholder='Anywhere'
             />
           </div>
-          <div className='flex flex-wrap items-stretch justify-start'>
+          <div className='flex flex-wrap items-stretch justify-start relative'>
             <div className='w-1/2'>
               <label
                 style={{ fontFamily: 'airbnb-bold' }}
@@ -84,13 +57,30 @@ export const HeaderCard = () => {
                 htmlFor='checkin'>
                 Check-In
               </label>
-              <input
-                style={{ fontFamily: 'airbnb-book' }}
-                className='pl-2 w-full border border-gray-300 py-3 rounded rounded-r-none placeholder-gray-900 tracking-wide'
-                type='text'
-                id='checkin'
-                placeholder='dd-mm-yyyy'
-              />
+              <div className='inline-block relative w-full'>
+                {checkInModal ? (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setCheckInModal(!checkInModal);
+                    }}
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='pl-2 w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
+                    dd-mm-yyyy
+                  </button>
+                ) : (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setCheckInModal(!checkInModal);
+                    }}
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='pl-2 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide'>
+                    dd-mm-yyyy
+                  </button>
+                )}
+                {checkInModal ? <CalendarModal /> : null}
+              </div>
             </div>
             <div className='w-1/2'>
               <label
@@ -121,7 +111,7 @@ export const HeaderCard = () => {
                   style={{ fontFamily: 'airbnb-book' }}
                   onClick={(e) => {
                     e.preventDefault();
-                    rotateArrow();
+                    rotateArrow(guestArrow1);
                     setGuestModal(!guestModal);
                   }}
                   className='appearance-none pl-2 w-full border border-green-850 py-3 text-left rounded placeholder-gray-900 tracking-wide'>
@@ -135,7 +125,7 @@ export const HeaderCard = () => {
                   style={{ fontFamily: 'airbnb-book' }}
                   onClick={(e) => {
                     e.preventDefault();
-                    backRotateArrow();
+                    backRotateArrow(guestArrow2);
                     setGuestModal(!guestModal);
                   }}
                   className='appearance-none pl-2 w-full border border-gray-300 py-3 text-left rounded placeholder-gray-900 tracking-wide'>
