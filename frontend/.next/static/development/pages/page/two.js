@@ -20878,7 +20878,7 @@ var MovePage = function MovePage(_ref) {
       first = _ref.first,
       last = _ref.last;
   return __jsx("div", {
-    className: "lg:max-w-4xl mx-auto",
+    className: "px-24 md:px-0 md:max-w-md lg:max-w-4xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -22238,7 +22238,7 @@ var two = function two() {
     },
     __self: this
   }), __jsx("div", {
-    className: "py-32",
+    className: "py-16 md:py-24 lg:py-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
@@ -22268,7 +22268,7 @@ var two = function two() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 2:
 /*!*******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fpage%2Ftwo&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fpage%2Ftwo.jsx ***!
   \*******************************************************************************************************************************************************/
@@ -22291,5 +22291,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=two.js.map

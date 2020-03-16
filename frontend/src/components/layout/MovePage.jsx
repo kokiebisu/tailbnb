@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const MovePage = ({ page, previousPage, nextPage, first, last }) => {
   return (
-    <div className='lg:max-w-4xl mx-auto'>
+    <div className='px-24 md:px-0 md:max-w-md lg:max-w-4xl mx-auto'>
       <div className='flex justify-between'>
         {first ? (
           <div className='p-4 bg-white border border-gray-300 rounded-full'>

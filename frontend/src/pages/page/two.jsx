@@ -83,7 +83,7 @@ const two = () => {
         sectionDescription='Book experiences with locals to discover a new side of NYC.'
         contents={newyorkContent}
       />
-      <div className='py-32'>
+      <div className='py-16 md:py-24 lg:py-32'>
         <MovePage
           page={2}
           previousPage={0}

@@ -3414,7 +3414,7 @@ const MovePage = ({
   last
 }) => {
   return __jsx("div", {
-    className: "lg:max-w-4xl mx-auto",
+    className: "px-24 md:px-0 md:max-w-md lg:max-w-4xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -4685,7 +4685,7 @@ const three = () => {
     },
     __self: undefined
   }), __jsx("div", {
-    className: "py-32",
+    className: "py-16 md:py-24 lg:py-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74

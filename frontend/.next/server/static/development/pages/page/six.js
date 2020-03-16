@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1973,6 +1973,17 @@ module.exports = _typeof;
 
 /***/ }),
 
+/***/ "./public/img/high/ready-earn-setup.jpg":
+/*!**********************************************!*\
+  !*** ./public/img/high/ready-earn-setup.jpg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/ready-earn-setup-d6b9785c1c09fbc7684375d6b3314148.jpg";
+
+/***/ }),
+
 /***/ "./src/components/ShowAll.tsx":
 /*!************************************!*\
   !*** ./src/components/ShowAll.tsx ***!
@@ -2784,14 +2795,91 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/EarnHosting.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
-const EarnHosting = () => {
+
+const img = __webpack_require__(/*! ../../../public/img/high/ready-earn-setup.jpg */ "./public/img/high/ready-earn-setup.jpg");
+
+const EarnHosting = ({
+  location
+}) => {
   return __jsx("div", {
+    className: "w-full md:max-w-4xl lg:max-w-8.5xl mx-auto mt-8 mb-12 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 7
     },
     __self: undefined
-  }, "earn hosting");
+  }, __jsx("div", {
+    className: "w-full h-96 md:h-112",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "h-full w-full object-cover",
+    src: img,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  })), __jsx("div", {
+    id: "ready",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "mb-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-white text-4xl md:text-4xl tracking-tighter",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "Earn up to ", __jsx("span", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, "$1,163"), "/month hosting your home in ", location)), __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "bg-white py-3 px-5 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, "Learn more")))));
 };
 
 /***/ }),
@@ -3441,7 +3529,7 @@ const MovePage = ({
   last
 }) => {
   return __jsx("div", {
-    className: "lg:max-w-4xl mx-auto",
+    className: "px-24 md:px-0 md:max-w-md lg:max-w-4xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -4714,13 +4802,14 @@ const six = () => {
     },
     __self: undefined
   }), __jsx(_components_layout_EarnHosting__WEBPACK_IMPORTED_MODULE_5__["EarnHosting"], {
+    location: "Vancouver",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75
     },
     __self: undefined
   }), __jsx("div", {
-    className: "py-32",
+    className: "py-16 md:py-24 lg:py-32",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
@@ -4750,7 +4839,7 @@ const six = () => {
 
 /***/ }),
 
-/***/ 9:
+/***/ 8:
 /*!**************************************!*\
   !*** multi ./src/pages/page/six.jsx ***!
   \**************************************/
