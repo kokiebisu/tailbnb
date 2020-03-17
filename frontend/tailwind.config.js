@@ -123,6 +123,7 @@ module.exports = {
         '232': '64rem',
         '240': '66rem',
         '248': '68rem',
+        '496': '136rem',
         '40v': '40vw',
         '60v': '60vw',
         '70v': '70vw',
@@ -165,7 +166,9 @@ module.exports = {
         '57v': '57vh',
         '80v': '80vh'
       },
+
       minWidth: {
+        featured: '32.59%',
         '32': '8rem',
         '64': '16rem',
         '128': '32rem',
