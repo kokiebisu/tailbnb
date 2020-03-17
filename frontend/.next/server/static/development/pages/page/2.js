@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2188,7 +2188,7 @@ const Featured = () => {
   };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
-    className: "lg:max-w-8.5xl md:max-4xl mx-auto relative my-16",
+    className: "w-full px-6 md:px-8 lg:px-0 xl:px-20 xl:max-w-layout mx-auto relative my-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 112
@@ -2228,14 +2228,21 @@ const Featured = () => {
     },
     __self: undefined
   }, "Browse beautiful places to stay with all the comforts of home, plus more")), __jsx("div", {
-    style: {
-      top: '50%',
-      left: '-15px'
-    },
-    className: "absolute z-50 left-0 top-0",
+    className: "w-full h-72 md:h-88 lg:h-104 relative overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 129
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      top: '30%',
+      left: '-15px'
+    },
+    className: "hidden md:block absolute z-50 left-0 top-0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130
     },
     __self: undefined
   }, __jsx("button", {
@@ -2244,21 +2251,21 @@ const Featured = () => {
     disabled: property.index === 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 133
     },
     __self: undefined
   }, __jsx("div", {
     className: "rounded-full p-4 bg-white shadow-md",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 137
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-3 h-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 138
     },
     __self: undefined
   }, __jsx("svg", {
@@ -2267,37 +2274,37 @@ const Featured = () => {
     viewBox: "0 0 492 492",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 139
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 143
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 144
     },
     __self: undefined
   }, __jsx("path", {
     d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 145
     },
     __self: undefined
   })))))))), __jsx("div", {
     style: {
-      top: '50%',
+      top: '30%',
       right: '-15px'
     },
-    className: "absolute z-50 top-0 right-0",
+    className: "hidden md:block absolute z-50 top-0 right-0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 158
     },
     __self: undefined
   }, __jsx("button", {
@@ -2305,21 +2312,21 @@ const Featured = () => {
     disabled: property.index === featureds.length - 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 161
     },
     __self: undefined
   }, __jsx("div", {
     className: "rounded-full p-4 bg-white shadow-md",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 164
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-3 h-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 165
     },
     __self: undefined
   }, __jsx("svg", {
@@ -2327,59 +2334,59 @@ const Featured = () => {
     viewBox: "0 0 492.004 492.004",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
-    },
-    __self: undefined
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 165
-    },
-    __self: undefined
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 166
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 167
+    },
+    __self: undefined
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168
     },
     __self: undefined
   }, __jsx("path", {
     d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 169
     },
     __self: undefined
   })))))))), __jsx("div", {
-    className: "w-full h-80 overflow-x-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 181
-    },
-    __self: undefined
-  }, __jsx("div", {
-    id: "cards-slider",
+    className: "w-full h-full md:overflow-x-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 182
     },
     __self: undefined
   }, __jsx("div", {
-    id: "cards-slider-wrapper",
-    style: {
-      transform: `translateX(-${property.index * 484.3}px)`
-    },
+    id: "cards-slider",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 183
     },
     __self: undefined
+  }, __jsx("div", {
+    id: "cards-slider-wrapper",
+    style: {
+      transform: `translateX(-${property.index * 33.5}%)`
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 184
+    },
+    __self: undefined
   }, featureds.map(featured => __jsx(_functions_FeaturedCard__WEBPACK_IMPORTED_MODULE_2__["FeaturedCard"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, featured, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 190
     },
     __self: undefined
-  }))))))));
+  })))))))));
 };
 
 /***/ }),
@@ -2952,7 +2959,7 @@ const FeaturedCard = ({
   color
 }) => {
   return __jsx("div", {
-    className: "lg:min-w-featured mr-4",
+    className: "min-w-small md:min-w-medium lg:min-w-large mr-4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 90
@@ -5533,7 +5540,7 @@ const two = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./src/pages/page/2.jsx ***!
   \************************************/

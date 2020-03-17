@@ -516,7 +516,6 @@ body {
 
 #cards-slider {
   position: relative;
-  max-width: 90rem;
 }
 
 /* #cards-slider::after {

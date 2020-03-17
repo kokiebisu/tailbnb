@@ -109,7 +109,7 @@ export const Featured = () => {
 
   return (
     <>
-      <div className='lg:max-w-8.5xl md:max-4xl mx-auto relative my-16'>
+      <div className='w-full px-6 md:px-8 lg:px-0 xl:px-20 xl:max-w-layout mx-auto relative my-16'>
         <div>
           <h3
             style={{ fontFamily: 'airbnb-medium' }}
@@ -125,69 +125,71 @@ export const Featured = () => {
             more
           </p>
         </div>
-        <div
-          style={{ top: '50%', left: '-15px' }}
-          className='absolute z-50 left-0 top-0'>
-          <button
-            className=''
-            onClick={() => prevProperty()}
-            disabled={property.index === 0}>
-            <div className='rounded-full p-4 bg-white shadow-md'>
-              <div className='w-3 h-3'>
-                <svg
-                  className='w-full h-full'
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 492 492'>
-                  <g>
+
+        <div className='w-full h-72 md:h-88 lg:h-104 relative overflow-y-hidden'>
+          <div
+            style={{ top: '30%', left: '-15px' }}
+            className='hidden md:block absolute z-50 left-0 top-0'>
+            <button
+              className=''
+              onClick={() => prevProperty()}
+              disabled={property.index === 0}>
+              <div className='rounded-full p-4 bg-white shadow-md'>
+                <div className='w-3 h-3'>
+                  <svg
+                    className='w-full h-full'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 492 492'>
                     <g>
-                      <path
-                        d='M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12
+                      <g>
+                        <path
+                          d='M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12
 			C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084
 			c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864
 			l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z'
-                      />
+                        />
+                      </g>
                     </g>
-                  </g>
-                </svg>
+                  </svg>
+                </div>
               </div>
-            </div>
-          </button>
-        </div>
-        <div
-          style={{ top: '50%', right: '-15px' }}
-          className='absolute z-50 top-0 right-0'>
-          <button
-            onClick={() => nextProperty()}
-            disabled={property.index === featureds.length - 3}>
-            <div className='rounded-full p-4 bg-white shadow-md'>
-              <div className='w-3 h-3'>
-                <svg className='w-full h-full' viewBox='0 0 492.004 492.004'>
-                  <g>
+            </button>
+          </div>
+          <div
+            style={{ top: '30%', right: '-15px' }}
+            className='hidden md:block absolute z-50 top-0 right-0'>
+            <button
+              onClick={() => nextProperty()}
+              disabled={property.index === featureds.length - 3}>
+              <div className='rounded-full p-4 bg-white shadow-md'>
+                <div className='w-3 h-3'>
+                  <svg className='w-full h-full' viewBox='0 0 492.004 492.004'>
                     <g>
-                      <path
-                        d='M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+                      <g>
+                        <path
+                          d='M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
 			c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
 			c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
 			c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z'
-                      />
+                        />
+                      </g>
                     </g>
-                  </g>
-                </svg>
+                  </svg>
+                </div>
               </div>
-            </div>
-          </button>
-        </div>
-
-        <div className='w-full h-80 overflow-x-hidden'>
-          <div id='cards-slider'>
-            <div
-              id='cards-slider-wrapper'
-              style={{
-                transform: `translateX(-${property.index * 484.3}px)`
-              }}>
-              {featureds.map((featured) => (
-                <FeaturedCard {...featured} />
-              ))}
+            </button>
+          </div>
+          <div className='w-full h-full md:overflow-x-hidden'>
+            <div id='cards-slider'>
+              <div
+                id='cards-slider-wrapper'
+                style={{
+                  transform: `translateX(-${property.index * 33.5}%)`
+                }}>
+                {featureds.map((featured) => (
+                  <FeaturedCard {...featured} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

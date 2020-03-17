@@ -168,7 +168,9 @@ module.exports = {
       },
 
       minWidth: {
-        featured: '32.59%',
+        large: '32.5%',
+        medium: '40%',
+        small: '40%',
         '32': '8rem',
         '64': '16rem',
         '128': '32rem',

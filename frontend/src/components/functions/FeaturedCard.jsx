@@ -87,7 +87,7 @@ export const FeaturedCard = ({
   color
 }) => {
   return (
-    <div className='lg:min-w-featured mr-4'>
+    <div className='min-w-small md:min-w-medium lg:min-w-large mr-4'>
       <div className='w-full'>
         <div className='relative'>
           <div>
