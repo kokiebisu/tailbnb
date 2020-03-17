@@ -5,7 +5,18 @@ interface Prop {
   placeholder: string;
 }
 
-export const ExploreHeader: React.FC<Prop> = ({ white, placeholder }) => {
+export const ExploreHeader: React.FC<Prop> = ({ white }) => {
+  const locations = [
+    'Barcelona',
+    'Tokyo',
+    'Los Angeles',
+    'Sydney',
+    'Paris',
+    'Montreal',
+    'Toronto',
+    'New York',
+    'Seattle'
+  ];
   return (
     <>
       {white ? (
@@ -36,7 +47,8 @@ export const ExploreHeader: React.FC<Prop> = ({ white, placeholder }) => {
                   <p
                     style={{ fontFamily: 'airbnb-bold' }}
                     className='text-gray-750 px-4'>
-                    {placeholder}
+                    Try "
+                    {locations[Math.floor(Math.random() * locations.length)]}"
                   </p>
                 </div>
               </div>
@@ -88,7 +100,6 @@ export const ExploreHeader: React.FC<Prop> = ({ white, placeholder }) => {
         </>
       ) : (
         <>
-          {' '}
           <div className='bg-black flex items-center justify-between relative'>
             <div className='flex items-center justify-start w-full md:w-1/2'>
               <div className='ml-6 mr-6 md:mr-8 my-5'>

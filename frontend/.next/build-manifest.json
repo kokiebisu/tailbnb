@@ -8,10 +8,6 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -24,27 +20,7 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/page/five": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/page/four": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/page/six": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/page/three": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/page/two": [
+    "/page/2": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
