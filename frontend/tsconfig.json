@@ -40,6 +40,7 @@
     "src/components/host/layout/HostReady.tsx",
     "src/components/functions/HeaderCard.jsx",
     "src/components/containers/Featured.jsx",
-    "src/components/functions/FeaturedCard.jsx"
+    "src/components/functions/FeaturedCard.jsx",
+    "src/components/layout/ExploreHeader.jsx"
   ]
 }

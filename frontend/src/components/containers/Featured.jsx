@@ -109,7 +109,7 @@ export const Featured = () => {
 
   return (
     <>
-      <div className='w-full px-6 md:px-8 lg:px-0 xl:px-20 xl:max-w-layout mx-auto relative my-16'>
+      <div className='w-full px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto relative my-16'>
         <div>
           <h3
             style={{ fontFamily: 'airbnb-medium' }}
@@ -126,7 +126,7 @@ export const Featured = () => {
           </p>
         </div>
 
-        <div className='w-full h-72 md:h-88 lg:h-104 relative overflow-y-hidden'>
+        <div className='w-full h-72 md:h-88 lg:h-104 relative'>
           <div
             style={{ top: '30%', left: '-15px' }}
             className='hidden md:block absolute z-50 left-0 top-0'>
@@ -134,7 +134,7 @@ export const Featured = () => {
               className=''
               onClick={() => prevProperty()}
               disabled={property.index === 0}>
-              <div className='rounded-full p-4 bg-white shadow-md'>
+              <div className='rounded-full p-4 bg-white shadow-md border border-gray-300'>
                 <div className='w-3 h-3'>
                   <svg
                     className='w-full h-full'
@@ -161,7 +161,7 @@ export const Featured = () => {
             <button
               onClick={() => nextProperty()}
               disabled={property.index === featureds.length - 3}>
-              <div className='rounded-full p-4 bg-white shadow-md'>
+              <div className='rounded-full p-4 bg-white shadow-md border border-gray-300'>
                 <div className='w-3 h-3'>
                   <svg className='w-full h-full' viewBox='0 0 492.004 492.004'>
                     <g>
