@@ -63,7 +63,7 @@ const id: () => string | JSX.Element = () => {
       </Head>
       {data && (
         <>
-          <ExploreHeader type='stay' mode='dark' />
+          <ExploreHeader white={true} />
           <Banner />
           <WhatYouDo />
           <Adventures />

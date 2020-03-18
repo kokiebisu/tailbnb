@@ -17,7 +17,7 @@ const Stay: NextPage = () => {
   return (
     <>
       <header className='z-20 sticky bg-white top-0 '>
-        <ExploreHeader white={true} placeholder='Anywhere Stays' />
+        <ExploreHeader white={true} />
         <HeaderCategory
           dates={true}
           guests={true}

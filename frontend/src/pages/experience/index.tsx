@@ -11,7 +11,7 @@ import { NextPage } from 'next';
 const Experience: NextPage<{}> = () => {
   return (
     <>
-      <ExploreHeader mode='white' type='Experiences' />
+      <ExploreHeader white={true} />
       <div className='text-gray-750 md:px-0 max-w-90% xl:px-0 mx-auto py-5'>
         <p style={{ fontFamily: 'airbnb-bold' }} className='text-xs'>
           AIRBNB EXPERIENCES
