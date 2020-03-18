@@ -75,7 +75,7 @@ const id: () => string | JSX.Element = () => {
           <Availability />
           <Reviews />
           <Safety />
-          <div className='lg:max-w-6xl mx-auto h-128'>
+          <div className='lg:max-w-6xl mx-auto h-144'>
             <Map />
           </div>
           <KeepInMind />
