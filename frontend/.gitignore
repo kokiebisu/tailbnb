@@ -1,4 +1,4 @@
 # Dependencies
 node_modules
 .now
-./api.js
+api.js
