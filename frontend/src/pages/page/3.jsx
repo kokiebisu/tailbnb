@@ -9,6 +9,7 @@ import LocationStays from '../../components/containers/LocationStays';
 // Layout
 import { MovePage } from '../../components/layout/MovePage';
 import { NewFooter } from '../../components/layout/NewFooter';
+import StayWithSuperhost from '../../components/containers/StayWithSuperhost';
 
 const uniqueplacesContent = [
   {
@@ -68,6 +69,7 @@ const three = () => {
     <>
       <ExploreHeader white={true} placeholder='Try "Barcelona"' />
       <HeaderCategory dates={true} guests={true} />
+      <StayWithSuperhost />
       <LocationExperiences location='New York' />
       <LocationStays street='New York' />
       <LocationStays location='Barcelona' />

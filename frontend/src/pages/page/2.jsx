@@ -5,8 +5,8 @@ import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { HeaderCategory } from '../../components/layout/HeaderCategory';
 import { Popular } from '../../components/containers/Popular';
 import { Featured } from '../../components/containers/Featured';
-import StayWithSuperhost from '../../components/containers/StayWithSuperhost';
 import { ThreeColumn } from '../../components/containers/ThreeColumn';
+import Adventures from '../../components/containers/Adventures';
 
 // Layout
 import { MovePage } from '../../components/layout/MovePage';
@@ -71,7 +71,7 @@ const two = () => {
       <ExploreHeader white={true} placeholder='Try "Barcelona"' />
       <HeaderCategory dates={true} guests={true} />
       <Popular />
-      <StayWithSuperhost />
+      <Adventures />
       <Featured />
       <ThreeColumn
         sectionTitle='Unique places to stay for your next trip'
