@@ -21,6 +21,8 @@ import { KeepExploring } from '../../components/adventures/containers/KeepExplor
 import { DateCheck } from '../../components/adventures/containers/DateCheck';
 import { Footer } from '../../components/adventures/containers/Footer';
 
+import Map from '../../components/containers/MapContainer';
+
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 
@@ -73,6 +75,9 @@ const id: () => string | JSX.Element = () => {
           <Availability />
           <Reviews />
           <Safety />
+          <div className='lg:max-w-6xl mx-auto h-128'>
+            <Map />
+          </div>
           <KeepInMind />
           <KeepExploring />
           <Footer />

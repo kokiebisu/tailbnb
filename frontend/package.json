@@ -50,6 +50,7 @@
     "autodll-webpack-plugin": "^0.4.2",
     "axios": "^0.19.2",
     "cuid": "^2.1.8",
+    "google-map-react": "^1.1.7",
     "graphql": "^14.6.0",
     "gsap": "^3.2.4",
     "isomorphic-unfetch": "^3.0.0",
