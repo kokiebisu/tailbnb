@@ -1,5 +1,19 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/adventures/[id].js"],{
 
+/***/ "../api.js":
+/*!*****************!*\
+  !*** ../api.js ***!
+  \*****************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  production: 'AIzaSyCIOOh3HYHodLXVbCxW0tL_Nl-y_N-IzrY'
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/@apollo/react-common/lib/react-common.esm.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@apollo/react-common/lib/react-common.esm.js ***!
@@ -29383,10 +29397,10 @@ var ReviewCard = function ReviewCard(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/containers/MapContainer.js":
-/*!***************************************************!*\
-  !*** ./src/components/containers/MapContainer.js ***!
-  \***************************************************/
+/***/ "./src/components/containers/MapContainer.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/containers/MapContainer.jsx ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -29398,9 +29412,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! google-map-react */ "./node_modules/google-map-react/lib/index.js");
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Marker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Marker */ "./src/components/containers/Marker.jsx");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../api */ "../api.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_api__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/MapContainer.js";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/MapContainer.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -29424,24 +29441,24 @@ var Map = function Map(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_2___default.a, {
     bootstrapURLKeys: {
-      key: 'AIzaSyCIOOh3HYHodLXVbCxW0tL_Nl-y_N-IzrY'
+      key: _api__WEBPACK_IMPORTED_MODULE_4___default.a.production
     },
     defaultCenter: center,
     defaultZoom: zoom,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     },
     __self: this
   }, __jsx(_Marker__WEBPACK_IMPORTED_MODULE_3__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }))));
@@ -29528,7 +29545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WhereYouWillBe", function() { return WhereYouWillBe; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MapContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapContainer */ "./src/components/containers/MapContainer.js");
+/* harmony import */ var _MapContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapContainer */ "./src/components/containers/MapContainer.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/WhereYouWillBe.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -30583,7 +30600,7 @@ var id = function id() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!*****************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fadventures%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fadventures%2F%5Bid%5D.tsx ***!
   \*****************************************************************************************************************************************************************************/
@@ -30606,5 +30623,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
