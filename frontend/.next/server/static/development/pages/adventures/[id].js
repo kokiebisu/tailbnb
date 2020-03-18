@@ -4955,7 +4955,7 @@ const SimpleMap = props => {
     },
     __self: undefined
   }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    bootstrayURLKeys: {
+    bootstrapURLKeys: {
       key: 'AIzaSyCIOOh3HYHodLXVbCxW0tL_Nl-y_N-IzrY'
     },
     defaultCenter: center,
