@@ -31,6 +31,10 @@
     "/page/2": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/page/3": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

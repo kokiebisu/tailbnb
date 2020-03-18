@@ -3541,20 +3541,18 @@ const ExploreHeader = ({
   let cancel = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
 
   const expandInput = () => {
-    if (innerWidth < 640) {
+    if (innerWidth < 720) {
       gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(inputbox, 0.4, {
         x: -50,
         ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn
       });
       gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(suggestionbox, 0.4, {
-        x: -100,
-        y: 20,
+        x: -50,
+        y: 10,
         opacity: 1,
         ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn,
-        css: {
-          minHeight: '64px',
-          width: '100vw'
-        }
+        width: '80vw',
+        height: '30vh'
       });
       gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(logo, 0.3, {
         css: {
@@ -3577,18 +3575,15 @@ const ExploreHeader = ({
       gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(suggestionbox, 0.4, {
         width: 600,
         opacity: 1,
-        ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn
-      });
-      gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(suggestionbox, 0.4, {
-        width: 600,
-        opacity: 1,
+        x: 0,
+        y: 10,
         ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn
       });
     }
   };
 
   const shrinkInput = () => {
-    if (innerWidth < 640) {
+    if (innerWidth < 720) {
       gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(inputbox, 0.4, {
         x: 0,
         ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn,
@@ -3614,6 +3609,11 @@ const ExploreHeader = ({
       });
     } else {
       gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(inputbox, 0.4, {
+        width: 480,
+        ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(suggestionbox, 0.4, {
+        opacity: 0,
         width: 480,
         ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn
       });

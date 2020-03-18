@@ -27,20 +27,18 @@ export const ExploreHeader = ({ white }) => {
   let cancel = useRef(null);
 
   const expandInput = () => {
-    if (innerWidth < 640) {
+    if (innerWidth < 720) {
       TweenLite.to(inputbox, 0.4, {
         x: -50,
         ease: Power3.easeIn
       });
       TweenLite.to(suggestionbox, 0.4, {
-        x: -100,
-        y: 20,
+        x: -50,
+        y: 10,
         opacity: 1,
         ease: Power3.easeIn,
-        css: {
-          minHeight: '64px',
-          width: '100vw'
-        }
+        width: '80vw',
+        height: '30vh'
       });
       TweenLite.to(logo, 0.3, {
         css: { opacity: 0 },
@@ -59,17 +57,14 @@ export const ExploreHeader = ({ white }) => {
       TweenLite.to(suggestionbox, 0.4, {
         width: 600,
         opacity: 1,
-        ease: Power3.easeIn
-      });
-      TweenLite.to(suggestionbox, 0.4, {
-        width: 600,
-        opacity: 1,
+        x: 0,
+        y: 10,
         ease: Power3.easeIn
       });
     }
   };
   const shrinkInput = () => {
-    if (innerWidth < 640) {
+    if (innerWidth < 720) {
       TweenLite.to(inputbox, 0.4, {
         x: 0,
         ease: Power3.easeIn,
@@ -90,6 +85,11 @@ export const ExploreHeader = ({ white }) => {
       });
     } else {
       TweenLite.to(inputbox, 0.4, { width: 480, ease: Power3.easeIn });
+      TweenLite.to(suggestionbox, 0.4, {
+        opacity: 0,
+        width: 480,
+        ease: Power3.easeIn
+      });
     }
   };
 
