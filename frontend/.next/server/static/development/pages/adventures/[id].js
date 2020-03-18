@@ -480,7 +480,7 @@ const Banner = () => {
     },
     __self: undefined
   })), __jsx("div", {
-    className: "bg-blue-500 border-t-4 border-black w-full h-1/2",
+    className: "border-t-4 border-black w-full h-1/2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
@@ -2041,107 +2041,98 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _functions_IncludedCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/IncludedCard */ "./src/components/adventures/functions/IncludedCard.tsx");
-/* harmony import */ var _wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../wrapper/DetailSectionOverflow */ "./src/components/wrapper/DetailSectionOverflow.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/adventures/containers/Included.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Function
 
 
-
 const Included = () => {
   return __jsx("div", {
-    className: "w-full flex justify-center",
+    className: "px-6 md:px-16 lg:px-0 xl:max-w-6xl mx-auto py-5 lg:py-16 lg:flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "lg:sticky lg:top-0 py-8 md:py-0 md:w-4/12 h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-4 md:px-16 w-full max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-8 md:py-16",
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "md:h-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: undefined
-  }, __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-bold'
-    },
-    className: "w-full md:w-4/12 md:h-full pb-8 md:pb-0",
+  }, __jsx("p", {
+    className: " text-2xl md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: undefined
-  }, __jsx("p", {
-    className: "lg:sticky lg:top-0 text-2xl md:text-3xl text-gray-750",
+  }, "What's included"))), __jsx("div", {
+    className: "overflow-y-hidden md:w-8/12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
-    },
-    __self: undefined
-  }, "What's included")), __jsx(_wrapper_DetailSectionOverflow__WEBPACK_IMPORTED_MODULE_2__["DetailSectionOverflow"], {
-    title: null,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full h-full overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 15
     },
     __self: undefined
   }, __jsx("div", {
     className: "h-full scroller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 16
     },
     __self: undefined
   }, __jsx("div", {
-    className: "scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl w-104 w-full md:w-full",
+    className: "scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 18
     },
     __self: undefined
   }, __jsx(_functions_IncludedCard__WEBPACK_IMPORTED_MODULE_1__["IncludedCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 19
     },
     __self: undefined
   })), __jsx("div", {
     className: "mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 21
     },
     __self: undefined
   }, __jsx(_functions_IncludedCard__WEBPACK_IMPORTED_MODULE_1__["IncludedCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 22
     },
     __self: undefined
-  })))))))));
+  })))))));
 };
 
 /***/ }),
@@ -2173,7 +2164,7 @@ const Itinerary = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-4 md:px-16 w-full max-w-6xl flex justify-start items-start flex-wrap py-8 md:py-16",
+    className: "px-6 md:px-16 lg:px-0 lg:max-w-6xl flex justify-start items-start flex-wrap py-8 md:py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -2196,11 +2187,11 @@ const Itinerary = () => {
       lineNumber: 13
     },
     __self: undefined
-  }, ' ', "Your itinerary")), __jsx("div", {
+  }, "Your itinerary")), __jsx("div", {
     className: "w-full md:w-8/12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: undefined
   }, __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["ItineraryCard"], {
@@ -2210,7 +2201,7 @@ const Itinerary = () => {
     description: "Pick up is at 6pm (18:00) from the main entrance of Clarion Hotel The Edge.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 18
     },
     __self: undefined
   }), __jsx(_functions_ItineraryCard__WEBPACK_IMPORTED_MODULE_1__["ItineraryCard"], {
@@ -2220,7 +2211,7 @@ const Itinerary = () => {
     description: "After the breakfast, we will do hiking in surrounding nature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: undefined
   }))));
@@ -5894,83 +5885,6 @@ const SuggestionBox = () => {
     },
     __self: undefined
   }, "Adventures")));
-};
-
-/***/ }),
-
-/***/ "./src/components/wrapper/DetailSectionOverflow.tsx":
-/*!**********************************************************!*\
-  !*** ./src/components/wrapper/DetailSectionOverflow.tsx ***!
-  \**********************************************************/
-/*! exports provided: DetailSectionOverflow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailSectionOverflow", function() { return DetailSectionOverflow; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/wrapper/DetailSectionOverflow.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-const DetailSectionOverflow = ({
-  title,
-  phrase,
-  children
-}) => {
-  function renderPhrase(phrase) {
-    if (phrase) {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
-        style: {
-          fontFamily: 'airbnb-medium'
-        },
-        className: "scrollable text-gray-850 text-2xl pt-3 w-5/6",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
-      }, title), __jsx("p", {
-        style: {
-          fontFamily: 'airbnb-book'
-        },
-        className: "scrollable text-md mb-5 text-gray-850 pb-3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, phrase));
-    } else {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("h3", {
-        style: {
-          fontFamily: 'airbnb-medium'
-        },
-        className: "text-2xl my-4 text-gray-850",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, title));
-    }
-  }
-
-  return __jsx("div", {
-    className: "border-b border-gray-300 pt-4 pb-14 w-full mx-auto overflow-x-hidden overflow-y-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "pb-8",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }, renderPhrase(phrase), children));
 };
 
 /***/ }),

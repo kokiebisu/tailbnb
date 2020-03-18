@@ -29,7 +29,7 @@ export const Banner: React.FC<{}> = () => {
                 src='https://a0.muscache.com/im/pictures/b6b69440-418f-49ac-afa1-9c02d7a4bdb8.jpg?aki_policy=exp_md'
               />
             </div>
-            <div className='bg-blue-500 border-t-4 border-black w-full h-1/2'>
+            <div className='border-t-4 border-black w-full h-1/2'>
               <img
                 className='w-full h-full object-cover'
                 src='https://a0.muscache.com/im/pictures/7ba40e88-c17a-4bf4-b98c-50ebf772b406.jpg?aki_policy=exp_md'
