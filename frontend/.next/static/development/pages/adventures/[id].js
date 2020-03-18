@@ -29478,15 +29478,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var locationmarker = __webpack_require__(/*! ../../../public/img/high/location-pointer.png */ "./public/img/high/location-pointer.png");
 
 var Marker = function Marker(_ref) {
-  var color = _ref.color,
-      name = _ref.name,
+  var name = _ref.name,
       id = _ref.id;
-  return __jsx("div", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, innerWidth > 640 ? __jsx("div", {
     className: "flex items-center justify-center rounded-full bg-gray-850 w-14 h-14 cursor-pointer",
     title: name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 8
     },
     __self: this
   }, __jsx("div", {
@@ -29496,7 +29495,7 @@ var Marker = function Marker(_ref) {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
   }, __jsx("img", {
@@ -29505,10 +29504,21 @@ var Marker = function Marker(_ref) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: this
-  })));
+  }))) : __jsx("div", {
+    style: {
+      backgroundColor: 'rgba(0, 0, 0, 0.2)'
+    },
+    className: "flex items-center justify-center rounded-full border-2 border-gray-750 w-14 h-14 cursor-pointer",
+    title: name,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Marker);
@@ -29534,7 +29544,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 var WhereYouWillBe = function WhereYouWillBe() {
   return __jsx("div", {
-    className: "lg:max-w-6xl mx-auto py-16",
+    className: "px-6 md:px-12 lg:px-0 lg:max-w-6xl mx-auto py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -29565,7 +29575,7 @@ var WhereYouWillBe = function WhereYouWillBe() {
     },
     __self: this
   }, __jsx("div", {
-    className: "w-full h-144",
+    className: "w-full h-72 md:h-144",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
