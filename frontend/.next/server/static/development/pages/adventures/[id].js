@@ -88,10 +88,24 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "../api.js":
+/*!*****************!*\
+  !*** ../api.js ***!
+  \*****************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  production: 'AIzaSyCIOOh3HYHodLXVbCxW0tL_Nl-y_N-IzrY'
+};
+
+
+/***/ }),
 
 /***/ "./node_modules/@babel/runtime/helpers/extends.js":
 /*!********************************************************!*\
@@ -4915,10 +4929,10 @@ const ReviewCard = ({
 
 /***/ }),
 
-/***/ "./src/components/containers/MapContainer.js":
-/*!***************************************************!*\
-  !*** ./src/components/containers/MapContainer.js ***!
-  \***************************************************/
+/***/ "./src/components/containers/MapContainer.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/containers/MapContainer.jsx ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4931,9 +4945,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! google-map-react */ "google-map-react");
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Marker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Marker */ "./src/components/containers/Marker.jsx");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../api */ "../api.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_api__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/MapContainer.js";
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/MapContainer.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -4957,24 +4974,24 @@ const Map = props => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: undefined
   }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_2___default.a, {
     bootstrapURLKeys: {
-      key: 'AIzaSyCIOOh3HYHodLXVbCxW0tL_Nl-y_N-IzrY'
+      key: _api__WEBPACK_IMPORTED_MODULE_4___default.a.production
     },
     defaultCenter: center,
     defaultZoom: zoom,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx(_Marker__WEBPACK_IMPORTED_MODULE_3__["default"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: undefined
   }))));
@@ -5062,7 +5079,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WhereYouWillBe", function() { return WhereYouWillBe; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MapContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapContainer */ "./src/components/containers/MapContainer.js");
+/* harmony import */ var _MapContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapContainer */ "./src/components/containers/MapContainer.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/WhereYouWillBe.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -6105,7 +6122,7 @@ const id = () => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************************************!*\
   !*** multi ./src/pages/adventures/[id].tsx ***!
   \*********************************************/
