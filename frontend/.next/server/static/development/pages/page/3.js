@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2165,31 +2165,31 @@ const LocationExperiences = ({
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
-      available: 'Today',
-      location: 'Vancouver'
+      location: location
     }
   });
   if (error) return `Error! ${error.message}`;
+  console.log(data);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_7__["Section"], {
     title: `Experiences in ${location}`,
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 95
     },
     __self: undefined
   }, __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 98
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 100
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2197,14 +2197,14 @@ const LocationExperiences = ({
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 101
     },
     __self: undefined
   })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 115
     },
     __self: undefined
   })));
@@ -2236,8 +2236,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
 /* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! cuid */ "cuid");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/LocationStays.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -2250,10 +2248,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Wrapper
 
 
-
-const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
-  query {
-    stays {
+const GET_LOCATION_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
+  query LocationStays($street: String) {
+    stays(where: { street_contains: $street }, first: 8) {
       id
       host_is_superhost
       country
@@ -2294,7 +2291,7 @@ const renderContent = (data, number) => {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 55
       },
       __self: undefined
     }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_5__["StayCard"], {
@@ -2308,7 +2305,7 @@ const renderContent = (data, number) => {
       picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 56
       },
       __self: undefined
     })));
@@ -2323,33 +2320,42 @@ const LocationStays = ({
   isLaptop,
   isDesktop,
   isLargeDesktop,
-  location
+  street
 }) => {
   const {
     loading,
     error,
     data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS);
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_LOCATION_STAYS, {
+    variables: {
+      street: street
+    }
+  });
   if (error) return `Error! ${error.message}`;
+
+  if (data) {
+    console.log(data);
+  }
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_7__["Section"], {
-    title: `Places to stay in ${location}`,
+    title: `Places to stay in ${street}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 92
     },
     __self: undefined
   }, __jsx("div", {
     className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 93
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "flex justify-center items-center w-full py-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 95
     },
     __self: undefined
   }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2357,14 +2363,14 @@ const LocationStays = ({
     color: '#008489',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 96
     },
     __self: undefined
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 4) : null, isLaptop ? renderContent(data, 6) : null, isDesktop ? renderContent(data, 8) : null, isLargeDesktop ? renderContent(data, 8) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  })) : data.stays && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 4) : null, isLaptop ? renderContent(data, 6) : null, isDesktop ? renderContent(data, 8) : null, isLargeDesktop ? renderContent(data, 8) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 111
     },
     __self: undefined
   })));
@@ -2578,18 +2584,25 @@ const StayCard = ({
 }) => {
   const renderhost = host_is_superhost => {
     if (host_is_superhost == 't') {
-      return __jsx("div", {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
         className: "flex items-center justify-between",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 27
+        },
+        __self: undefined
+      }, __jsx("div", {
+        className: "flex flex-wrap items-center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
         },
         __self: undefined
       }, __jsx("div", {
         className: "mt-2 mb-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 29
         },
         __self: undefined
       }, __jsx("p", {
@@ -2599,21 +2612,38 @@ const StayCard = ({
         className: "uppercase border border-gray-800 rounded text-xs px-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 30
         },
         __self: undefined
       }, "Superhost")), __jsx("div", {
+        className: "ml-1 mt-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: undefined
+      }, __jsx("p", {
+        style: {
+          fontFamily: 'airbnb-book'
+        },
+        className: "text-sm text-gray-750",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: undefined
+      }, country))), __jsx("div", {
         className: "flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 44
         },
         __self: undefined
       }, __jsx("div", {
         className: "h-3 w-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 45
         },
         __self: undefined
       }, __jsx("svg", {
@@ -2626,43 +2656,43 @@ const StayCard = ({
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 46
         },
         __self: undefined
       }, __jsx("g", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 51
         },
         __self: undefined
       }, __jsx("path", {
         d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 52
         },
         __self: undefined
       })))), __jsx("p", {
         className: "pl-1 text-sm",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 64
         },
         __self: undefined
-      }, reviews_per_month)));
+      }, reviews_per_month))));
     } else {
       return __jsx("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 71
         },
         __self: undefined
       }, __jsx("p", {
         className: "mt-3 text-sm sm:my-2 font-light text-gray-600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 72
         },
         __self: undefined
       }, country));
@@ -2674,20 +2704,20 @@ const StayCard = ({
     as: `/stays/${id}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 81
     },
     __self: undefined
   }, __jsx("div", {
     className: "cursor-pointer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 82
     },
     __self: undefined
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 83
     },
     __self: undefined
   }, __jsx("img", {
@@ -2695,37 +2725,20 @@ const StayCard = ({
     src: picture_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 84
     },
     __self: undefined
   })), __jsx("div", {
     className: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 87
     },
     __self: undefined
-  }, renderhost(host_is_superhost), __jsx("div", {
-    className: "flex items-center flex-wrap",
+  }, renderhost(host_is_superhost)), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: undefined
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-sm text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: undefined
-  }, country))), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: undefined
   }, __jsx("p", {
@@ -2735,14 +2748,14 @@ const StayCard = ({
     className: "text-sm md:text-base text-gray-850 truncate",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 89
     },
     __self: undefined
   }, name)), __jsx("div", {
     className: "hidden md:block",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 95
     },
     __self: undefined
   }, __jsx("p", {
@@ -2751,7 +2764,7 @@ const StayCard = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 96
     },
     __self: undefined
   }, __jsx("span", {
@@ -2761,7 +2774,7 @@ const StayCard = ({
     className: "text-gray-850",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 97
     },
     __self: undefined
   }, "$", price, " CAD"), "/night"))));
@@ -4946,7 +4959,7 @@ const three = () => {
     },
     __self: undefined
   }), __jsx(_components_containers_LocationStays__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    location: "New York",
+    street: "New York",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 72
@@ -4988,7 +5001,7 @@ const three = () => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./src/pages/page/3.jsx ***!
   \************************************/
@@ -5019,17 +5032,6 @@ module.exports = require("@apollo/react-hooks");
 /***/ (function(module, exports) {
 
 module.exports = require("apollo-boost");
-
-/***/ }),
-
-/***/ "cuid":
-/*!***********************!*\
-  !*** external "cuid" ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("cuid");
 
 /***/ }),
 

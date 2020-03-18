@@ -69,7 +69,7 @@ const three = () => {
       <ExploreHeader white={true} placeholder='Try "Barcelona"' />
       <HeaderCategory dates={true} guests={true} />
       <LocationExperiences location='New York' />
-      <LocationStays location='New York' />
+      <LocationStays street='New York' />
       <LocationStays location='Barcelona' />
       <div className='py-16 md:py-24 lg:py-32'>
         <MovePage page={3} first={false} last={false} />

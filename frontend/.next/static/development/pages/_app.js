@@ -25641,7 +25641,7 @@ var MyApp = function MyApp(_ref) {
 /* harmony default export */ __webpack_exports__["default"] = (next_with_apollo__WEBPACK_IMPORTED_MODULE_5___default()(function (_ref2) {
   var initialState = _ref2.initialState;
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_6__["default"]({
-    uri: 'https://nextbnb-server-97b1e5b0c9.herokuapp.com',
+    uri: 'https://nextbnb-server-f806387580.herokuapp.com',
     cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_6__["InMemoryCache"]().restore(initialState || {})
   });
 })(MyApp));

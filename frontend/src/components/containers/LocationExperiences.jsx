@@ -84,13 +84,12 @@ const LocationExperiences = ({
 }) => {
   const { loading, error, data } = useQuery(GET_LOCATION_EXPERIENCES, {
     variables: {
-      available: 'Today',
-      location: 'Vancouver'
+      location: location
     }
   });
 
   if (error) return `Error! ${error.message}`;
-
+  console.log(data);
   return (
     <>
       <Section
