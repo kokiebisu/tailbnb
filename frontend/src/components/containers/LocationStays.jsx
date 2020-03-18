@@ -10,11 +10,10 @@ import { ShowAll } from '../ShowAll';
 
 // Wrapper
 import { Section } from '../wrapper/Section';
-import cuid from 'cuid';
 
-const GET_STAYS = gql`
-  query {
-    stays {
+const GET_LOCATION_STAYS = gql`
+  query LocationStays($street: String) {
+    stays(where: { street_contains: $street }, first: 8) {
       id
       host_is_superhost
       country
@@ -76,22 +75,28 @@ const LocationStays = ({
   isLaptop,
   isDesktop,
   isLargeDesktop,
-  location
+  street
 }) => {
-  const { loading, error, data } = useQuery(GET_STAYS);
+  const { loading, error, data } = useQuery(GET_LOCATION_STAYS, {
+    variables: {
+      street: street
+    }
+  });
 
   if (error) return `Error! ${error.message}`;
-
+  if (data) {
+    console.log(data);
+  }
   return (
     <>
-      <Section title={`Places to stay in ${location}`}>
+      <Section title={`Places to stay in ${street}`}>
         <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full'>
           {loading ? (
             <div className='flex justify-center items-center w-full py-20'>
               <PulseLoader size={10} color={'#008489'} />
             </div>
           ) : (
-            data && (
+            data.stays && (
               <>
                 {isMobile ? renderContent(data, 4) : null}
                 {isTablet ? renderContent(data, 4) : null}
