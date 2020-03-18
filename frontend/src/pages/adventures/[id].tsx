@@ -16,12 +16,11 @@ import { Host } from '../../components/adventures/containers/Host';
 import { Availability } from '../../components/adventures/containers/Availability';
 import { Reviews } from '../../components/adventures/containers/Reviews';
 import { Safety } from '../../components/adventures/containers/Safety';
+import { WhereYouWillBe } from '../../components/containers/WhereYouWillBe';
 import { KeepInMind } from '../../components/adventures/containers/KeepInMind';
 import { KeepExploring } from '../../components/adventures/containers/KeepExploring';
 import { DateCheck } from '../../components/adventures/containers/DateCheck';
 import { Footer } from '../../components/adventures/containers/Footer';
-
-import Map from '../../components/containers/MapContainer';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
@@ -75,9 +74,7 @@ const id: () => string | JSX.Element = () => {
           <Availability />
           <Reviews />
           <Safety />
-          <div className='lg:max-w-6xl mx-auto h-144'>
-            <Map />
-          </div>
+          <WhereYouWillBe />
           <KeepInMind />
           <KeepExploring />
           <Footer />

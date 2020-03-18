@@ -93,6 +93,35 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@babel/runtime/helpers/extends.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/extends.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _extends() {
+  module.exports = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends;
+
+/***/ }),
+
 /***/ "./public/img/high/location-pointer.png":
 /*!**********************************************!*\
   !*** ./public/img/high/location-pointer.png ***!
@@ -2345,15 +2374,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 const KeepInMind = () => {
-  return __jsx("div", {
-    className: "w-full flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "px-4 md:px-16 w-full mx-auto max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16",
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
+    className: "px-4 md:px-16 w-full mx-auto lg:max-w-6xl xl:px-0 flex justify-start items-start flex-wrap py-16",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -2369,7 +2391,7 @@ const KeepInMind = () => {
       lineNumber: 10
     },
     __self: undefined
-  }, __jsx("p", {
+  }, __jsx("h3", {
     className: "lg:w-2/3 lg:sticky top-0 text-2xl md:text-3xl text-gray-750",
     __source: {
       fileName: _jsxFileName,
@@ -4911,39 +4933,32 @@ const ReviewCard = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-map-react */ "google-map-react");
-/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Marker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Marker */ "./src/components/containers/Marker.jsx");
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! google-map-react */ "google-map-react");
+/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Marker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Marker */ "./src/components/containers/Marker.jsx");
+
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/MapContainer.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 
-const AnyReactComponent = ({
-  text
-}) => __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 5
-  },
-  __self: undefined
-}, text);
-
-const SimpleMap = props => {
+const Map = props => {
   const {
     0: center,
     1: setCenter
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
     lat: 11.0168,
     lng: 76.9558
   });
   const {
     0: zoom,
     1: setZoom
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(11);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(11);
   return __jsx("div", {
     style: {
       height: '100%',
@@ -4951,10 +4966,10 @@ const SimpleMap = props => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 10
     },
     __self: undefined
-  }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_2___default.a, {
     bootstrapURLKeys: {
       key: 'AIzaSyCIOOh3HYHodLXVbCxW0tL_Nl-y_N-IzrY'
     },
@@ -4962,23 +4977,19 @@ const SimpleMap = props => {
     defaultZoom: zoom,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: undefined
-  }, __jsx(_Marker__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    lat: 11.0168,
-    lng: 76.9558,
-    name: "My Marker",
-    color: "blue",
+  }, __jsx(_Marker__WEBPACK_IMPORTED_MODULE_3__["default"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 15
     },
     __self: undefined
-  })));
+  }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (SimpleMap);
+/* harmony default export */ __webpack_exports__["default"] = (Map);
 
 /***/ }),
 
@@ -5035,6 +5046,75 @@ const Marker = ({
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Marker);
+
+/***/ }),
+
+/***/ "./src/components/containers/WhereYouWillBe.jsx":
+/*!******************************************************!*\
+  !*** ./src/components/containers/WhereYouWillBe.jsx ***!
+  \******************************************************/
+/*! exports provided: WhereYouWillBe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WhereYouWillBe", function() { return WhereYouWillBe; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MapContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapContainer */ "./src/components/containers/MapContainer.js");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/WhereYouWillBe.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
+
+const WhereYouWillBe = () => {
+  return __jsx("div", {
+    className: "lg:max-w-6xl mx-auto py-16",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: " md:mb-0 w-full md:w-4/12 md:h-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    className: "lg:w-2/3 text-2xl md:text-3xl text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "Where you'll be")), __jsx("div", {
+    className: "mt-16 w-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "w-full h-144",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, __jsx(_MapContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    lat: 11.0168,
+    lng: 76.9558,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }))));
+};
 
 /***/ }),
 
@@ -5913,11 +5993,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_adventures_containers_Availability__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/adventures/containers/Availability */ "./src/components/adventures/containers/Availability.tsx");
 /* harmony import */ var _components_adventures_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/adventures/containers/Reviews */ "./src/components/adventures/containers/Reviews.tsx");
 /* harmony import */ var _components_adventures_containers_Safety__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/adventures/containers/Safety */ "./src/components/adventures/containers/Safety.tsx");
-/* harmony import */ var _components_adventures_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/adventures/containers/KeepInMind */ "./src/components/adventures/containers/KeepInMind.tsx");
-/* harmony import */ var _components_adventures_containers_KeepExploring__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/adventures/containers/KeepExploring */ "./src/components/adventures/containers/KeepExploring.tsx");
-/* harmony import */ var _components_adventures_containers_DateCheck__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/adventures/containers/DateCheck */ "./src/components/adventures/containers/DateCheck.tsx");
-/* harmony import */ var _components_adventures_containers_Footer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/adventures/containers/Footer */ "./src/components/adventures/containers/Footer.tsx");
-/* harmony import */ var _components_containers_MapContainer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/containers/MapContainer */ "./src/components/containers/MapContainer.js");
+/* harmony import */ var _components_containers_WhereYouWillBe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/containers/WhereYouWillBe */ "./src/components/containers/WhereYouWillBe.jsx");
+/* harmony import */ var _components_adventures_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../components/adventures/containers/KeepInMind */ "./src/components/adventures/containers/KeepInMind.tsx");
+/* harmony import */ var _components_adventures_containers_KeepExploring__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/adventures/containers/KeepExploring */ "./src/components/adventures/containers/KeepExploring.tsx");
+/* harmony import */ var _components_adventures_containers_DateCheck__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../components/adventures/containers/DateCheck */ "./src/components/adventures/containers/DateCheck.tsx");
+/* harmony import */ var _components_adventures_containers_Footer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/adventures/containers/Footer */ "./src/components/adventures/containers/Footer.tsx");
 /* harmony import */ var _components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../components/layout/ExploreHeader */ "./src/components/layout/ExploreHeader.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/adventures/[id].tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
@@ -5971,19 +6051,19 @@ const id = () => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 52
     },
     __self: undefined
   }, loading ? __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 54
     },
     __self: undefined
   }, "Vacation Rentals, Homes, Experiences & Places") : data.adventure && __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 56
     },
     __self: undefined
   }, data.adventure.title), __jsx("meta", {
@@ -5991,7 +6071,7 @@ const id = () => {
     content: "initial-scale=1.0, width=device-width ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 59
     },
     __self: undefined
   }), __jsx("link", {
@@ -6000,105 +6080,98 @@ const id = () => {
     href: "/img/high/favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 63
     },
     __self: undefined
   })), data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_layout_ExploreHeader__WEBPACK_IMPORTED_MODULE_19__["ExploreHeader"], {
     white: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 67
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Banner__WEBPACK_IMPORTED_MODULE_5__["Banner"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 68
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_WhatYouDo__WEBPACK_IMPORTED_MODULE_6__["WhatYouDo"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Adventures__WEBPACK_IMPORTED_MODULE_7__["Adventures"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 70
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Included__WEBPACK_IMPORTED_MODULE_8__["Included"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Itinerary__WEBPACK_IMPORTED_MODULE_9__["Itinerary"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 72
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Host__WEBPACK_IMPORTED_MODULE_10__["Host"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Availability__WEBPACK_IMPORTED_MODULE_11__["Availability"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 74
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Reviews__WEBPACK_IMPORTED_MODULE_12__["Reviews"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 75
     },
     __self: undefined
   }), __jsx(_components_adventures_containers_Safety__WEBPACK_IMPORTED_MODULE_13__["Safety"], {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: undefined
+  }), __jsx(_components_containers_WhereYouWillBe__WEBPACK_IMPORTED_MODULE_14__["WhereYouWillBe"], {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 77
     },
     __self: undefined
-  }), __jsx("div", {
-    className: "lg:max-w-6xl mx-auto h-144",
+  }), __jsx(_components_adventures_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_15__["KeepInMind"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
     },
     __self: undefined
-  }, __jsx(_components_containers_MapContainer__WEBPACK_IMPORTED_MODULE_18__["default"], {
+  }), __jsx(_components_adventures_containers_KeepExploring__WEBPACK_IMPORTED_MODULE_16__["KeepExploring"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 79
     },
     __self: undefined
-  })), __jsx(_components_adventures_containers_KeepInMind__WEBPACK_IMPORTED_MODULE_14__["KeepInMind"], {
+  }), __jsx(_components_adventures_containers_Footer__WEBPACK_IMPORTED_MODULE_18__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }), __jsx(_components_adventures_containers_DateCheck__WEBPACK_IMPORTED_MODULE_17__["DateCheck"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 81
-    },
-    __self: undefined
-  }), __jsx(_components_adventures_containers_KeepExploring__WEBPACK_IMPORTED_MODULE_15__["KeepExploring"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: undefined
-  }), __jsx(_components_adventures_containers_Footer__WEBPACK_IMPORTED_MODULE_17__["Footer"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: undefined
-  }), __jsx(_components_adventures_containers_DateCheck__WEBPACK_IMPORTED_MODULE_16__["DateCheck"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
     },
     __self: undefined
   })));
