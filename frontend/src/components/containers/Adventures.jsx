@@ -79,10 +79,9 @@ const Adventures = ({
   isDesktop,
   isLargeDesktop
 }) => {
-  // const { loading, error, data } = useQuery(GET_ADVENTURES);
-  // if (error) return `Error! ${error.message}`;
+  const { loading, error, data } = useQuery(GET_ADVENTURES);
 
-  const loading = true;
+  if (error) return `Error! ${error.message}`;
 
   return (
     <>

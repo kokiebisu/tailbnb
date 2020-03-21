@@ -4,6 +4,9 @@ import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
 import withSizes from 'react-sizes';
 
+// Utils
+import { RenderSkeletonVertical } from '../../util/RenderSkeleton';
+
 // Components
 import { LocationExperienceCard } from '../functions/LocationExperienceCard';
 import { ShowAll } from '../ShowAll';
@@ -95,23 +98,26 @@ const NextWeek = ({
       <Section
         title='Next Week in Vancouver'
         phrase='Book activities led by local hosts on your next trip.'>
-        <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
-          {loading ? (
-            <div className='flex justify-center items-center w-full py-20'>
-              <PulseLoader size={10} color={'#008489'} />
+        {loading ? (
+          <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88'>
+            {isMobile ? RenderSkeletonVertical(4) : null}
+            {isTablet ? RenderSkeletonVertical(3) : null}
+            {isLaptop ? RenderSkeletonVertical(4) : null}
+            {isDesktop ? RenderSkeletonVertical(5) : null}
+            {isLargeDesktop ? RenderSkeletonVertical(6) : null}
+          </div>
+        ) : (
+          data && (
+            <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
+              {isMobile ? renderContent(data, 4) : null}
+              {isTablet ? renderContent(data, 3) : null}
+              {isLaptop ? renderContent(data, 4) : null}
+              {isDesktop ? renderContent(data, 5) : null}
+              {isLargeDesktop ? renderContent(data, 6) : null}
             </div>
-          ) : (
-            data && (
-              <>
-                {isMobile ? renderContent(data, 4) : null}
-                {isTablet ? renderContent(data, 3) : null}
-                {isLaptop ? renderContent(data, 4) : null}
-                {isDesktop ? renderContent(data, 5) : null}
-                {isLargeDesktop ? renderContent(data, 6) : null}
-              </>
-            )
-          )}
-        </div>
+          )
+        )}
+
         <ShowAll title='Show all experiences' />
       </Section>
     </>

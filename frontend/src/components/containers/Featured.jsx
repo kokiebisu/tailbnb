@@ -109,7 +109,7 @@ export const Featured = () => {
 
   return (
     <>
-      <div className='w-full px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto relative my-16'>
+      <div className='w-full px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto relative mt-8'>
         <div>
           <h3
             style={{ fontFamily: 'airbnb-medium' }}
@@ -126,7 +126,7 @@ export const Featured = () => {
           </p>
         </div>
 
-        <div className='w-full h-72 md:h-88 lg:h-104 relative'>
+        <div className='w-full h-72 md:h-88 lg:h-92 relative'>
           <div
             style={{ top: '30%', left: '-15px' }}
             className='hidden md:block absolute z-50 left-0 top-0'>
