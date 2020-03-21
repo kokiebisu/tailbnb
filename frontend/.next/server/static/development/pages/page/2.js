@@ -2200,36 +2200,39 @@ const Adventures = ({
   isDesktop,
   isLargeDesktop
 }) => {
-  // const { loading, error, data } = useQuery(GET_ADVENTURES);
-  // if (error) return `Error! ${error.message}`;
-  const loading = true;
+  const {
+    loading,
+    error,
+    data
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_ADVENTURES);
+  if (error) return `Error! ${error.message}`;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_9__["Section"], {
     title: "Introducing Airbnb Adventures",
     phrase: "Multi-day trips led by local experts\u2014activities, meals, and stays included",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 88
     },
     __self: undefined
   }, loading ? __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 93
     },
     __self: undefined
   }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(3) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(5) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(6) : null) : data && __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 102
     },
     __self: undefined
   }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
     title: "Show all adventures",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 111
     },
     __self: undefined
   })));
@@ -2342,7 +2345,7 @@ const Featured = () => {
   };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
-    className: "w-full px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto relative my-16",
+    className: "w-full px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto relative mt-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 112
@@ -2382,7 +2385,7 @@ const Featured = () => {
     },
     __self: undefined
   }, "Browse beautiful places to stay with all the comforts of home, plus more")), __jsx("div", {
-    className: "w-full h-72 md:h-88 lg:h-104 relative",
+    className: "w-full h-72 md:h-88 lg:h-92 relative",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 129
