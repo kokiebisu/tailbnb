@@ -2497,16 +2497,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
 /* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! cuid */ "cuid");
-/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
+/* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! cuid */ "cuid");
+/* harmony import */ var cuid__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(cuid__WEBPACK_IMPORTED_MODULE_9__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Stay.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
+
+ // Utils
 
  // Component
 
@@ -2558,10 +2561,10 @@ const renderContent = (data, number) => {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 59
       },
       __self: undefined
-    }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_5__["StayCard"], {
+    }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_6__["StayCard"], {
       key: i,
       id: data === null || data === void 0 ? void 0 : data.stays[i].id,
       host_is_superhost: data === null || data === void 0 ? void 0 : data.stays[i].host_is_superhost,
@@ -2572,7 +2575,7 @@ const renderContent = (data, number) => {
       picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 60
       },
       __self: undefined
     })));
@@ -2588,46 +2591,35 @@ const Stay = ({
   isDesktop,
   isLargeDesktop
 }) => {
-  const {
-    loading,
-    error,
-    data
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_STAYS);
-  if (error) return `Error! ${error.message}`;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_7__["Section"], {
+  // const { loading, error, data } = useQuery(GET_STAYS);
+  // if (error) return `Error! ${error.message}`;
+  const loading = true;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 85
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full h-128",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 87
     },
     __self: undefined
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    size: 10,
-    color: '#008489',
+  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(4) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(4) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(6) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(8) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(8) : null) : data && __jsx("div", {
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 96
     },
     __self: undefined
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 4) : null, isLaptop ? renderContent(data, 6) : null, isDesktop ? renderContent(data, 8) : null, isLargeDesktop ? renderContent(data, 8) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 4) : null, isLaptop ? renderContent(data, 6) : null, isDesktop ? renderContent(data, 8) : null, isLargeDesktop ? renderContent(data, 8) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 106
     },
     __self: undefined
   })));
@@ -2983,14 +2975,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
 /* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/TopRatedCard */ "./src/components/functions/TopRatedCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
+/* harmony import */ var _functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/TopRatedCard */ "./src/components/functions/TopRatedCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/TopRated.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
+
+ // Utils
 
  // Components
 
@@ -3030,10 +3025,10 @@ const renderContent = (data, number) => {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 44
       },
       __self: undefined
-    }, __jsx(_functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_5__["TopRatedCard"], {
+    }, __jsx(_functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__["TopRatedCard"], {
       key: i,
       id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
       img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
@@ -3044,7 +3039,7 @@ const renderContent = (data, number) => {
       location: data === null || data === void 0 ? void 0 : data.experiences[i].location,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 45
       },
       __self: undefined
     })));
@@ -3078,41 +3073,33 @@ const TopRated = ({
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_EXPERIENCES);
   if (error) return `Error! ${error.message}`;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_7__["Section"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
     title: "Top-rated experiences",
     phrase: "Book activities led by local hosts on your next trip.",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 88
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 92
     },
     __self: undefined
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    size: 10,
-    color: '#008489',
+  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(3) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(5) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(6) : null) : data && __jsx("div", {
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 101
     },
     __self: undefined
-  })) : data && __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null)), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
+  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 111
     },
     __self: undefined
   })));

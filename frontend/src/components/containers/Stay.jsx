@@ -4,6 +4,9 @@ import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
 import withSizes from 'react-sizes';
 
+// Utils
+import { RenderSkeletonHorizontal } from '../../util/RenderSkeleton';
+
 // Component
 import { StayCard } from '../functions/StayCard';
 import { ShowAll } from '../ShowAll';
@@ -78,23 +81,25 @@ const Stay = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
   return (
     <>
       <Section title='Places to stay around the world'>
-        <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full'>
-          {loading ? (
-            <div className='flex justify-center items-center w-full py-20'>
-              <PulseLoader size={10} color={'#008489'} />
+        {loading ? (
+          <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full h-128'>
+            {isMobile ? RenderSkeletonHorizontal(4) : null}
+            {isTablet ? RenderSkeletonHorizontal(4) : null}
+            {isLaptop ? RenderSkeletonHorizontal(6) : null}
+            {isDesktop ? RenderSkeletonHorizontal(8) : null}
+            {isLargeDesktop ? RenderSkeletonHorizontal(8) : null}
+          </div>
+        ) : (
+          data && (
+            <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full'>
+              {isMobile ? renderContent(data, 4) : null}
+              {isTablet ? renderContent(data, 4) : null}
+              {isLaptop ? renderContent(data, 6) : null}
+              {isDesktop ? renderContent(data, 8) : null}
+              {isLargeDesktop ? renderContent(data, 8) : null}
             </div>
-          ) : (
-            data && (
-              <>
-                {isMobile ? renderContent(data, 4) : null}
-                {isTablet ? renderContent(data, 4) : null}
-                {isLaptop ? renderContent(data, 6) : null}
-                {isDesktop ? renderContent(data, 8) : null}
-                {isLargeDesktop ? renderContent(data, 8) : null}
-              </>
-            )
-          )}
-        </div>
+          )
+        )}
 
         <ShowAll title='Show(2000+)' />
       </Section>
