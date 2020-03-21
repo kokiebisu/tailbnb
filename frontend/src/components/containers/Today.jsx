@@ -94,11 +94,11 @@ const Today = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
         phrase='Book activities led by local hosts on your next trip.'>
         {loading ? (
           <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88'>
-            {isMobile ? RenderSkeletonVertical(4) : null}
-            {isTablet ? RenderSkeletonVertical(3) : null}
-            {isLaptop ? RenderSkeletonVertical(4) : null}
-            {isDesktop ? RenderSkeletonVertical(5) : null}
-            {isLargeDesktop ? RenderSkeletonVertical(6) : null}
+            {isMobile ? RenderSkeletonVertical(4, true) : null}
+            {isTablet ? RenderSkeletonVertical(3, true) : null}
+            {isLaptop ? RenderSkeletonVertical(4, true) : null}
+            {isDesktop ? RenderSkeletonVertical(5, true) : null}
+            {isLargeDesktop ? RenderSkeletonVertical(6, true) : null}
           </div>
         ) : (
           data && (

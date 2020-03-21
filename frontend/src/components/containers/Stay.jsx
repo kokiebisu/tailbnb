@@ -83,11 +83,11 @@ const Stay = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
       <Section title='Places to stay around the world'>
         {loading ? (
           <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full h-128'>
-            {isMobile ? RenderSkeletonHorizontal(4) : null}
-            {isTablet ? RenderSkeletonHorizontal(4) : null}
-            {isLaptop ? RenderSkeletonHorizontal(6) : null}
-            {isDesktop ? RenderSkeletonHorizontal(8) : null}
-            {isLargeDesktop ? RenderSkeletonHorizontal(8) : null}
+            {isMobile ? RenderSkeletonHorizontal(4, true) : null}
+            {isTablet ? RenderSkeletonHorizontal(4, true) : null}
+            {isLaptop ? RenderSkeletonHorizontal(6, true) : null}
+            {isDesktop ? RenderSkeletonHorizontal(8, true) : null}
+            {isLargeDesktop ? RenderSkeletonHorizontal(8, true) : null}
           </div>
         ) : (
           data && (

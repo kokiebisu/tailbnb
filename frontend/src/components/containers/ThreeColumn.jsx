@@ -36,7 +36,7 @@ export const ThreeColumn = ({ sectionTitle, sectionDescription, contents }) => {
             <div className='h-full scroller'>
               {loading ? (
                 <div className='grid grid-cols-3 gap-4 py-2 rounded-xl min-w-192 md:w-full h-72'>
-                  {RenderSkeletonHorizontal(3)}
+                  {RenderSkeletonHorizontal(3, true)}
                 </div>
               ) : (
                 <div className='grid grid-cols-3 gap-4 scrollable sm:inset-x-0 flex items-start justify-start py-2 rounded-xl min-w-192 md:w-full'>

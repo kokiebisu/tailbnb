@@ -1,37 +1,45 @@
 import styled from 'styled-components';
 
-export const RenderSkeletonVertical = (number) => {
+export const RenderSkeletonVertical = (number, withLine) => {
   var content = [];
 
   for (let i = 0; i < number; i++) {
     content.push(
       <div className='w-full mr-3 mb-3 rounded mb-16'>
         <SSkeletonPulseVertical />
-        <div className='w-full mb-3 h-4'>
-          <SSkeletonPulseVertical />
-        </div>
-        <div className='w-80p h-4'>
-          <SSkeletonPulseVertical />
-        </div>
+        {withLine ? (
+          <>
+            <div className='w-full mb-3 h-4'>
+              <SSkeletonPulseVertical />
+            </div>
+            <div className='w-80p h-4'>
+              <SSkeletonPulseVertical />
+            </div>
+          </>
+        ) : null}
       </div>
     );
   }
   return content;
 };
 
-export const RenderSkeletonHorizontal = (number) => {
+export const RenderSkeletonHorizontal = (number, withLine) => {
   var content = [];
 
   for (let i = 0; i < number; i++) {
     content.push(
       <div className='w-full mr-3 mb-3 rounded mb-16'>
         <SSkeletonPulseHorizontal />
-        <div className='w-full mb-3 h-4'>
-          <SSkeletonPulseHorizontal />
-        </div>
-        <div className='w-80p h-4'>
-          <SSkeletonPulseHorizontal />
-        </div>
+        {withLine ? (
+          <>
+            <div className='w-full mb-3 h-4'>
+              <SSkeletonPulseHorizontal />
+            </div>
+            <div className='w-80p h-4'>
+              <SSkeletonPulseHorizontal />
+            </div>
+          </>
+        ) : null}
       </div>
     );
   }
