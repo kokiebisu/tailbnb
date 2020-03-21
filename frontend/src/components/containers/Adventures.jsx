@@ -4,6 +4,10 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
 import withSizes from 'react-sizes';
+import styled from 'styled-components';
+
+// Util
+import { RenderSkeletonVertical } from '../../util/RenderSkeleton';
 
 // Component
 import { AdventureCard } from '../functions/AdventureCard';
@@ -11,6 +15,7 @@ import { ShowAll } from '../ShowAll';
 
 // Wrapper
 import { Section } from '../wrapper/Section';
+import Skeleton from 'react-loading-skeleton';
 
 const GET_ADVENTURES = gql`
   query {
@@ -74,9 +79,10 @@ const Adventures = ({
   isDesktop,
   isLargeDesktop
 }) => {
-  const { loading, error, data } = useQuery(GET_ADVENTURES);
+  // const { loading, error, data } = useQuery(GET_ADVENTURES);
+  // if (error) return `Error! ${error.message}`;
 
-  if (error) return `Error! ${error.message}`;
+  const loading = true;
 
   return (
     <>
@@ -84,24 +90,25 @@ const Adventures = ({
         title='Introducing Airbnb Adventures'
         phrase='Multi-day trips led by local experts—activities, meals, and stays
         included'>
-        <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
-          {loading ? (
-            <div className='flex justify-center items-center w-full py-20'>
-              <PulseLoader size={10} color={'#008489'} />
+        {loading ? (
+          <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88'>
+            {isMobile ? RenderSkeletonVertical(4) : null}
+            {isTablet ? RenderSkeletonVertical(3) : null}
+            {isLaptop ? RenderSkeletonVertical(4) : null}
+            {isDesktop ? RenderSkeletonVertical(5) : null}
+            {isLargeDesktop ? RenderSkeletonVertical(6) : null}
+          </div>
+        ) : (
+          data && (
+            <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
+              {isMobile ? renderContent(data, 4) : null}
+              {isTablet ? renderContent(data, 3) : null}
+              {isLaptop ? renderContent(data, 4) : null}
+              {isDesktop ? renderContent(data, 5) : null}
+              {isLargeDesktop ? renderContent(data, 6) : null}
             </div>
-          ) : (
-            data && (
-              <>
-                {isMobile ? renderContent(data, 4) : null}
-                {isTablet ? renderContent(data, 3) : null}
-                {isLaptop ? renderContent(data, 4) : null}
-                {isDesktop ? renderContent(data, 5) : null}
-                {isLargeDesktop ? renderContent(data, 6) : null}
-              </>
-            )
-          )}
-        </div>
-
+          )
+        )}
         <ShowAll title='Show all adventures' />
       </Section>
     </>
