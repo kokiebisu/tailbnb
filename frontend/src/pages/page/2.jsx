@@ -68,7 +68,7 @@ const newyorkContent = [
 const two = () => {
   return (
     <>
-      {/* <ExploreHeader white={true} placeholder='Try "Barcelona"' /> */}
+      <ExploreHeader white={true} />
       <HeaderCategory dates={true} guests={true} />
       <Popular />
       <Adventures />

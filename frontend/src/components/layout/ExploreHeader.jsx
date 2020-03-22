@@ -37,8 +37,7 @@ export const ExploreHeader = ({ white }) => {
         y: 10,
         opacity: 1,
         ease: Power3.easeIn,
-        width: '80vw',
-        height: '30vh'
+        width: '80vw'
       });
       TweenLite.to(logo, 0.3, {
         css: { opacity: 0 },
@@ -51,11 +50,11 @@ export const ExploreHeader = ({ white }) => {
       });
     } else {
       TweenLite.to(inputbox, 0.4, {
-        width: 600,
+        width: '40vw',
         ease: Power3.easeIn
       });
       TweenLite.to(suggestionbox, 0.4, {
-        width: 600,
+        width: '40vw',
         opacity: 1,
         x: 0,
         y: 10,
@@ -99,7 +98,7 @@ export const ExploreHeader = ({ white }) => {
     <>
       {white ? (
         <>
-          <div className='flex items-center justify-between relative border-b border-gray-300'>
+          <div className='w-full flex items-center justify-between relative border-b border-gray-300'>
             <div className='flex items-center justify-start w-full md:w-80p'>
               <div ref={(el) => (logo = el)} className='ml-6 mr-6 md:mr-8 my-5'>
                 <a href='/'>
@@ -119,7 +118,7 @@ export const ExploreHeader = ({ white }) => {
                 <div
                   id='hoverbox'
                   ref={(el) => (inputbox = el)}
-                  className='flex items-center justify-start py-3 pl-4 shadow-md rounded'>
+                  className='flex items-center justify-start py-3 pl-4 shadow-md rounded mr-4'>
                   <svg viewBox='0 0 16 16' style={{ height: 18, width: 18 }}>
                     <path d='m2.5 7c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5-2 4.5-4.5 4.5-4.5-2-4.5-4.5m13.1 6.9-2.8-2.9c.7-1.1 1.2-2.5 1.2-4 0-3.9-3.1-7-7-7s-7 3.1-7 7 3.1 7 7 7c1.5 0 2.9-.5 4-1.2l2.9 2.8c.2.3.5.4.9.4.3 0 .6-.1.8-.4.5-.5.5-1.2 0-1.7'></path>
                   </svg>
@@ -134,9 +133,9 @@ export const ExploreHeader = ({ white }) => {
                 </div>
                 <div
                   ref={(el) => (suggestionbox = el)}
-                  style={{ opacity: 0, top: 47, width: 480 }}
-                  className='top-0 absolute h-32 bg-white shadow-xl p-8'>
-                  <div>
+                  style={{ opacity: 0, top: 47, width: '60vw' }}
+                  className='top-0 absolute bg-white shadow-xl p-8'>
+                  <div className='py-4'>
                     <div>
                       <h3
                         style={{ fontFamily: 'airbnb-bold' }}
@@ -152,7 +151,7 @@ export const ExploreHeader = ({ white }) => {
                 <div
                   style={{ right: 20, opacity: 0 }}
                   ref={(el) => (cancel = el)}
-                  className='absolute right-0'>
+                  className='absolute right-0 mx-1'>
                   <h3
                     style={{ fontFamily: 'airbnb-medium' }}
                     className='text-gray-750 text-sm'>
@@ -163,7 +162,7 @@ export const ExploreHeader = ({ white }) => {
             </div>
             <nav
               style={{ fontFamily: 'airbnb-medium' }}
-              className='hidden xl:block text-gray-750'>
+              className='md:w-20p hidden xl:block text-gray-750'>
               <div className='flex items-center'>
                 <div className='border-transparent border-b-2 hover:border-white py-6 px-1'>
                   <a

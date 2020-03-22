@@ -147,7 +147,7 @@ const Featured = ({ size }) => {
 
   const [state, setState] = useState({
     translate: 0,
-    transition: 0.45,
+    transition: 0.6,
     activeIndex: 0
   });
 
@@ -159,23 +159,15 @@ const Featured = ({ size }) => {
     if (container.current) {
       setWidth(container.current.offsetWidth);
     }
-  }, []);
+  }, [container]);
 
   const { translate, transition, activeIndex } = state;
 
   const nextSlide = () => {
-    if (activeIndex === 3) {
-      return setState({
-        ...state,
-        translate: 0,
-        activeIndex: 0
-      });
-    }
-
     setState({
       ...state,
       activeIndex: activeIndex + 1,
-      translate: ((activeIndex + 1) * width) / 1.12
+      translate: (activeIndex + 1) * 200
     });
   };
 
@@ -187,7 +179,7 @@ const Featured = ({ size }) => {
     setState({
       ...state,
       activeIndex: activeIndex - 1,
-      translate: ((activeIndex - 1) * width) / 1.12
+      translate: ((activeIndex - 1) * width) / 3
     });
   };
 
@@ -198,7 +190,7 @@ const Featured = ({ size }) => {
       <div
         ref={container}
         id='carousel'
-        className='w-full px-6 md:px-8 lg:px-10 xl:px-0 xl:max-w-8xl mx-auto relative mt-8 overflow-y-hidden'>
+        className='w-full px-6 md:px-8 lg:px-10 xl:px-10 xl:max-w-8.5xl mx-auto relative mt-8 overflow-y-hidden'>
         <div>
           <h3
             style={{ fontFamily: 'airbnb-medium' }}
@@ -218,7 +210,7 @@ const Featured = ({ size }) => {
           <SliderContent
             translate={translate}
             transition={transition}
-            width={width * 3}>
+            width={1600}>
             <CarouselCard
               bg='blue'
               featured1={featureds[0]}
@@ -235,7 +227,6 @@ const Featured = ({ size }) => {
               bg='blue'
               featured1={featureds[6]}
               featured2={featureds[7]}
-              featured3={featureds[8]}
             />
           </SliderContent>
           <div className='absolute' style={{ top: '25%', left: -15 }}>
