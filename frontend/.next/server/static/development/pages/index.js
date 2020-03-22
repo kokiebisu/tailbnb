@@ -2286,8 +2286,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizeme */ "react-sizeme");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -2354,17 +2354,7 @@ const renderContent = (data, number) => {
   }
 
   return content;
-};
-
-const mapSizesToProps = ({
-  width
-}) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-}); // interface Experience {
+}; // interface Experience {
 //   id: string;
 //   title: string;
 //   cost: number;
@@ -2379,11 +2369,8 @@ const mapSizesToProps = ({
 
 
 const NextWeek = ({
-  isMobile,
-  isTablet,
-  isLaptop,
-  isDesktop,
-  isLargeDesktop
+  size,
+  location
 }) => {
   const {
     loading,
@@ -2392,7 +2379,7 @@ const NextWeek = ({
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Next Week',
-      location: 'Vancouver'
+      location: location
     }
   });
   if (error) return `Error! ${error.message}`;
@@ -2401,34 +2388,34 @@ const NextWeek = ({
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 84
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 88
     },
     __self: undefined
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(6) : null) : data && __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 103
     },
     __self: undefined
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 119
     },
     __self: undefined
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_4___default()(mapSizesToProps)(NextWeek));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_sizeme__WEBPACK_IMPORTED_MODULE_4__["withSize"])()(NextWeek));
 
 /***/ }),
 
@@ -2514,8 +2501,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizeme */ "react-sizeme");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -2562,16 +2549,6 @@ const GET_STAYS = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
 //   picture_url: string;
 // }
 
-const mapSizesToProps = ({
-  width
-}) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-});
-
 const renderContent = (data, number) => {
   var content = [];
 
@@ -2580,7 +2557,7 @@ const renderContent = (data, number) => {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 51
       },
       __self: undefined
     }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_6__["StayCard"], {
@@ -2594,7 +2571,7 @@ const renderContent = (data, number) => {
       picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 52
       },
       __self: undefined
     })));
@@ -2604,11 +2581,7 @@ const renderContent = (data, number) => {
 };
 
 const Stay = ({
-  isMobile,
-  isTablet,
-  isLaptop,
-  isDesktop,
-  isLargeDesktop
+  size
 }) => {
   const {
     loading,
@@ -2620,34 +2593,34 @@ const Stay = ({
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 74
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full h-128",
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 76
     },
     __self: undefined
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(4, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(6, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(8, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonHorizontal"])(8, true) : null) : data && __jsx("div", {
-    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full",
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(4, true) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(3, true) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(8, true) : null) : data && __jsx("div", {
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 91
     },
     __self: undefined
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 4) : null, isLaptop ? renderContent(data, 6) : null, isDesktop ? renderContent(data, 8) : null, isLargeDesktop ? renderContent(data, 8) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 6) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 6) : null, size.width >= 1529 ? renderContent(data, 8) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 107
     },
     __self: undefined
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_4___default()(mapSizesToProps)(Stay));
+/* harmony default export */ __webpack_exports__["default"] = (react_sizeme__WEBPACK_IMPORTED_MODULE_4___default()()(Stay));
 
 /***/ }),
 
@@ -2668,8 +2641,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizeme */ "react-sizeme");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -2679,6 +2652,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
+ // import withSizes from 'react-sizes';
 
  // Utils
 
@@ -2707,16 +2681,6 @@ const GET_LOCATION_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"
   }
 `;
 
-const mapSizesToProps = ({
-  width
-}) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-});
-
 const renderContent = (data, number) => {
   var content = [];
 
@@ -2725,7 +2689,7 @@ const renderContent = (data, number) => {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 42
       },
       __self: undefined
     }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
@@ -2739,7 +2703,7 @@ const renderContent = (data, number) => {
       category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 43
       },
       __self: undefined
     })));
@@ -2761,11 +2725,8 @@ const renderContent = (data, number) => {
 
 
 const Today = ({
-  isMobile,
-  isTablet,
-  isLaptop,
-  isDesktop,
-  isLargeDesktop
+  size,
+  location
 }) => {
   const {
     loading,
@@ -2774,7 +2735,7 @@ const Today = ({
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Today',
-      location: 'Vancouver'
+      location: location
     }
   });
   if (error) return `Error! ${error.message}`;
@@ -2783,34 +2744,34 @@ const Today = ({
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 85
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 89
     },
     __self: undefined
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(6) : null) : __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 103
     },
     __self: undefined
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 118
     },
     __self: undefined
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_4___default()(mapSizesToProps)(Today));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_sizeme__WEBPACK_IMPORTED_MODULE_4__["withSize"])()(Today));
 
 /***/ }),
 
@@ -2829,17 +2790,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
-/* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-sizeme */ "react-sizeme");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
+/* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Tomorrow.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
 
 
 
@@ -2868,17 +2826,7 @@ const GET_LOCATION_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"
       category
     }
   }
-`;
-
-const mapSizesToProps = ({
-  width
-}) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-}); // interface Experience {
+`; // interface Experience {
 //   id: string;
 //   title: string;
 //   cost: number;
@@ -2891,7 +2839,6 @@ const mapSizesToProps = ({
 //   experiences: Experience[];
 // }
 
-
 const renderContent = (data, number) => {
   var content = [];
 
@@ -2900,10 +2847,10 @@ const renderContent = (data, number) => {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 54
       },
       __self: undefined
-    }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
+    }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_5__["LocationExperienceCard"], {
       key: i,
       id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
       img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
@@ -2914,7 +2861,7 @@ const renderContent = (data, number) => {
       category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 55
       },
       __self: undefined
     })));
@@ -2924,11 +2871,8 @@ const renderContent = (data, number) => {
 };
 
 const Tomorrow = ({
-  isMobile,
-  isTablet,
-  isLaptop,
-  isDesktop,
-  isLargeDesktop
+  size,
+  location
 }) => {
   const {
     loading,
@@ -2937,43 +2881,43 @@ const Tomorrow = ({
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Tomorrow',
-      location: 'Vancouver'
+      location: location
     }
   });
   if (error) return `Error! ${error.message}`;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_7__["Section"], {
     title: "Tomorrow in Vancouver",
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 83
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: undefined
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonVertical"])(6) : null) : data && __jsx("div", {
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 102
     },
     __self: undefined
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: undefined
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 117
     },
     __self: undefined
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_4___default()(mapSizesToProps)(Tomorrow));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_sizeme__WEBPACK_IMPORTED_MODULE_3__["withSize"])()(Tomorrow));
 
 /***/ }),
 
@@ -2995,8 +2939,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizes */ "react-sizes");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizeme */ "react-sizeme");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/TopRatedCard */ "./src/components/functions/TopRatedCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -3029,16 +2973,6 @@ const GET_EXPERIENCES = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
   }
 `;
 
-const mapSizesToProps = ({
-  width
-}) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-});
-
 const renderContent = (data, number) => {
   var content = [];
 
@@ -3047,7 +2981,7 @@ const renderContent = (data, number) => {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 36
       },
       __self: undefined
     }, __jsx(_functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_6__["TopRatedCard"], {
@@ -3061,7 +2995,7 @@ const renderContent = (data, number) => {
       location: data === null || data === void 0 ? void 0 : data.experiences[i].location,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 37
       },
       __self: undefined
     })));
@@ -3083,11 +3017,7 @@ const renderContent = (data, number) => {
 
 
 const TopRated = ({
-  isMobile,
-  isTablet,
-  isLaptop,
-  isDesktop,
-  isLargeDesktop
+  size
 }) => {
   const {
     loading,
@@ -3100,33 +3030,33 @@ const TopRated = ({
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 74
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 78
     },
     __self: undefined
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(6) : null) : data && __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 93
     },
     __self: undefined
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 109
     },
     __self: undefined
   })));
 };
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_4___default()(mapSizesToProps)(TopRated));
+/* harmony default export */ __webpack_exports__["default"] = (react_sizeme__WEBPACK_IMPORTED_MODULE_4___default()()(TopRated));
 
 /***/ }),
 
@@ -4092,7 +4022,7 @@ const PlusCard = ({
     },
     __self: undefined
   }, loading ? __jsx("div", {
-    className: "w-full mr-3 mb-3 rounded mb-16 h-80",
+    className: "w-full mr-3 mb-3 rounded mb-16 h-64",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -10150,7 +10080,7 @@ const Section = ({
   };
 
   return __jsx("div", {
-    className: "px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto py-5 w-full",
+    className: "px-6 md:px-8 lg:px-10 xl:px-0 xl:max-w-8xl mx-auto py-5 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -10220,7 +10150,7 @@ const SectionOverflow = ({
   }
 
   return __jsx("div", {
-    className: "px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
+    className: "px-6 md:px-8 lg:px-10 xl:px-0 xl:max-w-8xl mx-auto py-5 overflow-x-hidden overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -10307,18 +10237,21 @@ const Home = () => {
     },
     __self: undefined
   }), __jsx(_components_containers_Today__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    location: "Vancouver",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: undefined
   }), __jsx(_components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    location: "Vancouver",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: undefined
   }), __jsx(_components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    location: "Vancouver",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -10496,13 +10429,14 @@ const calculateInfants = (adultNumber, infantNumber) => {
 /*!************************************!*\
   !*** ./src/util/RenderSkeleton.js ***!
   \************************************/
-/*! exports provided: RenderSkeletonVertical, RenderSkeletonHorizontal */
+/*! exports provided: renderSkeletonVertical, renderSkeletonHorizontal, renderSkeletonThreeColumn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderSkeletonVertical", function() { return RenderSkeletonVertical; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderSkeletonHorizontal", function() { return RenderSkeletonHorizontal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonVertical", function() { return renderSkeletonVertical; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonHorizontal", function() { return renderSkeletonHorizontal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonThreeColumn", function() { return renderSkeletonThreeColumn; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
@@ -10511,95 +10445,101 @@ var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/util/RenderSkeleton.
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const RenderSkeletonVertical = (number, withLine) => {
+const renderSkeletonVertical = number => {
   var content = [];
 
   for (let i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-full mr-3 mb-3 rounded mb-16",
+      className: "w-full mr-3 mb-3 rounded h-64 md:h-104 py-8",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 8
       },
       __self: undefined
-    }, __jsx(SSkeletonPulseVertical, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 9
       },
       __self: undefined
-    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+    }), __jsx("div", {
       className: "w-full mb-3 h-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 10
       },
       __self: undefined
-    }, __jsx(SSkeletonPulseVertical, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "w-80p h-4",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13
       },
       __self: undefined
-    })), __jsx("div", {
-      className: "w-80p h-4",
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 14
       },
       __self: undefined
-    }, __jsx(SSkeletonPulseVertical, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: undefined
-    }))) : null));
+    }))));
   }
 
   return content;
 };
-const RenderSkeletonHorizontal = (number, withLine) => {
+const renderSkeletonHorizontal = (number, withLine) => {
   var content = [];
 
   for (let i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-full mr-3 mb-3 rounded mb-16",
+      className: "w-full mr-3 mb-3 rounded h-24 mb-16 md:h-40 lg:h-48 xl:h-56",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 27
       },
       __self: undefined
-    }, __jsx(SSkeletonPulseHorizontal, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 28
       },
       __self: undefined
     }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
       className: "w-full mb-3 h-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 31
       },
       __self: undefined
-    }, __jsx(SSkeletonPulseHorizontal, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 32
       },
       __self: undefined
     })), __jsx("div", {
       className: "w-80p h-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 34
       },
       __self: undefined
-    }, __jsx(SSkeletonPulseHorizontal, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 35
       },
       __self: undefined
     }))) : null));
@@ -10607,28 +10547,57 @@ const RenderSkeletonHorizontal = (number, withLine) => {
 
   return content;
 };
-const SSkeletonPulse = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
-  background-size: 400% 400%;
-  animation: pulse 1.2s ease-in-out infinite;
-  @keyframes pulse {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: -135% 0%;
-    }
+const renderSkeletonThreeColumn = (number, withLine) => {
+  var content = [];
+
+  for (let i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-full mr-3 mb-3 rounded h-48 md:h-56 lg:h-64",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: undefined
+    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+      className: "w-full mb-3 h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "w-80p h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: undefined
+    }))) : null));
   }
-`;
-const SSkeletonPulseVertical = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(SSkeletonPulse)`
-  border-radius: 0.3rem;
-`;
-const SSkeletonPulseHorizontal = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(SSkeletonPulse)`
-  border-radius: 0.8rem;
-`;
+
+  return content;
+};
 
 /***/ }),
 
@@ -10743,14 +10712,14 @@ module.exports = require("react-is");
 
 /***/ }),
 
-/***/ "react-sizes":
-/*!******************************!*\
-  !*** external "react-sizes" ***!
-  \******************************/
+/***/ "react-sizeme":
+/*!*******************************!*\
+  !*** external "react-sizeme" ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-sizes");
+module.exports = require("react-sizeme");
 
 /***/ }),
 

@@ -9254,6 +9254,183 @@ function stripSymbols(data) {
 
 /***/ }),
 
+/***/ "./node_modules/batch-processor/src/batch-processor.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/batch-processor/src/batch-processor.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/batch-processor/src/utils.js");
+
+module.exports = function batchProcessorMaker(options) {
+    options             = options || {};
+    var reporter        = options.reporter;
+    var asyncProcess    = utils.getOption(options, "async", true);
+    var autoProcess     = utils.getOption(options, "auto", true);
+
+    if(autoProcess && !asyncProcess) {
+        reporter && reporter.warn("Invalid options combination. auto=true and async=false is invalid. Setting async=true.");
+        asyncProcess = true;
+    }
+
+    var batch = Batch();
+    var asyncFrameHandler;
+    var isProcessing = false;
+
+    function addFunction(level, fn) {
+        if(!isProcessing && autoProcess && asyncProcess && batch.size() === 0) {
+            // Since this is async, it is guaranteed to be executed after that the fn is added to the batch.
+            // This needs to be done before, since we're checking the size of the batch to be 0.
+            processBatchAsync();
+        }
+
+        batch.add(level, fn);
+    }
+
+    function processBatch() {
+        // Save the current batch, and create a new batch so that incoming functions are not added into the currently processing batch.
+        // Continue processing until the top-level batch is empty (functions may be added to the new batch while processing, and so on).
+        isProcessing = true;
+        while (batch.size()) {
+            var processingBatch = batch;
+            batch = Batch();
+            processingBatch.process();
+        }
+        isProcessing = false;
+    }
+
+    function forceProcessBatch(localAsyncProcess) {
+        if (isProcessing) {
+            return;
+        }
+
+        if(localAsyncProcess === undefined) {
+            localAsyncProcess = asyncProcess;
+        }
+
+        if(asyncFrameHandler) {
+            cancelFrame(asyncFrameHandler);
+            asyncFrameHandler = null;
+        }
+
+        if(localAsyncProcess) {
+            processBatchAsync();
+        } else {
+            processBatch();
+        }
+    }
+
+    function processBatchAsync() {
+        asyncFrameHandler = requestFrame(processBatch);
+    }
+
+    function clearBatch() {
+        batch           = {};
+        batchSize       = 0;
+        topLevel        = 0;
+        bottomLevel     = 0;
+    }
+
+    function cancelFrame(listener) {
+        // var cancel = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.clearTimeout;
+        var cancel = clearTimeout;
+        return cancel(listener);
+    }
+
+    function requestFrame(callback) {
+        // var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function(fn) { return window.setTimeout(fn, 20); };
+        var raf = function(fn) { return setTimeout(fn, 0); };
+        return raf(callback);
+    }
+
+    return {
+        add: addFunction,
+        force: forceProcessBatch
+    };
+};
+
+function Batch() {
+    var batch       = {};
+    var size        = 0;
+    var topLevel    = 0;
+    var bottomLevel = 0;
+
+    function add(level, fn) {
+        if(!fn) {
+            fn = level;
+            level = 0;
+        }
+
+        if(level > topLevel) {
+            topLevel = level;
+        } else if(level < bottomLevel) {
+            bottomLevel = level;
+        }
+
+        if(!batch[level]) {
+            batch[level] = [];
+        }
+
+        batch[level].push(fn);
+        size++;
+    }
+
+    function process() {
+        for(var level = bottomLevel; level <= topLevel; level++) {
+            var fns = batch[level];
+
+            for(var i = 0; i < fns.length; i++) {
+                var fn = fns[i];
+                fn();
+            }
+        }
+    }
+
+    function getSize() {
+        return size;
+    }
+
+    return {
+        add: add,
+        process: process,
+        size: getSize
+    };
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/batch-processor/src/utils.js":
+/*!***************************************************!*\
+  !*** ./node_modules/batch-processor/src/utils.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = module.exports = {};
+
+utils.getOption = getOption;
+
+function getOption(options, name, defaultValue) {
+    var value = options[name];
+
+    if((value === undefined || value === null) && defaultValue !== undefined) {
+        return defaultValue;
+    }
+
+    return value;
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/cuid/index.js":
 /*!************************************!*\
   !*** ./node_modules/cuid/index.js ***!
@@ -9411,6 +9588,1673 @@ module.exports = getRandomValue;
 module.exports = function pad (num, size) {
   var s = '000000000' + num;
   return s.substr(s.length - size);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/browser-detector.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/browser-detector.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var detector = module.exports = {};
+
+detector.isIE = function(version) {
+    function isAnyIeVersion() {
+        var agent = navigator.userAgent.toLowerCase();
+        return agent.indexOf("msie") !== -1 || agent.indexOf("trident") !== -1 || agent.indexOf(" edge/") !== -1;
+    }
+
+    if(!isAnyIeVersion()) {
+        return false;
+    }
+
+    if(!version) {
+        return true;
+    }
+
+    //Shamelessly stolen from https://gist.github.com/padolsey/527683
+    var ieVersion = (function(){
+        var undef,
+            v = 3,
+            div = document.createElement("div"),
+            all = div.getElementsByTagName("i");
+
+        do {
+            div.innerHTML = "<!--[if gt IE " + (++v) + "]><i></i><![endif]-->";
+        }
+        while (all[0]);
+
+        return v > 4 ? v : undef;
+    }());
+
+    return version === ieVersion;
+};
+
+detector.isLegacyOpera = function() {
+    return !!window.opera;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/collection-utils.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/collection-utils.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = module.exports = {};
+
+/**
+ * Loops through the collection and calls the callback for each element. if the callback returns truthy, the loop is broken and returns the same value.
+ * @public
+ * @param {*} collection The collection to loop through. Needs to have a length property set and have indices set from 0 to length - 1.
+ * @param {function} callback The callback to be called for each element. The element will be given as a parameter to the callback. If this callback returns truthy, the loop is broken and the same value is returned.
+ * @returns {*} The value that a callback has returned (if truthy). Otherwise nothing.
+ */
+utils.forEach = function(collection, callback) {
+    for(var i = 0; i < collection.length; i++) {
+        var result = callback(collection[i]);
+        if(result) {
+            return result;
+        }
+    }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/detection-strategy/object.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/detection-strategy/object.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Resize detection strategy that injects objects to elements in order to detect resize events.
+ * Heavily inspired by: http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/
+ */
+
+
+
+var browserDetector = __webpack_require__(/*! ../browser-detector */ "./node_modules/element-resize-detector/src/browser-detector.js");
+
+module.exports = function(options) {
+    options             = options || {};
+    var reporter        = options.reporter;
+    var batchProcessor  = options.batchProcessor;
+    var getState        = options.stateHandler.getState;
+
+    if(!reporter) {
+        throw new Error("Missing required dependency: reporter.");
+    }
+
+    /**
+     * Adds a resize event listener to the element.
+     * @public
+     * @param {element} element The element that should have the listener added.
+     * @param {function} listener The listener callback to be called for each resize event of the element. The element will be given as a parameter to the listener callback.
+     */
+    function addListener(element, listener) {
+        function listenerProxy() {
+            listener(element);
+        }
+
+        if(browserDetector.isIE(8)) {
+            //IE 8 does not support object, but supports the resize event directly on elements.
+            getState(element).object = {
+                proxy: listenerProxy
+            };
+            element.attachEvent("onresize", listenerProxy);
+        } else {
+            var object = getObject(element);
+
+            if(!object) {
+                throw new Error("Element is not detectable by this strategy.");
+            }
+
+            object.contentDocument.defaultView.addEventListener("resize", listenerProxy);
+        }
+    }
+
+    function buildCssTextString(rules) {
+        var seperator = options.important ? " !important; " : "; ";
+
+        return (rules.join(seperator) + seperator).trim();
+    }
+
+    /**
+     * Makes an element detectable and ready to be listened for resize events. Will call the callback when the element is ready to be listened for resize changes.
+     * @private
+     * @param {object} options Optional options object.
+     * @param {element} element The element to make detectable
+     * @param {function} callback The callback to be called when the element is ready to be listened for resize changes. Will be called with the element as first parameter.
+     */
+    function makeDetectable(options, element, callback) {
+        if (!callback) {
+            callback = element;
+            element = options;
+            options = null;
+        }
+
+        options = options || {};
+        var debug = options.debug;
+
+        function injectObject(element, callback) {
+            var OBJECT_STYLE = buildCssTextString(["display: block", "position: absolute", "top: 0", "left: 0", "width: 100%", "height: 100%", "border: none", "padding: 0", "margin: 0", "opacity: 0", "z-index: -1000", "pointer-events: none"]);
+
+            //The target element needs to be positioned (everything except static) so the absolute positioned object will be positioned relative to the target element.
+
+            // Position altering may be performed directly or on object load, depending on if style resolution is possible directly or not.
+            var positionCheckPerformed = false;
+
+            // The element may not yet be attached to the DOM, and therefore the style object may be empty in some browsers.
+            // Since the style object is a reference, it will be updated as soon as the element is attached to the DOM.
+            var style = window.getComputedStyle(element);
+            var width = element.offsetWidth;
+            var height = element.offsetHeight;
+
+            getState(element).startSize = {
+                width: width,
+                height: height
+            };
+
+            function mutateDom() {
+                function alterPositionStyles() {
+                    if(style.position === "static") {
+                        element.style.setProperty("position", "relative", options.important ? "important" : "");
+
+                        var removeRelativeStyles = function(reporter, element, style, property) {
+                            function getNumericalValue(value) {
+                                return value.replace(/[^-\d\.]/g, "");
+                            }
+
+                            var value = style[property];
+
+                            if(value !== "auto" && getNumericalValue(value) !== "0") {
+                                reporter.warn("An element that is positioned static has style." + property + "=" + value + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + property + " will be set to 0. Element: ", element);
+                                element.style.setProperty(property, "0", options.important ? "important" : "");
+                            }
+                        };
+
+                        //Check so that there are no accidental styles that will make the element styled differently now that is is relative.
+                        //If there are any, set them to 0 (this should be okay with the user since the style properties did nothing before [since the element was positioned static] anyway).
+                        removeRelativeStyles(reporter, element, style, "top");
+                        removeRelativeStyles(reporter, element, style, "right");
+                        removeRelativeStyles(reporter, element, style, "bottom");
+                        removeRelativeStyles(reporter, element, style, "left");
+                    }
+                }
+
+                function onObjectLoad() {
+                    // The object has been loaded, which means that the element now is guaranteed to be attached to the DOM.
+                    if (!positionCheckPerformed) {
+                        alterPositionStyles();
+                    }
+
+                    /*jshint validthis: true */
+
+                    function getDocument(element, callback) {
+                        //Opera 12 seem to call the object.onload before the actual document has been created.
+                        //So if it is not present, poll it with an timeout until it is present.
+                        //TODO: Could maybe be handled better with object.onreadystatechange or similar.
+                        if(!element.contentDocument) {
+                            var state = getState(element);
+                            if (state.checkForObjectDocumentTimeoutId) {
+                                window.clearTimeout(state.checkForObjectDocumentTimeoutId);
+                            }
+                            state.checkForObjectDocumentTimeoutId = setTimeout(function checkForObjectDocument() {
+                                state.checkForObjectDocumentTimeoutId = 0;
+                                getDocument(element, callback);
+                            }, 100);
+
+                            return;
+                        }
+
+                        callback(element.contentDocument);
+                    }
+
+                    //Mutating the object element here seems to fire another load event.
+                    //Mutating the inner document of the object element is fine though.
+                    var objectElement = this;
+
+                    //Create the style element to be added to the object.
+                    getDocument(objectElement, function onObjectDocumentReady(objectDocument) {
+                        //Notify that the element is ready to be listened to.
+                        callback(element);
+                    });
+                }
+
+                // The element may be detached from the DOM, and some browsers does not support style resolving of detached elements.
+                // The alterPositionStyles needs to be delayed until we know the element has been attached to the DOM (which we are sure of when the onObjectLoad has been fired), if style resolution is not possible.
+                if (style.position !== "") {
+                    alterPositionStyles(style);
+                    positionCheckPerformed = true;
+                }
+
+                //Add an object element as a child to the target element that will be listened to for resize events.
+                var object = document.createElement("object");
+                object.style.cssText = OBJECT_STYLE;
+                object.tabIndex = -1;
+                object.type = "text/html";
+                object.setAttribute("aria-hidden", "true");
+                object.onload = onObjectLoad;
+
+                //Safari: This must occur before adding the object to the DOM.
+                //IE: Does not like that this happens before, even if it is also added after.
+                if(!browserDetector.isIE()) {
+                    object.data = "about:blank";
+                }
+
+                if (!getState(element)) {
+                    // The element has been uninstalled before the actual loading happened.
+                    return;
+                }
+
+                element.appendChild(object);
+                getState(element).object = object;
+
+                //IE: This must occur after adding the object to the DOM.
+                if(browserDetector.isIE()) {
+                    object.data = "about:blank";
+                }
+            }
+
+            if(batchProcessor) {
+                batchProcessor.add(mutateDom);
+            } else {
+                mutateDom();
+            }
+        }
+
+        if(browserDetector.isIE(8)) {
+            //IE 8 does not support objects properly. Luckily they do support the resize event.
+            //So do not inject the object and notify that the element is already ready to be listened to.
+            //The event handler for the resize event is attached in the utils.addListener instead.
+            callback(element);
+        } else {
+            injectObject(element, callback);
+        }
+    }
+
+    /**
+     * Returns the child object of the target element.
+     * @private
+     * @param {element} element The target element.
+     * @returns The object element of the target.
+     */
+    function getObject(element) {
+        return getState(element).object;
+    }
+
+    function uninstall(element) {
+        if (!getState(element)) {
+            return;
+        }
+
+        var object = getObject(element);
+
+        if (!object) {
+            return;
+        }
+
+        if (browserDetector.isIE(8)) {
+            element.detachEvent("onresize", object.proxy);
+        } else {
+            element.removeChild(object);
+        }
+
+        if (getState(element).checkForObjectDocumentTimeoutId) {
+            window.clearTimeout(getState(element).checkForObjectDocumentTimeoutId);
+        }
+
+        delete getState(element).object;
+    }
+
+    return {
+        makeDetectable: makeDetectable,
+        addListener: addListener,
+        uninstall: uninstall
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/detection-strategy/scroll.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/detection-strategy/scroll.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Resize detection strategy that injects divs to elements in order to detect resize events on scroll events.
+ * Heavily inspired by: https://github.com/marcj/css-element-queries/blob/master/src/ResizeSensor.js
+ */
+
+
+
+var forEach = __webpack_require__(/*! ../collection-utils */ "./node_modules/element-resize-detector/src/collection-utils.js").forEach;
+
+module.exports = function(options) {
+    options             = options || {};
+    var reporter        = options.reporter;
+    var batchProcessor  = options.batchProcessor;
+    var getState        = options.stateHandler.getState;
+    var hasState        = options.stateHandler.hasState;
+    var idHandler       = options.idHandler;
+
+    if (!batchProcessor) {
+        throw new Error("Missing required dependency: batchProcessor");
+    }
+
+    if (!reporter) {
+        throw new Error("Missing required dependency: reporter.");
+    }
+
+    //TODO: Could this perhaps be done at installation time?
+    var scrollbarSizes = getScrollbarSizes();
+
+    var styleId = "erd_scroll_detection_scrollbar_style";
+    var detectionContainerClass = "erd_scroll_detection_container";
+
+    function initDocument(targetDocument) {
+        // Inject the scrollbar styling that prevents them from appearing sometimes in Chrome.
+        // The injected container needs to have a class, so that it may be styled with CSS (pseudo elements).
+        injectScrollStyle(targetDocument, styleId, detectionContainerClass);
+    }
+
+    initDocument(window.document);
+
+    function buildCssTextString(rules) {
+        var seperator = options.important ? " !important; " : "; ";
+
+        return (rules.join(seperator) + seperator).trim();
+    }
+
+    function getScrollbarSizes() {
+        var width = 500;
+        var height = 500;
+
+        var child = document.createElement("div");
+        child.style.cssText = buildCssTextString(["position: absolute", "width: " + width*2 + "px", "height: " + height*2 + "px", "visibility: hidden", "margin: 0", "padding: 0"]);
+
+        var container = document.createElement("div");
+        container.style.cssText = buildCssTextString(["position: absolute", "width: " + width + "px", "height: " + height + "px", "overflow: scroll", "visibility: none", "top: " + -width*3 + "px", "left: " + -height*3 + "px", "visibility: hidden", "margin: 0", "padding: 0"]);
+
+        container.appendChild(child);
+
+        document.body.insertBefore(container, document.body.firstChild);
+
+        var widthSize = width - container.clientWidth;
+        var heightSize = height - container.clientHeight;
+
+        document.body.removeChild(container);
+
+        return {
+            width: widthSize,
+            height: heightSize
+        };
+    }
+
+    function injectScrollStyle(targetDocument, styleId, containerClass) {
+        function injectStyle(style, method) {
+            method = method || function (element) {
+                targetDocument.head.appendChild(element);
+            };
+
+            var styleElement = targetDocument.createElement("style");
+            styleElement.innerHTML = style;
+            styleElement.id = styleId;
+            method(styleElement);
+            return styleElement;
+        }
+
+        if (!targetDocument.getElementById(styleId)) {
+            var containerAnimationClass = containerClass + "_animation";
+            var containerAnimationActiveClass = containerClass + "_animation_active";
+            var style = "/* Created by the element-resize-detector library. */\n";
+            style += "." + containerClass + " > div::-webkit-scrollbar { " + buildCssTextString(["display: none"]) + " }\n\n";
+            style += "." + containerAnimationActiveClass + " { " + buildCssTextString(["-webkit-animation-duration: 0.1s", "animation-duration: 0.1s", "-webkit-animation-name: " + containerAnimationClass, "animation-name: " + containerAnimationClass]) + " }\n";
+            style += "@-webkit-keyframes " + containerAnimationClass +  " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n";
+            style += "@keyframes " + containerAnimationClass +          " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }";
+            injectStyle(style);
+        }
+    }
+
+    function addAnimationClass(element) {
+        element.className += " " + detectionContainerClass + "_animation_active";
+    }
+
+    function addEvent(el, name, cb) {
+        if (el.addEventListener) {
+            el.addEventListener(name, cb);
+        } else if(el.attachEvent) {
+            el.attachEvent("on" + name, cb);
+        } else {
+            return reporter.error("[scroll] Don't know how to add event listeners.");
+        }
+    }
+
+    function removeEvent(el, name, cb) {
+        if (el.removeEventListener) {
+            el.removeEventListener(name, cb);
+        } else if(el.detachEvent) {
+            el.detachEvent("on" + name, cb);
+        } else {
+            return reporter.error("[scroll] Don't know how to remove event listeners.");
+        }
+    }
+
+    function getExpandElement(element) {
+        return getState(element).container.childNodes[0].childNodes[0].childNodes[0];
+    }
+
+    function getShrinkElement(element) {
+        return getState(element).container.childNodes[0].childNodes[0].childNodes[1];
+    }
+
+    /**
+     * Adds a resize event listener to the element.
+     * @public
+     * @param {element} element The element that should have the listener added.
+     * @param {function} listener The listener callback to be called for each resize event of the element. The element will be given as a parameter to the listener callback.
+     */
+    function addListener(element, listener) {
+        var listeners = getState(element).listeners;
+
+        if (!listeners.push) {
+            throw new Error("Cannot add listener to an element that is not detectable.");
+        }
+
+        getState(element).listeners.push(listener);
+    }
+
+    /**
+     * Makes an element detectable and ready to be listened for resize events. Will call the callback when the element is ready to be listened for resize changes.
+     * @private
+     * @param {object} options Optional options object.
+     * @param {element} element The element to make detectable
+     * @param {function} callback The callback to be called when the element is ready to be listened for resize changes. Will be called with the element as first parameter.
+     */
+    function makeDetectable(options, element, callback) {
+        if (!callback) {
+            callback = element;
+            element = options;
+            options = null;
+        }
+
+        options = options || {};
+
+        function debug() {
+            if (options.debug) {
+                var args = Array.prototype.slice.call(arguments);
+                args.unshift(idHandler.get(element), "Scroll: ");
+                if (reporter.log.apply) {
+                    reporter.log.apply(null, args);
+                } else {
+                    for (var i = 0; i < args.length; i++) {
+                        reporter.log(args[i]);
+                    }
+                }
+            }
+        }
+
+        function isDetached(element) {
+            function isInDocument(element) {
+                return element === element.ownerDocument.body || element.ownerDocument.body.contains(element);
+            }
+
+            if (!isInDocument(element)) {
+                return true;
+            }
+
+            // FireFox returns null style in hidden iframes. See https://github.com/wnr/element-resize-detector/issues/68 and https://bugzilla.mozilla.org/show_bug.cgi?id=795520
+            if (window.getComputedStyle(element) === null) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function isUnrendered(element) {
+            // Check the absolute positioned container since the top level container is display: inline.
+            var container = getState(element).container.childNodes[0];
+            var style = window.getComputedStyle(container);
+            return !style.width || style.width.indexOf("px") === -1; //Can only compute pixel value when rendered.
+        }
+
+        function getStyle() {
+            // Some browsers only force layouts when actually reading the style properties of the style object, so make sure that they are all read here,
+            // so that the user of the function can be sure that it will perform the layout here, instead of later (important for batching).
+            var elementStyle            = window.getComputedStyle(element);
+            var style                   = {};
+            style.position              = elementStyle.position;
+            style.width                 = element.offsetWidth;
+            style.height                = element.offsetHeight;
+            style.top                   = elementStyle.top;
+            style.right                 = elementStyle.right;
+            style.bottom                = elementStyle.bottom;
+            style.left                  = elementStyle.left;
+            style.widthCSS              = elementStyle.width;
+            style.heightCSS             = elementStyle.height;
+            return style;
+        }
+
+        function storeStartSize() {
+            var style = getStyle();
+            getState(element).startSize = {
+                width: style.width,
+                height: style.height
+            };
+            debug("Element start size", getState(element).startSize);
+        }
+
+        function initListeners() {
+            getState(element).listeners = [];
+        }
+
+        function storeStyle() {
+            debug("storeStyle invoked.");
+            if (!getState(element)) {
+                debug("Aborting because element has been uninstalled");
+                return;
+            }
+
+            var style = getStyle();
+            getState(element).style = style;
+        }
+
+        function storeCurrentSize(element, width, height) {
+            getState(element).lastWidth = width;
+            getState(element).lastHeight  = height;
+        }
+
+        function getExpandChildElement(element) {
+            return getExpandElement(element).childNodes[0];
+        }
+
+        function getWidthOffset() {
+            return 2 * scrollbarSizes.width + 1;
+        }
+
+        function getHeightOffset() {
+            return 2 * scrollbarSizes.height + 1;
+        }
+
+        function getExpandWidth(width) {
+            return width + 10 + getWidthOffset();
+        }
+
+        function getExpandHeight(height) {
+            return height + 10 + getHeightOffset();
+        }
+
+        function getShrinkWidth(width) {
+            return width * 2 + getWidthOffset();
+        }
+
+        function getShrinkHeight(height) {
+            return height * 2 + getHeightOffset();
+        }
+
+        function positionScrollbars(element, width, height) {
+            var expand          = getExpandElement(element);
+            var shrink          = getShrinkElement(element);
+            var expandWidth     = getExpandWidth(width);
+            var expandHeight    = getExpandHeight(height);
+            var shrinkWidth     = getShrinkWidth(width);
+            var shrinkHeight    = getShrinkHeight(height);
+            expand.scrollLeft   = expandWidth;
+            expand.scrollTop    = expandHeight;
+            shrink.scrollLeft   = shrinkWidth;
+            shrink.scrollTop    = shrinkHeight;
+        }
+
+        function injectContainerElement() {
+            var container = getState(element).container;
+
+            if (!container) {
+                container                   = document.createElement("div");
+                container.className         = detectionContainerClass;
+                container.style.cssText     = buildCssTextString(["visibility: hidden", "display: inline", "width: 0px", "height: 0px", "z-index: -1", "overflow: hidden", "margin: 0", "padding: 0"]);
+                getState(element).container = container;
+                addAnimationClass(container);
+                element.appendChild(container);
+
+                var onAnimationStart = function () {
+                    getState(element).onRendered && getState(element).onRendered();
+                };
+
+                addEvent(container, "animationstart", onAnimationStart);
+
+                // Store the event handler here so that they may be removed when uninstall is called.
+                // See uninstall function for an explanation why it is needed.
+                getState(element).onAnimationStart = onAnimationStart;
+            }
+
+            return container;
+        }
+
+        function injectScrollElements() {
+            function alterPositionStyles() {
+                var style = getState(element).style;
+
+                if(style.position === "static") {
+                    element.style.setProperty("position", "relative",options.important ? "important" : "");
+
+                    var removeRelativeStyles = function(reporter, element, style, property) {
+                        function getNumericalValue(value) {
+                            return value.replace(/[^-\d\.]/g, "");
+                        }
+
+                        var value = style[property];
+
+                        if(value !== "auto" && getNumericalValue(value) !== "0") {
+                            reporter.warn("An element that is positioned static has style." + property + "=" + value + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + property + " will be set to 0. Element: ", element);
+                            element.style[property] = 0;
+                        }
+                    };
+
+                    //Check so that there are no accidental styles that will make the element styled differently now that is is relative.
+                    //If there are any, set them to 0 (this should be okay with the user since the style properties did nothing before [since the element was positioned static] anyway).
+                    removeRelativeStyles(reporter, element, style, "top");
+                    removeRelativeStyles(reporter, element, style, "right");
+                    removeRelativeStyles(reporter, element, style, "bottom");
+                    removeRelativeStyles(reporter, element, style, "left");
+                }
+            }
+
+            function getLeftTopBottomRightCssText(left, top, bottom, right) {
+                left = (!left ? "0" : (left + "px"));
+                top = (!top ? "0" : (top + "px"));
+                bottom = (!bottom ? "0" : (bottom + "px"));
+                right = (!right ? "0" : (right + "px"));
+
+                return ["left: " + left, "top: " + top, "right: " + right, "bottom: " + bottom];
+            }
+
+            debug("Injecting elements");
+
+            if (!getState(element)) {
+                debug("Aborting because element has been uninstalled");
+                return;
+            }
+
+            alterPositionStyles();
+
+            var rootContainer = getState(element).container;
+
+            if (!rootContainer) {
+                rootContainer = injectContainerElement();
+            }
+
+            // Due to this WebKit bug https://bugs.webkit.org/show_bug.cgi?id=80808 (currently fixed in Blink, but still present in WebKit browsers such as Safari),
+            // we need to inject two containers, one that is width/height 100% and another that is left/top -1px so that the final container always is 1x1 pixels bigger than
+            // the targeted element.
+            // When the bug is resolved, "containerContainer" may be removed.
+
+            // The outer container can occasionally be less wide than the targeted when inside inline elements element in WebKit (see https://bugs.webkit.org/show_bug.cgi?id=152980).
+            // This should be no problem since the inner container either way makes sure the injected scroll elements are at least 1x1 px.
+
+            var scrollbarWidth          = scrollbarSizes.width;
+            var scrollbarHeight         = scrollbarSizes.height;
+            var containerContainerStyle = buildCssTextString(["position: absolute", "flex: none", "overflow: hidden", "z-index: -1", "visibility: hidden", "width: 100%", "height: 100%", "left: 0px", "top: 0px"]);
+            var containerStyle          = buildCssTextString(["position: absolute", "flex: none", "overflow: hidden", "z-index: -1", "visibility: hidden"].concat(getLeftTopBottomRightCssText(-(1 + scrollbarWidth), -(1 + scrollbarHeight), -scrollbarHeight, -scrollbarWidth)));
+            var expandStyle             = buildCssTextString(["position: absolute", "flex: none", "overflow: scroll", "z-index: -1", "visibility: hidden", "width: 100%", "height: 100%"]);
+            var shrinkStyle             = buildCssTextString(["position: absolute", "flex: none", "overflow: scroll", "z-index: -1", "visibility: hidden", "width: 100%", "height: 100%"]);
+            var expandChildStyle        = buildCssTextString(["position: absolute", "left: 0", "top: 0"]);
+            var shrinkChildStyle        = buildCssTextString(["position: absolute", "width: 200%", "height: 200%"]);
+
+            var containerContainer      = document.createElement("div");
+            var container               = document.createElement("div");
+            var expand                  = document.createElement("div");
+            var expandChild             = document.createElement("div");
+            var shrink                  = document.createElement("div");
+            var shrinkChild             = document.createElement("div");
+
+            // Some browsers choke on the resize system being rtl, so force it to ltr. https://github.com/wnr/element-resize-detector/issues/56
+            // However, dir should not be set on the top level container as it alters the dimensions of the target element in some browsers.
+            containerContainer.dir              = "ltr";
+
+            containerContainer.style.cssText    = containerContainerStyle;
+            containerContainer.className        = detectionContainerClass;
+            container.className                 = detectionContainerClass;
+            container.style.cssText             = containerStyle;
+            expand.style.cssText                = expandStyle;
+            expandChild.style.cssText           = expandChildStyle;
+            shrink.style.cssText                = shrinkStyle;
+            shrinkChild.style.cssText           = shrinkChildStyle;
+
+            expand.appendChild(expandChild);
+            shrink.appendChild(shrinkChild);
+            container.appendChild(expand);
+            container.appendChild(shrink);
+            containerContainer.appendChild(container);
+            rootContainer.appendChild(containerContainer);
+
+            function onExpandScroll() {
+                getState(element).onExpand && getState(element).onExpand();
+            }
+
+            function onShrinkScroll() {
+                getState(element).onShrink && getState(element).onShrink();
+            }
+
+            addEvent(expand, "scroll", onExpandScroll);
+            addEvent(shrink, "scroll", onShrinkScroll);
+
+            // Store the event handlers here so that they may be removed when uninstall is called.
+            // See uninstall function for an explanation why it is needed.
+            getState(element).onExpandScroll = onExpandScroll;
+            getState(element).onShrinkScroll = onShrinkScroll;
+        }
+
+        function registerListenersAndPositionElements() {
+            function updateChildSizes(element, width, height) {
+                var expandChild             = getExpandChildElement(element);
+                var expandWidth             = getExpandWidth(width);
+                var expandHeight            = getExpandHeight(height);
+                expandChild.style.setProperty("width", expandWidth + "px", options.important ? "important" : "");
+                expandChild.style.setProperty("height", expandHeight + "px", options.important ? "important" : "");
+            }
+
+            function updateDetectorElements(done) {
+                var width           = element.offsetWidth;
+                var height          = element.offsetHeight;
+
+                // Check whether the size has actually changed since last time the algorithm ran. If not, some steps may be skipped.
+                var sizeChanged = width !== getState(element).lastWidth || height !== getState(element).lastHeight;
+
+                debug("Storing current size", width, height);
+
+                // Store the size of the element sync here, so that multiple scroll events may be ignored in the event listeners.
+                // Otherwise the if-check in handleScroll is useless.
+                storeCurrentSize(element, width, height);
+
+                // Since we delay the processing of the batch, there is a risk that uninstall has been called before the batch gets to execute.
+                // Since there is no way to cancel the fn executions, we need to add an uninstall guard to all fns of the batch.
+
+                batchProcessor.add(0, function performUpdateChildSizes() {
+                    if (!sizeChanged) {
+                        return;
+                    }
+
+                    if (!getState(element)) {
+                        debug("Aborting because element has been uninstalled");
+                        return;
+                    }
+
+                    if (!areElementsInjected()) {
+                        debug("Aborting because element container has not been initialized");
+                        return;
+                    }
+
+                    if (options.debug) {
+                        var w = element.offsetWidth;
+                        var h = element.offsetHeight;
+
+                        if (w !== width || h !== height) {
+                            reporter.warn(idHandler.get(element), "Scroll: Size changed before updating detector elements.");
+                        }
+                    }
+
+                    updateChildSizes(element, width, height);
+                });
+
+                batchProcessor.add(1, function updateScrollbars() {
+                    // This function needs to be invoked event though the size is unchanged. The element could have been resized very quickly and then
+                    // been restored to the original size, which will have changed the scrollbar positions.
+
+                    if (!getState(element)) {
+                        debug("Aborting because element has been uninstalled");
+                        return;
+                    }
+
+                    if (!areElementsInjected()) {
+                        debug("Aborting because element container has not been initialized");
+                        return;
+                    }
+
+                    positionScrollbars(element, width, height);
+                });
+
+                if (sizeChanged && done) {
+                    batchProcessor.add(2, function () {
+                        if (!getState(element)) {
+                            debug("Aborting because element has been uninstalled");
+                            return;
+                        }
+
+                        if (!areElementsInjected()) {
+                          debug("Aborting because element container has not been initialized");
+                          return;
+                        }
+
+                        done();
+                    });
+                }
+            }
+
+            function areElementsInjected() {
+                return !!getState(element).container;
+            }
+
+            function notifyListenersIfNeeded() {
+                function isFirstNotify() {
+                    return getState(element).lastNotifiedWidth === undefined;
+                }
+
+                debug("notifyListenersIfNeeded invoked");
+
+                var state = getState(element);
+
+                // Don't notify if the current size is the start size, and this is the first notification.
+                if (isFirstNotify() && state.lastWidth === state.startSize.width && state.lastHeight === state.startSize.height) {
+                    return debug("Not notifying: Size is the same as the start size, and there has been no notification yet.");
+                }
+
+                // Don't notify if the size already has been notified.
+                if (state.lastWidth === state.lastNotifiedWidth && state.lastHeight === state.lastNotifiedHeight) {
+                    return debug("Not notifying: Size already notified");
+                }
+
+
+                debug("Current size not notified, notifying...");
+                state.lastNotifiedWidth = state.lastWidth;
+                state.lastNotifiedHeight = state.lastHeight;
+                forEach(getState(element).listeners, function (listener) {
+                    listener(element);
+                });
+            }
+
+            function handleRender() {
+                debug("startanimation triggered.");
+
+                if (isUnrendered(element)) {
+                    debug("Ignoring since element is still unrendered...");
+                    return;
+                }
+
+                debug("Element rendered.");
+                var expand = getExpandElement(element);
+                var shrink = getShrinkElement(element);
+                if (expand.scrollLeft === 0 || expand.scrollTop === 0 || shrink.scrollLeft === 0 || shrink.scrollTop === 0) {
+                    debug("Scrollbars out of sync. Updating detector elements...");
+                    updateDetectorElements(notifyListenersIfNeeded);
+                }
+            }
+
+            function handleScroll() {
+                debug("Scroll detected.");
+
+                if (isUnrendered(element)) {
+                    // Element is still unrendered. Skip this scroll event.
+                    debug("Scroll event fired while unrendered. Ignoring...");
+                    return;
+                }
+
+                updateDetectorElements(notifyListenersIfNeeded);
+            }
+
+            debug("registerListenersAndPositionElements invoked.");
+
+            if (!getState(element)) {
+                debug("Aborting because element has been uninstalled");
+                return;
+            }
+
+            getState(element).onRendered = handleRender;
+            getState(element).onExpand = handleScroll;
+            getState(element).onShrink = handleScroll;
+
+            var style = getState(element).style;
+            updateChildSizes(element, style.width, style.height);
+        }
+
+        function finalizeDomMutation() {
+            debug("finalizeDomMutation invoked.");
+
+            if (!getState(element)) {
+                debug("Aborting because element has been uninstalled");
+                return;
+            }
+
+            var style = getState(element).style;
+            storeCurrentSize(element, style.width, style.height);
+            positionScrollbars(element, style.width, style.height);
+        }
+
+        function ready() {
+            callback(element);
+        }
+
+        function install() {
+            debug("Installing...");
+            initListeners();
+            storeStartSize();
+
+            batchProcessor.add(0, storeStyle);
+            batchProcessor.add(1, injectScrollElements);
+            batchProcessor.add(2, registerListenersAndPositionElements);
+            batchProcessor.add(3, finalizeDomMutation);
+            batchProcessor.add(4, ready);
+        }
+
+        debug("Making detectable...");
+
+        if (isDetached(element)) {
+            debug("Element is detached");
+
+            injectContainerElement();
+
+            debug("Waiting until element is attached...");
+
+            getState(element).onRendered = function () {
+                debug("Element is now attached");
+                install();
+            };
+        } else {
+            install();
+        }
+    }
+
+    function uninstall(element) {
+        var state = getState(element);
+
+        if (!state) {
+            // Uninstall has been called on a non-erd element.
+            return;
+        }
+
+        // Uninstall may have been called in the following scenarios:
+        // (1) Right between the sync code and async batch (here state.busy = true, but nothing have been registered or injected).
+        // (2) In the ready callback of the last level of the batch by another element (here, state.busy = true, but all the stuff has been injected).
+        // (3) After the installation process (here, state.busy = false and all the stuff has been injected).
+        // So to be on the safe side, let's check for each thing before removing.
+
+        // We need to remove the event listeners, because otherwise the event might fire on an uninstall element which results in an error when trying to get the state of the element.
+        state.onExpandScroll && removeEvent(getExpandElement(element), "scroll", state.onExpandScroll);
+        state.onShrinkScroll && removeEvent(getShrinkElement(element), "scroll", state.onShrinkScroll);
+        state.onAnimationStart && removeEvent(state.container, "animationstart", state.onAnimationStart);
+
+        state.container && element.removeChild(state.container);
+    }
+
+    return {
+        makeDetectable: makeDetectable,
+        addListener: addListener,
+        uninstall: uninstall,
+        initDocument: initDocument
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/element-resize-detector.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/element-resize-detector.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var forEach                 = __webpack_require__(/*! ./collection-utils */ "./node_modules/element-resize-detector/src/collection-utils.js").forEach;
+var elementUtilsMaker       = __webpack_require__(/*! ./element-utils */ "./node_modules/element-resize-detector/src/element-utils.js");
+var listenerHandlerMaker    = __webpack_require__(/*! ./listener-handler */ "./node_modules/element-resize-detector/src/listener-handler.js");
+var idGeneratorMaker        = __webpack_require__(/*! ./id-generator */ "./node_modules/element-resize-detector/src/id-generator.js");
+var idHandlerMaker          = __webpack_require__(/*! ./id-handler */ "./node_modules/element-resize-detector/src/id-handler.js");
+var reporterMaker           = __webpack_require__(/*! ./reporter */ "./node_modules/element-resize-detector/src/reporter.js");
+var browserDetector         = __webpack_require__(/*! ./browser-detector */ "./node_modules/element-resize-detector/src/browser-detector.js");
+var batchProcessorMaker     = __webpack_require__(/*! batch-processor */ "./node_modules/batch-processor/src/batch-processor.js");
+var stateHandler            = __webpack_require__(/*! ./state-handler */ "./node_modules/element-resize-detector/src/state-handler.js");
+
+//Detection strategies.
+var objectStrategyMaker     = __webpack_require__(/*! ./detection-strategy/object.js */ "./node_modules/element-resize-detector/src/detection-strategy/object.js");
+var scrollStrategyMaker     = __webpack_require__(/*! ./detection-strategy/scroll.js */ "./node_modules/element-resize-detector/src/detection-strategy/scroll.js");
+
+function isCollection(obj) {
+    return Array.isArray(obj) || obj.length !== undefined;
+}
+
+function toArray(collection) {
+    if (!Array.isArray(collection)) {
+        var array = [];
+        forEach(collection, function (obj) {
+            array.push(obj);
+        });
+        return array;
+    } else {
+        return collection;
+    }
+}
+
+function isElement(obj) {
+    return obj && obj.nodeType === 1;
+}
+
+/**
+ * @typedef idHandler
+ * @type {object}
+ * @property {function} get Gets the resize detector id of the element.
+ * @property {function} set Generate and sets the resize detector id of the element.
+ */
+
+/**
+ * @typedef Options
+ * @type {object}
+ * @property {boolean} callOnAdd    Determines if listeners should be called when they are getting added.
+                                    Default is true. If true, the listener is guaranteed to be called when it has been added.
+                                    If false, the listener will not be guarenteed to be called when it has been added (does not prevent it from being called).
+ * @property {idHandler} idHandler  A custom id handler that is responsible for generating, setting and retrieving id's for elements.
+                                    If not provided, a default id handler will be used.
+ * @property {reporter} reporter    A custom reporter that handles reporting logs, warnings and errors.
+                                    If not provided, a default id handler will be used.
+                                    If set to false, then nothing will be reported.
+ * @property {boolean} debug        If set to true, the the system will report debug messages as default for the listenTo method.
+ */
+
+/**
+ * Creates an element resize detector instance.
+ * @public
+ * @param {Options?} options Optional global options object that will decide how this instance will work.
+ */
+module.exports = function(options) {
+    options = options || {};
+
+    //idHandler is currently not an option to the listenTo function, so it should not be added to globalOptions.
+    var idHandler;
+
+    if (options.idHandler) {
+        // To maintain compatability with idHandler.get(element, readonly), make sure to wrap the given idHandler
+        // so that readonly flag always is true when it's used here. This may be removed next major version bump.
+        idHandler = {
+            get: function (element) { return options.idHandler.get(element, true); },
+            set: options.idHandler.set
+        };
+    } else {
+        var idGenerator = idGeneratorMaker();
+        var defaultIdHandler = idHandlerMaker({
+            idGenerator: idGenerator,
+            stateHandler: stateHandler
+        });
+        idHandler = defaultIdHandler;
+    }
+
+    //reporter is currently not an option to the listenTo function, so it should not be added to globalOptions.
+    var reporter = options.reporter;
+
+    if(!reporter) {
+        //If options.reporter is false, then the reporter should be quiet.
+        var quiet = reporter === false;
+        reporter = reporterMaker(quiet);
+    }
+
+    //batchProcessor is currently not an option to the listenTo function, so it should not be added to globalOptions.
+    var batchProcessor = getOption(options, "batchProcessor", batchProcessorMaker({ reporter: reporter }));
+
+    //Options to be used as default for the listenTo function.
+    var globalOptions = {};
+    globalOptions.callOnAdd     = !!getOption(options, "callOnAdd", true);
+    globalOptions.debug         = !!getOption(options, "debug", false);
+
+    var eventListenerHandler    = listenerHandlerMaker(idHandler);
+    var elementUtils            = elementUtilsMaker({
+        stateHandler: stateHandler
+    });
+
+    //The detection strategy to be used.
+    var detectionStrategy;
+    var desiredStrategy = getOption(options, "strategy", "object");
+    var importantCssRules = getOption(options, "important", false);
+    var strategyOptions = {
+        reporter: reporter,
+        batchProcessor: batchProcessor,
+        stateHandler: stateHandler,
+        idHandler: idHandler,
+        important: importantCssRules
+    };
+
+    if(desiredStrategy === "scroll") {
+        if (browserDetector.isLegacyOpera()) {
+            reporter.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy.");
+            desiredStrategy = "object";
+        } else if (browserDetector.isIE(9)) {
+            reporter.warn("Scroll strategy is not supported on IE9. Changing to object strategy.");
+            desiredStrategy = "object";
+        }
+    }
+
+    if(desiredStrategy === "scroll") {
+        detectionStrategy = scrollStrategyMaker(strategyOptions);
+    } else if(desiredStrategy === "object") {
+        detectionStrategy = objectStrategyMaker(strategyOptions);
+    } else {
+        throw new Error("Invalid strategy name: " + desiredStrategy);
+    }
+
+    //Calls can be made to listenTo with elements that are still being installed.
+    //Also, same elements can occur in the elements list in the listenTo function.
+    //With this map, the ready callbacks can be synchronized between the calls
+    //so that the ready callback can always be called when an element is ready - even if
+    //it wasn't installed from the function itself.
+    var onReadyCallbacks = {};
+
+    /**
+     * Makes the given elements resize-detectable and starts listening to resize events on the elements. Calls the event callback for each event for each element.
+     * @public
+     * @param {Options?} options Optional options object. These options will override the global options. Some options may not be overriden, such as idHandler.
+     * @param {element[]|element} elements The given array of elements to detect resize events of. Single element is also valid.
+     * @param {function} listener The callback to be executed for each resize event for each element.
+     */
+    function listenTo(options, elements, listener) {
+        function onResizeCallback(element) {
+            var listeners = eventListenerHandler.get(element);
+            forEach(listeners, function callListenerProxy(listener) {
+                listener(element);
+            });
+        }
+
+        function addListener(callOnAdd, element, listener) {
+            eventListenerHandler.add(element, listener);
+
+            if(callOnAdd) {
+                listener(element);
+            }
+        }
+
+        //Options object may be omitted.
+        if(!listener) {
+            listener = elements;
+            elements = options;
+            options = {};
+        }
+
+        if(!elements) {
+            throw new Error("At least one element required.");
+        }
+
+        if(!listener) {
+            throw new Error("Listener required.");
+        }
+
+        if (isElement(elements)) {
+            // A single element has been passed in.
+            elements = [elements];
+        } else if (isCollection(elements)) {
+            // Convert collection to array for plugins.
+            // TODO: May want to check so that all the elements in the collection are valid elements.
+            elements = toArray(elements);
+        } else {
+            return reporter.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
+        }
+
+        var elementsReady = 0;
+
+        var callOnAdd = getOption(options, "callOnAdd", globalOptions.callOnAdd);
+        var onReadyCallback = getOption(options, "onReady", function noop() {});
+        var debug = getOption(options, "debug", globalOptions.debug);
+
+        forEach(elements, function attachListenerToElement(element) {
+            if (!stateHandler.getState(element)) {
+                stateHandler.initState(element);
+                idHandler.set(element);
+            }
+
+            var id = idHandler.get(element);
+
+            debug && reporter.log("Attaching listener to element", id, element);
+
+            if(!elementUtils.isDetectable(element)) {
+                debug && reporter.log(id, "Not detectable.");
+                if(elementUtils.isBusy(element)) {
+                    debug && reporter.log(id, "System busy making it detectable");
+
+                    //The element is being prepared to be detectable. Do not make it detectable.
+                    //Just add the listener, because the element will soon be detectable.
+                    addListener(callOnAdd, element, listener);
+                    onReadyCallbacks[id] = onReadyCallbacks[id] || [];
+                    onReadyCallbacks[id].push(function onReady() {
+                        elementsReady++;
+
+                        if(elementsReady === elements.length) {
+                            onReadyCallback();
+                        }
+                    });
+                    return;
+                }
+
+                debug && reporter.log(id, "Making detectable...");
+                //The element is not prepared to be detectable, so do prepare it and add a listener to it.
+                elementUtils.markBusy(element, true);
+                return detectionStrategy.makeDetectable({ debug: debug, important: importantCssRules }, element, function onElementDetectable(element) {
+                    debug && reporter.log(id, "onElementDetectable");
+
+                    if (stateHandler.getState(element)) {
+                        elementUtils.markAsDetectable(element);
+                        elementUtils.markBusy(element, false);
+                        detectionStrategy.addListener(element, onResizeCallback);
+                        addListener(callOnAdd, element, listener);
+
+                        // Since the element size might have changed since the call to "listenTo", we need to check for this change,
+                        // so that a resize event may be emitted.
+                        // Having the startSize object is optional (since it does not make sense in some cases such as unrendered elements), so check for its existance before.
+                        // Also, check the state existance before since the element may have been uninstalled in the installation process.
+                        var state = stateHandler.getState(element);
+                        if (state && state.startSize) {
+                            var width = element.offsetWidth;
+                            var height = element.offsetHeight;
+                            if (state.startSize.width !== width || state.startSize.height !== height) {
+                                onResizeCallback(element);
+                            }
+                        }
+
+                        if(onReadyCallbacks[id]) {
+                            forEach(onReadyCallbacks[id], function(callback) {
+                                callback();
+                            });
+                        }
+                    } else {
+                        // The element has been unisntalled before being detectable.
+                        debug && reporter.log(id, "Element uninstalled before being detectable.");
+                    }
+
+                    delete onReadyCallbacks[id];
+
+                    elementsReady++;
+                    if(elementsReady === elements.length) {
+                        onReadyCallback();
+                    }
+                });
+            }
+
+            debug && reporter.log(id, "Already detecable, adding listener.");
+
+            //The element has been prepared to be detectable and is ready to be listened to.
+            addListener(callOnAdd, element, listener);
+            elementsReady++;
+        });
+
+        if(elementsReady === elements.length) {
+            onReadyCallback();
+        }
+    }
+
+    function uninstall(elements) {
+        if(!elements) {
+            return reporter.error("At least one element is required.");
+        }
+
+        if (isElement(elements)) {
+            // A single element has been passed in.
+            elements = [elements];
+        } else if (isCollection(elements)) {
+            // Convert collection to array for plugins.
+            // TODO: May want to check so that all the elements in the collection are valid elements.
+            elements = toArray(elements);
+        } else {
+            return reporter.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
+        }
+
+        forEach(elements, function (element) {
+            eventListenerHandler.removeAllListeners(element);
+            detectionStrategy.uninstall(element);
+            stateHandler.cleanState(element);
+        });
+    }
+
+    function initDocument(targetDocument) {
+        detectionStrategy.initDocument && detectionStrategy.initDocument(targetDocument);
+    }
+
+    return {
+        listenTo: listenTo,
+        removeListener: eventListenerHandler.removeListener,
+        removeAllListeners: eventListenerHandler.removeAllListeners,
+        uninstall: uninstall,
+        initDocument: initDocument
+    };
+};
+
+function getOption(options, name, defaultValue) {
+    var value = options[name];
+
+    if((value === undefined || value === null) && defaultValue !== undefined) {
+        return defaultValue;
+    }
+
+    return value;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/element-utils.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/element-utils.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function(options) {
+    var getState = options.stateHandler.getState;
+
+    /**
+     * Tells if the element has been made detectable and ready to be listened for resize events.
+     * @public
+     * @param {element} The element to check.
+     * @returns {boolean} True or false depending on if the element is detectable or not.
+     */
+    function isDetectable(element) {
+        var state = getState(element);
+        return state && !!state.isDetectable;
+    }
+
+    /**
+     * Marks the element that it has been made detectable and ready to be listened for resize events.
+     * @public
+     * @param {element} The element to mark.
+     */
+    function markAsDetectable(element) {
+        getState(element).isDetectable = true;
+    }
+
+    /**
+     * Tells if the element is busy or not.
+     * @public
+     * @param {element} The element to check.
+     * @returns {boolean} True or false depending on if the element is busy or not.
+     */
+    function isBusy(element) {
+        return !!getState(element).busy;
+    }
+
+    /**
+     * Marks the object is busy and should not be made detectable.
+     * @public
+     * @param {element} element The element to mark.
+     * @param {boolean} busy If the element is busy or not.
+     */
+    function markBusy(element, busy) {
+        getState(element).busy = !!busy;
+    }
+
+    return {
+        isDetectable: isDetectable,
+        markAsDetectable: markAsDetectable,
+        isBusy: isBusy,
+        markBusy: markBusy
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/id-generator.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/id-generator.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function() {
+    var idCount = 1;
+
+    /**
+     * Generates a new unique id in the context.
+     * @public
+     * @returns {number} A unique id in the context.
+     */
+    function generate() {
+        return idCount++;
+    }
+
+    return {
+        generate: generate
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/id-handler.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/id-handler.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function(options) {
+    var idGenerator     = options.idGenerator;
+    var getState        = options.stateHandler.getState;
+
+    /**
+     * Gets the resize detector id of the element.
+     * @public
+     * @param {element} element The target element to get the id of.
+     * @returns {string|number|null} The id of the element. Null if it has no id.
+     */
+    function getId(element) {
+        var state = getState(element);
+
+        if (state && state.id !== undefined) {
+            return state.id;
+        }
+
+        return null;
+    }
+
+    /**
+     * Sets the resize detector id of the element. Requires the element to have a resize detector state initialized.
+     * @public
+     * @param {element} element The target element to set the id of.
+     * @returns {string|number|null} The id of the element.
+     */
+    function setId(element) {
+        var state = getState(element);
+
+        if (!state) {
+            throw new Error("setId required the element to have a resize detection state.");
+        }
+
+        var id = idGenerator.generate();
+
+        state.id = id;
+
+        return id;
+    }
+
+    return {
+        get: getId,
+        set: setId
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/listener-handler.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/listener-handler.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function(idHandler) {
+    var eventListeners = {};
+
+    /**
+     * Gets all listeners for the given element.
+     * @public
+     * @param {element} element The element to get all listeners for.
+     * @returns All listeners for the given element.
+     */
+    function getListeners(element) {
+        var id = idHandler.get(element);
+
+        if (id === undefined) {
+            return [];
+        }
+
+        return eventListeners[id] || [];
+    }
+
+    /**
+     * Stores the given listener for the given element. Will not actually add the listener to the element.
+     * @public
+     * @param {element} element The element that should have the listener added.
+     * @param {function} listener The callback that the element has added.
+     */
+    function addListener(element, listener) {
+        var id = idHandler.get(element);
+
+        if(!eventListeners[id]) {
+            eventListeners[id] = [];
+        }
+
+        eventListeners[id].push(listener);
+    }
+
+    function removeListener(element, listener) {
+        var listeners = getListeners(element);
+        for (var i = 0, len = listeners.length; i < len; ++i) {
+            if (listeners[i] === listener) {
+              listeners.splice(i, 1);
+              break;
+            }
+        }
+    }
+
+    function removeAllListeners(element) {
+      var listeners = getListeners(element);
+      if (!listeners) { return; }
+      listeners.length = 0;
+    }
+
+    return {
+        get: getListeners,
+        add: addListener,
+        removeListener: removeListener,
+        removeAllListeners: removeAllListeners
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/reporter.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/reporter.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* global console: false */
+
+/**
+ * Reporter that handles the reporting of logs, warnings and errors.
+ * @public
+ * @param {boolean} quiet Tells if the reporter should be quiet or not.
+ */
+module.exports = function(quiet) {
+    function noop() {
+        //Does nothing.
+    }
+
+    var reporter = {
+        log: noop,
+        warn: noop,
+        error: noop
+    };
+
+    if(!quiet && window.console) {
+        var attachFunction = function(reporter, name) {
+            //The proxy is needed to be able to call the method with the console context,
+            //since we cannot use bind.
+            reporter[name] = function reporterProxy() {
+                var f = console[name];
+                if (f.apply) { //IE9 does not support console.log.apply :)
+                    f.apply(console, arguments);
+                } else {
+                    for (var i = 0; i < arguments.length; i++) {
+                        f(arguments[i]);
+                    }
+                }
+            };
+        };
+
+        attachFunction(reporter, "log");
+        attachFunction(reporter, "warn");
+        attachFunction(reporter, "error");
+    }
+
+    return reporter;
+};
+
+/***/ }),
+
+/***/ "./node_modules/element-resize-detector/src/state-handler.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/element-resize-detector/src/state-handler.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var prop = "_erd";
+
+function initState(element) {
+    element[prop] = {};
+    return getState(element);
+}
+
+function getState(element) {
+    return element[prop];
+}
+
+function cleanState(element) {
+    delete element[prop];
+}
+
+module.exports = {
+    initState: initState,
+    getState: getState,
+    cleanState: cleanState
 };
 
 
@@ -19218,6 +21062,67 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 
 module.exports = hoistNonReactStatics;
+
+
+/***/ }),
+
+/***/ "./node_modules/invariant/browser.js":
+/*!*******************************************!*\
+  !*** ./node_modules/invariant/browser.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function(condition, format, a, b, c, d, e, f) {
+  if (true) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error(
+        'Minified exception occurred; use the non-minified dev environment ' +
+        'for the full error message and additional helpful warnings.'
+      );
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(
+        format.replace(/%s/g, function() { return args[argIndex++]; })
+      );
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
 
 
 /***/ }),
@@ -39935,6 +41840,17 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ }),
 
+/***/ "./node_modules/react-dom/index.js":
+/*!***********************************************************************************************!*\
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_3a359c314b014ea1ed53 ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(/*! dll-reference dll_3a359c314b014ea1ed53 */ "dll-reference dll_3a359c314b014ea1ed53"))("./node_modules/react-dom/index.js");
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -40191,16 +42107,645 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react-sizes/dist/react-sizes.min.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/react-sizes/dist/react-sizes.min.js ***!
-  \**********************************************************/
+/***/ "./node_modules/react-sizeme/dist/react-sizeme.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-sizeme/dist/react-sizeme.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports,__webpack_require__(/*! react */ "./node_modules/react/index.js")):undefined}(this,function(e,t){"use strict";var n="default"in t?t.default:t;function r(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function i(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function o(){return(o=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}function a(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){i(e,t,n[t])})}return e}function u(e){return(u=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function c(e,t){return(c=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function f(e,t){if(null==e)return{};var n,r,i=function(e,t){if(null==e)return{};var n,r,i={},o=Object.keys(e);for(r=0;r<o.length;r++)n=o[r],t.indexOf(n)>=0||(i[n]=e[n]);return i}(e,t);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);for(r=0;r<o.length;r++)n=o[r],t.indexOf(n)>=0||Object.prototype.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function l(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}var s="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{},p="Expected a function",d=NaN,b="[object Symbol]",h=/^\s+|\s+$/g,v=/^[-+]0x[0-9a-f]+$/i,y=/^0b[01]+$/i,g=/^0o[0-7]+$/i,m=parseInt,w="object"==typeof s&&s&&s.Object===Object&&s,O="object"==typeof self&&self&&self.Object===Object&&self,j=w||O||Function("return this")(),P=Object.prototype.toString,k=Math.max,S=Math.min,T=function(){return j.Date.now()};function z(e,t,n){var r,i,o,a,u,c,f=0,l=!1,s=!1,d=!0;if("function"!=typeof e)throw new TypeError(p);function b(t){var n=r,o=i;return r=i=void 0,f=t,a=e.apply(o,n)}function h(e){var n=e-c;return void 0===c||n>=t||n<0||s&&e-f>=o}function v(){var e=T();if(h(e))return y(e);u=setTimeout(v,function(e){var n=t-(e-c);return s?S(n,o-(e-f)):n}(e))}function y(e){return u=void 0,d&&r?b(e):(r=i=void 0,a)}function g(){var e=T(),n=h(e);if(r=arguments,i=this,c=e,n){if(void 0===u)return function(e){return f=e,u=setTimeout(v,t),l?b(e):a}(c);if(s)return u=setTimeout(v,t),b(c)}return void 0===u&&(u=setTimeout(v,t)),a}return t=E(t)||0,x(n)&&(l=!!n.leading,o=(s="maxWait"in n)?k(E(n.maxWait)||0,t):o,d="trailing"in n?!!n.trailing:d),g.cancel=function(){void 0!==u&&clearTimeout(u),f=0,r=c=i=u=void 0},g.flush=function(){return void 0===u?a:y(T())},g}function x(e){var t=typeof e;return!!e&&("object"==t||"function"==t)}function E(e){if("number"==typeof e)return e;if(function(e){return"symbol"==typeof e||function(e){return!!e&&"object"==typeof e}(e)&&P.call(e)==b}(e))return d;if(x(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=x(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(h,"");var n=y.test(e);return n||g.test(e)?m(e.slice(2),n?2:8):v.test(e)?d:+e}var D=function(e,t,n){var r=!0,i=!0;if("function"!=typeof e)throw new TypeError(p);return x(n)&&(r="leading"in n?!!n.leading:r,i="trailing"in n?!!n.trailing:i),z(e,t,{leading:r,maxWait:t,trailing:i})},W=function(e,t){for(var n in e)if(!(n in t))return!0;for(var r in t)if(e[r]!==t[r])return!0;return!1},_=n.createContext({fallbackWidth:null,fallbackHeight:null,forceFallback:!1,throttle:200});_.displayName="SizesContext";var F=function(e){return e.width<480},H=function(e){return e.width>=1024},M=function(e){return!H(e)},C=Object.freeze({isMobile:F,isTablet:function(e){var t=e.width;return t>=480&&t<1024},isDesktop:H,isGtMobile:function(e){return!F(e)},isGtTablet:function(e){return H(e)},isStTablet:function(e){return F(e)},isStDesktop:M,isTabletAndGreater:function(e){return!F(e)},isTabletAndSmaller:function(e){return!M(e)}}),N=function(e){return function(e){var t=e.fallbackWidth,n=void 0===t?null:t,r=e.fallbackHeight,i=void 0===r?null:r,o=e.forceFallback,a=void 0!==o&&o,u="undefined"!=typeof window;return{width:u&&!a?window.innerWidth:n,height:u&&!a?window.innerHeight:i,canUseDOM:u}}({fallbackHeight:e.fallbackHeight,fallbackWidth:e.fallbackWidth,forceFallback:e.forceFallback})},A=Object.assign(function(){for(var e=arguments.length,s=new Array(e),p=0;p<e;p++)s[p]=arguments[p];return function(e){var p,d=function(e,t){return s.map(function(n){return n(e,t)}).reduce(function(e,t){return a({},e,t)},{})},b=function(a){function s(e){var t,n,r;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,s),n=this,r=u(s).call(this,e),t=!r||"object"!=typeof r&&"function"!=typeof r?l(n):r,i(l(l(t)),"dispatchSizes",function(){var e=t.getPropsToPass();W(e,t.state.propsToPass)&&t.setState({propsToPass:e})}),i(l(l(t)),"throttledDispatchSizes",D(t.dispatchSizes,t.props.throttle)),t.getPropsToPass=function(){return d(N(t.props),t.props)},t.state={propsToPass:t.getPropsToPass()},t}var p,b,h;return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&c(e,t)}(s,t.PureComponent),p=s,h=[{key:"getDerivedStateFromProps",value:function(e,t){var n=d(N(e),e);return W(n,t.propsToPass)?{propsToPass:n}:null}}],(b=[{key:"componentDidMount",value:function(){window.addEventListener("resize",this.throttledDispatchSizes),this.dispatchSizes()}},{key:"componentWillUnmount",value:function(){this.throttledDispatchSizes.cancel(),window.removeEventListener("resize",this.throttledDispatchSizes)}},{key:"render",value:function(){var t=this.props,r=(t.fallbackHeight,t.fallbackWidth,t.forceFallback,f(t,["fallbackHeight","fallbackWidth","forceFallback"]));return n.createElement(e,o({},r,this.state.propsToPass))}}])&&r(p.prototype,b),h&&r(p,h),s}();return i(b,"displayName","withSizes(".concat((p=e).displayName||p.name||("string"==typeof p&&p.length>0?p:"Unknown"),")")),function(e){return n.createElement(_.Consumer,null,function(t){return n.createElement(b,o({},t,e))})}}},a({},C)),$=function(e){var t=e.children,n=e.render,r=f(e,["children","render"]),i=t||n;return i?i(r):null};e.withSizes=A,e.SizesProvider=function(e){var t=e.config,r=e.children;return n.createElement(_.Provider,{value:t},r)},e.createSizedComponent=function(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n];return A(t)($)},e.presets=C,e.default=A,Object.defineProperty(e,"__esModule",{value:!0})});
+"use strict";
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var React__default = _interopDefault(React);
+var ReactDOM = _interopDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
+var invariant = _interopDefault(__webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js"));
+var throttleDebounce = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/dist/index.esm.js");
+var createResizeDetector = _interopDefault(__webpack_require__(/*! element-resize-detector */ "./node_modules/element-resize-detector/src/element-resize-detector.js"));
+var isShallowEqual = _interopDefault(__webpack_require__(/*! shallowequal */ "./node_modules/shallowequal/index.js"));
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (typeof call === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
+var instances = {}; // Lazily require to not cause bug
+// https://github.com/ctrlplusb/react-sizeme/issues/6
+
+function resizeDetector() {
+  var strategy = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'scroll';
+
+  if (!instances[strategy]) {
+    instances[strategy] = createResizeDetector({
+      strategy: strategy
+    });
+  }
+
+  return instances[strategy];
+}
+
+var errMsg = 'react-sizeme: an error occurred whilst stopping to listen to node size changes';
+var defaultConfig = {
+  monitorWidth: true,
+  monitorHeight: false,
+  monitorPosition: false,
+  refreshRate: 16,
+  refreshMode: 'throttle',
+  noPlaceholder: false,
+  resizeDetectorStrategy: 'scroll'
+};
+
+function getDisplayName(WrappedComponent) {
+  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+}
+/**
+ * This is a utility wrapper component that will allow our higher order
+ * component to get a ref handle on our wrapped components html.
+ * @see https://gist.github.com/jimfb/32b587ee6177665fb4cf
+ */
+
+
+var ReferenceWrapper =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ReferenceWrapper, _Component);
+
+  function ReferenceWrapper() {
+    _classCallCheck(this, ReferenceWrapper);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ReferenceWrapper).apply(this, arguments));
+  }
+
+  _createClass(ReferenceWrapper, [{
+    key: "render",
+    value: function render() {
+      return React.Children.only(this.props.children);
+    }
+  }]);
+
+  return ReferenceWrapper;
+}(React.Component);
+
+_defineProperty(ReferenceWrapper, "displayName", 'SizeMeReferenceWrapper');
+
+function Placeholder(_ref) {
+  var className = _ref.className,
+      style = _ref.style;
+  // Lets create the props for the temp element.
+  var phProps = {}; // We will use any provided className/style or else make the temp
+  // container take the full available space.
+
+  if (!className && !style) {
+    phProps.style = {
+      width: '100%',
+      height: '100%'
+    };
+  } else {
+    if (className) {
+      phProps.className = className;
+    }
+
+    if (style) {
+      phProps.style = style;
+    }
+  }
+
+  return React__default.createElement("div", phProps);
+}
+
+Placeholder.displayName = 'SizeMePlaceholder';
+/**
+ * As we need to maintain a ref on the root node that is rendered within our
+ * SizeMe component we need to wrap our entire render in a sub component.
+ * Without this, we lose the DOM ref after the placeholder is removed from
+ * the render and the actual component is rendered.
+ * It took me forever to figure this out, so tread extra careful on this one!
+ */
+
+var renderWrapper = function renderWrapper(WrappedComponent) {
+  function SizeMeRenderer(props) {
+    var explicitRef = props.explicitRef,
+        className = props.className,
+        style = props.style,
+        size = props.size,
+        disablePlaceholder = props.disablePlaceholder,
+        onSize = props.onSize,
+        restProps = _objectWithoutProperties(props, ["explicitRef", "className", "style", "size", "disablePlaceholder", "onSize"]);
+
+    var noSizeData = size == null || size.width == null && size.height == null && size.position == null;
+    var renderPlaceholder = noSizeData && !disablePlaceholder;
+    var renderProps = {
+      className: className,
+      style: style
+    };
+
+    if (size != null) {
+      renderProps.size = size;
+    }
+
+    var toRender = renderPlaceholder ? React__default.createElement(Placeholder, {
+      className: className,
+      style: style
+    }) : React__default.createElement(WrappedComponent, _extends({}, renderProps, restProps));
+    return React__default.createElement(ReferenceWrapper, {
+      ref: explicitRef
+    }, toRender);
+  }
+
+  SizeMeRenderer.displayName = "SizeMeRenderer(".concat(getDisplayName(WrappedComponent), ")");
+  return SizeMeRenderer;
+};
+/**
+ * :: config -> Component -> WrappedComponent
+ *
+ * Higher order component that allows the wrapped component to become aware
+ * of it's size, by receiving it as an object within it's props.
+ *
+ * @param  monitorWidth
+ *   Default true, whether changes in the element's width should be monitored,
+ *   causing a size property to be broadcast.
+ * @param  monitorHeight
+ *   Default false, whether changes in the element's height should be monitored,
+ *   causing a size property to be broadcast.
+ *
+ * @return The wrapped component.
+ */
+
+
+function withSize() {
+  var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultConfig;
+  var _config$monitorWidth = config.monitorWidth,
+      monitorWidth = _config$monitorWidth === void 0 ? defaultConfig.monitorWidth : _config$monitorWidth,
+      _config$monitorHeight = config.monitorHeight,
+      monitorHeight = _config$monitorHeight === void 0 ? defaultConfig.monitorHeight : _config$monitorHeight,
+      _config$monitorPositi = config.monitorPosition,
+      monitorPosition = _config$monitorPositi === void 0 ? defaultConfig.monitorPosition : _config$monitorPositi,
+      _config$refreshRate = config.refreshRate,
+      refreshRate = _config$refreshRate === void 0 ? defaultConfig.refreshRate : _config$refreshRate,
+      _config$refreshMode = config.refreshMode,
+      refreshMode = _config$refreshMode === void 0 ? defaultConfig.refreshMode : _config$refreshMode,
+      _config$noPlaceholder = config.noPlaceholder,
+      noPlaceholder = _config$noPlaceholder === void 0 ? defaultConfig.noPlaceholder : _config$noPlaceholder,
+      _config$resizeDetecto = config.resizeDetectorStrategy,
+      resizeDetectorStrategy = _config$resizeDetecto === void 0 ? defaultConfig.resizeDetectorStrategy : _config$resizeDetecto;
+  invariant(monitorWidth || monitorHeight || monitorPosition, 'You have to monitor at least one of the width, height, or position when using "sizeMe"');
+  invariant(refreshRate >= 16, "It is highly recommended that you don't put your refreshRate lower than " + '16 as this may cause layout thrashing.');
+  invariant(refreshMode === 'throttle' || refreshMode === 'debounce', 'The refreshMode should have a value of "throttle" or "debounce"');
+  var refreshDelayStrategy = refreshMode === 'throttle' ? throttleDebounce.throttle : throttleDebounce.debounce;
+  return function WrapComponent(WrappedComponent) {
+    var SizeMeRenderWrapper = renderWrapper(WrappedComponent);
+
+    var SizeAwareComponent =
+    /*#__PURE__*/
+    function (_React$Component) {
+      _inherits(SizeAwareComponent, _React$Component);
+
+      function SizeAwareComponent() {
+        var _getPrototypeOf2;
+
+        var _this;
+
+        _classCallCheck(this, SizeAwareComponent);
+
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+
+        _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(SizeAwareComponent)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+        _defineProperty(_assertThisInitialized(_this), "domEl", null);
+
+        _defineProperty(_assertThisInitialized(_this), "state", {
+          width: undefined,
+          height: undefined,
+          position: undefined
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "uninstall", function () {
+          if (_this.domEl) {
+            try {
+              _this.detector.uninstall(_this.domEl);
+            } catch (err) {
+              // eslint-disable-next-line no-console
+              console.warn(errMsg);
+            }
+
+            _this.domEl = null;
+          }
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "determineStrategy", function (props) {
+          if (props.onSize) {
+            if (!_this.callbackState) {
+              _this.callbackState = _objectSpread2({}, _this.state);
+            }
+
+            _this.strategy = 'callback';
+          } else {
+            _this.strategy = 'render';
+          }
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "strategisedSetState", function (state) {
+          if (_this.strategy === 'callback') {
+            _this.callbackState = state;
+
+            _this.props.onSize(state);
+          }
+
+          _this.setState(state);
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "strategisedGetState", function () {
+          return _this.strategy === 'callback' ? _this.callbackState : _this.state;
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "refCallback", function (element) {
+          _this.element = element;
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "hasSizeChanged", function (current, next) {
+          var c = current;
+          var n = next;
+          var cp = c.position || {};
+          var np = n.position || {};
+          return monitorWidth && c.width !== n.width || monitorHeight && c.height !== n.height || monitorPosition && (cp.top !== np.top || cp.left !== np.left || cp.bottom !== np.bottom || cp.right !== np.right);
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "checkIfSizeChanged", refreshDelayStrategy(refreshRate, function (el) {
+          var _el$getBoundingClient = el.getBoundingClientRect(),
+              width = _el$getBoundingClient.width,
+              height = _el$getBoundingClient.height,
+              right = _el$getBoundingClient.right,
+              left = _el$getBoundingClient.left,
+              top = _el$getBoundingClient.top,
+              bottom = _el$getBoundingClient.bottom;
+
+          var next = {
+            width: monitorWidth ? width : null,
+            height: monitorHeight ? height : null,
+            position: monitorPosition ? {
+              right: right,
+              left: left,
+              top: top,
+              bottom: bottom
+            } : null
+          };
+
+          if (_this.hasSizeChanged(_this.strategisedGetState(), next)) {
+            _this.strategisedSetState(next);
+          }
+        }));
+
+        return _this;
+      }
+
+      _createClass(SizeAwareComponent, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+          this.detector = resizeDetector(resizeDetectorStrategy);
+          this.determineStrategy(this.props);
+          this.handleDOMNode();
+        }
+      }, {
+        key: "componentDidUpdate",
+        value: function componentDidUpdate() {
+          this.determineStrategy(this.props);
+          this.handleDOMNode();
+        }
+      }, {
+        key: "componentWillUnmount",
+        value: function componentWillUnmount() {
+          // Change our size checker to a noop just in case we have some
+          // late running events.
+          this.hasSizeChanged = function () {
+            return undefined;
+          };
+
+          this.checkIfSizeChanged = function () {
+            return undefined;
+          };
+
+          this.uninstall();
+        }
+      }, {
+        key: "handleDOMNode",
+        value: function handleDOMNode() {
+          var found = this.element && ReactDOM.findDOMNode(this.element);
+
+          if (!found) {
+            // If we previously had a dom node then we need to ensure that
+            // we remove any existing listeners to avoid memory leaks.
+            this.uninstall();
+            return;
+          }
+
+          if (!this.domEl) {
+            this.domEl = found;
+            this.detector.listenTo(this.domEl, this.checkIfSizeChanged);
+          } else if (this.domEl.isSameNode && !this.domEl.isSameNode(found) || this.domEl !== found) {
+            this.uninstall();
+            this.domEl = found;
+            this.detector.listenTo(this.domEl, this.checkIfSizeChanged);
+          }
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          var disablePlaceholder = withSize.enableSSRBehaviour || withSize.noPlaceholders || noPlaceholder || this.strategy === 'callback';
+
+          var size = _objectSpread2({}, this.state);
+
+          return React__default.createElement(SizeMeRenderWrapper, _extends({
+            explicitRef: this.refCallback,
+            size: this.strategy === 'callback' ? null : size,
+            disablePlaceholder: disablePlaceholder
+          }, this.props));
+        }
+      }]);
+
+      return SizeAwareComponent;
+    }(React__default.Component);
+
+    _defineProperty(SizeAwareComponent, "displayName", "SizeMe(".concat(getDisplayName(WrappedComponent), ")"));
+
+    SizeAwareComponent.WrappedComponent = WrappedComponent;
+    return SizeAwareComponent;
+  };
+}
+/**
+ * Allow SizeMe to run within SSR environments.  This is a "global" behaviour
+ * flag that should be set within the initialisation phase of your application.
+ *
+ * Warning: don't set this flag unless you need to as using it may cause
+ * extra render cycles to happen within your components depending on the logic
+ * contained within them around the usage of the `size` data.
+ *
+ * DEPRECATED: Please use the global noPlaceholders
+ */
+
+
+withSize.enableSSRBehaviour = false;
+/**
+ * Global configuration allowing to disable placeholder rendering for all
+ * sizeMe components.
+ */
+
+withSize.noPlaceholders = false;
+
+var SizeMe =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(SizeMe, _Component);
+
+  function SizeMe(props) {
+    var _this;
+
+    _classCallCheck(this, SizeMe);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SizeMe).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "createComponent", function (config) {
+      _this.SizeAware = withSize(config)(function (_ref) {
+        var children = _ref.children;
+        return children;
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onSize", function (size) {
+      return _this.setState({
+        size: size
+      });
+    });
+
+    var _children = props.children,
+        render = props.render,
+        sizeMeConfig = _objectWithoutProperties(props, ["children", "render"]);
+
+    _this.createComponent(sizeMeConfig);
+
+    _this.state = {
+      size: {
+        width: undefined,
+        height: undefined
+      }
+    };
+    return _this;
+  }
+
+  _createClass(SizeMe, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      var _this$props = this.props,
+          prevChildren = _this$props.children,
+          prevRender = _this$props.render,
+          currentSizeMeConfig = _objectWithoutProperties(_this$props, ["children", "render"]);
+
+      var nextChildren = prevProps.children,
+          nextRender = prevProps.render,
+          prevSizeMeConfig = _objectWithoutProperties(prevProps, ["children", "render"]);
+
+      if (!isShallowEqual(currentSizeMeConfig, prevSizeMeConfig)) {
+        this.createComponent(currentSizeMeConfig);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var SizeAware = this.SizeAware;
+      var render = this.props.children || this.props.render;
+      return React__default.createElement(SizeAware, {
+        onSize: this.onSize
+      }, render({
+        size: this.state.size
+      }));
+    }
+  }]);
+
+  return SizeMe;
+}(React.Component);
+
+_defineProperty(SizeMe, "defaultProps", {
+  children: undefined,
+  render: undefined
+});
+
+withSize.SizeMe = SizeMe;
+withSize.withSize = withSize;
+
+module.exports = withSize;
+//# sourceMappingURL=react-sizeme.js.map
+
 
 /***/ }),
 
@@ -42559,6 +45104,157 @@ function symbolObservablePonyfill(root) {
 
 /***/ }),
 
+/***/ "./node_modules/throttle-debounce/dist/index.esm.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/throttle-debounce/dist/index.esm.js ***!
+  \**********************************************************/
+/*! exports provided: throttle, debounce */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "throttle", function() { return throttle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "debounce", function() { return debounce; });
+/* eslint-disable no-undefined,no-param-reassign,no-shadow */
+
+/**
+ * Throttle execution of a function. Especially useful for rate limiting
+ * execution of handlers on events like resize and scroll.
+ *
+ * @param  {Number}    delay          A zero-or-greater delay in milliseconds. For event callbacks, values around 100 or 250 (or even higher) are most useful.
+ * @param  {Boolean}   [noTrailing]   Optional, defaults to false. If noTrailing is true, callback will only execute every `delay` milliseconds while the
+ *                                    throttled-function is being called. If noTrailing is false or unspecified, callback will be executed one final time
+ *                                    after the last throttled-function call. (After the throttled-function has not been called for `delay` milliseconds,
+ *                                    the internal counter is reset)
+ * @param  {Function}  callback       A function to be executed after delay milliseconds. The `this` context and all arguments are passed through, as-is,
+ *                                    to `callback` when the throttled-function is executed.
+ * @param  {Boolean}   [debounceMode] If `debounceMode` is true (at begin), schedule `clear` to execute after `delay` ms. If `debounceMode` is false (at end),
+ *                                    schedule `callback` to execute after `delay` ms.
+ *
+ * @return {Function}  A new, throttled, function.
+ */
+function throttle (delay, noTrailing, callback, debounceMode) {
+  /*
+   * After wrapper has stopped being called, this timeout ensures that
+   * `callback` is executed at the proper times in `throttle` and `end`
+   * debounce modes.
+   */
+  var timeoutID;
+  var cancelled = false; // Keep track of the last time `callback` was executed.
+
+  var lastExec = 0; // Function to clear existing timeout
+
+  function clearExistingTimeout() {
+    if (timeoutID) {
+      clearTimeout(timeoutID);
+    }
+  } // Function to cancel next exec
+
+
+  function cancel() {
+    clearExistingTimeout();
+    cancelled = true;
+  } // `noTrailing` defaults to falsy.
+
+
+  if (typeof noTrailing !== 'boolean') {
+    debounceMode = callback;
+    callback = noTrailing;
+    noTrailing = undefined;
+  }
+  /*
+   * The `wrapper` function encapsulates all of the throttling / debouncing
+   * functionality and when executed will limit the rate at which `callback`
+   * is executed.
+   */
+
+
+  function wrapper() {
+    var self = this;
+    var elapsed = Date.now() - lastExec;
+    var args = arguments;
+
+    if (cancelled) {
+      return;
+    } // Execute `callback` and update the `lastExec` timestamp.
+
+
+    function exec() {
+      lastExec = Date.now();
+      callback.apply(self, args);
+    }
+    /*
+     * If `debounceMode` is true (at begin) this is used to clear the flag
+     * to allow future `callback` executions.
+     */
+
+
+    function clear() {
+      timeoutID = undefined;
+    }
+
+    if (debounceMode && !timeoutID) {
+      /*
+       * Since `wrapper` is being called for the first time and
+       * `debounceMode` is true (at begin), execute `callback`.
+       */
+      exec();
+    }
+
+    clearExistingTimeout();
+
+    if (debounceMode === undefined && elapsed > delay) {
+      /*
+       * In throttle mode, if `delay` time has been exceeded, execute
+       * `callback`.
+       */
+      exec();
+    } else if (noTrailing !== true) {
+      /*
+       * In trailing throttle mode, since `delay` time has not been
+       * exceeded, schedule `callback` to execute `delay` ms after most
+       * recent execution.
+       *
+       * If `debounceMode` is true (at begin), schedule `clear` to execute
+       * after `delay` ms.
+       *
+       * If `debounceMode` is false (at end), schedule `callback` to
+       * execute after `delay` ms.
+       */
+      timeoutID = setTimeout(debounceMode ? clear : exec, debounceMode === undefined ? delay - elapsed : delay);
+    }
+  }
+
+  wrapper.cancel = cancel; // Return the wrapper function.
+
+  return wrapper;
+}
+
+/* eslint-disable no-undefined */
+/**
+ * Debounce execution of a function. Debouncing, unlike throttling,
+ * guarantees that a function is only executed a single time, either at the
+ * very beginning of a series of calls, or at the very end.
+ *
+ * @param  {Number}   delay         A zero-or-greater delay in milliseconds. For event callbacks, values around 100 or 250 (or even higher) are most useful.
+ * @param  {Boolean}  [atBegin]     Optional, defaults to false. If atBegin is false or unspecified, callback will only be executed `delay` milliseconds
+ *                                  after the last debounced-function call. If atBegin is true, callback will be executed only at the first debounced-function call.
+ *                                  (After the throttled-function has not been called for `delay` milliseconds, the internal counter is reset).
+ * @param  {Function} callback      A function to be executed after delay milliseconds. The `this` context and all arguments are passed through, as-is,
+ *                                  to `callback` when the debounced-function is executed.
+ *
+ * @return {Function} A new, debounced function.
+ */
+
+function debounce (delay, atBegin, callback) {
+  return callback === undefined ? throttle(delay, atBegin, false) : throttle(delay, callback, atBegin !== false);
+}
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/ts-invariant/lib/invariant.esm.js":
 /*!********************************************************!*\
   !*** ./node_modules/ts-invariant/lib/invariant.esm.js ***!
@@ -43940,8 +46636,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizeme */ "./node_modules/react-sizeme/dist/react-sizeme.js");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -44003,17 +46699,6 @@ var renderContent = function renderContent(data, number) {
   }
 
   return content;
-};
-
-var mapSizesToProps = function mapSizesToProps(_ref) {
-  var width = _ref.width;
-  return {
-    isMobile: width < 767,
-    isTablet: width > 767 && width < 1023,
-    isLaptop: width > 1023 && width < 1279,
-    isDesktop: width > 1279 && width < 1529,
-    isLargeDesktop: width > 1529
-  };
 }; // interface Experience {
 //   id: string;
 //   title: string;
@@ -44028,17 +46713,14 @@ var mapSizesToProps = function mapSizesToProps(_ref) {
 // }
 
 
-var NextWeek = function NextWeek(_ref2) {
-  var isMobile = _ref2.isMobile,
-      isTablet = _ref2.isTablet,
-      isLaptop = _ref2.isLaptop,
-      isDesktop = _ref2.isDesktop,
-      isLargeDesktop = _ref2.isLargeDesktop;
+var NextWeek = function NextWeek(_ref) {
+  var size = _ref.size,
+      location = _ref.location;
 
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Next Week',
-      location: 'Vancouver'
+      location: location
     }
   }),
       loading = _useQuery.loading,
@@ -44051,34 +46733,34 @@ var NextWeek = function NextWeek(_ref2) {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 84
     },
     __self: this
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 88
     },
     __self: this
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(6) : null) : data && __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 103
     },
     __self: this
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 119
     },
     __self: this
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(NextWeek));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_sizeme__WEBPACK_IMPORTED_MODULE_5__["withSize"])()(NextWeek));
 
 /***/ }),
 
@@ -44181,8 +46863,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizeme */ "./node_modules/react-sizeme/dist/react-sizeme.js");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_StayCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../functions/StayCard */ "./src/components/functions/StayCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -44229,17 +46911,6 @@ var GET_STAYS = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templa
 //   picture_url: string;
 // }
 
-var mapSizesToProps = function mapSizesToProps(_ref) {
-  var width = _ref.width;
-  return {
-    isMobile: width < 767,
-    isTablet: width > 767 && width < 1023,
-    isLaptop: width > 1023 && width < 1279,
-    isDesktop: width > 1279 && width < 1529,
-    isLargeDesktop: width > 1529
-  };
-};
-
 var renderContent = function renderContent(data, number) {
   var content = [];
 
@@ -44248,7 +46919,7 @@ var renderContent = function renderContent(data, number) {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 51
       },
       __self: this
     }, __jsx(_functions_StayCard__WEBPACK_IMPORTED_MODULE_7__["StayCard"], {
@@ -44262,7 +46933,7 @@ var renderContent = function renderContent(data, number) {
       picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 52
       },
       __self: this
     })));
@@ -44271,12 +46942,8 @@ var renderContent = function renderContent(data, number) {
   return content;
 };
 
-var Stay = function Stay(_ref2) {
-  var isMobile = _ref2.isMobile,
-      isTablet = _ref2.isTablet,
-      isLaptop = _ref2.isLaptop,
-      isDesktop = _ref2.isDesktop,
-      isLargeDesktop = _ref2.isLargeDesktop;
+var Stay = function Stay(_ref) {
+  var size = _ref.size;
 
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_STAYS),
       loading = _useQuery.loading,
@@ -44288,34 +46955,34 @@ var Stay = function Stay(_ref2) {
     title: "Places to stay around the world",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 74
     },
     __self: this
   }, loading ? __jsx("div", {
-    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full h-128",
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 76
     },
     __self: this
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonHorizontal"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonHorizontal"])(4, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonHorizontal"])(6, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonHorizontal"])(8, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonHorizontal"])(8, true) : null) : data && __jsx("div", {
-    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full",
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonHorizontal"])(4, true) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonHorizontal"])(3, true) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonHorizontal"])(8, true) : null) : data && __jsx("div", {
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 91
     },
     __self: this
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 4) : null, isLaptop ? renderContent(data, 6) : null, isDesktop ? renderContent(data, 8) : null, isLargeDesktop ? renderContent(data, 8) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 6) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 6) : null, size.width >= 1529 ? renderContent(data, 8) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
     title: "Show(2000+)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 107
     },
     __self: this
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(Stay));
+/* harmony default export */ __webpack_exports__["default"] = (react_sizeme__WEBPACK_IMPORTED_MODULE_5___default()()(Stay));
 
 /***/ }),
 
@@ -44335,8 +47002,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizeme */ "./node_modules/react-sizeme/dist/react-sizeme.js");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -44358,6 +47025,7 @@ function _templateObject() {
 
 
 
+ // import withSizes from 'react-sizes';
 
  // Utils
 
@@ -44369,17 +47037,6 @@ function _templateObject() {
 
 var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
 
-var mapSizesToProps = function mapSizesToProps(_ref) {
-  var width = _ref.width;
-  return {
-    isMobile: width < 767,
-    isTablet: width > 767 && width < 1023,
-    isLaptop: width > 1023 && width < 1279,
-    isDesktop: width > 1279 && width < 1529,
-    isLargeDesktop: width > 1529
-  };
-};
-
 var renderContent = function renderContent(data, number) {
   var content = [];
 
@@ -44388,7 +47045,7 @@ var renderContent = function renderContent(data, number) {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 42
       },
       __self: this
     }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_7__["LocationExperienceCard"], {
@@ -44402,7 +47059,7 @@ var renderContent = function renderContent(data, number) {
       category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 43
       },
       __self: this
     })));
@@ -44423,17 +47080,14 @@ var renderContent = function renderContent(data, number) {
 // }
 
 
-var Today = function Today(_ref2) {
-  var isMobile = _ref2.isMobile,
-      isTablet = _ref2.isTablet,
-      isLaptop = _ref2.isLaptop,
-      isDesktop = _ref2.isDesktop,
-      isLargeDesktop = _ref2.isLargeDesktop;
+var Today = function Today(_ref) {
+  var size = _ref.size,
+      location = _ref.location;
 
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Today',
-      location: 'Vancouver'
+      location: location
     }
   }),
       loading = _useQuery.loading,
@@ -44446,34 +47100,34 @@ var Today = function Today(_ref2) {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 85
     },
     __self: this
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 89
     },
     __self: this
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(6) : null) : __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 103
     },
     __self: this
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 118
     },
     __self: this
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(Today));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_sizeme__WEBPACK_IMPORTED_MODULE_5__["withSize"])()(Today));
 
 /***/ }),
 
@@ -44491,14 +47145,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/react-hooks */ "./node_modules/@apollo/react-hooks/lib/react-hooks.esm.js");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
-/* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-sizeme */ "./node_modules/react-sizeme/dist/react-sizeme.js");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
+/* harmony import */ var _functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../functions/LocationExperienceCard */ "./src/components/functions/LocationExperienceCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+/* harmony import */ var _wrapper_Section__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../wrapper/Section */ "./src/components/wrapper/Section.tsx");
 
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/Tomorrow.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
@@ -44516,7 +47168,6 @@ function _templateObject() {
 
 
 
-
  // Utils
 
  // Components
@@ -44525,18 +47176,7 @@ function _templateObject() {
  // Wrapper
 
 
-var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
-
-var mapSizesToProps = function mapSizesToProps(_ref) {
-  var width = _ref.width;
-  return {
-    isMobile: width < 767,
-    isTablet: width > 767 && width < 1023,
-    isLaptop: width > 1023 && width < 1279,
-    isDesktop: width > 1279 && width < 1529,
-    isLargeDesktop: width > 1529
-  };
-}; // interface Experience {
+var GET_LOCATION_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject()); // interface Experience {
 //   id: string;
 //   title: string;
 //   cost: number;
@@ -44549,7 +47189,6 @@ var mapSizesToProps = function mapSizesToProps(_ref) {
 //   experiences: Experience[];
 // }
 
-
 var renderContent = function renderContent(data, number) {
   var content = [];
 
@@ -44558,10 +47197,10 @@ var renderContent = function renderContent(data, number) {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 54
       },
       __self: this
-    }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_7__["LocationExperienceCard"], {
+    }, __jsx(_functions_LocationExperienceCard__WEBPACK_IMPORTED_MODULE_6__["LocationExperienceCard"], {
       key: i,
       id: data === null || data === void 0 ? void 0 : data.experiences[i].id,
       img: data === null || data === void 0 ? void 0 : data.experiences[i].img,
@@ -44572,7 +47211,7 @@ var renderContent = function renderContent(data, number) {
       category: data === null || data === void 0 ? void 0 : data.experiences[i].category,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 55
       },
       __self: this
     })));
@@ -44581,17 +47220,14 @@ var renderContent = function renderContent(data, number) {
   return content;
 };
 
-var Tomorrow = function Tomorrow(_ref2) {
-  var isMobile = _ref2.isMobile,
-      isTablet = _ref2.isTablet,
-      isLaptop = _ref2.isLaptop,
-      isDesktop = _ref2.isDesktop,
-      isLargeDesktop = _ref2.isLargeDesktop;
+var Tomorrow = function Tomorrow(_ref) {
+  var size = _ref.size,
+      location = _ref.location;
 
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Tomorrow',
-      location: 'Vancouver'
+      location: location
     }
   }),
       loading = _useQuery.loading,
@@ -44599,39 +47235,39 @@ var Tomorrow = function Tomorrow(_ref2) {
       data = _useQuery.data;
 
   if (error) return "Error! ".concat(error.message);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_9__["Section"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx(_wrapper_Section__WEBPACK_IMPORTED_MODULE_8__["Section"], {
     title: "Tomorrow in Vancouver",
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 83
     },
     __self: this
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
+    },
+    __self: this
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonVertical"])(6) : null) : data && __jsx("div", {
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 102
     },
     __self: this
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: this
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 117
     },
     __self: this
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(Tomorrow));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_sizeme__WEBPACK_IMPORTED_MODULE_4__["withSize"])()(Tomorrow));
 
 /***/ }),
 
@@ -44652,8 +47288,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apollo-boost */ "./node_modules/apollo-boost/lib/bundle.esm.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-spinners/PulseLoader */ "./node_modules/react-spinners/PulseLoader.js");
 /* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizes */ "./node_modules/react-sizes/dist/react-sizes.min.js");
-/* harmony import */ var react_sizes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizes__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-sizeme */ "./node_modules/react-sizeme/dist/react-sizeme.js");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
 /* harmony import */ var _functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../functions/TopRatedCard */ "./src/components/functions/TopRatedCard.tsx");
 /* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
@@ -44686,17 +47322,6 @@ function _templateObject() {
 
 var GET_EXPERIENCES = Object(apollo_boost__WEBPACK_IMPORTED_MODULE_3__["gql"])(_templateObject());
 
-var mapSizesToProps = function mapSizesToProps(_ref) {
-  var width = _ref.width;
-  return {
-    isMobile: width < 767,
-    isTablet: width > 767 && width < 1023,
-    isLaptop: width > 1023 && width < 1279,
-    isDesktop: width > 1279 && width < 1529,
-    isLargeDesktop: width > 1529
-  };
-};
-
 var renderContent = function renderContent(data, number) {
   var content = [];
 
@@ -44705,7 +47330,7 @@ var renderContent = function renderContent(data, number) {
       className: "pb-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 36
       },
       __self: this
     }, __jsx(_functions_TopRatedCard__WEBPACK_IMPORTED_MODULE_7__["TopRatedCard"], {
@@ -44719,7 +47344,7 @@ var renderContent = function renderContent(data, number) {
       location: data === null || data === void 0 ? void 0 : data.experiences[i].location,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 37
       },
       __self: this
     })));
@@ -44740,12 +47365,8 @@ var renderContent = function renderContent(data, number) {
 // }
 
 
-var TopRated = function TopRated(_ref2) {
-  var isMobile = _ref2.isMobile,
-      isTablet = _ref2.isTablet,
-      isLaptop = _ref2.isLaptop,
-      isDesktop = _ref2.isDesktop,
-      isLargeDesktop = _ref2.isLargeDesktop;
+var TopRated = function TopRated(_ref) {
+  var size = _ref.size;
 
   var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_2__["useQuery"])(GET_EXPERIENCES),
       loading = _useQuery.loading,
@@ -44758,33 +47379,33 @@ var TopRated = function TopRated(_ref2) {
     phrase: "Book activities led by local hosts on your next trip.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 74
     },
     __self: this
   }, loading ? __jsx("div", {
-    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88",
+    className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 78
     },
     __self: this
-  }, isMobile ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isTablet ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(3, true) : null, isLaptop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(4, true) : null, isDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(5, true) : null, isLargeDesktop ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["RenderSkeletonVertical"])(6, true) : null) : data && __jsx("div", {
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(4) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(3) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(4) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(5) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_6__["renderSkeletonVertical"])(6) : null) : data && __jsx("div", {
     className: "grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 93
     },
     __self: this
-  }, isMobile ? renderContent(data, 4) : null, isTablet ? renderContent(data, 3) : null, isLaptop ? renderContent(data, 4) : null, isDesktop ? renderContent(data, 5) : null, isLargeDesktop ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 4) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 5) : null, size.width >= 1529 ? renderContent(data, 6) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_8__["ShowAll"], {
     title: "Show all experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 109
     },
     __self: this
   })));
 };
-/* harmony default export */ __webpack_exports__["default"] = (react_sizes__WEBPACK_IMPORTED_MODULE_5___default()(mapSizesToProps)(TopRated));
+/* harmony default export */ __webpack_exports__["default"] = (react_sizeme__WEBPACK_IMPORTED_MODULE_5___default()()(TopRated));
 
 /***/ }),
 
@@ -45763,7 +48384,7 @@ var PlusCard = function PlusCard(_ref) {
     },
     __self: this
   }, loading ? __jsx("div", {
-    className: "w-full mr-3 mb-3 rounded mb-16 h-80",
+    className: "w-full mr-3 mb-3 rounded mb-16 h-64",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -51863,7 +54484,7 @@ var Section = function Section(_ref) {
   };
 
   return __jsx("div", {
-    className: "px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto py-5 w-full",
+    className: "px-6 md:px-8 lg:px-10 xl:px-0 xl:max-w-8xl mx-auto py-5 w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -51933,7 +54554,7 @@ var SectionOverflow = function SectionOverflow(_ref) {
   }
 
   return __jsx("div", {
-    className: "px-6 md:px-8 lg:px-10 xl:px-20 xl:max-w-layout mx-auto py-5 overflow-x-hidden overflow-y-hidden",
+    className: "px-6 md:px-8 lg:px-10 xl:px-0 xl:max-w-8xl mx-auto py-5 overflow-x-hidden overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -52019,18 +54640,21 @@ var Home = function Home() {
     },
     __self: this
   }), __jsx(_components_containers_Today__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    location: "Vancouver",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37
     },
     __self: this
   }), __jsx(_components_containers_Tomorrow__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    location: "Vancouver",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: this
   }), __jsx(_components_containers_NextWeek__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    location: "Vancouver",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
@@ -52208,142 +54832,116 @@ var calculateInfants = function calculateInfants(adultNumber, infantNumber) {
 /*!************************************!*\
   !*** ./src/util/RenderSkeleton.js ***!
   \************************************/
-/*! exports provided: RenderSkeletonVertical, RenderSkeletonHorizontal */
+/*! exports provided: renderSkeletonVertical, renderSkeletonHorizontal, renderSkeletonThreeColumn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderSkeletonVertical", function() { return RenderSkeletonVertical; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderSkeletonHorizontal", function() { return RenderSkeletonHorizontal; });
-/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonVertical", function() { return renderSkeletonVertical; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonHorizontal", function() { return renderSkeletonHorizontal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonThreeColumn", function() { return renderSkeletonThreeColumn; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/util/RenderSkeleton.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function _templateObject3() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border-radius: 0.8rem;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border-radius: 0.3rem;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: inline-block;\n  height: 100%;\n  width: 100%;\n  background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);\n  background-size: 400% 400%;\n  animation: pulse 1.2s ease-in-out infinite;\n  @keyframes pulse {\n    0% {\n      background-position: 0% 0%;\n    }\n    100% {\n      background-position: -135% 0%;\n    }\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var RenderSkeletonVertical = function RenderSkeletonVertical(number, withLine) {
+var renderSkeletonVertical = function renderSkeletonVertical(number) {
   var content = [];
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-full mr-3 mb-3 rounded mb-16",
+      className: "w-full mr-3 mb-3 rounded h-64 md:h-104 py-8",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 8
       },
       __self: this
-    }, __jsx(SSkeletonPulseVertical, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 9
       },
       __self: this
-    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
+    }), __jsx("div", {
       className: "w-full mb-3 h-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 10
       },
       __self: this
-    }, __jsx(SSkeletonPulseVertical, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    })), __jsx("div", {
+      className: "w-80p h-4",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13
       },
       __self: this
-    })), __jsx("div", {
-      className: "w-80p h-4",
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 14
       },
       __self: this
-    }, __jsx(SSkeletonPulseVertical, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: this
-    }))) : null));
+    }))));
   }
 
   return content;
 };
-var RenderSkeletonHorizontal = function RenderSkeletonHorizontal(number, withLine) {
+var renderSkeletonHorizontal = function renderSkeletonHorizontal(number, withLine) {
   var content = [];
 
   for (var i = 0; i < number; i++) {
     content.push(__jsx("div", {
-      className: "w-full mr-3 mb-3 rounded mb-16",
+      className: "w-full mr-3 mb-3 rounded h-24 mb-16 md:h-40 lg:h-48 xl:h-56",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+      className: "w-full mb-3 h-4",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 31
       },
       __self: this
-    }, __jsx(SSkeletonPulseHorizontal, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 32
-      },
-      __self: this
-    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
-      className: "w-full mb-3 h-4",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 35
-      },
-      __self: this
-    }, __jsx(SSkeletonPulseHorizontal, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 36
       },
       __self: this
     })), __jsx("div", {
       className: "w-80p h-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 34
       },
       __self: this
-    }, __jsx(SSkeletonPulseHorizontal, {
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 35
       },
       __self: this
     }))) : null));
@@ -52351,9 +54949,57 @@ var RenderSkeletonHorizontal = function RenderSkeletonHorizontal(number, withLin
 
   return content;
 };
-var SSkeletonPulse = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
-var SSkeletonPulseVertical = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(SSkeletonPulse)(_templateObject2());
-var SSkeletonPulseHorizontal = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(SSkeletonPulse)(_templateObject3());
+var renderSkeletonThreeColumn = function renderSkeletonThreeColumn(number, withLine) {
+  var content = [];
+
+  for (var i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-full mr-3 mb-3 rounded h-48 md:h-56 lg:h-64",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+      className: "w-full mb-3 h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    })), __jsx("div", {
+      className: "w-80p h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    }))) : null));
+  }
+
+  return content;
+};
 
 /***/ }),
 

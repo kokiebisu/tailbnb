@@ -34,9 +34,9 @@ const Home: NextPage<{}> = () => {
       ) : null}
       <Explore />
       <Plus />
-      <Today />
-      <Tomorrow />
-      <NextWeek />
+      <Today location='Vancouver' />
+      <Tomorrow location='Vancouver' />
+      <NextWeek location='Vancouver' />
       <TopRated />
       <Stay />
       <div className='py-32'>

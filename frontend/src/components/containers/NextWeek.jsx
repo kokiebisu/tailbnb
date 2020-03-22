@@ -2,10 +2,10 @@ import * as React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
-import withSizes from 'react-sizes';
+import { withSize } from 'react-sizeme';
 
 // Utils
-import { RenderSkeletonVertical } from '../../util/RenderSkeleton';
+import { renderSkeletonVertical } from '../../util/RenderSkeleton';
 
 // Components
 import { LocationExperienceCard } from '../functions/LocationExperienceCard';
@@ -55,14 +55,6 @@ const renderContent = (data, number) => {
   return content;
 };
 
-const mapSizesToProps = ({ width }) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-});
-
 // interface Experience {
 //   id: string;
 //   title: string;
@@ -77,17 +69,11 @@ const mapSizesToProps = ({ width }) => ({
 //   experiences: Experience[];
 // }
 
-const NextWeek = ({
-  isMobile,
-  isTablet,
-  isLaptop,
-  isDesktop,
-  isLargeDesktop
-}) => {
+const NextWeek = ({ size, location }) => {
   const { loading, error, data } = useQuery(GET_LOCATION_EXPERIENCES, {
     variables: {
       available: 'Next Week',
-      location: 'Vancouver'
+      location: location
     }
   });
 
@@ -99,21 +85,33 @@ const NextWeek = ({
         title='Next Week in Vancouver'
         phrase='Book activities led by local hosts on your next trip.'>
         {loading ? (
-          <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full h-88'>
-            {isMobile ? RenderSkeletonVertical(4, true) : null}
-            {isTablet ? RenderSkeletonVertical(3, true) : null}
-            {isLaptop ? RenderSkeletonVertical(4, true) : null}
-            {isDesktop ? RenderSkeletonVertical(5, true) : null}
-            {isLargeDesktop ? RenderSkeletonVertical(6, true) : null}
+          <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full mb-24'>
+            {size.width < 767 ? renderSkeletonVertical(4) : null}
+            {size.width >= 767 && size.width < 1023
+              ? renderSkeletonVertical(3)
+              : null}
+            {size.width >= 1023 && size.width < 1279
+              ? renderSkeletonVertical(4)
+              : null}
+            {size.width >= 1279 && size.width < 1529
+              ? renderSkeletonVertical(5)
+              : null}
+            {size.width >= 1529 ? renderSkeletonVertical(6) : null}
           </div>
         ) : (
           data && (
             <div className='grid gap-3 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
-              {isMobile ? renderContent(data, 4) : null}
-              {isTablet ? renderContent(data, 3) : null}
-              {isLaptop ? renderContent(data, 4) : null}
-              {isDesktop ? renderContent(data, 5) : null}
-              {isLargeDesktop ? renderContent(data, 6) : null}
+              {size.width < 767 ? renderContent(data, 4) : null}
+              {size.width >= 767 && size.width < 1023
+                ? renderContent(data, 3)
+                : null}
+              {size.width >= 1023 && size.width < 1279
+                ? renderContent(data, 4)
+                : null}
+              {size.width >= 1279 && size.width < 1529
+                ? renderContent(data, 5)
+                : null}
+              {size.width >= 1529 ? renderContent(data, 6) : null}
             </div>
           )
         )}
@@ -124,4 +122,4 @@ const NextWeek = ({
   );
 };
 
-export default withSizes(mapSizesToProps)(NextWeek);
+export default withSize()(NextWeek);

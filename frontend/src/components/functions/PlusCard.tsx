@@ -10,7 +10,7 @@ export const PlusCard: React.FC<Prop> = ({ img, loading }) => {
     <>
       <div className='w-full cursor pointer relative'>
         {loading ? (
-          <div className='w-full mr-3 mb-3 rounded mb-16 h-80'>
+          <div className='w-full mr-3 mb-3 rounded mb-16 h-64'>
             <div id='skeleton-pulse--horizontal' />
           </div>
         ) : (
