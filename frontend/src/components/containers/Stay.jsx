@@ -2,10 +2,10 @@ import * as React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import PulseLoader from 'react-spinners/PulseLoader';
-import withSizes from 'react-sizes';
+import withSize from 'react-sizeme';
 
 // Utils
-import { RenderSkeletonHorizontal } from '../../util/RenderSkeleton';
+import { renderSkeletonHorizontal } from '../../util/RenderSkeleton';
 
 // Component
 import { StayCard } from '../functions/StayCard';
@@ -43,14 +43,6 @@ const GET_STAYS = gql`
 //   picture_url: string;
 // }
 
-const mapSizesToProps = ({ width }) => ({
-  isMobile: width < 767,
-  isTablet: width > 767 && width < 1023,
-  isLaptop: width > 1023 && width < 1279,
-  isDesktop: width > 1279 && width < 1529,
-  isLargeDesktop: width > 1529
-});
-
 const renderContent = (data, number) => {
   var content = [];
 
@@ -73,30 +65,41 @@ const renderContent = (data, number) => {
   return content;
 };
 
-const Stay = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
+const Stay = ({ size }) => {
   const { loading, error, data } = useQuery(GET_STAYS);
 
   if (error) return `Error! ${error.message}`;
-
   return (
     <>
       <Section title='Places to stay around the world'>
         {loading ? (
-          <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full h-128'>
-            {isMobile ? RenderSkeletonHorizontal(4) : null}
-            {isTablet ? RenderSkeletonHorizontal(4) : null}
-            {isLaptop ? RenderSkeletonHorizontal(6) : null}
-            {isDesktop ? RenderSkeletonHorizontal(8) : null}
-            {isLargeDesktop ? RenderSkeletonHorizontal(8) : null}
+          <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
+            {size.width < 767 ? renderSkeletonHorizontal(4, true) : null}
+            {size.width >= 767 && size.width < 1023
+              ? renderSkeletonHorizontal(3, true)
+              : null}
+            {size.width >= 1023 && size.width < 1279
+              ? renderSkeletonHorizontal(6, true)
+              : null}
+            {size.width >= 1279 && size.width < 1529
+              ? renderSkeletonHorizontal(6, true)
+              : null}
+            {size.width >= 1529 ? renderSkeletonHorizontal(8, true) : null}
           </div>
         ) : (
           data && (
-            <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-4 grid-cols-2 w-full'>
-              {isMobile ? renderContent(data, 4) : null}
-              {isTablet ? renderContent(data, 4) : null}
-              {isLaptop ? renderContent(data, 6) : null}
-              {isDesktop ? renderContent(data, 8) : null}
-              {isLargeDesktop ? renderContent(data, 8) : null}
+            <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
+              {size.width < 767 ? renderContent(data, 4) : null}
+              {size.width >= 767 && size.width < 1023
+                ? renderContent(data, 3)
+                : null}
+              {size.width >= 1023 && size.width < 1279
+                ? renderContent(data, 6)
+                : null}
+              {size.width >= 1279 && size.width < 1529
+                ? renderContent(data, 6)
+                : null}
+              {size.width >= 1529 ? renderContent(data, 8) : null}
             </div>
           )
         )}
@@ -107,4 +110,4 @@ const Stay = ({ isMobile, isTablet, isLaptop, isDesktop, isLargeDesktop }) => {
   );
 };
 
-export default withSizes(mapSizesToProps)(Stay);
+export default withSize()(Stay);

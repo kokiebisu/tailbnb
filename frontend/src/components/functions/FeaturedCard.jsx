@@ -87,19 +87,17 @@ export const FeaturedCard = ({
   color
 }) => {
   return (
-    <div className='min-w-small md:min-w-medium lg:min-w-large mr-4'>
+    <div className=''>
       <div className='w-full'>
         <div className='relative'>
-          <div>
+          <div className='w-85v md:w-100'>
             <img
               className='w-full h-full rounded-xl'
               src={img}
               alt='adventure1'
             />
           </div>
-          <div
-            style={{ top: 70, left: '50%', transform: 'translate(-50%, -50%)' }}
-            className='absolute mx-auto flex'>
+          <div id='plus-logo' className='mx-auto flex'>
             <div className='w-20'>
               <svg
                 className='w-full h-full'
@@ -109,13 +107,7 @@ export const FeaturedCard = ({
               </svg>
             </div>
           </div>
-          <div
-            style={{
-              top: 130,
-              left: '50%',
-              transform: 'translate(-50%, -50%)'
-            }}
-            className='absolute mx-auto'>
+          <div id='plus-location' className='mx-auto'>
             <div className='relative'>
               <div style={{ left: 40 }} className='flex flex-col items-center'>
                 <div className=''>

@@ -4,7 +4,7 @@ import * as React from 'react';
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import { HeaderCategory } from '../../components/layout/HeaderCategory';
 import { Popular } from '../../components/containers/Popular';
-import { Featured } from '../../components/containers/Featured';
+import Featured from '../../components/containers/Featured';
 import { ThreeColumn } from '../../components/containers/ThreeColumn';
 import Adventures from '../../components/containers/Adventures';
 
@@ -68,7 +68,7 @@ const newyorkContent = [
 const two = () => {
   return (
     <>
-      <ExploreHeader white={true} placeholder='Try "Barcelona"' />
+      {/* <ExploreHeader white={true} placeholder='Try "Barcelona"' /> */}
       <HeaderCategory dates={true} guests={true} />
       <Popular />
       <Adventures />
