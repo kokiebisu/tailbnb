@@ -12,7 +12,7 @@ import { ShowAll } from '../ShowAll';
 import { Section } from '../wrapper/Section';
 
 const GET_LOCATION_EXPERIENCES = gql`
-  query LocationExperiences($available: String, $location: String) {
+  query LocationExperiences($location: String) {
     experiences(where: { location: $location }, first: 6) {
       id
       title

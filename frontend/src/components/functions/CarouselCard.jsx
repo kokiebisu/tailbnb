@@ -10,9 +10,11 @@ export const CarouselCard = ({ bg, featured1, featured2, featured3 }) => {
       <div className={`mr-4`}>
         <FeaturedCard {...featured2} />
       </div>
-      <div className={`mr-4`}>
-        <FeaturedCard {...featured3} />
-      </div>
+      {featured3 && (
+        <div className={`mr-4`}>
+          <FeaturedCard {...featured3} />
+        </div>
+      )}
     </>
   );
 };

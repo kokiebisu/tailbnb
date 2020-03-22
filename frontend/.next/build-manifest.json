@@ -28,7 +28,19 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/page/2": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/page/3": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/page/4": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
