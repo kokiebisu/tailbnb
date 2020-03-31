@@ -1,13 +1,18 @@
 import * as React from 'react';
+import { useState } from 'react';
 
-export const OptionModal = () => {
+export const OptionModal = ({
+  switchLanguageModal,
+  switchCurrencyModal,
+  currency
+}) => {
   return (
     <>
       <div className='rounded-xl hidden bg-white md:block'>
         <div className='pl-4 pr-16 py-2'>
           <div>
             <button
-              onClick={() => switchOptionModal()}
+              onClick={switchLanguageModal}
               className='py-3 px-1 rounded-full flex items-center'>
               <div className='flex items-center justify-start text-sm'>
                 <div className='w-4'>
@@ -28,17 +33,20 @@ export const OptionModal = () => {
               </div>
             </button>
           </div>
-          <div
-            style={{ fontFamily: 'airbnb-medium' }}
-            className='py-3 px-1 flex items-center'>
-            <div className='w-4 flex justify-center'>
-              <p>$</p>
-            </div>
-            <div className='ml-3'>
-              <p style={{ fontFamily: 'airbnb-medium' }} className='text-sm'>
-                CAD
-              </p>
-            </div>
+          <div>
+            <button
+              onClick={switchCurrencyModal}
+              className='py-3 px-1 flex items-center'
+              style={{ fontFamily: 'airbnb-medium' }}>
+              <div className='w-4 flex justify-center'>
+                <p>{currency.sign}</p>
+              </div>
+              <div className='ml-3'>
+                <p style={{ fontFamily: 'airbnb-medium' }} className='text-sm'>
+                  {currency.name}
+                </p>
+              </div>
+            </button>
           </div>
         </div>
       </div>

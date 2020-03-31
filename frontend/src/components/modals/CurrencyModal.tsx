@@ -8,7 +8,12 @@ const currencies = JSON.parse(JSON.stringify(data));
 interface Props {
   location: string;
   setCurrencyModal: (boolean: boolean) => void;
-  setCurrency: (currency: string) => void;
+  setCurrency: (currency: CurrencyObject) => void;
+}
+
+interface CurrencyObject {
+  name: string;
+  sign: string;
 }
 
 interface Currency {
@@ -48,7 +53,6 @@ export const CurrencyModal: React.FC<Props> = ({
 
   return (
     <>
-      {' '}
       <div
         id='darkOverlay'
         className='fixed w-full h-full top-0 left-0 z-20 overflow-hidden'
@@ -117,9 +121,10 @@ export const CurrencyModal: React.FC<Props> = ({
                     <button
                       onClick={() => {
                         setSelectedCountry(currency);
-                        setCurrency(
-                          `${currency.symbol} ${currency.abbreviation}`
-                        );
+                        setCurrency({
+                          name: `${currency.symbol}`,
+                          sign: `${currency.abbreviation}`
+                        });
                         refreshPage();
                         // Query to change currency
                       }}
