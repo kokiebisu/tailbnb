@@ -8,7 +8,8 @@ import { HeaderCard } from '../functions/HeaderCard';
 import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
 // import { CurrencyModal } from '../modals/CurrencyModal';
-import { LanguageModal } from '../modals/LanguageModal';
+// import { LanguageModal } from '../modals/LanguageModal';
+import { OptionModal } from '../modals/OptionModal.jsx';
 
 // Images
 const background = require('../../../public/img/high/airbnb-background.jpg');
@@ -18,16 +19,17 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({ switchMenuModal }) => {
-  const [languageModal, setLanguageModal] = useState(false);
+  // const [languageModal, setLanguageModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
   const [helpModal, setHelpModal] = useState(false);
+  const [optionModal, setOptionModal] = useState(false);
   // const [currencyModal, setCurrencyModal] = useState(false);
   // const [currency, setCurrency] = useState('$ CAD');
   const [type, setType] = useState('');
 
-  const switchLanguageModal = () => {
-    setLanguageModal(!languageModal);
-  };
+  // const switchLanguageModal = () => {
+  //   setLanguageModal(!languageModal);
+  // };
 
   const switchRegisterModal = () => {
     setRegisterModal(!registerModal);
@@ -35,6 +37,10 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
 
   const switchHelpModal = () => {
     setHelpModal(!helpModal);
+  };
+
+  const switchOptionModal = () => {
+    setOptionModal(!optionModal);
   };
 
   // const switchCurrencyModal = () => {
@@ -113,17 +119,15 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
             </button>
           </div>
 
-          <div className='hidden lg:block'>
+          <div className='hidden lg:block relative'>
             <nav
               style={{ fontFamily: 'airbnb-medium' }}
               className='flex items-center justify-around flex-wrap text-white'>
               <NavItem>
                 <button
-                  onClick={() => switchLanguageModal()}
+                  onClick={() => switchOptionModal()}
                   className='py-3 px-2 rounded-full'>
-                  <a
-                    href='#'
-                    className='flex items-center justify-start text-sm mx-2'>
+                  <div className='flex items-center justify-start text-sm mx-2'>
                     <div className='w-4'>
                       <svg
                         className='block relative w-full h-full'
@@ -153,16 +157,9 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
                         </g>
                       </svg>
                     </div>
-                  </a>
+                  </div>
                 </button>
               </NavItem>
-              {/* <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 pl-1 pr-2'>
-              <button
-                onClick={() => switchCurrencyModal()}
-                className='text-sm  tracking-wide'>
-                {`${currency}`}
-              </button>
-            </div> */}
               <NavItem>
                 <div className='mx-2 flex items-center justify-center py-3 px-2'>
                   <Link href='/host/homes'>
@@ -180,7 +177,7 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
               <NavItem>
                 <div className='mx-2 flex items-center justify-center py-3 px-2'>
                   <button
-                    onClick={() => switchHelpModal()}
+                    onClick={() => setHelpModal(!helpModal)}
                     className='text-sm  tracking-wide'>
                     Help
                   </button>
@@ -211,6 +208,13 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
                 </div>
               </SignUp>
             </nav>
+            {optionModal ? (
+              <>
+                <div style={{ left: -140, top: 60 }} className='absolute z-50'>
+                  <OptionModal />
+                </div>
+              </>
+            ) : null}
           </div>
         </div>
         <div>
@@ -256,7 +260,7 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
           />
         </>
       ) : null} */}
-      {languageModal ? (
+      {/* {languageModal ? (
         <>
           {typeof window !== 'undefined' ? configureScroll('hidden') : null}
           <LanguageModal
@@ -264,7 +268,7 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
             setLanguageModal={switchLanguageModal}
           />
         </>
-      ) : null}
+      ) : null} */}
     </header>
   );
 };
