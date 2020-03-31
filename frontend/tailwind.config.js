@@ -208,6 +208,11 @@ module.exports = {
         '7.5xl': '84rem',
         '8xl': '88rem',
         '8.5xl': '92rem',
+        '9xl': '94rem',
+        '9.5xl': '96rem',
+        '10xl': '98rem',
+        '10.5xl': '100rem',
+        '11xl': '102rem',
         '90%': '90vw'
       },
       borderRadius: {

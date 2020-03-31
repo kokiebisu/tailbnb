@@ -27840,8 +27840,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_HeaderCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/HeaderCard */ "./src/components/functions/HeaderCard.jsx");
 /* harmony import */ var _modals_RegisterModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modals/RegisterModal */ "./src/components/modals/RegisterModal.tsx");
 /* harmony import */ var _modals_HelpModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modals/HelpModal */ "./src/components/modals/HelpModal.jsx");
-/* harmony import */ var _modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modals/CurrencyModal */ "./src/components/modals/CurrencyModal.tsx");
-/* harmony import */ var _modals_LanguageModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modals/LanguageModal */ "./src/components/modals/LanguageModal.tsx");
+/* harmony import */ var _modals_LanguageModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modals/LanguageModal */ "./src/components/modals/LanguageModal.tsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/Header.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
@@ -27850,7 +27849,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
-
+ // import { CurrencyModal } from '../modals/CurrencyModal';
 
  // Images
 
@@ -27869,19 +27868,13 @@ var Header = function Header(_ref) {
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       helpModal = _useState3[0],
-      setHelpModal = _useState3[1];
+      setHelpModal = _useState3[1]; // const [currencyModal, setCurrencyModal] = useState(false);
+  // const [currency, setCurrency] = useState('$ CAD');
 
-  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      currencyModal = _useState4[0],
-      setCurrencyModal = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('$ CAD'),
-      currency = _useState5[0],
-      setCurrency = _useState5[1];
-
-  var _useState6 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      type = _useState6[0],
-      setType = _useState6[1];
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+      type = _useState4[0],
+      setType = _useState4[1];
 
   var switchLanguageModal = function switchLanguageModal() {
     setLanguageModal(!languageModal);
@@ -27893,19 +27886,17 @@ var Header = function Header(_ref) {
 
   var switchHelpModal = function switchHelpModal() {
     setHelpModal(!helpModal);
-  };
+  }; // const switchCurrencyModal = () => {
+  //   setCurrencyModal(!currencyModal);
+  // };
 
-  var switchCurrencyModal = function switchCurrencyModal() {
-    setCurrencyModal(!currencyModal);
-  };
 
   var switchType = function switchType(type) {
     setType(type);
-  };
+  }; // const switchCurrency = (currency: string) => {
+  //   setCurrency(currency);
+  // };
 
-  var switchCurrency = function switchCurrency(currency) {
-    setCurrency(currency);
-  };
 
   var configureScroll = function configureScroll(name) {
     document.body.style.overflow = name;
@@ -27916,21 +27907,21 @@ var Header = function Header(_ref) {
       backgroundImage: "url(".concat(background, ")"),
       maxHeight: '80rem'
     },
-    className: "w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat",
+    className: "w-screen h-full md:h-screen md:min-h-80 relative bg-cover bg-no-repeat",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56
     },
     __self: this
   }, __jsx("div", {
-    className: "flex flex-wrap items-center justify-between",
+    className: "max-w-11xl mx-auto flex flex-wrap items-center justify-between",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: this
   }, __jsx("div", {
-    className: "hidden lg:block h-8 w-8 ml-6 mt-6 flex items-center",
+    className: "flex items-center w-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
@@ -27948,10 +27939,10 @@ var Header = function Header(_ref) {
     role: "presentation",
     "aria-hidden": "true",
     focusable: "false",
-    className: "h-full w-full block",
     style: {
       fill: '#ffffff'
     },
+    className: "h-full w-full block",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 65
@@ -28057,8 +28048,11 @@ var Header = function Header(_ref) {
       lineNumber: 114
     },
     __self: this
-  }, __jsx("div", {
-    className: "border-transparent border-b-2 hover:border-white py-6 px-1",
+  }, __jsx("button", {
+    onClick: function onClick() {
+      return switchLanguageModal();
+    },
+    className: "bg-transparent hover:bg-gray-500 hover:opacity-50 py-3 px-2 rounded-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 117
@@ -28069,7 +28063,7 @@ var Header = function Header(_ref) {
     className: "flex items-center justify-start text-sm mx-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 120
     },
     __self: this
   }, __jsx("svg", {
@@ -28082,89 +28076,101 @@ var Header = function Header(_ref) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 123
     },
     __self: this
   }, __jsx("path", {
     d: "m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
-    },
-    __self: this
-  })), __jsx("button", {
-    onClick: function onClick() {
-      return switchLanguageModal();
-    },
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 128
     },
     __self: this
-  }, "English(CA)"))), __jsx("div", {
-    className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 pl-1 pr-2",
+  })), __jsx("div", {
+    className: "h-2 w-2 ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 130
     },
     __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return switchCurrencyModal();
+  }, __jsx("svg", {
+    className: "h-full w-full",
+    style: {
+      fill: '#ffffff'
     },
-    className: "text-sm  tracking-wide",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 491.996 491.996",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 131
     },
     __self: this
-  }, "".concat(currency))), __jsx("div", {
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136
+    },
+    __self: this
+  }, __jsx("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137
+    },
+    __self: this
+  }, __jsx("path", {
+    d: "M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138
+    },
+    __self: this
+  }))))))), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 158
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/homes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 159
     },
     __self: this
   }, __jsx("a", {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 160
     },
     __self: this
   }, "Host a home"))), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 163
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 164
     },
     __self: this
   }, __jsx("a", {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 165
     },
     __self: this
   }, "Host an experience"))), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 168
     },
     __self: this
   }, __jsx("button", {
@@ -28174,14 +28180,14 @@ var Header = function Header(_ref) {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 169
     },
     __self: this
   }, "Help")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 175
     },
     __self: this
   }, __jsx("button", {
@@ -28192,14 +28198,14 @@ var Header = function Header(_ref) {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 176
     },
     __self: this
   }, "Sign up")), __jsx("div", {
     className: "mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 185
     },
     __self: this
   }, __jsx("button", {
@@ -28210,34 +28216,34 @@ var Header = function Header(_ref) {
     className: "text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 186
     },
     __self: this
   }, "Log in"))))), __jsx("div", {
     className: "md:ml-20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 198
     },
     __self: this
   }, __jsx("h3", {
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 199
     },
     __self: this
   }, "Book unique places to stay and things to do."), __jsx(_functions_HeaderCard__WEBPACK_IMPORTED_MODULE_2__["HeaderCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 202
     },
     __self: this
   })), __jsx("div", {
     className: "hidden md:block absolute bottom-0 right-0 mr-8 mb-8 text-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 204
     },
     __self: this
   }, __jsx("p", {
@@ -28247,13 +28253,13 @@ var Header = function Header(_ref) {
     className: "text-sm text-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 205
     },
     __self: this
   }, "Over 300 unique places ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 208
     },
     __self: this
   }), "to stay in Japan")), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('hidden') : undefined, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_3__["RegisterModal"], {
@@ -28264,7 +28270,7 @@ var Header = function Header(_ref) {
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 216
     },
     __self: this
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_3__["RegisterModal"], {
@@ -28275,31 +28281,22 @@ var Header = function Header(_ref) {
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 224
     },
     __self: this
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('auto') : undefined), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_4__["HelpModal"], {
     setHelpModal: switchHelpModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 236
     },
     __self: this
-  }) : null, currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_5__["CurrencyModal"], {
-    location: "Canada",
-    setCurrencyModal: switchCurrencyModal,
-    setCurrency: switchCurrency,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 222
-    },
-    __self: this
-  })) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_6__["LanguageModal"], {
+  }) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_5__["LanguageModal"], {
     location: "Canada",
     setLanguageModal: switchLanguageModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 232
+      lineNumber: 250
     },
     __self: this
   })) : null);
@@ -29494,293 +29491,6 @@ var generateAvailableDays = function generateAvailableDays(today, lastday, setSe
   }
 
   return result;
-};
-
-/***/ }),
-
-/***/ "./src/components/modals/CurrencyModal.tsx":
-/*!*************************************************!*\
-  !*** ./src/components/modals/CurrencyModal.tsx ***!
-  \*************************************************/
-/*! exports provided: CurrencyModal */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CurrencyModal", function() { return CurrencyModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _currency_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./currency.json */ "./src/components/modals/currency.json");
-var _currency_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./currency.json */ "./src/components/modals/currency.json", 1);
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/modals/CurrencyModal.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
-
-
-
-
-var currencies = JSON.parse(JSON.stringify(_currency_json__WEBPACK_IMPORTED_MODULE_2___namespace));
-var CurrencyModal = function CurrencyModal(_ref) {
-  var location = _ref.location,
-      setCurrencyModal = _ref.setCurrencyModal,
-      setCurrency = _ref.setCurrency;
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    function handleResize() {
-      if (window.innerWidth < 1100) {
-        setCurrencyModal(false);
-      }
-    }
-
-    window.addEventListener('resize', handleResize);
-  });
-
-  var refreshPage = function refreshPage() {
-    window.location.reload(false);
-  };
-
-  var defaultCurrency = currencies["default"].find(function (currency) {
-    return currency.location == location;
-  });
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(defaultCurrency),
-      selectedCountry = _useState[0],
-      setSelectedCountry = _useState[1];
-
-  var filteredCurrencies = currencies["default"].filter(function (currency) {
-    return !lodash__WEBPACK_IMPORTED_MODULE_1___default.a.isEqual(currency, selectedCountry);
-  });
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, ' ', __jsx("div", {
-    id: "darkOverlay",
-    className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  }), __jsx("div", {
-    id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full border-b border-gray-300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full mx-auto max-w-5xl mt-2 flex justify-center items-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "bg-green-850 relative w-full px-4 flex justify-center items-center my-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full flex items-center absolute left-0 z-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, __jsx("button", {
-    onClick: function onClick() {
-      return setCurrencyModal(false);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, __jsx("svg", {
-    className: "w-4 h-4",
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 47.971 47.971",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }, __jsx("g", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, __jsx("path", {
-    d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
-    },
-    __self: this
-  }))))))))), __jsx("div", {
-    className: "w-full h-60v overflow-y-scroll overflow-hidden",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-full mx-auto max-w-5xl",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  }, __jsx("div", {
-    style: {
-      fontFamily: 'airbnb-medium'
-    },
-    className: "w-full text-2xl py-6 text-gray-750",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: this
-  }, "Choose currency"), __jsx("div", {
-    className: "w-full flex flex-wrap",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-1/5 flex mb-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: this
-  }, __jsx("button", {
-    className: "w-90p border border-gray-750 rounded-lg flex justify-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "w-85p py-1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-sm",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  }, selectedCountry.full)), __jsx("div", {
-    className: "flex",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 102
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      fontFamily: 'airbnb-book'
-    },
-    className: "text-sm text-gray-650",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: this
-  }, selectedCountry.abbreviation, ' ', selectedCountry.abbreviation === null ? null : '-', ' ', selectedCountry.symbol))))), filteredCurrencies.map(function (currency) {
-    return __jsx("div", {
-      className: "w-1/5 flex mb-4",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 116
-      },
-      __self: this
-    }, __jsx("button", {
-      onClick: function onClick() {
-        setSelectedCountry(currency);
-        setCurrency("".concat(currency.symbol, " ").concat(currency.abbreviation));
-        refreshPage(); // Query to change currency
-      },
-      className: "hover:bg-gray-250 w-90p rounded-lg flex justify-center",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 117
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "w-85p py-1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 127
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "flex",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 128
-      },
-      __self: this
-    }, __jsx("p", {
-      style: {
-        fontFamily: 'airbnb-book'
-      },
-      className: "text-sm",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 129
-      },
-      __self: this
-    }, currency.full)), __jsx("div", {
-      className: "flex",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 135
-      },
-      __self: this
-    }, __jsx("p", {
-      style: {
-        fontFamily: 'airbnb-book'
-      },
-      className: "text-sm text-gray-650",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 136
-      },
-      __self: this
-    }, currency.abbreviation, ' ', currency.abbreviation === null ? null : '-', ' ', currency.symbol)))));
-  }))))));
 };
 
 /***/ }),
@@ -32393,17 +32103,6 @@ var RegisterModal = function RegisterModal(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/modals/currency.json":
-/*!*********************************************!*\
-  !*** ./src/components/modals/currency.json ***!
-  \*********************************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"location\":\"Australia\",\"full\":\"Australian dollar\",\"abbreviation\":\"AUD\",\"symbol\":\"$\"},{\"location\":\"Brazil\",\"full\":\"Brazilian real\",\"abbreviation\":\"BRL\",\"symbol\":\"R$\"},{\"location\":\"Bulgaria\",\"full\":\"Bulgarian lev\",\"abbreviation\":\"BGN\",\"symbol\":\"лв\"},{\"location\":\"Canada\",\"full\":\"Canadian dollar\",\"abbreviation\":\"CAD\",\"symbol\":\"$\"},{\"location\":\"Chile\",\"full\":\"Chilean peso\",\"abbreviation\":\"CLP\",\"symbol\":\"$\"},{\"location\":\"China\",\"full\":\"CNY\",\"abbreviation\":\"CNY\",\"symbol\":\"￥\"},{\"location\":\"Colombia\",\"full\":\"Colombian peso\",\"abbreviation\":\"COP\",\"symbol\":\"$\"},{\"location\":\"Costa Rican\",\"full\":\"Costa Rican colon\",\"abbreviation\":\"CRC\",\"symbol\":\"₡\"},{\"location\":\"Croatia\",\"full\":\"Croatian kuna\",\"abbreviation\":\"HRK\",\"symbol\":\"kn\"},{\"location\":\"Czech\",\"full\":\"Czech koruna\",\"abbreviation\":\"CZK\",\"symbol\":\"Kč\"},{\"location\":\"Denmark\",\"full\":\"Danish krone\",\"abbreviation\":\"DKK\",\"symbol\":\"kr\"},{\"location\":\"United Arab Emirates\",\"full\":\"Emirati dirham\",\"abbreviation\":\"AED\",\"symbol\":\"د.إ\"},{\"location\":\"European Union\",\"full\":\"Euro\",\"abbreviation\":\"EUR\",\"symbol\":\"€\"},{\"location\":\"Hong Kong\",\"full\":\"Hong Kong dollar\",\"abbreviation\":\"HKD\",\"symbol\":\"$\"},{\"location\":\"Hungary\",\"full\":\"Fungarian forint\",\"abbreviation\":\"HUF\",\"symbol\":\"Ft\"},{\"location\":\"India\",\"full\":\"India rupee\",\"abbreviation\":\"INR\",\"symbol\":\"₹\"},{\"location\":\"Israel\",\"full\":\"Israeli new shekel\",\"abbreviation\":\"ILS\",\"symbol\":\"₪\"},{\"location\":\"Japan\",\"full\":\"Japanese yen\",\"abbreviation\":\"JPY\",\"symbol\":\"¥\"},{\"location\":\"Malaysia\",\"full\":\"Malaysian ringgit\",\"abbreviation\":\"MYR\",\"symbol\":\"RM\"},{\"location\":\"Mexico\",\"full\":\"Mexican peso\",\"abbreviation\":\"MXN\",\"symbol\":\"$\"},{\"location\":\"Morocco\",\"full\":\"Moroccan dirham\",\"abbreviation\":null,\"symbol\":\"MAD\"},{\"location\":\"Taiwan\",\"full\":\"New Taiwan dollar\",\"abbreviation\":\"TWD\",\"symbol\":\"$\"},{\"location\":\"New Zealand\",\"full\":\"New Zealand dollar\",\"abbreviation\":\"NZD\",\"symbol\":\"$\"},{\"location\":\"Norway\",\"full\":\"Norwegian krone\",\"abbreviation\":\"NOK\",\"symbol\":\"kr\"},{\"location\":\"Peru\",\"full\":\"Peruvian sol\",\"abbreviation\":\"PEN\",\"symbol\":\"S/\"},{\"location\":\"Philippine\",\"full\":\"Philippine peso\",\"abbreviation\":\"PHP\",\"symbol\":\"₱\"},{\"location\":\"Poland\",\"full\":\"Polish zloty\",\"abbreviation\":\"PLN\",\"symbol\":\"zł\"},{\"location\":\"United Kingdom\",\"full\":\"Pound sterling\",\"abbreviation\":\"GBP\",\"symbol\":\"£\"},{\"location\":\"Romania\",\"full\":\"Romanian leu\",\"abbreviation\":\"RON\",\"symbol\":\"lei\"},{\"location\":\"Russia\",\"full\":\"Russian ruble\",\"abbreviation\":\"RUB\",\"symbol\":\"₽\"},{\"location\":\"Saudi Arabia\",\"full\":\"Saudi Araibian riyal\",\"abbreviation\":\"SAR\",\"symbol\":\"SR\"},{\"location\":\"Singapore\",\"full\":\"Singapore dollar\",\"abbreviation\":\"SGD\",\"symbol\":\"$\"},{\"location\":\"South Africa\",\"full\":\"South African rand\",\"abbreviation\":\"ZAR\",\"symbol\":\"R\"},{\"location\":\"South Korea\",\"full\":\"South Korean won\",\"abbreviation\":\"KRW\",\"symbol\":\"₩\"},{\"location\":\"Sweden\",\"full\":\"Swedish krona\",\"abbreviation\":\"SEK\",\"symbol\":\"kr\"},{\"location\":\"Switzerland\",\"full\":\"Swiss franc\",\"abbreviation\":null,\"symbol\":\"CHF\"},{\"location\":\"Thailand\",\"full\":\"Thai baht\",\"abbreviation\":\"THB\",\"symbol\":\"฿\"},{\"location\":\"Turkey\",\"full\":\"Turkish lira\",\"abbreviation\":\"TRY\",\"symbol\":\"₺\"},{\"location\":\"United States\",\"full\":\"United States dollar\",\"abbreviation\":\"USD\",\"symbol\":\"$\"},{\"location\":\"Uruguay\",\"full\":\"Uruguayan peso\",\"abbreviation\":\"UYU\",\"symbol\":\"$U\"}]");
-
-/***/ }),
-
 /***/ "./src/components/wrapper/SectionOverflow.tsx":
 /*!****************************************************!*\
   !*** ./src/components/wrapper/SectionOverflow.tsx ***!
@@ -32666,7 +32365,7 @@ var calculateInfants = function calculateInfants(adultNumber, infantNumber) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************************/
@@ -32689,5 +32388,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

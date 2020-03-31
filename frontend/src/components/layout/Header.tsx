@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { HeaderCard } from '../functions/HeaderCard';
 import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
-import { CurrencyModal } from '../modals/CurrencyModal';
+// import { CurrencyModal } from '../modals/CurrencyModal';
 import { LanguageModal } from '../modals/LanguageModal';
 
 // Images
@@ -20,8 +20,8 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
   const [languageModal, setLanguageModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
   const [helpModal, setHelpModal] = useState(false);
-  const [currencyModal, setCurrencyModal] = useState(false);
-  const [currency, setCurrency] = useState('$ CAD');
+  // const [currencyModal, setCurrencyModal] = useState(false);
+  // const [currency, setCurrency] = useState('$ CAD');
   const [type, setType] = useState('');
 
   const switchLanguageModal = () => {
@@ -36,17 +36,17 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
     setHelpModal(!helpModal);
   };
 
-  const switchCurrencyModal = () => {
-    setCurrencyModal(!currencyModal);
-  };
+  // const switchCurrencyModal = () => {
+  //   setCurrencyModal(!currencyModal);
+  // };
 
   const switchType = (type: string) => {
     setType(type);
   };
 
-  const switchCurrency = (currency: string) => {
-    setCurrency(currency);
-  };
+  // const switchCurrency = (currency: string) => {
+  //   setCurrency(currency);
+  // };
 
   const configureScroll = (name: string) => {
     document.body.style.overflow = name;
@@ -58,17 +58,17 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
         backgroundImage: `url(${background})`,
         maxHeight: '80rem'
       }}
-      className='w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
-      <div className='flex flex-wrap items-center justify-between'>
-        <div className='hidden lg:block h-8 w-8 ml-6 mt-6 flex items-center'>
+      className='w-screen h-full md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
+      <div className='max-w-11xl mx-auto flex flex-wrap items-center justify-between'>
+        <div className='flex items-center w-8'>
           <a href='/'>
             <svg
               viewBox='0 0 1000 1000'
               role='presentation'
               aria-hidden='true'
               focusable='false'
-              className='h-full w-full block'
-              style={{ fill: '#ffffff' }}>
+              style={{ fill: '#ffffff' }}
+              className='h-full w-full block'>
               <path d='m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z'></path>
             </svg>
           </a>
@@ -114,7 +114,9 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
           <nav
             style={{ fontFamily: 'airbnb-medium' }}
             className='flex items-center justify-around flex-wrap text-white'>
-            <div className='border-transparent border-b-2 hover:border-white py-6 px-1'>
+            <button
+              onClick={() => switchLanguageModal()}
+              className='bg-transparent hover:bg-gray-500 hover:opacity-50 py-3 px-2 rounded-full'>
               <a
                 href='#'
                 className='flex items-center justify-start text-sm mx-2'>
@@ -125,18 +127,34 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
                   xmlns='http://www.w3.org/2000/svg'>
                   <path d='m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0' />
                 </svg>
-                <button onClick={() => switchLanguageModal()}>
-                  English(CA)
-                </button>
+                <div className='h-2 w-2 ml-2'>
+                  <svg
+                    className='h-full w-full'
+                    style={{ fill: '#ffffff' }}
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 491.996 491.996'>
+                    <g>
+                      <g>
+                        <path
+                          d='M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848
+			L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128
+			c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084
+			c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224
+			C491.996,136.902,489.204,130.046,484.132,124.986z'
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
               </a>
-            </div>
-            <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 pl-1 pr-2'>
+            </button>
+            {/* <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 pl-1 pr-2'>
               <button
                 onClick={() => switchCurrencyModal()}
                 className='text-sm  tracking-wide'>
                 {`${currency}`}
               </button>
-            </div>
+            </div> */}
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
               <Link href='/host/homes'>
                 <a className='text-sm  tracking-wide'>Host a home</a>
@@ -216,7 +234,7 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
         <>{typeof window !== 'undefined' ? configureScroll('auto') : null}</>
       )}
       {helpModal ? <HelpModal setHelpModal={switchHelpModal} /> : null}
-      {currencyModal ? (
+      {/* {currencyModal ? (
         <>
           {typeof window !== 'undefined' ? configureScroll('hidden') : null}
           <CurrencyModal
@@ -225,7 +243,7 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
             setCurrency={switchCurrency}
           />
         </>
-      ) : null}
+      ) : null} */}
       {languageModal ? (
         <>
           {typeof window !== 'undefined' ? configureScroll('hidden') : null}
