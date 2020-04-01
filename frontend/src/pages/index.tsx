@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 // Component
 import { Header } from '../components/layout/Header';
+import { FrontLines } from '../components/functions/FrontLines';
 import { Explore } from '../components/containers/Explore';
 import { NewFooter } from '../components/layout/NewFooter';
 import { MenuModal } from '../components/modals/MenuModal';
@@ -25,6 +26,7 @@ const Home: NextPage<{}> = () => {
           <MenuModal switchMenuModal={switchMenuModal} />
         </>
       ) : null}
+      <FrontLines />
       <Explore />
       <NewFooter />
     </>

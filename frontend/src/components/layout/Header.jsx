@@ -72,7 +72,7 @@ export const Header = ({ switchMenuModal }) => {
         maxHeight: '80rem'
       }}
       className='w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
-      <div className='md:mx-20 xl:mx-20 xl:max-w-10.5xl mx-auto'>
+      <div className='md:px-20 xl:px-32 xl:max-w-12xl w-full mx-auto'>
         <div className='h-20 flex flex-wrap items-center justify-between'>
           <div className='hidden lg:block flex items-center'>
             <a href='/'>

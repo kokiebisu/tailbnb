@@ -39,7 +39,7 @@ const explores: Explore[] = [
 export const Explore: React.FC<{}> = () => {
   return (
     <SectionOverflow title='Explore Airbnb'>
-      <div className='overflow-y-hidden'>
+      <div className='pb-32 overflow-y-hidden'>
         <div className='w-full h-full overflow-y-hidden'>
           <div className='h-full scroller'>
             <div className='scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-80 md:w-full'>
