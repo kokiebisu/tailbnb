@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3067,7 +3067,7 @@ const Header = ({
     },
     __self: undefined
   }, __jsx("div", {
-    className: "max-w-10.5xl mx-auto",
+    className: "md:mx-20 xl:mx-20 xl:max-w-10.5xl mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75
@@ -3081,7 +3081,7 @@ const Header = ({
     },
     __self: undefined
   }, __jsx("div", {
-    className: "flex items-center",
+    className: "hidden lg:block flex items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
@@ -3117,7 +3117,11 @@ const Header = ({
     },
     __self: undefined
   })))), __jsx("div", {
-    className: "lg:hidden ml-6 mt-6 flex items-center",
+    style: {
+      top: 0,
+      left: 0
+    },
+    className: "absolute lg:hidden ml-6 mt-6 flex items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 91
@@ -3130,7 +3134,7 @@ const Header = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 94
     },
     __self: undefined
   }, __jsx("svg", {
@@ -3144,21 +3148,21 @@ const Header = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 99
     },
     __self: undefined
   }, __jsx("path", {
     d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 106
     },
     __self: undefined
   })), __jsx("div", {
     className: "h-2 w-2 ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 108
     },
     __self: undefined
   }, __jsx("svg", {
@@ -3170,33 +3174,33 @@ const Header = ({
     viewBox: "0 0 491.996 491.996",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 109
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 114
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 115
     },
     __self: undefined
   }, __jsx("path", {
     d: "M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 116
     },
     __self: undefined
   }))))))), __jsx("div", {
     className: "hidden lg:block relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 130
     },
     __self: undefined
   }, __jsx("nav", {
@@ -3206,13 +3210,13 @@ const Header = ({
     className: "flex items-center justify-around flex-wrap text-white",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 131
     },
     __self: undefined
   }, __jsx(NavItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 134
     },
     __self: undefined
   }, __jsx("button", {
@@ -3220,21 +3224,21 @@ const Header = ({
     className: "py-3 px-2 rounded-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 135
     },
     __self: undefined
   }, __jsx("div", {
     className: "flex items-center justify-start text-sm mx-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 138
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 139
     },
     __self: undefined
   }, __jsx("svg", {
@@ -3248,21 +3252,21 @@ const Header = ({
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 140
     },
     __self: undefined
   }, __jsx("path", {
     d: "M7.99985 0.349976C3.78135 0.349976 0.349854 3.78148 0.349854 7.99998C0.349854 12.2185 3.78135 15.65 7.99985 15.65C12.2184 15.65 15.6499 12.2185 15.6499 7.99998C15.6499 3.78148 12.2184 0.349976 7.99985 0.349976ZM1.68285 8.64997H3.86735C3.90085 9.42497 3.99535 10.1625 4.14085 10.85H2.33335C1.98351 10.1627 1.76301 9.41698 1.68285 8.64997ZM8.74985 3.84998V1.90748C9.25785 2.24998 9.74385 2.92348 10.1204 3.84998H8.74985ZM10.5274 5.14998C10.6859 5.81348 10.7954 6.54998 10.8339 7.34998H8.74985V5.14998H10.5274ZM7.24985 1.90748V3.84998H5.87985C6.25585 2.92348 6.74235 2.24998 7.24985 1.90748ZM7.24985 5.14998V7.34998H5.16585C5.20435 6.54998 5.31385 5.81348 5.47235 5.14998H7.24985ZM3.86735 7.34998H1.68285C1.76285 6.56498 1.99285 5.82498 2.33285 5.14998H4.14085C3.98937 5.87454 3.89789 6.61037 3.86735 7.34998ZM5.16585 8.64997H7.24985V10.85H5.47235C5.30192 10.1278 5.1993 9.39125 5.16585 8.64997ZM7.24985 12.15V14.0925C6.74235 13.7495 6.25585 13.0765 5.87985 12.15H7.24985ZM8.74985 14.0925V12.15H10.1204C9.74385 13.0765 9.25785 13.75 8.74985 14.0925ZM8.74985 10.85V8.64997H10.8339C10.8004 9.39125 10.6978 10.1278 10.5274 10.85H8.74985ZM12.1324 8.64997H14.3169C14.2369 9.43497 14.0069 10.175 13.6669 10.85H11.8589C12.0044 10.1625 12.0989 9.42497 12.1324 8.64997ZM12.1324 7.34998C12.1018 6.61037 12.0103 5.87454 11.8589 5.14998H13.6664C14.0074 5.82498 14.2364 6.56498 14.3169 7.34998H12.1324ZM12.7954 3.84998H11.5014C11.3192 3.31162 11.0813 2.7938 10.7914 2.30498C11.5556 2.68104 12.2369 3.20638 12.7949 3.84998H12.7954ZM5.20835 2.30498C4.91844 2.7938 4.68047 3.31162 4.49835 3.84998H3.20485C3.76298 3.20632 4.44439 2.68099 5.20885 2.30498H5.20835ZM3.20485 12.15H4.49935C4.69735 12.7245 4.93635 13.242 5.20935 13.695C4.44453 13.3191 3.76278 12.7937 3.20435 12.15H3.20485ZM10.7919 13.695C11.0818 13.2061 11.3197 12.6883 11.5019 12.15H12.7959C12.2377 12.7936 11.5563 13.319 10.7919 13.695Z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 146
     },
     __self: undefined
   }))), __jsx("div", {
     className: "h-2 w-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 149
     },
     __self: undefined
   }, __jsx("svg", {
@@ -3274,93 +3278,93 @@ const Header = ({
     viewBox: "0 0 491.996 491.996",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 150
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 155
     },
     __self: undefined
   }, __jsx("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 156
     },
     __self: undefined
   }, __jsx("path", {
     d: "M484.132,124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86c-7.208,0-13.964,2.792-19.036,7.86l-183.84,183.848 L62.056,108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968,2.788-19.036,7.856l-16.12,16.128 c-10.496,10.488-10.496,27.572,0,38.06l219.136,219.924c5.064,5.064,11.812,8.632,19.084,8.632h0.084 c7.212,0,13.96-3.572,19.024-8.632l218.932-219.328c5.072-5.064,7.856-12.016,7.864-19.224 C491.996,136.902,489.204,130.046,484.132,124.986z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 157
     },
     __self: undefined
   })))))))), __jsx(NavItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 171
     },
     __self: undefined
   }, __jsx("div", {
     className: "mx-2 flex items-center justify-center py-3 px-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 172
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/homes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 173
     },
     __self: undefined
   }, __jsx("a", {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 174
     },
     __self: undefined
   }, "Host your home")))), __jsx(NavItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 178
     },
     __self: undefined
   }, __jsx("div", {
     className: "mx-2 flex items-center justify-center py-3 px-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 179
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/host/experiences",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 180
     },
     __self: undefined
   }, __jsx("a", {
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 181
     },
     __self: undefined
   }, "Host an experience")))), __jsx(NavItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 185
     },
     __self: undefined
   }, __jsx("div", {
     className: "mx-2 flex items-center justify-center py-3 px-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 186
     },
     __self: undefined
   }, __jsx("button", {
@@ -3368,20 +3372,20 @@ const Header = ({
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 187
     },
     __self: undefined
   }, "Help"))), __jsx(NavItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 194
     },
     __self: undefined
   }, __jsx("div", {
     className: "mx-2 flex items-center justify-center py-3 px-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 195
     },
     __self: undefined
   }, __jsx("button", {
@@ -3392,20 +3396,20 @@ const Header = ({
     className: "text-sm tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 196
     },
     __self: undefined
   }, "Log in"))), __jsx(SignUp, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 206
     },
     __self: undefined
   }, __jsx("div", {
     className: "mx-2 flex items-center justify-center py-3 px-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 207
     },
     __self: undefined
   }, __jsx("button", {
@@ -3416,7 +3420,7 @@ const Header = ({
     className: "text-sm  tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 208
     },
     __self: undefined
   }, "Sign up")))), optionModal & !languageModal & !currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
@@ -3427,7 +3431,7 @@ const Header = ({
     className: "absolute z-50",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
+      lineNumber: 221
     },
     __self: undefined
   }, __jsx(_modals_OptionModal_jsx__WEBPACK_IMPORTED_MODULE_8__["OptionModal"], {
@@ -3436,26 +3440,26 @@ const Header = ({
     currency: currency,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 222
     },
     __self: undefined
   }))) : null)), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 232
     },
     __self: undefined
   }, __jsx("h3", {
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231
+      lineNumber: 233
     },
     __self: undefined
   }, "Book unique places to stay and things to do."), __jsx(_functions_HeaderCard__WEBPACK_IMPORTED_MODULE_3__["HeaderCard"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 236
     },
     __self: undefined
   }))), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
@@ -3466,7 +3470,7 @@ const Header = ({
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 244
     },
     __self: undefined
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
@@ -3477,14 +3481,14 @@ const Header = ({
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250
+      lineNumber: 252
     },
     __self: undefined
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_7__["HelpModal"], {
     setHelpModal: switchHelpModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 264
     },
     __self: undefined
   }) : null, currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_4__["CurrencyModal"], {
@@ -3493,7 +3497,7 @@ const Header = ({
     setCurrency: switchCurrency,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 268
     },
     __self: undefined
   })) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_5__["LanguageModal"], {
@@ -3501,7 +3505,7 @@ const Header = ({
     setLanguageModal: switchLanguageModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
+      lineNumber: 278
     },
     __self: undefined
   })) : null);
@@ -7999,7 +8003,7 @@ const calculateInfants = (adultNumber, infantNumber) => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
   \***********************************/
