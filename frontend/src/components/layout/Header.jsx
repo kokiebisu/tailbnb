@@ -72,9 +72,9 @@ export const Header = ({ switchMenuModal }) => {
         maxHeight: '80rem'
       }}
       className='w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
-      <div className='max-w-10.5xl mx-auto'>
+      <div className='md:mx-20 xl:mx-20 xl:max-w-10.5xl mx-auto'>
         <div className='h-20 flex flex-wrap items-center justify-between'>
-          <div className='flex items-center'>
+          <div className='hidden lg:block flex items-center'>
             <a href='/'>
               <svg
                 width='102'
@@ -88,7 +88,9 @@ export const Header = ({ switchMenuModal }) => {
               </svg>
             </a>
           </div>
-          <div className='lg:hidden ml-6 mt-6 flex items-center'>
+          <div
+            style={{ top: 0, left: 0 }}
+            className='absolute lg:hidden ml-6 mt-6 flex items-center'>
             <button
               className='flex items-center'
               onClick={() => {
