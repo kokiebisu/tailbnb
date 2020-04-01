@@ -12,7 +12,7 @@ import { LanguageModal } from '../modals/LanguageModal';
 import { RegisterModal } from '../modals/RegisterModal';
 import { HelpModal } from '../modals/HelpModal';
 
-import { OptionModal } from '../modals/OptionModal.jsx';
+import { OptionModal } from '../modals/OptionModal';
 
 // Images
 const background = require('../../../public/img/high/airbnb-background.jpg');
@@ -29,7 +29,7 @@ export const Header = ({ switchMenuModal }) => {
 
   const [languageModal, setLanguageModal] = useState(false);
   const [currencyModal, setCurrencyModal] = useState(false);
-  // const [currency, setCurrency] = useState('$ CAD');
+  const [type, setType] = useState('');
 
   const switchCurrencyModal = () => {
     setCurrencyModal(!currencyModal);
@@ -38,8 +38,6 @@ export const Header = ({ switchMenuModal }) => {
   const switchLanguageModal = () => {
     setLanguageModal(!languageModal);
   };
-
-  const [type, setType] = useState('');
 
   const switchRegisterModal = () => {
     setRegisterModal(!registerModal);
@@ -71,7 +69,7 @@ export const Header = ({ switchMenuModal }) => {
         backgroundImage: `url(${background})`,
         maxHeight: '80rem'
       }}
-      className='w-screen md:h-screen md:min-h-80 relative bg-cover bg-no-repeat'>
+      className='w-screen md:h-screen md:min-h-104 relative bg-cover bg-no-repeat'>
       <div className='md:px-20 xl:px-32 xl:max-w-12xl w-full mx-auto'>
         <div className='h-20 flex flex-wrap items-center justify-between'>
           <div className='hidden lg:block flex items-center'>
@@ -185,7 +183,7 @@ export const Header = ({ switchMenuModal }) => {
               <NavItem>
                 <div className='mx-2 flex items-center justify-center py-3 px-2'>
                   <button
-                    onClick={() => setHelpModal(!helpModal)}
+                    onClick={switchHelpModal}
                     className='text-sm  tracking-wide'>
                     Help
                   </button>

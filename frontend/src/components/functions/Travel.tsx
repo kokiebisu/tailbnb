@@ -5,45 +5,43 @@ import { TravelCard } from '../../components/functions/TravelCard';
 import { ExploreSectionOverflow } from '../wrapper/ExploreSectionOverflow';
 
 // Image
-// High Resolution
-const explore1 = require('../../../public/img/high/explore1.jpg');
-const explore2 = require('../../../public/img/high/explore2.jpg');
-const explore3 = require('../../../public/img/high/explore3.jpg');
-// Low Resolution
-const explore1low = require('../../../public/img/low/explore1-low.jpg');
-const explore2low = require('../../../public/img/low/explore2-low.jpg');
-const explore3low = require('../../../public/img/low/explore3-low.jpg');
+const sydney = require('../../../public/img/high/sydney.jpg');
+const capetown = require('../../../public/img/high/capetown.jpg');
+const buenosaires = require('../../../public/img/high/buenosaires.jpg');
+const seoul = require('../../../public/img/high/seoul.jpg');
+const barcelona = require('../../../public/img/high/barcelona.jpg');
+const losangeles = require('../../../public/img/high/losangeles.jpg');
 
 export const Travel: React.FC<{}> = () => {
   const countries = [
     {
-      img: explore1,
-      imglow: explore1low,
+      img: sydney,
+      imglow: sydney,
       location: 'Sydney'
     },
     {
-      img: explore2,
-      imglow: explore2low,
+      img: capetown,
+      imglow: capetown,
       location: 'Cape Town'
     },
     {
-      img: explore3,
-      imglow: explore3low,
+      img: buenosaires,
+      imglow: buenosaires,
       location: 'Buenos Aires'
     },
     {
-      img: explore1,
-      imglow: explore1low,
+      img: seoul,
+      imglow: seoul,
       location: 'Seoul'
     },
     {
-      img: explore2,
-      imglow: explore2low,
+      img: barcelona,
+      imglow: barcelona,
       location: 'Barcelona'
     },
     {
-      img: explore3,
-      imglow: explore3low,
+      img: losangeles,
+      imglow: losangeles,
       location: 'Los Angeles'
     }
   ];
