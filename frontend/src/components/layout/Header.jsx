@@ -234,6 +234,27 @@ export const Header = ({ switchMenuModal }) => {
             Book unique places to stay and things to do.
           </h3>
           <HeaderCard />
+          <div className='hidden md:block relative md:w-100 md:mt-4 bg-white md:rounded-lg md:shadow-2xl pt-7 pb-6'>
+            <div
+              style={{ backgroundColor: '#3CAEA3' }}
+              className='rounded-lg rounded-b-none absolute top-0 w-full h-2'></div>
+            <div className='mx-6'>
+              <div>
+                <p style={{ fontFamily: 'airbnb-book' }} className=''>
+                  Airbnb is taking steps to support our community in this time
+                  of need.
+                </p>
+              </div>
+              <div className='mt-2'>
+                <a
+                  style={{ fontFamily: 'airbnb-medium' }}
+                  className='underline'
+                  href=''>
+                  Learn more
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

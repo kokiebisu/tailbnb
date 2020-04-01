@@ -20,7 +20,7 @@ export const ExploreCard: React.FC<Prop> = ({ img, title }) => {
             />
             <p
               style={{ fontFamily: 'airbnb-medium' }}
-              className='text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750'>
+              className='py-3 xl:py-0 pl-4 sm:pl-4 text-gray-850'>
               {title}
             </p>
           </div>
