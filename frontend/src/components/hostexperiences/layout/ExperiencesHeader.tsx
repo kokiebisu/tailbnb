@@ -11,12 +11,17 @@ interface Props {
   switchMenuModal: () => void;
 }
 
+interface CurrencyObject {
+  name: string;
+  sign: string;
+}
+
 export const ExperiencesHeader: React.FC<Props> = ({ switchMenuModal }) => {
   const [languageModal, setLanguageModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
   const [helpModal, setHelpModal] = useState(false);
   const [currencyModal, setCurrencyModal] = useState(false);
-  const [currency, setCurrency] = useState('$ CAD');
+  const [currency, setCurrency] = useState({ sign: '$', name: 'CAD' });
   const [type, setType] = useState('');
 
   const switchLanguageModal = () => {
@@ -39,7 +44,7 @@ export const ExperiencesHeader: React.FC<Props> = ({ switchMenuModal }) => {
     setType(type);
   };
 
-  const switchCurrency = (currency: string) => {
+  const switchCurrency = (currency: CurrencyObject) => {
     setCurrency(currency);
   };
 
@@ -123,7 +128,7 @@ export const ExperiencesHeader: React.FC<Props> = ({ switchMenuModal }) => {
               <button
                 onClick={() => switchCurrencyModal()}
                 className='text-sm  tracking-wide'>
-                {`${currency}`}
+                {`${currency.sign} ${currency.name}`}
               </button>
             </div>
             <div className='mx-2 flex items-center justify-center border-transparent border-b-2 hover:border-white py-6 px-1'>
@@ -197,7 +202,7 @@ export const ExperiencesHeader: React.FC<Props> = ({ switchMenuModal }) => {
           <CurrencyModal
             location='Canada'
             setCurrencyModal={switchCurrencyModal}
-            setCurrency={switchCurrency}
+            setCurrency={() => switchCurrency({ sign: '$', name: 'CAD' })}
           />
         </>
       ) : null}

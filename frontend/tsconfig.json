@@ -41,6 +41,7 @@
     "src/components/functions/HeaderCard.jsx",
     "src/components/containers/Featured.jsx",
     "src/components/functions/FeaturedCard.jsx",
-    "src/components/layout/ExploreHeader.jsx"
+    "src/components/layout/ExploreHeader.jsx",
+    "src/components/modals/OptionModal.ksx"
   ]
 }
