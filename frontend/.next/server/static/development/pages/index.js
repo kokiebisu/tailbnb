@@ -2101,7 +2101,7 @@ const Explore = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "overflow-y-hidden",
+    className: "pb-32 overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
@@ -2248,6 +2248,107 @@ const ExploreCard = ({
     },
     __self: undefined
   }, title)))));
+};
+
+/***/ }),
+
+/***/ "./src/components/functions/FrontLines.jsx":
+/*!*************************************************!*\
+  !*** ./src/components/functions/FrontLines.jsx ***!
+  \*************************************************/
+/*! exports provided: FrontLines */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FrontLines", function() { return FrontLines; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/functions/FrontLines.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const FrontLines = () => {
+  return __jsx("div", {
+    className: "border-t border-b border-gray-300 xl:border-none py-6 md:py-12 px-6 md:px-10 xl:px-32 xl:max-w-12xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "md:pb-12 lg:flex xl:border-b border-gray-300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "lg:w-2/5 mb-2 md:mb-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "md:w-70p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-bold'
+    },
+    className: "md:text-gray-850 md:text-3xl xl:text-4xl tracking-tight leading-10",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, "Homes for people on the frontlines of the COVID-19 crisis"))), __jsx("div", {
+    className: "md:w-4/5 lg:w-3/5 mt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "text-sm md:text-lg text-gray-750",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, "To help battle the coronavirus, Airbnb is partnering with our hosts to connect 100,000 healthcare providers, relief workers, and first responders with clean, convenient places to stay that allow them to be close to their patients\u2014and safely distanced from their own families. We may be apart, but we\u2019ll get through this together.")), __jsx("div", {
+    className: "my-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "underline text-sm md:text-lg text-gray-850",
+    href: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, "Host or donate")))));
 };
 
 /***/ }),
@@ -3067,7 +3168,7 @@ const Header = ({
     },
     __self: undefined
   }, __jsx("div", {
-    className: "md:mx-20 xl:mx-20 xl:max-w-10.5xl mx-auto",
+    className: "md:px-20 xl:px-32 xl:max-w-12xl w-full mx-auto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75
@@ -3554,7 +3655,7 @@ const NewFooter = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "lg:px-20 px-5 xl:px-0 lg:max-w-6xl xl:max-w-5.5xl mx-auto py-6 sm:py-12",
+    className: "px-6 md:px-0 md:mx-20 xl:mx-20 xl:max-w-10.5xl mx-auto py-6 sm:py-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -7799,7 +7900,7 @@ const SectionOverflow = ({
   }
 
   return __jsx("div", {
-    className: "px-6 md:px-8 lg:px-10 xl:max-w-8.5xl mx-auto py-5 overflow-x-hidden overflow-y-hidden",
+    className: "px-6 md:px-10 xl:px-32 mx-auto py-5 overflow-x-hidden overflow-y-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -7822,13 +7923,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.jsx");
-/* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
-/* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
-/* harmony import */ var _components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/modals/MenuModal */ "./src/components/modals/MenuModal.jsx");
+/* harmony import */ var _components_functions_FrontLines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/functions/FrontLines */ "./src/components/functions/FrontLines.jsx");
+/* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
+/* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
+/* harmony import */ var _components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/modals/MenuModal */ "./src/components/modals/MenuModal.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
  // Component
+
 
 
 
@@ -7849,26 +7952,32 @@ const Home = () => {
     switchMenuModal: switchMenuModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 23
     },
     __self: undefined
-  }), menuModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_4__["MenuModal"], {
+  }), menuModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_5__["MenuModal"], {
     switchMenuModal: switchMenuModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: undefined
-  })) : null, __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_2__["Explore"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: undefined
-  }), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_3__["NewFooter"], {
+  })) : null, __jsx(_components_functions_FrontLines__WEBPACK_IMPORTED_MODULE_2__["FrontLines"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
+    },
+    __self: undefined
+  }), __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_3__["Explore"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_4__["NewFooter"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
     },
     __self: undefined
   }));
