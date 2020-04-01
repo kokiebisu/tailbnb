@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 // Layout
-import { Footer } from '../../components/layout/Footer';
+import { NewFooter } from '../../components/layout/NewFooter';
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
-import { HeaderCategory } from '../../components/layout/HeaderCategory';
+import HeaderCategory from '../../components/layout/HeaderCategory';
 
 // Component
 import { Travel } from '../../components/functions/Travel';
@@ -16,19 +16,10 @@ import { NextPage } from 'next';
 const Stay: NextPage = () => {
   return (
     <>
-      <header className='z-20 sticky bg-white top-0 '>
+      <header className='z-20 sticky bg-white top-0 shadow-md'>
         <ExploreHeader white={true} />
-        <HeaderCategory
-          dates={true}
-          guests={true}
-          filters={true}
-          worktrip={true}
-          typeofplace={true}
-          price={true}
-          instantbook={true}
-          morefilters={true}
-        />
       </header>
+      <HeaderCategory />
       <div className='max-w-90% md:px-0 mx-auto py-5 border-b border-gray-400'>
         <p
           style={{ fontFamily: 'airbnb-book' }}
@@ -40,7 +31,7 @@ const Stay: NextPage = () => {
       <Travel />
       <TopRated />
       <THundredPlus />
-      <Footer />
+      <NewFooter />
     </>
   );
 };

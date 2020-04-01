@@ -1,7 +1,10 @@
 module.exports = {
   theme: {
     minHeight: {
-      '80': '43rem'
+      '80': '43rem',
+      '88': '45rem',
+      '96': '47rem',
+      '104': '49rem'
     },
     minWidth: {
       '90': '50rem'
@@ -174,7 +177,6 @@ module.exports = {
         '57v': '57vh',
         '80v': '80vh'
       },
-
       minWidth: {
         verylarge: '100%',
         large: '32.5%',
