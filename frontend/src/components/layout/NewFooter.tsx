@@ -3,7 +3,7 @@ import * as React from 'react';
 export const NewFooter: React.FC<{}> = () => {
   return (
     <div className='block bg-white w-full border-t border-gray-300'>
-      <div className='px-6 md:px-0 md:mx-20 xl:mx-20 xl:max-w-10.5xl mx-auto py-6 sm:py-12'>
+      <div className='px-6 md:px-10 xl:px-32 mx-auto py-6 sm:py-12'>
         <div className='hidden md:block lg:flex lg:flex-wrap lg:items-start lg::w-full md:mx-6 lg:mx-0 md:justify-between md:pb-1 lg:pb-10 lg:border-b md:border-gray-300'>
           <div className='lg:w-1/4 md:border-b border-gray-300 lg:border-none pb-4'>
             <h3

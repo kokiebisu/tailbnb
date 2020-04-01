@@ -2241,7 +2241,7 @@ const ExploreCard = ({
     style: {
       fontFamily: 'airbnb-medium'
     },
-    className: "text-sm py-3 xl:py-0 pl-4 sm:pl-4 text-gray-750",
+    className: "py-3 xl:py-0 pl-4 sm:pl-4 text-gray-850",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -2427,10 +2427,68 @@ const HeaderCard = () => {
     },
     __self: undefined
   }, __jsx("div", {
+    className: "relative md:hidden mx-6 md:mx-8 bg-white rounded-lg shadow-md pt-7 pb-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      backgroundColor: '#3CAEA3'
+    },
+    className: "rounded-lg rounded-b-none absolute top-0 w-full h-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "mx-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: undefined
+  }, "Airbnb is taking steps to support our community in this time of need.")), __jsx("div", {
+    className: "mt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "underline",
+    href: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }, "Learn more")))), __jsx("div", {
     className: "mx-6 md:mx-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 56
     },
     __self: undefined
   }, __jsx("h3", {
@@ -2440,26 +2498,26 @@ const HeaderCard = () => {
     className: "hidden md:inline-block md:text-3xl text-gray-750 leading-tight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 57
     },
     __self: undefined
   }, "Book unique places to ", __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 60
     },
     __self: undefined
   }), "stay and things to do."), __jsx("form", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 63
     },
     __self: undefined
   }, __jsx("div", {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 64
     },
     __self: undefined
   }, __jsx("label", {
@@ -2470,7 +2528,7 @@ const HeaderCard = () => {
     htmlFor: "where",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 65
     },
     __self: undefined
   }, "Where"), __jsx("input", {
@@ -2483,21 +2541,21 @@ const HeaderCard = () => {
     placeholder: "Anywhere",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 71
     },
     __self: undefined
   })), __jsx("div", {
     className: "flex flex-wrap items-stretch justify-start relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 79
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 80
     },
     __self: undefined
   }, __jsx("label", {
@@ -2508,21 +2566,21 @@ const HeaderCard = () => {
     htmlFor: "checkin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 81
     },
     __self: undefined
   }, "Check-In"), __jsx("div", {
     className: "relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 87
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 88
     },
     __self: undefined
   }, checkInModal ? __jsx("button", {
@@ -2536,7 +2594,7 @@ const HeaderCard = () => {
     className: "w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 90
     },
     __self: undefined
   }, "dd-mm-yy") : __jsx("button", {
@@ -2550,21 +2608,21 @@ const HeaderCard = () => {
     className: "pr-16 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 100
     },
     __self: undefined
   }, `${checkInDate[0]}/${checkInDate[1]}/${checkInDate[2]}`)), checkInModal ? __jsx(_modals_CalendarModal__WEBPACK_IMPORTED_MODULE_4__["CalendarModal"], {
     setCheckDate: setCheckInDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 112
     },
     __self: undefined
   }) : null)), __jsx("div", {
     className: "w-1/2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 116
     },
     __self: undefined
   }, __jsx("label", {
@@ -2575,21 +2633,21 @@ const HeaderCard = () => {
     htmlFor: "checkout",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 117
     },
     __self: undefined
   }, "Check-Out"), __jsx("div", {
     className: "relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 123
     },
     __self: undefined
   }, __jsx("div", {
     className: "w-full flex justify-start",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 124
     },
     __self: undefined
   }, checkOutModal && !checkInModal ? __jsx("button", {
@@ -2603,7 +2661,7 @@ const HeaderCard = () => {
     className: "w-full border border-green-850 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 126
     },
     __self: undefined
   }, "dd-mm-yy") : __jsx("button", {
@@ -2617,7 +2675,7 @@ const HeaderCard = () => {
     className: "pr-16 w-full border border-gray-300 py-3 rounded rounded-l-none placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 136
     },
     __self: undefined
   }, `${checkOutDate[0]}/${checkOutDate[1]}/${checkOutDate[2]}`)), checkOutModal && !checkInModal ? __jsx("div", {
@@ -2628,21 +2686,21 @@ const HeaderCard = () => {
     className: "bg-red-550 relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 148
     },
     __self: undefined
   }, __jsx(_modals_CalendarModal__WEBPACK_IMPORTED_MODULE_4__["CalendarModal"], {
     setCheckDate: setCheckOutDate,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 151
     },
     __self: undefined
   })) : null))), __jsx("div", {
     className: "relative",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 157
     },
     __self: undefined
   }, __jsx("label", {
@@ -2653,14 +2711,14 @@ const HeaderCard = () => {
     htmlFor: "guests",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 158
     },
     __self: undefined
   }, "Guests"), __jsx("div", {
     className: "inline-block relative w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 164
     },
     __self: undefined
   }, guestModal ? __jsx("button", {
@@ -2675,7 +2733,7 @@ const HeaderCard = () => {
     className: "appearance-none pl-2 w-full border border-green-850 py-3 text-left rounded placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 166
     },
     __self: undefined
   }, Object(_util_GuestModalFunctions__WEBPACK_IMPORTED_MODULE_2__["calculateGuests"])(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? `, ${calculateInfant(adultNumber, infantNumber)}` : null) : __jsx("button", {
@@ -2690,7 +2748,7 @@ const HeaderCard = () => {
     className: "appearance-none pl-2 w-full border border-gray-300 py-3 text-left rounded placeholder-gray-900 tracking-wide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 180
     },
     __self: undefined
   }, Object(_util_GuestModalFunctions__WEBPACK_IMPORTED_MODULE_2__["calculateGuests"])(adultNumber, childrenNumber), adultNumber > 0 && infantNumber > 0 ? `, ${calculateInfant(adultNumber, infantNumber)}` : null), guestModal ? __jsx("div", {
@@ -2699,7 +2757,7 @@ const HeaderCard = () => {
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 195
     },
     __self: undefined
   }, __jsx("svg", {
@@ -2711,14 +2769,14 @@ const HeaderCard = () => {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 199
     },
     __self: undefined
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 204
     },
     __self: undefined
   }))) : __jsx("div", {
@@ -2727,7 +2785,7 @@ const HeaderCard = () => {
     className: "pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 208
     },
     __self: undefined
   }, __jsx("svg", {
@@ -2736,14 +2794,14 @@ const HeaderCard = () => {
     viewBox: "0 0 20 20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 212
     },
     __self: undefined
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 216
     },
     __self: undefined
   })))), guestModal ? __jsx(_modals_GuestPickerModal__WEBPACK_IMPORTED_MODULE_5__["GuestPickerModal"], {
@@ -2764,21 +2822,21 @@ const HeaderCard = () => {
     switchModal: () => setGuestModal(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 222
     },
     __self: undefined
   }) : null)), __jsx("div", {
     className: "w-full flex items-center md:justify-end md:flex-wrap mt-6 rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 242
     },
     __self: undefined
   }, __jsx("button", {
     className: "w-full md:w-auto md:inline-block inline-block py-3 px-6 bg-red-550 rounded text-white font-bold",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 243
     },
     __self: undefined
   }, "Search"))));
@@ -3563,7 +3621,65 @@ const Header = ({
       lineNumber: 236
     },
     __self: undefined
-  }))), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
+  }), __jsx("div", {
+    className: "hidden md:block relative md:w-100 md:mt-4 bg-white md:rounded-lg md:shadow-2xl pt-7 pb-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 237
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      backgroundColor: '#3CAEA3'
+    },
+    className: "rounded-lg rounded-b-none absolute top-0 w-full h-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 238
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "mx-6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 241
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 242
+    },
+    __self: undefined
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-book'
+    },
+    className: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 243
+    },
+    __self: undefined
+  }, "Airbnb is taking steps to support our community in this time of need.")), __jsx("div", {
+    className: "mt-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 248
+    },
+    __self: undefined
+  }, __jsx("a", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "underline",
+    href: "",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 249
+    },
+    __self: undefined
+  }, "Learn more")))))), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
     setRegisterModal: setRegisterModal,
     type: "Log in",
     nottype: "Sign up",
@@ -3571,7 +3687,7 @@ const Header = ({
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 265
     },
     __self: undefined
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
@@ -3582,14 +3698,14 @@ const Header = ({
     setType: switchType,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252
+      lineNumber: 273
     },
     __self: undefined
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_7__["HelpModal"], {
     setHelpModal: switchHelpModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 285
     },
     __self: undefined
   }) : null, currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_4__["CurrencyModal"], {
@@ -3598,7 +3714,7 @@ const Header = ({
     setCurrency: switchCurrency,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268
+      lineNumber: 289
     },
     __self: undefined
   })) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_5__["LanguageModal"], {
@@ -3606,7 +3722,7 @@ const Header = ({
     setLanguageModal: switchLanguageModal,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278
+      lineNumber: 299
     },
     __self: undefined
   })) : null);
@@ -3655,7 +3771,7 @@ const NewFooter = () => {
     },
     __self: undefined
   }, __jsx("div", {
-    className: "px-6 md:px-0 md:mx-20 xl:mx-20 xl:max-w-10.5xl mx-auto py-6 sm:py-12",
+    className: "px-6 md:px-10 xl:px-32 mx-auto py-6 sm:py-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6

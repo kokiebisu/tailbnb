@@ -31,6 +31,28 @@ export const HeaderCard = () => {
 
   return (
     <div className='sm:w-full md:w-100 md:pt-8 md:pb-6 md:mt-10 bg-white md:rounded md:shadow-2xl py-4'>
+      {/* Covid-19 Notice */}
+      <div className='relative md:hidden mx-6 md:mx-8 bg-white rounded-lg shadow-md pt-7 pb-6'>
+        <div
+          style={{ backgroundColor: '#3CAEA3' }}
+          className='rounded-lg rounded-b-none absolute top-0 w-full h-2'></div>
+        <div className='mx-6'>
+          <div>
+            <p style={{ fontFamily: 'airbnb-book' }} className=''>
+              Airbnb is taking steps to support our community in this time of
+              need.
+            </p>
+          </div>
+          <div className='mt-2'>
+            <a
+              style={{ fontFamily: 'airbnb-medium' }}
+              className='underline'
+              href=''>
+              Learn more
+            </a>
+          </div>
+        </div>
+      </div>
       <div className='mx-6 md:mx-8'>
         <h3
           style={{ fontFamily: 'airbnb-bold' }}
