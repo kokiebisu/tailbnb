@@ -3,7 +3,7 @@ import React from 'react';
 export const Notice = () => {
   return (
     <div className='py-6 px-6 md:px-10 xl:px-32 xl:max-w-12xl'>
-      <div className='relative border border-gray-300 md:mt-4 bg-white md:rounded-lg pt-7 pb-6'>
+      <div className='relative border border-gray-300 md:mt-4 bg-white rounded-lg pt-7 pb-6'>
         <div className='flex'>
           <div className='mr-6'>
             <div

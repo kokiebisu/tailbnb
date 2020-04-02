@@ -10,10 +10,7 @@ import { RegisterModal } from '../modals/RegisterModal';
 import { LanguageModal } from '../modals/LanguageModal';
 import { CurrencyModal } from '../modals/CurrencyModal';
 
-// interface Prop {
-//   white: boolean;
-//   placeholder: string;
-// }
+import { SearchBar } from '../containers/SearchBar';
 
 export const ExploreHeader = ({ white }) => {
   const [registerModal, setRegisterModal] = useState(false);
@@ -66,7 +63,7 @@ export const ExploreHeader = ({ white }) => {
         <>
           <div className='px-6 md:px-10 xl:px-20 xl:max-w-12xl flex items-center justify-between relative border-b border-gray-300'>
             <div className='flex items-center'>
-              <div ref={(el) => (logo = el)} className='ml-6 mr-6 md:mr-8 my-5'>
+              <div ref={(el) => (logo = el)} className='mr-6 md:mr-8 my-5'>
                 <a href='/'>
                   <svg
                     width='102'
@@ -81,7 +78,9 @@ export const ExploreHeader = ({ white }) => {
                 </a>
               </div>
             </div>
-            <div>hello</div>
+            <div>
+              <SearchBar />
+            </div>
             <div>
               <nav
                 style={{ fontFamily: 'airbnb-medium' }}
