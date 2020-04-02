@@ -4,6 +4,7 @@ import * as React from 'react';
 import { NewFooter } from '../../components/layout/NewFooter';
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
 import HeaderCategory from '../../components/layout/HeaderCategory';
+import { MovePage } from '../../components/layout/MovePage';
 
 // Component
 import { Travel } from '../../components/functions/Travel';
@@ -31,6 +32,16 @@ const Stay: NextPage = () => {
       <Travel />
       <TopRated />
       <THundredPlus />
+      <div className='my-24'>
+        <MovePage
+          category='stay'
+          page={1}
+          previousPage={0}
+          nextPage={1}
+          first={true}
+          last={false}
+        />
+      </div>
       <NewFooter />
     </>
   );

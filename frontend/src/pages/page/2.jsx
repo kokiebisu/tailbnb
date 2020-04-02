@@ -2,7 +2,7 @@ import * as React from 'react';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
-import { HeaderCategory } from '../../components/layout/HeaderCategory';
+import HeaderCategory from '../../components/layout/HeaderCategory';
 import { Popular } from '../../components/containers/Popular';
 import Featured from '../../components/containers/Featured';
 import { ThreeColumn } from '../../components/containers/ThreeColumn';
@@ -84,7 +84,7 @@ const two = () => {
         contents={newyorkContent}
       />
       <div className='py-16 md:py-24 lg:py-32'>
-        <MovePage page={2} previousPage={0} first={false} last={false} />
+        <MovePage page={2} previousPage={1} first={false} last={false} />
       </div>
       <NewFooter />
     </>
