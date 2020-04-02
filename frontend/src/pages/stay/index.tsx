@@ -16,7 +16,7 @@ import { NextPage } from 'next';
 const Stay: NextPage = () => {
   return (
     <>
-      <header className='z-20 sticky bg-white top-0 shadow-md'>
+      <header className='z-20 sticky bg-white top-0 md:shadow-md'>
         <ExploreHeader white={true} />
       </header>
       <HeaderCategory />
