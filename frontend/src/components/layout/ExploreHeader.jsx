@@ -64,7 +64,7 @@ export const ExploreHeader = ({ white }) => {
           <div className='px-6 md:px-10 xl:px-20 xl:max-w-12xl flex items-center justify-between relative border-b border-gray-300'>
             <div className='w-full md:hidden'>
               <div className='w-full flex items-center my-3'>
-                <div className='flex-shrink-0 pr-2 mr-4'>
+                <div className='flex-shrink-0 p-4 mr-4 rounded-full hover:bg-gray-100'>
                   <div className='w-3'>
                     <svg viewBox='0 0 492 492'>
                       <g>
