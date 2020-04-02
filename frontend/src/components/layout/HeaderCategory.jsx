@@ -2,10 +2,9 @@ import * as React from 'react';
 import withSizes from 'react-sizeme';
 
 const HeaderCategory = ({ size }) => {
-  console.log('size', size.width);
   return (
-    <div className='px-5 md:px-0 mx-auto pb-2 pt-8'>
-      <div className='mx-auto md:max-w-90% flex flex-wrap items-center justify-start'>
+    <div className='px-6 md:px-10 xl:px-20 xl:max-w-12xl pb-2 pt-8'>
+      <div className='flex flex-wrap items-center justify-start'>
         <div
           style={{ fontFamily: 'airbnb-book' }}
           className='hidden md:block hover:border-gray-900 mr-2 text-sm border-gray-500 border py-2 px-5 rounded-full'>
