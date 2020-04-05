@@ -1,7 +1,7 @@
 import * as React from 'react';
 import withSizes from 'react-sizeme';
 
-const HeaderCategory = ({ size }) => {
+export const HeaderCategory = () => {
   return (
     <div className='px-6 md:px-10 xl:px-20 xl:max-w-12xl pb-2 pt-8'>
       <div className='flex flex-wrap items-center justify-start'>
@@ -40,5 +40,3 @@ const HeaderCategory = ({ size }) => {
     </div>
   );
 };
-
-export default withSizes()(HeaderCategory);

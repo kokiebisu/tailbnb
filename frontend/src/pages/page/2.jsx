@@ -2,7 +2,7 @@ import * as React from 'react';
 
 // Layout
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
-import HeaderCategory from '../../components/layout/HeaderCategory';
+import { HeaderCategory } from '../../components/layout/HeaderCategory';
 import { Popular } from '../../components/containers/Popular';
 import Featured from '../../components/containers/Featured';
 import { ThreeColumn } from '../../components/containers/ThreeColumn';

@@ -20,7 +20,7 @@ const MyApp: React.FC<Props> = ({ Component, pageProps, apollo }) => {
           <title>Vacation Rentals, Homes, Experiences & Places</title>
           <meta
             name='viewport'
-            content='initial-scale=1.0, width=device-width'
+            content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
           />
           <link rel='icon' type='image/x-icon' href='/img/high/favicon.ico' />
         </Head>
@@ -32,7 +32,7 @@ const MyApp: React.FC<Props> = ({ Component, pageProps, apollo }) => {
 
 export default withApollo(({ initialState }) => {
   return new ApolloClient({
-    uri: 'https://nextbnb-c4616c44bc.herokuapp.com',
-    cache: new InMemoryCache().restore(initialState || {})
+    uri: 'https://nextbnb-a7667a1201.herokuapp.com',
+    cache: new InMemoryCache().restore(initialState || {}),
   });
 })(MyApp);

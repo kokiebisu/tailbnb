@@ -20,15 +20,11 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/next/dist/pages/_error": [
+    "/experiences/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/page/2": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/stay": [
+    "/stay/1": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
