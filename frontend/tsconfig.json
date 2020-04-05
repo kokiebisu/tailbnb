@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -27,7 +27,7 @@
     "**/*.tsx",
     "src/components/containers/Stay.js",
     "src/components/layout/Header.lsx",
-    "src/components/modals/MenuModal.jsx",
+    "src/components/modals/MenuModal.tsx",
     "src/components/containers/TopRated.jsx",
     "src/components/containers/Stay.jsx",
     "src/components/containers/Adventures.jsx",
@@ -43,6 +43,7 @@
     "src/components/functions/FeaturedCard.jsx",
     "src/components/layout/ExploreHeader.jsx",
     "src/components/modals/OptionModal.ksx",
-    "src/pages/stay/1.jsx"
+    "src/pages/stay/1.jsx",
+    "src/pages/index.jsx"
   ]
 }

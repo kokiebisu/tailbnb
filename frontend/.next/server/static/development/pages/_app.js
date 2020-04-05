@@ -184,7 +184,7 @@ const MyApp = ({
     __self: undefined
   }, "Vacation Rentals, Homes, Experiences & Places"), __jsx("meta", {
     name: "viewport",
-    content: "initial-scale=1.0, width=device-width",
+    content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21

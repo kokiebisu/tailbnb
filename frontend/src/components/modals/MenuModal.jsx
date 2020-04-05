@@ -3,10 +3,6 @@ import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { TweenMax, Power3 } from 'gsap';
 
-// interface Props {
-//   switchMenuModal: (boolean: boolean) => void;
-// }
-
 export const MenuModal = ({ switchMenuModal }) => {
   let arrow = useRef(null);
   let menu = useRef(null);
@@ -27,17 +23,17 @@ export const MenuModal = ({ switchMenuModal }) => {
 
   const turnOnMenu = () => {
     TweenMax.from(menu, 0.6, {
-      height: 0
+      height: 0,
     });
     TweenMax.from(arrow, 1, {
       rotation: '180_cw',
       opacity: 0.3,
-      ease: Power3.easeOut
+      ease: Power3.easeOut,
     });
     TweenMax.from(logo, 0.6, {
       fill: '#ffffff',
       opacity: 0.3,
-      ease: Power3.easeIn
+      ease: Power3.easeIn,
     });
   };
 
@@ -45,12 +41,12 @@ export const MenuModal = ({ switchMenuModal }) => {
     TweenMax.to(menu, 0.4, { height: 0 });
     TweenMax.to(logo, 0.5, {
       fill: '#ffffff',
-      ease: Power3.easeInOut
+      ease: Power3.easeInOut,
     });
     TweenMax.to(arrow, 1, {
       rotation: '-180_cw',
       opacity: 0.3,
-      ease: Power3.easeOut
+      ease: Power3.easeOut,
     });
     sleepPrep();
   };
