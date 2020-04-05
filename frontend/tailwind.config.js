@@ -4,14 +4,14 @@ module.exports = {
       '80': '43rem',
       '88': '45rem',
       '96': '47rem',
-      '104': '49rem'
+      '104': '49rem',
     },
     minWidth: {
-      '90': '50rem'
+      '90': '50rem',
     },
     extend: {
       screens: {
-        '2xl': '1529px'
+        '2xl': '1529px',
       },
       lineHeight: {
         '11': '2.75rem',
@@ -23,22 +23,23 @@ module.exports = {
         '17': '4.25rem',
         '18': '4.5rem',
         '19': '4.75rem',
-        '20': '5rem'
+        '20': '5rem',
       },
       margin: {},
       inset: {
-        '1/2': '35%'
+        '1/2': '35%',
       },
       borderColor: {
         'gray-350': '#F2F2F2',
         'gray-450': '#EBEBEB',
-        'green-850': '#008489'
+        'green-850': '#008489',
       },
       textColor: {
+        'red-550': '#FF5A5F',
         'green-850': '#008489',
         'yellow-850': '#FDB32B',
         'gray-550': '#B8B8B8',
-        'gray-850': '#3c3c41'
+        'gray-850': '#3c3c41',
       },
       fontSize: {
         '2xs': '.625rem',
@@ -47,10 +48,10 @@ module.exports = {
         '7xl': '5rem',
         '8xl': '6rem',
         '9xl': '7rem',
-        '10xl': '8rem'
+        '10xl': '8rem',
       },
       placeholderColor: {
-        'gray-650': '#767676'
+        'gray-650': '#767676',
       },
       backgroundColor: {
         background: '#fffcfc',
@@ -65,7 +66,7 @@ module.exports = {
         'red-550': '#FF5A5F',
         'pink-750': '#E31956',
         'pink-850': '#E61E4D',
-        'green-850': '#008489'
+        'green-850': '#008489',
       },
       height: {
         '14': '3.5rem',
@@ -94,7 +95,7 @@ module.exports = {
         '100r': '100rem',
         '121r': '121rem',
         '1/2': '50%',
-        '2/3': '66vh'
+        '2/3': '66vh',
       },
       width: {
         '14': '3.5rem',
@@ -160,7 +161,7 @@ module.exports = {
         '23p': '23%',
         '10.5/12': '87.5%',
         '30/31': '94.774194%',
-        '40/41': '96%'
+        '40/41': '96%',
       },
       spacing: {
         '7': '1.75rem',
@@ -171,11 +172,11 @@ module.exports = {
         '72': '18rem',
         '84': '21rem',
         '96': '24rem',
-        '100': '27.4rem'
+        '100': '27.4rem',
       },
       maxHeight: {
         '57v': '57vh',
-        '80v': '80vh'
+        '80v': '80vh',
       },
       minWidth: {
         verylarge: '100%',
@@ -196,9 +197,10 @@ module.exports = {
         '384': '108rem',
         '512': '170rem',
 
-        screen: '100vw'
+        screen: '100vw',
       },
       maxWidth: {
+        '2xs': '16rem',
         '100': '27.4rem',
         layout: '100rem',
         '1.5xl': '39rem',
@@ -215,34 +217,35 @@ module.exports = {
         '10xl': '98rem',
         '10.5xl': '100rem',
         '11xl': '102rem',
-        '90%': '90vw'
+        '90%': '90vw',
       },
       borderRadius: {
         xl: '0.625rem',
         '2xl': '0.75rem',
         '3xl': '0.825rem',
         '4xl': '1rem',
-        '5xl': '1.125rem'
+        '5xl': '1.125rem',
       },
       boxShadow: {
         focus: '0 0 0 3px rgba(66,153,225,0.5)',
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, .3)',
         '4xl': '0 60px 80px -15px rgba(0,0,0,.8)',
-        '6xl': '0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19)'
+        '6xl':
+          '0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19)',
       },
       colors: {
         'gray-150': '#F2F2F2',
         'gray-650': '#767676',
         'gray-750': '#484848',
         'gray-850': '#3c3c41',
-        'gray-950': '#262626'
+        'gray-950': '#262626',
       },
       zIndex: {
         '100': '100',
-        '200': '200'
-      }
-    }
+        '200': '200',
+      },
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };
