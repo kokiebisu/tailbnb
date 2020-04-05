@@ -20,6 +20,6 @@ var models = [
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://nextbnb-c4616c44bc.herokuapp.com`
+  endpoint: `https://nextbnb-a7667a1201.herokuapp.com`
 });
 exports.prisma = new exports.Prisma();

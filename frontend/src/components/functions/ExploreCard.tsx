@@ -10,20 +10,20 @@ export const ExploreCard: React.FC<Prop> = ({ img, title }) => {
   return (
     <>
       <div>
-        <Link
-          href={`/${title.toLowerCase()}/index.tsx`}
-          as={`/${title.toLowerCase()}`}>
-          <div className='h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white'>
-            <img
-              src={img}
-              className='h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none'
-            />
-            <p
-              style={{ fontFamily: 'airbnb-medium' }}
-              className='py-3 xl:py-0 pl-4 sm:pl-4 text-gray-850'>
-              {title}
-            </p>
-          </div>
+        <Link href={`/${title.toLowerCase()}`}>
+          <a>
+            <div className='h-full w-32 sm:w-full flex flex-wrap items-center justify-start shadow-md rounded-xl bg-white'>
+              <img
+                src={img}
+                className='h-24 w-full md:h-full xl:h-20 rounded-b-none xl:h-full xl:w-32 rounded-lg xl:rounded-xl xl:rounded-r-none'
+              />
+              <p
+                style={{ fontFamily: 'airbnb-medium' }}
+                className='py-3 xl:py-0 pl-4 sm:pl-4 text-gray-850'>
+                {title}
+              </p>
+            </div>
+          </a>
         </Link>
       </div>
     </>

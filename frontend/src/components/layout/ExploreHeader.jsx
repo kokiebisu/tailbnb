@@ -81,7 +81,7 @@ l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z'
                   </div>
                 </div>
                 <div className='flex-grow'>
-                  <ShadowWrapper>
+                  <div id='exploreheader_searchbar'>
                     <div className='flex justify-center'>
                       <div className='flex items-center justify-between'>
                         <div className='mr-3'>
@@ -100,7 +100,7 @@ l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z'
                         </div>
                       </div>
                     </div>
-                  </ShadowWrapper>
+                  </div>
                 </div>
                 <div className='flex-shrink-0 pr-2 mr-4'>
                   <div className='w-3'></div>
@@ -365,12 +365,9 @@ l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z'
 };
 
 const ShadowWrapper = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px;
   border-radius: 24px;
   cursor: pointer;
-  rgba(0, 0, 0, 0.03);
   padding: 0.6rem 0rem;
-  border: 1px solid rgba(0, 0, 0, 0.03);
   transition: 0.5s;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;

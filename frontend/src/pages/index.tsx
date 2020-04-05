@@ -17,6 +17,7 @@ const Home: NextPage<{}> = () => {
 
   const switchMenuModal = () => {
     setMenuModal(!menuModal);
+    console.log('clicked');
   };
 
   return (

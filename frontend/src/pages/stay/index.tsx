@@ -3,12 +3,11 @@ import * as React from 'react';
 // Layout
 import { NewFooter } from '../../components/layout/NewFooter';
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
-import HeaderCategory from '../../components/layout/HeaderCategory';
+import { HeaderCategory } from '../../components/layout/HeaderCategory';
 import { MovePage } from '../../components/layout/MovePage';
 
 // Component
 import { Travel } from '../../components/functions/Travel';
-import TopRated from '../../components/containers/TopRated';
 import { THundredPlus } from '../../components/containers/THundredPlus';
 
 // Next
@@ -30,7 +29,6 @@ const Stay: NextPage = () => {
         </p>
       </div>
       <Travel />
-      <TopRated />
       <THundredPlus />
       <div className='my-24'>
         <MovePage
