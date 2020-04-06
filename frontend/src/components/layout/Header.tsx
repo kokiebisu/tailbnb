@@ -76,11 +76,12 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
       }}
       className='w-screen md:h-screen md:min-h-104 relative bg-cover bg-no-repeat'>
       <div className='md:px-20 xl:px-32 xl:max-w-12xl w-full mx-auto'>
-        <div className='h-20 flex flex-wrap items-center justify-between'>
-          <div className='hidden lg:block flex items-center'>
+        <div className='h-20 flex items-center justify-between'>
+          <div className='w-32 hidden lg:block flex items-center'>
             <a href='/'>
               <svg
-                width='102'
+                width='32'
+                height='10'
                 role='presentation'
                 aria-hidden='true'
                 focusable='false'

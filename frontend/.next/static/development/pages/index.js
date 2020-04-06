@@ -31200,13 +31200,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BottomNav", function() { return BottomNav; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 var _this = undefined,
     _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/BottomNav.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var BottomNav = function BottomNav() {
+
+var BottomNav = function BottomNav(_ref) {
+  var bottomSwitch = _ref.bottomSwitch;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(navRef, 0.3, {
+      bottom: 0
+    });
+  }, []);
+
+  var hideBar = function hideBar() {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(navRef, 2, {
+      bottom: 50
+    });
+  };
+
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     explore: true,
     saved: false,
@@ -31215,12 +31230,19 @@ var BottomNav = function BottomNav() {
       selected = _useState[0],
       setSelected = _useState[1];
 
+  var navRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   return __jsx("div", {
-    className: "w-full bg-white fixed bottom-0 z-50 h-16 border-t border-gray-400",
+    ref: function ref(el) {
+      return navRef = el;
+    },
+    style: {
+      bottom: -50
+    },
+    className: "relative w-full bg-white h-16 border-t border-gray-400",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 23,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -31228,7 +31250,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 27,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -31236,7 +31258,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 28,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -31244,7 +31266,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 29,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -31252,7 +31274,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 30,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -31267,7 +31289,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 31,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -31275,7 +31297,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 38,
       columnNumber: 17
     }
   }), __jsx("path", {
@@ -31283,14 +31305,14 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 39,
       columnNumber: 17
     }
   }))), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 42,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -31302,7 +31324,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 43,
       columnNumber: 15
     }
   }, "Explore"))), __jsx("div", {
@@ -31310,7 +31332,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 53,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -31318,7 +31340,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 54,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -31333,7 +31355,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 55,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -31341,14 +31363,14 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 62,
       columnNumber: 17
     }
   }))), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 65,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -31360,7 +31382,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 66,
       columnNumber: 15
     }
   }, "Saved"))), __jsx("div", {
@@ -31368,7 +31390,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 76,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -31376,7 +31398,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 77,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -31391,7 +31413,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 78,
       columnNumber: 15
     }
   }, __jsx("circle", {
@@ -31401,7 +31423,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 85,
       columnNumber: 17
     }
   }), __jsx("path", {
@@ -31409,14 +31431,14 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 86,
       columnNumber: 17
     }
   }))), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 89,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -31428,7 +31450,7 @@ var BottomNav = function BottomNav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 90,
       columnNumber: 15
     }
   }, "Login"))))));
@@ -31586,7 +31608,7 @@ var Header = function Header(_ref) {
       columnNumber: 7
     }
   }, __jsx("div", {
-    className: "h-20 flex flex-wrap items-center justify-between",
+    className: "h-20 flex items-center justify-between",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -31594,7 +31616,7 @@ var Header = function Header(_ref) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "hidden lg:block flex items-center",
+    className: "w-32 hidden lg:block flex items-center",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -31610,7 +31632,8 @@ var Header = function Header(_ref) {
       columnNumber: 13
     }
   }, __jsx("svg", {
-    width: "102",
+    width: "32",
+    height: "10",
     role: "presentation",
     "aria-hidden": "true",
     focusable: "false",
@@ -31629,7 +31652,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
+      lineNumber: 90,
       columnNumber: 17
     }
   })))), __jsx("div", {
@@ -31641,7 +31664,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 94,
       columnNumber: 11
     }
   }, __jsx("button", {
@@ -31652,7 +31675,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96,
+      lineNumber: 97,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -31667,7 +31690,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101,
+      lineNumber: 102,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -31675,7 +31698,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108,
+      lineNumber: 109,
       columnNumber: 17
     }
   })), __jsx("div", {
@@ -31683,7 +31706,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110,
+      lineNumber: 111,
       columnNumber: 15
     }
   }, __jsx("svg", {
@@ -31696,21 +31719,21 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111,
+      lineNumber: 112,
       columnNumber: 17
     }
   }, __jsx("g", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116,
+      lineNumber: 117,
       columnNumber: 19
     }
   }, __jsx("g", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117,
+      lineNumber: 118,
       columnNumber: 21
     }
   }, __jsx("path", {
@@ -31718,7 +31741,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118,
+      lineNumber: 119,
       columnNumber: 23
     }
   }))))))), __jsx("div", {
@@ -31726,7 +31749,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132,
+      lineNumber: 133,
       columnNumber: 11
     }
   }, __jsx("nav", {
@@ -31737,14 +31760,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133,
+      lineNumber: 134,
       columnNumber: 13
     }
   }, __jsx(NavItem, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 137,
       columnNumber: 15
     }
   }, __jsx("button", {
@@ -31755,7 +31778,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137,
+      lineNumber: 138,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -31763,7 +31786,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140,
+      lineNumber: 141,
       columnNumber: 19
     }
   }, __jsx("div", {
@@ -31771,7 +31794,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141,
+      lineNumber: 142,
       columnNumber: 21
     }
   }, __jsx("svg", {
@@ -31786,7 +31809,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142,
+      lineNumber: 143,
       columnNumber: 23
     }
   }, __jsx("path", {
@@ -31794,7 +31817,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148,
+      lineNumber: 149,
       columnNumber: 25
     }
   }))), __jsx("div", {
@@ -31802,7 +31825,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151,
+      lineNumber: 152,
       columnNumber: 21
     }
   }, __jsx("svg", {
@@ -31815,21 +31838,21 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152,
+      lineNumber: 153,
       columnNumber: 23
     }
   }, __jsx("g", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157,
+      lineNumber: 158,
       columnNumber: 25
     }
   }, __jsx("g", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158,
+      lineNumber: 159,
       columnNumber: 27
     }
   }, __jsx("path", {
@@ -31837,14 +31860,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159,
+      lineNumber: 160,
       columnNumber: 29
     }
   })))))))), __jsx(NavItem, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173,
+      lineNumber: 174,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -31852,7 +31875,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174,
+      lineNumber: 175,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -31860,7 +31883,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175,
+      lineNumber: 176,
       columnNumber: 19
     }
   }, __jsx("a", {
@@ -31868,14 +31891,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176,
+      lineNumber: 177,
       columnNumber: 21
     }
   }, "Host your home")))), __jsx(NavItem, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180,
+      lineNumber: 181,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -31883,7 +31906,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181,
+      lineNumber: 182,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -31891,7 +31914,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182,
+      lineNumber: 183,
       columnNumber: 19
     }
   }, __jsx("a", {
@@ -31899,14 +31922,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183,
+      lineNumber: 184,
       columnNumber: 21
     }
   }, "Host an experience")))), __jsx(NavItem, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187,
+      lineNumber: 188,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -31914,7 +31937,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188,
+      lineNumber: 189,
       columnNumber: 17
     }
   }, __jsx("button", {
@@ -31923,14 +31946,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189,
+      lineNumber: 190,
       columnNumber: 19
     }
   }, "Help"))), __jsx(NavItem, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196,
+      lineNumber: 197,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -31938,7 +31961,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197,
+      lineNumber: 198,
       columnNumber: 17
     }
   }, __jsx("button", {
@@ -31950,14 +31973,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198,
+      lineNumber: 199,
       columnNumber: 19
     }
   }, "Log in"))), __jsx(SignUp, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208,
+      lineNumber: 209,
       columnNumber: 15
     }
   }, __jsx("div", {
@@ -31965,7 +31988,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 210,
       columnNumber: 17
     }
   }, __jsx("button", {
@@ -31977,7 +32000,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 211,
       columnNumber: 19
     }
   }, "Sign up")))), optionModal && !languageModal && !currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx("div", {
@@ -31989,7 +32012,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223,
+      lineNumber: 224,
       columnNumber: 17
     }
   }, __jsx(_modals_OptionModal__WEBPACK_IMPORTED_MODULE_9__["OptionModal"], {
@@ -31999,14 +32022,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 225,
       columnNumber: 19
     }
   }))) : null)), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234,
+      lineNumber: 235,
       columnNumber: 9
     }
   }, __jsx("h3", {
@@ -32014,14 +32037,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 236,
       columnNumber: 11
     }
   }, "Book unique places to stay and things to do."), __jsx(_functions_HeaderCard__WEBPACK_IMPORTED_MODULE_4__["HeaderCard"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238,
+      lineNumber: 239,
       columnNumber: 11
     }
   }), __jsx("div", {
@@ -32029,7 +32052,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 240,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -32040,7 +32063,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 241,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -32048,14 +32071,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243,
+      lineNumber: 244,
       columnNumber: 13
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 245,
       columnNumber: 15
     }
   }, __jsx("p", {
@@ -32066,7 +32089,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 246,
       columnNumber: 17
     }
   }, "Airbnb is taking steps to support our community in this time of need.")), __jsx("div", {
@@ -32074,7 +32097,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250,
+      lineNumber: 251,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -32086,7 +32109,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251,
+      lineNumber: 252,
       columnNumber: 17
     }
   }, "Learn more")))))), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_7__["RegisterModal"], {
@@ -32098,7 +32121,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267,
+      lineNumber: 268,
       columnNumber: 13
     }
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_7__["RegisterModal"], {
@@ -32110,7 +32133,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275,
+      lineNumber: 276,
       columnNumber: 13
     }
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('auto') : undefined), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_8__["HelpModal"], {
@@ -32118,7 +32141,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287,
+      lineNumber: 288,
       columnNumber: 20
     }
   }) : null, currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_5__["CurrencyModal"], {
@@ -32128,7 +32151,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291,
+      lineNumber: 292,
       columnNumber: 11
     }
   })) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_6__["LanguageModal"], {
@@ -32137,7 +32160,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301,
+      lineNumber: 302,
       columnNumber: 11
     }
   })) : null);
@@ -36657,14 +36680,25 @@ var Home = function Home() {
       lineNumber: 50,
       columnNumber: 9
     }
-  }), bottom ? __jsx(_components_layout_BottomNav__WEBPACK_IMPORTED_MODULE_7__["BottomNav"], {
+  }), bottom ? __jsx("div", {
+    className: "fixed bottom-0 z-50 w-full",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
-      columnNumber: 19
+      lineNumber: 52,
+      columnNumber: 11
     }
-  }) : null));
+  }, __jsx(_components_layout_BottomNav__WEBPACK_IMPORTED_MODULE_7__["BottomNav"], {
+    bottomSwitch: function bottomSwitch() {
+      return setBottom(!bottom);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 13
+    }
+  })) : null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
