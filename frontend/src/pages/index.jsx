@@ -48,7 +48,11 @@ const Home = () => {
         <Notice />
         <Explore />
         <NewFooter />
-        {bottom ? <BottomNav /> : null}
+        {bottom ? (
+          <div className='fixed bottom-0 z-50 w-full'>
+            <BottomNav bottomSwitch={() => setBottom(!bottom)} />
+          </div>
+        ) : null}
       </div>
     </>
   );

@@ -1,15 +1,29 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { TweenLite } from 'gsap';
 
-export const BottomNav = () => {
+export const BottomNav = ({ bottomSwitch }) => {
+  useEffect(() => {
+    TweenLite.to(navRef, 0.3, { bottom: 0 });
+  }, []);
+
+  const hideBar = () => {
+    TweenLite.to(navRef, 2, { bottom: 50 });
+  };
+
   const [selected, setSelected] = useState({
     explore: true,
     saved: false,
     login: false,
   });
 
+  let navRef = useRef(null);
+
   return (
-    <div className='w-full bg-white fixed bottom-0 z-50 h-16 border-t border-gray-400'>
+    <div
+      ref={(el) => (navRef = el)}
+      style={{ bottom: -50 }}
+      className='relative w-full bg-white h-16 border-t border-gray-400'>
       <div className='max-w-2xs mx-auto h-full'>
         <div className='h-full flex justify-between items-center'>
           <div className='flex flex-col items-center'>
