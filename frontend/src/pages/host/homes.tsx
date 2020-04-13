@@ -40,7 +40,7 @@ const homes: NextPage<{}> = () => {
     { question: 'How much does it cost to list my space?' },
     { question: 'What protection do I have against property damage?' },
     { question: "How should I choose my listing's price?" },
-    { question: 'How can Airbnb help me with setting prices?' }
+    { question: 'How can Airbnb help me with setting prices?' },
   ];
 
   return (
@@ -55,7 +55,7 @@ const homes: NextPage<{}> = () => {
           <img
             src={background}
             style={{
-              maxHeight: '60rem'
+              maxHeight: '60rem',
             }}
             className='object-cover w-full h-full'
           />
@@ -77,7 +77,7 @@ const homes: NextPage<{}> = () => {
         <HostAbout />
         <Questions title='Frequently asked questions' questions={questions} />
         <MoreHosting />
-        <HostReady img={readyOverview} title='Ready to earn?' />>
+        <HostReady img={readyOverview} title='Ready to earn?' />
         <NewFooter />
       </div>
     </>
