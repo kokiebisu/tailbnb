@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import { TweenLite } from 'gsap';
+import { TweenLite, Power3 } from 'gsap';
 
 export const BottomNav = ({ bottomSwitch }) => {
   useEffect(() => {
@@ -8,7 +8,7 @@ export const BottomNav = ({ bottomSwitch }) => {
   }, []);
 
   const hideBar = () => {
-    TweenLite.to(navRef, 2, { bottom: 50 });
+    TweenLite.to(navRef, 2, { bottom: 50, ease: Power3.easeIn });
   };
 
   const [selected, setSelected] = useState({
@@ -22,8 +22,7 @@ export const BottomNav = ({ bottomSwitch }) => {
   return (
     <div
       ref={(el) => (navRef = el)}
-      style={{ bottom: -50 }}
-      className='relative w-full bg-white h-16 border-t border-gray-400'>
+      className='md:hidden relative w-full bg-white h-16 border-t border-gray-400'>
       <div className='max-w-2xs mx-auto h-full'>
         <div className='h-full flex justify-between items-center'>
           <div className='flex flex-col items-center'>

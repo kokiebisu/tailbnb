@@ -3248,7 +3248,8 @@ const BottomNav = ({
 
   const hideBar = () => {
     gsap__WEBPACK_IMPORTED_MODULE_1__["TweenLite"].to(navRef, 2, {
-      bottom: 50
+      bottom: 50,
+      ease: gsap__WEBPACK_IMPORTED_MODULE_1__["Power3"].easeIn
     });
   };
 
@@ -3263,10 +3264,7 @@ const BottomNav = ({
   let navRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   return __jsx("div", {
     ref: el => navRef = el,
-    style: {
-      bottom: -50
-    },
-    className: "relative w-full bg-white h-16 border-t border-gray-400",
+    className: "md:hidden relative w-full bg-white h-16 border-t border-gray-400",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3278,7 +3276,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 26,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -3286,7 +3284,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 27,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -3294,7 +3292,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 28,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -3302,7 +3300,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 29,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -3317,7 +3315,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 30,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -3325,7 +3323,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 37,
       columnNumber: 17
     }
   }), __jsx("path", {
@@ -3333,14 +3331,14 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 38,
       columnNumber: 17
     }
   }))), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 41,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -3352,7 +3350,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 42,
       columnNumber: 15
     }
   }, "Explore"))), __jsx("div", {
@@ -3360,7 +3358,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 52,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -3368,7 +3366,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 53,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -3383,7 +3381,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 54,
       columnNumber: 15
     }
   }, __jsx("path", {
@@ -3391,14 +3389,14 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 61,
       columnNumber: 17
     }
   }))), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 64,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -3410,7 +3408,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 65,
       columnNumber: 15
     }
   }, "Saved"))), __jsx("div", {
@@ -3418,7 +3416,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 75,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -3426,7 +3424,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 76,
       columnNumber: 13
     }
   }, __jsx("svg", {
@@ -3441,7 +3439,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 77,
       columnNumber: 15
     }
   }, __jsx("circle", {
@@ -3451,7 +3449,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85,
+      lineNumber: 84,
       columnNumber: 17
     }
   }), __jsx("path", {
@@ -3459,14 +3457,14 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 85,
       columnNumber: 17
     }
   }))), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
+      lineNumber: 88,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -3478,7 +3476,7 @@ const BottomNav = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 89,
       columnNumber: 15
     }
   }, "Login"))))));
@@ -8549,15 +8547,18 @@ const SectionOverflow = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.tsx");
-/* harmony import */ var _components_functions_FrontLines__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/functions/FrontLines */ "./src/components/functions/FrontLines.jsx");
-/* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
-/* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
-/* harmony import */ var _components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/modals/MenuModal */ "./src/components/modals/MenuModal.jsx");
-/* harmony import */ var _components_functions_Notice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/functions/Notice */ "./src/components/functions/Notice.jsx");
-/* harmony import */ var _components_layout_BottomNav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/layout/BottomNav */ "./src/components/layout/BottomNav.jsx");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout/Header */ "./src/components/layout/Header.tsx");
+/* harmony import */ var _components_functions_FrontLines__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/functions/FrontLines */ "./src/components/functions/FrontLines.jsx");
+/* harmony import */ var _components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/containers/Explore */ "./src/components/containers/Explore.tsx");
+/* harmony import */ var _components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout/NewFooter */ "./src/components/layout/NewFooter.tsx");
+/* harmony import */ var _components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/modals/MenuModal */ "./src/components/modals/MenuModal.jsx");
+/* harmony import */ var _components_functions_Notice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/functions/Notice */ "./src/components/functions/Notice.jsx");
+/* harmony import */ var _components_layout_BottomNav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/layout/BottomNav */ "./src/components/layout/BottomNav.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
 
  // Component
 
@@ -8580,17 +8581,17 @@ const Home = () => {
     1: setBottom
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', lodash__WEBPACK_IMPORTED_MODULE_1___default.a.debounce(handleScroll, 300));
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   const handleScroll = e => {
-    const bottom = document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight;
+    const isBottom = document.documentElement.scrollHeight - document.documentElement.scrollTop > document.documentElement.clientHeight + 1;
+    console.log(isBottom);
 
-    if (bottom) {
-      setBottom(false);
-    } else {
-      setBottom(true);
+    if (!isBottom) {
+      setBottom(!false);
+      return;
     }
   };
 
@@ -8598,67 +8599,67 @@ const Home = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 41,
       columnNumber: 7
     }
-  }, __jsx(_components_layout_Header__WEBPACK_IMPORTED_MODULE_1__["Header"], {
+  }, __jsx(_components_layout_Header__WEBPACK_IMPORTED_MODULE_2__["Header"], {
     switchMenuModal: () => setMenuModal(!menuModal),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 42,
       columnNumber: 9
     }
-  }), menuModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_5__["MenuModal"], {
+  }), menuModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_6__["MenuModal"], {
     switchMenuModal: () => setMenuModal(!menuModal),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 45,
       columnNumber: 13
     }
-  })) : null, __jsx(_components_functions_FrontLines__WEBPACK_IMPORTED_MODULE_2__["FrontLines"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 9
-    }
-  }), __jsx(_components_functions_Notice__WEBPACK_IMPORTED_MODULE_6__["Notice"], {
+  })) : null, __jsx(_components_functions_FrontLines__WEBPACK_IMPORTED_MODULE_3__["FrontLines"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48,
       columnNumber: 9
     }
-  }), __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_3__["Explore"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49,
-      columnNumber: 9
-    }
-  }), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_4__["NewFooter"], {
+  }), __jsx(_components_functions_Notice__WEBPACK_IMPORTED_MODULE_7__["Notice"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50,
       columnNumber: 9
     }
-  }), bottom ? __jsx("div", {
-    className: "fixed bottom-0 z-50 w-full",
+  }), __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__["Explore"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 9
+    }
+  }), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_5__["NewFooter"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52,
+      columnNumber: 9
+    }
+  }), bottom ? __jsx("div", {
+    className: "fixed bottom-0 z-100 w-full md:hidden",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
       columnNumber: 11
     }
-  }, __jsx(_components_layout_BottomNav__WEBPACK_IMPORTED_MODULE_7__["BottomNav"], {
+  }, __jsx(_components_layout_BottomNav__WEBPACK_IMPORTED_MODULE_8__["BottomNav"], {
     bottomSwitch: () => setBottom(!bottom),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 55,
       columnNumber: 13
     }
   })) : null));

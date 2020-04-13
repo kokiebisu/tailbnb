@@ -41,8 +41,15 @@
   src: url('/fonts/circular-std-medium.woff');
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  @apply antialiased;
+  height: 100%;
+  overflow: auto;
+  /* @apply antialiased; */
+  overscroll-behavior: none;
 }
 
 @tailwind components;
