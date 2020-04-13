@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import _ from 'lodash';
 
 // Component
 import { Header } from '../components/layout/Header';
@@ -18,19 +19,20 @@ const Home = () => {
   const [bottom, setBottom] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', _.debounce(handleScroll, 300));
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   const handleScroll = (e) => {
-    const bottom =
+    const isBottom =
       document.documentElement.scrollHeight -
-        document.documentElement.scrollTop ===
-      document.documentElement.clientHeight;
-    if (bottom) {
-      setBottom(false);
-    } else {
-      setBottom(true);
+        document.documentElement.scrollTop >
+      document.documentElement.clientHeight + 1;
+    console.log(isBottom);
+
+    if (!isBottom) {
+      setBottom(!false);
+      return;
     }
   };
 
@@ -49,7 +51,7 @@ const Home = () => {
         <Explore />
         <NewFooter />
         {bottom ? (
-          <div className='fixed bottom-0 z-50 w-full'>
+          <div className='fixed bottom-0 z-100 w-full md:hidden'>
             <BottomNav bottomSwitch={() => setBottom(!bottom)} />
           </div>
         ) : null}
