@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 
 export const NewFooter: React.FC<{}> = () => {
   return (
@@ -103,20 +104,22 @@ export const NewFooter: React.FC<{}> = () => {
             </h3>
             <ul className='leading-7 md:flex flex-wrap lg:block'>
               <li className='md:w-1/3 lg:w-full'>
-                <a
-                  style={{ fontFamily: 'airbnb-book' }}
-                  className='text-gray-850 text-sm'
-                  href=''>
-                  Host your home
-                </a>
+                <Link href='/host/homes'>
+                  <a
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-gray-850 text-sm'>
+                    Host your home
+                  </a>
+                </Link>
               </li>
               <li className='md:w-1/3 lg:w-full'>
-                <a
-                  style={{ fontFamily: 'airbnb-book' }}
-                  className='text-gray-850 text-sm'
-                  href=''>
-                  Host an experience
-                </a>
+                <Link href='/host/experiences'>
+                  <a
+                    style={{ fontFamily: 'airbnb-book' }}
+                    className='text-gray-850 text-sm'>
+                    Host an experience
+                  </a>
+                </Link>
               </li>
               <li className='md:w-1/3 lg:w-full'>
                 <a
