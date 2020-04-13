@@ -8,7 +8,7 @@ import { MovePage } from '../../components/layout/MovePage';
 
 // Component
 import { Travel } from '../../components/functions/Travel';
-import { THundredPlus } from '../../components/containers/THundredPlus';
+import THundredPlus from '../../components/containers/THundredPlus';
 
 // Next
 import { NextPage } from 'next';
