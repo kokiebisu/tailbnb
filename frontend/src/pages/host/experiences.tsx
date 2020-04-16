@@ -28,7 +28,7 @@ const experiences: NextPage<{}> = () => {
 
   return (
     <>
-      <div className='relative top-0 bg-white w-screen z-50'>
+      <div className='relative top-0 bg-white w-screen z-100'>
         <ExperiencesHeader switchMenuModal={changeMenuModal} />
       </div>
       {menuModal ? <HostMenuModal switchMenuModal={changeMenuModal} /> : null}

@@ -4,9 +4,8 @@ import { useState } from 'react';
 export const OptionModal = ({
   switchLanguageModal,
   switchCurrencyModal,
-  currency
+  currency,
 }) => {
-  console.log('called');
   return (
     <>
       <div className='rounded-xl hidden bg-white md:block shadow-lg'>

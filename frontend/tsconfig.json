@@ -45,6 +45,7 @@
     "src/components/modals/OptionModal.ksx",
     "src/pages/stay/1.jsx",
     "src/pages/index.jsx",
-    "src/components/containers/THundredPlus.jsx"
+    "src/components/containers/THundredPlus.jsx",
+    "src/components/hostexperiences/layout/ExperiencesHeader.jsx"
   ]
 }

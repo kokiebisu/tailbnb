@@ -316,23 +316,26 @@ l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z'
       )}
       {helpModal ? <HelpModal setHelpModal={switchHelpModal} /> : null}
       {currencyModal ? (
-        <div className='absolute w-screen md:min-h-104 z-50'>
-          {typeof window !== 'undefined' ? configureScroll('hidden') : null}
-          <CurrencyModal
-            location='Canada'
-            setCurrencyModal={switchCurrencyModal}
-            setCurrency={switchCurrency}
-          />
-        </div>
+        <>
+          <div className='absolute w-screen md:min-h-104 z-50'>
+            <CurrencyModal
+              location='Canada'
+              setCurrencyModal={switchCurrencyModal}
+              setCurrency={switchCurrency}
+            />
+          </div>
+        </>
       ) : null}
       {languageModal ? (
-        <div className='absolute w-screen md:min-h-104 z-50'>
+        <>
           {typeof window !== 'undefined' ? configureScroll('hidden') : null}
-          <LanguageModal
-            location='Canada'
-            setLanguageModal={switchLanguageModal}
-          />
-        </div>
+          <div className='absolute w-screen md:min-h-104 z-50'>
+            <LanguageModal
+              location='Canada'
+              setLanguageModal={switchLanguageModal}
+            />
+          </div>
+        </>
       ) : null}
       {registerModal ? (
         <>
