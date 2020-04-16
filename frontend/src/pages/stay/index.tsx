@@ -35,7 +35,7 @@ const Stay: NextPage = () => {
           category='stay'
           page={1}
           previousPage={0}
-          nextPage={1}
+          nextPage={2}
           first={true}
           last={false}
         />

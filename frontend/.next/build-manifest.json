@@ -20,11 +20,11 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/host/experiences": [
+    "/stay": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/host/homes": [
+    "/stay/2": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
