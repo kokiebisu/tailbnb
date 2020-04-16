@@ -3951,7 +3951,18 @@ const ExploreHeader = ({
       lineNumber: 331,
       columnNumber: 11
     }
-  })) : null, registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
+  })) : null, registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx("div", {
+    style: {
+      top: 40
+    },
+    className: "absolute z-50",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 340,
+      columnNumber: 11
+    }
+  }, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
     setRegisterModal: setRegisterModal,
     type: "Log in",
     nottype: "Sign up",
@@ -3961,7 +3972,7 @@ const ExploreHeader = ({
     __source: {
       fileName: _jsxFileName,
       lineNumber: 342,
-      columnNumber: 13
+      columnNumber: 15
     }
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
     setRegisterModal: setRegisterModal,
@@ -3973,9 +3984,9 @@ const ExploreHeader = ({
     __source: {
       fileName: _jsxFileName,
       lineNumber: 350,
-      columnNumber: 13
+      columnNumber: 15
     }
-  })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null));
+  }))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null));
 };
 const ShadowWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   border-radius: 24px;

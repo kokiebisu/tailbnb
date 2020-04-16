@@ -45851,7 +45851,18 @@ var ExploreHeader = function ExploreHeader(_ref) {
       lineNumber: 331,
       columnNumber: 11
     }
-  })) : null, registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_7__["RegisterModal"], {
+  })) : null, registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx("div", {
+    style: {
+      top: 40
+    },
+    className: "absolute z-50",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 340,
+      columnNumber: 11
+    }
+  }, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_7__["RegisterModal"], {
     setRegisterModal: setRegisterModal,
     type: "Log in",
     nottype: "Sign up",
@@ -45861,7 +45872,7 @@ var ExploreHeader = function ExploreHeader(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 342,
-      columnNumber: 13
+      columnNumber: 15
     }
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_7__["RegisterModal"], {
     setRegisterModal: setRegisterModal,
@@ -45873,9 +45884,9 @@ var ExploreHeader = function ExploreHeader(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 350,
-      columnNumber: 13
+      columnNumber: 15
     }
-  })) : __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('auto') : undefined));
+  }))) : __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('auto') : undefined));
 };
 var ShadowWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
 
