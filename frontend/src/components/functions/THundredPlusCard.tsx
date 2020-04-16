@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface Prop {
   host_is_superhost: string;
-  img: string;
+  picture_url: string;
   size: string;
   country: string;
   name: string;
@@ -13,13 +13,13 @@ interface Prop {
 
 export const THundredPlusCard: React.FC<Prop> = ({
   host_is_superhost,
-  img,
+  picture_url,
   size,
   country,
   name,
   price,
   reviews_per_month,
-  number_of_reviews
+  number_of_reviews,
 }) => {
   const renderhost = (host_is_superhost: string) => {
     if (host_is_superhost == 't') {
@@ -64,7 +64,7 @@ export const THundredPlusCard: React.FC<Prop> = ({
           </svg>
         </div>
 
-        <img className='w-full rounded' src={img} />
+        <img className='w-full rounded' src={picture_url} />
       </div>
       <div className='flex flex-wrap items-center justify-between'>
         {renderhost(host_is_superhost)}

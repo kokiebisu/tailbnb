@@ -2256,29 +2256,30 @@ const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
 
 /***/ }),
 
-/***/ "./src/components/containers/THundredPlus.tsx":
+/***/ "./src/components/containers/THundredPlus.jsx":
 /*!****************************************************!*\
-  !*** ./src/components/containers/THundredPlus.tsx ***!
+  !*** ./src/components/containers/THundredPlus.jsx ***!
   \****************************************************/
-/*! exports provided: THundredPlus */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THundredPlus", function() { return THundredPlus; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
 /* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-spinners/PulseLoader */ "react-spinners/PulseLoader");
-/* harmony import */ var react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _functions_THundredPlusCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../functions/THundredPlusCard */ "./src/components/functions/THundredPlusCard.tsx");
-/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
-/* harmony import */ var _wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../wrapper/ExploreSection */ "./src/components/wrapper/ExploreSection.tsx");
-var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/THundredPlus.tsx";
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-sizeme */ "react-sizeme");
+/* harmony import */ var react_sizeme__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_sizeme__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util/RenderSkeleton */ "./src/util/RenderSkeleton.js");
+/* harmony import */ var _functions_THundredPlusCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/THundredPlusCard */ "./src/components/functions/THundredPlusCard.tsx");
+/* harmony import */ var _ShowAll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ShowAll */ "./src/components/ShowAll.tsx");
+/* harmony import */ var _wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../wrapper/ExploreSection */ "./src/components/wrapper/ExploreSection.tsx");
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/containers/THundredPlus.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
 
 
 
@@ -2302,85 +2303,100 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
       picture_url
     }
   }
-`;
-const THundredPlus = () => {
+`; // interface StayData {
+//   stays: Stay[];
+// }
+// interface Stay {
+//   id: string;
+//   host_is_superhost: string;
+//   size: string;
+//   country: string;
+//   name: string;
+//   price: number;
+//   reviews_per_month: number;
+//   number_of_reviews: number;
+//   picture_url: string;
+// }
+
+const renderContent = (data, number) => {
+  var content = [];
+
+  for (let i = 0; i < number; i++) {
+    console.log(data);
+    content.push(__jsx("div", {
+      className: "pb-5",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53,
+        columnNumber: 7
+      }
+    }, __jsx(_functions_THundredPlusCard__WEBPACK_IMPORTED_MODULE_5__["THundredPlusCard"], {
+      key: i,
+      id: data === null || data === void 0 ? void 0 : data.stays[i].id,
+      host_is_superhost: data === null || data === void 0 ? void 0 : data.stays[i].host_is_superhost,
+      country: data === null || data === void 0 ? void 0 : data.stays[i].country,
+      name: data === null || data === void 0 ? void 0 : data.stays[i].name,
+      price: data === null || data === void 0 ? void 0 : data.stays[i].price,
+      reviews_per_month: data === null || data === void 0 ? void 0 : data.stays[i].reviews_per_month,
+      picture_url: data === null || data === void 0 ? void 0 : data.stays[i].picture_url,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54,
+        columnNumber: 9
+      }
+    })));
+  }
+
+  return content;
+};
+
+const THundredPlus = ({
+  size
+}) => {
   const {
     loading,
     error,
     data
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_1__["useQuery"])(staydata);
   if (error) return `Error! ${error.message}`;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_6__["ExploreSection"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_wrapper_ExploreSection__WEBPACK_IMPORTED_MODULE_7__["ExploreSection"], {
     title: "300+ places to stay",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "flex flex-wrap items-start justify-start w-full",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: undefined
+      lineNumber: 77,
+      columnNumber: 7
+    }
   }, loading ? __jsx("div", {
-    className: "flex justify-center items-center w-full py-20",
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: undefined
-  }, __jsx(react_spinners_PulseLoader__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    size: 10,
-    color: '#008489',
+      lineNumber: 79,
+      columnNumber: 11
+    }
+  }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonHorizontal"])(4, true) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonHorizontal"])(3, true) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_4__["renderSkeletonHorizontal"])(8, true) : null) : data && __jsx("div", {
+    className: "grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
-  })) : data && data.stays.map(({
-    host_is_superhost,
-    size,
-    country,
-    name,
-    price,
-    reviews_per_month,
-    number_of_reviews,
-    picture_url
-  }, index) => {
-    return __jsx("div", {
-      className: "lg:w-1/3 xl:w-1/4 pb-5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: undefined
-    }, __jsx(_functions_THundredPlusCard__WEBPACK_IMPORTED_MODULE_4__["THundredPlusCard"], {
-      key: index,
-      img: picture_url,
-      host_is_superhost: host_is_superhost,
-      size: size,
-      country: country,
-      name: name,
-      price: price,
-      reviews_per_month: reviews_per_month,
-      number_of_reviews: number_of_reviews,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: undefined
-    }));
-  })), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_5__["ShowAll"], {
+      lineNumber: 94,
+      columnNumber: 13
+    }
+  }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 6) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 6) : null, size.width >= 1529 ? renderContent(data, 8) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_6__["ShowAll"], {
     title: "Show(2000+)",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: undefined
+      lineNumber: 109,
+      columnNumber: 9
+    }
   })));
 };
+
+/* harmony default export */ __webpack_exports__["default"] = (react_sizeme__WEBPACK_IMPORTED_MODULE_3___default()()(THundredPlus));
 
 /***/ }),
 
@@ -2662,7 +2678,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 const THundredPlusCard = ({
   host_is_superhost,
-  img,
+  picture_url,
   size,
   country,
   name,
@@ -2674,141 +2690,158 @@ const THundredPlusCard = ({
     if (host_is_superhost == 't') {
       return __jsx("div", {
         className: "md:flex md:flex-wrap md:items-center md:justify-start",
+        __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: undefined
+          lineNumber: 27,
+          columnNumber: 9
+        }
       }, __jsx("p", {
         className: "uppercase mt-3 md:mt-0 border border-gray-800 rounded font-semibold px-1 mt-1 text-xs",
+        __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: undefined
+          lineNumber: 28,
+          columnNumber: 11
+        }
       }, "Superhost"), __jsx("p", {
         style: {
           fontFamily: 'airbnb-book'
         },
         className: "sm:ml-2 mt-1 text-sm sm:my-2 font-light text-gray-650",
+        __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: undefined
+          lineNumber: 31,
+          columnNumber: 11
+        }
       }, country));
     }
 
     return __jsx("div", {
       className: "md:flex md:flex-wrap md:items-center md:justify-start",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: undefined
+        lineNumber: 41,
+        columnNumber: 7
+      }
     }, __jsx("p", {
       style: {
         fontFamily: 'airbnb-book'
       },
       className: "mt-3 text-sm sm:my-2 font-light text-gray-650",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
-      },
-      __self: undefined
+        lineNumber: 42,
+        columnNumber: 9
+      }
     }, size, __jsx("span", {
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
-      },
-      __self: undefined
+        lineNumber: 46,
+        columnNumber: 11
+      }
     }, " \xB7 "), country));
   };
 
   return __jsx("div", {
     className: "w-30/31",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: undefined
+      lineNumber: 54,
+      columnNumber: 5
+    }
   }, __jsx("div", {
     className: "relative",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: undefined
+      lineNumber: 55,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     style: {
       height: 30,
       width: 30
     },
     className: "flex items-center justify-center absolute z-10 right-0 mr-2 mt-2 mr-1 bg-gray-300 shadow-lg rounded-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
+      lineNumber: 56,
+      columnNumber: 9
+    }
   }, __jsx("svg", {
     className: "h-4 w-4",
     viewBox: "0 -50 512 512",
     xmlns: "http://www.w3.org/2000/svg",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: undefined
+      lineNumber: 59,
+      columnNumber: 11
+    }
   }, __jsx("path", {
     d: "m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
+      lineNumber: 63,
+      columnNumber: 13
+    }
   }))), __jsx("img", {
     className: "w-full rounded",
-    src: img,
+    src: picture_url,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: undefined
+      lineNumber: 67,
+      columnNumber: 9
+    }
   })), __jsx("div", {
     className: "flex flex-wrap items-center justify-between",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: undefined
+      lineNumber: 69,
+      columnNumber: 7
+    }
   }, renderhost(host_is_superhost)), __jsx("p", {
     className: "my-1",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: undefined
+      lineNumber: 72,
+      columnNumber: 7
+    }
   }, name), __jsx("p", {
     className: "tracking-wide",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
+      lineNumber: 73,
+      columnNumber: 7
+    }
   }, __jsx("span", {
     className: "font-bold",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
+      lineNumber: 74,
+      columnNumber: 9
+    }
   }, "$", price, " CAD"), "/night"), __jsx("div", {
     className: "flex items-center justify-start flex-wrap",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: undefined
+      lineNumber: 76,
+      columnNumber: 7
+    }
   }, __jsx("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
@@ -2819,44 +2852,49 @@ const THundredPlusCard = ({
     style: {
       fill: '#F5385D'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: undefined
+      lineNumber: 77,
+      columnNumber: 9
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: undefined
+      lineNumber: 85,
+      columnNumber: 11
+    }
   }, __jsx("path", {
     d: "M36.683,16.339l-7.567,7.377l1.786,10.417c0.128,0.75-0.182,1.509-0.797,1.957c-0.348,0.253-0.762,0.382-1.176,0.382 c-0.318,0-0.638-0.076-0.931-0.23l-9.355-4.918l-9.355,4.918c-0.674,0.355-1.49,0.295-2.107-0.15 c-0.615-0.448-0.924-1.206-0.795-1.957l1.787-10.417L0.604,16.34c-0.547-0.531-0.741-1.326-0.508-2.05 c0.236-0.724,0.861-1.251,1.615-1.361l10.459-1.521l4.68-9.478c0.335-0.684,1.031-1.116,1.792-1.116 c0.763,0,1.456,0.432,1.793,1.115l4.68,9.478l10.461,1.521c0.752,0.109,1.379,0.637,1.611,1.361 C37.425,15.013,37.226,15.808,36.683,16.339z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: undefined
+      lineNumber: 86,
+      columnNumber: 13
+    }
   }))), __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "pl-1 text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: undefined
+      lineNumber: 96,
+      columnNumber: 9
+    }
   }, reviews_per_month), __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-650",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: undefined
+      lineNumber: 99,
+      columnNumber: 9
+    }
   }, "\xA0 (", number_of_reviews, ")")));
 };
 
@@ -3878,15 +3916,15 @@ const ExploreHeader = ({
       lineNumber: 317,
       columnNumber: 20
     }
-  }) : null, currencyModal ? __jsx("div", {
+  }) : null, currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     className: "absolute w-screen md:min-h-104 z-50",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319,
-      columnNumber: 9
+      lineNumber: 320,
+      columnNumber: 11
     }
-  }, false ? undefined : null, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_8__["CurrencyModal"], {
+  }, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_8__["CurrencyModal"], {
     location: "Canada",
     setCurrencyModal: switchCurrencyModal,
     setCurrency: switchCurrency,
@@ -3894,26 +3932,37 @@ const ExploreHeader = ({
     __source: {
       fileName: _jsxFileName,
       lineNumber: 321,
-      columnNumber: 11
+      columnNumber: 13
     }
-  })) : null, languageModal ? __jsx("div", {
+  }))) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx("div", {
     className: "absolute w-screen md:min-h-104 z-50",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329,
-      columnNumber: 9
+      lineNumber: 332,
+      columnNumber: 11
     }
-  }, false ? undefined : null, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_7__["LanguageModal"], {
+  }, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_7__["LanguageModal"], {
     location: "Canada",
     setLanguageModal: switchLanguageModal,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331,
+      lineNumber: 333,
+      columnNumber: 13
+    }
+  }))) : null, registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx("div", {
+    style: {
+      top: 40
+    },
+    className: "absolute z-50",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 343,
       columnNumber: 11
     }
-  })) : null, registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
+  }, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
     setRegisterModal: setRegisterModal,
     type: "Log in",
     nottype: "Sign up",
@@ -3922,8 +3971,8 @@ const ExploreHeader = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342,
-      columnNumber: 13
+      lineNumber: 345,
+      columnNumber: 15
     }
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
     setRegisterModal: setRegisterModal,
@@ -3934,10 +3983,10 @@ const ExploreHeader = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350,
-      columnNumber: 13
+      lineNumber: 353,
+      columnNumber: 15
     }
-  })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null));
+  }))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null));
 };
 const ShadowWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
   border-radius: 24px;
@@ -4077,39 +4126,44 @@ const MovePage = ({
 }) => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     className: "px-12 md:px-0 md:max-w-md lg:max-w-sm mx-auto",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
+      lineNumber: 14,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     className: "flex justify-between",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
+      lineNumber: 15,
+      columnNumber: 9
+    }
   }, first ? __jsx("div", {
     className: "flex items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: undefined
+      lineNumber: 17,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "p-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
+      lineNumber: 18,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     className: "w-3 h-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
+      lineNumber: 19,
+      columnNumber: 17
+    }
   }, __jsx("svg", {
     style: {
       fill: 'rgb(221, 221, 221)'
@@ -4117,75 +4171,85 @@ const MovePage = ({
     className: "w-full h-full",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 492 492",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
+      lineNumber: 20,
+      columnNumber: 19
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
+      lineNumber: 25,
+      columnNumber: 21
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
+      lineNumber: 26,
+      columnNumber: 23
+    }
   }, __jsx("path", {
     d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
+      lineNumber: 27,
+      columnNumber: 25
+    }
   })))))), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
+      lineNumber: 38,
+      columnNumber: 15
+    }
   }, __jsx("h3", {
     style: {
       color: 'rgb(221, 221, 221)',
       fontFamily: 'airbnb-medium'
     },
     className: "underline",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
+      lineNumber: 39,
+      columnNumber: 17
+    }
   }, "Previous page"))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, previousPage == 1 ? __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: `/${category}`,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
+      lineNumber: 52,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "cursor-pointer flex items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: undefined
+      lineNumber: 53,
+      columnNumber: 19
+    }
   }, __jsx("div", {
     className: "p-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: undefined
+      lineNumber: 54,
+      columnNumber: 21
+    }
   }, __jsx("div", {
     className: "w-3 h-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
-    },
-    __self: undefined
+      lineNumber: 55,
+      columnNumber: 23
+    }
   }, __jsx("svg", {
     style: {
       fill: 'rgb(221, 221, 221)'
@@ -4193,156 +4257,177 @@ const MovePage = ({
     className: "w-full h-full",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 492 492",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
+      lineNumber: 56,
+      columnNumber: 25
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: undefined
+      lineNumber: 61,
+      columnNumber: 27
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: undefined
+      lineNumber: 62,
+      columnNumber: 29
+    }
   }, __jsx("path", {
     d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
+      lineNumber: 63,
+      columnNumber: 31
+    }
   })))))), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
+      lineNumber: 74,
+      columnNumber: 21
+    }
   }, __jsx("h3", {
     style: {
       color: 'rgb(221, 221, 221)',
       fontFamily: 'airbnb-medium'
     },
     className: "underline",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: undefined
+      lineNumber: 75,
+      columnNumber: 23
+    }
   }, "Previous page")))) : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: `/page/${page - 1}`,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: undefined
+      lineNumber: 87,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "cursor-pointer flex items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: undefined
+      lineNumber: 88,
+      columnNumber: 19
+    }
   }, __jsx("div", {
     className: "p-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: undefined
+      lineNumber: 89,
+      columnNumber: 21
+    }
   }, __jsx("div", {
     className: "w-3 h-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: undefined
+      lineNumber: 90,
+      columnNumber: 23
+    }
   }, __jsx("svg", {
     className: "w-full h-full",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 492 492",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: undefined
+      lineNumber: 91,
+      columnNumber: 25
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: undefined
+      lineNumber: 95,
+      columnNumber: 27
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: undefined
+      lineNumber: 96,
+      columnNumber: 29
+    }
   }, __jsx("path", {
     d: "M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12 C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084 c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864 l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: undefined
+      lineNumber: 97,
+      columnNumber: 31
+    }
   })))))), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
-    },
-    __self: undefined
+      lineNumber: 108,
+      columnNumber: 21
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "underline",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
-    },
-    __self: undefined
+      lineNumber: 109,
+      columnNumber: 23
+    }
   }, "Previous page"))))), last ? __jsx("div", {
     className: "cursor-pointer flex items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
-    },
-    __self: undefined
+      lineNumber: 121,
+      columnNumber: 13
+    }
   }, __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
-    },
-    __self: undefined
+      lineNumber: 122,
+      columnNumber: 15
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "underline",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
-    },
-    __self: undefined
+      lineNumber: 123,
+      columnNumber: 17
+    }
   }, "Next page")), __jsx("a", {
     className: "p-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: undefined
+      lineNumber: 129,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     className: "w-3 h-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: undefined
+      lineNumber: 130,
+      columnNumber: 17
+    }
   }, __jsx("svg", {
     style: {
       fill: '#F2F2F2'
@@ -4350,75 +4435,85 @@ const MovePage = ({
     className: "w-full h-full",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 492.004 492.004",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
-    },
-    __self: undefined
+      lineNumber: 131,
+      columnNumber: 19
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
-    },
-    __self: undefined
+      lineNumber: 136,
+      columnNumber: 21
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
-    },
-    __self: undefined
+      lineNumber: 137,
+      columnNumber: 23
+    }
   }, __jsx("path", {
     d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
-    },
-    __self: undefined
+      lineNumber: 138,
+      columnNumber: 25
+    }
   }))))))) : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: `/page/${nextPage}`,
-    as: `/page/${page + 1}`,
+    href: `/${category}/${nextPage}`,
+    as: `/${category}/${page + 1}`,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
-    },
-    __self: undefined
+      lineNumber: 151,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "cursor-pointer flex items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
-    },
-    __self: undefined
+      lineNumber: 154,
+      columnNumber: 15
+    }
   }, __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
-    },
-    __self: undefined
+      lineNumber: 155,
+      columnNumber: 17
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "underline",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
-    },
-    __self: undefined
+      lineNumber: 156,
+      columnNumber: 19
+    }
   }, "Next page")), __jsx("a", {
     className: "p-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
-    },
-    __self: undefined
+      lineNumber: 162,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "w-3 h-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
-    },
-    __self: undefined
+      lineNumber: 163,
+      columnNumber: 19
+    }
   }, __jsx("svg", {
     style: {
       fill: '#484848'
@@ -4426,60 +4521,68 @@ const MovePage = ({
     className: "w-full h-full",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 492.004 492.004",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
-    },
-    __self: undefined
+      lineNumber: 164,
+      columnNumber: 21
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
-    },
-    __self: undefined
+      lineNumber: 169,
+      columnNumber: 23
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
-    },
-    __self: undefined
+      lineNumber: 170,
+      columnNumber: 25
+    }
   }, __jsx("path", {
     d: "M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12 c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028 c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265 c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
-    },
-    __self: undefined
+      lineNumber: 171,
+      columnNumber: 27
+    }
   })))))))))), __jsx("div", {
     className: "mt-10 px-12 md:px-0 md:max-w-md lg:max-w-lg mx-auto",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
-    },
-    __self: undefined
+      lineNumber: 187,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     className: "flex justify-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
-    },
-    __self: undefined
+      lineNumber: 188,
+      columnNumber: 9
+    }
   }, __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
-    },
-    __self: undefined
+      lineNumber: 189,
+      columnNumber: 11
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-xs text-gray-650",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
-    },
-    __self: undefined
+      lineNumber: 190,
+      columnNumber: 13
+    }
   }, "Enter dates to see full pricing. Additional fees apply. Taxes may be added.")))));
 };
 
@@ -4497,472 +4600,543 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewFooter", function() { return NewFooter; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/components/layout/NewFooter.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
+
 
 const NewFooter = () => {
   return __jsx("div", {
     className: "block bg-white w-full border-t border-gray-300",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
+      lineNumber: 6,
+      columnNumber: 5
+    }
   }, __jsx("div", {
     className: "px-6 md:px-10 xl:px-32 mx-auto py-6 sm:py-12",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
+      lineNumber: 7,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     className: "hidden md:block lg:flex lg:flex-wrap lg:items-start lg::w-full md:mx-6 lg:mx-0 md:justify-between md:pb-1 lg:pb-10 lg:border-b md:border-gray-300",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
+      lineNumber: 8,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     className: "lg:w-1/4 md:border-b border-gray-300 lg:border-none pb-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
+      lineNumber: 9,
+      columnNumber: 11
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
     className: "text-gray-900 text-xs mb-2 uppercase",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
+      lineNumber: 10,
+      columnNumber: 13
+    }
   }, "About"), __jsx("ul", {
     className: "leading-7 md:flex flex-wrap lg:block",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
+      lineNumber: 15,
+      columnNumber: 13
+    }
   }, __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
+      lineNumber: 16,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
+      lineNumber: 17,
+      columnNumber: 17
+    }
   }, "Diversity & Belonging")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: undefined
+      lineNumber: 24,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: undefined
+      lineNumber: 25,
+      columnNumber: 17
+    }
   }, "Accessibility")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: undefined
+      lineNumber: 32,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: undefined
+      lineNumber: 33,
+      columnNumber: 17
+    }
   }, "Trust & Safety")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
+      lineNumber: 40,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
+      lineNumber: 41,
+      columnNumber: 17
+    }
   }, "Airbnb Citizen")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
+      lineNumber: 48,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: undefined
+      lineNumber: 49,
+      columnNumber: 17
+    }
   }, "Newsroom")))), __jsx("div", {
     className: "lg:w-1/4 md:border-b border-gray-300 lg:border-none md:pt-6 md:pb-4 lg:pt-0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: undefined
+      lineNumber: 58,
+      columnNumber: 11
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
     className: "text-gray-900 text-xs mb-2 uppercase",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: undefined
+      lineNumber: 59,
+      columnNumber: 13
+    }
   }, "Community"), __jsx("ul", {
     className: "leading-7 md:flex flex-wrap lg:block",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
+      lineNumber: 64,
+      columnNumber: 13
+    }
   }, __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
+      lineNumber: 65,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: undefined
+      lineNumber: 66,
+      columnNumber: 17
+    }
   }, "Airbnb Magazine")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: undefined
+      lineNumber: 73,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
+      lineNumber: 74,
+      columnNumber: 17
+    }
   }, "Airbnb for Work")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: undefined
+      lineNumber: 81,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: undefined
+      lineNumber: 82,
+      columnNumber: 17
+    }
   }, "Invite friends")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: undefined
+      lineNumber: 89,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: undefined
+      lineNumber: 90,
+      columnNumber: 17
+    }
   }, "Careers")))), __jsx("div", {
     className: "lg:w-1/4 md:border-b border-gray-300 lg:border-none md:pt-6 md:pb-4 lg:pt-0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: undefined
+      lineNumber: 99,
+      columnNumber: 11
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
     className: "text-gray-900 text-xs mb-2 uppercase",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: undefined
+      lineNumber: 100,
+      columnNumber: 13
+    }
   }, "Host"), __jsx("ul", {
     className: "leading-7 md:flex flex-wrap lg:block",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
-    },
-    __self: undefined
+      lineNumber: 105,
+      columnNumber: 13
+    }
   }, __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: undefined
+      lineNumber: 106,
+      columnNumber: 15
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/host/homes",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107,
+      columnNumber: 17
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
-    href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: undefined
-  }, "Host your home")), __jsx("li", {
+      lineNumber: 108,
+      columnNumber: 19
+    }
+  }, "Host your home"))), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
-    },
-    __self: undefined
+      lineNumber: 115,
+      columnNumber: 15
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/host/experiences",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116,
+      columnNumber: 17
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
-    href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
-    },
-    __self: undefined
-  }, "Host an experience")), __jsx("li", {
+      lineNumber: 117,
+      columnNumber: 19
+    }
+  }, "Host an experience"))), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
-    },
-    __self: undefined
+      lineNumber: 124,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
-    },
-    __self: undefined
+      lineNumber: 125,
+      columnNumber: 17
+    }
   }, "Responsible hosting")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: undefined
+      lineNumber: 132,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: undefined
+      lineNumber: 133,
+      columnNumber: 17
+    }
   }, "Refer hosts")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
-    },
-    __self: undefined
+      lineNumber: 140,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
-    },
-    __self: undefined
+      lineNumber: 141,
+      columnNumber: 17
+    }
   }, "Open homes")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: undefined
+      lineNumber: 148,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
-    },
-    __self: undefined
+      lineNumber: 149,
+      columnNumber: 17
+    }
   }, "Olympics")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
-    },
-    __self: undefined
+      lineNumber: 156,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
-    },
-    __self: undefined
+      lineNumber: 157,
+      columnNumber: 17
+    }
   }, "Responsible hosting")))), __jsx("div", {
     className: "lg:w-1/4 md:border-b border-gray-300 lg:border-none md:pt-6 md:pb-4 lg:pt-0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
-    },
-    __self: undefined
+      lineNumber: 166,
+      columnNumber: 11
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
     className: "text-gray-900 text-xs mb-2 uppercase",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
-    },
-    __self: undefined
+      lineNumber: 167,
+      columnNumber: 13
+    }
   }, "Support"), __jsx("ul", {
     className: "leading-7 md:flex flex-wrap lg:block",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
-    },
-    __self: undefined
+      lineNumber: 172,
+      columnNumber: 13
+    }
   }, __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
-    },
-    __self: undefined
+      lineNumber: 173,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
-    },
-    __self: undefined
+      lineNumber: 174,
+      columnNumber: 17
+    }
   }, "Help Centre")), __jsx("li", {
     className: "md:w-1/3 lg:w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
-    },
-    __self: undefined
+      lineNumber: 181,
+      columnNumber: 15
+    }
   }, __jsx("a", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-gray-850 text-sm",
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
-    },
-    __self: undefined
+      lineNumber: 182,
+      columnNumber: 17
+    }
   }, "Neighbourhood Support"))))), __jsx("div", {
     className: "md:mt-8 w-full flex flex-col-reverse lg:flex-row md:justify-center lg:justify-between lg:mt-10",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
-    },
-    __self: undefined
+      lineNumber: 193,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     className: "md:flex md:flex-col md:items-center md:items-start lg:flex-row lg:justify-between",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
-    },
-    __self: undefined
+      lineNumber: 194,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     className: "hidden lg:block h-5 w-5 mr-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
-    },
-    __self: undefined
+      lineNumber: 195,
+      columnNumber: 13
+    }
   }, __jsx("svg", {
     viewBox: "0 0 1000 1000",
     role: "presentation",
@@ -4972,121 +5146,137 @@ const NewFooter = () => {
     style: {
       fill: '#222222'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
-    },
-    __self: undefined
+      lineNumber: 196,
+      columnNumber: 15
+    }
   }, __jsx("title", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
-    },
-    __self: undefined
+      lineNumber: 203,
+      columnNumber: 17
+    }
   }, "AirBnb"), __jsx("path", {
     d: "m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
-    },
-    __self: undefined
+      lineNumber: 204,
+      columnNumber: 17
+    }
   }))), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
-    },
-    __self: undefined
+      lineNumber: 207,
+      columnNumber: 13
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-850",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
-    },
-    __self: undefined
+      lineNumber: 208,
+      columnNumber: 15
+    }
   }, "2020 Airbnb, Inc. All rights reserved")), __jsx("div", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "flex md:justify-center text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
-    },
-    __self: undefined
+      lineNumber: 214,
+      columnNumber: 13
+    }
   }, __jsx("p", {
     className: "hidden lg:block",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
-    },
-    __self: undefined
+      lineNumber: 217,
+      columnNumber: 15
+    }
   }, "\xA0\xB7\xA0"), __jsx("a", {
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
-    },
-    __self: undefined
+      lineNumber: 218,
+      columnNumber: 15
+    }
   }, "Privacy"), __jsx("p", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216
-    },
-    __self: undefined
+      lineNumber: 219,
+      columnNumber: 15
+    }
   }, "\xA0\xB7\xA0"), __jsx("a", {
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
-    },
-    __self: undefined
+      lineNumber: 220,
+      columnNumber: 15
+    }
   }, "Terms"), __jsx("p", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
-    },
-    __self: undefined
+      lineNumber: 221,
+      columnNumber: 15
+    }
   }, "\xA0\xB7\xA0"), __jsx("a", {
     href: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
-    },
-    __self: undefined
+      lineNumber: 222,
+      columnNumber: 15
+    }
   }, "Sitemap"))), __jsx("div", {
     className: "mb-3 lg:mb-0 flex md:justify-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
-    },
-    __self: undefined
+      lineNumber: 225,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "flex text-gray-850 text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
-    },
-    __self: undefined
+      lineNumber: 226,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "flex mx-1",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
-    },
-    __self: undefined
+      lineNumber: 229,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     className: "w-4 h-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
-    },
-    __self: undefined
+      lineNumber: 230,
+      columnNumber: 17
+    }
   }, __jsx("svg", {
     className: "relative self-center h-full w-full",
     style: {
@@ -5096,70 +5286,80 @@ const NewFooter = () => {
     },
     viewBox: "0 0 512 512",
     xmlns: "http://www.w3.org/2000/svg",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
-    },
-    __self: undefined
+      lineNumber: 231,
+      columnNumber: 19
+    }
   }, __jsx("path", {
     d: "m256 0c-141.160156 0-256 114.839844-256 256s114.839844 256 256 256 256-114.839844 256-256-114.839844-256-256-256zm-15 125.65625c-22.820312-.980469-45.410156-4.1875-66.980469-9.402344 3.445313-8.164062 7.183594-16.003906 11.214844-23.433594 16.539063-30.476562 36.84375-51.863281 55.765625-59.609374zm0 30.023438v85.320312h-93.691406c1.320312-33.300781 6.996094-66.359375 16.382812-96.429688 24.875 6.265626 50.988282 10.058594 77.308594 11.109376zm0 115.320312v85.320312c-26.320312 1.050782-52.433594 4.84375-77.308594 11.109376-9.386718-30.070313-15.0625-63.128907-16.382812-96.429688zm0 115.34375v92.445312c-18.921875-7.746093-39.226562-29.132812-55.765625-59.609374-4.03125-7.429688-7.769531-15.269532-11.214844-23.433594 21.570313-5.214844 44.15625-8.421875 66.980469-9.402344zm30 0c22.820312.980469 45.410156 4.1875 66.980469 9.402344-3.445313 8.164062-7.183594 16.003906-11.214844 23.433594-16.539063 30.476562-36.84375 51.863281-55.765625 59.609374zm0-30.023438v-85.320312h93.691406c-1.320312 33.300781-6.996094 66.359375-16.382812 96.429688-24.875-6.265626-50.988282-10.058594-77.308594-11.109376zm0-115.320312v-85.320312c26.320312-1.050782 52.433594-4.84375 77.308594-11.109376 9.386718 30.070313 15.0625 63.128907 16.382812 96.429688zm0-115.34375v-92.445312c18.921875 7.746093 39.226562 29.132812 55.765625 59.609374 4.03125 7.429688 7.769531 15.269532 11.214844 23.433594-21.570313 5.214844-44.160157 8.421875-66.980469 9.402344zm82.132812-47.144531c-7.511718-13.84375-15.671874-26.046875-24.273437-36.457031 29.992187 10.242187 57.160156 26.628906 80.007813 47.644531-13.03125 6.980469-27.074219 13.042969-41.847657 18.109375-4.191406-10.179688-8.824219-19.972656-13.886719-29.296875zm-194.265624 0c-5.0625 9.324219-9.695313 19.117187-13.886719 29.296875-14.773438-5.066406-28.816407-11.132813-41.847657-18.109375 22.847657-21.015625 50.015626-37.402344 80.007813-47.644531-8.601563 10.410156-16.757813 22.609374-24.273437 36.457031zm-24.035157 57.492187c-10.238281 32.753906-16.257812 68.460938-17.554687 104.996094h-86.765625c3.210937-48.753906 21.933593-93.339844 51.292969-128.832031 16.292968 9.34375 34.136718 17.335937 53.027343 23.835937zm-17.554687 134.996094c1.296875 36.539062 7.316406 72.242188 17.554687 104.996094-18.890625 6.5-36.734375 14.492187-53.027343 23.835937-29.359376-35.492187-48.082032-80.078125-51.292969-128.832031zm27.703125 133.191406c4.191406 10.179688 8.824219 19.972656 13.886719 29.296875 7.515624 13.84375 15.671874 26.046875 24.273437 36.457031-29.992187-10.242187-57.160156-26.628906-80.003906-47.644531 13.023437-6.976562 27.070312-13.042969 41.84375-18.109375zm208.152343 29.296875c5.0625-9.324219 9.695313-19.117187 13.886719-29.296875 14.773438 5.066406 28.816407 11.132813 41.847657 18.109375-22.847657 21.015625-50.015626 37.402344-80.007813 47.644531 8.601563-10.410156 16.757813-22.609374 24.273437-36.457031zm24.035157-57.492187c10.238281-32.753906 16.257812-68.460938 17.554687-104.996094h86.765625c-3.210937 48.753906-21.933593 93.339844-51.292969 128.832031-16.292968-9.34375-34.136718-17.335937-53.027343-23.835937zm17.554687-134.996094c-1.296875-36.539062-7.316406-72.242188-17.554687-104.996094 18.890625-6.5 36.734375-14.492187 53.027343-23.835937 29.359376 35.492187 48.082032 80.078125 51.292969 128.832031zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
-    },
-    __self: undefined
+      lineNumber: 236,
+      columnNumber: 21
+    }
   }))), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236
-    },
-    __self: undefined
+      lineNumber: 239,
+      columnNumber: 17
+    }
   }, __jsx("p", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
-    },
-    __self: undefined
+      lineNumber: 240,
+      columnNumber: 19
+    }
   }, "English (CA)"))), __jsx("div", {
     className: "flex mx-1",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
-    },
-    __self: undefined
+      lineNumber: 243,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     className: "mr-1",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
-    },
-    __self: undefined
+      lineNumber: 244,
+      columnNumber: 17
+    }
   }, "$"), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
-    },
-    __self: undefined
+      lineNumber: 245,
+      columnNumber: 17
+    }
   }, __jsx("p", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
-    },
-    __self: undefined
+      lineNumber: 246,
+      columnNumber: 19
+    }
   }, "CAD")))), __jsx("div", {
     className: "hidden md:flex ml-8",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
-    },
-    __self: undefined
+      lineNumber: 250,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "h-5 w-5",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248
-    },
-    __self: undefined
+      lineNumber: 251,
+      columnNumber: 15
+    }
   }, __jsx("svg", {
     className: "h-full w-full",
     viewBox: "0 0 512 512",
@@ -5167,102 +5367,116 @@ const NewFooter = () => {
       fill: '#484848'
     },
     xmlns: "http://www.w3.org/2000/svg",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249
-    },
-    __self: undefined
+      lineNumber: 252,
+      columnNumber: 17
+    }
   }, __jsx("path", {
     d: "m297.277344 508.667969c-2.132813.347656-4.273438.667969-6.421875.960937 2.148437-.292968 4.289062-.613281 6.421875-.960937zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
-    },
-    __self: undefined
+      lineNumber: 257,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m302.398438 507.792969c-1.019532.1875-2.039063.359375-3.058594.535156 1.019531-.175781 2.039062-.347656 3.058594-.535156zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255
-    },
-    __self: undefined
+      lineNumber: 258,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m285.136719 510.339844c-2.496094.28125-5.007813.53125-7.527344.742187 2.519531-.210937 5.03125-.460937 7.527344-.742187zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256
-    },
-    __self: undefined
+      lineNumber: 259,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m290.054688 509.738281c-1.199219.160157-2.40625.308594-3.609376.449219 1.203126-.140625 2.410157-.289062 3.609376-.449219zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
-    },
-    __self: undefined
+      lineNumber: 260,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m309.367188 506.410156c-.898438.191406-1.800782.382813-2.703126.566406.902344-.183593 1.804688-.375 2.703126-.566406zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
-    },
-    __self: undefined
+      lineNumber: 261,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m326.664062 502.113281c-.726562.207031-1.453124.402344-2.179687.605469.726563-.203125 1.453125-.398438 2.179687-.605469zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
-    },
-    __self: undefined
+      lineNumber: 262,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m321.433594 503.542969c-.789063.207031-1.582032.417969-2.375.617187.792968-.199218 1.585937-.40625 2.375-.617187zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
-    },
-    __self: undefined
+      lineNumber: 263,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m314.589844 505.253906c-.835938.195313-1.679688.378906-2.523438.566406.84375-.1875 1.6875-.371093 2.523438-.566406zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261
-    },
-    __self: undefined
+      lineNumber: 264,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m277.527344 511.089844c-1.347656.113281-2.695313.214844-4.046875.304687 1.351562-.089843 2.699219-.191406 4.046875-.304687zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
-    },
-    __self: undefined
+      lineNumber: 265,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m512 256c0-141.363281-114.636719-256-256-256s-256 114.636719-256 256 114.636719 256 256 256c1.503906 0 3-.03125 4.5-.058594v-199.285156h-55v-64.097656h55v-47.167969c0-54.703125 33.394531-84.476563 82.191406-84.476563 23.367188 0 43.453125 1.742188 49.308594 2.519532v57.171875h-33.648438c-26.546874 0-31.6875 12.617187-31.6875 31.128906v40.824219h63.476563l-8.273437 64.097656h-55.203126v189.453125c107.003907-30.675781 185.335938-129.257813 185.335938-246.109375zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263
-    },
-    __self: undefined
+      lineNumber: 266,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m272.914062 511.429688c-2.664062.171874-5.339843.308593-8.023437.398437 2.683594-.089844 5.359375-.226563 8.023437-.398437zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
-    },
-    __self: undefined
+      lineNumber: 267,
+      columnNumber: 19
+    }
   }), __jsx("path", {
     d: "m264.753906 511.835938c-1.414062.046874-2.832031.082031-4.25.105468 1.417969-.023437 2.835938-.058594 4.25-.105468zm0 0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265
-    },
-    __self: undefined
+      lineNumber: 268,
+      columnNumber: 19
+    }
   }))), __jsx("div", {
     className: "h-5 w-5 ml-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
-    },
-    __self: undefined
+      lineNumber: 272,
+      columnNumber: 15
+    }
   }, __jsx("svg", {
     className: "h-full w-full",
     xmlns: "http://www.w3.org/2000/svg",
@@ -5271,31 +5485,35 @@ const NewFooter = () => {
       fill: '#484848',
       marginRight: 1
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270
-    },
-    __self: undefined
+      lineNumber: 273,
+      columnNumber: 17
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
-    },
-    __self: undefined
+      lineNumber: 278,
+      columnNumber: 19
+    }
   }, __jsx("path", {
     d: "M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016 c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992 c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056 c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152 c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792 c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44 C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568 C480.224,136.96,497.728,118.496,512,97.248z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
-    },
-    __self: undefined
+      lineNumber: 279,
+      columnNumber: 21
+    }
   })))), __jsx("div", {
     className: "w-5 h-5 ml-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
-    },
-    __self: undefined
+      lineNumber: 293,
+      columnNumber: 15
+    }
   }, __jsx("svg", {
     className: "w-full h-full",
     xmlns: "http://www.w3.org/2000/svg",
@@ -5303,70 +5521,80 @@ const NewFooter = () => {
     style: {
       fill: '#484848'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
-    },
-    __self: undefined
+      lineNumber: 294,
+      columnNumber: 17
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
-    },
-    __self: undefined
+      lineNumber: 299,
+      columnNumber: 19
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
-    },
-    __self: undefined
+      lineNumber: 300,
+      columnNumber: 21
+    }
   }, __jsx("path", {
     d: "M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160 C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48 h192c61.76,0,112,50.24,112,112V352z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
-    },
-    __self: undefined
+      lineNumber: 301,
+      columnNumber: 23
+    }
   }))), __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
-    },
-    __self: undefined
+      lineNumber: 308,
+      columnNumber: 19
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
-    },
-    __self: undefined
+      lineNumber: 309,
+      columnNumber: 21
+    }
   }, __jsx("path", {
     d: "M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336 c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 307
-    },
-    __self: undefined
+      lineNumber: 310,
+      columnNumber: 23
+    }
   }))), __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
-    },
-    __self: undefined
+      lineNumber: 316,
+      columnNumber: 19
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
-    },
-    __self: undefined
+      lineNumber: 317,
+      columnNumber: 21
+    }
   }, __jsx("circle", {
     cx: "393.6",
     cy: "118.4",
     r: "17.056",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
-    },
-    __self: undefined
+      lineNumber: 318,
+      columnNumber: 23
+    }
   }))))))))));
 };
 
@@ -6791,130 +7019,145 @@ const OptionModal = ({
   switchCurrencyModal,
   currency
 }) => {
-  console.log('called');
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     className: "rounded-xl hidden bg-white md:block shadow-lg",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: undefined
+      lineNumber: 11,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     className: "pl-4 pr-16 py-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: undefined
+      lineNumber: 12,
+      columnNumber: 9
+    }
   }, __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
+      lineNumber: 13,
+      columnNumber: 11
+    }
   }, __jsx("button", {
     onClick: switchLanguageModal,
     className: "py-3 px-1 rounded-full flex items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
+      lineNumber: 14,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "flex items-center justify-center text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: undefined
+      lineNumber: 17,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     className: "w-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
+      lineNumber: 18,
+      columnNumber: 17
+    }
   }, __jsx("svg", {
     className: "block relative w-full h-full",
     "aria-hidden": "true",
     viewBox: "0 0 16 16",
     xmlns: "http://www.w3.org/2000/svg",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
+      lineNumber: 19,
+      columnNumber: 19
+    }
   }, __jsx("path", {
     d: "M7.99985 0.349976C3.78135 0.349976 0.349854 3.78148 0.349854 7.99998C0.349854 12.2185 3.78135 15.65 7.99985 15.65C12.2184 15.65 15.6499 12.2185 15.6499 7.99998C15.6499 3.78148 12.2184 0.349976 7.99985 0.349976ZM1.68285 8.64997H3.86735C3.90085 9.42497 3.99535 10.1625 4.14085 10.85H2.33335C1.98351 10.1627 1.76301 9.41698 1.68285 8.64997ZM8.74985 3.84998V1.90748C9.25785 2.24998 9.74385 2.92348 10.1204 3.84998H8.74985ZM10.5274 5.14998C10.6859 5.81348 10.7954 6.54998 10.8339 7.34998H8.74985V5.14998H10.5274ZM7.24985 1.90748V3.84998H5.87985C6.25585 2.92348 6.74235 2.24998 7.24985 1.90748ZM7.24985 5.14998V7.34998H5.16585C5.20435 6.54998 5.31385 5.81348 5.47235 5.14998H7.24985ZM3.86735 7.34998H1.68285C1.76285 6.56498 1.99285 5.82498 2.33285 5.14998H4.14085C3.98937 5.87454 3.89789 6.61037 3.86735 7.34998ZM5.16585 8.64997H7.24985V10.85H5.47235C5.30192 10.1278 5.1993 9.39125 5.16585 8.64997ZM7.24985 12.15V14.0925C6.74235 13.7495 6.25585 13.0765 5.87985 12.15H7.24985ZM8.74985 14.0925V12.15H10.1204C9.74385 13.0765 9.25785 13.75 8.74985 14.0925ZM8.74985 10.85V8.64997H10.8339C10.8004 9.39125 10.6978 10.1278 10.5274 10.85H8.74985ZM12.1324 8.64997H14.3169C14.2369 9.43497 14.0069 10.175 13.6669 10.85H11.8589C12.0044 10.1625 12.0989 9.42497 12.1324 8.64997ZM12.1324 7.34998C12.1018 6.61037 12.0103 5.87454 11.8589 5.14998H13.6664C14.0074 5.82498 14.2364 6.56498 14.3169 7.34998H12.1324ZM12.7954 3.84998H11.5014C11.3192 3.31162 11.0813 2.7938 10.7914 2.30498C11.5556 2.68104 12.2369 3.20638 12.7949 3.84998H12.7954ZM5.20835 2.30498C4.91844 2.7938 4.68047 3.31162 4.49835 3.84998H3.20485C3.76298 3.20632 4.44439 2.68099 5.20885 2.30498H5.20835ZM3.20485 12.15H4.49935C4.69735 12.7245 4.93635 13.242 5.20935 13.695C4.44453 13.3191 3.76278 12.7937 3.20435 12.15H3.20485ZM10.7919 13.695C11.0818 13.2061 11.3197 12.6883 11.5019 12.15H12.7959C12.2377 12.7936 11.5563 13.319 10.7919 13.695Z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: undefined
+      lineNumber: 24,
+      columnNumber: 21
+    }
   })))), __jsx("div", {
     className: "ml-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: undefined
+      lineNumber: 28,
+      columnNumber: 15
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: undefined
+      lineNumber: 29,
+      columnNumber: 17
+    }
   }, "English (CA)")))), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
+      lineNumber: 35,
+      columnNumber: 11
+    }
   }, __jsx("button", {
     onClick: switchCurrencyModal,
     className: "py-3 px-1 flex items-center",
     style: {
       fontFamily: 'airbnb-medium'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: undefined
+      lineNumber: 36,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "w-4 flex justify-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
+      lineNumber: 40,
+      columnNumber: 15
+    }
   }, __jsx("p", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: undefined
+      lineNumber: 41,
+      columnNumber: 17
+    }
   }, currency.sign)), __jsx("div", {
     className: "ml-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
+      lineNumber: 43,
+      columnNumber: 15
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: undefined
+      lineNumber: 44,
+      columnNumber: 17
+    }
   }, currency.name)))))));
 };
 
@@ -7706,7 +7949,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_HeaderCategory__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/layout/HeaderCategory */ "./src/components/layout/HeaderCategory.jsx");
 /* harmony import */ var _components_layout_MovePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/layout/MovePage */ "./src/components/layout/MovePage.jsx");
 /* harmony import */ var _components_functions_Travel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/functions/Travel */ "./src/components/functions/Travel.tsx");
-/* harmony import */ var _components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/containers/THundredPlus */ "./src/components/containers/THundredPlus.tsx");
+/* harmony import */ var _components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/containers/THundredPlus */ "./src/components/containers/THundredPlus.jsx");
 var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/stay/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
  // Layout
@@ -7769,7 +8012,7 @@ const Stay = () => {
       lineNumber: 31,
       columnNumber: 7
     }
-  }), __jsx(_components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_6__["THundredPlus"], {
+  }), __jsx(_components_containers_THundredPlus__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -7788,7 +8031,7 @@ const Stay = () => {
     category: "stay",
     page: 1,
     previousPage: 0,
-    nextPage: 1,
+    nextPage: 2,
     first: true,
     last: false,
     __self: undefined,
@@ -7808,6 +8051,182 @@ const Stay = () => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Stay);
+
+/***/ }),
+
+/***/ "./src/util/RenderSkeleton.js":
+/*!************************************!*\
+  !*** ./src/util/RenderSkeleton.js ***!
+  \************************************/
+/*! exports provided: renderSkeletonVertical, renderSkeletonHorizontal, renderSkeletonThreeColumn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonVertical", function() { return renderSkeletonVertical; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonHorizontal", function() { return renderSkeletonHorizontal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderSkeletonThreeColumn", function() { return renderSkeletonThreeColumn; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/util/RenderSkeleton.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const renderSkeletonVertical = number => {
+  var content = [];
+
+  for (let i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-full mr-3 mb-3 rounded h-64 md:h-104 py-8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: undefined
+    }), __jsx("div", {
+      className: "w-full mb-3 h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "w-80p h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--vertical",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: undefined
+    }))));
+  }
+
+  return content;
+};
+const renderSkeletonHorizontal = (number, withLine) => {
+  var content = [];
+
+  for (let i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-full mr-3 mb-3 rounded h-24 mb-16 md:h-40 lg:h-48 xl:h-56",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: undefined
+    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+      className: "w-full mb-3 h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "w-80p h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: undefined
+    }))) : null));
+  }
+
+  return content;
+};
+const renderSkeletonThreeColumn = (number, withLine) => {
+  var content = [];
+
+  for (let i = 0; i < number; i++) {
+    content.push(__jsx("div", {
+      className: "w-full mr-3 mb-3 rounded h-48 md:h-56 lg:h-64",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: undefined
+    }), withLine ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+      className: "w-full mb-3 h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: undefined
+    })), __jsx("div", {
+      className: "w-80p h-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: undefined
+    }, __jsx("div", {
+      id: "skeleton-pulse--horizontal",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: undefined
+    }))) : null));
+  }
+
+  return content;
+};
 
 /***/ }),
 
@@ -7919,17 +8338,6 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("react-sizeme");
-
-/***/ }),
-
-/***/ "react-spinners/PulseLoader":
-/*!*********************************************!*\
-  !*** external "react-spinners/PulseLoader" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-spinners/PulseLoader");
 
 /***/ }),
 

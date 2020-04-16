@@ -20,6 +20,7 @@ const readyFinancial = require('../../../public/img/high/ready-earn-setup.jpg');
 
 // Next
 import { NextPage } from 'next';
+import { NewFooter } from '../../components/layout/NewFooter';
 
 const financials: NextPage<{}> = () => {
   const [menuModal, setMenuModal] = useState(false);
@@ -34,7 +35,7 @@ const financials: NextPage<{}> = () => {
     { question: 'How can Airbnb help me with setting prices?' },
     { question: 'When can I expect to get paid?' },
     { question: "How should I choose my listing's price?" },
-    { question: 'How do taxes work for hosts?' }
+    { question: 'How do taxes work for hosts?' },
   ];
   return (
     <>
@@ -57,6 +58,7 @@ const financials: NextPage<{}> = () => {
       <GreatPrice />
       <Questions title='Your questions answered' questions={questions} />
       <HostReady title='Ready to earn?' img={readyFinancial} />
+      <NewFooter />
     </>
   );
 };

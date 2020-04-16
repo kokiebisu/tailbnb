@@ -10,6 +10,7 @@ import { NewFooter } from '../components/layout/NewFooter';
 import { MenuModal } from '../components/modals/MenuModal';
 import { Notice } from '../components/functions/Notice';
 import { BottomNav } from '../components/layout/BottomNav';
+import { Cookies } from '../components/layout/Cookies';
 
 // // Next
 // import { NextPage } from 'next';
@@ -55,6 +56,9 @@ const Home = () => {
             <BottomNav bottomSwitch={() => setBottom(!bottom)} />
           </div>
         ) : null}
+        <div>
+          <Cookies />
+        </div>
       </div>
     </>
   );

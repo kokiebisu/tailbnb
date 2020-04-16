@@ -8,7 +8,7 @@ import { MovePage } from '../../components/layout/MovePage';
 
 // Component
 import { Travel } from '../../components/functions/Travel';
-import { THundredPlus } from '../../components/containers/THundredPlus';
+import THundredPlus from '../../components/containers/THundredPlus';
 
 // Next
 import { NextPage } from 'next';
@@ -35,7 +35,7 @@ const Stay: NextPage = () => {
           category='stay'
           page={1}
           previousPage={0}
-          nextPage={1}
+          nextPage={2}
           first={true}
           last={false}
         />

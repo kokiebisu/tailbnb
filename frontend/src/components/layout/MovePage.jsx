@@ -148,7 +148,9 @@ export const MovePage = ({
               </a>
             </div>
           ) : (
-            <Link href={`/page/${nextPage}`} as={`/page/${page + 1}`}>
+            <Link
+              href={`/${category}/${nextPage}`}
+              as={`/${category}/${page + 1}`}>
               <div className='cursor-pointer flex items-center'>
                 <div>
                   <h3

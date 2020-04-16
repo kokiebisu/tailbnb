@@ -7,11 +7,11 @@ interface Props {
 
 export const HostReady: React.FC<Props> = ({ img, title }) => {
   return (
-    <div className='w-full md:max-w-4xl lg:max-w-7xl mx-auto mt-8 mb-12 relative'>
+    <div className='px-6 md:px-10 xl:px-0 mx-auto mt-8 mb-12 relative'>
       <div className='w-full h-96 md:h-112'>
         <img className='h-full w-full object-cover' src={img} />
       </div>
-      <div id='ready'>
+      <div id='ready' className='px-6 md:px-0'>
         <div className='mb-4'>
           <h3
             style={{ fontFamily: 'airbnb-bold' }}
