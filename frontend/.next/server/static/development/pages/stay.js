@@ -5747,177 +5747,200 @@ const CurrencyModal = ({
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     id: "darkOverlay",
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
+      lineNumber: 56,
+      columnNumber: 7
+    }
   }), __jsx("div", {
     id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50",
+    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: undefined
+      lineNumber: 60,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     className: "w-full border-b border-gray-300",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: undefined
+      lineNumber: 63,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl mt-2 flex justify-center items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: undefined
+      lineNumber: 64,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     className: "bg-green-850 relative w-full px-4 flex justify-center items-center my-6",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: undefined
+      lineNumber: 65,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "w-full flex items-center absolute left-0 z-20",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: undefined
+      lineNumber: 66,
+      columnNumber: 15
+    }
   }, __jsx("button", {
     onClick: () => setCurrencyModal(false),
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: undefined
+      lineNumber: 67,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: undefined
+      lineNumber: 68,
+      columnNumber: 19
+    }
   }, __jsx("svg", {
     className: "w-4 h-4",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 47.971 47.971",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: undefined
+      lineNumber: 69,
+      columnNumber: 21
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: undefined
+      lineNumber: 73,
+      columnNumber: 23
+    }
   }, __jsx("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: undefined
+      lineNumber: 74,
+      columnNumber: 25
+    }
   }))))))))), __jsx("div", {
     className: "w-full h-60v overflow-y-scroll overflow-hidden",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: undefined
+      lineNumber: 88,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: undefined
+      lineNumber: 89,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "w-full text-2xl py-6 text-gray-750",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: undefined
+      lineNumber: 90,
+      columnNumber: 13
+    }
   }, "Choose currency"), __jsx("div", {
     className: "w-full flex flex-wrap",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: undefined
+      lineNumber: 95,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "w-1/5 flex mb-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: undefined
+      lineNumber: 96,
+      columnNumber: 15
+    }
   }, __jsx("button", {
     className: "w-90p border border-gray-750 rounded-lg flex justify-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: undefined
+      lineNumber: 97,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "w-85p py-1",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: undefined
+      lineNumber: 98,
+      columnNumber: 19
+    }
   }, __jsx("div", {
     className: "flex",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: undefined
+      lineNumber: 99,
+      columnNumber: 21
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
-    },
-    __self: undefined
+      lineNumber: 100,
+      columnNumber: 23
+    }
   }, selectedCountry.full)), __jsx("div", {
     className: "flex",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: undefined
+      lineNumber: 106,
+      columnNumber: 21
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-650",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: undefined
+      lineNumber: 107,
+      columnNumber: 23
+    }
   }, selectedCountry.abbreviation, ' ', selectedCountry.abbreviation === null ? null : '-', ' ', selectedCountry.symbol))))), filteredCurrencies.map(currency => {
     return __jsx("div", {
       className: "w-1/5 flex mb-4",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
-      },
-      __self: undefined
+        lineNumber: 120,
+        columnNumber: 19
+      }
     }, __jsx("button", {
       onClick: () => {
         setSelectedCountry(currency);
@@ -5928,52 +5951,58 @@ const CurrencyModal = ({
         refreshPage(); // Query to change currency
       },
       className: "hover:bg-gray-250 w-90p rounded-lg flex justify-center",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
-      },
-      __self: undefined
+        lineNumber: 121,
+        columnNumber: 21
+      }
     }, __jsx("div", {
       className: "w-85p py-1",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
-      },
-      __self: undefined
+        lineNumber: 132,
+        columnNumber: 23
+      }
     }, __jsx("div", {
       className: "flex",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
-      },
-      __self: undefined
+        lineNumber: 133,
+        columnNumber: 25
+      }
     }, __jsx("p", {
       style: {
         fontFamily: 'airbnb-book'
       },
       className: "text-sm",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
-      },
-      __self: undefined
+        lineNumber: 134,
+        columnNumber: 27
+      }
     }, currency.full)), __jsx("div", {
       className: "flex",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140
-      },
-      __self: undefined
+        lineNumber: 140,
+        columnNumber: 25
+      }
     }, __jsx("p", {
       style: {
         fontFamily: 'airbnb-book'
       },
       className: "text-sm text-gray-650",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
-      },
-      __self: undefined
+        lineNumber: 141,
+        columnNumber: 27
+      }
     }, currency.abbreviation, ' ', currency.abbreviation === null ? null : '-', ' ', currency.symbol)))));
   }))))));
 };
@@ -6696,302 +6725,340 @@ const LanguageModal = ({
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     id: "darkOverlay",
     className: "md:block fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 387
-    },
-    __self: undefined
+      lineNumber: 387,
+      columnNumber: 7
+    }
   }), __jsx("div", {
     id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50",
+    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 391
-    },
-    __self: undefined
+      lineNumber: 391,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     className: "w-full border-b border-gray-300",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 394
-    },
-    __self: undefined
+      lineNumber: 394,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl mt-2 flex justify-center items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 395
-    },
-    __self: undefined
+      lineNumber: 395,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     className: "bg-green-850 relative w-full px-4 flex justify-center items-center my-6",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396
-    },
-    __self: undefined
+      lineNumber: 396,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "w-full flex items-center absolute left-0 z-20",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 397
-    },
-    __self: undefined
+      lineNumber: 397,
+      columnNumber: 15
+    }
   }, __jsx("button", {
     onClick: () => setLanguageModal(false),
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 398
-    },
-    __self: undefined
+      lineNumber: 398,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 399
-    },
-    __self: undefined
+      lineNumber: 399,
+      columnNumber: 19
+    }
   }, __jsx("svg", {
     className: "w-4 h-4",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 47.971 47.971",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400
-    },
-    __self: undefined
+      lineNumber: 400,
+      columnNumber: 21
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
-    },
-    __self: undefined
+      lineNumber: 404,
+      columnNumber: 23
+    }
   }, __jsx("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405
-    },
-    __self: undefined
+      lineNumber: 405,
+      columnNumber: 25
+    }
   }))))))))), __jsx("div", {
     className: "w-full h-75v overflow-y-scroll overflow-hidden",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 419
-    },
-    __self: undefined
+      lineNumber: 419,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     className: "w-full mx-auto max-w-5xl",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 420
-    },
-    __self: undefined
+      lineNumber: 420,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "w-full text-2xl py-6 text-gray-750",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 421
-    },
-    __self: undefined
+      lineNumber: 421,
+      columnNumber: 13
+    }
   }, "Suggested languages and regions"), __jsx("div", {
     className: "w-full flex flex-wrap",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 426
-    },
-    __self: undefined
+      lineNumber: 426,
+      columnNumber: 13
+    }
   }, suggestedLanguages.map(language => {
     return __jsx("div", {
       className: "w-1/5 flex mb-4",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 429
-      },
-      __self: undefined
+        lineNumber: 429,
+        columnNumber: 19
+      }
     }, __jsx("button", {
       className: "w-90p hover:bg-gray-250  rounded-lg flex justify-center",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 430
-      },
-      __self: undefined
+        lineNumber: 430,
+        columnNumber: 21
+      }
     }, __jsx("div", {
       className: "w-85p py-1",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 431
-      },
-      __self: undefined
+        lineNumber: 431,
+        columnNumber: 23
+      }
     }, __jsx("div", {
       className: "flex",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 432
-      },
-      __self: undefined
+        lineNumber: 432,
+        columnNumber: 25
+      }
     }, __jsx("p", {
       style: {
         fontFamily: 'airbnb-book'
       },
       className: "text-sm",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 433
-      },
-      __self: undefined
+        lineNumber: 433,
+        columnNumber: 27
+      }
     }, language.name)), __jsx("div", {
       className: "flex",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 439
-      },
-      __self: undefined
+        lineNumber: 439,
+        columnNumber: 25
+      }
     }, __jsx("p", {
       style: {
         fontFamily: 'airbnb-book'
       },
       className: "text-sm text-gray-650",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 440
-      },
-      __self: undefined
+        lineNumber: 440,
+        columnNumber: 27
+      }
     }, language.location)))));
   })), __jsx("div", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "w-full text-2xl py-6 text-gray-750",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 452
-    },
-    __self: undefined
+      lineNumber: 452,
+      columnNumber: 13
+    }
   }, "Choose a language and region"), __jsx("div", {
     className: "w-full flex flex-wrap",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 457
-    },
-    __self: undefined
+      lineNumber: 457,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "w-1/5 flex mb-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 458
-    },
-    __self: undefined
+      lineNumber: 458,
+      columnNumber: 15
+    }
   }, __jsx("button", {
     className: "w-90p border border-gray-750 rounded-lg flex justify-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 459
-    },
-    __self: undefined
+      lineNumber: 459,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "w-85p py-1",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 460
-    },
-    __self: undefined
+      lineNumber: 460,
+      columnNumber: 19
+    }
   }, __jsx("div", {
     className: "flex",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 461
-    },
-    __self: undefined
+      lineNumber: 461,
+      columnNumber: 21
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 462
-    },
-    __self: undefined
+      lineNumber: 462,
+      columnNumber: 23
+    }
   }, selectedLanguage.name)), __jsx("div", {
     className: "flex",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 468
-    },
-    __self: undefined
+      lineNumber: 468,
+      columnNumber: 21
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-650",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 469
-    },
-    __self: undefined
+      lineNumber: 469,
+      columnNumber: 23
+    }
   }, selectedLanguage.location))))), filteredLanguages.map(language => {
     return __jsx("div", {
       className: "w-1/5 flex mb-4",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 480
-      },
-      __self: undefined
+        lineNumber: 480,
+        columnNumber: 19
+      }
     }, __jsx("button", {
       onClick: () => {
         setSelectedLanguage(language);
       },
       className: "w-90p hover:bg-gray-250  rounded-lg flex justify-center",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 481
-      },
-      __self: undefined
+        lineNumber: 481,
+        columnNumber: 21
+      }
     }, __jsx("div", {
       className: "w-85p py-1",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 486
-      },
-      __self: undefined
+        lineNumber: 486,
+        columnNumber: 23
+      }
     }, __jsx("div", {
       className: "flex",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 487
-      },
-      __self: undefined
+        lineNumber: 487,
+        columnNumber: 25
+      }
     }, __jsx("p", {
       style: {
         fontFamily: 'airbnb-book'
       },
       className: "text-sm",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 488
-      },
-      __self: undefined
+        lineNumber: 488,
+        columnNumber: 27
+      }
     }, language.name)), __jsx("div", {
       className: "flex",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 494
-      },
-      __self: undefined
+        lineNumber: 494,
+        columnNumber: 25
+      }
     }, __jsx("p", {
       style: {
         fontFamily: 'airbnb-book'
       },
       className: "text-sm text-gray-650",
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 495
-      },
-      __self: undefined
+        lineNumber: 495,
+        columnNumber: 27
+      }
     }, language.location)))));
   }))))));
 };
@@ -7188,161 +7255,182 @@ const RegisterModal = ({
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     id: "darkOverlay",
     className: "fixed w-full h-full top-0 left-0 z-20 overflow-hidden",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: undefined
+      lineNumber: 22,
+      columnNumber: 7
+    }
   }), __jsx("div", {
     className: "w-screen md:min-h-104",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
+      lineNumber: 26,
+      columnNumber: 7
+    }
   }, __jsx("div", {
     id: "centerAbsolute",
-    className: "rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50",
+    className: "rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50 xl:top-40p 2xl:top-50p",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
+      lineNumber: 27,
+      columnNumber: 9
+    }
   }, __jsx("div", {
     className: "w-full border-b border-gray-300 mt-2 flex justify-center items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: undefined
+      lineNumber: 30,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     className: "relative w-11/12 flex justify-center items-center my-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: undefined
+      lineNumber: 31,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "flex items-center absolute left-0 z-20 ",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: undefined
+      lineNumber: 32,
+      columnNumber: 15
+    }
   }, __jsx("button", {
     onClick: () => setRegisterModal(false),
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
+      lineNumber: 33,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "inline-block z-10 hover:bg-gray-200 bg-white rounded-full p-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
+      lineNumber: 34,
+      columnNumber: 19
+    }
   }, __jsx("svg", {
     className: "w-4 h-4",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 47.971 47.971",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
+      lineNumber: 35,
+      columnNumber: 21
+    }
   }, __jsx("g", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
+      lineNumber: 39,
+      columnNumber: 23
+    }
   }, __jsx("path", {
     d: "M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88 c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242 C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879 s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
+      lineNumber: 40,
+      columnNumber: 25
+    }
   })))))), __jsx("div", {
     className: "w-full flex justify-center items-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: undefined
+      lineNumber: 51,
+      columnNumber: 15
+    }
   }, __jsx("h3", {
     style: {
       fontFamily: 'airbnb-bold'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
+      lineNumber: 52,
+      columnNumber: 17
+    }
   }, type)))), __jsx("div", {
     className: "w-full flex justify-center",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
+      lineNumber: 56,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     className: "w-11/12",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
-    },
-    __self: undefined
+      lineNumber: 57,
+      columnNumber: 13
+    }
   }, __jsx("div", {
     className: "my-3 mt-10",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: undefined
+      lineNumber: 58,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     className: "w-full",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: undefined
+      lineNumber: 59,
+      columnNumber: 17
+    }
   }, __jsx("form", {
     action: "",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
-    },
-    __self: undefined
+      lineNumber: 60,
+      columnNumber: 19
+    }
   }, __jsx("div", {
     className: "relative",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: undefined
+      lineNumber: 61,
+      columnNumber: 21
+    }
   }, __jsx("label", {
     style: {
       fontFamily: 'airbnb-book'
     },
     htmlFor: "country",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: undefined
+      lineNumber: 62,
+      columnNumber: 23
+    }
   }), __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "absolute text-gray-650 text-xs top-0 pl-3 pt-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: undefined
+      lineNumber: 66,
+      columnNumber: 23
+    }
   }, "Country/Region"), __jsx("select", {
     name: "country",
     style: {
@@ -7350,61 +7438,69 @@ const RegisterModal = ({
     },
     className: "appearance-none w-full border-t border-r border-l border-gray-500 py-4 rounded-b-none rounded-lg placeholder-gray-900 pl-3",
     id: "countryinput",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: undefined
+      lineNumber: 71,
+      columnNumber: 23
+    }
   }, __jsx("option", {
     value: "1",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
-    },
-    __self: undefined
+      lineNumber: 76,
+      columnNumber: 25
+    }
   }, "Canada (+1)"), __jsx("option", {
     value: "2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: undefined
+      lineNumber: 77,
+      columnNumber: 25
+    }
   }, "Japan (+81)"), __jsx("option", {
     value: "3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: undefined
+      lineNumber: 78,
+      columnNumber: 25
+    }
   }, "United States (+1)")), __jsx("div", {
     className: "h-full pointer-events-none flex absolute inset-y-0 right-0 items-center px-2 text-gray-700 text-black",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: undefined
+      lineNumber: 81,
+      columnNumber: 23
+    }
   }, __jsx("svg", {
     className: "fill-current h-6 w-6",
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
-    },
-    __self: undefined
+      lineNumber: 82,
+      columnNumber: 25
+    }
   }, __jsx("path", {
     d: "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: undefined
+      lineNumber: 86,
+      columnNumber: 27
+    }
   })))), __jsx("div", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: undefined
+      lineNumber: 91,
+      columnNumber: 21
+    }
   }, __jsx("input", {
     className: "appearance-none  w-full border border-gray-500 py-3 rounded-t-none rounded-lg placeholder-gray-900 pl-4",
     type: "text",
@@ -7413,82 +7509,92 @@ const RegisterModal = ({
       fontFamily: 'airbnb-book'
     },
     placeholder: "Phone number",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: undefined
+      lineNumber: 92,
+      columnNumber: 23
+    }
   }))))), __jsx("div", {
     className: "py-3",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
-    },
-    __self: undefined
+      lineNumber: 103,
+      columnNumber: 15
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-xs text-gray-650",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
-    },
-    __self: undefined
+      lineNumber: 104,
+      columnNumber: 17
+    }
   }, "We'll call or text you to confirm your number. Standard message and data rates apply.")), __jsx("button", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "w-full bg-pink-750 py-3 rounded-lg text-white",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: undefined
+      lineNumber: 111,
+      columnNumber: 15
+    }
   }, __jsx("p", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
-    },
-    __self: undefined
+      lineNumber: 114,
+      columnNumber: 17
+    }
   }, "Continue")), __jsx("div", {
     className: "pt-4 pb-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: undefined
+      lineNumber: 116,
+      columnNumber: 15
+    }
   }, __jsx("p", {
     id: "pseudo",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
-    },
-    __self: undefined
+      lineNumber: 117,
+      columnNumber: 17
+    }
   }, __jsx("span", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-xs text-gray-750",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
-    },
-    __self: undefined
+      lineNumber: 118,
+      columnNumber: 19
+    }
   }, "or"))), __jsx("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
-    },
-    __self: undefined
+      lineNumber: 125,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     className: "absolute left-0 ml-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
-    },
-    __self: undefined
+      lineNumber: 126,
+      columnNumber: 17
+    }
   }, __jsx("svg", {
     className: "w-5 h-5",
     style: {
@@ -7496,290 +7602,323 @@ const RegisterModal = ({
     },
     viewBox: "0 0 479.058 479.058",
     xmlns: "http://www.w3.org/2000/svg",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
-    },
-    __self: undefined
+      lineNumber: 127,
+      columnNumber: 19
+    }
   }, __jsx("path", {
     d: "m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
-    },
-    __self: undefined
+      lineNumber: 132,
+      columnNumber: 21
+    }
   }))), __jsx("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: undefined
+      lineNumber: 135,
+      columnNumber: 17
+    }
   }, "Continue with email")), __jsx("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
-    },
-    __self: undefined
+      lineNumber: 141,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     style: {
       marginLeft: 15
     },
     className: "absolute left-0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
-    },
-    __self: undefined
+      lineNumber: 142,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "w-5",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
-    },
-    __self: undefined
+      lineNumber: 143,
+      columnNumber: 19
+    }
   }, __jsx("svg", {
     viewBox: "0 0 24 24",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: undefined
+      lineNumber: 144,
+      columnNumber: 21
+    }
   }, __jsx("g", {
     fill: "none",
     fillRule: "evenodd",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: undefined
+      lineNumber: 145,
+      columnNumber: 23
+    }
   }, __jsx("mask", {
     id: "b",
     style: {
       fill: '#fff'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
-    },
-    __self: undefined
+      lineNumber: 146,
+      columnNumber: 25
+    }
   }, __jsx("use", {
     href: "#a",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
-    },
-    __self: undefined
+      lineNumber: 147,
+      columnNumber: 27
+    }
   }, __jsx("path", {
     id: "a",
     d: "M.001 0H24v23.854H.001z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
-    },
-    __self: undefined
+      lineNumber: 148,
+      columnNumber: 29
+    }
   }))), __jsx("path", {
     d: "M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12",
     style: {
       fill: '#1877F2'
     },
     mask: "url(#b)",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
-    },
-    __self: undefined
+      lineNumber: 151,
+      columnNumber: 25
+    }
   }), __jsx("path", {
     d: "M16.671 15.469L17.203 12h-3.328V9.749c0-.949.465-1.874 1.956-1.874h1.513V4.922s-1.374-.234-2.686-.234c-2.741 0-4.533 1.66-4.533 4.668V12H7.078v3.469h3.047v8.385a12.09 12.09 0 003.75 0V15.47h2.796",
     fill: "#FFF",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
-    },
-    __self: undefined
+      lineNumber: 155,
+      columnNumber: 25
+    }
   }))))), __jsx("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
-    },
-    __self: undefined
+      lineNumber: 162,
+      columnNumber: 17
+    }
   }, "Continue with Facebook")), __jsx("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
-    },
-    __self: undefined
+      lineNumber: 168,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     style: {
       marginLeft: 17
     },
     className: "absolute left-0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
-    },
-    __self: undefined
+      lineNumber: 169,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "w-5",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
-    },
-    __self: undefined
+      lineNumber: 170,
+      columnNumber: 19
+    }
   }, __jsx("svg", {
     className: "w-full h-full",
     viewBox: "0 0 18 18",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
-    },
-    __self: undefined
+      lineNumber: 171,
+      columnNumber: 21
+    }
   }, __jsx("g", {
     fill: "none",
     fillRule: "evenodd",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
-    },
-    __self: undefined
+      lineNumber: 172,
+      columnNumber: 23
+    }
   }, __jsx("path", {
     d: "M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z",
     style: {
       fill: '#EA4335'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
-    },
-    __self: undefined
+      lineNumber: 173,
+      columnNumber: 25
+    }
   }), __jsx("path", {
     d: "M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z",
     style: {
       fill: '#4285F4'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
-    },
-    __self: undefined
+      lineNumber: 176,
+      columnNumber: 25
+    }
   }), __jsx("path", {
     d: "M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z",
     style: {
       fill: '#FBBC05'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
-    },
-    __self: undefined
+      lineNumber: 179,
+      columnNumber: 25
+    }
   }), __jsx("path", {
     d: "M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z",
     style: {
       fill: '#34A853'
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
-    },
-    __self: undefined
+      lineNumber: 182,
+      columnNumber: 25
+    }
   }))))), __jsx("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
-    },
-    __self: undefined
+      lineNumber: 189,
+      columnNumber: 17
+    }
   }, "Continue with Google")), __jsx("div", {
     className: "w-full border-gray-500 border-2 rounded-lg py-3 flex justify-center items-center relative mb-4",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
-    },
-    __self: undefined
+      lineNumber: 195,
+      columnNumber: 15
+    }
   }, __jsx("div", {
     style: {
       marginLeft: 17
     },
     className: "absolute left-0",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
-    },
-    __self: undefined
+      lineNumber: 196,
+      columnNumber: 17
+    }
   }, __jsx("div", {
     className: "w-5",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
-    },
-    __self: undefined
+      lineNumber: 197,
+      columnNumber: 19
+    }
   }, __jsx("svg", {
     style: {
       fill: '#484848'
     },
     viewBox: "0 0 24 24",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
-    },
-    __self: undefined
+      lineNumber: 198,
+      columnNumber: 21
+    }
   }, __jsx("path", {
     d: "m13.3 2.1a5.1 5.1 0 0 1 3.8-2.1 5.1 5.1 0 0 1 -1.2 3.8 4.1 4.1 0 0 1 -3.6 1.7 4.5 4.5 0 0 1 1-3.4zm-5 3.7c-2.8 0-5.8 2.5-5.8 7.3 0 4.9 3.5 10.9 6.3 10.9 1 0 2.5-1 4-1s2.6.9 4 .9c3.1 0 5.3-6.4 5.3-6.4a5.3 5.3 0 0 1 -3.2-4.9 5.2 5.2 0 0 1 2.6-4.5 5.4 5.4 0 0 0 -4.7-2.4c-2 0-3.5 1.1-4.3 1.1-.9 0-2.4-1-4.2-1z",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
-    },
-    __self: undefined
+      lineNumber: 199,
+      columnNumber: 23
+    }
   })))), __jsx("p", {
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "text-gray-750 text-sm",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
-    },
-    __self: undefined
+      lineNumber: 203,
+      columnNumber: 17
+    }
   }, "Continue with Apple")), __jsx("div", {
     className: "flex",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
-    },
-    __self: undefined
+      lineNumber: 209,
+      columnNumber: 15
+    }
   }, __jsx("p", {
     style: {
       fontFamily: 'airbnb-book'
     },
     className: "text-sm text-gray-750",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
-    },
-    __self: undefined
+      lineNumber: 210,
+      columnNumber: 17
+    }
   }, phrase, " have an account?"), __jsx("button", {
     onClick: () => setType(`${nottype}`),
     style: {
       fontFamily: 'airbnb-medium'
     },
     className: "border-b border-gray-750 text-sm ml-2",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
-    },
-    __self: undefined
+      lineNumber: 215,
+      columnNumber: 17
+    }
   }, nottype)))))));
 };
 
