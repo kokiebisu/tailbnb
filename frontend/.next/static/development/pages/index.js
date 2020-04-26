@@ -29973,6 +29973,29 @@ module.exports = "/_next/static/images/explore3-aeb0d58d63e32f5efd9e3de68789726b
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./src/animations/appearFromBottom.ts":
+/*!********************************************!*\
+  !*** ./src/animations/appearFromBottom.ts ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (function (banner) {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].from(banner, 0.7, {
+    bottom: -150,
+    ease: gsap__WEBPACK_IMPORTED_MODULE_0__["Power3"].easeInOut
+  });
+});
+
+/***/ }),
+
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
 /***/ "./src/animations/arrow.ts":
 /*!*********************************!*\
   !*** ./src/animations/arrow.ts ***!
@@ -30003,6 +30026,30 @@ var backRotateArrow = function backRotateArrow(arrow) {
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./src/animations/fadeout.ts":
+/*!***********************************!*\
+  !*** ./src/animations/fadeout.ts ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (function (element) {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].to(element, 0.4, {
+    opacity: 0,
+    display: 'none',
+    ease: gsap__WEBPACK_IMPORTED_MODULE_0__["Power3"].easeInOut
+  });
+});
+
+/***/ }),
+
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
 /***/ "./src/components/containers/Explore.tsx":
 /*!***********************************************!*\
   !*** ./src/components/containers/Explore.tsx ***!
@@ -31504,6 +31551,7 @@ var _this = undefined,
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+<<<<<<< HEAD
 var Cookies = function Cookies() {
   return __jsx("div", {
     __self: _this,
@@ -31513,6 +31561,145 @@ var Cookies = function Cookies() {
       columnNumber: 10
     }
   }, "this is the cookie");
+=======
+var Cookies = function Cookies(_ref) {
+  var turnOffBanner = _ref.turnOffBanner;
+  return __jsx("div", {
+    style: {
+      boxShadow: '0px 0px 40px 0px rgba(0, 0, 0, 0.27)'
+    },
+    className: "bg-white p-5 rounded-3xl",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "flex justify-between",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 7
+    }
+  }, __jsx("div", {
+    className: "",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "pr-24",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 11
+    }
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-light'
+    },
+    className: "text-gray-750 font-thin",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 13
+    }
+  }, "We use cookies to help personalize content, tailor and measure ads, and provide a safer experience. By navigating the site, you agree to the use of cookies to collect information on and off Airbnb. Read our Cookie Policy to learn more or go to Cookie Preferences to manage your settings."))), __jsx("div", {
+    className: "flex items-center",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "flex items-center justify-center",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 11
+    }
+  }, __jsx("div", {
+    className: "h-full bg-green-850 rounded-lg mr-1",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flex justify-center items-center",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 15
+    }
+  }, __jsx("button", {
+    onClick: turnOffBanner,
+    className: "px-24 py-3",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 17
+    }
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "text-xs text-white",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 19
+    }
+  }, "OK")))), __jsx("div", {
+    className: "h-full bg-white border border-green-850 rounded-lg ml-1",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flex justify-center items-center",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 15
+    }
+  }, __jsx("button", {
+    onClick: turnOffBanner,
+    className: "px-12 py-3",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 17
+    }
+  }, __jsx("p", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
+    className: "block text-xs text-green-850 whitespace-no-wrap",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 19
+    }
+  }, "Cookie Preferences"))))))));
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
 };
 
 /***/ }),
@@ -36789,6 +36976,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_functions_Notice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/functions/Notice */ "./src/components/functions/Notice.jsx");
 /* harmony import */ var _components_layout_BottomNav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/layout/BottomNav */ "./src/components/layout/BottomNav.jsx");
 /* harmony import */ var _components_layout_Cookies__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/layout/Cookies */ "./src/components/layout/Cookies.jsx");
+<<<<<<< HEAD
+=======
+/* harmony import */ var _animations_appearFromBottom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../animations/appearFromBottom */ "./src/animations/appearFromBottom.ts");
+/* harmony import */ var _animations_fadeout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../animations/fadeout */ "./src/animations/fadeout.ts");
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
 var _this = undefined,
     _jsxFileName = "/Users/ken/Desktop/nextbnb/frontend/src/pages/index.jsx";
 
@@ -36804,14 +36996,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0__["createElement"];
 
 
 
+<<<<<<< HEAD
  // // Next
 // import { NextPage } from 'next';
+=======
+ // Animation
+
+
+
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
 
 var Home = function Home() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       menuModal = _useState[0],
       setMenuModal = _useState[1];
 
+<<<<<<< HEAD
   var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       bottom = _useState2[0],
       setBottom = _useState2[1];
@@ -36833,11 +37033,21 @@ var Home = function Home() {
     }
   };
 
+=======
+  var banner = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(_animations_appearFromBottom__WEBPACK_IMPORTED_MODULE_10__["default"])(banner);
+  }, []);
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 42,
+=======
+      lineNumber: 30,
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
       columnNumber: 7
     }
   }, __jsx(_components_layout_Header__WEBPACK_IMPORTED_MODULE_2__["Header"], {
@@ -36847,7 +37057,11 @@ var Home = function Home() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 43,
+=======
+      lineNumber: 31,
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
       columnNumber: 9
     }
   }), menuModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(_components_modals_MenuModal__WEBPACK_IMPORTED_MODULE_6__["MenuModal"], {
@@ -36857,34 +37071,51 @@ var Home = function Home() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 46,
+=======
+      lineNumber: 34,
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
       columnNumber: 13
     }
   })) : null, __jsx(_components_functions_FrontLines__WEBPACK_IMPORTED_MODULE_3__["FrontLines"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 49,
+=======
+      lineNumber: 37,
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
       columnNumber: 9
     }
   }), __jsx(_components_functions_Notice__WEBPACK_IMPORTED_MODULE_7__["Notice"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 51,
+=======
+      lineNumber: 39,
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
       columnNumber: 9
     }
   }), __jsx(_components_containers_Explore__WEBPACK_IMPORTED_MODULE_4__["Explore"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 52,
+=======
+      lineNumber: 40,
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
       columnNumber: 9
     }
   }), __jsx(_components_layout_NewFooter__WEBPACK_IMPORTED_MODULE_5__["NewFooter"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD
       lineNumber: 53,
       columnNumber: 9
     }
@@ -36921,6 +37152,44 @@ var Home = function Home() {
       columnNumber: 11
     }
   }))));
+=======
+      lineNumber: 41,
+      columnNumber: 9
+    }
+  }), __jsx("div", {
+    ref: function ref(el) {
+      return banner = el;
+    },
+    style: {
+      bottom: 12
+    },
+    className: "z-100 bottom-0 sticky",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "px-5 mx-auto",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 11
+    }
+  }, __jsx(_components_layout_Cookies__WEBPACK_IMPORTED_MODULE_9__["Cookies"], {
+    turnOffBanner: function turnOffBanner() {
+      Object(_animations_fadeout__WEBPACK_IMPORTED_MODULE_11__["default"])(banner);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 13
+    }
+  })))));
+>>>>>>> 46e5239b9e5d7709fd5c4b49be3b3a27ada097d5
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
