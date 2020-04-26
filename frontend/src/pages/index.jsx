@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 
 // Component
@@ -12,30 +12,18 @@ import { Notice } from '../components/functions/Notice';
 import { BottomNav } from '../components/layout/BottomNav';
 import { Cookies } from '../components/layout/Cookies';
 
-// // Next
-// import { NextPage } from 'next';
+// Animation
+import appearFromBottom from '../animations/appearFromBottom';
+import fadeout from '../animations/fadeout';
 
 const Home = () => {
   const [menuModal, setMenuModal] = useState(false);
-  const [bottom, setBottom] = useState(false);
+
+  let banner = useRef(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', _.debounce(handleScroll, 300));
-    return () => window.removeEventListener('scroll', handleScroll);
+    appearFromBottom(banner);
   }, []);
-
-  const handleScroll = (e) => {
-    const isBottom =
-      document.documentElement.scrollHeight -
-        document.documentElement.scrollTop >
-      document.documentElement.clientHeight + 1;
-    console.log(isBottom);
-
-    if (!isBottom) {
-      setBottom(!false);
-      return;
-    }
-  };
 
   return (
     <>
@@ -51,13 +39,17 @@ const Home = () => {
         <Notice />
         <Explore />
         <NewFooter />
-        {bottom ? (
-          <div className='fixed bottom-0 z-100 w-full md:hidden'>
-            <BottomNav bottomSwitch={() => setBottom(!bottom)} />
+        <div
+          ref={(el) => (banner = el)}
+          style={{ bottom: 12 }}
+          className='z-100 bottom-0 sticky'>
+          <div className='px-5 mx-auto'>
+            <Cookies
+              turnOffBanner={() => {
+                fadeout(banner);
+              }}
+            />
           </div>
-        ) : null}
-        <div>
-          <Cookies />
         </div>
       </div>
     </>
