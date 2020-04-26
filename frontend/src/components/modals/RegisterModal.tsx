@@ -15,7 +15,7 @@ export const RegisterModal: React.FC<Prop> = ({
   setType,
   type,
   nottype,
-  phrase
+  phrase,
 }) => {
   return (
     <>
@@ -26,7 +26,7 @@ export const RegisterModal: React.FC<Prop> = ({
       <div className='w-screen md:min-h-104'>
         <div
           id='centerAbsolute'
-          className='rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50'>
+          className='rounded-xl hidden fixed bg-white md:block w-144 pb-8 z-50 xl:top-40p 2xl:top-50p'>
           <div className='w-full border-b border-gray-300 mt-2 flex justify-center items-center'>
             <div className='relative w-11/12 flex justify-center items-center my-3'>
               <div className='flex items-center absolute left-0 z-20 '>

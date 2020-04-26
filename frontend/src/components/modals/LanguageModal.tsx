@@ -5,351 +5,351 @@ import _ from 'lodash';
 const suggestedLanguages = [
   {
     name: 'English',
-    location: 'United States'
+    location: 'United States',
   },
   {
     name: 'English',
-    location: 'United Kingdom'
+    location: 'United Kingdom',
   },
   {
     name: 'Français',
-    location: 'Canada'
-  }
+    location: 'Canada',
+  },
 ];
 
 const languages = [
   {
     name: 'English',
-    location: 'Canada'
+    location: 'Canada',
   },
   {
     name: 'Azərbaycan dili',
-    location: 'Azərbaycan'
+    location: 'Azərbaycan',
   },
   {
     name: 'Bahasa Indonesia',
-    location: 'Indonesia'
+    location: 'Indonesia',
   },
   {
     name: 'Bosanski',
-    location: 'Bosna i Hercegovina'
+    location: 'Bosna i Hercegovina',
   },
   {
     name: 'Català',
-    location: 'Espanya'
+    location: 'Espanya',
   },
   {
     name: 'Čeština',
-    location: 'Česká republika'
+    location: 'Česká republika',
   },
   {
     name: 'Crnogorski',
-    location: 'Crna Gora'
+    location: 'Crna Gora',
   },
   {
     name: 'Dansk',
-    location: 'Danmark'
+    location: 'Danmark',
   },
   {
     name: 'Deutsch',
-    location: 'Deutschland'
+    location: 'Deutschland',
   },
   {
     name: 'Deutsch',
-    location: 'Österreich'
+    location: 'Österreich',
   },
   {
     name: 'Deutsch',
-    location: 'Schweiz'
+    location: 'Schweiz',
   },
   {
     name: 'Eesti',
-    location: 'Eesti'
+    location: 'Eesti',
   },
   {
     name: 'English',
-    location: 'Australia'
+    location: 'Australia',
   },
   {
     name: 'English',
-    location: 'Guyana'
+    location: 'Guyana',
   },
   {
     name: 'English',
-    location: 'India'
+    location: 'India',
   },
   {
     name: 'English',
-    location: 'Ireland'
+    location: 'Ireland',
   },
   {
     name: 'English',
-    location: 'New Zealand'
+    location: 'New Zealand',
   },
   {
     name: 'English',
-    location: 'Singapore'
+    location: 'Singapore',
   },
   {
     name: 'English',
-    location: 'United Arab Emirates'
+    location: 'United Arab Emirates',
   },
   {
     name: 'Español',
-    location: 'Argentina'
+    location: 'Argentina',
   },
   {
     name: 'Español',
-    location: 'Belice'
+    location: 'Belice',
   },
   {
     name: 'Español',
-    location: 'El Salvador'
+    location: 'El Salvador',
   },
   {
     name: 'Español',
-    location: 'España'
+    location: 'España',
   },
   {
     name: 'Español',
-    location: 'Estados Unidos'
+    location: 'Estados Unidos',
   },
   {
     name: 'Español',
-    location: 'Guatemala'
+    location: 'Guatemala',
   },
   {
     name: 'Español',
-    location: 'Honduras'
+    location: 'Honduras',
   },
   {
     name: 'Español',
-    location: 'Latinoamérica'
+    location: 'Latinoamérica',
   },
   {
     name: 'Español',
-    location: 'México'
+    location: 'México',
   },
   {
     name: 'Español',
-    location: 'Nicaragua'
+    location: 'Nicaragua',
   },
   {
     name: 'Español',
-    location: 'Panamá'
+    location: 'Panamá',
   },
   {
     name: 'Español',
-    location: 'Paraguay'
+    location: 'Paraguay',
   },
   {
     name: 'Español',
-    location: 'Perú'
+    location: 'Perú',
   },
   {
     name: 'Español',
-    location: 'Venezuela'
+    location: 'Venezuela',
   },
   {
     name: 'Français',
-    location: 'Belgique'
+    location: 'Belgique',
   },
   {
     name: 'Français',
-    location: 'France'
+    location: 'France',
   },
   {
     name: 'Français',
-    location: 'Suisse'
+    location: 'Suisse',
   },
   {
     name: 'Gaeilge',
-    location: 'Éire'
+    location: 'Éire',
   },
   {
     name: 'Hrvatski',
-    location: 'Hrvatska'
+    location: 'Hrvatska',
   },
   {
     name: 'isiXhosa',
-    location: 'eMzantsi Afrika'
+    location: 'eMzantsi Afrika',
   },
   {
     name: 'isiZulu',
-    location: 'iNingizimu Afrika'
+    location: 'iNingizimu Afrika',
   },
   {
     name: 'Íslenska',
-    location: 'Ísland'
+    location: 'Ísland',
   },
   {
     name: 'Italiano',
-    location: 'Italia'
+    location: 'Italia',
   },
   {
     name: 'Italiano',
-    location: 'Svizzera'
+    location: 'Svizzera',
   },
   {
     name: 'Kiswahili',
-    location: 'Āfrika'
+    location: 'Āfrika',
   },
   {
     name: 'Latviešu',
-    location: 'Latvija'
+    location: 'Latvija',
   },
   {
     name: 'Lietuvių',
-    location: 'Lietuva'
+    location: 'Lietuva',
   },
   {
     name: 'Magyar',
-    location: 'Magyarország'
+    location: 'Magyarország',
   },
   {
     name: 'Malti',
-    location: 'Malta'
+    location: 'Malta',
   },
   {
     name: 'Melayu',
-    location: 'Malaysia'
+    location: 'Malaysia',
   },
   {
     name: 'Nederlands',
-    location: 'België'
+    location: 'België',
   },
   {
     name: 'Nederlands',
-    location: 'Nederland'
+    location: 'Nederland',
   },
   {
     name: 'Norsk',
-    location: 'Norge'
+    location: 'Norge',
   },
   {
     name: 'Polski',
-    location: 'Polska'
+    location: 'Polska',
   },
   {
     name: 'Português',
-    location: 'Brasil'
+    location: 'Brasil',
   },
   {
     name: 'Português',
-    location: 'Portugal'
+    location: 'Portugal',
   },
   {
     name: 'Română',
-    location: 'Română'
+    location: 'Română',
   },
   {
     name: 'Shqip',
-    location: 'Shqipëri'
+    location: 'Shqipëri',
   },
   {
     name: 'Slovenčina',
-    location: 'Slovensko'
+    location: 'Slovensko',
   },
   {
     name: 'Slovenščina',
-    location: 'Slovenija'
+    location: 'Slovenija',
   },
   {
     name: 'Srpski',
-    location: 'Srbija'
+    location: 'Srbija',
   },
   {
     name: 'Suomi',
-    location: 'Suomi'
+    location: 'Suomi',
   },
   {
     name: 'Svenska',
-    location: 'Sverige'
+    location: 'Sverige',
   },
   {
     name: 'Tagalog',
-    location: 'Pilipinas'
+    location: 'Pilipinas',
   },
   {
     name: 'Tiếng Việt',
-    location: 'Việt Nam'
+    location: 'Việt Nam',
   },
   {
     name: 'Türkçe',
-    location: 'Türkiye'
+    location: 'Türkiye',
   },
   {
     name: 'Ελληνικά',
-    location: 'Ελλάδα'
+    location: 'Ελλάδα',
   },
   {
     name: 'Български',
-    location: 'България'
+    location: 'България',
   },
   {
     name: 'Македонски',
-    location: 'Северна Македонија'
+    location: 'Северна Македонија',
   },
   {
     name: 'Русский',
-    location: 'Россия'
+    location: 'Россия',
   },
   {
     name: 'Українська',
-    location: 'Україна'
+    location: 'Україна',
   },
   {
     name: 'ქართული',
-    location: 'საქართველო'
+    location: 'საქართველო',
   },
   {
     name: 'Հայերեն',
-    location: 'Հայաստան'
+    location: 'Հայաստան',
   },
   {
     name: 'עברית',
-    location: 'ישראל'
+    location: 'ישראל',
   },
   {
     name: 'العربية',
-    location: 'العالم'
+    location: 'العالم',
   },
   {
     name: 'हिन्दी',
-    location: 'भारत'
+    location: 'भारत',
   },
   {
     name: 'ไทย',
-    location: 'ประเทศไทย'
+    location: 'ประเทศไทย',
   },
   {
     name: '한국어',
-    location: '대한민국'
+    location: '대한민국',
   },
   {
     name: '日本語',
-    location: '日本'
+    location: '日本',
   },
   {
     name: '简体中文',
-    location: '美国'
+    location: '美国',
   },
   {
     name: '繁體中文',
-    location: '美國'
+    location: '美國',
   },
   {
     name: '简体中文',
-    location: '中国'
+    location: '中国',
   },
   {
     name: '繁體中文',
-    location: '香港'
+    location: '香港',
   },
   {
     name: '繁體中文',
-    location: '台灣'
-  }
+    location: '台灣',
+  },
 ];
 
 interface Props {
@@ -359,7 +359,7 @@ interface Props {
 
 export const LanguageModal: React.FC<Props> = ({
   location,
-  setLanguageModal
+  setLanguageModal,
 }) => {
   const defaultLanguage = languages.find(
     (language) => language.location == location
@@ -390,7 +390,7 @@ export const LanguageModal: React.FC<Props> = ({
       />
       <div
         id='centerAbsolute'
-        className='relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50'>
+        className='relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p'>
         <div className='w-full border-b border-gray-300'>
           <div className='w-full mx-auto max-w-5xl mt-2 flex justify-center items-center'>
             <div className='bg-green-850 relative w-full px-4 flex justify-center items-center my-6'>
