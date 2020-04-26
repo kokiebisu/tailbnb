@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3586,7 +3586,7 @@ const Cookies = ({
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: "flex justify-between",
+    className: "md:flex justify-between",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3594,7 +3594,7 @@ const Cookies = ({
       columnNumber: 7
     }
   }, __jsx("div", {
-    className: "",
+    className: "md:w-3/5",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3602,7 +3602,7 @@ const Cookies = ({
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "pr-24",
+    className: "pr-6",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3613,7 +3613,7 @@ const Cookies = ({
     style: {
       fontFamily: 'airbnb-light'
     },
-    className: "text-gray-750 font-thin",
+    className: "text-gray-750 leading-5 text-sm",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3621,7 +3621,7 @@ const Cookies = ({
       columnNumber: 13
     }
   }, "We use cookies to help personalize content, tailor and measure ads, and provide a safer experience. By navigating the site, you agree to the use of cookies to collect information on and off Airbnb. Read our Cookie Policy to learn more or go to Cookie Preferences to manage your settings."))), __jsx("div", {
-    className: "flex items-center",
+    className: "md:w-2/5 flex items-center justify-end",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3629,7 +3629,7 @@ const Cookies = ({
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "flex items-center justify-center",
+    className: "w-full mt-6 md:mt-0",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3637,7 +3637,7 @@ const Cookies = ({
       columnNumber: 11
     }
   }, __jsx("div", {
-    className: "h-full bg-green-850 rounded-lg mr-1",
+    className: "w-full md:w-90p",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3645,21 +3645,45 @@ const Cookies = ({
       columnNumber: 13
     }
   }, __jsx("div", {
-    className: "flex justify-center items-center",
+    className: "w-full flex items-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25,
       columnNumber: 15
     }
-  }, __jsx("button", {
-    onClick: turnOffBanner,
-    className: "px-24 py-3",
+  }, __jsx("div", {
+    className: "w-full flex items-center justify-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26,
       columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: "w-1/2 h-full bg-green-850 rounded-lg mr-1",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 19
+    }
+  }, __jsx("div", {
+    className: "flex justify-center items-center",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 21
+    }
+  }, __jsx("button", {
+    onClick: turnOffBanner,
+    className: "w-1/2 py-3",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 23
     }
   }, __jsx("p", {
     style: {
@@ -3669,33 +3693,33 @@ const Cookies = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 19
+      lineNumber: 30,
+      columnNumber: 25
     }
   }, "OK")))), __jsx("div", {
-    className: "h-full bg-white border border-green-850 rounded-lg ml-1",
+    className: "w-1/2 h-full bg-white border border-green-850 rounded-lg ml-1",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 13
+      lineNumber: 38,
+      columnNumber: 19
     }
   }, __jsx("div", {
     className: "flex justify-center items-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 15
+      lineNumber: 39,
+      columnNumber: 21
     }
   }, __jsx("button", {
     onClick: turnOffBanner,
-    className: "px-12 py-3",
+    className: "py-3",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 17
+      lineNumber: 40,
+      columnNumber: 23
     }
   }, __jsx("p", {
     style: {
@@ -3705,10 +3729,10 @@ const Cookies = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 19
+      lineNumber: 41,
+      columnNumber: 25
     }
-  }, "Cookie Preferences"))))))));
+  }, "Cookie Preferences")))))))))));
 };
 
 /***/ }),
@@ -9307,7 +9331,7 @@ const calculateInfants = (adultNumber, infantNumber) => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.jsx ***!
   \***********************************/

@@ -50288,7 +50288,7 @@ var renderSkeletonThreeColumn = function renderSkeletonThreeColumn(number, withL
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstay&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Fstay%2Findex.tsx ***!
   \***************************************************************************************************************************************************/
@@ -50311,5 +50311,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=stay.js.map
