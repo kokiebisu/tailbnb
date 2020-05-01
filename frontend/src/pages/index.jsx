@@ -42,7 +42,7 @@ const Home = () => {
         <div
           ref={(el) => (banner = el)}
           style={{ bottom: 12 }}
-          className='z-100 bottom-0 sticky'>
+          className='hidden md:block z-100 bottom-0 sticky'>
           <div className='px-5 mx-auto'>
             <Cookies
               turnOffBanner={() => {
