@@ -33808,7 +33808,7 @@ var CurrencyModal = function CurrencyModal(_ref) {
     }
   }), __jsx("div", {
     id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
+    className: " rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -35140,7 +35140,7 @@ var LanguageModal = function LanguageModal(_ref) {
     }
   }), __jsx("div", {
     id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
+    className: "rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -37380,7 +37380,7 @@ var calculateInfants = function calculateInfants(adultNumber, infantNumber) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.jsx ***!
   \****************************************************************************************************************************************/
@@ -37403,5 +37403,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

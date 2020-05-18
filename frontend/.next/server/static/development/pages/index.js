@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -5813,7 +5813,7 @@ const CurrencyModal = ({
     }
   }), __jsx("div", {
     id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
+    className: " rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -7136,7 +7136,7 @@ const LanguageModal = ({
     }
   }), __jsx("div", {
     id: "centerAbsolute",
-    className: "relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
+    className: "rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -9334,7 +9334,7 @@ const calculateInfants = (adultNumber, infantNumber) => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.jsx ***!
   \***********************************/

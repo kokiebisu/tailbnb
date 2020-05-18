@@ -59,7 +59,7 @@ export const CurrencyModal: React.FC<Props> = ({
       />
       <div
         id='centerAbsolute'
-        className='relative rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p'>
+        className=' rounded-xl hidden fixed bg-white md:block w-248 pb-8 z-50 xl:top-35p 2xl:top-50p'>
         <div className='w-full border-b border-gray-300'>
           <div className='w-full mx-auto max-w-5xl mt-2 flex justify-center items-center'>
             <div className='bg-green-850 relative w-full px-4 flex justify-center items-center my-6'>

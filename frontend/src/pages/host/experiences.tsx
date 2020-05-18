@@ -36,7 +36,7 @@ const experiences: NextPage<{}> = () => {
         id='experiences__video'
         className='h-screen lg:w-screen fixed top-0 left-0'>
         <video
-          playsinline
+          playsInline
           autoPlay
           loop
           muted
