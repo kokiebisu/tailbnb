@@ -4,7 +4,10 @@ const resolvers = {
       return context.prisma.stays();
     },
     stay(root, args, context) {
-      return context.prisma.stay({ where, name: args.name });
+      return context.prisma.stay({ id: args.id });
+    },
+    stayByCountry(root, args, context) {
+      return context.prisma.stay({ country: args.country });
     },
     adventures(root, args, context) {
       return context.prisma.adventures();

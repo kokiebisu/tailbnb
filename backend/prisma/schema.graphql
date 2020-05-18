@@ -1,6 +1,7 @@
 type Query {
   stays: [Stay!]!
   stay(id: ID!): Stay
+  stayByLocation(country: String): Stay
   adventures: [Adventure!]!
   adventure(id: ID!): Adventure
   experiences(first: Int): [Experience!]!
