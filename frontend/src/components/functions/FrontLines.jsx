@@ -8,7 +8,7 @@ export const FrontLines = () => {
           <div className='md:w-55p'>
             <h3
               style={{ fontFamily: 'airbnb-bold' }}
-              className='md:text-gray-750 md:text-3xl xl:text-3xl tracking-tight leading-9'>
+              className='md:text-gray-750 text-2xl md:text-3xl xl:text-3xl tracking-tight leading-9'>
               Host a hero: help us house front line responders around the world
             </h3>
             <div className='mt-6'>

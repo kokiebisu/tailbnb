@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2352,7 +2352,7 @@ const FrontLines = () => {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "md:text-gray-750 md:text-3xl xl:text-3xl tracking-tight leading-9",
+    className: "md:text-gray-750 text-2xl md:text-3xl xl:text-3xl tracking-tight leading-9",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -4286,6 +4286,9 @@ const Header = ({
       columnNumber: 9
     }
   }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __self: undefined,
     __source: {
@@ -4297,7 +4300,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 241,
       columnNumber: 11
     }
   }), __jsx("div", {
@@ -4305,7 +4308,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 242,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -4316,7 +4319,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 243,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -4324,14 +4327,14 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 246,
       columnNumber: 13
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 247,
       columnNumber: 15
     }
   }, __jsx("p", {
@@ -4342,7 +4345,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 248,
       columnNumber: 17
     }
   }, "Airbnb is taking steps to support our community in this time of need.")), __jsx("div", {
@@ -4350,7 +4353,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251,
+      lineNumber: 253,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -4362,7 +4365,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 254,
       columnNumber: 17
     }
   }, "Learn more")))))), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
@@ -4374,7 +4377,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268,
+      lineNumber: 270,
       columnNumber: 13
     }
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_6__["RegisterModal"], {
@@ -4386,7 +4389,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276,
+      lineNumber: 278,
       columnNumber: 13
     }
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_7__["HelpModal"], {
@@ -4394,7 +4397,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 290,
       columnNumber: 20
     }
   }) : null, currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_4__["CurrencyModal"], {
@@ -4404,7 +4407,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292,
+      lineNumber: 294,
       columnNumber: 11
     }
   })) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, false ? undefined : null, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_5__["LanguageModal"], {
@@ -4413,7 +4416,7 @@ const Header = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302,
+      lineNumber: 304,
       columnNumber: 11
     }
   })) : null);
@@ -9174,7 +9177,7 @@ const Home = () => {
     style: {
       bottom: 12
     },
-    className: "z-100 bottom-0 sticky",
+    className: "hidden md:block z-100 bottom-0 sticky",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -9331,7 +9334,7 @@ const calculateInfants = (adultNumber, infantNumber) => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!***********************************!*\
   !*** multi ./src/pages/index.jsx ***!
   \***********************************/

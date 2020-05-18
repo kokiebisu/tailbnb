@@ -233,7 +233,9 @@ export const Header: React.FC<Props> = ({ switchMenuModal }) => {
           </div>
         </div>
         <div>
-          <h3 className='md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6'>
+          <h3
+            style={{ fontFamily: 'airbnb-medium' }}
+            className='md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6'>
             Book unique places to stay and things to do.
           </h3>
           <HeaderCard />

@@ -24,11 +24,11 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/index": [
+    "/experience": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/stay": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

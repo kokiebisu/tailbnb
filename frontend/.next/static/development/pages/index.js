@@ -30306,7 +30306,7 @@ var FrontLines = function FrontLines() {
     style: {
       fontFamily: 'airbnb-bold'
     },
-    className: "md:text-gray-750 md:text-3xl xl:text-3xl tracking-tight leading-9",
+    className: "md:text-gray-750 text-2xl md:text-3xl xl:text-3xl tracking-tight leading-9",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -32285,6 +32285,9 @@ var Header = function Header(_ref) {
       columnNumber: 9
     }
   }, __jsx("h3", {
+    style: {
+      fontFamily: 'airbnb-medium'
+    },
     className: "md:hidden px-4 pb-4 pt-16 text-white inline-block font-sans text-3xl font-bold leading-tight w-5/6",
     __self: _this,
     __source: {
@@ -32296,7 +32299,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239,
+      lineNumber: 241,
       columnNumber: 11
     }
   }), __jsx("div", {
@@ -32304,7 +32307,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 242,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -32315,7 +32318,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241,
+      lineNumber: 243,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -32323,14 +32326,14 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 246,
       columnNumber: 13
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 247,
       columnNumber: 15
     }
   }, __jsx("p", {
@@ -32341,7 +32344,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 248,
       columnNumber: 17
     }
   }, "Airbnb is taking steps to support our community in this time of need.")), __jsx("div", {
@@ -32349,7 +32352,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251,
+      lineNumber: 253,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -32361,7 +32364,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 254,
       columnNumber: 17
     }
   }, "Learn more")))))), registerModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, type == 'Log in' ? __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_7__["RegisterModal"], {
@@ -32373,7 +32376,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268,
+      lineNumber: 270,
       columnNumber: 13
     }
   }) : __jsx(_modals_RegisterModal__WEBPACK_IMPORTED_MODULE_7__["RegisterModal"], {
@@ -32385,7 +32388,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276,
+      lineNumber: 278,
       columnNumber: 13
     }
   })) : __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('auto') : undefined), helpModal ? __jsx(_modals_HelpModal__WEBPACK_IMPORTED_MODULE_8__["HelpModal"], {
@@ -32393,7 +32396,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 290,
       columnNumber: 20
     }
   }) : null, currencyModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx(_modals_CurrencyModal__WEBPACK_IMPORTED_MODULE_5__["CurrencyModal"], {
@@ -32403,7 +32406,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292,
+      lineNumber: 294,
       columnNumber: 11
     }
   })) : null, languageModal ? __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, true ? configureScroll('hidden') : undefined, __jsx(_modals_LanguageModal__WEBPACK_IMPORTED_MODULE_6__["LanguageModal"], {
@@ -32412,7 +32415,7 @@ var Header = function Header(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302,
+      lineNumber: 304,
       columnNumber: 11
     }
   })) : null);
@@ -37220,7 +37223,7 @@ var Home = function Home() {
     style: {
       bottom: 12
     },
-    className: "z-100 bottom-0 sticky",
+    className: "hidden md:block z-100 bottom-0 sticky",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -37377,7 +37380,7 @@ var calculateInfants = function calculateInfants(adultNumber, infantNumber) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fken%2FDesktop%2Fnextbnb%2Ffrontend%2Fsrc%2Fpages%2Findex.jsx ***!
   \****************************************************************************************************************************************/
@@ -37400,5 +37403,5 @@ module.exports = dll_3a359c314b014ea1ed53;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
