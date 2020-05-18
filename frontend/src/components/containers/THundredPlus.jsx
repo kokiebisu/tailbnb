@@ -28,22 +28,6 @@ const staydata = gql`
   }
 `;
 
-// interface StayData {
-//   stays: Stay[];
-// }
-
-// interface Stay {
-//   id: string;
-//   host_is_superhost: string;
-//   size: string;
-//   country: string;
-//   name: string;
-//   price: number;
-//   reviews_per_month: number;
-//   number_of_reviews: number;
-//   picture_url: string;
-// }
-
 const renderContent = (data, number) => {
   var content = [];
 
