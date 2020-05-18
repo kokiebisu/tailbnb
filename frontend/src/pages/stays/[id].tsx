@@ -4,15 +4,12 @@ import { useQuery } from '@apollo/react-hooks';
 import { useState } from 'react';
 import Head from 'next/head';
 
-// Dependencies
-// import styled from 'styled-components';
-
 // GraphQL
 import { gql } from 'apollo-boost';
 
 // General
 import { ExploreHeader } from '../../components/layout/ExploreHeader';
-import { Footer } from '../../components/layout/Footer';
+import { NewFooter } from '../../components/layout/NewFooter';
 
 // Containers
 import { Reviews } from '../../components/stays/containers/Reviews';
@@ -76,8 +73,8 @@ const id: () => string | JSX.Element = () => {
   const router = useRouter();
   const { loading, data } = useQuery(GET_STAY, {
     variables: {
-      id: router.query.id
-    }
+      id: router.query.id,
+    },
   });
   const changeLength = () => {
     setLength(!length);
@@ -162,29 +159,9 @@ const id: () => string | JSX.Element = () => {
           </>
         )}
       </div>
-      <Footer />
+      <NewFooter />
     </>
   );
 };
-
-// const SSkeletonPulse = styled.div`
-//   display: inline-block;
-//   height: 100%;
-//   width: 100%;
-//   background: linear-gradient(-90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
-//   background-size: 400% 400%;
-//   @keyframes pulse {
-//     0% {
-//       background-position: 0% 0%;
-//     }
-//     100% {
-//       background-position: -135% 0%;
-//     }
-//   }
-// `;
-
-// const SSkeletonPulse1 = styled(SSkeletonPulse)`
-//   animation: pulse 1.2s ease-in-out infinite;
-// `;
 
 export default id;

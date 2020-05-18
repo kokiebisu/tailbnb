@@ -5,8 +5,22 @@ import { HomeCard } from '../../functions/HomeCard';
 
 // Wrapper
 import { DetailSectionOverflow } from '../../wrapper/DetailSectionOverflow';
+// import { gql } from 'apollo-boost';
 
 export const MoreHomes: React.FC<{}> = () => {
+  // const GET_MORE_HOMES = gql`
+  //   query Stay($id: ID!) {
+  //     stay(where: { id: $id }) {
+  //      id
+  //       picture_url
+  //       name
+  //       reviews_per_month
+  //       number_of_reviews
+  //       beds
+  //     }
+  //   }
+  // `;
+
   return (
     <DetailSectionOverflow title='More places to stay'>
       <div className='overflow-y-hidden'>

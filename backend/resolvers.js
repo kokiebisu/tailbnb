@@ -4,7 +4,7 @@ const resolvers = {
       return context.prisma.stays();
     },
     stay(root, args, context) {
-      return context.prisma.stay({ name: args.name });
+      return context.prisma.stay({ where, name: args.name });
     },
     adventures(root, args, context) {
       return context.prisma.adventures();
@@ -17,7 +17,7 @@ const resolvers = {
     },
     experience(root, args, context) {
       return context.prisma.experience({ id: args.id });
-    }
+    },
   },
   Mutation: {
     createStay(root, args, context) {
@@ -47,7 +47,7 @@ const resolvers = {
         accomodates: args.accommodates,
         beds: args.beds,
         bedrooms: args.bedrooms,
-        bathrooms: args.bathrooms
+        bathrooms: args.bathrooms,
       });
     },
     deleteStay(root, args, context) {
@@ -60,12 +60,12 @@ const resolvers = {
         price: args.price,
         country: args.country,
         img: args.img,
-        imglow: args.imglow
+        imglow: args.imglow,
       });
     },
     deleteAdventure(root, args, context) {
       return context.prisma.deleteAdventure({
-        title: args.title
+        title: args.title,
       });
     },
     createExperience(root, args, context) {
@@ -79,15 +79,15 @@ const resolvers = {
         imglow: args.imglow,
         street: args.street,
         category: args.category,
-        available: args.available
+        available: args.available,
       });
     },
     deleteExperience(root, args, context) {
       return context.prisma.deleteExperience({
-        title: args.title
+        title: args.title,
       });
-    }
-  }
+    },
+  },
 };
 
 module.exports = resolvers;
