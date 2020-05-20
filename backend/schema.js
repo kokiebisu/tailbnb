@@ -26,32 +26,32 @@ module.exports = gql`
   }
 
   type Stay {
-    access: String!
-    acommodates: Int!
-    bathrooms: Float!
-    bedrooms: Int!
-    beds: Int!
-    country: String!
-    description: String!
-    during_stay: String!
-    host_description: String!
-    host_is_superhost: String!
-    host_name: String!
-    host_picture_url: String!
-    host_response_rate: String!
-    host_response_time: String!
-    host_since: String!
-    host_thumbnail_url: String!
-    id: ID!
-    imglow: String!
+    access: String
+    acommodates: Int
+    bathrooms: Float
+    bedrooms: Int
+    beds: Int
+    country: String
+    description: String
+    during_stay: String
+    host_description: String
+    host_is_superhost: String
+    host_name: String
+    host_picture_url: String
+    host_response_rate: String
+    host_response_time: String
+    host_since: String
+    host_thumbnail_url: String
+    id: ID
+    imglow: String
     name: String
-    notes: String!
-    number_of_reviews: Int!
-    picture_url: String!
-    price: String!
-    reviews_per_month: Float!
-    size: String!
-    space: String!
+    notes: String
+    number_of_reviews: Int
+    picture_url: String
+    price: String
+    reviews_per_month: Float
+    size: String
+    space: String
   }
 
   type Mutation {

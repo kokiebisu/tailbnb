@@ -16,14 +16,15 @@ const staydata = gql`
   query {
     stays {
       id
-      host_is_superhost
-      size
-      country
       name
-      price
-      reviews_per_month
-      number_of_reviews
-      picture_url
+      # host_is_superhost
+      # size
+      # country
+      # name
+      # price
+      # reviews_per_month
+      # number_of_reviews
+      # picture_url
     }
   }
 `;
@@ -55,6 +56,10 @@ const THundredPlus = ({ size }) => {
   const { loading, error, data } = useQuery(staydata);
 
   if (error) return `Error! ${error.message}`;
+
+  if (data) {
+    console.log(data);
+  }
 
   return (
     <>
