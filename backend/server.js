@@ -2,6 +2,7 @@ const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 const { PrismaClient } = require('@prisma/client');
 
+const cors = require('cors');
 const resolvers = require('./resolvers');
 const schemas = require('./schema');
 
@@ -9,6 +10,7 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 
+app.use(cors('*'));
 app.use(express.json());
 
 const prisma = new PrismaClient();

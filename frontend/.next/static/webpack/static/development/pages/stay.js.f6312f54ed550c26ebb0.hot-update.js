@@ -28,7 +28,7 @@ var _this = undefined,
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    stays {\n      id\n      host_is_superhost\n      size\n      country\n      name\n      price\n      reviews_per_month\n      number_of_reviews\n      picture_url\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    stays {\n      id\n      name\n      host_is_superhost\n      size\n      country\n      name\n      price\n      reviews_per_month\n      number_of_reviews\n      picture_url\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -59,7 +59,7 @@ var renderContent = function renderContent(data, number) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
+        lineNumber: 38,
         columnNumber: 7
       }
     }, __jsx(_functions_THundredPlusCard__WEBPACK_IMPORTED_MODULE_6__["THundredPlusCard"], {
@@ -74,7 +74,7 @@ var renderContent = function renderContent(data, number) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38,
+        lineNumber: 39,
         columnNumber: 9
       }
     })));
@@ -102,7 +102,7 @@ var THundredPlus = function THundredPlus(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 66,
       columnNumber: 7
     }
   }, loading ? __jsx("div", {
@@ -110,7 +110,7 @@ var THundredPlus = function THundredPlus(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 68,
       columnNumber: 11
     }
   }, size.width < 767 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(4, true) : null, size.width >= 767 && size.width < 1023 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(3, true) : null, size.width >= 1023 && size.width < 1279 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1279 && size.width < 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(6, true) : null, size.width >= 1529 ? Object(_util_RenderSkeleton__WEBPACK_IMPORTED_MODULE_5__["renderSkeletonHorizontal"])(8, true) : null) : data && __jsx("div", {
@@ -118,7 +118,7 @@ var THundredPlus = function THundredPlus(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 83,
       columnNumber: 13
     }
   }, size.width < 767 ? renderContent(data, 4) : null, size.width >= 767 && size.width < 1023 ? renderContent(data, 3) : null, size.width >= 1023 && size.width < 1279 ? renderContent(data, 6) : null, size.width >= 1279 && size.width < 1529 ? renderContent(data, 6) : null, size.width >= 1529 ? renderContent(data, 8) : null), __jsx(_ShowAll__WEBPACK_IMPORTED_MODULE_7__["ShowAll"], {
@@ -126,7 +126,7 @@ var THundredPlus = function THundredPlus(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97,
+      lineNumber: 98,
       columnNumber: 9
     }
   })));
@@ -137,4 +137,4 @@ var THundredPlus = function THundredPlus(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=stay.js.9ae4c4261dc8ef9193ed.hot-update.js.map
+//# sourceMappingURL=stay.js.f6312f54ed550c26ebb0.hot-update.js.map

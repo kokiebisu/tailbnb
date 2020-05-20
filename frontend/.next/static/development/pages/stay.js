@@ -44166,7 +44166,7 @@ var _this = undefined,
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    stays {\n      id\n      name\n      # host_is_superhost\n      # size\n      # country\n      # name\n      # price\n      # reviews_per_month\n      # number_of_reviews\n      # picture_url\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query {\n    stays {\n      id\n      name\n      host_is_superhost\n      size\n      country\n      name\n      price\n      reviews_per_month\n      number_of_reviews\n      picture_url\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

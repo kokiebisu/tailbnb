@@ -2294,14 +2294,14 @@ const staydata = apollo_boost__WEBPACK_IMPORTED_MODULE_2__["gql"]`
     stays {
       id
       name
-      # host_is_superhost
-      # size
-      # country
-      # name
-      # price
-      # reviews_per_month
-      # number_of_reviews
-      # picture_url
+      host_is_superhost
+      size
+      country
+      name
+      price
+      reviews_per_month
+      number_of_reviews
+      picture_url
     }
   }
 `;
