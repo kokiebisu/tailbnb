@@ -1,9 +1,0 @@
-endpoint: https://nextbnb-a7667a1201.herokuapp.com
-datamodel: datamodel.prisma
-
-generate:
-  - generator: javascript-client
-    output: ./generated/prisma-client/
-
-seed:
-  run: node ./data/seed.js

@@ -1,25 +1,27 @@
-const resolvers = {
+module.exports = {
   Query: {
     stays(root, args, context) {
-      return context.prisma.stays();
+      return context.stay.findMany();
     },
     stay(root, args, context) {
-      return context.prisma.stay({ id: args.id });
+      return context.stay.findOne({ where: { id: args.id } });
     },
     stayByCountry(root, args, context) {
-      return context.prisma.stay({ country: args.country });
+      return context.stay.findOne({ where: { country: args.country } });
     },
     adventures(root, args, context) {
-      return context.prisma.adventures();
+      return context.adventure.findMany();
     },
     adventure(root, args, context) {
-      return context.prisma.adventure({ id: args.id });
+      return context.adventure.findOne({ where: { id: args.id } });
     },
     experiences(root, args, context) {
-      return context.prisma.experiences({ where, first: args.first });
+      return context.experience.findMany({
+        where: { id: args.id, first: args.first },
+      });
     },
     experience(root, args, context) {
-      return context.prisma.experience({ id: args.id });
+      return context.experience.findOne({ where: { id: args.id } });
     },
   },
   Mutation: {
@@ -92,5 +94,3 @@ const resolvers = {
     },
   },
 };
-
-module.exports = resolvers;
