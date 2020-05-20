@@ -52,7 +52,7 @@ cd frontend && npm run test
 
 This project uses two deployment platforms.
 * Client - [Now](https://zeit.co)
-* Server - [Heroku](https://www.heroku.com)
+* Server - [Digital Ocean](https://www.digitalocean.com/)
 
 ## Built With
 
@@ -62,6 +62,7 @@ This project uses two deployment platforms.
 * [Prisma](https://www.prisma.io/) - Object-relational mapping framework
 * [PostgreSQL](https://www.postgresql.org/) - Database
 * [Graphql-Yoga](https://github.com/prisma-labs/graphql-yoga/) - Graphql server
+* [Nginx](https://www.nginx.com/) - Reverse proxy for deployment
 
 ## Authors
 
