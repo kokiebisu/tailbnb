@@ -117,5 +117,3 @@ module.exports = gql`
     experience(id: Int): Experience
   }
 `;
-
-// DATABASE_URL="postgresql://doadmin:nnm3zufysb0qclmj@nextbnb-database-do-user-6908067-0.a.db.ondigitalocean.com:25060/defaultdb?sslmode=require"
