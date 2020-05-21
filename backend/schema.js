@@ -26,6 +26,7 @@ module.exports = gql`
   }
 
   type Stay {
+    id: ID!
     access: String
     acommodates: Int
     bathrooms: Float
@@ -42,7 +43,6 @@ module.exports = gql`
     host_response_time: String
     host_since: String
     host_thumbnail_url: String
-    id: ID
     imglow: String
     name: String
     notes: String
@@ -108,7 +108,7 @@ module.exports = gql`
   }
 
   type Query {
-    stay(id: ID!): Stay
+    stay(id: Int!): Stay
     stayByCountry(country: String!): Stay
     stays: [Stay!]
     adventures: [Adventure!]
@@ -117,3 +117,5 @@ module.exports = gql`
     experience(id: Int): Experience
   }
 `;
+
+// DATABASE_URL="postgresql://doadmin:nnm3zufysb0qclmj@nextbnb-database-do-user-6908067-0.a.db.ondigitalocean.com:25060/defaultdb?sslmode=require"

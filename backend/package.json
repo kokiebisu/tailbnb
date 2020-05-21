@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "nexus-prisma": "^0.13.0"
   },
   "devDependencies": {
-    "@prisma/cli": "^2.0.0-beta.5"
+    "@prisma/cli": "^2.0.0-beta.5",
+    "nodemon": "^2.0.4"
   }
 }

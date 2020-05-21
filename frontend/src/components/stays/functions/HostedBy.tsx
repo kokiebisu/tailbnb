@@ -19,9 +19,9 @@ const renderContent = (content: string) => {
 interface Props {
   host_name: string;
   host_is_superhost: string;
-  hostDescription: string;
+  host_description: string;
   host_since: string;
-  duringStay: string;
+  during_stay: string;
   reviews_per_month: number;
   host_thumbnail_url: string;
   host_picture_url: string;
@@ -32,18 +32,18 @@ interface Props {
 export const HostedBy: React.FC<Props> = ({
   host_name,
   host_is_superhost,
-  hostDescription,
+  host_description,
   host_since,
-  duringStay,
+  during_stay,
   reviews_per_month,
   host_picture_url,
   host_response_time,
-  host_response_rate
+  host_response_rate,
 }) => {
   const [descriptionDisplay, setDescriptionDisplay] = useState<boolean>(false);
   const [stayDisplay, setStayDisplay] = useState<boolean>(false);
-  const defaultDescription = renderContent(hostDescription);
-  const defaultDuringStay = renderContent(duringStay);
+  const defaultDescription = renderContent(host_description);
+  const defaultDuringStay = renderContent(during_stay);
   return (
     <>
       <div className='py-10 border-b border-gray-300'>
@@ -148,7 +148,7 @@ export const HostedBy: React.FC<Props> = ({
               </div>
               <div className='my-4'>
                 {descriptionDisplay ? (
-                  <p className='text-gray-750'>{hostDescription}</p>
+                  <p className='text-gray-750'>{host_description}</p>
                 ) : (
                   <p
                     style={{ fontFamily: 'airbnb-book' }}
@@ -163,7 +163,7 @@ export const HostedBy: React.FC<Props> = ({
                   </p>
                 )}
               </div>
-              {duringStay ? (
+              {during_stay ? (
                 <div className='my-4'>
                   <h3 style={{ fontFamily: 'airbnb-medium' }} className='mb-3'>
                     During your stay
@@ -173,7 +173,7 @@ export const HostedBy: React.FC<Props> = ({
                       <p
                         style={{ fontFamily: 'airbnb-book' }}
                         className='text-gray-750'>
-                        {duringStay}
+                        {during_stay}
                       </p>
                     </div>
                   ) : (

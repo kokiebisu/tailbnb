@@ -29,9 +29,6 @@ import { MainInfo } from '../../components/stays/functions/MainInfo';
 import { CheckInCard } from '../../components/stays/functions/CheckInCard';
 import { HostedBy } from '../../components/stays/functions/HostedBy';
 
-// Next
-// import { NextPage } from 'next';
-
 // Images
 const detail2 = require('../../../public/img/high/staydetail2.jpg');
 const detail3 = require('../../../public/img/high/staydetail3.jpg');
@@ -39,7 +36,7 @@ const detail4 = require('../../../public/img/high/staydetail4.jpg');
 const detail5 = require('../../../public/img/high/staydetail5.jpg');
 
 const GET_STAY = gql`
-  query Stay($id: ID!) {
+  query Stay($id: Int!) {
     stay(id: $id) {
       picture_url
       name
@@ -71,17 +68,19 @@ const GET_STAY = gql`
 
 const id: () => string | JSX.Element = () => {
   const router = useRouter();
+
   const { loading, data } = useQuery(GET_STAY, {
     variables: {
-      id: router.query.id,
+      id: parseInt(`${router.query.id}`, 10),
     },
   });
 
-  console.log('router', typeof router.query.id);
   const changeLength = () => {
     setLength(!length);
   };
+
   const [length, setLength] = useState<boolean>(false);
+
   return (
     <>
       <Head>
@@ -144,9 +143,9 @@ const id: () => string | JSX.Element = () => {
             />
             <HostedBy
               host_name={data.stay.host_name}
-              hostDescription={data.stay.hostDescription}
+              host_description={data.stay.host_description}
               host_since={data.stay.host_since}
-              duringStay={data.stay.duringStay}
+              during_stay={data.stay.during_stay}
               host_is_superhost={data.stay.host_is_superhost}
               reviews_per_month={data.stay.reviews_per_month}
               host_picture_url={data.stay.host_picture_url}

@@ -24,6 +24,7 @@ export const THundredPlusCard: React.FC<Prop> = ({
   reviews_per_month,
   number_of_reviews,
 }) => {
+  console.log('id type', typeof id);
   const renderhost = (host_is_superhost: string) => {
     if (host_is_superhost == 't') {
       return (

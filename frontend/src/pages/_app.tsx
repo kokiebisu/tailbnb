@@ -33,7 +33,8 @@ const MyApp: React.FC<Props> = ({ Component, pageProps, apollo }) => {
 // https://nextbnb-a7667a1201.herokuapp.com
 export default withApollo(({ initialState }) => {
   return new ApolloClient({
-    uri: 'https://www.nextbnb.dev/graphql',
+    // uri: 'https://www.nextbnb.dev/graphql',
+    uri: 'http://localhost:4000/graphql',
     cache: new InMemoryCache().restore(initialState || {}),
   });
 })(MyApp);
