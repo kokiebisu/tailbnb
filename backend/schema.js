@@ -108,7 +108,7 @@ module.exports = gql`
   }
 
   type Query {
-    stay(id: Int!): Stay
+    stay(id: ID!): Stay
     stayByCountry(country: String!): Stay
     stays: [Stay!]
     adventures: [Adventure!]

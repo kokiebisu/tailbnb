@@ -40,10 +40,10 @@ const detail5 = require('../../../public/img/high/staydetail5.jpg');
 
 const GET_STAY = gql`
   query Stay($id: ID!) {
-    stay(where: { id: $id }) {
+    stay(id: $id) {
       picture_url
       name
-      street
+      # street
       reviews_per_month
       number_of_reviews
       country
@@ -53,15 +53,15 @@ const GET_STAY = gql`
       access
       notes
       host_name
-      hostDescription
+      host_description
       host_since
-      duringStay
+      during_stay
       host_is_superhost
       host_thumbnail_url
       host_picture_url
       host_response_rate
       host_response_time
-      accommodates
+      acommodates
       beds
       bedrooms
       bathrooms
@@ -76,6 +76,8 @@ const id: () => string | JSX.Element = () => {
       id: router.query.id,
     },
   });
+
+  console.log('router', typeof router.query.id);
   const changeLength = () => {
     setLength(!length);
   };
