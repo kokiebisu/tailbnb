@@ -8,7 +8,7 @@
 
 ## Demo
 
-https://nextbnb.kokiebisu.now.sh
+https://nextbnb.kokiebisu.now.sh/?
 
 ``` diff
 ! The hosted demo may not load in the first try. When it doesn't, try reloading!!
