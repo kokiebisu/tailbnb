@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
+import React from 'react';
+import { useState } from 'react';
+import Data from '../../data/experiences.json';
 import PulseLoader from 'react-spinners/PulseLoader';
 
 // Components
@@ -8,37 +8,10 @@ import { HostCard } from '../functions/HostCard';
 
 // Wrapper
 import { ExploreSection } from '../wrapper/ExploreSection';
-import cuid from 'cuid';
-
-const experiencedata = gql`
-  query {
-    experiences {
-      id
-      title
-      location
-      country
-      img
-    }
-  }
-`;
-
-interface Experience {
-  id: string;
-  title: string;
-  location: string;
-  country: string;
-  img: string;
-  imglow: string;
-}
-
-interface ExperienceData {
-  experiences: Experience[];
-}
 
 export const Hosts: any = () => {
-  const { loading, error, data } = useQuery<ExperienceData>(experiencedata);
-
-  if (error) return `Error! ${error.message}`;
+  const [loading, setLoading] = useState(true);
+  setInterval(() => setLoading(false), 1000);
 
   return (
     <>
@@ -49,13 +22,12 @@ export const Hosts: any = () => {
           </div>
         ) : (
           <div className='flex items-start justify-start flex-wrap w-full'>
-            {data &&
-              data.experiences.map(({ id, title, location, country, img }) => {
+            {Data &&
+              Data.map(({ title, location, country, img }, index) => {
                 return (
-                  <React.Fragment key={cuid()}>
+                  <React.Fragment key={index}>
                     <div className='md:w-1/4 sm:w-1/3 w-1/2 pb-5'>
                       <HostCard
-                        key={id}
                         title={title}
                         img={img}
                         location={location}
