@@ -15,16 +15,15 @@ const renderContent = (data, number) => {
   var content = [];
 
   for (let i = 0; i < number; i++) {
-    console.log(data.stay[i]);
     content.push(
       <div key={i} className='pb-5'>
         <THundredPlusCard
-          host_is_superhost={data?.stays[i].host_is_superhost}
-          country={data?.stays[i].country}
-          name={data?.stays[i].name}
-          price={data?.stays[i].price}
-          reviews_per_month={data?.stays[i].reviews_per_month}
-          picture_url={data?.stays[i].picture_url}
+          host_is_superhost={data[i].host_is_superhost}
+          country={data[i].country}
+          name={data[i].name}
+          price={data[i].price}
+          reviews_per_month={data[i].reviews_per_month}
+          picture_url={data[i].picture_url}
         />
       </div>
     );
