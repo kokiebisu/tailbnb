@@ -24,7 +24,9 @@ export const renderSkeletonHorizontal = (number, withLine) => {
 
   for (let i = 0; i < number; i++) {
     content.push(
-      <div className='w-full mr-3 mb-3 rounded h-24 mb-16 md:h-40 lg:h-48 xl:h-56'>
+      <div
+        key={i}
+        className='w-full mr-3 mb-3 rounded h-24 mb-16 md:h-40 lg:h-48 xl:h-56'>
         <div id='skeleton-pulse--horizontal' />
         {withLine ? (
           <>

@@ -1,8 +1,7 @@
-import * as React from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
+import React from 'react';
+import { useState } from 'react';
 import withSize from 'react-sizeme';
-
+import Data from '../../data/stays.json';
 import { renderSkeletonHorizontal } from '../../util/RenderSkeleton';
 
 // Component
@@ -12,33 +11,14 @@ import { ShowAll } from '../ShowAll';
 // Wrapper
 import { ExploreSection } from '../wrapper/ExploreSection';
 
-const staydata = gql`
-  query {
-    stays {
-      id
-      name
-      host_is_superhost
-      size
-      country
-      name
-      price
-      reviews_per_month
-      number_of_reviews
-      picture_url
-    }
-  }
-`;
-
 const renderContent = (data, number) => {
   var content = [];
 
   for (let i = 0; i < number; i++) {
-    console.log(data);
+    console.log(data.stay[i]);
     content.push(
-      <div className='pb-5'>
+      <div key={i} className='pb-5'>
         <THundredPlusCard
-          key={i}
-          id={data?.stays[i].id}
           host_is_superhost={data?.stays[i].host_is_superhost}
           country={data?.stays[i].country}
           name={data?.stays[i].name}
@@ -53,13 +33,8 @@ const renderContent = (data, number) => {
 };
 
 const THundredPlus = ({ size }) => {
-  const { loading, error, data } = useQuery(staydata);
-
-  if (error) return `Error! ${error.message}`;
-
-  if (data) {
-    console.log(data);
-  }
+  const [loading, setLoading] = useState(true);
+  setInterval(() => setLoading(false), 1000);
 
   return (
     <>
@@ -79,19 +54,19 @@ const THundredPlus = ({ size }) => {
             {size.width >= 1529 ? renderSkeletonHorizontal(8, true) : null}
           </div>
         ) : (
-          data && (
+          Data && (
             <div className='grid gap-4 2xl:grid-cols-4 md:grid-cols-3 grid-cols-2 w-full'>
-              {size.width < 767 ? renderContent(data, 4) : null}
+              {size.width < 767 ? renderContent(Data, 4) : null}
               {size.width >= 767 && size.width < 1023
-                ? renderContent(data, 3)
+                ? renderContent(Data, 3)
                 : null}
               {size.width >= 1023 && size.width < 1279
-                ? renderContent(data, 6)
+                ? renderContent(Data, 6)
                 : null}
               {size.width >= 1279 && size.width < 1529
-                ? renderContent(data, 6)
+                ? renderContent(Data, 6)
                 : null}
-              {size.width >= 1529 ? renderContent(data, 8) : null}
+              {size.width >= 1529 ? renderContent(Data, 8) : null}
             </div>
           )
         )}

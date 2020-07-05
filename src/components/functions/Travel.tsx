@@ -54,13 +54,8 @@ export const Travel: React.FC<{}> = () => {
             <div className='scrollable sm:inset-x-0 flex items-center justify-start py-2 rounded-xl w-screen'>
               {countries.map(({ img, imglow, location }, index) => {
                 return (
-                  <div className='min-w-32 w-full mr-3'>
-                    <TravelCard
-                      key={index}
-                      img={img}
-                      imglow={imglow}
-                      location={location}
-                    />
+                  <div key={index} className='min-w-32 w-full mr-3'>
+                    <TravelCard img={img} imglow={imglow} location={location} />
                   </div>
                 );
               })}
