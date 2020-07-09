@@ -1,10 +1,49 @@
-
 <p align="center">
-  <img width="200" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/09/airbnb_icon_detail_animation.gif"/>
+    <img src="https://user-images.githubusercontent.com/43525282/87027303-d8cdb500-c191-11ea-9a00-0e8b55cfa759.png" alt="nextbnb" width="200" />
 </p>
 
+<br/>
 
-# Nextbnb
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/43525282/87027850-9b1d5c00-c192-11ea-8198-d338ee9d279a.png" alt="preview" />
+</p>
+
+## Intro
+
+This is my first challenge to replicate the Airbnb UI using nextjs, a server side rendering React framework.
+The goal for this project was to challenge myself into creating a huge project to experience the underlying pain points of building and maintaining a scalable product from the frontend standpoint.
+- [ ] Don't have to iterate writing schemas
+
+
+## Table of contents
+
+- ☎️ [Getting Started](#getting-started)
+- 🍰 [Aspects](#aspects)
+  - ☕️ [Landing](#landing)
+- 🐶 [Development](#technology)
+  - 🎿 [Hashtags](#hashtags)
+  - 🍺 [Stack](#backers)
+
+## Getting Started
+
+
+## Aspects
+
+## Development
+
+### Keywords
+- [x] Code First Development vs Schema First Development
+- [x] Webpack configuration
+
+### Tech Stacks
+
+| Stack                                       | Description                                                                |
+| ------------------------------------------- | -------------------------------------------------------------------------- |
+| [React](https://reactjs.org)                | A superset of Javascript                                                   |
+| [Nextjs](https://nextjs.org)                | A server side rendering framework based on React                           |
+| [TailwindCSS](https://tailwindcss.com)      | Styling                                                                    |
+| [Now](https://vercel.com/dashboard)         | Deployment                                                                 |
+| [gsap](https://greensock.com/gsap/)         | Animation                                                                  | 
 
 ## Demo
 
@@ -13,64 +52,6 @@ https://nextbnb.kokiebisu.now.sh/?
 ``` diff
 ! The hosted demo may not load in the first try. When it doesn't, try reloading!!
 ```
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Installing
-
-Client side
-
-```
-cd frontend && npm install
-```
-
-Server side
-
-```
-cd backend && npm install
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Run
-
-```
-cd frontend && npm run dev
-```
-
-### Break down into end to end tests
-
-Tests for individual components
-
-```
-cd frontend && npm run test
-```
-
-## Deployment
-
-This project uses two deployment platforms.
-* Client - [Now](https://zeit.co)
-* Server - [Digital Ocean](https://www.digitalocean.com/)
-
-## Built With
-
-* [React](https://reactjs.org/) - Javascript library
-* [Nextjs](https://nextjs.org/) - Web framework
-* [TailwindCSS](https://tailwindcss.com/) - Utility based CSS framework
-* [Prisma](https://www.prisma.io/) - Object-relational mapping framework
-* [PostgreSQL](https://www.postgresql.org/) - Database
-* [Graphql-Yoga](https://github.com/prisma-labs/graphql-yoga/) - Graphql server
-* [Nginx](https://www.nginx.com/) - Reverse proxy for deployment
-
-## Authors
-
-* **kokoaj** - [kokoaj](https://github.com/kokiebisu)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
