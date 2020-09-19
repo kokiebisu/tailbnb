@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './header.landing.module.scss';
+import { Context } from '../../context';
 
 import { HeaderCard } from './header.card';
 import { NoNameLogo, BottomArrow, NameLogo } from '../../assets/svg';
@@ -29,6 +30,7 @@ interface Props {
 
 // ({ switchMenuModal })
 export const Header: React.FC<Props> = () => {
+  const { state, dispatch } = React.useContext(Context);
   // const [registerModal, setRegisterModal] = useState(false);
   // const [helpModal, setHelpModal] = useState(false);
   // const [optionModal, setOptionModal] = useState(false);
@@ -69,6 +71,7 @@ export const Header: React.FC<Props> = () => {
   // const configureScroll = (name: string) => {
   //   document.body.style.overflow = name;
   // };
+  console.log('state', state);
 
   return (
     <header className={styles['header']}>
@@ -84,8 +87,9 @@ export const Header: React.FC<Props> = () => {
           <div className={styles['header__logo--mobile']}>
             <button
               onClick={() => {
-                // switchMenuModal();
-                console.log('hello');
+                dispatch({
+                  type: 'MENU_MODAL',
+                });
               }}>
               <div>
                 <NoNameLogo fill='#ffffff' />

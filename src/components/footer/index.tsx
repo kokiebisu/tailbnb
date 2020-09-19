@@ -89,12 +89,12 @@ export const Footer = () => {
             </div>
             <div className={styles['etc__about--links']}>
               {aboutLinks.map(({ url, name }, index) => (
-                <>
+                <Fragment key={index}>
                   <p>&nbsp;·&nbsp;</p>
                   <Link href={url}>
                     <a>{name}</a>
                   </Link>
-                </>
+                </Fragment>
               ))}
             </div>
           </div>

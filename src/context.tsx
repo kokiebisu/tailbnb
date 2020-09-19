@@ -2,7 +2,9 @@ import { createContext, useReducer, useState } from 'react';
 import { modalReducer } from './reducers/modal';
 
 const initialState = {
-  modal: {},
+  modal: {
+    menu: false,
+  },
 };
 
 const Context = createContext({});
