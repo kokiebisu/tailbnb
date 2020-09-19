@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './index.module.scss';
 import Link from 'next/link';
 
@@ -58,6 +58,8 @@ export const Footer = () => {
     { url: '#', name: 'Sitemap' },
   ];
 
+  const socialMedia = [<Facebook />, <Twitter />, <Instagram />];
+
   return (
     <div className={styles['wrapper']}>
       <div className={styles['wrapper__inner']}>
@@ -80,7 +82,7 @@ export const Footer = () => {
         <div className={styles['etc']}>
           <div className={styles['etc__about']}>
             <div className={styles['etc__about--logo']}>
-              <NoNameLogo />
+              <NoNameLogo fill='#222222' />
             </div>
             <div className={styles['etc__about--rights']}>
               <p>2020 Airbnb, Inc. All rights reserved</p>
@@ -116,15 +118,9 @@ export const Footer = () => {
               </div>
             </div>
             <div className={styles['etc__socialmedia']}>
-              <div>
-                <Facebook />
-              </div>
-              <div>
-                <Twitter />
-              </div>
-              <div>
-                <Instagram />
-              </div>
+              {socialMedia.map((icon, index) => {
+                return <div key={index}>{icon}</div>;
+              })}
             </div>
           </div>
         </div>

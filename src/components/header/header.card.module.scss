@@ -142,6 +142,8 @@
       @apply bg-red-550;
       @apply rounded;
       @apply text-white;
+      font-size: 15px;
+      font-weight: 500;
 
       @screen md {
         @apply w-auto;

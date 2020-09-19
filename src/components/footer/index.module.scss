@@ -117,7 +117,6 @@
       @apply flex;
       @apply flex-col;
       @apply items-center;
-      @apply items-start;
     }
 
     @screen lg {
@@ -193,6 +192,11 @@
     @apply mx-1;
 
     &:first-child {
+      & div {
+        &:first-child {
+          @apply mr-1;
+        }
+      }
       & svg {
         @apply w-4;
         @apply h-4;
