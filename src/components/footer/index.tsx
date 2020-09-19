@@ -63,7 +63,7 @@ export const Footer = () => {
       <div className={styles['wrapper__inner']}>
         <div className={styles['content']}>
           {footerLink.map(({ name, items }, index) => (
-            <div className={styles['content__section']}>
+            <div key={index} className={styles['content__section']}>
               <h3>{name}</h3>
               <ul>
                 {items.map(({ url, name }, index) => (
