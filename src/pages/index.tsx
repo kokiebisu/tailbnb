@@ -1,4 +1,5 @@
 import { Header } from '../components/header/index';
+import { Footer } from '../components/footer/index';
 import styles from '../styles/index.module.scss';
 import Link from 'next/link';
 
@@ -25,7 +26,6 @@ const LandingPage = () => {
       //   console.log('hello');
       // }}
       />
-      {/* <h3>airbnb</h3> */}
       <div className={styles['wrapper']}>
         <div className={styles['frontlines']}>
           <div className={styles['frontlines__header']}>
@@ -127,6 +127,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
