@@ -1,10 +1,14 @@
-// import App from "next/app";
-import type { AppProps /*, AppContext */ } from 'next/app';
+import type { AppProps } from 'next/app';
+import { Provider } from '../context';
 import '../styles/app.scss';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <Provider>
+      <Component {...pageProps} />
+    </Provider>
+  );
+};
 
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to

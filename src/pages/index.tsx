@@ -1,4 +1,4 @@
-import { Header } from '../components/header/index';
+import { Header } from '../components/header/header.landing';
 import { Footer } from '../components/footer/index';
 import styles from '../styles/index.module.scss';
 import Link from 'next/link';

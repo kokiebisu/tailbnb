@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from './index.module.scss';
+import styles from './header.landing.module.scss';
 
 import { HeaderCard } from './header.card';
 import { NoNameLogo, BottomArrow, NameLogo } from '../../assets/svg';
