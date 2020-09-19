@@ -1,59 +1,31 @@
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/43525282/87027303-d8cdb500-c191-11ea-9a00-0e8b55cfa759.png" alt="nextbnb" width="200" />
-</p>
-
-<br/>
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/43525282/87027850-9b1d5c00-c192-11ea-8198-d338ee9d279a.png" alt="preview" />
-</p>
-
-## Intro
-
-This is my first challenge to replicate the Airbnb UI using nextjs, a server side rendering React framework.
-The goal for this project was to challenge myself into creating a huge project to experience the underlying pain points of building and maintaining a scalable product from the frontend standpoint.
-- [ ] Don't have to iterate writing schemas
-
-
-## Table of contents
-
-- ☎️ [Getting Started](#getting-started)
-- 🍰 [Aspects](#aspects)
-  - ☕️ [Landing](#landing)
-- 🐶 [Development](#technology)
-  - 🎿 [Hashtags](#hashtags)
-  - 🍺 [Stack](#backers)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
+First, run the development server:
 
-## Aspects
-
-## Development
-
-### Keywords
-- [x] Code First Development vs Schema First Development
-- [x] Webpack configuration
-
-### Tech Stacks
-
-| Stack                                       | Description                                                                |
-| ------------------------------------------- | -------------------------------------------------------------------------- |
-| [React](https://reactjs.org)                | A superset of Javascript                                                   |
-| [Nextjs](https://nextjs.org)                | A server side rendering framework based on React                           |
-| [TailwindCSS](https://tailwindcss.com)      | Styling                                                                    |
-| [Now](https://vercel.com/dashboard)         | Deployment                                                                 |
-| [gsap](https://greensock.com/gsap/)         | Animation                                                                  | 
-
-## Demo
-
-https://nextbnb.kokiebisu.now.sh/?
-
-``` diff
-! The hosted demo may not load in the first try. When it doesn't, try reloading!!
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-## Acknowledgments
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-* [airbnb](https://airbnb.com) - inspiration & images
-* [unsplash](https://unsplash.com/) - images
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# nextbnb-merge

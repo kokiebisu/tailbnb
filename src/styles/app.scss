@@ -1,0 +1,65 @@
+@tailwind base;
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  box-sizing: inherit;
+  overflow: auto;
+  overscroll-behavior: none;
+  font-family: 'AirbnbCereal';
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+
+  @screen md {
+    height: 100%;
+  }
+}
+
+#__next {
+  height: inherit;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  background-color: inherit;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+ul {
+  padding: 0;
+}
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write you own custom component styles here */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */

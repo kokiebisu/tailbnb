@@ -1,0 +1,222 @@
+.header {
+  @apply w-screen;
+  @apply relative;
+  @apply bg-cover;
+  @apply bg-no-repeat;
+  @apply bg-center;
+  background-image: url('/img/airbnb-background.jpg');
+
+  // max-height: 80rem;
+  height: inherit;
+  font-family: 'AirbnbCereal';
+
+  &__inner {
+    @apply w-full;
+    @apply mx-auto;
+
+    @screen md {
+      @apply px-20;
+    }
+
+    @screen xl {
+      @apply px-32 max-w-12xl;
+    }
+  }
+
+  &__content {
+    @apply h-20;
+    @apply flex;
+    @apply items-center;
+    @apply justify-between;
+  }
+
+  &__logo {
+    &--others {
+      @apply hidden;
+
+      @screen lg {
+        @apply w-32;
+        @apply h-8;
+        @apply flex;
+        @apply items-center;
+      }
+
+      & a {
+        @apply h-full;
+      }
+
+      & svg {
+        @apply h-full;
+        @apply w-full;
+        @apply block;
+      }
+    }
+
+    &--mobile {
+      @apply absolute;
+      @apply ml-6;
+      @apply mt-6;
+      @apply flex;
+      @apply items-center;
+      top: 0;
+      left: 0;
+
+      @screen lg {
+        @apply hidden;
+      }
+
+      & button {
+        background-color: transparent;
+        @apply flex;
+        @apply items-center;
+        @apply cursor-pointer;
+        & div {
+          &:first-child {
+            @apply h-8;
+            @apply w-8;
+          }
+          &:last-child {
+            @apply h-2;
+            @apply w-2;
+          }
+          & svg {
+            @apply w-full;
+            @apply h-full;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @apply hidden;
+    @apply relative;
+
+    @screen lg {
+      @apply block;
+    }
+
+    & nav {
+      @apply flex;
+      @apply items-center;
+      @apply justify-around;
+      @apply flex-wrap;
+      @apply text-white;
+      font-weight: 300;
+    }
+  }
+
+  &__item {
+    @apply mx-2;
+    background-color: transparent;
+    font-size: 14px;
+    color: #ffffff;
+
+    & div {
+      @apply flex;
+      @apply items-center;
+      @apply justify-center;
+      @apply py-3;
+      @apply px-2;
+
+      &:hover {
+        border-radius: 9999rem;
+        background-color: rgb(206, 206, 206, 0.2);
+      }
+    }
+
+    & button {
+      background-color: transparent;
+    }
+
+    & a {
+      color: #ffffff;
+    }
+  }
+
+  &__signup {
+    @apply mx-2;
+    border-radius: 8rem;
+    background: rgb(84, 79, 79);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 4px;
+
+    & div {
+      @apply flex;
+      @apply items-center;
+      @apply justify-center;
+      @apply py-3;
+      @apply px-2;
+      @apply cursor-pointer;
+
+      &:hover {
+        box-shadow: 5px 15px 15px -12px rgba(0, 0, 0, 0.6);
+        transition: 0.2s ease 0s;
+      }
+    }
+
+    & button {
+      @apply text-sm;
+      @apply tracking-wide;
+      font-weight: 300;
+    }
+  }
+
+  &__card {
+    &--title {
+      @apply px-4;
+      @apply pb-4;
+      @apply pt-16;
+      @apply inline-block;
+
+      width: 83%;
+      @screen md {
+        @apply hidden;
+      }
+
+      & h3 {
+        @apply text-white;
+        @apply leading-tight;
+        @apply font-bold;
+        @apply text-3xl;
+        @apply font-sans;
+      }
+    }
+  }
+
+  &__notice {
+    @apply hidden;
+    @apply relative;
+    @apply bg-white;
+    @apply pt-7;
+    @apply pb-6;
+
+    @screen md {
+      @apply block;
+      @apply w-100;
+      @apply mt-4;
+      @apply rounded-lg;
+      @apply shadow-2xl;
+    }
+
+    &--color {
+      @apply rounded-lg;
+      @apply rounded-b-none;
+      @apply absolute;
+      @apply top-0;
+      @apply w-full;
+      @apply h-2;
+      background-color: #3caea3;
+    }
+
+    &--content {
+      @apply mx-6;
+      & a {
+        @apply underline;
+      }
+
+      & p {
+        font-weight: 300;
+      }
+    }
+  }
+}

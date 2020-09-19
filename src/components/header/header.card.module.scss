@@ -1,0 +1,152 @@
+.wrapper {
+  @apply bg-white;
+  @apply py-4;
+  @screen sm {
+    @apply w-full;
+  }
+
+  @screen md {
+    @apply w-100;
+    @apply pt-8;
+    @apply pb-6;
+    @apply mt-10;
+    @apply rounded;
+    @apply shadow-2xl;
+  }
+}
+
+.notice {
+  @apply relative;
+  @apply mx-6;
+  @apply bg-white;
+  @apply rounded-lg;
+  @apply shadow-md;
+  @apply pt-7;
+  @apply pb-6;
+
+  @screen md {
+    @apply hidden;
+    @apply mx-8;
+  }
+
+  &__color {
+    @apply rounded-lg;
+    @apply rounded-b-none;
+    @apply absolute;
+    @apply top-0;
+    @apply w-full;
+    @apply h-2;
+    background-color: #3caea3;
+  }
+
+  &__content {
+    @apply mx-6;
+  }
+
+  & p {
+    font-weight: 300;
+  }
+
+  & a {
+    @apply underline;
+  }
+}
+
+.content {
+  @apply mx-6;
+  @screen md {
+    @apply mx-8;
+  }
+
+  &__title {
+    @apply hidden;
+    @apply text-gray-750;
+    @apply leading-tight;
+
+    & h3 {
+      font-size: 1.8rem;
+    }
+
+    @screen md {
+      @apply inline-block;
+      font-weight: 500;
+    }
+  }
+}
+
+.form {
+  & label {
+    @apply block;
+    @apply mt-5;
+    @apply mb-2;
+    @apply text-xs;
+    @apply text-gray-750;
+    @apply uppercase;
+    @apply tracking-wider;
+  }
+
+  & input {
+    @apply w-full;
+    @apply border;
+    @apply border-gray-300;
+    @apply p-2;
+    @apply rounded;
+    @apply tracking-wide;
+
+    &::placeholder {
+      @apply text-gray-650;
+    }
+  }
+
+  &__dates {
+    @apply flex;
+    @apply flex-wrap;
+    @apply items-stretch;
+    @apply justify-start;
+    @apply relative;
+  }
+
+  &__date {
+    width: 50%;
+
+    &--input {
+      @apply relative;
+      @apply w-full;
+      @apply flex;
+      @apply justify-start;
+    }
+  }
+
+  &__guests {
+    @apply inline-block;
+    @apply relative;
+    @apply w-full;
+  }
+
+  &__search {
+    @apply w-full;
+    @apply flex;
+    @apply items-center;
+    @apply mt-6;
+    @apply rounded-lg;
+    @screen md {
+      @apply justify-end;
+      @apply flex-wrap;
+    }
+
+    & button {
+      @apply w-full;
+      @apply inline-block;
+      @apply py-3;
+      @apply px-6;
+      @apply bg-red-550;
+      @apply rounded;
+      @apply text-white;
+      @apply font-bold;
+      @screen md {
+        @apply w-auto;
+        @apply inline-block;
+      }
+    }
+  }
+}
