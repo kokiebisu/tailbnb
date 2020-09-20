@@ -1,0 +1,40 @@
+.header {
+  @apply z-20;
+  @apply sticky;
+  @apply bg-white;
+  @apply top-0;
+
+  @screen md {
+    @apply shadow-md;
+  }
+
+  &__inner {
+    @apply px-6;
+    @apply flex;
+    @apply items-center;
+    @apply justify-between;
+    @apply relative;
+    @apply border-b;
+    @apply border-gray-300;
+
+    @screen md {
+      @apply px-10;
+    }
+
+    @screen xl {
+      @apply px-20;
+      @apply max-w-12xl;
+    }
+  }
+
+  &__search {
+    @apply w-full;
+    @apply flex;
+    @apply items-center;
+    @apply my-3;
+
+    @screen md {
+      @apply hidden;
+    }
+  }
+}

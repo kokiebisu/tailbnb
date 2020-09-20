@@ -65,6 +65,7 @@
 
     & h3 {
       font-size: 1.8rem;
+      font-weight: 500;
     }
 
     @screen md {
@@ -142,7 +143,9 @@
       @apply bg-red-550;
       @apply rounded;
       @apply text-white;
-      @apply font-bold;
+      font-size: 15px;
+      font-weight: 500;
+
       @screen md {
         @apply w-auto;
         @apply inline-block;

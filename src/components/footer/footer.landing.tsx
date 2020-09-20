@@ -1,14 +1,9 @@
-import React from 'react';
-import styles from './index.module.scss';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 
-import {
-  NoNameLogo,
-  Facebook,
-  Globe,
-  Instagram,
-  Twitter,
-} from '../../assets/svg';
+import styles from 'components/footer/footer.landing.module.scss';
+
+import { NoNameLogo, Facebook, Globe, Instagram, Twitter } from 'assets/svg';
 
 export const Footer = () => {
   const footerLink = [
@@ -58,12 +53,14 @@ export const Footer = () => {
     { url: '#', name: 'Sitemap' },
   ];
 
+  const socialMedia = [<Facebook />, <Twitter />, <Instagram />];
+
   return (
     <div className={styles['wrapper']}>
       <div className={styles['wrapper__inner']}>
         <div className={styles['content']}>
           {footerLink.map(({ name, items }, index) => (
-            <div className={styles['content__section']}>
+            <div key={index} className={styles['content__section']}>
               <h3>{name}</h3>
               <ul>
                 {items.map(({ url, name }, index) => (
@@ -80,19 +77,19 @@ export const Footer = () => {
         <div className={styles['etc']}>
           <div className={styles['etc__about']}>
             <div className={styles['etc__about--logo']}>
-              <NoNameLogo />
+              <NoNameLogo fill='#222222' />
             </div>
             <div className={styles['etc__about--rights']}>
               <p>2020 Airbnb, Inc. All rights reserved</p>
             </div>
             <div className={styles['etc__about--links']}>
               {aboutLinks.map(({ url, name }, index) => (
-                <>
+                <Fragment key={index}>
                   <p>&nbsp;·&nbsp;</p>
                   <Link href={url}>
                     <a>{name}</a>
                   </Link>
-                </>
+                </Fragment>
               ))}
             </div>
           </div>
@@ -116,15 +113,9 @@ export const Footer = () => {
               </div>
             </div>
             <div className={styles['etc__socialmedia']}>
-              <div>
-                <Facebook />
-              </div>
-              <div>
-                <Twitter />
-              </div>
-              <div>
-                <Instagram />
-              </div>
+              {socialMedia.map((icon, index) => {
+                return <div key={index}>{icon}</div>;
+              })}
             </div>
           </div>
         </div>

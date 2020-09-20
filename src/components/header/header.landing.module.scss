@@ -158,6 +158,7 @@
     }
 
     & button {
+      @apply px-2;
       @apply text-sm;
       @apply tracking-wide;
       font-weight: 300;

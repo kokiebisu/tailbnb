@@ -1,10 +1,11 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from './index.module.scss';
 
-import { HeaderCard } from './header.card';
-import { NoNameLogo, BottomArrow, NameLogo } from '../../assets/svg';
+import styles from 'components/header/header.landing.module.scss';
+import { useModalDispatch, useModalState } from 'context';
+
+import { HeaderCard } from 'components/header/header.card';
+import { NoNameLogo, BottomArrow, NameLogo } from 'assets/svg';
 
 // Modals
 // import { CurrencyModal } from '../modals/CurrencyModal';
@@ -29,6 +30,7 @@ interface Props {
 
 // ({ switchMenuModal })
 export const Header: React.FC<Props> = () => {
+  const dispatch = useModalDispatch();
   // const [registerModal, setRegisterModal] = useState(false);
   // const [helpModal, setHelpModal] = useState(false);
   // const [optionModal, setOptionModal] = useState(false);
@@ -84,8 +86,9 @@ export const Header: React.FC<Props> = () => {
           <div className={styles['header__logo--mobile']}>
             <button
               onClick={() => {
-                // switchMenuModal();
-                console.log('hello');
+                dispatch({
+                  type: 'MENU_MODAL',
+                });
               }}>
               <div>
                 <NoNameLogo fill='#ffffff' />

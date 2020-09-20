@@ -1,6 +1,6 @@
-import { Header } from '../components/header/index';
-import { Footer } from '../components/footer/index';
-import styles from '../styles/index.module.scss';
+import { Header } from 'components/header/header.landing';
+import { Footer } from 'components/footer/footer.landing';
+import styles from 'styles/index.module.scss';
 import Link from 'next/link';
 
 const LandingPage = () => {
