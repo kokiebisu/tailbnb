@@ -1,27 +1,54 @@
-import { createContext, useReducer, useState } from 'react';
-import { modalReducer } from './reducers/modal';
+import React from 'react';
+import { createContext, useReducer, useContext } from 'react';
 
-const initialState = {
-  modal: {
+type Dispatch = (action: Action) => void;
+type Action = { type: 'MENU_MODAL' };
+
+type State = {
+  menu: boolean;
+};
+
+type ModalProviderProps = { children: React.ReactNode };
+
+const ModalStateContext = createContext<State | undefined>(undefined);
+const ModalDispatchContext = createContext<Dispatch | undefined>(undefined);
+
+const modalReducer = (state: State, action: Action) => {
+  switch (action.type) {
+    case 'MENU_MODAL':
+      return { ...state, menu: !state.menu };
+    default:
+      return state;
+  }
+};
+
+const ModalProvider = ({ children }: ModalProviderProps) => {
+  const [state, dispatch] = useReducer(modalReducer, {
     menu: false,
-  },
-};
-
-const Context = createContext({});
-
-const combineReducers = (...reducers) => (state, action) => {
-  for (let i = 0; i < reducers.length; i++) state = reducers[i](state, action);
-  return state;
-};
-
-const Provider = ({ children }) => {
-  const [state, dispatch] = useReducer(
-    combineReducers(modalReducer),
-    initialState
+  });
+  return (
+    <ModalStateContext.Provider value={state}>
+      <ModalDispatchContext.Provider value={dispatch}>
+        {children}
+      </ModalDispatchContext.Provider>
+    </ModalStateContext.Provider>
   );
-  const value = { state, dispatch };
-
-  return <Context.Provider value={value}>{children}</Context.Provider>;
 };
 
-export { Context, Provider };
+const useModalState = () => {
+  const context = useContext(ModalStateContext);
+  if (!context) {
+    throw new Error('useToggleState must be used within a Provider');
+  }
+  return context;
+};
+
+const useModalDispatch = () => {
+  const context = useContext(ModalDispatchContext);
+  if (!context) {
+    throw new Error('useToggleDispatch must be used within a Provider');
+  }
+  return context;
+};
+
+export { useModalDispatch, useModalState, ModalProvider };

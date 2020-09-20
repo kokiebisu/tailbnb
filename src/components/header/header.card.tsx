@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import * as React from 'react';
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+
 // import { TweenLite, Power3 } from 'gsap';
 // import {
 //   calculateGuests,
@@ -12,7 +12,7 @@ import { useState, useRef, useEffect } from 'react';
 // import { CalendarModal } from '../modals/CalendarModal';
 // import { GuestPickerModal } from '../modals/GuestPickerModal';
 
-import styles from './header.card.module.scss';
+import styles from 'components/header/header.card.module.scss';
 
 export const HeaderCard = () => {
   //   // Check in

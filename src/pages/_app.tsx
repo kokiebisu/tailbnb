@@ -1,12 +1,12 @@
 import type { AppProps } from 'next/app';
-import { Provider } from '../context';
-import '../styles/app.scss';
+import { ModalProvider } from 'context';
+import 'styles/app.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <Provider>
+    <ModalProvider>
       <Component {...pageProps} />
-    </Provider>
+    </ModalProvider>
   );
 };
 

@@ -1,14 +1,9 @@
 import React, { Fragment } from 'react';
-import styles from './index.module.scss';
 import Link from 'next/link';
 
-import {
-  NoNameLogo,
-  Facebook,
-  Globe,
-  Instagram,
-  Twitter,
-} from '../../assets/svg';
+import styles from 'components/footer/footer.landing.module.scss';
+
+import { NoNameLogo, Facebook, Globe, Instagram, Twitter } from 'assets/svg';
 
 export const Footer = () => {
   const footerLink = [
