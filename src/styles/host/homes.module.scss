@@ -104,3 +104,257 @@
     @apply text-green-850;
   }
 }
+
+.content {
+  @apply w-full;
+  @apply max-w-layout;
+  @apply mx-auto;
+  @apply relative;
+
+  &__inner {
+    @apply w-full;
+    @apply h-60;
+    @apply relative;
+    @apply flex;
+    @apply justify-center;
+
+    @screen md {
+      @apply h-72;
+    }
+
+    @screen lg {
+      @apply h-144;
+    }
+  }
+
+  &__background {
+    @apply object-cover;
+    @apply w-full;
+    @apply h-full;
+    max-height: 60rem;
+  }
+
+  &__title {
+    @apply px-6;
+    @apply w-full;
+    @apply absolute;
+    @apply bottom-0;
+    @apply py-6;
+    @apply leading-none;
+    @apply tracking-tighter;
+
+    @screen md {
+      @apply px-0;
+      @apply max-w-2.5xl;
+    }
+
+    @screen lg {
+      @apply hidden;
+    }
+
+    & h3 {
+      @apply text-4xl;
+      @apply text-white;
+      font-weight: 500;
+    }
+  }
+}
+
+.banner-card {
+  @apply bg-white;
+  @apply rounded;
+  @apply flex;
+  @apply justify-center;
+
+  @screen md {
+    position: static;
+  }
+
+  @screen lg {
+    @apply justify-start;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
+  &__inner {
+    @apply w-full;
+    @apply m-6;
+
+    @screen md {
+      @apply max-w-2.5xl;
+      @apply m-8;
+    }
+
+    @screen lg {
+      @apply w-104;
+    }
+  }
+
+  &__title {
+    @apply hidden;
+    @apply mb-6;
+
+    @screen lg {
+      @apply block;
+    }
+
+    & h3 {
+      @apply text-gray-850;
+      @apply text-4.5xl;
+      @apply leading-none;
+      font-weight: 500;
+    }
+  }
+
+  &__subtitle {
+    @apply my-1;
+
+    & p {
+      @apply text-gray-750;
+    }
+  }
+
+  &__input {
+    &--location {
+      @apply border;
+      @apply border-gray-350;
+      @apply rounded;
+
+      & input {
+        @apply my-3;
+        @apply ml-3;
+        font-weight: 300;
+        &::placeholder {
+          @apply text-gray-750;
+        }
+      }
+    }
+
+    &--others {
+      @apply w-full;
+      @apply flex;
+      @apply my-2;
+
+      & select {
+        @apply appearance-none;
+        @apply pl-2;
+        @apply w-full;
+        @apply border;
+        @apply border-gray-450;
+        @apply py-3;
+        @apply rounded;
+        @apply tracking-wide;
+        font-weight: 300;
+
+        &::placeholder {
+          @apply text-gray-900;
+        }
+      }
+
+      & option {
+        font-weight: 300;
+      }
+    }
+
+    &--place {
+      @apply inline-block;
+      @apply relative;
+      @apply w-3/5;
+      @apply mr-2;
+
+      & div {
+        @apply pointer-events-none;
+        @apply flex;
+        @apply absolute;
+        @apply inset-y-0;
+        @apply right-0;
+        @apply items-center;
+        @apply px-2;
+        @apply text-gray-700;
+        @apply text-black;
+      }
+
+      & svg {
+        @apply fill-current;
+        @apply h-4;
+        @apply w-4;
+      }
+    }
+
+    &--guest {
+      @apply inline-block;
+      @apply relative;
+      @apply w-2/5;
+      @apply ml-2;
+
+      & div {
+        @apply pointer-events-none;
+        @apply flex;
+        @apply absolute;
+        @apply inset-y-0;
+        @apply right-0;
+        @apply items-center;
+        @apply px-2;
+        @apply text-gray-700;
+        @apply text-black;
+      }
+
+      & svg {
+        @apply fill-current;
+        @apply h-4;
+        @apply w-4;
+      }
+    }
+  }
+
+  &__price {
+    @apply flex;
+    @apply py-4;
+
+    & > div {
+      &:nth-child(1) {
+        & h3 {
+          @apply text-4.5xl;
+        }
+      }
+
+      &:nth-child(2) {
+        @apply flex;
+        @apply items-end;
+        @apply mx-1;
+        margin-bottom: 10px;
+
+        & p {
+          @apply text-sm;
+          @apply text-gray-750;
+          font-weight: 300;
+        }
+      }
+
+      &:nth-child(3) {
+        @apply flex;
+        @apply items-end;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__icon {
+    &--question {
+      @apply h-3;
+      @apply w-3;
+    }
+  }
+
+  &__button {
+    @apply w-full;
+    @apply py-3;
+    @apply bg-red-550;
+    @apply rounded;
+
+    & p {
+      @apply text-white;
+    }
+  }
+}
