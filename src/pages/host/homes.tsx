@@ -56,8 +56,8 @@ const HostHome = () => {
               }>
               <p>Overview</p>
             </div>
-            {headerItems.map((item) => (
-              <div className={styles['header__item']}>
+            {headerItems.map((item, index) => (
+              <div key={index} className={styles['header__item']}>
                 <Link href={`/host/${item.name}`}>
                   <a>{item.name}</a>
                 </Link>
@@ -132,6 +132,33 @@ const HostHome = () => {
             <button className={styles['banner-card__button']}>
               <p>Get started</p>
             </button>
+          </div>
+        </div>
+        <div className={styles['characteristics']}>
+          <div className={styles['characteristics__why']}>
+            <div className={styles['characteristics__title']}>
+              <h3>Why host on Airbnb?</h3>
+            </div>
+            <div className={styles['characteristics__description']}>
+              <p>
+                No matter what kind of home or room you have to share, Airbnb
+                makes it simple and secure to host travellers. You’re in full
+                control of your availability, prices, house rules, and how you
+                interact with guests.
+              </p>
+            </div>
+          </div>
+          <div className={styles['characteristics__back']}>
+            <div className={styles['characteristics__title']}>
+              <h3>We have your back</h3>
+            </div>
+            <div className={styles['characteristics__description']}>
+              <p>
+                To keep you, your home, and your belongings safe, we cover every
+                booking with $1M USD in property damage protection and another
+                $1M USD in insurance against accidents.
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -358,3 +358,53 @@
     }
   }
 }
+
+.characteristics {
+  @apply w-full;
+  @apply mx-auto;
+  @apply my-16;
+
+  @screen md {
+    @apply max-w-xl;
+  }
+
+  @screen lg {
+    @apply max-w-5xl;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+
+  &__why {
+    @apply mb-4;
+    @apply pr-6;
+
+    @screen lg {
+      @apply mb-0;
+    }
+  }
+
+  &__back {
+    @apply mb-4;
+
+    @screen lg {
+      @apply mb-0;
+    }
+  }
+
+  &__title {
+    & h3 {
+      @apply my-4;
+      @apply text-gray-750;
+      @apply text-2xl;
+    }
+  }
+
+  &__description {
+    & p {
+      @apply leading-8;
+      @apply text-gray-750;
+      font-weight: 300;
+    }
+  }
+}
