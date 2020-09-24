@@ -29,7 +29,7 @@ export const Footer = () => {
     {
       name: 'host',
       items: [
-        { url: '#', name: 'Host your home' },
+        { url: '/host/home', name: 'Host your home' },
         { url: '#', name: 'Host an experience' },
         { url: '#', name: 'Responsible hosting' },
         { url: '#', name: 'Refer hosts' },
